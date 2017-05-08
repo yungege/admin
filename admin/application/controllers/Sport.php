@@ -1,0 +1,11 @@
+<?php
+class SportController extends Yaf_Controller_Abstract{
+    public $actions = array(
+        'banner'        => 'actions/sport/Banner.php',
+        'delbanner'     => 'actions/sport/DelBanner.php',
+        'editbanner'    => 'actions/sport/EditBanner.php',
+        'action'        => 'actions/sport/Action.php',
+        'actiondel'     => 'actions/sport/ActionDel.php',
+        'project'       => 'actions/sport/Project.php',
+        );
+}
