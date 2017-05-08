@@ -19,6 +19,11 @@ return [
         '/index\.html',
         ['module' => 'index', 'controller' => 'index', 'action' => 'index'],
     ],
+    // 项目详情页
+    'projectinfo' => [
+        '/sport/p/(\w+)\.html',
+        ['module' => 'index', 'controller' => 'sport', 'action' => 'pro'],
+    ],
 
 	
 ];
