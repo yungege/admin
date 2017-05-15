@@ -163,7 +163,7 @@
                 var uri = $(this).data('uri');
                 var name = $(this).data('name');
                 me.videoTitle.text(name);
-                var html = "<video style=\"width:100%;\" controls autobuffer>" +
+                var html = "<video style=\"width:100%;\" controls autobuffer autoplay>" +
                                 "<source src='" + uri + "' type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'></source>" +
                             "</video>";
                 me.videoUri.html(html);

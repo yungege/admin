@@ -21,7 +21,7 @@ class Service_User_LoginModel extends BasePageService {
         $res = $this->doLogin($req);
         if(false === $res){
             $this->errNo = -1;
-            $this->errMessage = '账号或密码错误';
+            $this->errMsg = '账号或密码错误';
             return false;
         }
 
@@ -42,10 +42,10 @@ class Service_User_LoginModel extends BasePageService {
 
         $req['pwd'] = md5(substr($req['mob'], 1,8) . $req['pwd']);
 
-        $userInfo = $this->userModel->query([
+        $userInfo = $this->userModel->queryOne([
             'mobileno' => (int)$req['mob'],
             'password' => (string)$req['pwd']
-            ])[0];
+            ]);
 
         if(empty($userInfo)){
             return false;
