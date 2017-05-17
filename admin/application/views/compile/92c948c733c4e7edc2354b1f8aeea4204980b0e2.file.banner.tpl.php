@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-05-12 14:46:46
+<?php /* Smarty version Smarty-3.1.13, created on 2017-05-17 13:22:39
          compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:78317896059155a56cab3b6-75806967%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1800349012591bde1f324f02-06754531%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '92c948c733c4e7edc2354b1f8aeea4204980b0e2' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/banner.tpl',
-      1 => 1494210642,
+      1 => 1494998555,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '78317896059155a56cab3b6-75806967',
+  'nocache_hash' => '1800349012591bde1f324f02-06754531',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59155a56ce5896_36281090',
+  'unifunc' => 'content_591bde1f3c8420_62933054',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59155a56ce5896_36281090')) {function content_59155a56ce5896_36281090($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_591bde1f3c8420_62933054')) {function content_591bde1f3c8420_62933054($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -207,7 +207,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / banner
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / banner <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#add-form">添加Banner</a>
                             </li>
                         </ol>
                     </div>
@@ -225,6 +225,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <th class="text-center">上传者</th>
                         <th style="max-width: 160px;" class="text-center">描述</th>
                         <th class="text-center">图片</th>
+                        <th class="text-center">长宽比</th>
                         <th class="text-center">有效期</th>
                         <th class="text-center">Access</th>
                         <th class="text-center">创建时间</th>
@@ -247,6 +248,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </td>
                         <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['coverimgurl'];?>
 " height="80" /></td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['aspectRatio'];?>
+</td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['starttime'];?>
  <br/>至<br/> <?php echo $_smarty_tpl->tpl_vars['row']->value['endtime'];?>
 </td>
@@ -273,7 +276,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </div>
 </div>
 
-<!-- modal -->
+<!-- modal-edit -->
 <div class="modal fade" id="edit-form" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
     <div class="modal-dialog" role="document" style="margin-top:7%;">
         <div class="modal-content">
@@ -310,6 +313,10 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <label for="b-url" class="control-label">URL:</label>
                         <input type="text" class="form-control" id="b-url" name="h5url">
                     </div>
+                    <div class="form-group">
+                        <label for="img-size" class="control-label">图片比例:</label>
+                        <input type="input" class="form-control" id="img-size" name="aspectRatio">
+                    </div>
                     <input type="hidden" name="uptoken" id="uptoken" value="<?php echo $_smarty_tpl->tpl_vars['uptoken']->value;?>
 ">
                     <input type="hidden" name="coverimgurl" value="">
@@ -320,7 +327,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                     <img src="" alt="..." id="coverimgurl">
                 </div>
 
-                <a class="btn btn-default btn-lg " id="pickfiles" href="#" style="position: relative; z-index: 1;">
+                <a class="btn btn-default btn-lg" id="pickfiles" href="#" style="position: relative; z-index: 1;">
                     <i class="glyphicon glyphicon-plus"></i>
                     <span>选择文件</span>
                 </a>
@@ -329,6 +336,69 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal" onclick="reset()">Close</button>
                 <button type="button" class="btn btn-primary" onclick="commit(this)" data-id="" id="sub-btn">Summit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal-add -->
+<div class="modal fade" id="add-form" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document" style="margin-top:7%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Banner Add</h4>
+            </div>
+            <div class="modal-body">
+                <form name="banner-add">
+                    <div class="form-group">
+                        <label for="b-title-add" class="control-label">标题:</label>
+                        <input type="text" class="form-control" id="b-title-add" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="b-desc-add" class="control-label">描述:</label>
+                        <textarea class="form-control" id="b-desc-add" name="h5content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-stime-add" class="control-label">开始时间:</label>
+                        <div class="input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
+                            <input readonly type="text" class="form-control" id="b-stime-add" name="starttime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-etime-add" class="control-label">结束时间:</label>
+                        <div class="input-group date date_end" data-date="" data-date-format="yyyy-mm-dd">
+                            <input readonly type="text" class="form-control" id="b-etime-add" name="endtime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="b-url-add" class="control-label">URL:</label>
+                        <input type="input" class="form-control" id="b-url-add" name="h5url">
+                    </div>
+                    <div class="form-group">
+                        <label for="b-img-size" class="control-label">图片比例:</label>
+                        <input type="input" class="form-control" id="b-img-size" name="aspectRatio">
+                    </div>
+                    <input type="hidden" name="coverimgurl-add" value="">
+                </form>
+
+                <label class="control-label">IMG:</label>
+                <div class="thumbnail">
+                    <img src="" id="coverimgurl-add">
+                </div>
+
+                <a class="btn btn-default btn-lg" id="pickfiles-add" href="#" style="position: relative; z-index: 1;">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>选择文件</span>
+                </a>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addBanner()" data-id="" id="sub-btn">Summit</button>
             </div>
         </div>
     </div>

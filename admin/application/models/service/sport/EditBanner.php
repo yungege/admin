@@ -14,6 +14,7 @@ class Service_Sport_EditBannerModel extends BasePageService {
     protected function __execute($req) {
         $req = $req['request_param'];
         $this->checkXss($req);
+        $urlPreg = "/\b(([\w-]+:\/\/?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|\/)))/";
 
         if(
             empty($req['_id']) ||
@@ -21,9 +22,23 @@ class Service_Sport_EditBannerModel extends BasePageService {
             empty($req['h5content']) || 
             empty($req['starttime']) || 
             empty($req['endtime']) || 
-            empty($req['coverimgurl'])
+            empty($req['coverimgurl']) || 
+            empty($req['aspectRatio'])
             ){
             return $this->errNo = -1;
+        }
+
+        if(!empty($req['h5url'])){
+            if(!preg_match($urlPreg, $req['h5url'])){
+                return $this->errNo = -1;
+            }
+        }
+
+        if(!is_numeric($req['aspectRatio'])){
+            return $this->errNo = -1;
+        }
+        else{
+            $req['aspectRatio'] = (float)$req['aspectRatio'];
         }
 
         $req['starttime'] = strtotime(date('Y-m-d', strtotime($req['starttime'])) . ' 00:00:00');

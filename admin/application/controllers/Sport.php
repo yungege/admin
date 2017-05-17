@@ -4,6 +4,7 @@ class SportController extends Yaf_Controller_Abstract{
         'banner'        => 'actions/sport/Banner.php',
         'delbanner'     => 'actions/sport/DelBanner.php',
         'editbanner'    => 'actions/sport/EditBanner.php',
+        'addbanner'     => 'actions/sport/AddBanner.php',
         'action'        => 'actions/sport/Action.php',
         'actiondel'     => 'actions/sport/ActionDel.php',
         'project'       => 'actions/sport/Project.php',
