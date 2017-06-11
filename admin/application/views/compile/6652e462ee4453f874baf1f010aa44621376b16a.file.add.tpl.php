@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-10 09:57:47
+<?php /* Smarty version Smarty-3.1.13, created on 2017-06-11 23:02:14
          compiled from "/var/www/aa/admin/admin/application/views/template/project/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:40379450598bbd9bd575e7-59802224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1216608570593d5b767f3b51-19608027%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6652e462ee4453f874baf1f010aa44621376b16a' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/project/add.tpl',
-      1 => 1502155540,
+      1 => 1497192926,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '40379450598bbd9bd575e7-59802224',
+  'nocache_hash' => '1216608570593d5b767f3b51-19608027',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_598bbd9bdf6504_76830712',
+  'unifunc' => 'content_593d5b76875b31_30955157',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598bbd9bdf6504_76830712')) {function content_598bbd9bdf6504_76830712($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_593d5b76875b31_30955157')) {function content_593d5b76875b31_30955157($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -97,17 +97,50 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
+    .fix-per{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgba(0,0,0,0.4);
+        z-index: 9999;
+        display: none;
+    }
+    .fix-per .fix-cont{
+        width: 400px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -200px;
+        margin-top: -100px;
+        font-size: 100px;
+        color: orange;
+    }
+    .form-wrap{
+        border: 1px solid #ccc;
+        padding: 8px 15px 15px 15px;
+        border-radius: 5px;
+    }
+    #grade_apply,#grade_apply_select,.fx-btn{
+        height: 254px;
+    }
+    #grade_apply_select{
+        color: black;
+    }
+    
     .fx-btn{
         border: 1px solid #ccc;
-        padding: 165px 20px 0 20px;
-        height: 532px;
+        margin-top: 25px;
     }
-    .fx-btn a{
+    .fx-btn > a{
         display: block;
-        margin-bottom: 10px;
-    }
-    #action-list,#action-list-select,#action-list-rest{
-        height: 500px;
+        width: 60%;
+        margin: 0 auto 10px auto;
     }
 </style>
 
@@ -263,107 +296,91 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
 <div class="row">
     <div class="col-lg-12">
-        <form class="form-inline" name="action">
-            <div class="form-group">
-                <label for="action-name">动作名称</label>
-                <input type="text" class="form-control" name="name" id="action-name">
+        <form name="pro">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="grade_apply">适用年级</label>
+                        <select multiple id="grade_apply" class="form-control">
+                            <?php  $_smarty_tpl->tpl_vars['gl'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['gl']->_loop = false;
+ $_smarty_tpl->tpl_vars['idx'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['grade']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['gl']->key => $_smarty_tpl->tpl_vars['gl']->value){
+$_smarty_tpl->tpl_vars['gl']->_loop = true;
+ $_smarty_tpl->tpl_vars['idx']->value = $_smarty_tpl->tpl_vars['gl']->key;
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['idx']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['gl']->value;?>
+</option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center fx-btn" >
+                        <a id="t-r" href="javascript:void(0)" class="btn btn-sm btn-default" style="margin-top:87px;">添加</a>
+                        <a id="t-l" href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="grade_apply_select">已选年级</label>
+                        <select multiple class="form-control" id="grade_apply_select">
+                        </select>
+                    </div>
+                </div>
             </div>
+
             <div class="form-group">
-                <label for="action-type">动作类型</label>
-                <select class="form-control" name="typeno" id="action-type">
-                    <option value="">ALL</option>
-                    <option value="1">计时锻炼</option>
-                    <option value="2">计组数锻炼</option>
-                    <option value="3">节拍锻炼</option>
-                    <!-- 4 => '休息', -->
+                <label for="has_level">难度区分</label>
+                <select id="has_level" class="form-control" name="has_level">
+                    <option value="0">难度区分</option>
+                    <option value="1">是</option>
+                    <option value="-1">否</option>
                 </select>
             </div>
+
             <div class="form-group">
-                <label for="action-item">检测项目</label>
-                <select class="form-control" name="physicalquality" id="action-item">
-                    <option value="">ALL</option>
-                    <option value="0">耐力素质</option>
-                    <option value="1">上肢力量</option>
-                    <option value="2">腹肌耐力</option>
-                    <option value="3">柔韧素质</option>
-                    <option value="4">速度素质</option>
-                    <option value="5">下肢力量</option>
-                    <option value="6">综合素质</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="sex">性别</label>
-                <select class="form-control" name="sex" id="sex">
-                    <option value="2">ALL</option>
+                <label for="gender">适用性别</label>
+                <select id="gender" class="form-control" name="gender">
+                    <option value="2">全部</option>
                     <option value="0">男</option>
                     <option value="1">女</option>
                 </select>
             </div>
-            <button type="button" class="btn btn-info" id="search">检索</button>
+
+            <div class="form-group">
+                <label for="name">项目名称</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="desc">方案简介</label>
+                <textarea id="desc" class="form-control" rows="3" name="desc"></textarea>
+            </div>
+
+            <div class="form-group">
+                <a class="btn btn-default btn-lg" id="coverimg" href="#" style="position: relative; z-index: 1;">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>上传封面图片</span>
+                </a>
+                <input type="hidden" name="coverimg" id="coverimg-val">
+            </div>
+            <div id="picshow"></div>
+            <input type="hidden" name="uptoken" id="uptoken" value="<?php echo $_smarty_tpl->tpl_vars['uptoken']->value;?>
+">
+            <button id="sub" type="button" class="btn btn-primary">确认发布</button>
         </form>
     </div>
 </div>
 
-
-<div class="row" style="margin-top: 20px;padding: 15px;">
-    <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
-        <select multiple class="form-control" id="action-list">
-            <?php  $_smarty_tpl->tpl_vars['ac'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ac']->_loop = false;
- $_smarty_tpl->tpl_vars['idx'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['actionList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['ac']->key => $_smarty_tpl->tpl_vars['ac']->value){
-$_smarty_tpl->tpl_vars['ac']->_loop = true;
- $_smarty_tpl->tpl_vars['idx']->value = $_smarty_tpl->tpl_vars['ac']->key;
-?>
-                <optgroup label="<?php echo $_smarty_tpl->tpl_vars['type']->value[$_smarty_tpl->tpl_vars['idx']->value];?>
-">
-                    <?php  $_smarty_tpl->tpl_vars['acl'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['acl']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['ac']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['acl']->key => $_smarty_tpl->tpl_vars['acl']->value){
-$_smarty_tpl->tpl_vars['acl']->_loop = true;
-?>
-                    <option value="<?php echo $_smarty_tpl->tpl_vars['acl']->value['_id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['acl']->value['name'];?>
-</option>
-                    <?php } ?>
-                </optgroup>
-            <?php } ?>
-        </select>
+<!-- modal-add -->
+<div class="fix-per">
+    <div class="fix-cont">
+        <!-- 100% -->
     </div>
-    <div class="col-lg-2">
-        <div class="text-center fx-btn" >
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">添加</a>
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">前移</a>
-            <a style="margin-bottom: 0;" href="javascript:void(0)" class="btn btn-sm btn-default">后移</a>
-        </div>
-    </div>
-    <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
-        <select multiple class="form-control" id="action-list-select">
-            <!-- <option>1</option> -->
-        </select>
-    </div>
-    <div class="col-lg-2">
-        <div class="text-center fx-btn">
-            <a href="javascript:void(0)" class="btn btn-sm btn-default" style="margin-top: 60px;">添加</a>
-        </div>
-    </div>
-    <div class="col-lg-2" style="border: 1px solid #ccc;padding: 15px;">
-        <select multiple class="form-control" id="action-list-rest">
-            <?php  $_smarty_tpl->tpl_vars['re'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['re']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['restList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['re']->key => $_smarty_tpl->tpl_vars['re']->value){
-$_smarty_tpl->tpl_vars['re']->_loop = true;
-?>
-            <option value="<?php echo $_smarty_tpl->tpl_vars['re']->value['_id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['re']->value['name'];?>
-【<?php echo $_smarty_tpl->tpl_vars['re']->value['singletime'];?>
- s】</option>
-            <?php } ?>
-        </select>
-    </div>
+    
 </div>
-        
 
 
 
@@ -394,7 +411,11 @@ $_smarty_tpl->tpl_vars['re']->_loop = true;
     </script>
 
     
-<script type="text/javascript" src="/static/sport/js/project.js"></script>
+<script type="text/javascript" src="/static/qiniu/moxie.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/plupload.full.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/zh_CN.js"></script>
+<script type="text/javascript" src="/static/qiniu/qiniu.min.js"></script>
+<script type="text/javascript" src="/static/project/js/addPro.js"></script>
 
 </body>
 </html><?php }} ?>
