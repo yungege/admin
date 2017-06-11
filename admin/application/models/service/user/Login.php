@@ -41,8 +41,7 @@ class Service_User_LoginModel extends BasePageService {
 	}
 
     protected function doLogin($req){
-        // $req['mob'] = 13161486949;
-        // $req['pwd'] = 'qwertyu';
+        
 
         if(!preg_match("/^1\d{10}$/", $req['mob'])){
             return false;

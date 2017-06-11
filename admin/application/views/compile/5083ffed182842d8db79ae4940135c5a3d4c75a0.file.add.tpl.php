@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 14:37:10
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-08 18:20:41
          compiled from "/var/www/aa/admin/admin/application/views/template/version/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12752408875982c4964f1068-02815313%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:57417764159899079b488d4-91614783%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5083ffed182842d8db79ae4940135c5a3d4c75a0' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/version/add.tpl',
-      1 => 1501639058,
+      1 => 1502155540,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501742111,
+      1 => 1502137853,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12752408875982c4964f1068-02815313',
+  'nocache_hash' => '57417764159899079b488d4-91614783',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5982c496549092_81718699',
+  'unifunc' => 'content_59899079ba5a28_61896504',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5982c496549092_81718699')) {function content_5982c496549092_81718699($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59899079ba5a28_61896504')) {function content_59899079ba5a28_61896504($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -361,7 +361,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                 }
 
                 var url = $.trim(me.url.val());
-                if(!url || !url.match(/(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/g)){
+                if(!url && !url.match(/(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/g)){
                     alert('请输入合法的URL.');
                     return false;
                 }

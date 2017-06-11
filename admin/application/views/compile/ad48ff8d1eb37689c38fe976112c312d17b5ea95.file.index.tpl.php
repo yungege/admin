@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 14:37:09
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-08 18:20:38
          compiled from "/var/www/aa/admin/admin/application/views/template/version/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:4714985735982c4954c8317-49482088%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:457557554598990760e0937-37954729%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ad48ff8d1eb37689c38fe976112c312d17b5ea95' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/version/index.tpl',
-      1 => 1501639058,
+      1 => 1502155540,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501742111,
+      1 => 1502137853,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '4714985735982c4954c8317-49482088',
+  'nocache_hash' => '457557554598990760e0937-37954729',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5982c4955310f0_78175967',
+  'unifunc' => 'content_59899076142b01_86134015',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5982c4955310f0_78175967')) {function content_5982c4955310f0_78175967($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59899076142b01_86134015')) {function content_59899076142b01_86134015($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -266,7 +266,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                 </select>
             </div>
               
-            <button type="submit">确认发布</button>
+            <button type="submit" class="btn btn-info">确 认</button>
         </form>
     </div>
 </div>
