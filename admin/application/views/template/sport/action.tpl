@@ -8,6 +8,8 @@
     border: 1px solid #ccc;
     padding: 5px 15px 5px 15px;
     border-radius: 3px;
+    display: inline-block;
+    width: 60px;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;

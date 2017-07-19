@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-05-17 10:36:12
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-19 12:46:48
          compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1330297776591bb71c19fdd5-52257512%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:608937349596ee4388bcc54-31592305%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '713206737d6eb09c8f72027c7313a6d885305480' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/login.tpl',
-      1 => 1494210642,
+      1 => 1496378072,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1330297776591bb71c19fdd5-52257512',
+  'nocache_hash' => '608937349596ee4388bcc54-31592305',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_591bb71c1c3279_79982855',
+  'unifunc' => 'content_596ee438910e72_08926796',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_591bb71c1c3279_79982855')) {function content_591bb71c1c3279_79982855($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_596ee438910e72_08926796')) {function content_596ee438910e72_08926796($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <title>Admin Login</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/static/imgs/favicon.ico" type="image/x-icon"/>
     <!-- Bootstrap 3.3.6 -->
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <!-- AdminLTE -->

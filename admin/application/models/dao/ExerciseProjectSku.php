@@ -10,7 +10,7 @@ class Dao_ExerciseProjectSkuModel extends Db_Mongodb {
         'time_cost'     => 0,       // 项目所需时间（s）
         'calorie_cost'  => 0.00,    // 项目所需卡路里
         'action_count'  => 0,       // 动作数
-        'difficulty'    => 0,       // 难度 0低，1中，2高
+        'difficulty'    => 0,       // -1无难度，0低，1中，2高
         'action_info'   => [],      // 项目动作组合 ["action_id","action_time","action_groupno","calorie"]
     ];
 

@@ -25,6 +25,7 @@ h4{
 </div>
 <br>
 <div class="row">
+    {%if $pinfo.has_level eq 1%}
     <div class="col-md-4">
         <h4 class="text-center">低难度</h4>
         <div class="panel panel-default">
@@ -196,6 +197,64 @@ h4{
             </tbody>
         </table>
     </div>
+    {%elseif $pinfo.has_level eq -1%}
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table class="table text-center table-condensed">
+                    <thead>
+                        <tr>
+                            <th class="text-center">文件大小</th>
+                            <th class="text-center">动作数</th>
+                            <th class="text-center">休息次数</th>
+                            <th class="text-center">卡路里</th>
+                            <th class="text-center">时长</th>
+                            <th class="text-center">推荐</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{%$pro[-1].vfilesize%}MB</td>
+                            <td>{%$pro[-1].action_count%}</td>
+                            <td>{%$pro[-1].rest_count%}</td>
+                            <td>{%'%.2f'|sprintf:$pro[-1].calorie_cost%}千卡</td>
+                            <td>{%$pro[-1].time_cost%}s</td>
+                            <td>{%if $pro[-1].recommend == 1%}是{%else%}否{%/if%}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <table class="table table-hover text-center">
+            <thead>
+                <tr>
+                    <th class="text-center">序号</th>
+                    <th class="text-center">动作名称</th>
+                    <th class="text-center">动作数</th>
+                    <th class="text-center">卡路里(千卡)</th>
+                    <th class="text-center">时长(s)</th>
+                    <th class="text-center">类型</th>
+                    <th class="text-center">创建时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%foreach from=$pro[-1].action_info key=index item=ainfo%}
+                <tr class="{%if $ainfo.calorie == 0%}info{%/if%}">
+                    <td>{%$index+1%}</td>
+                    <td>{%$ainfo.name%}</td>
+                    <td>{%$ainfo.action_groupno%}</td>
+                    <td>{%$ainfo.calorie%}</td>
+                    <td>{%$ainfo.action_time%}</td>
+                    <td>{%$ainfo.action_type%}</td>
+                    <td>
+                        {%$ainfo.ctime|date_format:"%Y-%m-%d %H:%M:%S"%}
+                    </td>
+                </tr>
+                {%/foreach%}
+            </tbody>
+        </table>
+    </div>
+    {%/if%}
 </div>
         
         

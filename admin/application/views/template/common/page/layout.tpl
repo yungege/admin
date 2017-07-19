@@ -141,6 +141,17 @@
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#app"><i class="fa fa-fw fa-bug"></i> 客户端管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="app" class="collapse {%if $tag.0 == 6%}in{%/if%}">
+                            <li>
+                                <a href="/version/index" class="{%if $tag.0 == 6 && $tag.1 == 1%}cy-child-active{%/if%}">APP版本列表</a>
+                            </li>
+                            <li>
+                                <a href="/version/add" class="{%if $tag.0 == 6 && $tag.1 == 2%}cy-child-active{%/if%}">发布新版本</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-05-12 14:43:36
+<?php /* Smarty version Smarty-3.1.13, created on 2017-06-23 10:33:12
          compiled from "/var/www/admin/admin/application/views/template/sport/pro.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2122100414591559980e3503-63074558%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1440239946594c7de8b97fc2-98478584%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '310eddac9d26dc72a5ef5358f10af9ece24579b3' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/pro.tpl',
-      1 => 1494228733,
+      1 => 1498034778,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2122100414591559980e3503-63074558',
+  'nocache_hash' => '1440239946594c7de8b97fc2-98478584',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59155998192885_92450857',
+  'unifunc' => 'content_594c7de8c17310_84165727',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59155998192885_92450857')) {function content_59155998192885_92450857($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_594c7de8c17310_84165727')) {function content_594c7de8c17310_84165727($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -225,6 +225,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 </div>
 <br>
 <div class="row">
+    <?php if ($_smarty_tpl->tpl_vars['pinfo']->value['has_level']==1){?>
     <div class="col-md-4">
         <h4 class="text-center">低难度</h4>
         <div class="panel panel-default">
@@ -450,6 +451,82 @@ $_smarty_tpl->tpl_vars['ainfo']->_loop = true;
             </tbody>
         </table>
     </div>
+    <?php }elseif($_smarty_tpl->tpl_vars['pinfo']->value['has_level']==-1){?>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table class="table text-center table-condensed">
+                    <thead>
+                        <tr>
+                            <th class="text-center">文件大小</th>
+                            <th class="text-center">动作数</th>
+                            <th class="text-center">休息次数</th>
+                            <th class="text-center">卡路里</th>
+                            <th class="text-center">时长</th>
+                            <th class="text-center">推荐</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><?php echo $_smarty_tpl->tpl_vars['pro']->value[-1]['vfilesize'];?>
+MB</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['pro']->value[-1]['action_count'];?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['pro']->value[-1]['rest_count'];?>
+</td>
+                            <td><?php echo sprintf('%.2f',$_smarty_tpl->tpl_vars['pro']->value[-1]['calorie_cost']);?>
+千卡</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['pro']->value[-1]['time_cost'];?>
+s</td>
+                            <td><?php if ($_smarty_tpl->tpl_vars['pro']->value[-1]['recommend']==1){?>是<?php }else{ ?>否<?php }?></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <table class="table table-hover text-center">
+            <thead>
+                <tr>
+                    <th class="text-center">序号</th>
+                    <th class="text-center">动作名称</th>
+                    <th class="text-center">动作数</th>
+                    <th class="text-center">卡路里(千卡)</th>
+                    <th class="text-center">时长(s)</th>
+                    <th class="text-center">类型</th>
+                    <th class="text-center">创建时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php  $_smarty_tpl->tpl_vars['ainfo'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ainfo']->_loop = false;
+ $_smarty_tpl->tpl_vars['index'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['pro']->value[-1]['action_info']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ainfo']->key => $_smarty_tpl->tpl_vars['ainfo']->value){
+$_smarty_tpl->tpl_vars['ainfo']->_loop = true;
+ $_smarty_tpl->tpl_vars['index']->value = $_smarty_tpl->tpl_vars['ainfo']->key;
+?>
+                <tr class="<?php if ($_smarty_tpl->tpl_vars['ainfo']->value['calorie']==0){?>info<?php }?>">
+                    <td><?php echo $_smarty_tpl->tpl_vars['index']->value+1;?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['ainfo']->value['name'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['ainfo']->value['action_groupno'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['ainfo']->value['calorie'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['ainfo']->value['action_time'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['ainfo']->value['action_type'];?>
+</td>
+                    <td>
+                        <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['ainfo']->value['ctime'],"%Y-%m-%d %H:%M:%S");?>
+
+                    </td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </div>
+    <?php }?>
 </div>
         
         

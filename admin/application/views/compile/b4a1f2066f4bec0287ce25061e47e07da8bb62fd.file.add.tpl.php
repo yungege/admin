@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-19 13:00:52
-         compiled from "/var/www/admin/admin/application/views/template/feedback/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1438313356596ee784477bc7-04493550%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-19 15:18:58
+         compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:329623258596f07e2812553-38996701%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '16b3d5a1c6787a8aa2082990c3a1e179d4c2401a' => 
+    'b4a1f2066f4bec0287ce25061e47e07da8bb62fd' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/feedback/index.tpl',
-      1 => 1494210642,
+      0 => '/var/www/admin/admin/application/views/template/version/add.tpl',
+      1 => 1500447611,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1438313356596ee784477bc7-04493550',
+  'nocache_hash' => '329623258596f07e2812553-38996701',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_596ee7844f3554_65504187',
+  'unifunc' => 'content_596f07e2846694_57791191',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_596ee7844f3554_65504187')) {function content_596ee7844f3554_65504187($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_596f07e2846694_57791191')) {function content_596f07e2846694_57791191($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -203,7 +203,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> BUG收集 / 反馈建议
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 客户端管理 / 发布新版本
                             </li>
                         </ol>
                     </div>
@@ -211,68 +211,48 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
+
 <div class="row">
     <div class="col-lg-12">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped text-center">
-                <thead>
-                    <tr>
-                        <th class="text-center">头像</th>
-                        <th class="text-center">反馈人</th>
-                        <th class="text-center">昵称</th>
-                        <th class="text-center">号码</th>
-                        <th class="text-center" style="min-width: 150px;">家长</th>
-                        <th class="text-center">反馈内容</th>
-                        <th class="text-center" style="min-width: 100px;">反馈时间</th>
-                        <th class="text-center" style="min-width: 100px;">操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
-$_smarty_tpl->tpl_vars['row']->_loop = true;
-?>
-                    <tr>
-                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['iconurl'];?>
-" style="width: 40px;height: 40px;border-radius: 20px;"></td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
-</td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['mobile']){?><?php echo $_smarty_tpl->tpl_vars['row']->value['mobile'];?>
-<?php }?></td>
-                        <td class="text-left">
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['parent']){?>
-                                <?php  $_smarty_tpl->tpl_vars['par'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['par']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['row']->value['parent']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['par']->key => $_smarty_tpl->tpl_vars['par']->value){
-$_smarty_tpl->tpl_vars['par']->_loop = true;
-?>
-                                    <?php echo $_smarty_tpl->tpl_vars['par']->value;?>
-<br/>
-                                <?php } ?>
-                            <?php }?>
-                        </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['content'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['date'];?>
-<br/><?php echo $_smarty_tpl->tpl_vars['row']->value['time'];?>
-</td>
-                        <td></td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
-        </div>
-        <?php if ($_smarty_tpl->tpl_vars['pageCount']->value>1){?>
-        <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="<?php echo $_GET['pn'];?>
-"></ul>
-        </div>
-        <?php }?>
+        <form name="version">
+            <div class="form-group">
+                <label for="platform">发布平台</label>
+                <select id="platform" class="form-control" name="type">
+                    <option value="-1">选择发布平台</option>
+                    <option value="0" >iOS【当前最新版本 <?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
+】</option>
+                    <option value="1">Android【当前最新版本 <?php echo $_smarty_tpl->tpl_vars['android']->value;?>
+】</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="vname">版本名称</label>
+                <input type="text" class="form-control" id="vname" placeholder="Version Name" name="version">
+            </div>
+
+            <div class="form-group">
+                <label for="vno">版本号</label>
+                <input type="text" class="form-control" id="vno" placeholder="Version No" name="versionno">
+            </div>
+
+            <div class="form-group">
+                <label for="description">更新说明</label>
+                <textarea id="description" class="form-control" rows="3" name="description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="downloadurl">下载URL</label>
+                <input type="text" class="form-control" id="downloadurl" placeholder="Download URL" name="downloadurl">
+            </div>
+              
+            <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
+" data-1="<?php echo $_smarty_tpl->tpl_vars['android']->value;?>
+">确认发布</button>
+        </form>
     </div>
 </div>
+
 
 
                 <!-- footer -->
@@ -302,33 +282,88 @@ $_smarty_tpl->tpl_vars['par']->_loop = true;
     </script>
 
     
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
 <script type="text/javascript">
-    var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
-;
-    var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
-;
-    var urlPage = parseInt($("#page").data('url-pn'));
-    if(isNaN(urlPage)){
-        urlPage = 0;
-    }
+    !(function(){
+        var publish = {
+            init: function(){
+                this.getDom();
+                this.postData();
+            },
+            getDom: function(){
+                this.subBtn = $('#sub');
+                this.pt = $('#platform');
+                this.vname = $('#vname');
+                this.no = $('#vno');
+                this.desc = $('#description');
+                this.url = $('#downloadurl');
+                this.form = $('form[name=version]');
+            },
+            checkParams: function(){
+                var me = this;
 
-    $('#page').twbsPagination({
-        totalPages: pageCount,
-        visiblePages: 7,
-        version: '1.1',
-        first: '首页',
-        prev: '上一页',
-        next: '下一页',
-        last: '尾页',
-        startPage: currentPage,
-        onPageClick: function (event, page) {
-            if(urlPage == page)
-                return;
+                var pt = me.pt.val();
 
-            window.location = "?pn=" + page;
-        }
-    });
+                if(pt != 0 && pt != 1){
+                    alert('请选择发布平台.');
+                    return false;
+                }
+
+                var name = $.trim(me.vname.val());
+                if(!name){
+                    alert('请输入版本名.');
+                    return false;
+                }
+
+                var no = parseInt($.trim(me.no.val()));
+                if(!no || typeof(no) == 'undefiend'){
+                    alert('请输入正确的版本号.');
+                    return false;
+                }
+
+                var desc = $.trim(me.desc.val());
+                if(!name){
+                    alert('请输入版本更新说明.');
+                    return false;
+                }
+
+                var url = $.trim(me.url.val());
+                if(!url || !url.match(/(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/g)){
+                    alert('请输入合法的URL.');
+                    return false;
+                }
+            },
+            postData: function(){
+                var me = this;
+
+                me.subBtn.unbind().bind('click', function(){
+                    var res = me.checkParams();
+                    if(res === false){
+                        return false;
+                    }
+
+                    var curentNo = $(this).attr('data-'+me.pt.val());
+                    if(curentNo >= $.trim(me.no.val())){
+                        alert('请检查您输入的版本号是否低于当前版本号.');
+                        return false;
+                    }
+
+                    var formdata = me.form.serialize();
+                    $.post('/version/publish', formdata, function(json){
+                        if(json.code != -1){
+                            window.location = '/version/index';
+                        }
+                        else{
+                            alert('发布失败.');
+                            return false;
+                        }
+                    });
+                })
+            }
+
+        };
+
+        publish.init();
+    })()
 </script>
 
 </body>

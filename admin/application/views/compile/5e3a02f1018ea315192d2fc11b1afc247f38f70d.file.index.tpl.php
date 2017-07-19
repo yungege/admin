@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-19 13:00:52
-         compiled from "/var/www/admin/admin/application/views/template/feedback/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1438313356596ee784477bc7-04493550%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-19 15:19:13
+         compiled from "/var/www/admin/admin/application/views/template/version/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1145194226596f07f15c1c87-67953667%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '16b3d5a1c6787a8aa2082990c3a1e179d4c2401a' => 
+    '5e3a02f1018ea315192d2fc11b1afc247f38f70d' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/feedback/index.tpl',
-      1 => 1494210642,
+      0 => '/var/www/admin/admin/application/views/template/version/index.tpl',
+      1 => 1500442553,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1438313356596ee784477bc7-04493550',
+  'nocache_hash' => '1145194226596f07f15c1c87-67953667',
   'function' => 
   array (
   ),
@@ -29,9 +29,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_596ee7844f3554_65504187',
+  'unifunc' => 'content_596f07f16000a5_14879962',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_596ee7844f3554_65504187')) {function content_596ee7844f3554_65504187($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_596f07f16000a5_14879962')) {function content_596f07f16000a5_14879962($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -203,7 +204,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> BUG收集 / 反馈建议
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 客户端管理 / 版本列表<a href="/version/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">发布新版本</a>
                             </li>
                         </ol>
                     </div>
@@ -211,19 +212,18 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
+
 <div class="row">
     <div class="col-lg-12">
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped text-center">
                 <thead>
                     <tr>
-                        <th class="text-center">头像</th>
-                        <th class="text-center">反馈人</th>
-                        <th class="text-center">昵称</th>
-                        <th class="text-center">号码</th>
-                        <th class="text-center" style="min-width: 150px;">家长</th>
-                        <th class="text-center">反馈内容</th>
-                        <th class="text-center" style="min-width: 100px;">反馈时间</th>
+                        <th class="text-center">平台类型</th>
+                        <th class="text-center">版本号名称</th>
+                        <th class="text-center">版本号</th>
+                        <th class="text-center" style="width: 400px;">升级描述</th>
+                        <th class="text-center" style="min-width: 100px;">发布时间</th>
                         <th class="text-center" style="min-width: 100px;">操作</th>
                     </tr>
                 </thead>
@@ -234,32 +234,26 @@ foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars[
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
                     <tr>
-                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['iconurl'];?>
-" style="width: 40px;height: 40px;border-radius: 20px;"></td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
-</td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['mobile']){?><?php echo $_smarty_tpl->tpl_vars['row']->value['mobile'];?>
-<?php }?></td>
-                        <td class="text-left">
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['parent']){?>
-                                <?php  $_smarty_tpl->tpl_vars['par'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['par']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['row']->value['parent']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['par']->key => $_smarty_tpl->tpl_vars['par']->value){
-$_smarty_tpl->tpl_vars['par']->_loop = true;
-?>
-                                    <?php echo $_smarty_tpl->tpl_vars['par']->value;?>
-<br/>
-                                <?php } ?>
+                        <td>
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['type']==1){?>
+                                Android
+                            <?php }else{ ?>
+                                iOS
                             <?php }?>
                         </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['content'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['versionno'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['date'];?>
-<br/><?php echo $_smarty_tpl->tpl_vars['row']->value['time'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['version'];?>
 </td>
-                        <td></td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['description'];?>
+</td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%Y-%m-%d");?>
+<br/><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%H:%M:%S");?>
+</td>
+                        <td>
+                            <a href="<?php echo $_smarty_tpl->tpl_vars['row']->value['downloadurl'];?>
+" class="btn btn-sm btn-info">下载</a>
+                        </td>
                     </tr>
                     <?php } ?>
                 </tbody>
@@ -273,6 +267,8 @@ $_smarty_tpl->tpl_vars['par']->_loop = true;
         <?php }?>
     </div>
 </div>
+
+
 
 
                 <!-- footer -->
@@ -302,34 +298,5 @@ $_smarty_tpl->tpl_vars['par']->_loop = true;
     </script>
 
     
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
-<script type="text/javascript">
-    var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
-;
-    var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
-;
-    var urlPage = parseInt($("#page").data('url-pn'));
-    if(isNaN(urlPage)){
-        urlPage = 0;
-    }
-
-    $('#page').twbsPagination({
-        totalPages: pageCount,
-        visiblePages: 7,
-        version: '1.1',
-        first: '首页',
-        prev: '上一页',
-        next: '下一页',
-        last: '尾页',
-        startPage: currentPage,
-        onPageClick: function (event, page) {
-            if(urlPage == page)
-                return;
-
-            window.location = "?pn=" + page;
-        }
-    });
-</script>
-
 </body>
 </html><?php }} ?>

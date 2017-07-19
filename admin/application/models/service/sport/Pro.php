@@ -31,7 +31,7 @@ class Service_Sport_ProModel extends BasePageService {
             return $this->resData;
         $pid = $arr[1][0];
 
-        $pinfo = $this->projectModel->getInfoById($pid, ['name','desc']);
+        $pinfo = $this->projectModel->getInfoById($pid, ['name','desc','has_level']);
         $this->resData['pinfo'] = $pinfo;
         $proSku = $this->projectSkuModel->getProjectInfo($pid);
         $proSku = array_column($proSku, null, 'difficulty');
