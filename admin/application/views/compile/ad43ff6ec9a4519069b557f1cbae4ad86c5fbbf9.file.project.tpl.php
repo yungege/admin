@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-05 17:17:07
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-20 13:15:23
          compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:935434029595cae935f7b31-95176043%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:88325410659703c6b2fd1a7-26355921%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ad43ff6ec9a4519069b557f1cbae4ad86c5fbbf9' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/project.tpl',
-      1 => 1494229373,
+      1 => 1500527708,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1494210642,
+      1 => 1500440451,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '935434029595cae935f7b31-95176043',
+  'nocache_hash' => '88325410659703c6b2fd1a7-26355921',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_595cae9372b529_72832389',
+  'unifunc' => 'content_59703c6b3999c8_70785137',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_595cae9372b529_72832389')) {function content_595cae9372b529_72832389($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59703c6b3999c8_70785137')) {function content_59703c6b3999c8_70785137($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -183,6 +183,17 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#app"><i class="fa fa-fw fa-bug"></i> 客户端管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="app" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
+                            <li>
+                                <a href="/version/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">APP版本列表</a>
+                            </li>
+                            <li>
+                                <a href="/version/add" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">发布新版本</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -261,8 +272,8 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                         <td>
                             <a href="/sport/p/<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 .html" class="btn btn-sm btn btn-primary" target="__blank">查 看</a>
-                            <button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-.html" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button>
+                            <!-- <button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+.html" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
                         </td>
                     </tr>
                     <?php } ?>

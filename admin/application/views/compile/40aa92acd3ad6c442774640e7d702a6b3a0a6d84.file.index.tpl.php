@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-19 12:46:50
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-20 09:49:19
          compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1982973685596ee43a5a9136-62157236%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:183807797359700c1fbd07b0-78312967%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1494210642,
+      1 => 1500440451,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1982973685596ee43a5a9136-62157236',
+  'nocache_hash' => '183807797359700c1fbd07b0-78312967',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_596ee43a64f216_87708202',
+  'unifunc' => 'content_59700c1fc02bf0_96729724',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_596ee43a64f216_87708202')) {function content_596ee43a64f216_87708202($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59700c1fc02bf0_96729724')) {function content_59700c1fc02bf0_96729724($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -175,6 +175,17 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <ul id="bug" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5){?>in<?php }?>">
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">反馈建议</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#app"><i class="fa fa-fw fa-bug"></i> 客户端管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="app" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
+                            <li>
+                                <a href="/version/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">APP版本列表</a>
+                            </li>
+                            <li>
+                                <a href="/version/add" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">发布新版本</a>
                             </li>
                         </ul>
                     </li>

@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-19 15:19:13
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-20 10:53:17
          compiled from "/var/www/admin/admin/application/views/template/version/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1145194226596f07f15c1c87-67953667%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:46007957259701b1d9657e0-20226550%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5e3a02f1018ea315192d2fc11b1afc247f38f70d' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/version/index.tpl',
-      1 => 1500442553,
+      1 => 1500515071,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1145194226596f07f15c1c87-67953667',
+  'nocache_hash' => '46007957259701b1d9657e0-20226550',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_596f07f16000a5_14879962',
+  'unifunc' => 'content_59701b1d9a1c79_56644106',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_596f07f16000a5_14879962')) {function content_596f07f16000a5_14879962($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59701b1d9a1c79_56644106')) {function content_59701b1d9a1c79_56644106($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -241,11 +241,11 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                                 iOS
                             <?php }?>
                         </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['versionno'];?>
-</td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['version'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['description'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['versionno'];?>
+</td>
+                        <td style="text-align: left;"><?php echo nl2br($_smarty_tpl->tpl_vars['row']->value['description']);?>
 </td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%Y-%m-%d");?>
 <br/><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%H:%M:%S");?>

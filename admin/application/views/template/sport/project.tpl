@@ -47,7 +47,7 @@
                         </td>
                         <td>
                             <a href="/sport/p/{%$row._id%}.html" class="btn btn-sm btn btn-primary" target="__blank">查 看</a>
-                            <button type="button" data-id="{%$row._id%}.html" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button>
+                            <!-- <button type="button" data-id="{%$row._id%}.html" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
                         </td>
                     </tr>
                     {%/foreach%}

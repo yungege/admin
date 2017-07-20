@@ -27,9 +27,9 @@
                                 iOS
                             {%/if%}
                         </td>
-                        <td>{%$row.versionno%}</td>
                         <td>{%$row.version%}</td>
-                        <td>{%$row.description%}</td>
+                        <td>{%$row.versionno%}</td>
+                        <td style="text-align: left;">{%$row.description|nl2br%}</td>
                         <td>{%$row.createtime|date_format:"%Y-%m-%d"%}<br/>{%$row.createtime|date_format:"%H:%M:%S"%}</td>
                         <td>
                             <a href="{%$row.downloadurl%}" class="btn btn-sm btn-info">下载</a>
