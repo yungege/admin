@@ -23,19 +23,22 @@ define('MATCHING_ACCOUNT_DONE',15);             //该账号已经匹配过用户
 define('PHONENUM_HAS_EXIST',16);                //该手机号已经被注册
 define('PHONENUM_NO_EXIST',17);                 //该手机号未被注册
 define('MATCHING_FAULT',18);                    //匹配失败
+define('UNALLOW_MOBILE_LOGIN',19);              //该号码无权限
+define('SSO_ID_HAS_BIND',20);                   //该ssoid已经绑定
+define('MOBILE_ERROR',21);                      //手机号格式错误
 
 
 // public50~99
 define('PUBLIC_NOT_FOUND',50);
 
 // 栏目错误码100~199
-define('COLUMN_NAME_EMPTY',100);        //栏目名空
-define('COLUMN_CREATER_EMPTY',101);     //栏目创建者空
-define('COLUMN_NAME_EXSIT',102);        //栏目名称已存在
-define('COLUMN_ADD_FAILED',103);        //添加栏目错误
-define('COLUMN_NO_EXSIT',104);          //栏目不存在
-define('COLUMN_MODIFY_FAILED',105);     //栏目修改错误
-define('COLUMN_DELETE_FAILED',106);     //删除栏目错误
+define('COLUMN_NAME_EMPTY',100);                //栏目名空
+define('COLUMN_CREATER_EMPTY',101);             //栏目创建者空
+define('COLUMN_NAME_EXSIT',102);                //栏目名称已存在
+define('COLUMN_ADD_FAILED',103);                //添加栏目错误
+define('COLUMN_NO_EXSIT',104);                  //栏目不存在
+define('COLUMN_MODIFY_FAILED',105);             //栏目修改错误
+define('COLUMN_DELETE_FAILED',106);             //删除栏目错误
 
 // 文章信息200~399
 define('ARTICLE_TITLE_EMPTY',200);              //文章标题空
@@ -57,21 +60,31 @@ define('ARTICLE_ADDFAVOR_FAILED',215);          //添加收藏失败
 define('ARTICLE_ID_EMPTY',216);                 //文章id为空
 
 // 用户信息 400~449
-define('USER_NAME_EMPTY',400);      //用户名空
-define('USER_PWD_EMPTY',401);       //密码空
-define('USER_ADD_FAILED',402);      //添加用户错误
-define('USER_USER_NON_EXSIT',403);  //用户不存在
-define('USER_GET_FAILED',404);      //获取用户信息错误
-define('USER_UA_PW_ERROR',405);     //用户名或密码错误
-define('USER_DISABLE_FAILED',406);  //禁用用户失败
-define('USER_ENABLE_FAILED',407);   //启用用户失败
-define('USER_MODIFY_FAILED',408);   //修改用户失败
-define('USER_NAME_EXSIT',409);      //用户名已存在
-define('USER_NEED_LOGIN',410);      //需要登录
-define('USER_PLATFORM_EMPTY',411);  //平台来源为空
-define('USER_NAME_SENSITIVE',412);  //用户ID包含敏感词
-define('USER_EXCEED_MODIFY_COUNT',413);  //用户ID本月已经修改了两次
-define('USER_HAS_EXIST',414);            //用户已经注册
+define('USER_NAME_EMPTY',400);                  //用户名空
+define('USER_PWD_EMPTY',401);                   //密码空
+define('USER_ADD_FAILED',402);                  //添加用户错误
+define('USER_USER_NON_EXSIT',403);              //用户不存在
+define('USER_GET_FAILED',404);                  //获取用户信息错误
+define('USER_UA_PW_ERROR',405);                 //用户名或密码错误
+define('USER_DISABLE_FAILED',406);              //禁用用户失败
+define('USER_ENABLE_FAILED',407);               //启用用户失败
+define('USER_MODIFY_FAILED',408);               //修改用户失败
+define('USER_NAME_EXSIT',409);                  //用户名已存在
+define('USER_NEED_LOGIN',410);                  //需要登录
+define('USER_PLATFORM_EMPTY',411);              //平台来源为空
+define('USER_NAME_SENSITIVE',412);              //用户ID包含敏感词
+define('USER_EXCEED_MODIFY_COUNT',413);         //用户ID本月已经修改了两次
+define('USER_HAS_EXIST',414);                   //用户已经注册
+define('USER_FORBID_MODIFY',415);               //禁止修改用户信息
+define('USER_EXIST_PHONE',416);                 //用户手机号已经存在
+define('RESOURCE_NOT_EXISTS',417);              //资源不存在
+define('USER_LOGIN_FAIL',418);                  //登录失败
+define('UD_ERROR', 419);                        //UD信息错误
+define('USER_ID_EMPTY', 420);                   //useri不存在
+define('USER_NICKNAME_ERROR', 421);             //昵称非法
+define('RELATION_ERROR', 422);                  //关联关系错误
+define('USER_PLATFORM_ERROR', 423);             //platform错误
+define('USER_REGISTER_ERROR', 424);             //注册失败
 
 
 // 素材信息 600~649
@@ -95,7 +108,9 @@ define('GROUP_ADD_FAILED',612);                 //添加组失败
 define('UP_ERROR_IDNEED',650);                  //需要articleid或commentid
 define('UP_OPTION_FAILED',651);                 //点赞操作失败
 define('UP_ERROR_IDNEED_SPORT',652);            //运动圈点赞
-define('UP_CANCEL_ERROR_IDNEED',653);     //取消点赞
+define('UP_CANCEL_ERROR_IDNEED',653);           //取消点赞
+define('UP_ERROR_TYPE_SPORT', 654);             //赞类型错误
+define('SHARE_ERROR', 655);                     //分享失败
 
 // 文件夹 700 ~ 749
 define('FOLDER_ADD_FAILED',700);                //文件夹添加失败
@@ -111,21 +126,22 @@ define('COMMENT_DELETE_FAILED',753);            //删除评论失败
 define('COMMENT_ID_NULL',754);                  //评论id为空
 
 // others 1000
-define('HAVE_NO_AUTH',1000);         //没权限
-define('NEED_LOGIN',1001);           //请登录
-define('DATABASE_ERROR',1002);       //数据库错误
-define('DATASOURCE_ERROR',1003);     //数据源错误
-define('NOT_ALLOWD_REQUEST_TYPE',1004); //请求方法错误
+define('HAVE_NO_AUTH',1000);                    //没权限
+define('NEED_LOGIN',1001);                      //请登录
+define('DATABASE_ERROR',1002);                  //数据库错误
+define('DATASOURCE_ERROR',1003);                //数据源错误
+define('NOT_ALLOWD_REQUEST_TYPE',1004);         //请求方法错误
 
 // 第三方puligin 751 ~ 799
-define('QINIU_UPLOAD_RESOURCE_FAILED',751);             //上传资源失败
+define('QINIU_UPLOAD_RESOURCE_FAILED',751);     //上传资源失败
+define('QINIU_UPLOAD_TOKEN_FAILED',752);     //获取token失败
 
 // 定时资源 800 ~
-define('CRON_OPEN_FAILED',800);             //打开素材资源数据库失败
+define('CRON_OPEN_FAILED',800);                 //打开素材资源数据库失败
 
 // 锻炼 900 ~
 define('TRAINING_DATA_EMPTY',900);              //没有你想获取的锻炼数据
-define('TRAINING_DATA_FAULSE',901);             //锻炼数据提交失败
+define('TRAINING_DATA_FALSE',901);              //锻炼数据提交失败
 define('TRAINING_REMIND_ADD_FAULSE',902);       //锻炼提醒时间配置失败
 define('HOMEWORK_HAS_BEEN',903);                //班级当前有已有作业存在
 define('FEEDBACK_POST_FAULT',904);              //反馈信息提交失败
@@ -134,13 +150,24 @@ define('TRAINING_PUBLISH_TIME_FAULT',906);      //锻炼截止时间有误
 define('TRAINING_TASK_DELAY_FAULT',907);        //延期失败
 define('FEEDBACK_DATA_EMPTY',908);              //当前没有反馈意见
 define('DATA_EMPTY',909);                       //数据为空
-
+define('ACTION_TYPE_EMPTY',910);                //没有你想要的动作类型
+define('TRAINING_SUBMIT_ERROR',911);            //锻炼提交过于频繁
 
 // 推送
 define('PUSH_FAULT',1101);                      //推送失败
 define('PUSH_HASDONE',1102);                    //推送的班级本周已经推送过2次，不能再次推送！
 define('PUSH_DATA_EMPTY',1103);                 //没有推送消息！
 define('VERSION_UPDATE_EMPTY',1104);            //无版本升级信息！
+
+//消息
+define('MSG_READ_ERR',1201);                    //标记已读消息失败
+
+//反馈
+define('FEEDBACK_ADD_ERR',1301);                //反馈失败
+define('FEEDBACK_DATA_ERR',1302);               //反馈信息为空
+
+//排名
+define('RANK_TYPE_ERR', 1401);                  //排名类型错误
 
 function setError($errorCode, $errorMsg=''){
     switch($errorCode){
@@ -187,6 +214,15 @@ function setError($errorCode, $errorMsg=''){
             break;
         case PHONENUM_NO_EXIST:
             $msg = '该手机号未被注册过!';
+            break;
+        case UNALLOW_MOBILE_LOGIN:
+            $msg = '该号码无权限';
+            break;
+        case SSO_ID_HAS_BIND:
+            $msg = '该第三方账号已经绑定过其他账号';
+            break;
+        case MOBILE_ERROR:
+            $msg = '手机号格式错误';
             break;
 
         // 栏目错误
@@ -262,8 +298,8 @@ function setError($errorCode, $errorMsg=''){
             $msg = '添加收藏失败';
             break;
         case ARTICLE_ID_EMPTY:
-	        $msg = '文章id为空';
-	        break;
+            $msg = '文章id为空';
+            break;
 
         //用户信息
         case USER_NAME_EMPTY:
@@ -290,12 +326,12 @@ function setError($errorCode, $errorMsg=''){
         case USER_ENABLE_FAILED:
             $msg = '启用用户失败';
             break;
-		case USER_MODIFY_FAILED:
+        case USER_MODIFY_FAILED:
             $msg = '修改用户失败';
             break;
-		case USER_NAME_EXSIT:
-			$msg = '用户名已存在';
-			break;
+        case USER_NAME_EXSIT:
+            $msg = '用户名已存在';
+            break;
         case USER_NEED_LOGIN:
             $msg = '未登录';
             break;
@@ -307,6 +343,36 @@ function setError($errorCode, $errorMsg=''){
             break;
         case USER_HAS_EXIST:
             $msg = '该账户已经注册过';
+            break;
+        case USER_FORBID_MODIFY:
+            $msg = '禁止修改用户信息';
+            break;
+        case USER_EXIST_PHONE:
+            $msg = '用户手机号已经存在';
+            break;
+        case RESOURCE_NOT_EXISTS:
+            $msg = '资源不存在';
+            break;
+        case USER_LOGIN_FAIL:
+            $msg = '登录失败';
+            break;
+        case UD_ERROR:
+            $msg = 'UD信息错误';
+            break;
+        case USER_ID_EMPTY:
+            $msg = 'userid不存在';
+            break;
+        case USER_NICKNAME_ERROR:
+            $msg = '昵称非法';
+            break;
+        case RELATION_ERROR:
+            $msg = '关联关系错误';
+            break;
+        case USER_PLATFORM_ERROR:
+            $msg = 'platform error';
+            break;
+        case USER_REGISTER_ERROR:
+            $msg = '注册失败';
             break;
 
         //素材信息
@@ -348,7 +414,7 @@ function setError($errorCode, $errorMsg=''){
             break;
         case GROUP_ADD_FAILED:
             $msg = '添加组失败';
-			break;
+            break;
 
         // 点赞错误
         case UP_ERROR_IDNEED:
@@ -363,23 +429,29 @@ function setError($errorCode, $errorMsg=''){
         case UP_CANCEL_ERROR_IDNEED:
             $msg = '取消点赞失败';
             break;
+        case UP_ERROR_TYPE_SPORT:
+            $msg = '赞操作类型错误';
+            break;
+        case SHARE_ERROR:
+            $msg = '分享失败';
+            break;
 
-		//文件夹操作
-		case FOLDER_ADD_FAILED:
-			$msg = '添加文件夹失败';
-			break;
-		case FOLDER_MODIFY_FAILED:
-			$msg = '修改文件夹失败';
-			break;
-		case FOLDER_NOT_EXIST:
-			$msg = '文件夹不存在';
-			break;
-		case FOLDER_MOVE_FAILED:
-			$msg = '移动文章失败';
-			break;
-		case FOLDER_DELETE_FAILED:
-			$msg = '删除文件夹失败';
-			break;
+        //文件夹操作
+        case FOLDER_ADD_FAILED:
+            $msg = '添加文件夹失败';
+            break;
+        case FOLDER_MODIFY_FAILED:
+            $msg = '修改文件夹失败';
+            break;
+        case FOLDER_NOT_EXIST:
+            $msg = '文件夹不存在';
+            break;
+        case FOLDER_MOVE_FAILED:
+            $msg = '移动文章失败';
+            break;
+        case FOLDER_DELETE_FAILED:
+            $msg = '删除文件夹失败';
+            break;
 
         // 评论错误
         case COMMENT_AIDCID_EMPTY:
@@ -396,6 +468,11 @@ function setError($errorCode, $errorMsg=''){
             break;
         case COMMENT_ID_NULL:
             $msg = '评论id为空';
+            break;
+
+        //消息
+        case MSG_READ_ERR:
+            $msg = '标记已读消息失败';
             break;
 
         //其他
@@ -415,7 +492,7 @@ function setError($errorCode, $errorMsg=''){
         case TRAINING_DATA_EMPTY:
             $msg = '亲，暂时没有你想获取的数据！';
             break;
-        case TRAINING_DATA_FAULSE:
+        case TRAINING_DATA_FALSE:
             $msg = '锻炼数据提交失败';
             break;
         case TRAINING_REMIND_ADD_FAULSE:
@@ -439,9 +516,16 @@ function setError($errorCode, $errorMsg=''){
         case DATA_EMPTY:
             $msg = '数据为空';
             break;
+        case ACTION_TYPE_EMPTY:
+            $msg = '没有你想要的数据类型';
+            break;
         case TRAINING_TASK_DELAY_FAULT:
             $msg = '延期失败';
             break;
+        case TRAINING_SUBMIT_ERROR:
+            $msg = '锻炼提交过于频繁';
+            break;
+
         case PUSH_FAULT:
             $msg = '推送失败';
             break;
@@ -454,13 +538,23 @@ function setError($errorCode, $errorMsg=''){
         case VERSION_UPDATE_EMPTY:
             $msg = '无版本升级信息';
             break;
-		default :
-			$msg = '未知错误';
-			break;
-
+        case FEEDBACK_ADD_ERR:
+            $msg = '反馈失败';
+            break;
+        case FEEDBACK_DATA_ERR:
+            $msg = '反馈信息为空';
+            break;
+        // 排名
+        case RANK_TYPE_ERR:
+            $msg = '排名类型错误';
+            break;
         //定时资源
         case CRON_OPEN_FAILED:
             $msg = '打开素材资源数据库失败';
+            break;
+
+        default :
+            $msg = '未知错误';
             break;
     }
 
@@ -468,7 +562,4 @@ function setError($errorCode, $errorMsg=''){
         $msg = $errorMsg;
 
     return $msg;
-    // $value['errCode'] = $errorCode;
-    // $value['errMessage'] = $msg;
-	// send_http_status($httpCode);
 }

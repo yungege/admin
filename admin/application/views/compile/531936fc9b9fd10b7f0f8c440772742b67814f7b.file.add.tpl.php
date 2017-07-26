@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-26 16:00:03
-         compiled from "/var/www/admin/admin/application/views/template/version/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:737188459784c03532276-13910239%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-26 16:51:27
+         compiled from "/var/www/admin/admin/application/views/template/action/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:5865064835978580fbc4463-11752674%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '5e3a02f1018ea315192d2fc11b1afc247f38f70d' => 
+    '531936fc9b9fd10b7f0f8c440772742b67814f7b' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/version/index.tpl',
-      1 => 1501044400,
+      0 => '/var/www/admin/admin/application/views/template/action/add.tpl',
+      1 => 1501059084,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501055140,
+      1 => 1501057134,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '737188459784c03532276-13910239',
+  'nocache_hash' => '5865064835978580fbc4463-11752674',
   'function' => 
   array (
   ),
@@ -29,10 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59784c0357ae08_32999207',
+  'unifunc' => 'content_5978580fbfbd86_02737861',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59784c0357ae08_32999207')) {function content_59784c0357ae08_32999207($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5978580fbfbd86_02737861')) {function content_5978580fbfbd86_02737861($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -77,14 +76,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
-<style type="text/css">
-    .version-form{
-        border: 1px solid #ccc;
-        padding: 15px;
-        margin-bottom: 20px;
-    }
-</style>
-
 </head>
 
 <body>
@@ -145,13 +136,16 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <a href="javascript:;" data-toggle="collapse" data-target="#user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="user" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2){?>in<?php }?>">
                             <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">班级管理</a>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">学生管理</a>
                             </li>
                             <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">年级管理</a>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
                             </li>
                             <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
+                            </li>
+                            <li>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">学校管理</a>
                             </li>
                         </ul>
                     </li>
@@ -168,6 +162,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                             <li>
                                 <a href="/sport/action" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">动作</a>
+                            </li>
+                            <li>
+                                <a href="/action/add" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">上传新动作</a>
                             </li>
                         </ul>
                     </li>
@@ -220,7 +217,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 客户端管理 / 版本列表<a href="/version/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">发布新版本</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 锻炼内容管理 / 上传新动作
                             </li>
                         </ol>
                     </div>
@@ -228,78 +225,82 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
+
 <div class="row">
     <div class="col-lg-12">
-        <form name="version" class="version-form">
+        <form name="action">
             <div class="form-group">
-                <label for="platform">发布平台</label>
-                <select id="platform" class="form-control" name="type">
-                    <option value="0">选择发布平台</option>
-                    <option value="1" <?php if ($_GET['type']==1){?> selected="true" <?php }?>>iOS</option>
-                    <option value="2" <?php if ($_GET['type']==2){?> selected="true" <?php }?>>Android</option>
+                <label for="aname">动作名称</label>
+                <input type="text" class="form-control" id="aname" placeholder="Action Name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="atype">动作类型</label>
+                <select id="atype" class="form-control" name="typeno">
+                    <option value="-1">请选择动作类型</option>
+                    <option value="1">计时锻炼</option>
+                    <option value="2">计组数锻炼</option>
+                    <option value="3">节拍锻炼</option>
+                    <option value="4">休息</option>
                 </select>
             </div>
+
+            <div class="form-group">
+                <label for="sex">适用性别</label>
+                <select id="sex" class="form-control" name="sex">
+                    <option value="-1">请选择性别</option>
+                    <option value="0">男</option>
+                    <option value="1">女</option>
+                    <option value="2">不限</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="actiongroupno">动作组数</label>
+                <input type="text" class="form-control" id="actiongroupno" placeholder="Action Group Num" name="actiongroupno">
+            </div>
+
+            <div class="form-group">
+                <label for="singletime">单次动作计划所需时间</label>
+                <input type="text" class="form-control" id="singletime" placeholder="Single Time" name="singletime">
+            </div>
+
+            <div class="form-group">
+                <label for="calorie">单次动作计划所需能量</label>
+                <input type="text" class="form-control" id="calorie" placeholder="Calorie" name="calorie">
+            </div>
+            
+
+            <div class="form-group">
+                <label for="coverimg">动作封面图片</label>
+                <input type="file" class="form-control" id="coverimg-hide">
+                <input type="hidden" name="coverimg">
+            </div>
+
+            <div class="form-group">
+                <label for="video">视频文件</label>
+                <input type="file" class="form-control" id="video" name="video-hide">
+                <input type="hidden" name="video">
+            </div>
+
+            <div class="form-group">
+                <label for="audio">音频文件</label>
+                <input type="file" class="form-control" id="audio" name="audio-hide">
+                <input type="hidden" name="audio">
+            </div>
+
+            <div class="form-group">
+                <label for="describe">动作介绍</label>
+                <textarea id="describe" class="form-control" rows="3" name="describe"></textarea>
+            </div>
+            
               
-            <button type="submit">确认发布</button>
+            <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
+" data-1="<?php echo $_smarty_tpl->tpl_vars['android']->value;?>
+">确认发布</button>
         </form>
     </div>
 </div>
-
-<div class="row">
-    <div class="col-lg-12">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped text-center">
-                <thead>
-                    <tr>
-                        <th class="text-center">平台类型</th>
-                        <th class="text-center">版本号名称</th>
-                        <th class="text-center">版本号</th>
-                        <th class="text-center" style="width: 400px;">升级描述</th>
-                        <th class="text-center" style="min-width: 100px;">发布时间</th>
-                        <th class="text-center" style="min-width: 100px;">操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
-$_smarty_tpl->tpl_vars['row']->_loop = true;
-?>
-                    <tr>
-                        <td>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['type']==1){?>
-                                Android
-                            <?php }else{ ?>
-                                iOS
-                            <?php }?>
-                        </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['version'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['versionno'];?>
-</td>
-                        <td style="text-align: left;"><?php echo nl2br($_smarty_tpl->tpl_vars['row']->value['description']);?>
-</td>
-                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%Y-%m-%d");?>
-<br/><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%H:%M:%S");?>
-</td>
-                        <td>
-                            <a href="<?php echo $_smarty_tpl->tpl_vars['row']->value['downloadurl'];?>
-" class="btn btn-sm btn-info">下载</a>
-                        </td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
-        </div>
-        <?php if ($_smarty_tpl->tpl_vars['pageCount']->value>1){?>
-        <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="<?php echo $_GET['pn'];?>
-"></ul>
-        </div>
-        <?php }?>
-    </div>
-</div>
-
 
 
 
@@ -330,5 +331,23 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
+<script type="text/javascript">
+    !(function(){
+        var action = {
+            init: function(){
+                this.getDom();
+                
+            },
+            getDom: function(){
+                
+            },
+            
+
+        };
+
+        action.init();
+    })()
+</script>
+
 </body>
 </html><?php }} ?>

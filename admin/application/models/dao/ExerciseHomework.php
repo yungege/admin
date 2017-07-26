@@ -21,7 +21,7 @@ class Dao_ExerciseHomeworkModel extends Db_Mongodb {
         'makeup_limit'      => 0,   // 补作业的时间间隔:单位秒
         'homework_require'  => '',  // 作业要求要求
         'makeup_interval'   => 0,   // 补作业时间限制:单位天(超过该时间限制的作业不能补做)
-        'fzkt_type'          => 0,   // 翻转课堂类型 0-锻炼类型 1-教学类型
+        'fzkt_type'         => 0,   // 翻转课堂类型 0-锻炼类型 1-教学类型
         'is_replace'        => 0,   // 是否替换身体素质作业 1-不替换，2-替换
     ];
 

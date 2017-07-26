@@ -27,7 +27,7 @@ class Service_Version_AddModel extends BasePageService {
         $and = $this->versionModel->queryOne(['type' => 1], $option);
         
         return [
-            'pageTag' => '6-2',
+            'pageTag' => '5-2',
             'ios' => $ios['versionno'],
             'android' => $and['versionno'],
         ];

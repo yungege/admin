@@ -1,6 +1,6 @@
 {%extends file="common/page/layout.tpl"%} 
 {%block name="title"%}天天向尚管理后台{%/block%}
-{%block name="bread"%}运动圈 / 动作管理{%/block%}
+{%block name="bread"%}运动圈 / 动作管理 <a href="/action/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">上传新动作</a>{%/block%}
 {%block name="css"%}
 <style type="text/css">
 .video{

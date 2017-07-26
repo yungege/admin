@@ -217,7 +217,7 @@ $(function() {
         multi_selection: false,
         filters: {
             mime_types : [ //只允许上传图片
-                { title : "Image files", extensions : "jpg,gif,png,jpeg,bmp" }
+                { title : "Image files", extensions : "jpg,png,jpeg" }
             ]
         },
 
@@ -257,7 +257,7 @@ $(function() {
         multi_selection: false,
         filters: {
             mime_types : [ //只允许上传图片
-                { title : "Image files", extensions : "jpg,gif,png,jpeg,bmp" }
+                { title : "Image files", extensions : "jpg,png,jpeg" }
             ]
         },
 

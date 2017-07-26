@@ -36,7 +36,7 @@ class Service_Sport_ProModel extends BasePageService {
         $proSku = $this->projectSkuModel->getProjectInfo($pid);
         $proSku = array_column($proSku, null, 'difficulty');
         $this->resData['pro'] = $proSku;
-// echo "<pre>";print_r($this->resData);exit;
+
         return $this->resData;
     }
 

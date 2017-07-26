@@ -96,59 +96,73 @@
                         <a href="/index.html"><i class="fa fa-fw fa-dashboard"></i> HOME PAGE</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#user"><i class="fa fa-fw fa-user"></i> 用户 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="user" class="collapse {%if $tag.0 == 2%}in{%/if%}">
                             <li>
-                                <a href="#" class="{%if $tag.0 == 2 && $tag.1 == 1%}cy-child-active{%/if%}">班级管理</a>
+                                <a href="#" class="{%if $tag.0 == 2 && $tag.1 == 1%}cy-child-active{%/if%}">学生管理</a>
                             </li>
                             <li>
-                                <a href="#" class="{%if $tag.0 == 2 && $tag.1 == 2%}cy-child-active{%/if%}">年级管理</a>
+                                <a href="#" class="{%if $tag.0 == 2 && $tag.1 == 2%}cy-child-active{%/if%}">班级管理</a>
                             </li>
                             <li>
-                                <a href="#" class="{%if $tag.0 == 2 && $tag.1 == 3%}cy-child-active{%/if%}">学校管理</a>
+                                <a href="#" class="{%if $tag.0 == 2 && $tag.1 == 3%}cy-child-active{%/if%}">年级管理</a>
+                            </li>
+                            <li>
+                                <a href="#" class="{%if $tag.0 == 2 && $tag.1 == 4%}cy-child-active{%/if%}">学校管理</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#" data-toggle="collapse" data-target="#sport">
-                            <i class="fa fa-fw fa-bicycle"></i> 运动圈 <i class="fa fa-fw fa-caret-down pull-right"></i>
+                            <i class="fa fa-fw fa-bicycle"></i> 锻炼内容管理 <i class="fa fa-fw fa-caret-down pull-right"></i>
                         </a>
                         <ul id="sport" class="collapse {%if $tag.0 == 3%}in{%/if%}">
                             <li>
-                                <a href="/sport/banner" class="{%if $tag.0 == 3 && $tag.1 == 1%}cy-child-active{%/if%}">Banner</a>
+                                <a href="/sport/homework" class="{%if $tag.0 == 3 && $tag.1 == 1%}cy-child-active{%/if%}">作业</a>
                             </li>
                             <li>
-                                <a href="/sport/project" class="{%if $tag.0 == 3 && $tag.1 == 2%}cy-child-active{%/if%}">项目</a>
+                                <a href="/sport/project" class="{%if $tag.0 == 3 && $tag.1 == 2%}cy-child-active{%/if%}">锻炼方案</a>
                             </li>
                             <li>
                                 <a href="/sport/action" class="{%if $tag.0 == 3 && $tag.1 == 3%}cy-child-active{%/if%}">动作</a>
                             </li>
+                            <li>
+                                <a href="/action/add" class="{%if $tag.0 == 3 && $tag.1 == 4%}cy-child-active{%/if%}">上传新动作</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#basic"><i class="fa fa-fw fa-bar-chart-o"></i> 基础数据 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#basic"><i class="fa fa-fw fa-bar-chart-o"></i> 运营管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="basic" class="collapse {%if $tag.0 == 4%}in{%/if%}">
                             <li>
-                                <a href="#" class="{%if $tag.0 == 4 && $tag.1 == 1%}cy-child-active{%/if%}">今日活跃学生</a>
+                                <a href="/sport/banner" class="{%if $tag.0 == 4 && $tag.1 == 1%}cy-child-active{%/if%}">Banner</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="{%if $tag.0 == 4 && $tag.1 == 2%}cy-child-active{%/if%}">UGC</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="{%if $tag.0 == 4 && $tag.1 == 3%}cy-child-active{%/if%}">统计数据</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="{%if $tag.0 == 4 && $tag.1 == 4%}cy-child-active{%/if%}">运动圈精华</a>
+                            </li>
+
+                            <li>
+                                <a href="/feedback/index" class="{%if $tag.0 == 4 && $tag.1 == 5%}cy-child-active{%/if%}">反馈建议</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#bug"><i class="fa fa-fw fa-bug"></i> BUG收集 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="bug" class="collapse {%if $tag.0 == 5%}in{%/if%}">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#app"><i class="fa fa-fw fa-apple"></i> 平台设置 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="app" class="collapse {%if $tag.0 == 5%}in{%/if%}">
                             <li>
-                                <a href="/feedback/index" class="{%if $tag.0 == 5 && $tag.1 == 1%}cy-child-active{%/if%}">反馈建议</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#app"><i class="fa fa-fw fa-bug"></i> 客户端管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="app" class="collapse {%if $tag.0 == 6%}in{%/if%}">
-                            <li>
-                                <a href="/version/index" class="{%if $tag.0 == 6 && $tag.1 == 1%}cy-child-active{%/if%}">APP版本列表</a>
+                                <a href="/version/index" class="{%if $tag.0 == 5 && $tag.1 == 1%}cy-child-active{%/if%}">APP版本列表</a>
                             </li>
                             <li>
-                                <a href="/version/add" class="{%if $tag.0 == 6 && $tag.1 == 2%}cy-child-active{%/if%}">发布新版本</a>
+                                <a href="/version/add" class="{%if $tag.0 == 5 && $tag.1 == 2%}cy-child-active{%/if%}">发布新版本</a>
                             </li>
                         </ul>
                     </li>

@@ -8,7 +8,7 @@ class Service_Version_IndexModel extends BasePageService {
     protected $reqData;
 
     protected $resData = [
-        'pageTag' => '6-1',
+        'pageTag' => '5-1',
         'pageCount' => 0,
         'list' => [],
         'pn' => 1,
@@ -24,6 +24,12 @@ class Service_Version_IndexModel extends BasePageService {
 
     protected function __execute($req) {
         $req = $req['get'];
+        $where = [];
+
+        if(is_numeric($req['type']) && in_array($req['type'], [1,2])){
+            $where['type'] = (int)($req['type'] - 1);
+        }
+
         // pageno
         if(!isset($req['pn']) || !is_numeric($req['pn']))
             $req['pn'] = 1;
@@ -37,13 +43,13 @@ class Service_Version_IndexModel extends BasePageService {
             'sort' => $sort,
         ];
 
-        $count = $this->versionModel->count();
+        $count = $this->versionModel->count($where);
 
         $this->resData['pageCount'] = ceil($count / self::PAGESIZE);
         if($count <= 0)
             return $this->resData;
 
-        $list = $this->versionModel->getListByPage([], [], $options);
+        $list = $this->versionModel->getListByPage($where, [], $options);
         if(!empty($list)){
             $this->resData['list'] = $list;
         }
