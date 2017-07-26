@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-26 19:00:48
-         compiled from "/var/www/admin/admin/application/views/template/action/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:70394038359787660abe744-34345665%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-26 18:56:32
+         compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:166658374259787560e47985-96495961%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '531936fc9b9fd10b7f0f8c440772742b67814f7b' => 
+    '40aa92acd3ad6c442774640e7d702a6b3a0a6d84' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/action/add.tpl',
-      1 => 1501066821,
+      0 => '/var/www/admin/admin/application/views/template/index/index.tpl',
+      1 => 1494210642,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '70394038359787660abe744-34345665',
+  'nocache_hash' => '166658374259787560e47985-96495961',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59787660afe244_00394795',
+  'unifunc' => 'content_59787560e83fe0_29966745',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59787660afe244_00394795')) {function content_59787660afe244_00394795($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59787560e83fe0_29966745')) {function content_59787560e83fe0_29966745($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -217,7 +217,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 锻炼内容管理 / 上传新动作
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> HOME PAGE
                             </li>
                         </ol>
                     </div>
@@ -225,90 +225,97 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
-
 <div class="row">
-    <div class="col-lg-12">
-        <form name="action">
-            <div class="form-group">
-                <label for="aname">动作名称</label>
-                <input type="text" class="form-control" id="aname" placeholder="Action Name" name="name">
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-mortar-board fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">26</div>
+                        <div>今日活跃人数</div>
+                    </div>
+                </div>
             </div>
-
-            <div class="form-group">
-                <label for="atype">动作类型</label>
-                <select id="atype" class="form-control" name="typeno">
-                    <option value="-1">请选择动作类型</option>
-                    <option value="1">计时锻炼</option>
-                    <option value="2">计组数锻炼</option>
-                    <option value="3">节拍锻炼</option>
-                    <option value="4">休息</option>
-                </select>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-tasks fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">12</div>
+                        <div>今日完成锻炼人数</div>
+                    </div>
+                </div>
             </div>
-
-            <div class="form-group">
-                <label for="sex">适用性别</label>
-                <select id="sex" class="form-control" name="sex">
-                    <option value="-1">请选择性别</option>
-                    <option value="0">男</option>
-                    <option value="1">女</option>
-                    <option value="2">不限</option>
-                </select>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-plug fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">124</div>
+                        <div>近两周未登陆人数</div>
+                    </div>
+                </div>
             </div>
-
-            <div class="form-group">
-                <label for="actiongroupno">动作组数</label>
-                <input type="text" class="form-control" id="actiongroupno" placeholder="Action Group Num" name="actiongroupno">
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-lightseagreen" style="border-color: lightseagreen;background-color: lightseagreen;color: white;">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-apple fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">13</div>
+                        <div>最新客户端人数</div>
+                    </div>
+                </div>
             </div>
-
-            <div class="form-group">
-                <label for="singletime">单次动作计划所需时间</label>
-                <input type="text" class="form-control" id="singletime" placeholder="Single Time" name="singletime">
-            </div>
-
-            <div class="form-group">
-                <label for="calorie">单次动作计划所需能量</label>
-                <input type="text" class="form-control" id="calorie" placeholder="Calorie" name="calorie">
-            </div>
-            
-            <div class="form-group">
-                <a class="btn btn-default btn-lg" id="coverimg" href="#" style="position: relative; z-index: 1;">
-                    <i class="glyphicon glyphicon-plus"></i>
-                    <span>上传封面图片</span>
-                </a>
-                <input type="hidden" name="coverimg" id="coverimg-val">
-            </div>
-            <div id="picshow"></div>
-
-            <div class="form-group">
-                <a class="btn btn-default btn-lg" id="video" href="#" style="position: relative; z-index: 1;">
-                    <i class="glyphicon glyphicon-plus"></i>
-                    <span>上传动作视频</span>
-                </a>
-                <input type="hidden" name="video" id="video-val">
-            </div>
-            <div id="mp4Show"></div>
-
-            <!-- <div class="form-group">
-                <a class="btn btn-default btn-lg" id="audio" href="#" style="position: relative; z-index: 1;">
-                    <i class="glyphicon glyphicon-plus"></i>
-                    <span>上传动作音频</span>
-                </a>
-                <input type="hidden" name="audio" id="audio-val">
-            </div> -->
-
-            <div class="form-group">
-                <label for="describe">动作介绍</label>
-                <textarea id="describe" class="form-control" rows="3" name="describe"></textarea>
-            </div>
-              
-            <button id="sub" type="button" class="btn btn-primary">确认提交</button>
-            <button id="cancer" type="button" class="btn btn-danger" >取&emsp;消</button>
-            <input type="hidden" name="uptoken" id="uptoken" value="<?php echo $_smarty_tpl->tpl_vars['uptoken']->value;?>
-">
-        </form>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left" style="color: lightseagreen;">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
-
+<!-- /.row -->
 
 
                 <!-- footer -->
@@ -338,12 +345,5 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     </script>
 
     
-<script type="text/javascript" src="/static/qiniu/moxie.min.js"></script>
-<script type="text/javascript" src="/static/qiniu/plupload.full.min.js"></script>
-<script type="text/javascript" src="/static/qiniu/zh_CN.js"></script>
-<script type="text/javascript" src="/static/qiniu/qiniu.min.js"></script>
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/static/sport/js/action.js"></script>
-
 </body>
 </html><?php }} ?>
