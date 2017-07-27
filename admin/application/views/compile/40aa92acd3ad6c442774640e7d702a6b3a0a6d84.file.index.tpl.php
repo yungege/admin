@@ -1,12 +1,12 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-27 10:02:22
-         compiled from "/var/www/admin/admin/application/views/template/version/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:952354066597949ae6beba3-65765010%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-27 10:02:15
+         compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1051726321597949a70446c5-87274791%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '5e3a02f1018ea315192d2fc11b1afc247f38f70d' => 
+    '40aa92acd3ad6c442774640e7d702a6b3a0a6d84' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/version/index.tpl',
+      0 => '/var/www/admin/admin/application/views/template/index/index.tpl',
       1 => 1501062598,
       2 => 'file',
     ),
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '952354066597949ae6beba3-65765010',
+  'nocache_hash' => '1051726321597949a70446c5-87274791',
   'function' => 
   array (
   ),
@@ -29,10 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_597949ae70fd95_29644428',
+  'unifunc' => 'content_597949a70869b8_28451909',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_597949ae70fd95_29644428')) {function content_597949ae70fd95_29644428($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_597949a70869b8_28451909')) {function content_597949a70869b8_28451909($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -77,14 +76,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
-<style type="text/css">
-    .version-form{
-        border: 1px solid #ccc;
-        padding: 15px;
-        margin-bottom: 20px;
-    }
-</style>
-
 </head>
 
 <body>
@@ -226,7 +217,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 客户端管理 / 版本列表<a href="/version/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">发布新版本</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> HOME PAGE
                             </li>
                         </ol>
                     </div>
@@ -235,78 +226,96 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                 <!-- 用户数据 -->
                 
 <div class="row">
-    <div class="col-lg-12">
-        <form name="version" class="version-form">
-            <div class="form-group">
-                <label for="platform">发布平台</label>
-                <select id="platform" class="form-control" name="type">
-                    <option value="0">选择发布平台</option>
-                    <option value="1" <?php if ($_GET['type']==1){?> selected="true" <?php }?>>iOS</option>
-                    <option value="2" <?php if ($_GET['type']==2){?> selected="true" <?php }?>>Android</option>
-                </select>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-mortar-board fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">26</div>
+                        <div>今日活跃人数</div>
+                    </div>
+                </div>
             </div>
-              
-            <button type="submit">确认发布</button>
-        </form>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-tasks fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">12</div>
+                        <div>今日完成锻炼人数</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-plug fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">124</div>
+                        <div>近两周未登陆人数</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-lightseagreen" style="border-color: lightseagreen;background-color: lightseagreen;color: white;">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-apple fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">13</div>
+                        <div>最新客户端人数</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left" style="color: lightseagreen;">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
-
-<div class="row">
-    <div class="col-lg-12">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped text-center">
-                <thead>
-                    <tr>
-                        <th class="text-center">平台类型</th>
-                        <th class="text-center">版本号名称</th>
-                        <th class="text-center">版本号</th>
-                        <th class="text-center" style="width: 400px;">升级描述</th>
-                        <th class="text-center" style="min-width: 100px;">发布时间</th>
-                        <th class="text-center" style="min-width: 100px;">操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
-$_smarty_tpl->tpl_vars['row']->_loop = true;
-?>
-                    <tr>
-                        <td>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['type']==1){?>
-                                Android
-                            <?php }else{ ?>
-                                iOS
-                            <?php }?>
-                        </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['version'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['versionno'];?>
-</td>
-                        <td style="text-align: left;"><?php echo nl2br($_smarty_tpl->tpl_vars['row']->value['description']);?>
-</td>
-                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%Y-%m-%d");?>
-<br/><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%H:%M:%S");?>
-</td>
-                        <td>
-                            <a href="<?php echo $_smarty_tpl->tpl_vars['row']->value['downloadurl'];?>
-" class="btn btn-sm btn-info">下载</a>
-                        </td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
-        </div>
-        <?php if ($_smarty_tpl->tpl_vars['pageCount']->value>1){?>
-        <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="<?php echo $_GET['pn'];?>
-"></ul>
-        </div>
-        <?php }?>
-    </div>
-</div>
-
-
+<!-- /.row -->
 
 
                 <!-- footer -->

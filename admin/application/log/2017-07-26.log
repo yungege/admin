@@ -4028,3 +4028,143 @@ cookie:PHPSESSID:s1v06kvnlop5vc999bkg8b9k12;ttxs:a:4:{s:3:"_id";s:24:"5956046021
 client_ip:192.168.1.63
 error_no
 error_msg:success
+=====================2017-07-26 17:51:10===========================
+service_cost:15.856
+time:26/Jul/2017:17:51:10 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
+=====================2017-07-26 17:51:10===========================
+service_cost:0.0099999999999545
+time:26/Jul/2017:17:51:10 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/
+request_method:GET
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
+=====================2017-07-26 17:51:16===========================
+service_cost:15.804
+time:26/Jul/2017:17:51:16 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/sport/project
+request_method:GET
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
+=====================2017-07-26 17:51:25===========================
+service_cost:16.791
+time:26/Jul/2017:17:51:25 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/sport/action
+request_method:GET
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
+=====================2017-07-26 17:51:25===========================
+service_cost:16.334
+time:26/Jul/2017:17:51:25 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/sport/action?pn=1
+request_method:GET
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
+=====================2017-07-26 17:51:27===========================
+service_cost:0.011000000000011
+time:26/Jul/2017:17:51:27 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/action/add
+request_method:GET
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
+=====================2017-07-26 17:51:28===========================
+service_cost:3.3
+time:26/Jul/2017:17:51:28 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/sport/action
+request_method:GET
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
+=====================2017-07-26 17:51:28===========================
+service_cost:3.271
+time:26/Jul/2017:17:51:28 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/sport/action?pn=1
+request_method:GET
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
+=====================2017-07-26 17:51:29===========================
+service_cost:0.013999999999958
+time:26/Jul/2017:17:51:29 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/action/add
+request_method:GET
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
+=====================2017-07-26 17:51:31===========================
+service_cost:17.252
+time:26/Jul/2017:17:51:31 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/sport/action
+request_method:GET
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
+=====================2017-07-26 17:51:31===========================
+service_cost:5.785
+time:26/Jul/2017:17:51:31 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/sport/action?pn=1
+request_method:GET
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
+=====================2017-07-26 17:51:32===========================
+service_cost:14.861
+time:26/Jul/2017:17:51:32 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/sport/project
+request_method:GET
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
+=====================2017-07-26 17:51:36===========================
+service_cost:10.121
+time:26/Jul/2017:17:51:36 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/sport/homework
+request_method:GET
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
+=====================2017-07-26 17:51:36===========================
+service_cost:10.052
+time:26/Jul/2017:17:51:36 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/sport/homework?pn=1
+request_method:GET
+cookie:PHPSESSID:hm1cta302a1785icu8oki1lc60;
+client_ip:222.128.169.99
+error_no
+error_msg:success
