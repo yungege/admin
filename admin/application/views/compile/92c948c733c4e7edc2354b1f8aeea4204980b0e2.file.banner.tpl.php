@@ -1,23 +1,41 @@
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-27 10:02:24
+         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:682586005597949b0cb24a1-51874476%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
 <?php /* Smarty version Smarty-3.1.13, created on 2017-07-26 18:18:05
          compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:127991280859786c5d97d2a0-73724172%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 115d258f736ee350713e4fab422ea2b99757be7d
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '92c948c733c4e7edc2354b1f8aeea4204980b0e2' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/banner.tpl',
+<<<<<<< HEAD
+      1 => 1501062598,
+=======
       1 => 1501063032,
+>>>>>>> 115d258f736ee350713e4fab422ea2b99757be7d
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
+      1 => 1501062598,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '682586005597949b0cb24a1-51874476',
+=======
       1 => 1501062915,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '127991280859786c5d97d2a0-73724172',
+>>>>>>> 115d258f736ee350713e4fab422ea2b99757be7d
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_597949b0d033f6_40497490',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_597949b0d033f6_40497490')) {function content_597949b0d033f6_40497490($_smarty_tpl) {?><!DOCTYPE html>
+=======
   'unifunc' => 'content_59786c5da337a1_79402596',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59786c5da337a1_79402596')) {function content_59786c5da337a1_79402596($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 115d258f736ee350713e4fab422ea2b99757be7d
 <html lang="en">
 
 <head>
@@ -178,9 +202,15 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/sport/action" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">动作</a>
                             </li>
+<<<<<<< HEAD
+                            <li>
+                                <a href="/action/add" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">上传新动作</a>
+                            </li>
+=======
                            <!--  <li>
                                 <a href="/action/add" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">上传新动作</a>
                             </li> -->
+>>>>>>> 115d258f736ee350713e4fab422ea2b99757be7d
                         </ul>
                     </li>
                     <li>
