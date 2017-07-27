@@ -6,6 +6,8 @@ $(function(){
         init: function(){
             this.getDom();
             this.initUploader();
+            this.postData();
+
         },
 
         getDom: function(){
@@ -13,6 +15,11 @@ $(function(){
             this.videoBtn = $('#video');
             this.picShowDiv = $('#picshow');
             this.mp4ShowDiv = $('#mp4Show');
+            this.mp4Size = $('#vfilesize-val');
+            this.fixCont = $('.fix-cont');
+            this.fixWrmp = $('.fix-per');
+            this.subBtn = $('#sub');
+            this.form = $('form[name=action]');
         },
 
         initUploader: function(){
@@ -44,41 +51,97 @@ $(function(){
                 },
 
                 init: {
-                    'UploadProgress': function(up, file) {
-                        // todo
+                    UploadProgress: function(up, file) {
+                        // // console.log(up);
+                        // console.log(file.percent);
+                        me.fixCont.text(file.percent+'%');
+                        me.fixWrmp.fadeIn(200);
+
                     },
-                    'FileUploaded': function(up, file, info) {
+                    FileUploaded: function(up, file, info) {
                         if(info.status == 200){
                             var input = $('#'+obj+'-val');
                             var url = domain + eval('('+info.response+')')['key'];
                             input.val(url);
-
-                            if(type == 'mp4'){
-                                var htmlCont = '<div style="margin-bottom:15px;width:200px;"><video style="width:100%;" controls autobuffer autoplay><source src= "'+url+'" type="video/mp4; codecs="avc1.42E01E, mp4a.40.2"></source></video></div>';
-                                me.mp4ShowDiv.html(htmlCont);
-                                console.log(url);
+                            if(type != 'mp4'){
+                                url += water;
+                                me.makeImgDom(url);
                             }
                             else{
-                                var thumab = url + water;
-                                var htmlCont = '<div style="margin-bottom:15px;"><img src="'+thumab+'" width="200" /></div>';
-                                me.picShowDiv.html(htmlCont);
+                                me.makeMp4Dom(url);
+                                me.mp4Size.val(file.size);
                             }
-                            // 
-                            // $('#coverimgurl').attr('src', thumab);
-                            // 
                         }
+                        me.hideFixDiv();
                     },
-                    'Error': function(up, err, errTip) {
+                    Error: function(up, err, errTip) {
                         alert(errTip);
+                        me.hideFixDiv();
                         return false;
                     }
                 }
             });
         },
 
+        makeImgDom: function(img){
+            var me = this;
+
+            var htmlCont = '<div style="margin-bottom:15px;">'+
+                                '<img src="'+img+'" width="200" />'+
+                            '</div>';
+            me.picShowDiv.html(htmlCont);
+        },
+
+        makeMp4Dom: function(mp4){
+            var me = this;
+
+            var htmlCont = '<div style="margin-bottom:15px;width:200px;">'+
+                                '<video style="width:100%;" controls autobuffer autoplay>'+
+                                    '<source src= "'+mp4+'" type="video/mp4; codecs="avc1.42E01E, mp4a.40.2">'+
+                                    '</source>'+
+                                '</video>'+
+                            '</div>';
+            me.mp4ShowDiv.html(htmlCont);
+        },
+
+        hideFixDiv: function(){
+            var me = this;
+            me.fixWrmp.fadeOut(100);
+        },
+
+        checkParams: function(){
+            return true;
+            // var me = this;
+
+            // var data = me.form.serialize().split('&');
+            // return false;
+        },
+
+        postData: function(){
+            var me = this;
+
+            me.subBtn.unbind().bind('click', function(){
+                if(false === me.checkParams()){
+                    return false;
+                }
+
+                $.post(
+                    '/action/insert', 
+                    me.form.serialize(), 
+                    function(json){
+                        if(json.errCode != 0){
+                            alert(json.errMessage ? json.errMessage : '提交失败！');
+                            return false;
+                        }
+                        else{
+                            window.location = '/sport/action';
+                        }
+                });
+            });
+            
+        },
+
     };
 
     action.init();
-    
-    
 })

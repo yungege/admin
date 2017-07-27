@@ -1,8 +1,35 @@
 {%extends file="common/page/layout.tpl"%} 
 {%block name="title"%}天天向尚管理后台{%/block%}
 {%block name="bread"%}锻炼内容管理 / 上传新动作{%/block%}
+{%block name="css"%}
+<style type="text/css">
+    .fix-per{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgba(0,0,0,0.4);
+        z-index: 9999;
+        display: none;
+    }
+    .fix-per .fix-cont{
+        width: 400px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -200px;
+        margin-top: -100px;
+        font-size: 100px;
+        color: orange;
+    }
+</style>
+{%/block%}
 {%block name="content"%}
-
 <div class="row">
     <div class="col-lg-12">
         <form name="action">
@@ -23,6 +50,20 @@
             </div>
 
             <div class="form-group">
+                <label for="ftype">检测项目</label>
+                <select id="ftype" class="form-control" name="physicalquality">
+                    <option value="-1">无</option>
+                    <option value="0">耐力素质</option>
+                    <option value="1">上肢力量</option>
+                    <option value="2">腹肌耐力</option>
+                    <option value="3">柔韧素质</option>
+                    <option value="4">速度素质</option>
+                    <option value="5">下肢力量</option>
+                    <option value="6">综合素质</option>
+                </select>
+            </div>
+
+            <div class="form-group">
                 <label for="sex">适用性别</label>
                 <select id="sex" class="form-control" name="sex">
                     <option value="-1">请选择性别</option>
@@ -38,12 +79,12 @@
             </div>
 
             <div class="form-group">
-                <label for="singletime">单次动作计划所需时间</label>
+                <label for="singletime">单次动作计划所需时间（秒）</label>
                 <input type="text" class="form-control" id="singletime" placeholder="Single Time" name="singletime">
             </div>
 
             <div class="form-group">
-                <label for="calorie">单次动作计划所需能量</label>
+                <label for="calorie">单次动作计划所需能量（千卡）</label>
                 <input type="text" class="form-control" id="calorie" placeholder="Calorie" name="calorie">
             </div>
             
@@ -62,6 +103,7 @@
                     <span>上传动作视频</span>
                 </a>
                 <input type="hidden" name="video" id="video-val">
+                <input type="hidden" name="vfilesize" id="vfilesize-val">
             </div>
             <div id="mp4Show"></div>
 
@@ -83,6 +125,14 @@
             <input type="hidden" name="uptoken" id="uptoken" value="{%$uptoken%}">
         </form>
     </div>
+</div>
+
+<!-- modal-add -->
+<div class="fix-per">
+    <div class="fix-cont">
+        <!-- 100% -->
+    </div>
+    
 </div>
 
 {%/block%}

@@ -138,6 +138,9 @@ define('QINIU_UPLOAD_TOKEN_FAILED',752);     //获取token失败
 
 // 定时资源 800 ~
 define('CRON_OPEN_FAILED',800);                 //打开素材资源数据库失败
+define('ACTION_ADD_FAILED',801);                //动作添加失败
+define('ACTION_VIDEO_SIZE_ERROR',802);          //动作视频文件错误
+
 
 // 锻炼 900 ~
 define('TRAINING_DATA_EMPTY',900);              //没有你想获取的锻炼数据
@@ -552,6 +555,13 @@ function setError($errorCode, $errorMsg=''){
         case CRON_OPEN_FAILED:
             $msg = '打开素材资源数据库失败';
             break;
+        case ACTION_ADD_FAILED:
+            $msg = '动作添加失败';
+            break;
+        case ACTION_VIDEO_SIZE_ERROR:
+            $msg = '动作视频文件错误';
+            break;
+        
 
         default :
             $msg = '未知错误';

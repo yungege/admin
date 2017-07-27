@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-26 19:00:48
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-27 18:27:51
          compiled from "/var/www/admin/admin/application/views/template/action/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:70394038359787660abe744-34345665%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:18839639855979c027570e21-41006211%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '531936fc9b9fd10b7f0f8c440772742b67814f7b' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/action/add.tpl',
-      1 => 1501066821,
+      1 => 1501150339,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '70394038359787660abe744-34345665',
+  'nocache_hash' => '18839639855979c027570e21-41006211',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59787660afe244_00394795',
+  'unifunc' => 'content_5979c027603e29_33984791',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59787660afe244_00394795')) {function content_59787660afe244_00394795($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5979c027603e29_33984791')) {function content_5979c027603e29_33984791($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -76,6 +76,33 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<style type="text/css">
+    .fix-per{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgba(0,0,0,0.4);
+        z-index: 9999;
+        display: none;
+    }
+    .fix-per .fix-cont{
+        width: 400px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -200px;
+        margin-top: -100px;
+        font-size: 100px;
+        color: orange;
+    }
+</style>
+
 </head>
 
 <body>
@@ -225,7 +252,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
-
 <div class="row">
     <div class="col-lg-12">
         <form name="action">
@@ -246,6 +272,20 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             </div>
 
             <div class="form-group">
+                <label for="ftype">检测项目</label>
+                <select id="ftype" class="form-control" name="physicalquality">
+                    <option value="-1">无</option>
+                    <option value="0">耐力素质</option>
+                    <option value="1">上肢力量</option>
+                    <option value="2">腹肌耐力</option>
+                    <option value="3">柔韧素质</option>
+                    <option value="4">速度素质</option>
+                    <option value="5">下肢力量</option>
+                    <option value="6">综合素质</option>
+                </select>
+            </div>
+
+            <div class="form-group">
                 <label for="sex">适用性别</label>
                 <select id="sex" class="form-control" name="sex">
                     <option value="-1">请选择性别</option>
@@ -261,12 +301,12 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             </div>
 
             <div class="form-group">
-                <label for="singletime">单次动作计划所需时间</label>
+                <label for="singletime">单次动作计划所需时间（秒）</label>
                 <input type="text" class="form-control" id="singletime" placeholder="Single Time" name="singletime">
             </div>
 
             <div class="form-group">
-                <label for="calorie">单次动作计划所需能量</label>
+                <label for="calorie">单次动作计划所需能量（千卡）</label>
                 <input type="text" class="form-control" id="calorie" placeholder="Calorie" name="calorie">
             </div>
             
@@ -285,6 +325,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <span>上传动作视频</span>
                 </a>
                 <input type="hidden" name="video" id="video-val">
+                <input type="hidden" name="vfilesize" id="vfilesize-val">
             </div>
             <div id="mp4Show"></div>
 
@@ -307,6 +348,14 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 ">
         </form>
     </div>
+</div>
+
+<!-- modal-add -->
+<div class="fix-per">
+    <div class="fix-cont">
+        <!-- 100% -->
+    </div>
+    
 </div>
 
 
