@@ -63,7 +63,7 @@ class Service_Action_InsertModel extends BasePageService {
             $this->errNo = REQUEST_PARAMS_ERROR;
             return false;
         }
-print_r($req);exit;
+
         if(($req['typeno'] != 4) && empty($req['vfilesize'])){
             $this->errNo = ACTION_VIDEO_SIZE_ERROR;
             return false;
