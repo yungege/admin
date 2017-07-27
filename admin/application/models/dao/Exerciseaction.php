@@ -13,6 +13,12 @@ class Dao_ExerciseactionModel extends Db_Mongodb {
         6 => '综合素质',
     ];
 
+    public static $sex = [
+        0 => '男',
+        1 => '女',
+        2 => '不限',
+    ];
+
     public static $type = [
         1 => '计时锻炼',
         2 => '计组数锻炼',
@@ -38,7 +44,7 @@ class Dao_ExerciseactionModel extends Db_Mongodb {
         'describe'          => '',   // 动作描述内容
         'calorie'           => 0.00, // 卡路里/次
         'level'             => 0,    // 动作难度级别:0-不及格,1-及格,2-良,3-优秀
-        'physicalquality'   => 0,    // 对应身体素质:0-耐力素质，1-上肢力量，2-腹肌耐力，3-柔韧素质，4-速度素质，5-下肢力量, 6-综合素质
+        'physicalquality'   => null,    // 对应身体素质:0-耐力素质，1-上肢力量，2-腹肌耐力，3-柔韧素质，4-速度素质，5-下肢力量, 6-综合素质
         'singletime'        => 0,    // 完成单次动作计划所需时间(单位:秒)
         'sex'               => 2,    // 项目适用的性别:0-male\1-female\2-both
         'vfilesize'         => '',   // 视频文件大小(单位:MB)

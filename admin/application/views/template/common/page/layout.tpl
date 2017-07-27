@@ -126,9 +126,9 @@
                             <li>
                                 <a href="/sport/action" class="{%if $tag.0 == 3 && $tag.1 == 3%}cy-child-active{%/if%}">动作</a>
                             </li>
-                            <li>
+                           <!--  <li>
                                 <a href="/action/add" class="{%if $tag.0 == 3 && $tag.1 == 4%}cy-child-active{%/if%}">上传新动作</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <li>

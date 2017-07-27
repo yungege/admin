@@ -74,7 +74,7 @@ class BasePageService {
             $errno = $e->getCode();
             $errstr = $e->getMessage();
             $this->res['errCode'] = (int)$errno ? : -1;
-            $this->res['errMessage'] = $errstr;
+            $this->res['errMessage'] = $errstr ? : setError($errno);
 			Log::writeLog($file, $errstr, $_SERVER['REQUEST_URI']);
 		}
 
@@ -172,7 +172,7 @@ class BasePageService {
                     return True;
                 }
 
-                $string = str_replace(array('"', "\\", "'", "/", "..", "../", "./", "//"), '', $string);
+                // $string = str_replace(array('"', "\\", "'", "/", "..", "../", "./", "//"), '', $string);
                 $no = '/%0[0-8bcef]/';
                 $string = preg_replace($no, '', $string);
                 $no = '/%1[0-9a-f]/';

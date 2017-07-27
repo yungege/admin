@@ -1,17 +1,12 @@
 {%extends file="common/page/layout.tpl"%} 
 {%block name="title"%}天天向尚管理后台{%/block%}
-{%block name="bread"%}运动圈 / 锻炼项目管理{%/block%}
+{%block name="bread"%}运动圈 / 锻炼方案管理 <a href="/project/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">创建锻炼方案</a>{%/block%}
 {%block name="css"%}
 <style type="text/css">
 
 </style>
 {%/block%}
 {%block name="content"%}
-<div class="row">
-    <div class="col-lg-12">
-        <button type="button" class="btn btn-primary pull-right">创建新项目</button>
-    </div>
-</div>
 <div class="row">
     <div class="col-lg-12">
         <div class="table-responsive">

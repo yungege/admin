@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-07-26 17:51:32
          compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:88744873259786624d91d23-44695384%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-26 17:54:48
+         compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2050332462597866e8a27ab5-12763417%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 115d258f736ee350713e4fab422ea2b99757be7d
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ad43ff6ec9a4519069b557f1cbae4ad86c5fbbf9' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/project.tpl',
+<<<<<<< HEAD
       1 => 1501062598,
+=======
+      1 => 1501062885,
+>>>>>>> 115d258f736ee350713e4fab422ea2b99757be7d
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1501062598,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '88744873259786624d91d23-44695384',
+=======
+      1 => 1501057134,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2050332462597866e8a27ab5-12763417',
+>>>>>>> 115d258f736ee350713e4fab422ea2b99757be7d
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59786624ddff05_23197798',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59786624ddff05_23197798')) {function content_59786624ddff05_23197798($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_597866e8a6cb54_97306161',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_597866e8a6cb54_97306161')) {function content_597866e8a6cb54_97306161($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 115d258f736ee350713e4fab422ea2b99757be7d
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -222,7 +246,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / 锻炼项目管理
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / 锻炼方案管理 <a href="/project/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">创建锻炼方案</a>
                             </li>
                         </ol>
                     </div>
@@ -230,11 +254,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
-<div class="row">
-    <div class="col-lg-12">
-        <button type="button" class="btn btn-primary pull-right">创建新项目</button>
-    </div>
-</div>
 <div class="row">
     <div class="col-lg-12">
         <div class="table-responsive">
