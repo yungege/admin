@@ -91,11 +91,11 @@ class Service_User_StudentModel extends BasePageService {
 
         if(preg_match("/\w+/", $req['uid'])){
             $uid = addslashes($req['uid']);
-            $match['_id'] = "ObjectId('{$uid}')";
+            $match['_id'] = $this->userModel->makeObjectId($uid);
         }
 
         if(!empty($req['parentname'])){
-            $match['parentname'] = '/'.addslashes($req['parentname']).'.*/';
+            $match['parentname'] = ['$regex' => addslashes($req['parentname']), '$options' => 'i'];
         }
 
         if(preg_match("/^1\d{10}$/", $req['mobile'])){
@@ -104,9 +104,11 @@ class Service_User_StudentModel extends BasePageService {
 
         $count = $this->userModel->count($match);
         $this->resData['pageCount'] = ceil($count / self::PAGESIZE);
-
         if($count <= 0) return $this->resData;
 
+        if(!empty($match['_id'])){
+            $match['_id'] = $req['uid'];
+        }
         $list = $this->userModel->getListByPage($match, $fields, $options);
 
         if(empty($list))
