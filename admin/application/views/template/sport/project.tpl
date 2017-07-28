@@ -1,17 +1,12 @@
 {%extends file="common/page/layout.tpl"%} 
 {%block name="title"%}天天向尚管理后台{%/block%}
-{%block name="bread"%}运动圈 / 锻炼项目管理{%/block%}
+{%block name="bread"%}运动圈 / 锻炼方案管理 <a href="/project/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">创建锻炼方案</a>{%/block%}
 {%block name="css"%}
 <style type="text/css">
 
 </style>
 {%/block%}
 {%block name="content"%}
-<div class="row">
-    <div class="col-lg-12">
-        <button type="button" class="btn btn-primary pull-right">创建新项目</button>
-    </div>
-</div>
 <div class="row">
     <div class="col-lg-12">
         <div class="table-responsive">
@@ -47,7 +42,7 @@
                         </td>
                         <td>
                             <a href="/sport/p/{%$row._id%}.html" class="btn btn-sm btn btn-primary" target="__blank">查 看</a>
-                            <button type="button" data-id="{%$row._id%}.html" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button>
+                            <!-- <button type="button" data-id="{%$row._id%}.html" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
                         </td>
                     </tr>
                     {%/foreach%}

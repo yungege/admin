@@ -1,6 +1,6 @@
 {%extends file="common/page/layout.tpl"%} 
 {%block name="title"%}天天向尚管理后台{%/block%}
-{%block name="bread"%}运动圈 / 动作管理{%/block%}
+{%block name="bread"%}运动圈 / 动作管理 <a href="/action/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">上传新动作</a>{%/block%}
 {%block name="css"%}
 <style type="text/css">
 .video{
@@ -8,6 +8,8 @@
     border: 1px solid #ccc;
     padding: 5px 15px 5px 15px;
     border-radius: 3px;
+    display: inline-block;
+    width: 60px;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
@@ -70,7 +72,7 @@
                         <td>{%$row.createor%}</td>
                         <td>{%$row.createtime|date_format:"%Y-%m-%d"%}<br/>{%$row.createtime|date_format:"%H:%M:%S"%}</td>
                         <td>
-                            <button type="button" data-id="{%$row._id%}" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button>
+                            <!-- <button type="button" data-id="{%$row._id%}" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
                         </td>
                     </tr>
                     {%/foreach%}
@@ -163,7 +165,7 @@
                 var uri = $(this).data('uri');
                 var name = $(this).data('name');
                 me.videoTitle.text(name);
-                var html = "<video style=\"width:100%;\" controls autobuffer>" +
+                var html = "<video style=\"width:100%;\" controls autobuffer autoplay>" +
                                 "<source src='" + uri + "' type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'></source>" +
                             "</video>";
                 me.videoUri.html(html);

@@ -9,7 +9,5 @@ class EditBannerAction extends BaseAction {
                 
             ],
         ];
-                
-        
     }
 }

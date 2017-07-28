@@ -8,9 +8,9 @@ class Dao_SchoolinfoModel extends Db_Mongodb {
         'createtime' => 0,          // 录入数据库时间
         'province_id' => '',        
         'province' => '',           // 所属省份
-        'city_id' => ''        
+        'city_id' => '',        
         'city' => '',               // 所属城市
-        'district_id' => ''
+        'district_id' => '',
         'district' => '',           // 所属区域
         'classinfo' => [],          // 学校班级信息:{classid(班级id号),classname(班级名称)}
         'adress' => '',             // 学校地址

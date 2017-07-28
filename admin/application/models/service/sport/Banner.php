@@ -9,7 +9,7 @@ class Service_Sport_BannerModel extends BasePageService {
         'pageCount' => 0,
         'list' => [],
         'pn' => 1,
-        'pageTag' => '3-1',
+        'pageTag' => '4-1',
         'uptoken' => '',
     ];
 
@@ -19,7 +19,7 @@ class Service_Sport_BannerModel extends BasePageService {
     }
 
     protected function __declare() {
-        
+
     }
 
     protected function __execute($req) {
@@ -40,6 +40,8 @@ class Service_Sport_BannerModel extends BasePageService {
         ];
         $count = $this->bannerModel->count($where);
         $this->resData['pageCount'] = ceil($count / self::PAGESIZE);
+        $this->resData['uptoken'] = (string)$this->getUploadToken();
+
         if($count <= 0)
             return $this->resData;
 
@@ -62,15 +64,15 @@ class Service_Sport_BannerModel extends BasePageService {
         }
 
         $this->resData['list'] = $list;
-        $this->resData['uptoken'] = (string)$this->getUploadToken();
         return $this->resData;
     }
 
     protected function getUploadToken(){
         $bkt = 'ugcimg';
-        $url = 'https://api.ttxstech.com/index.php/mew/autoupload/getToken?bucket=' . $bkt;
+        $url = 'https://api.ttxstech.com/qiniu/token?bucket=' . $bkt;
         $json = HttpCurl::request($url, 'get')[0];
-        return json_decode($json, true)['uptoken'];
+
+        return json_decode($json, true)['data']['uptoken'];
     }
 
 }

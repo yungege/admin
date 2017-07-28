@@ -46,11 +46,11 @@ class Db_Mongodb {
 
             self::parseConfig();
 
-            if(!isset($this->$connection[$this->host][$this->port])){
+            if(!isset($this->connection[$this->host][$this->port])){
                 self::connect();
             }
 
-            $this->manager = $this->connection[$this->host][$this->port];   
+            $this->manager = $this->connection[$this->host][$this->port];
         } catch (Exception $e) {
             self::log($e->getMessage());
         }
@@ -158,31 +158,8 @@ class Db_Mongodb {
         if(empty($options) || !isset($options['limit']) || $options['limit'] != 1){
             $options['limit'] = 1;
         }
-
+        
         return (array)$this->query($filter, $options)[0];
-    }
-
-    /**
-     * 分页获取数据
-     * @Author    422909231@qq.com
-     * @DateTime  2017-05-05
-     * @copyright [copyright]
-     * @license   [license]
-     * @version   [version]
-     * @param     array            $where   [description]
-     * @param     array            $fields  [description]
-     * @param     array            $options [description]
-     * @return    [type]                    [description]
-     */
-    public function getListByPage(array $where, array $fields = [], array $options = []){
-        $fields = $this->filterFields($fields);
-        if(!empty($fields))
-            $newOptions['projection'] = $fields;
-        $newOptions['limit'] = (int)$options['limit'];
-        $newOptions['skip'] = (int)$options['offset'];
-        if(!empty($options['sort']))
-            $newOptions['sort'] = $options['sort'];
-        return $this->query($where, $newOptions);
     }
 
     /**
@@ -211,6 +188,30 @@ class Db_Mongodb {
     }
 
     /**
+     * 分页获取数据
+     * @Author    422909231@qq.com
+     * @DateTime  2017-05-10
+     * @version   [version]
+     * @param     array            $match   [description]
+     * @param     array            $fields  [description]
+     * @param     array            $options [description]
+     * @return    [type]                    [description]
+     */
+    public function getListByPage(array $match, array $fields = [], array $options = []){
+        $newOptions = [];
+        $fields = $this->filterFields($fields);
+
+        if(!empty($options['sort']))
+            $newOptions['sort'] = $options['sort'];
+        $newOptions['limit'] = $options['limit'] ? : 10;
+        $newOptions['skip'] = $options['offset'] ? : 0;
+        if(!empty($fields))
+            $newOptions['projection'] = $fields;
+
+        return $this->query($match, $newOptions);
+    }
+
+    /**
      * 更新数据
      * @param  array  $match    ['x' => 2],
      * @param  array  $update   修改字段 ['username' => 'cc','job' => 'IT']
@@ -224,11 +225,12 @@ class Db_Mongodb {
     public function update(array $match, array $update, $options = ['multi' => true, 'upsert'=>false]){
         if(empty($match) || empty($update))
             throw new Exception('Not safe for none match or update fields');
+
         if(isset($match[$this->pk])){
             if(!is_array($match[$this->pk])){
                 $oid = $this->makeObjectId($match[$this->pk]);
                 if(false === $oid)
-                    return false;
+                    return [];
                 $match[$this->pk] = $oid;
             }
             else{
@@ -261,6 +263,11 @@ class Db_Mongodb {
                         unset($val[$fk]);
                     }
                 }
+
+                // 主键不能修改
+                if(isset($val[$this->pk]))
+                    unset($val[$this->pk]);
+                
                 continue;
             }
 
@@ -268,6 +275,10 @@ class Db_Mongodb {
             if(!isset($this->fields[$field]))
                 unset($update[$field]);
         }
+
+        // 主键不能修改
+        if(isset($update[$this->pk]))
+            unset($update[$this->pk]);
 
         if(empty($update))
             throw new Exception('Not safe for none match or update fields');
@@ -280,7 +291,7 @@ class Db_Mongodb {
         else{
             $bulk->update($match, ['$set' => $update], $options);
         }
- 
+
         $writeConcern = new MongoDB\Driver\WriteConcern(MongoDB\Driver\WriteConcern::MAJORITY, 1000);
         $result = $this->manager->executeBulkWrite("{$this->db}.{$this->table}", $bulk, $writeConcern);
 
@@ -380,30 +391,11 @@ class Db_Mongodb {
         if(isset($options['limit']) && !in_array($options['limit'], [0,1]))
             throw new Exception('Invalid limit option.');
 
-        if(!is_array($match[$this->pk])){
+        if(isset($match[$this->pk])){
             $oid = $this->makeObjectId($match[$this->pk]);
             if(false === $oid)
                 return false;
             $match[$this->pk] = $oid;
-        }
-        else{
-            foreach ($match[$this->pk] as $key => $row) {
-                if(!is_array($row)){
-                    $oid = $this->makeObjectId($match[$this->pk]);
-                    if(false !== $oid)
-                        $match[$this->pk][$key] = $oid;
-                }
-                else{
-                    $oids = [];
-                    foreach ($row as $_id) {
-                        $oid = $this->makeObjectId($_id);
-                        if(false !== $oid)
-                            $oids[] = $oid;
-                    }
-                    if(!empty($oids))
-                        $match[$this->pk][$key] = $oids;
-                }
-            }
         }
 
         $bulk = new MongoDB\Driver\BulkWrite;

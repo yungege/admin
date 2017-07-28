@@ -14,5 +14,6 @@ ini_set('yaf.use_spl_autoload', 1);
 if (!extension_loaded('yaf'))
 	exit('yaf extension not install.');
 
+require_once dirname(__FILE__).'/func.php';
 $application = new Yaf_Application(APPLICATION_PATH . "/conf/application.ini");
 $application->bootstrap()->run();

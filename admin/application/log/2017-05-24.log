@@ -1,0 +1,20 @@
+=====================2017-05-24 16:42:08===========================
+service_cost:234.982
+time:24/May/2017:16:42:08 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/sport/project
+request_method:GET
+cookie:PHPSESSID:dv7ne00di4bh4058ocarmkdc45;ttxs:a:4:{s:3:"_id";s:24:"58a10c2dd79e4fc8f83f6cf1";s:8:"username";s:7:"chenyun";s:7:"profile";s:28:"好好学习，天天向上!";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/5d464b9381d49d2394235b79fdb4fc09.png";};
+client_ip:192.168.1.65
+error_no
+error_msg:success
+=====================2017-05-24 16:42:19===========================
+service_cost:25.235
+time:24/May/2017:16:42:19 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+ourl:/sport/p/591d6cd42a468030258b4578.html
+request_method:GET
+cookie:PHPSESSID:dv7ne00di4bh4058ocarmkdc45;ttxs:a:4:{s:3:"_id";s:24:"58a10c2dd79e4fc8f83f6cf1";s:8:"username";s:7:"chenyun";s:7:"profile";s:28:"好好学习，天天向上!";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/5d464b9381d49d2394235b79fdb4fc09.png";};
+client_ip:192.168.1.65
+error_no
+error_msg:success

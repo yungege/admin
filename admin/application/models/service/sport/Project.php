@@ -39,7 +39,7 @@ class Service_Sport_ProjectModel extends BasePageService {
         ];
         $fields = [];
         $offset = ($req['pn'] - 1) * self::PAGESIZE;
-        $sort = ['createtime' => -1];
+        $sort = ['ctime' => -1];
         $options = [
             'limit' => self::PAGESIZE,
             'offset' => $offset,

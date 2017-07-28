@@ -16,7 +16,7 @@
     }
 </style>
 {%/block%}
-{%block name="bread"%}运动圈 / banner{%/block%}
+{%block name="bread"%}运动圈 / banner <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#add-form">添加Banner</a>{%/block%}
 {%block name="content"%}
 <div class="row">
     <div class="col-lg-12">
@@ -28,6 +28,7 @@
                         <th class="text-center">上传者</th>
                         <th style="max-width: 160px;" class="text-center">描述</th>
                         <th class="text-center">图片</th>
+                        <th class="text-center">长宽比</th>
                         <th class="text-center">有效期</th>
                         <th class="text-center">Access</th>
                         <th class="text-center">创建时间</th>
@@ -41,6 +42,7 @@
                         <td>{%$row['creator']%}</td>
                         <td>{%$row['h5content']%}</td>
                         <td><img src="{%$row['coverimgurl']%}" height="80" /></td>
+                        <td>{%$row['aspectRatio']%}</td>
                         <td>{%$row['starttime']%} <br/>至<br/> {%$row['endtime']%}</td>
                         <td>{%$row['Access']%}</td>
                         <td>{%$row['createtime']%}</td>
@@ -61,7 +63,7 @@
     </div>
 </div>
 
-<!-- modal -->
+<!-- modal-edit -->
 <div class="modal fade" id="edit-form" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
     <div class="modal-dialog" role="document" style="margin-top:7%;">
         <div class="modal-content">
@@ -98,6 +100,10 @@
                         <label for="b-url" class="control-label">URL:</label>
                         <input type="text" class="form-control" id="b-url" name="h5url">
                     </div>
+                    <div class="form-group">
+                        <label for="img-size" class="control-label">图片比例:</label>
+                        <input type="input" class="form-control" id="img-size" name="aspectRatio">
+                    </div>
                     <input type="hidden" name="uptoken" id="uptoken" value="{%$uptoken%}">
                     <input type="hidden" name="coverimgurl" value="">
                 </form>
@@ -107,7 +113,7 @@
                     <img src="" alt="..." id="coverimgurl">
                 </div>
 
-                <a class="btn btn-default btn-lg " id="pickfiles" href="#" style="position: relative; z-index: 1;">
+                <a class="btn btn-default btn-lg" id="pickfiles" href="#" style="position: relative; z-index: 1;">
                     <i class="glyphicon glyphicon-plus"></i>
                     <span>选择文件</span>
                 </a>
@@ -116,6 +122,69 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal" onclick="reset()">Close</button>
                 <button type="button" class="btn btn-primary" onclick="commit(this)" data-id="" id="sub-btn">Summit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal-add -->
+<div class="modal fade" id="add-form" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document" style="margin-top:7%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Banner Add</h4>
+            </div>
+            <div class="modal-body">
+                <form name="banner-add">
+                    <div class="form-group">
+                        <label for="b-title-add" class="control-label">标题:</label>
+                        <input type="text" class="form-control" id="b-title-add" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="b-desc-add" class="control-label">描述:</label>
+                        <textarea class="form-control" id="b-desc-add" name="h5content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-stime-add" class="control-label">开始时间:</label>
+                        <div class="input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
+                            <input readonly type="text" class="form-control" id="b-stime-add" name="starttime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-etime-add" class="control-label">结束时间:</label>
+                        <div class="input-group date date_end" data-date="" data-date-format="yyyy-mm-dd">
+                            <input readonly type="text" class="form-control" id="b-etime-add" name="endtime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="b-url-add" class="control-label">URL:</label>
+                        <input type="input" class="form-control" id="b-url-add" name="h5url">
+                    </div>
+                    <div class="form-group">
+                        <label for="b-img-size" class="control-label">图片比例:</label>
+                        <input type="input" class="form-control" id="b-img-size" name="aspectRatio">
+                    </div>
+                    <input type="hidden" name="coverimgurl-add" value="">
+                </form>
+
+                <label class="control-label">IMG:</label>
+                <div class="thumbnail">
+                    <img src="" id="coverimgurl-add">
+                </div>
+
+                <a class="btn btn-default btn-lg" id="pickfiles-add" href="#" style="position: relative; z-index: 1;">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>选择文件</span>
+                </a>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addBanner()" data-id="" id="sub-btn">Summit</button>
             </div>
         </div>
     </div>

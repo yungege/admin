@@ -9,6 +9,7 @@ class ComposerStaticInit321619285f0786086836525a6fc4eb4c
     public static $files = array (
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '841780ea2e1d6545ea3a253239d59c05' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/functions.php',
+        '3a37ebac017bc098e9a86b35401e7a68' => __DIR__ . '/..' . '/mongodb/mongodb/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -16,12 +17,20 @@ class ComposerStaticInit321619285f0786086836525a6fc4eb4c
         array (
             'Qiniu\\' => 6,
         ),
+        'M' => 
+        array (
+            'MongoDB\\' => 8,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Qiniu\\' => 
         array (
             0 => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu',
+        ),
+        'MongoDB\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mongodb/mongodb/src',
         ),
     );
 
