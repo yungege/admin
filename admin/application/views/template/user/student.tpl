@@ -123,7 +123,7 @@
         </div>
         {%if $pageCount > 1%}
         <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="{%$smarty.get.pn%}"></ul>
+            <ul id="page" style="margin: 0;" data-url-pn="{%if !empty($smarty.get.pn)%}{%$smarty.get.pn%}{%else%}1{%/if%}" data-query="{%$query%}"></ul>
         </div>
         {%/if%}
     </div>
@@ -137,6 +137,7 @@
     var currentPage = {%$pn%};
     var pageCount = {%$pageCount%};
     var urlPage = parseInt($("#page").data('url-pn'));
+    var queryStr = $("#page").data('query');
     if(isNaN(urlPage)){
         urlPage = 0;
     }
@@ -150,12 +151,12 @@
         next: '下一页',
         last: '尾页',
         startPage: currentPage,
-        // onPageClick: function (event, page) {
-        //     if(urlPage == page)
-        //         return;
+        onPageClick: function (event, page) {
+            if(urlPage == page)
+                return;
 
-        //     window.location = "?pn=" + page;
-        // }
+            window.location = "?" + queryStr + '&pn=' + page;
+        }
     });
 </script>
 {%/block%}

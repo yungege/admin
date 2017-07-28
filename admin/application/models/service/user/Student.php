@@ -42,6 +42,9 @@ class Service_User_StudentModel extends BasePageService {
     protected function __execute($req) {
         $match = [];
         $req = $req['get'];
+        $queryArr = $req;
+        unset($queryArr['pn']);
+        $this->resData['query'] = http_build_query($queryArr);
         $this->resData['grade'] = self::$grade;
 
         if(!isset($req['pn']) || !is_numeric($req['pn']))

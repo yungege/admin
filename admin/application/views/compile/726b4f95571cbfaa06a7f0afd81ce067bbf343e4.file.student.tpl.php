@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-29 00:31:23
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-29 01:05:29
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1942547412597b66dbf1bf64-74804161%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:391514150597b6ed9322720-35035022%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-      1 => 1501259105,
+      1 => 1501261489,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1942547412597b66dbf1bf64-74804161',
+  'nocache_hash' => '391514150597b6ed9322720-35035022',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_597b66dc06a447_88339697',
+  'unifunc' => 'content_597b6ed93d6dc4_77688632',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_597b66dc06a447_88339697')) {function content_597b66dc06a447_88339697($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_597b6ed93d6dc4_77688632')) {function content_597b6ed93d6dc4_77688632($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -378,7 +378,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
         </div>
         <?php if ($_smarty_tpl->tpl_vars['pageCount']->value>1){?>
         <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="<?php echo $_GET['pn'];?>
+            <ul id="page" style="margin: 0;" data-url-pn="<?php if (!empty($_GET['pn'])){?><?php echo $_GET['pn'];?>
+<?php }else{ ?>1<?php }?>" data-query="<?php echo $_smarty_tpl->tpl_vars['query']->value;?>
 "></ul>
         </div>
         <?php }?>
@@ -421,6 +422,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
 ;
     var urlPage = parseInt($("#page").data('url-pn'));
+    var queryStr = $("#page").data('query');
     if(isNaN(urlPage)){
         urlPage = 0;
     }
@@ -434,12 +436,12 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
         next: '下一页',
         last: '尾页',
         startPage: currentPage,
-        // onPageClick: function (event, page) {
-        //     if(urlPage == page)
-        //         return;
+        onPageClick: function (event, page) {
+            if(urlPage == page)
+                return;
 
-        //     window.location = "?pn=" + page;
-        // }
+            window.location = "?" + queryStr + '&pn=' + page;
+        }
     });
 </script>
 
