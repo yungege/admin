@@ -99,7 +99,7 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="user" class="collapse {%if $tag.0 == 2%}in{%/if%}">
                             <li>
-                                <a href="#" class="{%if $tag.0 == 2 && $tag.1 == 1%}cy-child-active{%/if%}">学生管理</a>
+                                <a href="/user/student" class="{%if $tag.0 == 2 && $tag.1 == 1%}cy-child-active{%/if%}">学生管理</a>
                             </li>
                             <li>
                                 <a href="#" class="{%if $tag.0 == 2 && $tag.1 == 2%}cy-child-active{%/if%}">班级管理</a>
@@ -126,9 +126,9 @@
                             <li>
                                 <a href="/sport/action" class="{%if $tag.0 == 3 && $tag.1 == 3%}cy-child-active{%/if%}">动作</a>
                             </li>
-                           <!--  <li>
-                                <a href="/action/add" class="{%if $tag.0 == 3 && $tag.1 == 4%}cy-child-active{%/if%}">上传新动作</a>
-                            </li> -->
+                            <li>
+                                <a href="/train/list" class="{%if $tag.0 == 3 && $tag.1 == 4%}cy-child-active{%/if%}">锻炼内容</a>
+                            </li>
                         </ul>
                     </li>
                     <li>

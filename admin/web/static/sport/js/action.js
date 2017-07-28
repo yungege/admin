@@ -87,7 +87,7 @@ $(function(){
             var me = this;
 
             var htmlCont = '<div style="margin-bottom:15px;">'+
-                                '<img src="'+img+'" width="200" />'+
+                                '<img src="'+img+'" height="300" />'+
                             '</div>';
             me.picShowDiv.html(htmlCont);
         },
@@ -95,7 +95,7 @@ $(function(){
         makeMp4Dom: function(mp4){
             var me = this;
 
-            var htmlCont = '<div style="margin-bottom:15px;width:200px;">'+
+            var htmlCont = '<div style="margin-bottom:15px;width:300px;">'+
                                 '<video style="width:100%;" controls autobuffer autoplay>'+
                                     '<source src= "'+mp4+'" type="video/mp4; codecs="avc1.42E01E, mp4a.40.2">'+
                                     '</source>'+
