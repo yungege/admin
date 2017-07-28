@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-26 17:51:29
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-28 17:50:58
          compiled from "/var/www/admin/admin/application/views/template/action/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15610077659786621e043d3-13631076%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-27 18:27:51
-         compiled from "/var/www/admin/admin/application/views/template/action/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18839639855979c027570e21-41006211%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 115d258f736ee350713e4fab422ea2b99757be7d
+<?php /*%%SmartyHeaderCode:1195637543597b0902583f31-16979782%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '531936fc9b9fd10b7f0f8c440772742b67814f7b' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/action/add.tpl',
-<<<<<<< HEAD
-      1 => 1501062598,
-=======
-      1 => 1501150339,
->>>>>>> 115d258f736ee350713e4fab422ea2b99757be7d
+      1 => 1501235425,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1501062598,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '15610077659786621e043d3-13631076',
-=======
       1 => 1501062915,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18839639855979c027570e21-41006211',
->>>>>>> 115d258f736ee350713e4fab422ea2b99757be7d
+  'nocache_hash' => '1195637543597b0902583f31-16979782',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59786621e46d50_88929501',
+  'unifunc' => 'content_597b0902604850_22199525',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59786621e46d50_88929501')) {function content_59786621e46d50_88929501($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5979c027603e29_33984791',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5979c027603e29_33984791')) {function content_5979c027603e29_33984791($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 115d258f736ee350713e4fab422ea2b99757be7d
+<?php if ($_valid && !is_callable('content_597b0902604850_22199525')) {function content_597b0902604850_22199525($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -124,6 +100,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         margin-top: -100px;
         font-size: 100px;
         color: orange;
+    }
+    .form-wrap{
+        border: 1px solid #ccc;
+        padding: 8px 15px 15px 15px;
+        border-radius: 5px;
     }
 </style>
 
@@ -277,100 +258,103 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                 <!-- 用户数据 -->
                 
 <div class="row">
-    <div class="col-lg-12">
-        <form name="action">
-            <div class="form-group">
-                <label for="aname">动作名称</label>
-                <input type="text" class="form-control" id="aname" placeholder="Action Name" name="name">
-            </div>
-
-            <div class="form-group">
-                <label for="atype">动作类型</label>
-                <select id="atype" class="form-control" name="typeno">
-                    <option value="-1">请选择动作类型</option>
-                    <option value="1">计时锻炼</option>
-                    <option value="2">计组数锻炼</option>
-                    <option value="3">节拍锻炼</option>
-                    <option value="4">休息</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="ftype">检测项目</label>
-                <select id="ftype" class="form-control" name="physicalquality">
-                    <option value="-1">无</option>
-                    <option value="0">耐力素质</option>
-                    <option value="1">上肢力量</option>
-                    <option value="2">腹肌耐力</option>
-                    <option value="3">柔韧素质</option>
-                    <option value="4">速度素质</option>
-                    <option value="5">下肢力量</option>
-                    <option value="6">综合素质</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="sex">适用性别</label>
-                <select id="sex" class="form-control" name="sex">
-                    <option value="-1">请选择性别</option>
-                    <option value="0">男</option>
-                    <option value="1">女</option>
-                    <option value="2">不限</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="actiongroupno">动作组数</label>
-                <input type="text" class="form-control" id="actiongroupno" placeholder="Action Group Num" name="actiongroupno">
-            </div>
-
-            <div class="form-group">
-                <label for="singletime">单次动作计划所需时间（秒）</label>
-                <input type="text" class="form-control" id="singletime" placeholder="Single Time" name="singletime">
-            </div>
-
-            <div class="form-group">
-                <label for="calorie">单次动作计划所需能量（千卡）</label>
-                <input type="text" class="form-control" id="calorie" placeholder="Calorie" name="calorie">
-            </div>
+    <div class="col-lg-8">
+        <div class="form-wrap">
             
-            <div class="form-group">
-                <a class="btn btn-default btn-lg" id="coverimg" href="#" style="position: relative; z-index: 1;">
-                    <i class="glyphicon glyphicon-plus"></i>
-                    <span>上传封面图片</span>
-                </a>
-                <input type="hidden" name="coverimg" id="coverimg-val">
-            </div>
-            <div id="picshow"></div>
+            <form name="action">
+                <div class="form-group">
+                    <label for="aname">动作名称</label>
+                    <input type="text" class="form-control" id="aname" placeholder="Action Name" name="name">
+                </div>
 
-            <div class="form-group">
-                <a class="btn btn-default btn-lg" id="video" href="#" style="position: relative; z-index: 1;">
-                    <i class="glyphicon glyphicon-plus"></i>
-                    <span>上传动作视频</span>
-                </a>
-                <input type="hidden" name="video" id="video-val">
-                <input type="hidden" name="vfilesize" id="vfilesize-val">
-            </div>
-            <div id="mp4Show"></div>
+                <div class="form-group">
+                    <label for="atype">动作类型</label>
+                    <select id="atype" class="form-control" name="typeno">
+                        <option value="-1">请选择动作类型</option>
+                        <option value="1">计时锻炼</option>
+                        <option value="2">计组数锻炼</option>
+                        <option value="3">节拍锻炼</option>
+                        <option value="4">休息</option>
+                    </select>
+                </div>
 
-            <!-- <div class="form-group">
-                <a class="btn btn-default btn-lg" id="audio" href="#" style="position: relative; z-index: 1;">
-                    <i class="glyphicon glyphicon-plus"></i>
-                    <span>上传动作音频</span>
-                </a>
-                <input type="hidden" name="audio" id="audio-val">
-            </div> -->
+                <div class="form-group">
+                    <label for="ftype">检测项目</label>
+                    <select id="ftype" class="form-control" name="physicalquality">
+                        <option value="-1">无</option>
+                        <option value="0">耐力素质</option>
+                        <option value="1">上肢力量</option>
+                        <option value="2">腹肌耐力</option>
+                        <option value="3">柔韧素质</option>
+                        <option value="4">速度素质</option>
+                        <option value="5">下肢力量</option>
+                        <option value="6">综合素质</option>
+                    </select>
+                </div>
 
-            <div class="form-group">
-                <label for="describe">动作介绍</label>
-                <textarea id="describe" class="form-control" rows="3" name="describe"></textarea>
-            </div>
-              
-            <button id="sub" type="button" class="btn btn-primary">确认提交</button>
-            <button id="cancer" type="button" class="btn btn-danger" >取&emsp;消</button>
-            <input type="hidden" name="uptoken" id="uptoken" value="<?php echo $_smarty_tpl->tpl_vars['uptoken']->value;?>
+                <div class="form-group">
+                    <label for="sex">适用性别</label>
+                    <select id="sex" class="form-control" name="sex">
+                        <option value="-1">请选择性别</option>
+                        <option value="0">男</option>
+                        <option value="1">女</option>
+                        <option value="2">不限</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="actiongroupno">动作组数</label>
+                    <input type="text" class="form-control" id="actiongroupno" placeholder="Action Group Num" name="actiongroupno">
+                </div>
+
+                <div class="form-group">
+                    <label for="singletime">单次动作计划所需时间（秒）</label>
+                    <input type="text" class="form-control" id="singletime" placeholder="Single Time" name="singletime">
+                </div>
+
+                <div class="form-group">
+                    <label for="calorie">单次动作计划所需能量（千卡）</label>
+                    <input type="text" class="form-control" id="calorie" placeholder="Calorie" name="calorie">
+                </div>
+                
+                <div class="form-group">
+                    <a class="btn btn-default btn-lg" id="coverimg" href="#" style="position: relative; z-index: 1;">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>上传封面图片</span>
+                    </a>
+                    <input type="hidden" name="coverimg" id="coverimg-val">
+                </div>
+                <div id="picshow"></div>
+
+                <div class="form-group">
+                    <a class="btn btn-default btn-lg" id="video" href="#" style="position: relative; z-index: 1;">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>上传动作视频</span>
+                    </a>
+                    <input type="hidden" name="video" id="video-val">
+                    <input type="hidden" name="vfilesize" id="vfilesize-val">
+                </div>
+                <div id="mp4Show"></div>
+
+                <!-- <div class="form-group">
+                    <a class="btn btn-default btn-lg" id="audio" href="#" style="position: relative; z-index: 1;">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>上传动作音频</span>
+                    </a>
+                    <input type="hidden" name="audio" id="audio-val">
+                </div> -->
+
+                <div class="form-group">
+                    <label for="describe">动作介绍</label>
+                    <textarea id="describe" class="form-control" rows="3" name="describe"></textarea>
+                </div>
+                  
+                <button id="sub" type="button" class="btn btn-primary">确认提交</button>
+                <button id="cancer" type="button" class="btn btn-danger" >取&emsp;消</button>
+                <input type="hidden" name="uptoken" id="uptoken" value="<?php echo $_smarty_tpl->tpl_vars['uptoken']->value;?>
 ">
-        </form>
+            </form>
+        </div>
     </div>
 </div>
 
