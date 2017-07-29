@@ -126,9 +126,9 @@
                             <li>
                                 <a href="/sport/action" class="{%if $tag.0 == 3 && $tag.1 == 3%}cy-child-active{%/if%}">动作</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="/train/list" class="{%if $tag.0 == 3 && $tag.1 == 4%}cy-child-active{%/if%}">锻炼内容</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <li>
@@ -139,7 +139,7 @@
                             </li>
 
                             <li>
-                                <a href="#" class="{%if $tag.0 == 4 && $tag.1 == 2%}cy-child-active{%/if%}">UGC</a>
+                                <a href="/sport/ugc" class="{%if $tag.0 == 4 && $tag.1 == 2%}cy-child-active{%/if%}">UGC</a>
                             </li>
 
                             <li>

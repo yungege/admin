@@ -1,0 +1,15 @@
+<?php
+class UgcAction extends BaseAction {
+
+    protected function __declare(){
+        $this->declareParams = true;
+        $this->declarePageService = 'Service_Sport_UGCModel';
+        $this->declareRender = [
+            'tpl' => [
+                'tplName' => 'sport/ugc.tpl',
+            ],
+        ];
+                
+        
+    }
+}
