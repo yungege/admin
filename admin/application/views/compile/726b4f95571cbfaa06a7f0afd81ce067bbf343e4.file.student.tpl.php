@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-29 01:17:21
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-29 11:14:05
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:532615111597b71a1086c69-97331736%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1009185848597bfd7d4e1d72-09950602%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-      1 => 1501261489,
+      1 => 1501296952,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501253091,
+      1 => 1501297418,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '532615111597b71a1086c69-97331736',
+  'nocache_hash' => '1009185848597bfd7d4e1d72-09950602',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_597b71a1102ab2_27644505',
+  'unifunc' => 'content_597bfd7d54f990_15407018',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_597b71a1102ab2_27644505')) {function content_597b71a1102ab2_27644505($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_597bfd7d54f990_15407018')) {function content_597bfd7d54f990_15407018($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -168,9 +168,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/sport/action" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">动作</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="/train/list" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">锻炼内容</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <li>
@@ -181,7 +181,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
 
                             <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">UGC</a>
+                                <a href="/sport/ugc" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">UGC</a>
                             </li>
 
                             <li>
@@ -331,7 +331,8 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                         <th>性别</th>
                         <th>注册日期</th>
                         <th>上次登录</th>
-                        <th>关联账号</th>
+                        <th>上次锻炼</th>
+                        <!-- <th>关联账号</th> -->
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -363,14 +364,25 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['birthday'],"%Y-%m-%d");?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['sex'];?>
-</td>
+                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['sex']==1){?>女<?php }else{ ?>男<?php }?></td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%Y-%m-%d");?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['lastlogin'];?>
 </td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['lastsubmittime']!=0){?>
+                                <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['lastsubmittime'],"%Y-%m-%d");?>
+<br/>
+                                <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['lastsubmittime'],"%H:%M:%S");?>
+<br/>
+                            <?php }else{ ?>
+                                <span class="label label-warning">无记录</span>
+                            <?php }?>
+                        </td>
+                        <!-- <td></td> -->
+                        <td>
+                            <a href="" class="btn btn-default btn-xs">UGC</a>
+                        </td>
                     </tr>
                     <?php } ?>
                 </tbody>

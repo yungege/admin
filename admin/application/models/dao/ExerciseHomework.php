@@ -25,6 +25,12 @@ class Dao_ExerciseHomeworkModel extends Db_Mongodb {
         'is_replace'        => 0,   // 是否替换身体素质作业 1-不替换，2-替换
     ];
 
+    public static $type = [
+        1 => '翻转课堂',
+        2 => '常规作业',
+        3 => '跑步',
+    ];
+
     protected function __construct(){
         parent::__construct();
     }

@@ -124,12 +124,19 @@ class Service_User_StudentModel extends BasePageService {
                 $row['mobileno'] = implode('<br/>', $mobileArr);
             }
 
-            $lastlogin = '登录方式：'.$row['lastlogin']['logintype'].'<br/>';
-            if($row['lastlogin']['logintype'] == 'phone'){
-                $lastlogin .= '手机：<a href="tel:'.$row['lastlogin']['phone'].'">'.$row['lastlogin']['phone'].'</a><br/>';
+            $lastlogin = '';
+            if(!empty($row['lastlogin'])){
+                $lastlogin = '登录方式：'.$row['lastlogin']['logintype'].'<br/>';
+                if($row['lastlogin']['logintype'] == 'phone'){
+                    $lastlogin .= '手机：<a href="tel:'.$row['lastlogin']['phone'].'">'.$row['lastlogin']['phone'].'</a><br/>';
+                }
+                $lastlogin .= '时间：'.date('Y-m-d H:i:s', $row['lastlogin']['time']);
             }
-            $lastlogin .= '时间：'.date('Y-m-d H:i:s', $row['lastlogin']['time']);
+            else{
+                $lastlogin = '<span class="label label-warning">无记录</span>';
+            }
             $row['lastlogin'] = $lastlogin;
+            
         }
 
         $this->resData['list'] = $list;

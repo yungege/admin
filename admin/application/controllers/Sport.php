@@ -10,5 +10,6 @@ class SportController extends Yaf_Controller_Abstract{
         'actiondel'     => 'actions/sport/ActionDel.php',
         'project'       => 'actions/sport/Project.php',
         'pro'           => 'actions/sport/Pro.php',
+        'ugc'           => 'actions/sport/UGC.php',
         );
 }

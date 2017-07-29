@@ -95,7 +95,8 @@
                         <th>性别</th>
                         <th>注册日期</th>
                         <th>上次登录</th>
-                        <th>关联账号</th>
+                        <th>上次锻炼</th>
+                        <!-- <th>关联账号</th> -->
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -111,11 +112,21 @@
                         <td>{%$row.mobileno%}</td>
                         <td>{%$row.parentname%}</td>
                         <td>{%$row.birthday|date_format:"%Y-%m-%d"%}</td>
-                        <td>{%$row.sex%}</td>
+                        <td>{%if $row.sex eq 1%}女{%else%}男{%/if%}</td>
                         <td>{%$row.createtime|date_format:"%Y-%m-%d"%}</td>
                         <td>{%$row.lastlogin%}</td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            {%if $row.lastsubmittime neq 0%}
+                                {%$row.lastsubmittime|date_format:"%Y-%m-%d"%}<br/>
+                                {%$row.lastsubmittime|date_format:"%H:%M:%S"%}<br/>
+                            {%else%}
+                                <span class="label label-warning">无记录</span>
+                            {%/if%}
+                        </td>
+                        <!-- <td></td> -->
+                        <td>
+                            <a href="" class="btn btn-default btn-xs">UGC</a>
+                        </td>
                     </tr>
                     {%/foreach%}
                 </tbody>

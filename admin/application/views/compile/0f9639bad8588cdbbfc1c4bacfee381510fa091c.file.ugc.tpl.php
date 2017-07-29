@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-29 10:54:55
-         compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1038182778597bf8ff90aa81-21546415%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-07-29 11:26:47
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:12958259597c0077ec87c8-10267721%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'b4a1f2066f4bec0287ce25061e47e07da8bb62fd' => 
+    '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/version/add.tpl',
-      1 => 1501253091,
+      0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
+      1 => 1501298807,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501253091,
+      1 => 1501297418,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1038182778597bf8ff90aa81-21546415',
+  'nocache_hash' => '12958259597c0077ec87c8-10267721',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_597bf8ff950198_76064921',
+  'unifunc' => 'content_597c0077f231a6_92087709',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_597bf8ff950198_76064921')) {function content_597bf8ff950198_76064921($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_597c0077f231a6_92087709')) {function content_597c0077f231a6_92087709($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -76,6 +76,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<style type="text/css">
+    
+</style>
+
 </head>
 
 <body>
@@ -163,9 +167,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/sport/action" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">动作</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="/train/list" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">锻炼内容</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <li>
@@ -176,7 +180,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
 
                             <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">UGC</a>
+                                <a href="/sport/ugc" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">UGC</a>
                             </li>
 
                             <li>
@@ -217,7 +221,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 客户端管理 / 发布新版本
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运营管理 / UGC
                             </li>
                         </ol>
                     </div>
@@ -225,45 +229,123 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
+<div class="row">
+    <div class="col-lg-12">
+        <form method="get" >
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="form-horizontal row">
+
+                        <div class="col-md-3">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">作业类型：</label>
+
+                                <div class="col-md-8">
+                                    <select class="input-sm form-control" name="type">
+                                        <option value="-1">选择作业类型</option>
+                                        <?php  $_smarty_tpl->tpl_vars['val'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['val']->_loop = false;
+ $_smarty_tpl->tpl_vars['idx'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['worktype']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['val']->key => $_smarty_tpl->tpl_vars['val']->value){
+$_smarty_tpl->tpl_vars['val']->_loop = true;
+ $_smarty_tpl->tpl_vars['idx']->value = $_smarty_tpl->tpl_vars['val']->key;
+?>
+                                        <option <?php echo isset($_GET['type'])&&($_smarty_tpl->tpl_vars['idx']->value==$_GET['type']) ? 'selected' : '';?>
+ value="<?php echo $_smarty_tpl->tpl_vars['idx']->value;?>
+" ><?php echo $_smarty_tpl->tpl_vars['val']->value;?>
+</option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">学生ID：</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="uid" class="input-sm form-control" value="<?php echo $_GET['uid'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+                    </div><br/>
+                    
+                    <div class="form-horizontal row">
+                        <div class="col-md-4 col-md-offset-1">
+                            <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-lg-12">
-        <form name="version">
-            <div class="form-group">
-                <label for="platform">发布平台</label>
-                <select id="platform" class="form-control" name="type">
-                    <option value="-1">选择发布平台</option>
-                    <option value="0" >iOS【当前最新版本 <?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
-】</option>
-                    <option value="1">Android【当前最新版本 <?php echo $_smarty_tpl->tpl_vars['android']->value;?>
-】</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="vname">版本名称</label>
-                <input type="text" class="form-control" id="vname" placeholder="Version Name" name="version">
-            </div>
-
-            <div class="form-group">
-                <label for="vno">版本号</label>
-                <input type="text" class="form-control" id="vno" placeholder="Version No" name="versionno">
-            </div>
-
-            <div class="form-group">
-                <label for="description">更新说明</label>
-                <textarea id="description" class="form-control" rows="3" name="description"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="downloadurl">下载URL</label>
-                <input type="text" class="form-control" id="downloadurl" placeholder="Download URL" name="downloadurl">
-            </div>
-              
-            <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
-" data-1="<?php echo $_smarty_tpl->tpl_vars['android']->value;?>
-">确认发布</button>
-        </form>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <!-- <th class="text-center">ID</th> -->
+                        <th>学生</th>
+                        <th>头像</th>
+                        <th>作业类型</th>
+                        <th>锻炼项目</th>
+                        <th>能量/千卡</th>
+                        <th>作业时长</th>
+                        <th>跑步路程</th>
+                        <th>开始时间</th>
+                        <th>结束时间</th>
+                        <th>提交时间</th>
+                        <th>原始时间</th>
+                        <th>是否补交</th>
+                        <th>作业图片</th>
+                        <th>是否分享</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
+$_smarty_tpl->tpl_vars['row']->_loop = true;
+?>
+                    <tr data-uid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+">
+                        <td>姓名：<?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
+<br/>昵称：<?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
+</td>
+                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['iconurl'];?>
+?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></td>
+                        
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['type'];?>
+</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+        <?php if ($_smarty_tpl->tpl_vars['pageCount']->value>1){?>
+        <div class="text-center">
+            <ul id="page" style="margin: 0;" data-url-pn="<?php if (!empty($_GET['pn'])){?><?php echo $_GET['pn'];?>
+<?php }else{ ?>1<?php }?>" data-query="<?php echo $_smarty_tpl->tpl_vars['query']->value;?>
+"></ul>
+        </div>
+        <?php }?>
     </div>
 </div>
 
@@ -296,88 +378,34 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     </script>
 
     
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
 <script type="text/javascript">
-    !(function(){
-        var publish = {
-            init: function(){
-                this.getDom();
-                this.postData();
-            },
-            getDom: function(){
-                this.subBtn = $('#sub');
-                this.pt = $('#platform');
-                this.vname = $('#vname');
-                this.no = $('#vno');
-                this.desc = $('#description');
-                this.url = $('#downloadurl');
-                this.form = $('form[name=version]');
-            },
-            checkParams: function(){
-                var me = this;
+    var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
+;
+    var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
+;
+    var urlPage = parseInt($("#page").data('url-pn'));
+    var queryStr = $("#page").data('query');
+    if(isNaN(urlPage)){
+        urlPage = 0;
+    }
 
-                var pt = me.pt.val();
+    $('#page').twbsPagination({
+        totalPages: pageCount,
+        visiblePages: 7,
+        version: '1.1',
+        first: '首页',
+        prev: '上一页',
+        next: '下一页',
+        last: '尾页',
+        startPage: currentPage,
+        onPageClick: function (event, page) {
+            if(urlPage == page)
+                return;
 
-                if(pt != 0 && pt != 1){
-                    alert('请选择发布平台.');
-                    return false;
-                }
-
-                var name = $.trim(me.vname.val());
-                if(!name){
-                    alert('请输入版本名.');
-                    return false;
-                }
-
-                var no = parseInt($.trim(me.no.val()));
-                if(!no || typeof(no) == 'undefiend'){
-                    alert('请输入正确的版本号.');
-                    return false;
-                }
-
-                var desc = $.trim(me.desc.val());
-                if(!name){
-                    alert('请输入版本更新说明.');
-                    return false;
-                }
-
-                var url = $.trim(me.url.val());
-                if(!url || !url.match(/(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/g)){
-                    alert('请输入合法的URL.');
-                    return false;
-                }
-            },
-            postData: function(){
-                var me = this;
-
-                me.subBtn.unbind().bind('click', function(){
-                    var res = me.checkParams();
-                    if(res === false){
-                        return false;
-                    }
-
-                    var curentNo = $(this).attr('data-'+me.pt.val());
-                    if(curentNo >= $.trim(me.no.val())){
-                        alert('请检查您输入的版本号是否低于当前版本号.');
-                        return false;
-                    }
-
-                    var formdata = me.form.serialize();
-                    $.post('/version/publish', formdata, function(json){
-                        if(json.code != -1){
-                            window.location = '/version/index';
-                        }
-                        else{
-                            alert('发布失败.');
-                            return false;
-                        }
-                    });
-                })
-            }
-
-        };
-
-        publish.init();
-    })()
+            window.location = "?" + queryStr + '&pn=' + page;
+        }
+    });
 </script>
 
 </body>

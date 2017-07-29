@@ -1928,3 +1928,643 @@ cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"5956046021
 client_ip:192.168.1.102
 error_no
 error_msg:success
+=====================2017-07-29 10:30:30===========================
+service_cost:4.958
+time:29/Jul/2017:10:30:30 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=15&username=&uid=595604602173cc77db5a5248&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-07-29 10:30:40===========================
+service_cost:3.3620000000001
+time:29/Jul/2017:10:30:40 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=-1&username=&uid=595604602173cc77db5a5248&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-07-29 10:30:40===========================
+service_cost:67.955
+time:29/Jul/2017:10:30:40 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:30:41===========================
+service_cost:59.417
+time:29/Jul/2017:10:30:41 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:30:46===========================
+service_cost:65.158
+time:29/Jul/2017:10:30:46 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:30:46===========================
+service_cost:26.052
+time:29/Jul/2017:10:30:46 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:32:26===========================
+service_cost:28.474
+time:29/Jul/2017:10:32:26 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:32:26===========================
+service_cost:27.319
+time:29/Jul/2017:10:32:26 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:36:31===========================
+service_cost:5.518
+time:29/Jul/2017:10:36:31 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on '60.205.136.72:27001']
+=====================2017-07-29 10:36:35===========================
+service_cost:33.871
+time:29/Jul/2017:10:36:35 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:36:35===========================
+service_cost:29.703
+time:29/Jul/2017:10:36:35 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:41:40===========================
+service_cost:54.385
+time:29/Jul/2017:10:41:40 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:41:40===========================
+service_cost:5.172
+time:29/Jul/2017:10:41:40 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on '60.205.136.72:27001']
+=====================2017-07-29 10:42:36===========================
+service_cost:5.846
+time:29/Jul/2017:10:42:36 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on '60.205.136.72:27001']
+=====================2017-07-29 10:42:37===========================
+service_cost:27.313
+time:29/Jul/2017:10:42:37 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:42:38===========================
+service_cost:62.514
+time:29/Jul/2017:10:42:38 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:43:16===========================
+service_cost:55.804
+time:29/Jul/2017:10:43:16 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:43:16===========================
+service_cost:24.053
+time:29/Jul/2017:10:43:16 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:44:29===========================
+service_cost:30
+time:29/Jul/2017:10:44:29 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:44:29===========================
+service_cost:25.836
+time:29/Jul/2017:10:44:29 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:44:55===========================
+service_cost:31.54
+time:29/Jul/2017:10:44:55 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:44:55===========================
+service_cost:27.037
+time:29/Jul/2017:10:44:55 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:45:42===========================
+service_cost:24.8
+time:29/Jul/2017:10:45:42 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:45:42===========================
+service_cost:24.766
+time:29/Jul/2017:10:45:42 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:46:36===========================
+service_cost:30.711
+time:29/Jul/2017:10:46:36 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:46:36===========================
+service_cost:23.332
+time:29/Jul/2017:10:46:36 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:46:54===========================
+service_cost:27.15
+time:29/Jul/2017:10:46:54 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:46:54===========================
+service_cost:26.308
+time:29/Jul/2017:10:46:54 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:47:59===========================
+service_cost:29.204
+time:29/Jul/2017:10:47:59 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?grade=11&username=&uid=&parentname=&mobile=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:47:59===========================
+service_cost:23.835
+time:29/Jul/2017:10:47:59 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:49:09===========================
+service_cost:16.372
+time:29/Jul/2017:10:49:09 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/version/add
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:49:15===========================
+service_cost:14.61
+time:29/Jul/2017:10:49:15 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/version/index
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:54:41===========================
+service_cost:5.726
+time:29/Jul/2017:10:54:41 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/version/add
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on '60.205.136.72:27001']
+=====================2017-07-29 10:54:45===========================
+service_cost:5.558
+time:29/Jul/2017:10:54:45 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/version/add
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on '60.205.136.72:27001']
+=====================2017-07-29 10:54:46===========================
+service_cost:5.2410000000001
+time:29/Jul/2017:10:54:46 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/version/index
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on '60.205.136.72:27001']
+=====================2017-07-29 10:54:52===========================
+service_cost:43.197
+time:29/Jul/2017:10:54:52 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/version/index
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:54:53===========================
+service_cost:51.235
+time:29/Jul/2017:10:54:53 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/version/index
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:54:54===========================
+service_cost:56.98
+time:29/Jul/2017:10:54:54 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/version/index
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:54:54===========================
+service_cost:8.7010000000001
+time:29/Jul/2017:10:54:54 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/version/index
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:54:55===========================
+service_cost:11.363
+time:29/Jul/2017:10:54:55 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/version/add
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:54:56===========================
+service_cost:10.514
+time:29/Jul/2017:10:54:56 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/version/index
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:54:57===========================
+service_cost:9.732
+time:29/Jul/2017:10:54:57 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/version/index
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:54:57===========================
+service_cost:10.934
+time:29/Jul/2017:10:54:57 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/version/index
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:54:59===========================
+service_cost:-607.995
+time:29/Jul/2017:10:54:59 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/sport/banner
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:55:24===========================
+service_cost:24.816
+time:29/Jul/2017:10:55:24 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:55:24===========================
+service_cost:27.265
+time:29/Jul/2017:10:55:24 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:55:37===========================
+service_cost:25.624
+time:29/Jul/2017:10:55:37 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:55:37===========================
+service_cost:24.077
+time:29/Jul/2017:10:55:37 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:55:53===========================
+service_cost:26.557
+time:29/Jul/2017:10:55:53 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 10:55:53===========================
+service_cost:25.679
+time:29/Jul/2017:10:55:53 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 11:02:52===========================
+service_cost:5.6459999999999
+time:29/Jul/2017:11:02:52 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on '60.205.136.72:27001']
+=====================2017-07-29 11:03:30===========================
+service_cost:4.6390000000001
+time:29/Jul/2017:11:03:30 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on '60.205.136.72:27001']
+=====================2017-07-29 11:06:25===========================
+service_cost:58.462
+time:29/Jul/2017:11:06:25 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 11:06:25===========================
+service_cost:6.323
+time:29/Jul/2017:11:06:25 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on '60.205.136.72:27001']
+=====================2017-07-29 11:06:50===========================
+service_cost:63.588
+time:29/Jul/2017:11:06:50 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 11:06:50===========================
+service_cost:26.318
+time:29/Jul/2017:11:06:50 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 11:08:32===========================
+service_cost:28.313
+time:29/Jul/2017:11:08:32 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 11:08:33===========================
+service_cost:62.763
+time:29/Jul/2017:11:08:33 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 11:14:05===========================
+service_cost:5.917
+time:29/Jul/2017:11:14:05 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/user/student
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on '60.205.136.72:27001']
+=====================2017-07-29 11:16:08===========================
+service_cost:0.17799999999998
+time:29/Jul/2017:11:16:08 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/sport/ugc?type=-1&uid=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 11:16:13===========================
+service_cost:0.16099999999999
+time:29/Jul/2017:11:16:13 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/sport/ugc?type=-1&uid=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 11:26:01===========================
+service_cost:0.38000000000005
+time:29/Jul/2017:11:26:01 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/sport/ugc?type=-1&uid=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 11:26:11===========================
+service_cost:0.19099999999994
+time:29/Jul/2017:11:26:11 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/sport/ugc?type=-1&uid=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-07-29 11:26:47===========================
+service_cost:0.18600000000002
+time:29/Jul/2017:11:26:47 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+ourl:/sport/ugc?type=-1&uid=
+request_method:GET
+cookie:PHPSESSID:ban5jq11g3edt5mlvcu74n8jb6;ttxs:a:4:{s:3:"_id";s:24:"595604602173cc77db5a5248";s:8:"username";s:8:"chenyun1";s:7:"profile";s:26:"❤️💛💚💙💜🖤";s:7:"iconurl";s:64:"https://oi7ro6pyq.qnssl.com/21c68ba586c7b7b2f675b55dea227cca.png";};
+client_ip:192.168.1.102
+error_no
+error_msg:success
