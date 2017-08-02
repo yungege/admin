@@ -102,13 +102,13 @@
                                 <a href="/user/student" class="{%if $tag.0 == 2 && $tag.1 == 1%}cy-child-active{%/if%}">学生管理</a>
                             </li>
                             <li>
-                                <a href="#" class="{%if $tag.0 == 2 && $tag.1 == 2%}cy-child-active{%/if%}">班级管理</a>
+                                <a href="/user/class" class="{%if $tag.0 == 2 && $tag.1 == 2%}cy-child-active{%/if%}">班级管理</a>
                             </li>
                             <li>
-                                <a href="#" class="{%if $tag.0 == 2 && $tag.1 == 3%}cy-child-active{%/if%}">年级管理</a>
+                                <a href="/user/grade" class="{%if $tag.0 == 2 && $tag.1 == 3%}cy-child-active{%/if%}">年级管理</a>
                             </li>
                             <li>
-                                <a href="#" class="{%if $tag.0 == 2 && $tag.1 == 4%}cy-child-active{%/if%}">学校管理</a>
+                                <a href="/user/school" class="{%if $tag.0 == 2 && $tag.1 == 4%}cy-child-active{%/if%}">学校管理</a>
                             </li>
                         </ul>
                     </li>
