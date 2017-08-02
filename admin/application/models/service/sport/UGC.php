@@ -3,6 +3,7 @@ class Service_Sport_UGCModel extends BasePageService {
 
     protected $projectModel;
     protected $projectSkuModel;
+    protected $trainModel;
 
     protected $reqData;
     protected $resData = [
@@ -12,7 +13,7 @@ class Service_Sport_UGCModel extends BasePageService {
     public function __construct() {
         $this->projectModel     = Dao_ExerciseProjectModel::getInstance();
         $this->projectSkuModel  = Dao_ExerciseProjectSkuModel::getInstance();
-        
+        $this->trainModel  = Dao_TrainingdoneModel::getInstance();
     }
 
     protected function __declare() {
@@ -21,6 +22,8 @@ class Service_Sport_UGCModel extends BasePageService {
 
     protected function __execute($req) {
         $this->resData['worktype'] = Dao_ExerciseHomeworkModel::$type;
+
+        $trainList = $this->trainModel->get
 
         return $this->resData;
     }
