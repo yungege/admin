@@ -42,6 +42,7 @@ class Service_Sport_HomeworkModel extends BasePageService {
         ];
 
         $count = $this->homeworkModel->count();
+        // echo $count;exit;
         $this->resData['pageCount'] = ceil($count / self::PAGESIZE);
         if($count <= 0)
             return $this->resData;
