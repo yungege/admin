@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 15:57:17
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 17:02:16
          compiled from "/var/www/aa/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1547706008598185dda67803-53764241%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:7759990585981951845a420-53259868%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e3691fc695ab4516daaf3ac826d115204f480bee' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/user/student.tpl',
-      1 => 1501639058,
+      1 => 1501660749,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501651100,
+      1 => 1501660749,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1547706008598185dda67803-53764241',
+  'nocache_hash' => '7759990585981951845a420-53259868',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_598185ddb42fd3_05796486',
+  'unifunc' => 'content_5981951850a4f4_77614866',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598185ddb42fd3_05796486')) {function content_598185ddb42fd3_05796486($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5981951850a4f4_77614866')) {function content_5981951850a4f4_77614866($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -74,6 +74,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             padding-top: 15px;
             font-size: 11px;
             border-top: 1px solid #ccc;
+        }
+        .tt-page a{
+            padding: 6px 12px;
+            margin-right: 5px; 
+            border: 1px solid #31b0d5;
+            color: #31b0d5;
+            text-decoration: none;
+            background: #fff;
+
+            transition: all 0.3s;
+        }
+        .tt-page a:hover{
+            background: #31b0d5;
+            color: white;
+        }
+        .tt-page .current{
+            padding: 6px 12px;
+            margin-right: 5px;
+            border: 1px solid #333;
+            background: #fff;
         }
     </style>
     
@@ -381,7 +401,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         </td>
                         <!-- <td></td> -->
                         <td>
-                            <a href="" class="btn btn-default btn-xs">UGC</a>
+                            <a href="/sport/ugc?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" class="btn btn-default btn-xs">UGC</a>
                         </td>
                     </tr>
                     <?php } ?>

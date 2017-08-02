@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 15:58:06
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 17:39:57
          compiled from "/var/www/aa/admin/admin/application/views/template/user/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6618017925981860e70a821-14792686%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:85947041659819ded2d2e21-17025186%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e9a747292b7029d2ac9992c712351321d4b5a6e6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/user/class.tpl',
-      1 => 1501659803,
+      1 => 1501665325,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501651100,
+      1 => 1501660749,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '6618017925981860e70a821-14792686',
+  'nocache_hash' => '85947041659819ded2d2e21-17025186',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5981860e771985_60707699',
+  'unifunc' => 'content_59819ded32fde8_76345236',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5981860e771985_60707699')) {function content_5981860e771985_60707699($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59819ded32fde8_76345236')) {function content_59819ded32fde8_76345236($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -73,6 +73,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             padding-top: 15px;
             font-size: 11px;
             border-top: 1px solid #ccc;
+        }
+        .tt-page a{
+            padding: 6px 12px;
+            margin-right: 5px; 
+            border: 1px solid #31b0d5;
+            color: #31b0d5;
+            text-decoration: none;
+            background: #fff;
+
+            transition: all 0.3s;
+        }
+        .tt-page a:hover{
+            background: #31b0d5;
+            color: white;
+        }
+        .tt-page .current{
+            padding: 6px 12px;
+            margin-right: 5px;
+            border: 1px solid #333;
+            background: #fff;
         }
     </style>
     
@@ -259,20 +279,48 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-md-5">
                             <div class="row">
-                                <label class="col-md-6 paddZero control-label">学校ID：</label>
+                                <label class="col-md-6 paddZero control-label">学校名：</label>
                                 <div class="col-md-6">
+                                    <input type="text" name="schoolname" class="input-sm form-control" value="<?php echo $_GET['schoolname'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">学校ID：</label>
+                                <div class="col-md-8">
                                     <input type="text" name="schoolid" class="input-sm form-control" value="<?php echo $_GET['schoolid'];?>
 ">
                                 </div>
                             </div>
                         </div>
-
                         
                     </div><br/>
                    
+
+                   <div class="form-horizontal row">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">班级名：</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="classname" class="input-sm form-control" value="<?php echo $_GET['classname'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <label class="col-md-6 paddZero control-label">班级ID：</label>
+                                <div class="col-md-6">
+                                    <input type="text" name="classid" class="input-sm form-control" value="<?php echo $_GET['classid'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+                    </div><br/>
                     <div class="form-horizontal row">
                         <div class="col-md-4 col-md-offset-1">
                             <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
@@ -320,10 +368,9 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 </tbody>
             </table>
         </div>
-    </div>
+        <div class="tt-page" style="text-align:center"><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
 </div>
-
-<div class="page" style="margin: 0;"><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+    </div>
 </div>
 
 

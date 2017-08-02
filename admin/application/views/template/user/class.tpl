@@ -28,19 +28,44 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-md-5">
                             <div class="row">
-                                <label class="col-md-6 paddZero control-label">学校ID：</label>
+                                <label class="col-md-6 paddZero control-label">学校名：</label>
                                 <div class="col-md-6">
+                                    <input type="text" name="schoolname" class="input-sm form-control" value="{%$smarty.get.schoolname%}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">学校ID：</label>
+                                <div class="col-md-8">
                                     <input type="text" name="schoolid" class="input-sm form-control" value="{%$smarty.get.schoolid%}">
                                 </div>
                             </div>
                         </div>
-
                         
                     </div><br/>
                    
+
+                   <div class="form-horizontal row">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">班级名：</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="classname" class="input-sm form-control" value="{%$smarty.get.classname%}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <label class="col-md-6 paddZero control-label">班级ID：</label>
+                                <div class="col-md-6">
+                                    <input type="text" name="classid" class="input-sm form-control" value="{%$smarty.get.classid%}">
+                                </div>
+                            </div>
+                        </div>
+                    </div><br/>
                     <div class="form-horizontal row">
                         <div class="col-md-4 col-md-offset-1">
                             <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
@@ -81,11 +106,9 @@
                 </tbody>
             </table>
         </div>
+        <div class="tt-page" style="text-align:center">{%$page%}</div>
     </div>
 </div>
 
-<div class="page" style="margin: 0;">{%$page%}</div>
-
 {%/block%}
-
 
