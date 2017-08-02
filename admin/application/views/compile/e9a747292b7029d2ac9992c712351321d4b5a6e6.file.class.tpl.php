@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 17:39:57
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 18:08:34
          compiled from "/var/www/aa/admin/admin/application/views/template/user/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:85947041659819ded2d2e21-17025186%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9682680185981a4a2403757-41309464%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e9a747292b7029d2ac9992c712351321d4b5a6e6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/user/class.tpl',
-      1 => 1501665325,
+      1 => 1501668488,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '85947041659819ded2d2e21-17025186',
+  'nocache_hash' => '9682680185981a4a2403757-41309464',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59819ded32fde8_76345236',
+  'unifunc' => 'content_5981a4a2477802_53219909',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59819ded32fde8_76345236')) {function content_59819ded32fde8_76345236($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5981a4a2477802_53219909')) {function content_5981a4a2477802_53219909($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -357,8 +357,9 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['schoolname'];?>
-</td>
+                        <td><a href="http://192.168.1.106:8080/user/school?schoolname=<?php echo $_smarty_tpl->tpl_vars['row']->value['schoolname'];?>
+"><?php echo $_smarty_tpl->tpl_vars['row']->value['schoolname'];?>
+</a></td>
                         <!-- <td></td> -->
                         <td>
                             <a href="" class="btn btn-default btn-xs">点击</a>

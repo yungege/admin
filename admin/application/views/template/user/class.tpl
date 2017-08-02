@@ -96,7 +96,7 @@
                     <tr >
                         <td>{%$row.name%}</td>
                         <td>{%$row._id%}</td>
-                        <td>{%$row.schoolname%}</td>
+                        <td><a href="http://192.168.1.106:8080/user/school?schoolname={%$row.schoolname%}">{%$row.schoolname%}</a></td>
                         <!-- <td></td> -->
                         <td>
                             <a href="" class="btn btn-default btn-xs">点击</a>
