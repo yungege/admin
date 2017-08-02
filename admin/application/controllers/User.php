@@ -7,6 +7,7 @@ class UserController extends Yaf_Controller_Abstract{
         'student'   => 'actions/user/Student.php',
         'class'     => 'actions/user/Class.php',
         'grade'     => 'actions/user/Grade.php',
-        'school'     => 'actions/user/School.php',
+        'school'    => 'actions/user/School.php',
+        'addugc'    => 'actions/user/AddUgc.php',
         );
 }

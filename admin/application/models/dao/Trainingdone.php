@@ -49,4 +49,24 @@ class Dao_TrainingdoneModel extends Db_Mongodb {
 
         return self::$instance;
     }
+
+    public function getTodayBjTrain(string $uid, string $date = '', array $option = []){
+        if(empty($uid)) return false;
+
+        if(empty($date))
+            $date = date('Y-m-d');
+
+        $start = strtotime($date.' 00:00:00');
+        $end = strtotime($date.' 23:59:59');
+
+        $where = [
+            'uid' => $uid,
+            'createtime' => [
+                '$gte' => $start,
+                '$lte' => $end,
+            ]
+        ];
+
+        return $this->queryOne($where, $option);
+    }
 }
