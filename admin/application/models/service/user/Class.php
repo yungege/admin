@@ -44,11 +44,6 @@ class Service_User_ClassModel extends BasePageService {
 
     	$match = [];
     	$req = $req['get'];
-
-    	$queryArr = $req;
-    	unset($queryArr['pn']);
-
-    	$this->resData['query'] = http_build_query($queryArr);
         $this->resData['grade'] = self::$grade;
       
         if(!isset($req['pn']) || !is_numeric($req['pn'])){
@@ -61,17 +56,26 @@ class Service_User_ClassModel extends BasePageService {
         $options = [
             'limit' => self::PAGESIZE,
             'offset' => $offset,
-            'sort' => ['classno' => 1],
+            'sort' => ['grade' => 1,'classno'=>1],
           
         ];
-
-    	if(!empty($req['schoolid'])){
+        
+    	if(!empty($req['schoolid']) && preg_match("/\w+/",$req['schoolid'])){
     		$match['schoolid'] = $req['schoolid'];
     	}
     	if(!empty($req['grade']) && $req['grade'] != -1){
     		$match['grade'] = (int)$req['grade'];
     	}
-       
+        if(!empty($req['classid']) && preg_match("/\w+/",$req['classid'])){
+            $match['_id'] = $req['classid'];
+        }
+        if(!empty($req['schoolname'])){
+            $match['schoolname'] = ['$regex' => addslashes($req['schoolname']), '$options' => 'i'];
+        }
+        if(!empty($req['classname'])){
+            $match['name'] = ['$regex' => addslashes($req['classname']), '$options' => 'i'];
+        }
+
     	$fields = [
     		'name',
     		'_id',
@@ -83,14 +87,9 @@ class Service_User_ClassModel extends BasePageService {
         $count = $this->classModel->count($match);
         $page  = new Page($count,15);
         $show  = $page->show();
-        // var_dump( $page-> url);
-        // exit;
 
         $this->resData['page'] = $show;
     	$this->resData['list'] = $list;
-
-        // var_dump($page->url);
-        // exit;
 
         return $this->resData;
     }

@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 15:58:05
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 18:16:35
          compiled from "/var/www/aa/admin/admin/application/views/template/user/school.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17562844425981860d2028f2-24308678%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20079374165981a6832ad008-95960261%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5a396fa61f45c45363dd124fd860b78f6e497ff7' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/user/school.tpl',
-      1 => 1501652651,
+      1 => 1501666611,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501651100,
+      1 => 1501668971,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17562844425981860d2028f2-24308678',
+  'nocache_hash' => '20079374165981a6832ad008-95960261',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5981860d27f641_11561071',
+  'unifunc' => 'content_5981a683318b72_46079403',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5981860d27f641_11561071')) {function content_5981860d27f641_11561071($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5981a683318b72_46079403')) {function content_5981a683318b72_46079403($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -73,6 +73,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             padding-top: 15px;
             font-size: 11px;
             border-top: 1px solid #ccc;
+        }
+        .tt-page a{
+            padding: 6px 12px;
+            margin-right: 5px; 
+            border: 1px solid #31b0d5;
+            color: #31b0d5;
+            text-decoration: none;
+            background: #fff;
+
+            transition: all 0.3s;
+        }
+        .tt-page a:hover{
+            background: #31b0d5;
+            color: white;
+        }
+        .tt-page .current{
+            padding: 6px 12px;
+            margin-right: 5px;
+            border: 1px solid #333;
+            background: #fff;
         }
     </style>
     
@@ -144,9 +164,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                             <li>
                                 <a href="/user/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
-                            </li>
-                            <li>
-                                <a href="/user/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
                             </li>
                             <li>
                                 <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">学校管理</a>
@@ -238,16 +255,24 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                         <div class="col-md-3">
                             <div class="row">
-                                <label class="col-md-4 paddZero control-label">学校ID：</label>
-
+                                <label class="col-md-4 paddZero control-label">学校名：</label>
                                 <div class="col-md-8">
-                                    <div class="col-md-8">
-                                    <input type="text" name="schoolid" class="input-sm form-control" value="<?php echo $_GET['schoolid'];?>
+                                   <input type="text" name="schoolname" class="input-sm form-control" value="<?php echo $_GET['schoolname'];?>
 ">
-                                </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-md-5">
+                            <div class="row">
+                                <label class="col-md-6 paddZero control-label">学校ID：</label>
+                                <div class="col-md-6">
+                                    <input type="text" name="schoolid" class="input-sm form-control" value="<?php echo $_GET['schoolid'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div><br/>
                    
@@ -301,13 +326,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 </tbody>
             </table>
         </div>
-        <?php if ($_smarty_tpl->tpl_vars['pageCount']->value>1){?>
-        <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="<?php if (!empty($_GET['pn'])){?><?php echo $_GET['pn'];?>
-<?php }else{ ?>1<?php }?>" data-query="<?php echo $_smarty_tpl->tpl_vars['query']->value;?>
-"></ul>
-        </div>
-        <?php }?>
+        <div class="tt-page" style="text-align:center"><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+</div>
     </div>
 </div>
 
@@ -340,35 +360,5 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
-<script type="text/javascript">
-    var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
-;
-    var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
-;
-    var urlPage = parseInt($("#page").data('url-pn'));
-    var queryStr = $("#page").data('query');
-    if(isNaN(urlPage)){
-        urlPage = 0;
-    }
-
-    $('#page').twbsPagination({
-        totalPages: pageCount,
-        visiblePages: 7,
-        version: '1.1',
-        first: '首页',
-        prev: '上一页',
-        next: '下一页',
-        last: '尾页',
-        startPage: currentPage,
-        onPageClick: function (event, page) {
-            if(urlPage == page)
-                return;
-
-            window.location = "?" + queryStr + '&pn=' + page;
-        }
-    });
-</script>
-
 </body>
 </html><?php }} ?>

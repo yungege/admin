@@ -16,15 +16,22 @@
 
                         <div class="col-md-3">
                             <div class="row">
-                                <label class="col-md-4 paddZero control-label">学校ID：</label>
-
+                                <label class="col-md-4 paddZero control-label">学校名：</label>
                                 <div class="col-md-8">
-                                    <div class="col-md-8">
-                                    <input type="text" name="schoolid" class="input-sm form-control" value="{%$smarty.get.schoolid%}">
-                                </div>
+                                   <input type="text" name="schoolname" class="input-sm form-control" value="{%$smarty.get.schoolname%}">
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-md-5">
+                            <div class="row">
+                                <label class="col-md-6 paddZero control-label">学校ID：</label>
+                                <div class="col-md-6">
+                                    <input type="text" name="schoolid" class="input-sm form-control" value="{%$smarty.get.schoolid%}">
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div><br/>
                    
@@ -70,42 +77,8 @@
                 </tbody>
             </table>
         </div>
-        {%if $pageCount > 1%}
-        <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="{%if !empty($smarty.get.pn)%}{%$smarty.get.pn%}{%else%}1{%/if%}" data-query="{%$query%}"></ul>
-        </div>
-        {%/if%}
+        <div class="tt-page" style="text-align:center">{%$page%}</div>
     </div>
 </div>
 
-{%/block%}
-
-{%block name="js"%}
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
-<script type="text/javascript">
-    var currentPage = {%$pn%};
-    var pageCount = {%$pageCount%};
-    var urlPage = parseInt($("#page").data('url-pn'));
-    var queryStr = $("#page").data('query');
-    if(isNaN(urlPage)){
-        urlPage = 0;
-    }
-
-    $('#page').twbsPagination({
-        totalPages: pageCount,
-        visiblePages: 7,
-        version: '1.1',
-        first: '首页',
-        prev: '上一页',
-        next: '下一页',
-        last: '尾页',
-        startPage: currentPage,
-        onPageClick: function (event, page) {
-            if(urlPage == page)
-                return;
-
-            window.location = "?" + queryStr + '&pn=' + page;
-        }
-    });
-</script>
 {%/block%}

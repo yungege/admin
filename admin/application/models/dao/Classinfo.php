@@ -85,7 +85,7 @@ class Dao_ClassinfoModel extends Db_Mongodb {
         if(!empty($fields))
             $newOptions['projection'] = $fields;
         $newOptions['limit'] = (int)$options['limit'];
-        // $newOptions['skip'] = (int)$options['offset'];
+        $newOptions['skip'] = (int)$options['offset'];
         if(!empty($options['sort']))
             $newOptions['sort'] = $options['sort'];
         return $this->query($where, $newOptions);
