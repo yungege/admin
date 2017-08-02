@@ -136,7 +136,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="text-center">
+        <div class="text-center tt-page">
             {%$page%}
         </div>
     </div>
