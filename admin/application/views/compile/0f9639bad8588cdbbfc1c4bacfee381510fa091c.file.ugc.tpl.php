@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 09:51:56
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 15:51:11
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15230431805981303ccf6a97-81971128%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:17695221405981846f202fa5-26941206%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-      1 => 1501464540,
+      1 => 1501659737,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501464540,
+      1 => 1501660270,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '15230431805981303ccf6a97-81971128',
+  'nocache_hash' => '17695221405981846f202fa5-26941206',
   'function' => 
   array (
   ),
@@ -29,9 +29,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5981303cd3db31_28154525',
+  'unifunc' => 'content_5981846f2bdf31_24627561',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5981303cd3db31_28154525')) {function content_5981303cd3db31_28154525($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5981846f2bdf31_24627561')) {function content_5981846f2bdf31_24627561($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -74,10 +75,36 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             font-size: 11px;
             border-top: 1px solid #ccc;
         }
+        .tt-page a{
+            padding: 6px 12px;
+            margin-right: 5px; 
+            border: 1px solid #31b0d5;
+            color: #31b0d5;
+            text-decoration: none;
+            background: #fff;
+
+            transition: all 0.3s;
+        }
+        .tt-page a:hover{
+            background: #31b0d5;
+            color: white;
+        }
+        .tt-page .current{
+            padding: 6px 12px;
+            margin-right: 5px;
+            border: 1px solid #333;
+            background: #fff;
+        }
     </style>
     
+<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
-    
+.date_start,.date_end{
+    float: left!important;
+}
+.datetimepicker{
+    margin-top: 50px!important;
+}
 </style>
 
 </head>
@@ -236,11 +263,11 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                 <div class="panel-heading">
                     <div class="form-horizontal row">
 
-                        <div class="col-md-3">
+                        <div class="col-md-2">
                             <div class="row">
-                                <label class="col-md-4 paddZero control-label">作业类型：</label>
+                                <label class="col-md-5 paddZero control-label">作业类型：</label>
 
-                                <div class="col-md-8">
+                                <div class="col-md-7">
                                     <select class="input-sm form-control" name="type">
                                         <option value="-1">选择作业类型</option>
                                         <?php  $_smarty_tpl->tpl_vars['val'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['val']->_loop = false;
@@ -260,7 +287,7 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">学生ID：</label>
                                 <div class="col-md-8">
@@ -269,10 +296,44 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-md-5">
+                            <div class="row">
+                                <label class="col-md-3 paddZero control-label">起止日期：</label>
+                                <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-sm-5 input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
+                                            <input readonly type="text" class="form-control" id="start" name="start" value="<?php echo $_GET['start'];?>
+" >
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                        </div>
+                                        <div class="col-sm-1"></div>
+                                        <div class="col-sm-5 input-group date date_end" data-date="" data-date-format="yyyy-mm-dd">
+                                            <input readonly type="text" class="form-control" id="end" name="end" value="<?php echo $_GET['end'];?>
+">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div><br/>
-                    
                     <div class="form-horizontal row">
-                        <div class="col-md-4 col-md-offset-1">
+                        <div class="col-md-2">
+                            <div class="row">
+                                <label class="col-md-5 paddZero control-label">是否补交：</label>
+                                <div class="col-md-7">
+                                    <select class="input-sm form-control" name="delay">
+                                        <option value="0">是否补交作业</option>
+                                        <option <?php if ($_GET['delay']==1){?> selected="true" <?php }?> value="1" >是</option>
+                                        <option <?php if ($_GET['delay']==-1){?> selected="true" <?php }?> value="-1" >否</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br/>
+                    <div class="form-horizontal row">
+                        <div class="col-md-2 col-md-offset-1">
                             <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
                         </div>
                     </div>
@@ -294,8 +355,7 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                         <th>作业类型</th>
                         <th>锻炼项目</th>
                         <th>能量/千卡</th>
-                        <th>作业时长</th>
-                        <th>跑步路程</th>
+                        <th>跑步路程/km</th>
                         <th>开始时间</th>
                         <th>结束时间</th>
                         <th>提交时间</th>
@@ -312,40 +372,55 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                    <tr data-uid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+                    <tr data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 ">
-                        <td>姓名：<?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
-<br/>昵称：<?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
+                        <td>姓名：<a href="/user/student?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
+"><?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
+</a><br/>昵称：<a href="/user/student?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
+"><?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
+</a></td>
+                        <td><a href="/user/student?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
+"><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['iconurl'];?>
+?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></a></td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['hname'];?>
 </td>
-                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['iconurl'];?>
-?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></td>
-                        
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['type'];?>
+                        <td><a href="/sport/p/<?php echo $_smarty_tpl->tpl_vars['row']->value['pid'];?>
+.html"><?php echo $_smarty_tpl->tpl_vars['row']->value['pname'];?>
+</a></td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['burncalories'];?>
 </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <?php echo $_smarty_tpl->tpl_vars['row']->value['distance'];?>
+<br/>
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['avgSpeed']){?>平均速度：<?php echo $_smarty_tpl->tpl_vars['row']->value['avgSpeed'];?>
+ km/h<?php }?>
+                        </td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['starttime'],"%Y-%m-%d");?>
+<br><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['starttime'],"%H:%M:%S");?>
+</td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['endtime'],"%Y-%m-%d");?>
+<br><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['endtime'],"%H:%M:%S");?>
+</td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%Y-%m-%d");?>
+<br><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%H:%M:%S");?>
+</td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['originaltime'],"%Y-%m-%d");?>
+</td>
+                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['isdelay']==2){?><span class="label label-danger">是</span><?php }else{ ?><span class="label label-default">否</span><?php }?></td>
+                        <td><button data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" class="btn btn-sm btn-info">查看</button></td>
+                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['htype']!=3&&$_smarty_tpl->tpl_vars['row']->value['share']==1){?><button data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" class="btn btn-sm btn-info">查看</button><?php }?></td>
                         <td></td>
                     </tr>
                     <?php } ?>
                 </tbody>
             </table>
         </div>
-        <?php if ($_smarty_tpl->tpl_vars['pageCount']->value>1){?>
-        <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="<?php if (!empty($_GET['pn'])){?><?php echo $_GET['pn'];?>
-<?php }else{ ?>1<?php }?>" data-query="<?php echo $_smarty_tpl->tpl_vars['query']->value;?>
-"></ul>
+        <div class="text-center tt-page">
+            <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+
         </div>
-        <?php }?>
     </div>
 </div>
 
@@ -378,34 +453,39 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/static/ugc/index.js"></script>
+
+<!-- <script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script> -->
 <script type="text/javascript">
-    var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
-;
-    var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
-;
-    var urlPage = parseInt($("#page").data('url-pn'));
-    var queryStr = $("#page").data('query');
-    if(isNaN(urlPage)){
-        urlPage = 0;
-    }
+    
 
-    $('#page').twbsPagination({
-        totalPages: pageCount,
-        visiblePages: 7,
-        version: '1.1',
-        first: '首页',
-        prev: '上一页',
-        next: '下一页',
-        last: '尾页',
-        startPage: currentPage,
-        onPageClick: function (event, page) {
-            if(urlPage == page)
-                return;
+    // var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
+;
+    // var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
+;
+    // var urlPage = parseInt($("#page").data('url-pn'));
+    // var queryStr = $("#page").data('query');
+    // if(isNaN(urlPage)){
+    //     urlPage = 0;
+    // }
 
-            window.location = "?" + queryStr + '&pn=' + page;
-        }
-    });
+    // $('#page').twbsPagination({
+    //     totalPages: pageCount,
+    //     visiblePages: 7,
+    //     version: '1.1',
+    //     first: '首页',
+    //     prev: '上一页',
+    //     next: '下一页',
+    //     last: '尾页',
+    //     startPage: currentPage,
+    //     onPageClick: function (event, page) {
+    //         if(urlPage == page)
+    //             return;
+
+    //         window.location = "?" + queryStr + '&pn=' + page;
+    //     }
+    // });
 </script>
 
 </body>

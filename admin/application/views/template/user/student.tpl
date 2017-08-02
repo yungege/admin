@@ -125,7 +125,7 @@
                         </td>
                         <!-- <td></td> -->
                         <td>
-                            <a href="" class="btn btn-default btn-xs">UGC</a>
+                            <a href="/sport/ugc?uid={%$row._id%}" class="btn btn-default btn-xs">UGC</a>
                         </td>
                     </tr>
                     {%/foreach%}

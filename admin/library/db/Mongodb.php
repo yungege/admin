@@ -212,6 +212,37 @@ class Db_Mongodb {
     }
 
     /**
+     * 根据id获取信息
+     * @Author    422909231@qq.com
+     * @DateTime  2017-08-02
+     * @version   [version]
+     * @param     array            $userIds [description]
+     * @param     array            $fields  [description]
+     * @param     integer          $offset  [description]
+     * @param     integer          $limit   [description]
+     * @return    [type]                    [description]
+     */
+    public function batchGetInfoByIds(array $ids, $fields = [], $offset = 0, $limit = 50){
+        if(empty($ids))
+            return [];
+
+        $fields = $this->filterFields($fields);
+
+        if(!empty($fields)){
+            $options['projection'] = $fields;
+        }
+
+        $options['limit'] = (int)$limit;
+        $options['skip'] = (int)$offset;
+
+        $where = [
+            '_id' => ['$in' => $ids]
+        ];
+
+        return $this->query($where, $options);
+    }
+
+    /**
      * 更新数据
      * @param  array  $match    ['x' => 2],
      * @param  array  $update   修改字段 ['username' => 'cc','job' => 'IT']

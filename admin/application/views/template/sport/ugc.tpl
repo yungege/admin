@@ -1,8 +1,14 @@
 {%extends file="common/page/layout.tpl"%} 
 {%block name="title"%}天天向尚管理后台{%/block%}
 {%block name="css"%}
+<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
-    
+.date_start,.date_end{
+    float: left!important;
+}
+.datetimepicker{
+    margin-top: 50px!important;
+}
 </style>
 {%/block%}
 {%block name="bread"%}运营管理 / UGC{%/block%}
@@ -14,11 +20,11 @@
                 <div class="panel-heading">
                     <div class="form-horizontal row">
 
-                        <div class="col-md-3">
+                        <div class="col-md-2">
                             <div class="row">
-                                <label class="col-md-4 paddZero control-label">作业类型：</label>
+                                <label class="col-md-5 paddZero control-label">作业类型：</label>
 
-                                <div class="col-md-8">
+                                <div class="col-md-7">
                                     <select class="input-sm form-control" name="type">
                                         <option value="-1">选择作业类型</option>
                                         {%foreach from=$worktype item=val key=idx%}
@@ -29,7 +35,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">学生ID：</label>
                                 <div class="col-md-8">
@@ -37,10 +43,42 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-md-5">
+                            <div class="row">
+                                <label class="col-md-3 paddZero control-label">起止日期：</label>
+                                <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-sm-5 input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
+                                            <input readonly type="text" class="form-control" id="start" name="start" value="{%$smarty.get.start%}" >
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                        </div>
+                                        <div class="col-sm-1"></div>
+                                        <div class="col-sm-5 input-group date date_end" data-date="" data-date-format="yyyy-mm-dd">
+                                            <input readonly type="text" class="form-control" id="end" name="end" value="{%$smarty.get.end%}">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div><br/>
-                    
                     <div class="form-horizontal row">
-                        <div class="col-md-4 col-md-offset-1">
+                        <div class="col-md-2">
+                            <div class="row">
+                                <label class="col-md-5 paddZero control-label">是否补交：</label>
+                                <div class="col-md-7">
+                                    <select class="input-sm form-control" name="delay">
+                                        <option value="0">是否补交作业</option>
+                                        <option {%if $smarty.get.delay eq 1%} selected="true" {%/if%} value="1" >是</option>
+                                        <option {%if $smarty.get.delay eq -1%} selected="true" {%/if%} value="-1" >否</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br/>
+                    <div class="form-horizontal row">
+                        <div class="col-md-2 col-md-offset-1">
                             <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
                         </div>
                     </div>
@@ -62,8 +100,7 @@
                         <th>作业类型</th>
                         <th>锻炼项目</th>
                         <th>能量/千卡</th>
-                        <th>作业时长</th>
-                        <th>跑步路程</th>
+                        <th>跑步路程/km</th>
                         <th>开始时间</th>
                         <th>结束时间</th>
                         <th>提交时间</th>
@@ -76,64 +113,68 @@
                 </thead>
                 <tbody>
                     {%foreach from=$list item=row%}
-                    <tr data-uid="{%$row._id%}">
-                        <td>姓名：{%$row.username%}<br/>昵称：{%$row.nickname%}</td>
-                        <td><img src="{%$row.iconurl%}?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></td>
-                        
-                        <td>{%$row.type%}</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    <tr data-id="{%$row._id%}">
+                        <td>姓名：<a href="/user/student?uid={%$row.userid%}">{%$row.username%}</a><br/>昵称：<a href="/user/student?uid={%$row.userid%}">{%$row.nickname%}</a></td>
+                        <td><a href="/user/student?uid={%$row.userid%}"><img src="{%$row.iconurl%}?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></a></td>
+                        <td>{%$row.hname%}</td>
+                        <td><a href="/sport/p/{%$row.pid%}.html">{%$row.pname%}</a></td>
+                        <td>{%$row.burncalories%}</td>
+                        <td>
+                            {%$row.distance%}<br/>
+                            {%if $row.avgSpeed%}平均速度：{%$row.avgSpeed%} km/h{%/if%}
+                        </td>
+                        <td>{%$row.starttime|date_format:"%Y-%m-%d"%}<br>{%$row.starttime|date_format:"%H:%M:%S"%}</td>
+                        <td>{%$row.endtime|date_format:"%Y-%m-%d"%}<br>{%$row.endtime|date_format:"%H:%M:%S"%}</td>
+                        <td>{%$row.createtime|date_format:"%Y-%m-%d"%}<br>{%$row.createtime|date_format:"%H:%M:%S"%}</td>
+                        <td>{%$row.originaltime|date_format:"%Y-%m-%d"%}</td>
+                        <td>{%if $row.isdelay == 2%}<span class="label label-danger">是</span>{%else%}<span class="label label-default">否</span>{%/if%}</td>
+                        <td><button data-id="{%$row._id%}" class="btn btn-sm btn-info">查看</button></td>
+                        <td>{%if $row.htype != 3 and $row.share == 1%}<button data-id="{%$row._id%}" class="btn btn-sm btn-info">查看</button>{%/if%}</td>
                         <td></td>
                     </tr>
                     {%/foreach%}
                 </tbody>
             </table>
         </div>
-        {%if $pageCount > 1%}
-        <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="{%if !empty($smarty.get.pn)%}{%$smarty.get.pn%}{%else%}1{%/if%}" data-query="{%$query%}"></ul>
+        <div class="text-center tt-page">
+            {%$page%}
         </div>
-        {%/if%}
     </div>
 </div>
 
 {%/block%}
 
 {%block name="js"%}
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/static/ugc/index.js"></script>
+
+<!-- <script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script> -->
 <script type="text/javascript">
-    var currentPage = {%$pn%};
-    var pageCount = {%$pageCount%};
-    var urlPage = parseInt($("#page").data('url-pn'));
-    var queryStr = $("#page").data('query');
-    if(isNaN(urlPage)){
-        urlPage = 0;
-    }
+    
 
-    $('#page').twbsPagination({
-        totalPages: pageCount,
-        visiblePages: 7,
-        version: '1.1',
-        first: '首页',
-        prev: '上一页',
-        next: '下一页',
-        last: '尾页',
-        startPage: currentPage,
-        onPageClick: function (event, page) {
-            if(urlPage == page)
-                return;
+    // var currentPage = {%$pn%};
+    // var pageCount = {%$pageCount%};
+    // var urlPage = parseInt($("#page").data('url-pn'));
+    // var queryStr = $("#page").data('query');
+    // if(isNaN(urlPage)){
+    //     urlPage = 0;
+    // }
 
-            window.location = "?" + queryStr + '&pn=' + page;
-        }
-    });
+    // $('#page').twbsPagination({
+    //     totalPages: pageCount,
+    //     visiblePages: 7,
+    //     version: '1.1',
+    //     first: '首页',
+    //     prev: '上一页',
+    //     next: '下一页',
+    //     last: '尾页',
+    //     startPage: currentPage,
+    //     onPageClick: function (event, page) {
+    //         if(urlPage == page)
+    //             return;
+
+    //         window.location = "?" + queryStr + '&pn=' + page;
+    //     }
+    // });
 </script>
 {%/block%}
