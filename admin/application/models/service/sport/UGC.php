@@ -39,7 +39,6 @@ class Service_Sport_UGCModel extends BasePageService {
 
         if(!isset($req['pn']) || !is_numeric($req['pn']))
             $req['pn'] = 1;
-        $this->resData['pn'] = $req['pn'];
 
         if(isset(Dao_ExerciseHomeworkModel::$type[$req['type']])){
             $where['htype'] = (int)$req['type'];
@@ -66,7 +65,20 @@ class Service_Sport_UGCModel extends BasePageService {
             $where['endtime']['$lte'] = (int)strtotime($req['end']." 23:59:59");
         }
         
-        $fields = [];
+        $fields = [
+            'htype',
+            'trainingid',
+            'userid',
+            'originaltime',
+            'starttime',
+            'endtime',
+            'createtime',
+            'burncalories',
+            'distance',
+            'isdelay',
+            'homeworkid',
+        ];
+
         $offset = ($req['pn'] - 1) * self::PAGESIZE;
         $sort = ['createtime' => -1];
         $options = [
@@ -79,9 +91,11 @@ class Service_Sport_UGCModel extends BasePageService {
         $page       = new Page($count, self::PAGESIZE);
         $show       = $page->show();
         $trainList = $userInfo = $proInfo = $shareInfo = [];
+
         if($count > 0){
             $trainList = $this->trainModel->getListByPage($where, $fields, $options);
         }
+
         if(!empty($trainList)){
             // user
             $users = array_unique(array_column($trainList, 'userid'));

@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 15:36:50
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 17:01:36
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3423956695981811218fca9-57618282%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1161666279598194f0906119-71332420%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-      1 => 1501659395,
+      1 => 1501659720,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501464540,
+      1 => 1501660270,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3423956695981811218fca9-57618282',
+  'nocache_hash' => '1161666279598194f0906119-71332420',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59818112235dc3_99724961',
+  'unifunc' => 'content_598194f095e5a3_48928605',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59818112235dc3_99724961')) {function content_59818112235dc3_99724961($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_598194f095e5a3_48928605')) {function content_598194f095e5a3_48928605($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -74,6 +74,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             padding-top: 15px;
             font-size: 11px;
             border-top: 1px solid #ccc;
+        }
+        .tt-page a{
+            padding: 6px 12px;
+            margin-right: 5px; 
+            border: 1px solid #31b0d5;
+            color: #31b0d5;
+            text-decoration: none;
+            background: #fff;
+
+            transition: all 0.3s;
+        }
+        .tt-page a:hover{
+            background: #31b0d5;
+            color: white;
+        }
+        .tt-page .current{
+            padding: 6px 12px;
+            margin-right: 5px;
+            border: 1px solid #333;
+            background: #fff;
         }
     </style>
     

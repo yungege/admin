@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 15:51:11
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 17:01:31
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17695221405981846f202fa5-26941206%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:696186295598194ebd2d960-58532248%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-      1 => 1501659737,
+      1 => 1501661494,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17695221405981846f202fa5-26941206',
+  'nocache_hash' => '696186295598194ebd2d960-58532248',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5981846f2bdf31_24627561',
+  'unifunc' => 'content_598194ebd88238_46194460',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5981846f2bdf31_24627561')) {function content_5981846f2bdf31_24627561($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_598194ebd88238_46194460')) {function content_598194ebd88238_46194460($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -355,7 +355,7 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                         <th>作业类型</th>
                         <th>锻炼项目</th>
                         <th>能量/千卡</th>
-                        <th>跑步路程/km</th>
+                        <th>跑步路程/m</th>
                         <th>开始时间</th>
                         <th>结束时间</th>
                         <th>提交时间</th>
