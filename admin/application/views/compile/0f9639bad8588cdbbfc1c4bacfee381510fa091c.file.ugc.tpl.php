@@ -1,24 +1,6 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 11:00:56
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 14:21:19
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:52028812598291e893b6e6-75221746%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 09:34:58
-         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17625386759827dc2393b34-84855693%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 09:17:22
-         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2137661571598279a2794369-37815729%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 18:59:08
-         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6307656025981b07c67cda8-71712421%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 02060d227cf50bdd23658a54e92aa4aac84d80ff
->>>>>>> 7a12d3721281338cb71d460a4bc3633c9177b238
->>>>>>> 98a5bd302b07882cfe2255dcc68062f900c7ba2e
+<?php /*%%SmartyHeaderCode:17644765175982c0dfbda982-97487556%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -31,26 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501724060,
+      1 => 1501741066,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '52028812598291e893b6e6-75221746',
-=======
-  'nocache_hash' => '2137661571598279a2794369-37815729',
-=======
-      1 => 1501671512,
-      2 => 'file',
-    ),
-  ),
-<<<<<<< HEAD
-  'nocache_hash' => '17625386759827dc2393b34-84855693',
-=======
-  'nocache_hash' => '6307656025981b07c67cda8-71712421',
->>>>>>> 02060d227cf50bdd23658a54e92aa4aac84d80ff
->>>>>>> 7a12d3721281338cb71d460a4bc3633c9177b238
->>>>>>> 98a5bd302b07882cfe2255dcc68062f900c7ba2e
+  'nocache_hash' => '17644765175982c0dfbda982-97487556',
   'function' => 
   array (
   ),
@@ -62,24 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_598291e899dc05_78382281',
+  'unifunc' => 'content_5982c0dfc3bdf6_47623856',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598291e899dc05_78382281')) {function content_598291e899dc05_78382281($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_59827dc23f6775_09707126',
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_598279a27e7c04_29508862',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598279a27e7c04_29508862')) {function content_598279a27e7c04_29508862($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5981b07c6d7571_17534463',
->>>>>>> 7a12d3721281338cb71d460a4bc3633c9177b238
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59827dc23f6775_09707126')) {function content_59827dc23f6775_09707126($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> 98a5bd302b07882cfe2255dcc68062f900c7ba2e
+<?php if ($_valid && !is_callable('content_5982c0dfc3bdf6_47623856')) {function content_5982c0dfc3bdf6_47623856($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -221,7 +173,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/user/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
                             </li>
                             <li>
-                                <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">学校管理</a>
+                                <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
                             </li>
                         </ul>
                     </li>
