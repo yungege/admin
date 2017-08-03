@@ -7,8 +7,8 @@ class Service_User_SchoolModel extends BasePageService {
 
 	protected $reqData;
 	protected $resData = [
+        'pageTag' => '2-3',
         'list' => [],
-        'pn' => 1,
     ];
 
 

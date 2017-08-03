@@ -7,8 +7,7 @@ class Service_User_ClassModel extends BasePageService {
 
 	protected $reqData;
 	protected $resData = [
-        // 'pageTag' => '2-1',
-        // 'pageCount' => 0,
+        'pageTag' => '2-2',
         'list' => [],
         'pn' => 1,
     ];
@@ -77,9 +76,10 @@ class Service_User_ClassModel extends BasePageService {
         }
 
     	$fields = [
+            '_id',
     		'name',
-    		'_id',
     		'schoolname',
+            'schoolid'
     	];
     	
     	$list = $this->classModel->getListByPage($match, $fields, $options);
