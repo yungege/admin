@@ -23,7 +23,7 @@
                 </select>
             </div>
               
-            <button type="submit">确认发布</button>
+            <button type="submit" class="btn btn-info">确 认</button>
         </form>
     </div>
 </div>

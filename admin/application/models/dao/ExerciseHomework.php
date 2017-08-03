@@ -199,15 +199,47 @@ class Dao_ExerciseHomeworkModel extends Db_Mongodb {
      * orderBy sort limit offset
      * @return     array
      */
-    public function getHomeworkInfos(array $where, array $fields,$options = []){
+    public function getHomeworkInfos(array $where, array $fields, $options = []){
 
-        $fields = $this->filterFileds($fields);
+        $fields = $this->filterFields($fields);
         if(!empty($fields)){
             $options['projection'] = $fields;
         }
 
         return $this->query($where,$options);
 
+    }
+
+    // 获取最新的一次作业
+    public function getLastHomeworkByClassId(string $classId, array $fields = []){
+        $where = [
+            'class_info' => $classId,
+            'start_time' => [
+                '$lte' => time(),
+            ],
+            'type' => 2,
+        ];
+
+        $fields = $this->filterFields($fields);
+        if(!empty($fields)){
+            $options['projection'] = $fields;
+        }
+
+        $options['sort'] = [
+            'start_time' => -1,
+        ];
+
+        return $this->queryOne($where, $options);
+    }
+
+    // 检查是否有该班级的作业
+    public function checkHomeworkExists(string $homeworkId, string $classId, array $options = []){
+        $where = [
+            '_id' => $homeworkId,
+            'class_info' => $classId,
+        ];
+
+        return $this->queryOne($where, $options);
     }
 
 }

@@ -124,6 +124,9 @@
                             <li>
                                 <a href="/user/class" class="{%if $tag.0 == 2 && $tag.1 == 2%}cy-child-active{%/if%}">班级管理</a>
                             </li>
+                           <!--  <li>
+                                <a href="/user/grade" class="{%if $tag.0 == 2 && $tag.1 == 3%}cy-child-active{%/if%}">年级管理</a>
+                            </li> -->
                             <li>
                                 <a href="/user/school" class="{%if $tag.0 == 2 && $tag.1 == 3%}cy-child-active{%/if%}">学校管理</a>
                             </li>

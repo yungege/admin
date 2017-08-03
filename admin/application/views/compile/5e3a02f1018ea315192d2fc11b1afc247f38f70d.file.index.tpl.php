@@ -1,23 +1,37 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 16:18:32
          compiled from "/var/www/admin/admin/application/views/template/version/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3866028745982dc5828c380-39292450%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 15:24:50
+         compiled from "/var/www/admin/admin/application/views/template/version/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:5209679845982cfc2e05054-51434470%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5e3a02f1018ea315192d2fc11b1afc247f38f70d' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/version/index.tpl',
-      1 => 1501062598,
+      1 => 1501745087,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1501741066,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '3866028745982dc5828c380-39292450',
+=======
+      1 => 1501740693,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '5209679845982cfc2e05054-51434470',
+>>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
   'function' => 
   array (
   ),
@@ -29,9 +43,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5982dc582d88f0_59027537',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5982dc582d88f0_59027537')) {function content_5982dc582d88f0_59027537($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_5982cfc2ee7357_62752075',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5982cfc2ee7357_62752075')) {function content_5982cfc2ee7357_62752075($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -263,7 +283,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                 </select>
             </div>
               
-            <button type="submit">确认发布</button>
+            <button type="submit" class="btn btn-info">确 认</button>
         </form>
     </div>
 </div>

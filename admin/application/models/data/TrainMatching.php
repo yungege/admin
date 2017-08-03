@@ -17,7 +17,7 @@ class Data_TrainMatchingModel {
     
     public function __construct(string $uid) {
         $this->uid = $uid;
-        $this->userModel = Dao_UserStudentModel::getInstance();
+        $this->userModel = Dao_UserModel::getInstance();
         $this->fitModel = Dao_PhysicalfitnesstestModel::getInstance();
         $this->proModel = Dao_ExerciseProjectModel::getInstance();
         $this->proSkuModel = Dao_ExerciseProjectSkuModel::getInstance();

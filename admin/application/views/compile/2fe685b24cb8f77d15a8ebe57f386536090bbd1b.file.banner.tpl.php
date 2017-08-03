@@ -1,37 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 16:12:15
-         compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:4274712125982dadf61ccc6-09789863%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 17:47:47
-         compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8640216705982f143097fa6-75243286%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 10:16:22
+         compiled from "/var/www/aa/admin/admin/application/views/template/sport/banner.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:16142320859828776419d49-59649395%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'ad43ff6ec9a4519069b557f1cbae4ad86c5fbbf9' => 
+    '2fe685b24cb8f77d15a8ebe57f386536090bbd1b' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/sport/project.tpl',
-<<<<<<< HEAD
-      1 => 1501151707,
-=======
-      1 => 1501752706,
->>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
+      0 => '/var/www/aa/admin/admin/application/views/template/sport/banner.tpl',
+      1 => 1501639058,
       2 => 'file',
     ),
-    '1af1c7811d93168106c85becc3c13354fe96fe45' => 
+    '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501741066,
+      0 => '/var/www/aa/admin/admin/application/views/template/common/page/layout.tpl',
+      1 => 1501669497,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '4274712125982dadf61ccc6-09789863',
-=======
-  'nocache_hash' => '8640216705982f143097fa6-75243286',
->>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
+  'nocache_hash' => '16142320859828776419d49-59649395',
   'function' => 
   array (
   ),
@@ -43,16 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5982dadf668c37_69975869',
+  'unifunc' => 'content_598287764b2618_35106261',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5982dadf668c37_69975869')) {function content_5982dadf668c37_69975869($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-  'unifunc' => 'content_5982f1430da587_38998317',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5982f1430da587_38998317')) {function content_5982f1430da587_38998317($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
-?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_598287764b2618_35106261')) {function content_598287764b2618_35106261($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -117,8 +96,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
-
+    .datetimepicker{
+        margin-top: 50px;
+    }
+    .glyphicon-calendar{
+        color: red;
+        cursor: pointer;
+    }
+    .thumbnail > img{
+        height: 100px;
+        overflow: hidden;
+    }
 </style>
 
 </head>
@@ -186,8 +176,11 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/user/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
                             </li>
+                           <!--  <li>
+                                <a href="/user/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
+                            </li> -->
                             <li>
-                                <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
+                                <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">学校管理</a>
                             </li>
                         </ul>
                     </li>
@@ -259,7 +252,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / 锻炼方案管理 <a href="/project/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">创建锻炼方案</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / banner <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#add-form">添加Banner</a>
                             </li>
                         </ol>
                     </div>
@@ -273,11 +266,13 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             <table class="table table-bordered table-hover table-striped text-center">
                 <thead>
                     <tr>
-                        <th class="text-center">项目名称</th>
-                        <th class="text-center">封面图片</th>
-                        <th class="text-center">适用性别</th>
-                        <th class="text-center">适用年级</th>
-                        <th class="text-center" width="300">描述</th>
+                        <th class="text-center">标题</th>
+                        <th class="text-center">上传者</th>
+                        <th style="max-width: 160px;" class="text-center">描述</th>
+                        <th class="text-center">图片</th>
+                        <th class="text-center">长宽比</th>
+                        <th class="text-center">有效期</th>
+                        <th class="text-center">Access</th>
                         <th class="text-center">创建时间</th>
                         <th class="text-center">操作</th>
                     </tr>
@@ -290,37 +285,27 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
                     <tr data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 ">
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['title'];?>
 </td>
-                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['coverimg'];?>
-"></td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['gender'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['creator'];?>
 </td>
-                        <td>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['grade_apply']){?>
-                                <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['row']->value['grade_apply']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
-$_smarty_tpl->tpl_vars['v']->_loop = true;
-?>
-                                    <?php echo $_smarty_tpl->tpl_vars['v']->value;?>
-<br/>
-                                <?php } ?>
-                            <?php }?>
-                        </td>
-                        <td width="400"><?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['h5content'];?>
 </td>
-                        <td>
-                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['ctime'],"%Y-%m-%d");?>
-<br/>
-                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['ctime'],"%H:%M:%S");?>
-
-                        </td>
-                        <td>
-                            <a href="/sport/p/<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-.html" class="btn btn-sm btn btn-primary" target="__blank">查 看</a>
-                            <!-- <button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-.html" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
+                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['coverimgurl'];?>
+" height="80" /></td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['aspectRatio'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['starttime'];?>
+ <br/>至<br/> <?php echo $_smarty_tpl->tpl_vars['row']->value['endtime'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['Access'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['createtime'];?>
+</td>
+                        <td style="width: 160px;">
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edit-form" onclick="edit(this)" data-row='<?php echo json_encode($_smarty_tpl->tpl_vars['row']->value);?>
+' class="edit-btn">编 辑</button>
+                            <button type="button" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button>
                         </td>
                     </tr>
                     <?php } ?>
@@ -333,6 +318,134 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 "></ul>
         </div>
         <?php }?>
+    </div>
+</div>
+
+<!-- modal-edit -->
+<div class="modal fade" id="edit-form" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document" style="margin-top:7%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Banner Edit</h4>
+            </div>
+            <div class="modal-body">
+                <form name="banner">
+                    <div class="form-group">
+                        <label for="b-title" class="control-label">标题:</label>
+                        <input type="text" class="form-control" id="b-title" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="b-desc" class="control-label">描述:</label>
+                        <textarea class="form-control" id="b-desc" name="h5content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-stime" class="control-label">开始时间:</label>
+                        <div class="input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
+                            <input readonly type="text" class="form-control" id="b-stime" name="starttime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-etime" class="control-label">结束时间:</label>
+                        <div class="input-group date date_end" data-date="" data-date-format="yyyy-mm-dd">
+                            <input readonly type="text" class="form-control" id="b-etime" name="endtime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="b-url" class="control-label">URL:</label>
+                        <input type="text" class="form-control" id="b-url" name="h5url">
+                    </div>
+                    <div class="form-group">
+                        <label for="img-size" class="control-label">图片比例:</label>
+                        <input type="input" class="form-control" id="img-size" name="aspectRatio">
+                    </div>
+                    <input type="hidden" name="uptoken" id="uptoken" value="<?php echo $_smarty_tpl->tpl_vars['uptoken']->value;?>
+">
+                    <input type="hidden" name="coverimgurl" value="">
+                </form>
+
+                <label class="control-label">IMG:</label>
+                <div class="thumbnail">
+                    <img src="" alt="..." id="coverimgurl">
+                </div>
+
+                <a class="btn btn-default btn-lg" id="pickfiles" href="#" style="position: relative; z-index: 1;">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>选择文件</span>
+                </a>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="reset()">Close</button>
+                <button type="button" class="btn btn-primary" onclick="commit(this)" data-id="" id="sub-btn">Summit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal-add -->
+<div class="modal fade" id="add-form" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document" style="margin-top:7%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Banner Add</h4>
+            </div>
+            <div class="modal-body">
+                <form name="banner-add">
+                    <div class="form-group">
+                        <label for="b-title-add" class="control-label">标题:</label>
+                        <input type="text" class="form-control" id="b-title-add" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="b-desc-add" class="control-label">描述:</label>
+                        <textarea class="form-control" id="b-desc-add" name="h5content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-stime-add" class="control-label">开始时间:</label>
+                        <div class="input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
+                            <input readonly type="text" class="form-control" id="b-stime-add" name="starttime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-etime-add" class="control-label">结束时间:</label>
+                        <div class="input-group date date_end" data-date="" data-date-format="yyyy-mm-dd">
+                            <input readonly type="text" class="form-control" id="b-etime-add" name="endtime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="b-url-add" class="control-label">URL:</label>
+                        <input type="input" class="form-control" id="b-url-add" name="h5url">
+                    </div>
+                    <div class="form-group">
+                        <label for="b-img-size" class="control-label">图片比例:</label>
+                        <input type="input" class="form-control" id="b-img-size" name="aspectRatio">
+                    </div>
+                    <input type="hidden" name="coverimgurl-add" value="">
+                </form>
+
+                <label class="control-label">IMG:</label>
+                <div class="thumbnail">
+                    <img src="" id="coverimgurl-add">
+                </div>
+
+                <a class="btn btn-default btn-lg" id="pickfiles-add" href="#" style="position: relative; z-index: 1;">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>选择文件</span>
+                </a>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addBanner()" data-id="" id="sub-btn">Summit</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -365,6 +478,12 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
     </script>
 
     
+<script type="text/javascript" src="/static/qiniu/moxie.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/plupload.full.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/zh_CN.js"></script>
+<script type="text/javascript" src="/static/qiniu/qiniu.min.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/static/sport/js/banner.js"></script>
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
 <script type="text/javascript">
     var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
@@ -392,22 +511,6 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
             window.location = "?pn=" + page;
         }
     });
-
-    function del(el){
-        // if(!confirm('确定要删除该动作？')) return false;
-
-        // var id = $(el).data('id');
-        // if(!id) return false;
-
-        // $.post('/sport/actionDel',{'id':id},function(json){
-        //     if(json.errCode == 0){
-        //         window.location.reload();
-        //     }
-        //     else{
-        //         alert('删除失败.');
-        //     }
-        // });
-    }
 </script>
 
 </body>

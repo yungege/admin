@@ -1,23 +1,37 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 16:18:30
          compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15456981785982dc569e2a64-65145960%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 15:23:50
+         compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:16026733985982cf8626df77-84976869%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b4a1f2066f4bec0287ce25061e47e07da8bb62fd' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/version/add.tpl',
-      1 => 1501062598,
+      1 => 1501057278,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1501741066,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '15456981785982dc569e2a64-65145960',
+=======
+      1 => 1501740693,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '16026733985982cf8626df77-84976869',
+>>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
   'function' => 
   array (
   ),
@@ -29,9 +43,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5982dc56a215f3_01490174',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5982dc56a215f3_01490174')) {function content_5982dc56a215f3_01490174($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5982cf862b5364_21309640',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5982cf862b5364_21309640')) {function content_5982cf862b5364_21309640($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
 <html lang="en">
 
 <head>

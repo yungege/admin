@@ -74,7 +74,7 @@ class BasePageService {
             $errno = $e->getCode();
             $errstr = $e->getMessage();
             $this->res['errCode'] = (int)$errno ? : -1;
-            $this->res['errMessage'] = $errstr ? : setError($errno);
+            $this->res['errMessage'] = !empty(trim($errstr)) ? $errstr : setError($errno);
 			Log::writeLog($file, $errstr, $_SERVER['REQUEST_URI']);
 		}
 
