@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-31 10:55:06
-         compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1317072643597e9c0a8b2011-72147723%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 09:17:31
+         compiled from "/var/www/admin/admin/application/views/template/feedback/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1433856612598279ab2a9f49-27346283%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'ad43ff6ec9a4519069b557f1cbae4ad86c5fbbf9' => 
+    '16b3d5a1c6787a8aa2082990c3a1e179d4c2401a' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/sport/project.tpl',
-      1 => 1501151707,
+      0 => '/var/www/admin/admin/application/views/template/feedback/index.tpl',
+      1 => 1501062598,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1317072643597e9c0a8b2011-72147723',
+  'nocache_hash' => '1433856612598279ab2a9f49-27346283',
   'function' => 
   array (
   ),
@@ -29,10 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_597e9c0a901799_17216474',
+  'unifunc' => 'content_598279ab2f5573_24175801',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_597e9c0a901799_17216474')) {function content_597e9c0a901799_17216474($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_598279ab2f5573_24175801')) {function content_598279ab2f5573_24175801($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -77,10 +76,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
-<style type="text/css">
-
-</style>
-
 </head>
 
 <body>
@@ -222,7 +217,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / 锻炼方案管理 <a href="/project/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">创建锻炼方案</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> BUG收集 / 反馈建议
                             </li>
                         </ol>
                     </div>
@@ -236,13 +231,14 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             <table class="table table-bordered table-hover table-striped text-center">
                 <thead>
                     <tr>
-                        <th class="text-center">项目名称</th>
-                        <th class="text-center">封面图片</th>
-                        <th class="text-center">适用性别</th>
-                        <th class="text-center">适用年级</th>
-                        <th class="text-center" style="width:300px;">描述</th>
-                        <th class="text-center">创建时间</th>
-                        <th class="text-center">操作</th>
+                        <th class="text-center">头像</th>
+                        <th class="text-center">反馈人</th>
+                        <th class="text-center">昵称</th>
+                        <th class="text-center">号码</th>
+                        <th class="text-center" style="min-width: 150px;">家长</th>
+                        <th class="text-center">反馈内容</th>
+                        <th class="text-center" style="min-width: 100px;">反馈时间</th>
+                        <th class="text-center" style="min-width: 100px;">操作</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -252,38 +248,32 @@ foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars[
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
                     <tr>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['iconurl'];?>
+" style="width: 40px;height: 40px;border-radius: 20px;"></td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
 </td>
-                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['coverimg'];?>
-"></td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['gender'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
 </td>
-                        <td>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['grade_apply']){?>
-                                <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['row']->value['grade_apply']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
-$_smarty_tpl->tpl_vars['v']->_loop = true;
+                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['mobile']){?><?php echo $_smarty_tpl->tpl_vars['row']->value['mobile'];?>
+<?php }?></td>
+                        <td class="text-left">
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['parent']){?>
+                                <?php  $_smarty_tpl->tpl_vars['par'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['par']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['row']->value['parent']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['par']->key => $_smarty_tpl->tpl_vars['par']->value){
+$_smarty_tpl->tpl_vars['par']->_loop = true;
 ?>
-                                    <?php echo $_smarty_tpl->tpl_vars['v']->value;?>
+                                    <?php echo $_smarty_tpl->tpl_vars['par']->value;?>
 <br/>
                                 <?php } ?>
                             <?php }?>
                         </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['content'];?>
 </td>
-                        <td>
-                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['ctime'],"%Y-%m-%d");?>
-<br/>
-                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['ctime'],"%H:%M:%S");?>
-
-                        </td>
-                        <td>
-                            <a href="/sport/p/<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-.html" class="btn btn-sm btn btn-primary" target="__blank">查 看</a>
-                            <!-- <button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-.html" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
-                        </td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['date'];?>
+<br/><?php echo $_smarty_tpl->tpl_vars['row']->value['time'];?>
+</td>
+                        <td></td>
                     </tr>
                     <?php } ?>
                 </tbody>
@@ -297,7 +287,6 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         <?php }?>
     </div>
 </div>
-
 
 
                 <!-- footer -->
@@ -354,22 +343,6 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
             window.location = "?pn=" + page;
         }
     });
-
-    function del(el){
-        // if(!confirm('确定要删除该动作？')) return false;
-
-        // var id = $(el).data('id');
-        // if(!id) return false;
-
-        // $.post('/sport/actionDel',{'id':id},function(json){
-        //     if(json.errCode == 0){
-        //         window.location.reload();
-        //     }
-        //     else{
-        //         alert('删除失败.');
-        //     }
-        // });
-    }
 </script>
 
 </body>
