@@ -11,20 +11,23 @@ class Dao_ShareModel extends Db_Mongodb {
     protected $table = 'share';
 
     protected $fields = [
-        'user_id'   => '',
-        'school_id' => '',
-        'grade'     => 0,
-        'class_id'  => '',
+        'traindone_id'  => '',  //作业提交数据ID（trainingdone 中 _id）
+        'user_id'       => '',
+        'school_id'     => '',
+        'grade'         => 0,
+        'class_id'      => '',
         'share_type'    => 1,   //1-系统分享，2-用户主动分享
-        'program_type'  => 0,   // 锻炼类型:1-体育作业(翻转课堂),2-运动处方(身体素质作业),3-跑步,4-兴趣班,5-普通锻炼项目...
-        'training_type' => 0,   // 所属锻炼项目类型类型编号：1-跳绳运动，2-俯卧撑运动，3-高抬腿运动(编号内容会再调整)
-        'training_id'   => '',  // 锻炼项目的id号
-        'training_name' => '',  // 项目名称
-        'burncalories' => 0.00, // 卡路里
-        'up_num'    => 0,       //点赞用户数
-        'imgs'      => [],      //图片url数组
-        'work_id'   => '',      // 分享作业的ID
-        'ctime'     => 0,       //分享时间
+        // 'program_type'  => 0,   //锻炼类型:1-体育作业(翻转课堂),2-运动处方(身体素质作业),3-跑步,4-兴趣班,5-普通锻炼项目...
+        'homework_id'   => '',      //分享作业的ID
+        'homework_type' => 0,  //作业类型:1-体育作业(翻转课堂),2-运动处方(身体素质作业),3-跑步,4-兴趣班,5-普通锻炼项目...
+        'training_id'   => '',  //锻炼项目的id号
+        'training_type' => 0,   //所属锻炼项目类型类型编号：1-跳绳运动，2-俯卧撑运动，3-高抬腿运动(编号内容会再调整)
+        'training_name' => '',  //项目名称
+        'burncalories'  => 0.00, //卡路里
+        'up_num'        => 0,       //点赞用户数
+        'imgs'          => [],      //图片url数组
+        'is_blur'       => 0,       //0：不模糊，1：模糊
+        'ctime'         => 0,       //分享时间
 	];
 
     protected function __construct(){

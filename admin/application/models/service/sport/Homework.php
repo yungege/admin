@@ -42,8 +42,9 @@ class Service_Sport_HomeworkModel extends BasePageService {
         ];
 
         $count = $this->homeworkModel->count();
+        // echo $count;exit;
         $this->resData['pageCount'] = ceil($count / self::PAGESIZE);
-        if($count <= 0)
+        if($count == 0)
             return $this->resData;
 
         $list = $this->homeworkModel->getListByPage([], [], $options);
@@ -51,12 +52,6 @@ class Service_Sport_HomeworkModel extends BasePageService {
             return $this->resData;
 
         foreach ($list as &$row) {
-            $where = [
-                '_id' => [
-                    '$in' => $row['class_info'],
-                ],
-            ];
-
             $pwhere = [
                 '_id' => [
                     '$in' => $row['project_id'],

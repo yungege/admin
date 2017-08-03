@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-07-31 10:54:56
-         compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:152025357597e9c007ea662-86014507%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 18:59:04
-         compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19225006715981b078aa1ec4-22295458%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 02060d227cf50bdd23658a54e92aa4aac84d80ff
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-02 18:03:26
+         compiled from "/var/www/aa/admin/admin/application/views/template/sport/project.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:14527828685981a36eabefa4-19326148%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '22af699201fe630f2cde682de73edde7b4b3dfad' => 
+    '10d27bc643ed0cb5530e6dc257a5384a6bac15ce' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/sport/homework.tpl',
-<<<<<<< HEAD
-      1 => 1501062598,
-=======
-      1 => 1501638631,
->>>>>>> 02060d227cf50bdd23658a54e92aa4aac84d80ff
+      0 => '/var/www/aa/admin/admin/application/views/template/sport/project.tpl',
+      1 => 1501639058,
       2 => 'file',
     ),
-    '1af1c7811d93168106c85becc3c13354fe96fe45' => 
+    '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1501318825,
+      0 => '/var/www/aa/admin/admin/application/views/template/common/page/layout.tpl',
+      1 => 1501660749,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '152025357597e9c007ea662-86014507',
-=======
-      1 => 1501671512,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '19225006715981b078aa1ec4-22295458',
->>>>>>> 02060d227cf50bdd23658a54e92aa4aac84d80ff
+  'nocache_hash' => '14527828685981a36eabefa4-19326148',
   'function' => 
   array (
   ),
@@ -47,16 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_597e9c00840f95_00677432',
+  'unifunc' => 'content_5981a36eb35671_67114764',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_597e9c00840f95_00677432')) {function content_597e9c00840f95_00677432($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
-=======
-  'unifunc' => 'content_5981b078b97930_49633347',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5981b078b97930_49633347')) {function content_5981b078b97930_49633347($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
->>>>>>> 02060d227cf50bdd23658a54e92aa4aac84d80ff
-if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5981a36eb35671_67114764')) {function content_5981a36eb35671_67114764($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -187,15 +162,12 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <ul id="user" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2){?>in<?php }?>">
                             <li>
                                 <a href="/user/student" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">学生管理</a>
-<<<<<<< HEAD
-                            </li>
-                            <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
-=======
->>>>>>> 02060d227cf50bdd23658a54e92aa4aac84d80ff
                             </li>
                             <li>
                                 <a href="/user/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
+                            </li>
+                            <li>
+                                <a href="/user/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
                             </li>
                             <li>
                                 <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">学校管理</a>
@@ -270,7 +242,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / 作业管理
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / 锻炼方案管理 <a href="/project/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">创建锻炼方案</a>
                             </li>
                         </ol>
                     </div>
@@ -284,21 +256,12 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             <table class="table table-bordered table-hover table-striped text-center">
                 <thead>
                     <tr>
-                        <th class="text-center">作业名称</th>
-                        <th class="text-center">作业类型</th>
+                        <th class="text-center">项目名称</th>
                         <th class="text-center">封面图片</th>
-                        <th class="text-center">学校</th>
-                        <th class="text-center">年级</th>
-                        <th class="text-center">班级</th>
-                        <!-- <th class="text-center">周锻炼时间</th> -->
-                        <th class="text-center">周锻炼次数</th>
-                        <th class="text-center">作业间隔</th>
-                        <th class="text-center">补作业间隔</th>
-                        <th class="text-center">性别</th>
-                        <th class="text-center">项目</th>
-                        <th style="width: 170px;" class="text-center">有效期</th>
-                        <th style="width: 100px;" class="text-center">创建时间</th>
-                        <th>状态</th>
+                        <th class="text-center">适用性别</th>
+                        <th class="text-center">适用年级</th>
+                        <th class="text-center" style="width:300px;">描述</th>
+                        <th class="text-center">创建时间</th>
                         <th class="text-center">操作</th>
                     </tr>
                 </thead>
@@ -311,47 +274,35 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                     <tr>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
 </td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['type']==1){?><span class="label label-warning">翻</span><?php }else{ ?><span class="label label-primary">素</span><?php }?></td>
-                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['project'][0]['coverimg'];?>
-" width="100"></td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['school'];?>
+                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['coverimg'];?>
+"></td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['gender'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['grade'];?>
-</td>
-                        <td><button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-sm btn-success" onclick="getClass(this)">查 看</button></td>
-                        <!-- <td><?php echo $_smarty_tpl->tpl_vars['row']->value['exertime'];?>
-</td> -->
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['weekdoneno'];?>
-</td>
-                        <td><?php echo smarty_modifier_ttxs_parse_stamp($_smarty_tpl->tpl_vars['row']->value['makeup_limit']);?>
-</td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['makeup_interval']==0){?>无限制<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['row']->value['makeup_interval'];?>
-天<?php }?></td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['gender']==1){?>女<?php }elseif($_smarty_tpl->tpl_vars['row']->value['gender']==2){?>无限制<?php }else{ ?>男<?php }?></td>
                         <td>
-                            <?php  $_smarty_tpl->tpl_vars['pro'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['pro']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['row']->value['project']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['pro']->key => $_smarty_tpl->tpl_vars['pro']->value){
-$_smarty_tpl->tpl_vars['pro']->_loop = true;
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['grade_apply']){?>
+                                <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['row']->value['grade_apply']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
 ?>
-                                <a href="/sport/p/<?php echo $_smarty_tpl->tpl_vars['pro']->value['_id'];?>
-.html"><?php echo $_smarty_tpl->tpl_vars['pro']->value['name'];?>
-</a><br/>
-                            <?php } ?>
-                        </td>
-                        <td>
-                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['start_time'],"%Y-%m-%d %H:%M:%S");?>
+                                    <?php echo $_smarty_tpl->tpl_vars['v']->value;?>
 <br/>
-                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['deadline_time'],"%Y-%m-%d %H:%M:%S");?>
+                                <?php } ?>
+                            <?php }?>
+                        </td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
+</td>
+                        <td>
+                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['ctime'],"%Y-%m-%d");?>
+<br/>
+                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['ctime'],"%H:%M:%S");?>
 
                         </td>
-                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['create_time'],"%Y-%m-%d");?>
-</td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['status']==1){?><span class="label label-success">锻炼中</span><?php }elseif($_smarty_tpl->tpl_vars['row']->value['status']==-1){?><span class="label label-danger">已过期</span><?php }else{ ?><span class="label label-defult">未生效</span><?php }?></td>
                         <td>
+                            <a href="/sport/p/<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+.html" class="btn btn-sm btn btn-primary" target="__blank">查 看</a>
                             <!-- <button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
+.html" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
                         </td>
                     </tr>
                     <?php } ?>
@@ -364,21 +315,6 @@ $_smarty_tpl->tpl_vars['pro']->_loop = true;
 "></ul>
         </div>
         <?php }?>
-    </div>
-</div>
-
-<!-- modal -->
-<div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
-    <div class="modal-dialog" role="document" style="margin-top:7%;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabel">动作视频</h4>
-            </div>
-            <div class="modal-body" id="display-body">
-                
-            </div>
-        </div>
     </div>
 </div>
 
@@ -440,48 +376,20 @@ $_smarty_tpl->tpl_vars['pro']->_loop = true;
     });
 
     function del(el){
-        if(!confirm('确定要删除该动作？')) return false;
+        // if(!confirm('确定要删除该动作？')) return false;
 
-        var id = $(el).data('id');
-        if(!id) return false;
+        // var id = $(el).data('id');
+        // if(!id) return false;
 
-        $.post('/sport/actionDel',{'id':id},function(json){
-            if(json.errCode == 0){
-                window.location.reload();
-            }
-            else{
-                alert('删除失败.');
-            }
-        });
+        // $.post('/sport/actionDel',{'id':id},function(json){
+        //     if(json.errCode == 0){
+        //         window.location.reload();
+        //     }
+        //     else{
+        //         alert('删除失败.');
+        //     }
+        // });
     }
-
-    var video = {
-        init: function () {
-            this.getDom();
-            this.display();
-        },
-
-        getDom: function () {
-            this.disBtn = $('.video');
-            this.videoTitle = $('#modalLabel');
-            this.videoUri = $('#display-body');
-        },
-
-        display: function () {
-            var me = this;
-            me.disBtn.unbind().bind('click', function(){
-                var uri = $(this).data('uri');
-                var name = $(this).data('name');
-                me.videoTitle.text(name);
-                var html = "<video style=\"width:100%;\" controls autobuffer autoplay>" +
-                                "<source src='" + uri + "' type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'></source>" +
-                            "</video>";
-                me.videoUri.html(html);
-            })
-        }
-    };
-
-    video.init();
 </script>
 
 </body>

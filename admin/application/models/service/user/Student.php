@@ -42,14 +42,11 @@ class Service_User_StudentModel extends BasePageService {
     protected function __execute($req) {
         $match = [];
         $req = $req['get'];
-        $queryArr = $req;
-        unset($queryArr['pn']);
-        $this->resData['query'] = http_build_query($queryArr);
         $this->resData['grade'] = self::$grade;
 
         if(!isset($req['pn']) || !is_numeric($req['pn']))
             $req['pn'] = 1;
-        $this->resData['pn'] = $req['pn'];
+        
         $offset = ($req['pn'] - 1) * self::PAGESIZE;
 
         $options = [
@@ -103,7 +100,9 @@ class Service_User_StudentModel extends BasePageService {
         }
 
         $count = $this->userModel->count($match);
-        $this->resData['pageCount'] = ceil($count / self::PAGESIZE);
+        $page = new Page($count, self::PAGESIZE);
+        $this->resData['page'] = $page->show();
+        
         if($count <= 0) return $this->resData;
 
         if(!empty($match['_id'])){
