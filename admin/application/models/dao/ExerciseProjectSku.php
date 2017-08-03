@@ -85,4 +85,29 @@ class Dao_ExerciseProjectSkuModel extends Db_Mongodb {
         }
         return $info;
     }
+
+    /**
+     * 获取某一项目指定难度级别的项目信息
+     * @Author    422909231@qq.com
+     * @DateTime  2017-05-11
+     * @version   [version]
+     * @param     string           $pid
+     * @param     int              $difficulty
+     * @param     array            $fields
+     * @return    array
+     */
+    public function getProjectSkuInfoByProjectIdAndDifficulty(string $pid, int $difficulty, array $fields = []){
+        $where = [
+            'project_id' => $pid,
+            'difficulty' => ['$in' => [$difficulty,-1]],
+        ];
+
+        $options = [];
+        $fields = $fields ? $this->filterFields($fields) : [];
+        if(!empty($fields)){
+            $options['projection'] = $fields;
+        }
+
+        return $this->queryOne($where, $options);
+    }
 }

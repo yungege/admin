@@ -2,6 +2,43 @@
 {%block name="title"%}天天向尚管理后台{%/block%}
 {%block name="css"%}
 <style type="text/css">
+    .add-ugc-fix{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.4);
+        z-index: 9999;
+        display: none;
+    }
+    .add-ugc-inner{
+        width: 500px;
+        height: 200px;
+        border: 1px solid white;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -250px;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    .add-ugc-inner > h4{
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 5px;
+    }
+    .glyphicon-remove{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .glyphicon-remove:hover{
+        color: red;
+    }
     
 </style>
 {%/block%}
@@ -126,7 +163,7 @@
                         <!-- <td></td> -->
                         <td>
                             <a href="/sport/ugc?uid={%$row._id%}" class="btn btn-default btn-xs">UGC</a>
-                            <a data-uid="{%$row._id%}" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补交UGC</a>
+                            <a data-uid="{%$row._id%}" data-cid="{%$row.classinfo.classid%}" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补交UGC</a>
                         </td>
                     </tr>
                     {%/foreach%}
@@ -141,6 +178,20 @@
     </div>
 </div>
 
+<div class="add-ugc-fix">
+    <div class="add-ugc-inner">
+        <h4>补交UGC</h4>
+        <i class="glyphicon glyphicon-remove"></i>
+        <form name="ugc" class="ugcform">
+            <div class="form-group">
+                <label for="hid">作业 ID</label>
+                <input type="text" class="form-control" id="hid" placeholder="">
+            </div>
+            <button id="sub" type="button" class="btn btn-default pull-right">Submit</button>
+        </form>
+    </div>
+</div>
+
 {%/block%}
 
 {%block name="js"%}
@@ -151,28 +202,74 @@
         init: function (){
             this.getDom();
             this.addUgc();
+            this.clickCloseFix();
+            this.postData();
         },
 
         getDom: function(){
             this.ugcBtn = $('.addUgc');
+            this.form = $('form[name=ugc]');
+            this.hid = $('#hid');
+            this.fixBox = $('.add-ugc-fix');
+            this.closeFixBoxBtn = $('.glyphicon-remove');
+            this.subBtn = $('#sub');
+        },
+
+        showDialog: function(){
+            var me = this;
+
+            me.fixBox.fadeIn(200);
+        },
+
+        hideDialog: function(){
+            var me = this;
+
+            me.fixBox.fadeOut(200);
+        },
+
+        clickCloseFix: function(){
+            var me = this;
+
+            me.closeFixBoxBtn.click(function(){
+                me.hideDialog();
+            });
         },
 
         addUgc: function(){
-            var me = this,
-                aj = null;
+            var me = this;
 
             me.ugcBtn.unbind().bind('click', function(){
-                var uid = $.trim($(this).data('uid'));
+                var uid = $.trim($(this).data('uid')),
+                    cid = $.trim($(this).data('cid'));
+                me.subBtn.attr('data-uid', uid);
+                me.subBtn.attr('data-cid', cid);
+                me.showDialog();
+            })
+        },
+
+        postData: function(){
+            var me = this,
+                aj = null;
+            me.subBtn.unbind().bind('click', function(){
+                var uid = $.trim($(this).data('uid')),
+                    cid = $.trim($(this).data('cid')),
+                    hid = $.trim(me.hid.val());
+                
+                if(!uid || !cid || !hid){
+                    alert('参数错误.');
+                    return false;
+                }
+
                 aj = $.ajax({
                     type: 'GET',
                     dataType: 'json',
-                    url: '/user/addUgc?uid=' + uid,
+                    url: '/user/addUgc?uid=' + uid + '&cid=' + cid + '&hid=' + hid,
                     success: function(json){
-                        if(json.code == 200){
-                            window.location = "/";
+                        if(json.errCode == 200){
+                            window.location = "/sport/ugc?uid=" + uid;
                         }
                         else{
-                            alert(json.msg);
+                            alert(json.errMessage);
                             return false;
                         }
                     },
@@ -182,8 +279,8 @@
                         }
                     },
                 });
-            })
-        }
+            });
+        },
     };
 
     student.init();
