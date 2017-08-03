@@ -105,9 +105,9 @@
                     <tr data-uid="{%$row._id%}">
                         <td><img src="{%$row.iconurl%}?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></td>
                         <td>姓名：{%$row.username%}<br/>昵称：{%$row.nickname%}</td>
-                        <td><a href="http://192.168.1.106:8080/user/school?schoolname={%$row.schoolinfo.schoolname%}">{%$row.schoolinfo.schoolname%}</a></td>
+                        <td><a href="/user/school?schoolid={%$row.schoolinfo.schoolid%}">{%$row.schoolinfo.schoolname%}</a></td>
                         <td>{%$row.grade%}</td>
-                        <td><a href="http://192.168.1.106:8080/user/school?classname={%$row.classinfo.classname%}&schoolname={%$row.schoolinfo.schoolname%}">{%$row.classinfo.classname%}</a></td>
+                        <td><a href="/user/class?classid={%$row.classinfo.classid%}">{%$row.classinfo.classname%}</a></td>
                         <td>{%$row.clientsource%}<br/>{%$row.versions%}</td>
                         <td>{%$row.mobileno%}</td>
                         <td>{%$row.parentname%}</td>
