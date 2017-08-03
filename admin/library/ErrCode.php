@@ -155,6 +155,7 @@ define('FEEDBACK_DATA_EMPTY',908);              //当前没有反馈意见
 define('DATA_EMPTY',909);                       //数据为空
 define('ACTION_TYPE_EMPTY',910);                //没有你想要的动作类型
 define('TRAINING_SUBMIT_ERROR',911);            //锻炼提交过于频繁
+define('TRAINING_BJ_ERROR',912);                //当天作业已经补交过
 
 // 推送
 define('PUSH_FAULT',1101);                      //推送失败
@@ -527,6 +528,9 @@ function setError($errorCode, $errorMsg=''){
             break;
         case TRAINING_SUBMIT_ERROR:
             $msg = '锻炼提交过于频繁';
+            break;
+        case TRAINING_BJ_ERROR:
+            $msg = '当天作业已经补交过';
             break;
 
         case PUSH_FAULT:

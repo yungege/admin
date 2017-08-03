@@ -105,9 +105,9 @@
                     <tr data-uid="{%$row._id%}">
                         <td><img src="{%$row.iconurl%}?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></td>
                         <td>姓名：{%$row.username%}<br/>昵称：{%$row.nickname%}</td>
-                        <td><a href="http://192.168.1.106:8080/user/school?schoolname={%$row.schoolinfo.schoolname%}">{%$row.schoolinfo.schoolname%}</a></td>
+                        <td><a href="/user/school?schoolid={%$row.schoolinfo.schoolid%}">{%$row.schoolinfo.schoolname%}</a></td>
                         <td>{%$row.grade%}</td>
-                        <td><a href="http://192.168.1.106:8080/user/school?classname={%$row.classinfo.classname%}&schoolname={%$row.schoolinfo.schoolname%}">{%$row.classinfo.classname%}</a></td>
+                        <td><a href="/user/class?classid={%$row.classinfo.classid%}">{%$row.classinfo.classname%}</a></td>
                         <td>{%$row.clientsource%}<br/>{%$row.versions%}</td>
                         <td>{%$row.mobileno%}</td>
                         <td>{%$row.parentname%}</td>
@@ -126,48 +126,68 @@
                         <!-- <td></td> -->
                         <td>
                             <a href="/sport/ugc?uid={%$row._id%}" class="btn btn-default btn-xs">UGC</a>
+                            <a data-uid="{%$row._id%}" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补交UGC</a>
                         </td>
                     </tr>
                     {%/foreach%}
                 </tbody>
             </table>
         </div>
-        {%if $pageCount > 1%}
-        <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="{%if !empty($smarty.get.pn)%}{%$smarty.get.pn%}{%else%}1{%/if%}" data-query="{%$query%}"></ul>
+        
+        <div class="text-center tt-page">
+            {%$page%}
         </div>
-        {%/if%}
+        
     </div>
 </div>
 
 {%/block%}
 
 {%block name="js"%}
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
 <script type="text/javascript">
-    var currentPage = {%$pn%};
-    var pageCount = {%$pageCount%};
-    var urlPage = parseInt($("#page").data('url-pn'));
-    var queryStr = $("#page").data('query');
-    if(isNaN(urlPage)){
-        urlPage = 0;
-    }
+!(function(){
+    var student = {
 
-    $('#page').twbsPagination({
-        totalPages: pageCount,
-        visiblePages: 7,
-        version: '1.1',
-        first: '首页',
-        prev: '上一页',
-        next: '下一页',
-        last: '尾页',
-        startPage: currentPage,
-        onPageClick: function (event, page) {
-            if(urlPage == page)
-                return;
+        init: function (){
+            this.getDom();
+            this.addUgc();
+        },
 
-            window.location = "?" + queryStr + '&pn=' + page;
+        getDom: function(){
+            this.ugcBtn = $('.addUgc');
+        },
+
+        addUgc: function(){
+            var me = this,
+                aj = null;
+
+            me.ugcBtn.unbind().bind('click', function(){
+                var uid = $.trim($(this).data('uid'));
+                aj = $.ajax({
+                    type: 'GET',
+                    dataType: 'json',
+                    url: '/user/addUgc?uid=' + uid,
+                    success: function(json){
+                        if(json.code == 200){
+                            window.location = "/";
+                        }
+                        else{
+                            alert(json.msg);
+                            return false;
+                        }
+                    },
+                    beforeSend: function () {
+                        if(aj != null) {
+                            aj.abort();
+                        }
+                    },
+                });
+            })
         }
-    });
+    };
+
+    student.init();
+})()
 </script>
+
 {%/block%}

@@ -128,7 +128,7 @@
                                 <a href="/user/grade" class="{%if $tag.0 == 2 && $tag.1 == 3%}cy-child-active{%/if%}">年级管理</a>
                             </li> -->
                             <li>
-                                <a href="/user/school" class="{%if $tag.0 == 2 && $tag.1 == 4%}cy-child-active{%/if%}">学校管理</a>
+                                <a href="/user/school" class="{%if $tag.0 == 2 && $tag.1 == 3%}cy-child-active{%/if%}">学校管理</a>
                             </li>
                         </ul>
                     </li>
