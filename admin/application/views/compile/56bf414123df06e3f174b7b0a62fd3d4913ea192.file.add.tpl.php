@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-04 16:29:32
-         compiled from "/var/www/admin/admin/application/views/template/user/school.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:21474809015984306c7fd553-14450340%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-04 17:45:36
+         compiled from "/var/www/admin/admin/application/views/template/project/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:33617981759844240b25046-61515833%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'd3ac8b9812fb1eaa7613c272a5b54f4091fc5d70' => 
+    '56bf414123df06e3f174b7b0a62fd3d4913ea192' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/user/school.tpl',
-      1 => 1501671512,
+      0 => '/var/www/admin/admin/application/views/template/project/add.tpl',
+      1 => 1501839935,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '21474809015984306c7fd553-14450340',
+  'nocache_hash' => '33617981759844240b25046-61515833',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5984306c8cf606_49321605',
+  'unifunc' => 'content_59844240b60363_78002423',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5984306c8cf606_49321605')) {function content_5984306c8cf606_49321605($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59844240b60363_78002423')) {function content_59844240b60363_78002423($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -96,10 +96,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
-<style type="text/css">
-    
-</style>
-
 </head>
 
 <body>
@@ -241,7 +237,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 用户管理 / 学校管理
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 锻炼内容管理 / 发布新方案
                             </li>
                         </ol>
                     </div>
@@ -249,89 +245,54 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
+
 <div class="row">
     <div class="col-lg-12">
-        <form method="get" >
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <div class="form-horizontal row">
-
-                        <div class="col-md-3">
-                            <div class="row">
-                                <label class="col-md-4 paddZero control-label">学校名：</label>
-                                <div class="col-md-8">
-                                   <input type="text" name="schoolname" class="input-sm form-control" value="<?php echo $_GET['schoolname'];?>
-">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-5">
-                            <div class="row">
-                                <label class="col-md-6 paddZero control-label">学校ID：</label>
-                                <div class="col-md-6">
-                                    <input type="text" name="schoolid" class="input-sm form-control" value="<?php echo $_GET['schoolid'];?>
-">
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div><br/>
-                   
-                    <div class="form-horizontal row">
-                        <div class="col-md-4 col-md-offset-1">
-                            <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
-                        </div>
-                    </div>
-                </div>
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="action-name">动作名称</label>
+                <input type="text" class="form-control" id="action-name">
             </div>
+            <div class="form-group">
+                <label for="action-type">动作类型</label>
+                <select class="form-control" name="typeno" id="action-type">
+                    <option value="-1">ALL</option>
+                    <option value="1">计时锻炼</option>
+                    <option value="2">计组数锻炼</option>
+                    <option value="3">节拍锻炼</option>
+                    <!-- 4 => '休息', -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="action-item">检测项目</label>
+                <select class="form-control" name="physicalquality" id="action-item">
+                    <option value="-1">ALL</option>
+                    <option value="0">耐力素质</option>
+                    <option value="1">上肢力量</option>
+                    <option value="2">腹肌耐力</option>
+                    <option value="3">柔韧素质</option>
+                    <option value="4">速度素质</option>
+                    <option value="5">下肢力量</option>
+                    <option value="6">综合素质</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sex">性别</label>
+                <select class="form-control" name="sex" id="sex">
+                    <option value="2">ALL</option>
+                    <option value="0">男</option>
+                    <option value="1">女</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-info">检索</button>
         </form>
     </div>
-</div>
-
-<div class="row">
-    <div class="col-lg-12">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped">
-                <thead>
-                    <tr>
-                        <!-- <th class="text-center">ID</th> -->
-                        <th>学校名称</th></th>
-                        <th>学校ID</th>
-                        <th>学校所在省份</th>
-                        <th>学校所在城市</th>
-                        <!-- <th>关联账号</th> -->
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
-$_smarty_tpl->tpl_vars['row']->_loop = true;
-?>
-                    <tr >
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['province'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['city'];?>
-</td>
-                        <!-- <td></td> -->
-                        <td>
-                            <a href="" class="btn btn-default btn-xs">点击</a>
-                        </td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+    <div class="row">
+        <div class="col-lg-12">
+        
         </div>
-        <div class="tt-page" style="text-align:center"><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
-</div>
     </div>
+    
 </div>
 
 
@@ -363,5 +324,22 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
+<script type="text/javascript">
+    !(function(){
+        var publish = {
+            init: function(){
+                this.getDom();
+
+            },
+            getDom: function(){
+                
+            },
+            
+        };
+
+        publish.init();
+    })()
+</script>
+
 </body>
 </html><?php }} ?>
