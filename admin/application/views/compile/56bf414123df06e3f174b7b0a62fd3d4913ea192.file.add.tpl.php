@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-07 13:56:39
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-07 18:30:45
          compiled from "/var/www/admin/admin/application/views/template/project/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1866143365988011710b880-93541802%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:96504338959884155a0d281-61381851%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '56bf414123df06e3f174b7b0a62fd3d4913ea192' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/project/add.tpl',
-      1 => 1502085398,
+      1 => 1502092637,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1866143365988011710b880-93541802',
+  'nocache_hash' => '96504338959884155a0d281-61381851',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59880117163456_33574810',
+  'unifunc' => 'content_59884155a4bc33_04535233',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59880117163456_33574810')) {function content_59880117163456_33574810($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59884155a4bc33_04535233')) {function content_59884155a4bc33_04535233($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -263,15 +263,15 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
 <div class="row">
     <div class="col-lg-12">
-        <form class="form-inline">
+        <form class="form-inline" name="action">
             <div class="form-group">
                 <label for="action-name">动作名称</label>
-                <input type="text" class="form-control" id="action-name">
+                <input type="text" class="form-control" name="name" id="action-name">
             </div>
             <div class="form-group">
                 <label for="action-type">动作类型</label>
                 <select class="form-control" name="typeno" id="action-type">
-                    <option value="-1">ALL</option>
+                    <option value="">ALL</option>
                     <option value="1">计时锻炼</option>
                     <option value="2">计组数锻炼</option>
                     <option value="3">节拍锻炼</option>
@@ -281,7 +281,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             <div class="form-group">
                 <label for="action-item">检测项目</label>
                 <select class="form-control" name="physicalquality" id="action-item">
-                    <option value="-1">ALL</option>
+                    <option value="">ALL</option>
                     <option value="0">耐力素质</option>
                     <option value="1">上肢力量</option>
                     <option value="2">腹肌耐力</option>
@@ -299,7 +299,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <option value="1">女</option>
                 </select>
             </div>
-            <button type="button" class="btn btn-info">检索</button>
+            <button type="button" class="btn btn-info" id="search">检索</button>
         </form>
     </div>
 </div>
@@ -394,22 +394,7 @@ $_smarty_tpl->tpl_vars['re']->_loop = true;
     </script>
 
     
-<script type="text/javascript">
-    !(function(){
-        var publish = {
-            init: function(){
-                this.getDom();
-
-            },
-            getDom: function(){
-                
-            },
-            
-        };
-
-        publish.init();
-    })()
-</script>
+<script type="text/javascript" src="/static/sport/js/project.js"></script>
 
 </body>
 </html><?php }} ?>

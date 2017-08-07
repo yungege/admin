@@ -9,7 +9,7 @@ class Service_Action_AddModel extends BasePageService {
     ];
 
     public function __construct() {
-        $this->actionModel = Dao_VersionModel::getInstance();
+        $this->actionModel = Dao_ExerciseactionModel::getInstance();
     }
 
     protected function __declare() {

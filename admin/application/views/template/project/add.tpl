@@ -21,15 +21,15 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <form class="form-inline">
+        <form class="form-inline" name="action">
             <div class="form-group">
                 <label for="action-name">动作名称</label>
-                <input type="text" class="form-control" id="action-name">
+                <input type="text" class="form-control" name="name" id="action-name">
             </div>
             <div class="form-group">
                 <label for="action-type">动作类型</label>
                 <select class="form-control" name="typeno" id="action-type">
-                    <option value="-1">ALL</option>
+                    <option value="">ALL</option>
                     <option value="1">计时锻炼</option>
                     <option value="2">计组数锻炼</option>
                     <option value="3">节拍锻炼</option>
@@ -39,7 +39,7 @@
             <div class="form-group">
                 <label for="action-item">检测项目</label>
                 <select class="form-control" name="physicalquality" id="action-item">
-                    <option value="-1">ALL</option>
+                    <option value="">ALL</option>
                     <option value="0">耐力素质</option>
                     <option value="1">上肢力量</option>
                     <option value="2">腹肌耐力</option>
@@ -57,7 +57,7 @@
                     <option value="1">女</option>
                 </select>
             </div>
-            <button type="button" class="btn btn-info">检索</button>
+            <button type="button" class="btn btn-info" id="search">检索</button>
         </form>
     </div>
 </div>
