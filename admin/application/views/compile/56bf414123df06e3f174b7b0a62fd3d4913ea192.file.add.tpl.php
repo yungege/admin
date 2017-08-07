@@ -1,37 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-07 09:31:25
-         compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9092007615987c2eda29615-94790374%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-04 09:36:59
-         compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:16448129985983cfbbb50cf4-78469912%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 065490ded8ff836c8dc101fecceae9414c1b51e2
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-07 13:56:39
+         compiled from "/var/www/admin/admin/application/views/template/project/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1866143365988011710b880-93541802%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'b4a1f2066f4bec0287ce25061e47e07da8bb62fd' => 
+    '56bf414123df06e3f174b7b0a62fd3d4913ea192' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/version/add.tpl',
-      1 => 1501062598,
+      0 => '/var/www/admin/admin/application/views/template/project/add.tpl',
+      1 => 1502085398,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1501753746,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '9092007615987c2eda29615-94790374',
-=======
       1 => 1501753699,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16448129985983cfbbb50cf4-78469912',
->>>>>>> 065490ded8ff836c8dc101fecceae9414c1b51e2
+  'nocache_hash' => '1866143365988011710b880-93541802',
   'function' => 
   array (
   ),
@@ -43,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5987c2eda6c198_83682205',
+  'unifunc' => 'content_59880117163456_33574810',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5987c2eda6c198_83682205')) {function content_5987c2eda6c198_83682205($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5983cfbbb93d95_39560802',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5983cfbbb93d95_39560802')) {function content_5983cfbbb93d95_39560802($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 065490ded8ff836c8dc101fecceae9414c1b51e2
+<?php if ($_valid && !is_callable('content_59880117163456_33574810')) {function content_59880117163456_33574810($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -116,6 +96,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<style type="text/css">
+    .fx-btn{
+        border: 1px solid #ccc;
+        padding: 165px 20px 0 20px;
+        height: 532px;
+    }
+    .fx-btn a{
+        display: block;
+        margin-bottom: 10px;
+    }
+    #action-list,#action-list-select,#action-list-rest{
+        height: 500px;
+    }
+</style>
+
 </head>
 
 <body>
@@ -257,7 +252,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 客户端管理 / 发布新版本
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 锻炼内容管理 / 发布新方案
                             </li>
                         </ol>
                     </div>
@@ -268,44 +263,107 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
 <div class="row">
     <div class="col-lg-12">
-        <form name="version">
+        <form class="form-inline">
             <div class="form-group">
-                <label for="platform">发布平台</label>
-                <select id="platform" class="form-control" name="type">
-                    <option value="-1">选择发布平台</option>
-                    <option value="0" >iOS【当前最新版本 <?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
-】</option>
-                    <option value="1">Android【当前最新版本 <?php echo $_smarty_tpl->tpl_vars['android']->value;?>
-】</option>
+                <label for="action-name">动作名称</label>
+                <input type="text" class="form-control" id="action-name">
+            </div>
+            <div class="form-group">
+                <label for="action-type">动作类型</label>
+                <select class="form-control" name="typeno" id="action-type">
+                    <option value="-1">ALL</option>
+                    <option value="1">计时锻炼</option>
+                    <option value="2">计组数锻炼</option>
+                    <option value="3">节拍锻炼</option>
+                    <!-- 4 => '休息', -->
                 </select>
             </div>
-
             <div class="form-group">
-                <label for="vname">版本名称</label>
-                <input type="text" class="form-control" id="vname" placeholder="Version Name" name="version">
+                <label for="action-item">检测项目</label>
+                <select class="form-control" name="physicalquality" id="action-item">
+                    <option value="-1">ALL</option>
+                    <option value="0">耐力素质</option>
+                    <option value="1">上肢力量</option>
+                    <option value="2">腹肌耐力</option>
+                    <option value="3">柔韧素质</option>
+                    <option value="4">速度素质</option>
+                    <option value="5">下肢力量</option>
+                    <option value="6">综合素质</option>
+                </select>
             </div>
-
             <div class="form-group">
-                <label for="vno">版本号</label>
-                <input type="text" class="form-control" id="vno" placeholder="Version No" name="versionno">
+                <label for="sex">性别</label>
+                <select class="form-control" name="sex" id="sex">
+                    <option value="2">ALL</option>
+                    <option value="0">男</option>
+                    <option value="1">女</option>
+                </select>
             </div>
-
-            <div class="form-group">
-                <label for="description">更新说明</label>
-                <textarea id="description" class="form-control" rows="3" name="description"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="downloadurl">下载URL</label>
-                <input type="text" class="form-control" id="downloadurl" placeholder="Download URL" name="downloadurl">
-            </div>
-              
-            <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
-" data-1="<?php echo $_smarty_tpl->tpl_vars['android']->value;?>
-">确认发布</button>
+            <button type="button" class="btn btn-info">检索</button>
         </form>
     </div>
 </div>
+
+
+<div class="row" style="margin-top: 20px;padding: 15px;">
+    <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="action-list">
+            <?php  $_smarty_tpl->tpl_vars['ac'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ac']->_loop = false;
+ $_smarty_tpl->tpl_vars['idx'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['actionList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ac']->key => $_smarty_tpl->tpl_vars['ac']->value){
+$_smarty_tpl->tpl_vars['ac']->_loop = true;
+ $_smarty_tpl->tpl_vars['idx']->value = $_smarty_tpl->tpl_vars['ac']->key;
+?>
+                <optgroup label="<?php echo $_smarty_tpl->tpl_vars['type']->value[$_smarty_tpl->tpl_vars['idx']->value];?>
+">
+                    <?php  $_smarty_tpl->tpl_vars['acl'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['acl']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['ac']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['acl']->key => $_smarty_tpl->tpl_vars['acl']->value){
+$_smarty_tpl->tpl_vars['acl']->_loop = true;
+?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['acl']->value['_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['acl']->value['name'];?>
+</option>
+                    <?php } ?>
+                </optgroup>
+            <?php } ?>
+        </select>
+    </div>
+    <div class="col-lg-2">
+        <div class="text-center fx-btn" >
+            <a href="javascript:void(0)" class="btn btn-sm btn-default">添加</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default">前移</a>
+            <a style="margin-bottom: 0;" href="javascript:void(0)" class="btn btn-sm btn-default">后移</a>
+        </div>
+    </div>
+    <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="action-list-select">
+            <!-- <option>1</option> -->
+        </select>
+    </div>
+    <div class="col-lg-2">
+        <div class="text-center fx-btn">
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" style="margin-top: 60px;">添加</a>
+        </div>
+    </div>
+    <div class="col-lg-2" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="action-list-rest">
+            <?php  $_smarty_tpl->tpl_vars['re'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['re']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['restList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['re']->key => $_smarty_tpl->tpl_vars['re']->value){
+$_smarty_tpl->tpl_vars['re']->_loop = true;
+?>
+            <option value="<?php echo $_smarty_tpl->tpl_vars['re']->value['_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['re']->value['name'];?>
+【<?php echo $_smarty_tpl->tpl_vars['re']->value['singletime'];?>
+ s】</option>
+            <?php } ?>
+        </select>
+    </div>
+</div>
+        
 
 
 
@@ -341,79 +399,12 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
         var publish = {
             init: function(){
                 this.getDom();
-                this.postData();
+
             },
             getDom: function(){
-                this.subBtn = $('#sub');
-                this.pt = $('#platform');
-                this.vname = $('#vname');
-                this.no = $('#vno');
-                this.desc = $('#description');
-                this.url = $('#downloadurl');
-                this.form = $('form[name=version]');
+                
             },
-            checkParams: function(){
-                var me = this;
-
-                var pt = me.pt.val();
-
-                if(pt != 0 && pt != 1){
-                    alert('请选择发布平台.');
-                    return false;
-                }
-
-                var name = $.trim(me.vname.val());
-                if(!name){
-                    alert('请输入版本名.');
-                    return false;
-                }
-
-                var no = parseInt($.trim(me.no.val()));
-                if(!no || typeof(no) == 'undefiend'){
-                    alert('请输入正确的版本号.');
-                    return false;
-                }
-
-                var desc = $.trim(me.desc.val());
-                if(!name){
-                    alert('请输入版本更新说明.');
-                    return false;
-                }
-
-                var url = $.trim(me.url.val());
-                if(!url || !url.match(/(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/g)){
-                    alert('请输入合法的URL.');
-                    return false;
-                }
-            },
-            postData: function(){
-                var me = this;
-
-                me.subBtn.unbind().bind('click', function(){
-                    var res = me.checkParams();
-                    if(res === false){
-                        return false;
-                    }
-
-                    var curentNo = $(this).attr('data-'+me.pt.val());
-                    if(curentNo >= $.trim(me.no.val())){
-                        alert('请检查您输入的版本号是否低于当前版本号.');
-                        return false;
-                    }
-
-                    var formdata = me.form.serialize();
-                    $.post('/version/publish', formdata, function(json){
-                        if(json.code != -1){
-                            window.location = '/version/index';
-                        }
-                        else{
-                            alert('发布失败.');
-                            return false;
-                        }
-                    });
-                })
-            }
-
+            
         };
 
         publish.init();
