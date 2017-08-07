@@ -1,7 +1,22 @@
 {%extends file="common/page/layout.tpl"%} 
 {%block name="title"%}天天向尚管理后台{%/block%}
 {%block name="bread"%}锻炼内容管理 / 发布新方案{%/block%}
-
+{%block name="css"%}
+<style type="text/css">
+    .fx-btn{
+        border: 1px solid #ccc;
+        padding: 165px 20px 0 20px;
+        height: 532px;
+    }
+    .fx-btn a{
+        display: block;
+        margin-bottom: 10px;
+    }
+    #action-list,#action-list-select,#action-list-rest{
+        height: 500px;
+    }
+</style>
+{%/block%}
 {%block name="content"%}
 
 <div class="row">
@@ -45,31 +60,51 @@
             <button type="button" class="btn btn-info">检索</button>
         </form>
     </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class=""></div>
+</div>
+
+
+<div class="row" style="margin-top: 20px;padding: 15px;">
+    <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="action-list">
+            {%foreach from=$actionList item=ac key=idx%}
+                <optgroup label="{%$type[$idx]%}">
+                    {%foreach from=$ac item=acl%}
+                    <option value="{%$acl._id%}">{%$acl.name%}</option>
+                    {%/foreach%}
+                </optgroup>
+            {%/foreach%}
+        </select>
+    </div>
+    <div class="col-lg-2">
+        <div class="text-center fx-btn" >
+            <a href="javascript:void(0)" class="btn btn-sm btn-default">添加</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default">前移</a>
+            <a style="margin-bottom: 0;" href="javascript:void(0)" class="btn btn-sm btn-default">后移</a>
         </div>
     </div>
-    
+    <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="action-list-select">
+            <!-- <option>1</option> -->
+        </select>
+    </div>
+    <div class="col-lg-2">
+        <div class="text-center fx-btn">
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" style="margin-top: 60px;">添加</a>
+        </div>
+    </div>
+    <div class="col-lg-2" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="action-list-rest">
+            {%foreach from=$restList item=re%}
+            <option value="{%$re._id%}">{%$re.name%}【{%$re.singletime%} s】</option>
+            {%/foreach%}
+        </select>
+    </div>
 </div>
+        
 
 {%/block%}
 
 {%block name="js"%}
-<script type="text/javascript">
-    !(function(){
-        var publish = {
-            init: function(){
-                this.getDom();
-
-            },
-            getDom: function(){
-                
-            },
-            
-        };
-
-        publish.init();
-    })()
-</script>
+<script type="text/javascript" src="/static/sport/js/project.js"></script>
 {%/block%}

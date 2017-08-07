@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-07 09:24:15
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-07 13:56:39
          compiled from "/var/www/admin/admin/application/views/template/project/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6158797645987c13fdd8c45-29749264%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1866143365988011710b880-93541802%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '56bf414123df06e3f174b7b0a62fd3d4913ea192' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/project/add.tpl',
-      1 => 1501841023,
+      1 => 1502085398,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '6158797645987c13fdd8c45-29749264',
+  'nocache_hash' => '1866143365988011710b880-93541802',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5987c13fe0d213_81554535',
+  'unifunc' => 'content_59880117163456_33574810',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5987c13fe0d213_81554535')) {function content_5987c13fe0d213_81554535($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59880117163456_33574810')) {function content_59880117163456_33574810($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -96,6 +96,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<style type="text/css">
+    .fx-btn{
+        border: 1px solid #ccc;
+        padding: 165px 20px 0 20px;
+        height: 532px;
+    }
+    .fx-btn a{
+        display: block;
+        margin-bottom: 10px;
+    }
+    #action-list,#action-list-select,#action-list-rest{
+        height: 500px;
+    }
+</style>
+
 </head>
 
 <body>
@@ -287,13 +302,68 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             <button type="button" class="btn btn-info">检索</button>
         </form>
     </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class=""></div>
+</div>
+
+
+<div class="row" style="margin-top: 20px;padding: 15px;">
+    <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="action-list">
+            <?php  $_smarty_tpl->tpl_vars['ac'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ac']->_loop = false;
+ $_smarty_tpl->tpl_vars['idx'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['actionList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ac']->key => $_smarty_tpl->tpl_vars['ac']->value){
+$_smarty_tpl->tpl_vars['ac']->_loop = true;
+ $_smarty_tpl->tpl_vars['idx']->value = $_smarty_tpl->tpl_vars['ac']->key;
+?>
+                <optgroup label="<?php echo $_smarty_tpl->tpl_vars['type']->value[$_smarty_tpl->tpl_vars['idx']->value];?>
+">
+                    <?php  $_smarty_tpl->tpl_vars['acl'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['acl']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['ac']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['acl']->key => $_smarty_tpl->tpl_vars['acl']->value){
+$_smarty_tpl->tpl_vars['acl']->_loop = true;
+?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['acl']->value['_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['acl']->value['name'];?>
+</option>
+                    <?php } ?>
+                </optgroup>
+            <?php } ?>
+        </select>
+    </div>
+    <div class="col-lg-2">
+        <div class="text-center fx-btn" >
+            <a href="javascript:void(0)" class="btn btn-sm btn-default">添加</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default">前移</a>
+            <a style="margin-bottom: 0;" href="javascript:void(0)" class="btn btn-sm btn-default">后移</a>
         </div>
     </div>
-    
+    <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="action-list-select">
+            <!-- <option>1</option> -->
+        </select>
+    </div>
+    <div class="col-lg-2">
+        <div class="text-center fx-btn">
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" style="margin-top: 60px;">添加</a>
+        </div>
+    </div>
+    <div class="col-lg-2" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="action-list-rest">
+            <?php  $_smarty_tpl->tpl_vars['re'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['re']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['restList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['re']->key => $_smarty_tpl->tpl_vars['re']->value){
+$_smarty_tpl->tpl_vars['re']->_loop = true;
+?>
+            <option value="<?php echo $_smarty_tpl->tpl_vars['re']->value['_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['re']->value['name'];?>
+【<?php echo $_smarty_tpl->tpl_vars['re']->value['singletime'];?>
+ s】</option>
+            <?php } ?>
+        </select>
+    </div>
 </div>
+        
 
 
 
