@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 16:12:10
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-05 11:46:23
          compiled from "/var/www/admin/admin/application/views/template/sport/action.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9194136355982dada1b0ef0-43319384%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:78765060959853f8f1d6e97-13736276%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501741066,
+      1 => 1501753746,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9194136355982dada1b0ef0-43319384',
+  'nocache_hash' => '78765060959853f8f1d6e97-13736276',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5982dada201bd4_09296500',
+  'unifunc' => 'content_59853f8f229208_21058881',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5982dada201bd4_09296500')) {function content_5982dada201bd4_09296500($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59853f8f229208_21058881')) {function content_59853f8f229208_21058881($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -183,6 +183,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/user/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
                             </li>
+                           <!--  <li>
+                                <a href="/user/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
+                            </li> -->
                             <li>
                                 <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
                             </li>

@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 17:45:28
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-07 09:21:16
          compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:14270286615982f0b8776d57-15625490%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 17:47:45
-         compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3502137905982f1415ec835-29961817%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
+<?php /*%%SmartyHeaderCode:14023005675987c08cd300b4-20478611%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '22af699201fe630f2cde682de73edde7b4b3dfad' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/homework.tpl',
-<<<<<<< HEAD
-      1 => 1501062598,
-=======
-      1 => 1501752719,
->>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
+      1 => 1501753746,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1501741066,
+      1 => 1501753746,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14270286615982f0b8776d57-15625490',
-=======
-      1 => 1501740693,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '3502137905982f1415ec835-29961817',
->>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
+  'nocache_hash' => '14023005675987c08cd300b4-20478611',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5982f0b87cc746_25360373',
+  'unifunc' => 'content_5987c08cd87940_00636502',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5982f0b87cc746_25360373')) {function content_5982f0b87cc746_25360373($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
-=======
-  'unifunc' => 'content_5982f1416fb343_42236219',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5982f1416fb343_42236219')) {function content_5982f1416fb343_42236219($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
->>>>>>> 1b12084acf978bdb92bddfdf9ce581b8c5261e2c
+<?php if ($_valid && !is_callable('content_5987c08cd87940_00636502')) {function content_5987c08cd87940_00636502($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
 if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
@@ -191,6 +167,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/user/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
                             </li>
+                           <!--  <li>
+                                <a href="/user/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
+                            </li> -->
                             <li>
                                 <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
                             </li>
