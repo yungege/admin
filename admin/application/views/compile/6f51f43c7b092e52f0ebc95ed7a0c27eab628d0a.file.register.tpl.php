@@ -1,25 +1,29 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-08 10:31:49
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-08 13:22:15
          compiled from "/var/www/aa/admin/admin/application/views/template/user/register.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:791725489598922953b0bd1-60818117%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:68434171659894a87ab87f2-69785752%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6f51f43c7b092e52f0ebc95ed7a0c27eab628d0a' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/user/register.tpl',
-      1 => 1502155379,
+      1 => 1502168637,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '791725489598922953b0bd1-60818117',
+  'nocache_hash' => '68434171659894a87ab87f2-69785752',
   'function' => 
   array (
   ),
+  'variables' => 
+  array (
+    'mod' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_598922953c8cf6_64612545',
+  'unifunc' => 'content_59894a87ada307_15972562',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598922953c8cf6_64612545')) {function content_598922953c8cf6_64612545($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59894a87ada307_15972562')) {function content_59894a87ada307_15972562($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -45,11 +49,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <body class="hold-transition login-page" style="overflow-y: hidden;">
 <div class="login-box" style="margin: 15% auto;">
   <div class="login-box-body">
-    <p class="login-box-msg" style="padding: 10px 20px 3px 20px;">天天向尚管理后台</p>
+    <p class="login-box-msg" style="padding: 10px 20px 3px 20px;">请设置账户密码</p>
     <p style="text-align: center;font-size: 12px;height: 16px;line-height: 22px;text-decoration: underline;" id="warm"></p>
     <form method="post" name="register">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Mobile" name="mob">
+        <input type="hidden" class="form-control" placeholder="Mobile" name="mob" value="<?php echo $_smarty_tpl->tpl_vars['mod']->value;?>
+">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
@@ -64,13 +69,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              <a href="/user/login">登录界面</a>
+
             </label>
           </div>
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="button" id="sub" class="btn btn-primary btn-block btn-flat">Register</button>
+          <button type="button" id="sub" class="btn btn-primary btn-block btn-flat">Confirm</button>
         </div>
         <!-- /.col -->
       </div>
@@ -98,6 +103,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <!-- Bootstrap 3.3.6 -->
 <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+
   var login = {
     init: function(){
         this.getDom();
@@ -158,6 +164,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         me.subBtn.unbind().bind('click',function(){
             var mobRes = me.checkMobile();
             var pwdRes = me.checkPwd();
+            var data = $('form[name=register]').serialize();
             if(mobRes === false || pwdRes === false){
                 return false;
             }

@@ -24,11 +24,11 @@
 <body class="hold-transition login-page" style="overflow-y: hidden;">
 <div class="login-box" style="margin: 15% auto;">
   <div class="login-box-body">
-    <p class="login-box-msg" style="padding: 10px 20px 3px 20px;">天天向尚管理后台</p>
+    <p class="login-box-msg" style="padding: 10px 20px 3px 20px;">请设置账户密码</p>
     <p style="text-align: center;font-size: 12px;height: 16px;line-height: 22px;text-decoration: underline;" id="warm"></p>
     <form method="post" name="register">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Mobile" name="mob">
+        <input type="hidden" class="form-control" placeholder="Mobile" name="mob" value="{%$mod%}">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
@@ -43,13 +43,13 @@
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              <a href="/user/login">登录界面</a>
+
             </label>
           </div>
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="button" id="sub" class="btn btn-primary btn-block btn-flat">Register</button>
+          <button type="button" id="sub" class="btn btn-primary btn-block btn-flat">Confirm</button>
         </div>
         <!-- /.col -->
       </div>
@@ -77,6 +77,7 @@
 <!-- Bootstrap 3.3.6 -->
 <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+
   var login = {
     init: function(){
         this.getDom();
@@ -137,6 +138,7 @@
         me.subBtn.unbind().bind('click',function(){
             var mobRes = me.checkMobile();
             var pwdRes = me.checkPwd();
+            var data = $('form[name=register]').serialize();
             if(mobRes === false || pwdRes === false){
                 return false;
             }
