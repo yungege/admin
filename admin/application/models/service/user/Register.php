@@ -25,7 +25,6 @@ class Service_User_RegisterModel extends BasePageService {
        
         $req=$req['get'];
         return $this->resData = $req;
-      
 	}
 
 
