@@ -8,7 +8,7 @@ class Service_User_RegisterModel extends BasePageService {
 
     private static $admin = [
         13522213145,
-        13161486949,
+        13161486949
     ];
 
     public function __construct() {
@@ -24,9 +24,9 @@ class Service_User_RegisterModel extends BasePageService {
     protected function __execute($req) {
        
         $req = $req['post'];
-
+        $req['post'] = 1;
         $res = $this->doRegister($req);
-
+       
         if($res === 1){
             $this->errNo = -1;
             $this->errMsg = '手机号不符合规则';
@@ -43,6 +43,11 @@ class Service_User_RegisterModel extends BasePageService {
             return false;
         }
         if($res === 4){
+            $this->errNo = -1;
+            $this->errMsg = '该手机号无权限注册';
+            return false;
+        }
+        if($res === 5){
             $this->errNo = -1;
             $this->errMsg = '该用户已经注册过';
             return false;
@@ -66,11 +71,15 @@ class Service_User_RegisterModel extends BasePageService {
             return 3;
         }
 
+        if(!in_array($req['mob'],self::$admin)){
+            return 4;
+        }
+
         $req['pwd'] = md5(substr($req['mob'], 1,8) . $req['pwd']);
         $userInfo = $this->userModel->queryOne(['mobileno' => (int)$req['mob']]);
 
         if(!empty($userInfo['password'])){
-            return 4;
+            return 5;
         }
 
         $set['password'] = $req['pwd'];
