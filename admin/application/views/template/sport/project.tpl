@@ -17,14 +17,14 @@
                         <th class="text-center">封面图片</th>
                         <th class="text-center">适用性别</th>
                         <th class="text-center">适用年级</th>
-                        <th class="text-center" style="width:300px;">描述</th>
+                        <th class="text-center" width="300">描述</th>
                         <th class="text-center">创建时间</th>
                         <th class="text-center">操作</th>
                     </tr>
                 </thead>
                 <tbody>
                     {%foreach from=$list item=row%}
-                    <tr>
+                    <tr data-id="{%$row._id%}">
                         <td>{%$row.name%}</td>
                         <td><img src="{%$row.coverimg%}"></td>
                         <td>{%$row.gender%}</td>
@@ -35,7 +35,7 @@
                                 {%/foreach%}
                             {%/if%}
                         </td>
-                        <td>{%$row.desc%}</td>
+                        <td width="400">{%$row.desc%}</td>
                         <td>
                             {%$row.ctime|date_format:"%Y-%m-%d"%}<br/>
                             {%$row.ctime|date_format:"%H:%M:%S"%}

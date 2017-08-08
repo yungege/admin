@@ -1,23 +1,41 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 14:12:13
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-07 09:21:19
          compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:338408755982bebdba8531-99322354%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2227857825987c08f880266-71312001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-07 13:00:23
+         compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:17269214295987f3e7af1c61-04637405%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 065490ded8ff836c8dc101fecceae9414c1b51e2
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ad43ff6ec9a4519069b557f1cbae4ad86c5fbbf9' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/project.tpl',
-      1 => 1501062895,
+<<<<<<< HEAD
+      1 => 1501753746,
+=======
+      1 => 1501752706,
+>>>>>>> 065490ded8ff836c8dc101fecceae9414c1b51e2
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501740693,
+<<<<<<< HEAD
+      1 => 1501753746,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '338408755982bebdba8531-99322354',
+  'nocache_hash' => '2227857825987c08f880266-71312001',
+=======
+      1 => 1501753699,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '17269214295987f3e7af1c61-04637405',
+>>>>>>> 065490ded8ff836c8dc101fecceae9414c1b51e2
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5982bebdc4bfa8_94227899',
+<<<<<<< HEAD
+  'unifunc' => 'content_5987c08f8cf231_02151850',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5982bebdc4bfa8_94227899')) {function content_5982bebdc4bfa8_94227899($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5987c08f8cf231_02151850')) {function content_5987c08f8cf231_02151850($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_5987f3e7b32424_89003485',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5987f3e7b32424_89003485')) {function content_5987f3e7b32424_89003485($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 065490ded8ff836c8dc101fecceae9414c1b51e2
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -166,6 +190,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/user/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
                             </li>
+                           <!--  <li>
+                                <a href="/user/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
+                            </li> -->
                             <li>
                                 <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
                             </li>
@@ -257,7 +284,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <th class="text-center">封面图片</th>
                         <th class="text-center">适用性别</th>
                         <th class="text-center">适用年级</th>
-                        <th class="text-center" style="width:300px;">描述</th>
+                        <th class="text-center" width="300">描述</th>
                         <th class="text-center">创建时间</th>
                         <th class="text-center">操作</th>
                     </tr>
@@ -268,7 +295,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                    <tr>
+                    <tr data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+">
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
 </td>
                         <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['coverimg'];?>
@@ -287,7 +315,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                                 <?php } ?>
                             <?php }?>
                         </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
+                        <td width="400"><?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
 </td>
                         <td>
                             <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['ctime'],"%Y-%m-%d");?>

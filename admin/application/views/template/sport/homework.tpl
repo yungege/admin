@@ -33,7 +33,7 @@
                 </thead>
                 <tbody>
                     {%foreach from=$list item=row%}
-                    <tr>
+                    <tr data-id="{%$row._id%}">
                         <td>{%$row.name%}</td>
                         <td>{%if $row.type eq 1%}<span class="label label-warning">翻</span>{%else%}<span class="label label-primary">素</span>{%/if%}</td>
                         <td><img src="{%$row.project[0].coverimg%}" width="100"></td>
