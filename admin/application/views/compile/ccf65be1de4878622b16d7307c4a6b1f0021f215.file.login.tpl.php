@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 14:11:53
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-08 09:25:09
          compiled from "/var/www/aa/admin/admin/application/views/template/user/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18674100975982bea98685b7-31808283%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:543747972598912f53e1ca1-73559990%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ccf65be1de4878622b16d7307c4a6b1f0021f215' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/user/login.tpl',
-      1 => 1501639058,
+      1 => 1502152960,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18674100975982bea98685b7-31808283',
+  'nocache_hash' => '543747972598912f53e1ca1-73559990',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5982bea98979c5_56167374',
+  'unifunc' => 'content_598912f5404753_53640389',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5982bea98979c5_56167374')) {function content_5982bea98979c5_56167374($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_598912f5404753_53640389')) {function content_598912f5404753_53640389($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -60,7 +60,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              Auto login in month
+              Auto login in month</br>
+              <a href="/user/register">注册账户</a>
             </label>
           </div>
         </div>

@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 13:56:07
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-08 04:05:07
          compiled from "/var/www/aa/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2181874525982baf77a2c55-35539395%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9582171375988c7f37a93e1-61651912%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e3691fc695ab4516daaf3ac826d115204f480bee' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/user/student.tpl',
-      1 => 1501668928,
+      1 => 1501742111,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501726868,
+      1 => 1501742111,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2181874525982baf77a2c55-35539395',
+  'nocache_hash' => '9582171375988c7f37a93e1-61651912',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5982baf7887788_48740047',
+  'unifunc' => 'content_5988c7f393a2a9_45688078',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5982baf7887788_48740047')) {function content_5982baf7887788_48740047($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5988c7f393a2a9_45688078')) {function content_5988c7f393a2a9_45688078($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -170,7 +170,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/user/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
                             </li> -->
                             <li>
-                                <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">学校管理</a>
+                                <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
                             </li>
                         </ul>
                     </li>
@@ -369,13 +369,12 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <td>姓名：<?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
 <br/>昵称：<?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
 </td>
-                        <td><a href="http://192.168.1.106:8080/user/school?schoolname=<?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolname'];?>
+                        <td><a href="/user/school?schoolid=<?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolid'];?>
 "><?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolname'];?>
 </a></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['grade'];?>
 </td>
-                        <td><a href="http://192.168.1.106:8080/user/school?classname=<?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classname'];?>
-&schoolname=<?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolname'];?>
+                        <td><a href="/user/class?classid=<?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classid'];?>
 "><?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classname'];?>
 </a></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['clientsource'];?>
@@ -406,19 +405,20 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <td>
                             <a href="/sport/ugc?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " class="btn btn-default btn-xs">UGC</a>
+                            <a data-uid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补交UGC</a>
                         </td>
                     </tr>
                     <?php } ?>
                 </tbody>
             </table>
         </div>
-        <?php if ($_smarty_tpl->tpl_vars['pageCount']->value>1){?>
-        <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="<?php if (!empty($_GET['pn'])){?><?php echo $_GET['pn'];?>
-<?php }else{ ?>1<?php }?>" data-query="<?php echo $_smarty_tpl->tpl_vars['query']->value;?>
-"></ul>
+        
+        <div class="text-center tt-page">
+            <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+
         </div>
-        <?php }?>
+        
     </div>
 </div>
 
@@ -451,35 +451,52 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
 <script type="text/javascript">
-    var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
-;
-    var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
-;
-    var urlPage = parseInt($("#page").data('url-pn'));
-    var queryStr = $("#page").data('query');
-    if(isNaN(urlPage)){
-        urlPage = 0;
-    }
+!(function(){
+    var student = {
 
-    $('#page').twbsPagination({
-        totalPages: pageCount,
-        visiblePages: 7,
-        version: '1.1',
-        first: '首页',
-        prev: '上一页',
-        next: '下一页',
-        last: '尾页',
-        startPage: currentPage,
-        onPageClick: function (event, page) {
-            if(urlPage == page)
-                return;
+        init: function (){
+            this.getDom();
+            this.addUgc();
+        },
 
-            window.location = "?" + queryStr + '&pn=' + page;
+        getDom: function(){
+            this.ugcBtn = $('.addUgc');
+        },
+
+        addUgc: function(){
+            var me = this,
+                aj = null;
+
+            me.ugcBtn.unbind().bind('click', function(){
+                var uid = $.trim($(this).data('uid'));
+                aj = $.ajax({
+                    type: 'GET',
+                    dataType: 'json',
+                    url: '/user/addUgc?uid=' + uid,
+                    success: function(json){
+                        if(json.code == 200){
+                            window.location = "/";
+                        }
+                        else{
+                            alert(json.msg);
+                            return false;
+                        }
+                    },
+                    beforeSend: function () {
+                        if(aj != null) {
+                            aj.abort();
+                        }
+                    },
+                });
+            })
         }
-    });
+    };
+
+    student.init();
+})()
 </script>
+
 
 </body>
 </html><?php }} ?>

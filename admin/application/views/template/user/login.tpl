@@ -39,7 +39,8 @@
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              Auto login in month
+              Auto login in month</br>
+              <a href="/user/register">注册账户</a>
             </label>
           </div>
         </div>

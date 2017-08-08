@@ -3,6 +3,8 @@ class UserController extends Yaf_Controller_Abstract{
 	public $actions = array(
         'login'     => 'actions/user/Login.php',
         'dologin'   => 'actions/user/Dologin.php',
+        'register'  => 'actions/user/Register.php',
+        'doregister'=> 'actions/user/Doregister.php',
         'logout'    => 'actions/user/Logout.php',
         'student'   => 'actions/user/Student.php',
         'class'     => 'actions/user/Class.php',
