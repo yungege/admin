@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-11 10:48:46
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-11 18:21:49
          compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:454976433598d1b0e7668c4-41607211%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1806613711598d853d767cd1-42247238%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1d8e04a89d68bf3e9905973d00de2e54d91741e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/project/addsku.tpl',
-      1 => 1502419045,
+      1 => 1502445586,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501753699,
+      1 => 1502435993,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '454976433598d1b0e7668c4-41607211',
+  'nocache_hash' => '1806613711598d853d767cd1-42247238',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_598d1b0e7ac089_63974586',
+  'unifunc' => 'content_598d853d7ab5e7_19714016',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598d1b0e7ac089_63974586')) {function content_598d1b0e7ac089_63974586($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_598d853d7ab5e7_19714016')) {function content_598d853d7ab5e7_19714016($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -55,6 +55,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <!-- Custom Fonts -->
     <link href="/static/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/static/widget/alertBox/alert.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -94,6 +96,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             border: 1px solid #333;
             background: #fff;
         }
+        /*alert 插件*/
+        .alert-btn-p{
+            /*width: 100%!important;*/
+            margin-bottom: 0!important;
+        }
+        .alert-container{
+            width: 400px!important;
+        }
     </style>
     
 <style type="text/css">
@@ -113,6 +123,37 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         border-left: 5px solid #5bc0de;
         padding-left: 15px;
         font-size: 20px;
+    }
+    .fix-int-wrmp{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background-color: rgba(0,0,0,0.4);
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .fix-int{
+        width: 400px;
+        height: 160px;
+        background-color: white;
+        border: 1px solid #333;
+        padding: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -80px;
+        margin-left: -200px;
+    }
+    .btn-success{
+        margin-right: 10px;
+    }
+    #actionNameSpan{
+        padding-left: 15px;
+        font-size: 14px;
+        color: #565656;
+        color: #0c9;
     }
 </style>
 
@@ -352,10 +393,10 @@ $_smarty_tpl->tpl_vars['acl']->_loop = true;
     </div>
     <div class="col-lg-2">
         <div class="text-center fx-btn" >
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">添加</a>
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">前移</a>
-            <a style="margin-bottom: 0;" href="javascript:void(0)" class="btn btn-sm btn-default">后移</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" id="addBtn">添加 >></a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" id="delBtn">删除 <<</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" id="upBtn">前移</a>
+            <a style="margin-bottom: 0;" href="javascript:void(0)" id="downBtn" class="btn btn-sm btn-default">后移</a>
         </div>
     </div>
     <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
@@ -365,10 +406,7 @@ $_smarty_tpl->tpl_vars['acl']->_loop = true;
     </div>
     <div class="col-lg-2">
         <div class="text-center fx-btn">
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">添加</a>
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">前移</a>
-            <a style="margin-bottom: 0;" href="javascript:void(0)" class="btn btn-sm btn-default">后移</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" id="rest-add-btn"><< 添加</a>
         </div>
     </div>
     <div class="col-lg-2" style="border: 1px solid #ccc;padding: 15px;">
@@ -392,7 +430,7 @@ $_smarty_tpl->tpl_vars['re']->_loop = true;
         <form class="form-inline" name="sku">
             <div class="form-group">
                 <label for="difficulty">难度：</label>
-                <select class="form-control">
+                <select class="form-control" name="difficulty">
                     <?php if ($_smarty_tpl->tpl_vars['project']->value['has_level']==-1){?>
                     <option value="-1">无难度级别</option>
                     <?php }else{ ?>
@@ -415,7 +453,16 @@ $_smarty_tpl->tpl_vars['darr']->_loop = true;
         </form>
     </div>
 </div>
-        
+
+<div class="fix-int-wrmp">
+    <div class="fix-int">
+        <h4>请输入循环次数<span id="actionNameSpan"></span></h4>
+        <input type="text" id="actionNo" class="form-control">
+        <br/>
+        <button class="btn btn-default pull-right" type="button" id="canNo">&emsp;取&emsp;消&emsp;</button>
+        <button class="btn btn-success pull-right" type="button" id="subNo">&emsp;确&emsp;定&emsp;</button>
+    </div>
+</div>  
 
 
 
@@ -432,6 +479,7 @@ $_smarty_tpl->tpl_vars['darr']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/widget/alertBox/alert.js"></script>
 
     <script type="text/javascript">
         !(function(){
@@ -446,7 +494,7 @@ $_smarty_tpl->tpl_vars['darr']->_loop = true;
     </script>
 
     
-<script type="text/javascript" src="/static/sport/js/project.js"></script>
+<script type="text/javascript" src="/static/project/js/addSku.js"></script>
 
 </body>
 </html><?php }} ?>

@@ -20,6 +20,37 @@
         padding-left: 15px;
         font-size: 20px;
     }
+    .fix-int-wrmp{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background-color: rgba(0,0,0,0.4);
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .fix-int{
+        width: 400px;
+        height: 160px;
+        background-color: white;
+        border: 1px solid #333;
+        padding: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -80px;
+        margin-left: -200px;
+    }
+    .btn-success{
+        margin-right: 10px;
+    }
+    #actionNameSpan{
+        padding-left: 15px;
+        font-size: 14px;
+        color: #565656;
+        color: #0c9;
+    }
 </style>
 {%/block%}
 {%block name="content"%}
@@ -95,10 +126,10 @@
     </div>
     <div class="col-lg-2">
         <div class="text-center fx-btn" >
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">添加</a>
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">前移</a>
-            <a style="margin-bottom: 0;" href="javascript:void(0)" class="btn btn-sm btn-default">后移</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" id="addBtn">添加 >></a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" id="delBtn">删除 <<</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" id="upBtn">前移</a>
+            <a style="margin-bottom: 0;" href="javascript:void(0)" id="downBtn" class="btn btn-sm btn-default">后移</a>
         </div>
     </div>
     <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
@@ -108,10 +139,7 @@
     </div>
     <div class="col-lg-2">
         <div class="text-center fx-btn">
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">添加</a>
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
-            <a href="javascript:void(0)" class="btn btn-sm btn-default">前移</a>
-            <a style="margin-bottom: 0;" href="javascript:void(0)" class="btn btn-sm btn-default">后移</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" id="rest-add-btn"><< 添加</a>
         </div>
     </div>
     <div class="col-lg-2" style="border: 1px solid #ccc;padding: 15px;">
@@ -128,7 +156,7 @@
         <form class="form-inline" name="sku">
             <div class="form-group">
                 <label for="difficulty">难度：</label>
-                <select class="form-control">
+                <select class="form-control" name="difficulty">
                     {%if $project.has_level eq -1%}
                     <option value="-1">无难度级别</option>
                     {%else%}
@@ -144,10 +172,19 @@
         </form>
     </div>
 </div>
-        
+
+<div class="fix-int-wrmp">
+    <div class="fix-int">
+        <h4>请输入循环次数<span id="actionNameSpan"></span></h4>
+        <input type="text" id="actionNo" class="form-control">
+        <br/>
+        <button class="btn btn-default pull-right" type="button" id="canNo">&emsp;取&emsp;消&emsp;</button>
+        <button class="btn btn-success pull-right" type="button" id="subNo">&emsp;确&emsp;定&emsp;</button>
+    </div>
+</div>  
 
 {%/block%}
 
 {%block name="js"%}
-<script type="text/javascript" src="/static/sport/js/project.js"></script>
+<script type="text/javascript" src="/static/project/js/addSku.js"></script>
 {%/block%}
