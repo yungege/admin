@@ -24,6 +24,11 @@ return [
         '/sport/p/(\w+)\.html',
         ['module' => 'index', 'controller' => 'sport', 'action' => 'pro'],
     ],
+    // 添加项目内容
+    'projectskuadd' => [
+        '/project/sku/(\w+)\.html',
+        ['module' => 'index', 'controller' => 'project', 'action' => 'sku'],
+    ],
 
 	
 ];

@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-08-09 13:34:16
          compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1524850994598a9ed8682e84-59244216%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-11 09:55:29
+         compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1125574469598d0e91ba3e08-21661301%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> f52ff1ab5a41698e6692f48297365872976601e9
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ad43ff6ec9a4519069b557f1cbae4ad86c5fbbf9' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/project.tpl',
+<<<<<<< HEAD
       1 => 1501753746,
+=======
+      1 => 1502347210,
+>>>>>>> f52ff1ab5a41698e6692f48297365872976601e9
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1501753746,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '1524850994598a9ed8682e84-59244216',
+=======
+      1 => 1501753699,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1125574469598d0e91ba3e08-21661301',
+>>>>>>> f52ff1ab5a41698e6692f48297365872976601e9
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_598a9ed86d09d8_43556074',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_598a9ed86d09d8_43556074')) {function content_598a9ed86d09d8_43556074($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_598d0e91becbf8_70996199',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_598d0e91becbf8_70996199')) {function content_598d0e91becbf8_70996199($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> f52ff1ab5a41698e6692f48297365872976601e9
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -260,9 +284,10 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <th class="text-center">封面图片</th>
                         <th class="text-center">适用性别</th>
                         <th class="text-center">适用年级</th>
+                        <th class="text-center">锻炼内容</th>
                         <th class="text-center" width="300">描述</th>
                         <th class="text-center">创建时间</th>
-                        <th class="text-center">操作</th>
+                        <th class="">操作</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -291,6 +316,30 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                                 <?php } ?>
                             <?php }?>
                         </td>
+                        <td>
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['skus']){?>
+                                <?php  $_smarty_tpl->tpl_vars['sk'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['sk']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['row']->value['skus']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['sk']->key => $_smarty_tpl->tpl_vars['sk']->value){
+$_smarty_tpl->tpl_vars['sk']->_loop = true;
+?>
+                                    <?php if ($_smarty_tpl->tpl_vars['sk']->value['difficulty']==-1){?>
+                                        难度级别：无<br/>
+                                    <?php }elseif($_smarty_tpl->tpl_vars['sk']->value['difficulty']==0){?>
+                                        难度级别：低<br/>
+                                    <?php }elseif($_smarty_tpl->tpl_vars['sk']->value['difficulty']==1){?>
+                                        难度级别：中<br/>
+                                    <?php }elseif($_smarty_tpl->tpl_vars['sk']->value['difficulty']==2){?>
+                                        难度级别：高<br/>
+                                    <?php }else{ ?>
+                                        难度级别：未知
+                                    <?php }?>
+                                <?php } ?>
+                            <?php }else{ ?>
+                                无锻炼内容，<a href="/project/sku/<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+.html">立即添加</a>?
+                            <?php }?>
+                        </td>
                         <td width="400"><?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
 </td>
                         <td>
@@ -299,9 +348,13 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                             <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['ctime'],"%H:%M:%S");?>
 
                         </td>
-                        <td>
+                        <td class="text-left">
                             <a href="/sport/p/<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-.html" class="btn btn-sm btn btn-primary" target="__blank">查 看</a>
+.html" class="btn btn-sm btn btn-primary">查 看</a>
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['add']==1){?>
+                            <a href="/project/sku/<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+.html" class="btn btn-sm btn btn-info">添 加</a>
+                            <?php }?>
                             <!-- <button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 .html" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
                         </td>

@@ -1,12 +1,12 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-08 13:30:06
-         compiled from "/var/www/aa/admin/admin/application/views/template/sport/action.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:153843709959894c5e9a2bc6-45962453%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-08 13:23:57
+         compiled from "/var/www/aa/admin/admin/application/views/template/action/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:45521380959894aed6d7760-41793442%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '1c85c9fb5711438fdb964219ca18282694501f6d' => 
+    'a8a4eb868f3bb50a549f662f7b147e8a3f400e46' => 
     array (
-      0 => '/var/www/aa/admin/admin/application/views/template/sport/action.tpl',
+      0 => '/var/www/aa/admin/admin/application/views/template/action/add.tpl',
       1 => 1501639058,
       2 => 'file',
     ),
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '153843709959894c5e9a2bc6-45962453',
+  'nocache_hash' => '45521380959894aed6d7760-41793442',
   'function' => 
   array (
   ),
@@ -29,10 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59894c5ea17324_66709618',
+  'unifunc' => 'content_59894aed720ea2_60284361',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59894c5ea17324_66709618')) {function content_59894c5ea17324_66709618($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
-?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59894aed720ea2_60284361')) {function content_59894aed720ea2_60284361($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -98,24 +97,35 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
-.video{
-    cursor: pointer;
-    border: 1px solid #ccc;
-    padding: 5px 15px 5px 15px;
-    border-radius: 3px;
-    display: inline-block;
-    width: 60px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-.video:hover{
-    border-color: #0c9;
-    background-color: #0c9;
-    color: white;
-}
+    .fix-per{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgba(0,0,0,0.4);
+        z-index: 9999;
+        display: none;
+    }
+    .fix-per .fix-cont{
+        width: 400px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -200px;
+        margin-top: -100px;
+        font-size: 100px;
+        color: orange;
+    }
+    .form-wrap{
+        border: 1px solid #ccc;
+        padding: 8px 15px 15px 15px;
+        border-radius: 5px;
+    }
 </style>
 
 </head>
@@ -259,7 +269,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / 动作管理 <a href="/action/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">上传新动作</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 锻炼内容管理 / 上传新动作
                             </li>
                         </ol>
                     </div>
@@ -268,108 +278,112 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                 <!-- 用户数据 -->
                 
 <div class="row">
-    <div class="col-lg-12">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped text-center">
-                <thead>
-                    <tr>
-                        <th class="text-center">动作名称</th>
-                        <th class="text-center">动作类型</th>
-                        <th class="text-center">封面图片</th>
-                        <th class="text-center">视频文件</th>
-                        <th class="text-center">文件大小</th>
-                        <th class="text-center">耗时（单次）</th>
-                        <th class="text-center">能量（单次）</th>
-                        <th class="text-center">年级难度</th>
-                        <th class="text-center">检测项目</th>
-                        <th class="text-center" style="width:300px;">描述</th>
-                        <th class="text-center">创建人</th>
-                        <th class="text-center">创建时间</th>
-                        <th class="text-center">操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
-$_smarty_tpl->tpl_vars['row']->_loop = true;
-?>
-                    <tr>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['typeno'];?>
-</td>
-                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['coverimg'];?>
-"></td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['video']){?>
-                            <!-- <img src="/static/imgs/video.png" alt="..." width="40" height="40" style="cursor: pointer;"> -->
-                            <span data-toggle="modal" data-target="#video" class="video" data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" data-uri="<?php echo $_smarty_tpl->tpl_vars['row']->value['video'];?>
-">播放</span><?php }?>
-                        </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['vfilesize'];?>
-MB</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['singletime'];?>
-秒</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['calorie'];?>
-千卡</td>
-                        <td>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['gradedifficulty']){?>
-                                <ul>
-                                <?php  $_smarty_tpl->tpl_vars['fid'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['fid']->_loop = false;
- $_smarty_tpl->tpl_vars['grade'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['row']->value['gradedifficulty']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['fid']->key => $_smarty_tpl->tpl_vars['fid']->value){
-$_smarty_tpl->tpl_vars['fid']->_loop = true;
- $_smarty_tpl->tpl_vars['grade']->value = $_smarty_tpl->tpl_vars['fid']->key;
-?>
-                                    <li><?php echo $_smarty_tpl->tpl_vars['grade']->value;?>
- -- <?php echo $_smarty_tpl->tpl_vars['fid']->value;?>
-</li>
-                                <?php } ?>
-                                </ul>
-                            <?php }?>
-                        </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['physicalquality'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['describe'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['createor'];?>
-</td>
-                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%Y-%m-%d");?>
-<br/><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%H:%M:%S");?>
-</td>
-                        <td>
-                            <!-- <button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
-                        </td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+    <div class="col-lg-8">
+        <div class="form-wrap">
+            
+            <form name="action">
+                <div class="form-group">
+                    <label for="aname">动作名称</label>
+                    <input type="text" class="form-control" id="aname" placeholder="Action Name" name="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="atype">动作类型</label>
+                    <select id="atype" class="form-control" name="typeno">
+                        <option value="-1">请选择动作类型</option>
+                        <option value="1">计时锻炼</option>
+                        <option value="2">计组数锻炼</option>
+                        <option value="3">节拍锻炼</option>
+                        <option value="4">休息</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ftype">检测项目</label>
+                    <select id="ftype" class="form-control" name="physicalquality">
+                        <option value="-1">无</option>
+                        <option value="0">耐力素质</option>
+                        <option value="1">上肢力量</option>
+                        <option value="2">腹肌耐力</option>
+                        <option value="3">柔韧素质</option>
+                        <option value="4">速度素质</option>
+                        <option value="5">下肢力量</option>
+                        <option value="6">综合素质</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sex">适用性别</label>
+                    <select id="sex" class="form-control" name="sex">
+                        <option value="-1">请选择性别</option>
+                        <option value="0">男</option>
+                        <option value="1">女</option>
+                        <option value="2">不限</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="actiongroupno">动作组数</label>
+                    <input type="text" class="form-control" id="actiongroupno" placeholder="Action Group Num" name="actiongroupno">
+                </div>
+
+                <div class="form-group">
+                    <label for="singletime">单次动作计划所需时间（秒）</label>
+                    <input type="text" class="form-control" id="singletime" placeholder="Single Time" name="singletime">
+                </div>
+
+                <div class="form-group">
+                    <label for="calorie">单次动作计划所需能量（千卡）</label>
+                    <input type="text" class="form-control" id="calorie" placeholder="Calorie" name="calorie">
+                </div>
+                
+                <div class="form-group">
+                    <a class="btn btn-default btn-lg" id="coverimg" href="#" style="position: relative; z-index: 1;">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>上传封面图片</span>
+                    </a>
+                    <input type="hidden" name="coverimg" id="coverimg-val">
+                </div>
+                <div id="picshow"></div>
+
+                <div class="form-group">
+                    <a class="btn btn-default btn-lg" id="video" href="#" style="position: relative; z-index: 1;">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>上传动作视频</span>
+                    </a>
+                    <input type="hidden" name="video" id="video-val">
+                    <input type="hidden" name="vfilesize" id="vfilesize-val">
+                </div>
+                <div id="mp4Show"></div>
+
+                <!-- <div class="form-group">
+                    <a class="btn btn-default btn-lg" id="audio" href="#" style="position: relative; z-index: 1;">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>上传动作音频</span>
+                    </a>
+                    <input type="hidden" name="audio" id="audio-val">
+                </div> -->
+
+                <div class="form-group">
+                    <label for="describe">动作介绍</label>
+                    <textarea id="describe" class="form-control" rows="3" name="describe"></textarea>
+                </div>
+                  
+                <button id="sub" type="button" class="btn btn-primary">确认提交</button>
+                <button id="cancer" type="button" class="btn btn-danger" >取&emsp;消</button>
+                <input type="hidden" name="uptoken" id="uptoken" value="<?php echo $_smarty_tpl->tpl_vars['uptoken']->value;?>
+">
+            </form>
         </div>
-        <?php if ($_smarty_tpl->tpl_vars['pageCount']->value>1){?>
-        <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="<?php echo $_GET['pn'];?>
-"></ul>
-        </div>
-        <?php }?>
     </div>
 </div>
 
-<!-- modal -->
-<div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
-    <div class="modal-dialog" role="document" style="margin-top:7%;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabel">动作视频</h4>
-            </div>
-            <div class="modal-body" id="display-body">
-                
-            </div>
-        </div>
+<!-- modal-add -->
+<div class="fix-per">
+    <div class="fix-cont">
+        <!-- 100% -->
     </div>
+    
 </div>
 
 
@@ -401,78 +415,12 @@ $_smarty_tpl->tpl_vars['fid']->_loop = true;
     </script>
 
     
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
-<script type="text/javascript">
-    var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
-;
-    var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
-;
-    var urlPage = parseInt($("#page").data('url-pn'));
-    if(isNaN(urlPage)){
-        urlPage = 0;
-    }
-
-    $('#page').twbsPagination({
-        totalPages: pageCount,
-        visiblePages: 7,
-        version: '1.1',
-        first: '首页',
-        prev: '上一页',
-        next: '下一页',
-        last: '尾页',
-        startPage: currentPage,
-        onPageClick: function (event, page) {
-            if(urlPage == page)
-                return;
-
-            window.location = "?pn=" + page;
-        }
-    });
-
-    function del(el){
-        if(!confirm('确定要删除该动作？')) return false;
-
-        var id = $(el).data('id');
-        if(!id) return false;
-
-        $.post('/sport/actionDel',{'id':id},function(json){
-            if(json.errCode == 0){
-                window.location.reload();
-            }
-            else{
-                alert('删除失败.');
-            }
-        });
-    }
-
-    var video = {
-        init: function () {
-            this.getDom();
-            this.display();
-        },
-
-        getDom: function () {
-            this.disBtn = $('.video');
-            this.videoTitle = $('#modalLabel');
-            this.videoUri = $('#display-body');
-        },
-
-        display: function () {
-            var me = this;
-            me.disBtn.unbind().bind('click', function(){
-                var uri = $(this).data('uri');
-                var name = $(this).data('name');
-                me.videoTitle.text(name);
-                var html = "<video style=\"width:100%;\" controls autobuffer autoplay>" +
-                                "<source src='" + uri + "' type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'></source>" +
-                            "</video>";
-                me.videoUri.html(html);
-            })
-        }
-    };
-
-    video.init();
-</script>
+<script type="text/javascript" src="/static/qiniu/moxie.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/plupload.full.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/zh_CN.js"></script>
+<script type="text/javascript" src="/static/qiniu/qiniu.min.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/static/sport/js/action.js"></script>
 
 </body>
 </html><?php }} ?>

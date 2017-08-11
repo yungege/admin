@@ -140,6 +140,7 @@ define('QINIU_UPLOAD_TOKEN_FAILED',752);     //获取token失败
 define('CRON_OPEN_FAILED',800);                 //打开素材资源数据库失败
 define('ACTION_ADD_FAILED',801);                //动作添加失败
 define('ACTION_VIDEO_SIZE_ERROR',802);          //动作视频文件错误
+define('PROJECT_ADD_FAILED', 803);              //方案添加失败
 
 
 // 锻炼 900 ~
@@ -568,6 +569,9 @@ function setError($errorCode, $errorMsg=''){
             break;
         case ACTION_VIDEO_SIZE_ERROR:
             $msg = '动作视频文件错误';
+            break;
+        case PROJECT_ADD_FAILED:
+            $msg = '方案添加失败';
             break;
         
 

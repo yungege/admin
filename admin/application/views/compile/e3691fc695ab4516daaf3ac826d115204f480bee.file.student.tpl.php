@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 13:56:07
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-08 13:29:56
          compiled from "/var/www/aa/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2181874525982baf77a2c55-35539395%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:184434176259894c54ec72c0-00761412%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e3691fc695ab4516daaf3ac826d115204f480bee' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/user/student.tpl',
-      1 => 1501668928,
+      1 => 1502155540,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501726868,
+      1 => 1502137853,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2181874525982baf77a2c55-35539395',
+  'nocache_hash' => '184434176259894c54ec72c0-00761412',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5982baf7887788_48740047',
+  'unifunc' => 'content_59894c55010801_01443681',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5982baf7887788_48740047')) {function content_5982baf7887788_48740047($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59894c55010801_01443681')) {function content_59894c55010801_01443681($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -98,6 +98,43 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
+    .add-ugc-fix{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.4);
+        z-index: 9999;
+        display: none;
+    }
+    .add-ugc-inner{
+        width: 500px;
+        height: 200px;
+        border: 1px solid white;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -250px;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    .add-ugc-inner > h4{
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 5px;
+    }
+    .glyphicon-remove{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .glyphicon-remove:hover{
+        color: red;
+    }
     
 </style>
 
@@ -170,7 +207,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/user/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
                             </li> -->
                             <li>
-                                <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">学校管理</a>
+                                <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
                             </li>
                         </ul>
                     </li>
@@ -369,13 +406,12 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <td>姓名：<?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
 <br/>昵称：<?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
 </td>
-                        <td><a href="http://192.168.1.106:8080/user/school?schoolname=<?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolname'];?>
+                        <td><a href="/user/school?schoolid=<?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolid'];?>
 "><?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolname'];?>
 </a></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['grade'];?>
 </td>
-                        <td><a href="http://192.168.1.106:8080/user/school?classname=<?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classname'];?>
-&schoolname=<?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolname'];?>
+                        <td><a href="/user/class?classid=<?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classid'];?>
 "><?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classname'];?>
 </a></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['clientsource'];?>
@@ -406,19 +442,35 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <td>
                             <a href="/sport/ugc?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " class="btn btn-default btn-xs">UGC</a>
+                            <a data-uid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-cid="<?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classid'];?>
+" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补交UGC</a>
                         </td>
                     </tr>
                     <?php } ?>
                 </tbody>
             </table>
         </div>
-        <?php if ($_smarty_tpl->tpl_vars['pageCount']->value>1){?>
-        <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="<?php if (!empty($_GET['pn'])){?><?php echo $_GET['pn'];?>
-<?php }else{ ?>1<?php }?>" data-query="<?php echo $_smarty_tpl->tpl_vars['query']->value;?>
-"></ul>
+        
+        <div class="text-center tt-page">
+            <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+
         </div>
-        <?php }?>
+        
+    </div>
+</div>
+
+<div class="add-ugc-fix">
+    <div class="add-ugc-inner">
+        <h4>补交UGC</h4>
+        <i class="glyphicon glyphicon-remove"></i>
+        <form name="ugc" class="ugcform">
+            <div class="form-group">
+                <label for="hid">作业 ID</label>
+                <input type="text" class="form-control" id="hid" placeholder="">
+            </div>
+            <button id="sub" type="button" class="btn btn-default pull-right">Submit</button>
+        </form>
     </div>
 </div>
 
@@ -451,35 +503,98 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
 <script type="text/javascript">
-    var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
-;
-    var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
-;
-    var urlPage = parseInt($("#page").data('url-pn'));
-    var queryStr = $("#page").data('query');
-    if(isNaN(urlPage)){
-        urlPage = 0;
-    }
+!(function(){
+    var student = {
 
-    $('#page').twbsPagination({
-        totalPages: pageCount,
-        visiblePages: 7,
-        version: '1.1',
-        first: '首页',
-        prev: '上一页',
-        next: '下一页',
-        last: '尾页',
-        startPage: currentPage,
-        onPageClick: function (event, page) {
-            if(urlPage == page)
-                return;
+        init: function (){
+            this.getDom();
+            this.addUgc();
+            this.clickCloseFix();
+            this.postData();
+        },
 
-            window.location = "?" + queryStr + '&pn=' + page;
-        }
-    });
+        getDom: function(){
+            this.ugcBtn = $('.addUgc');
+            this.form = $('form[name=ugc]');
+            this.hid = $('#hid');
+            this.fixBox = $('.add-ugc-fix');
+            this.closeFixBoxBtn = $('.glyphicon-remove');
+            this.subBtn = $('#sub');
+        },
+
+        showDialog: function(){
+            var me = this;
+
+            me.fixBox.fadeIn(200);
+        },
+
+        hideDialog: function(){
+            var me = this;
+
+            me.fixBox.fadeOut(200);
+        },
+
+        clickCloseFix: function(){
+            var me = this;
+
+            me.closeFixBoxBtn.click(function(){
+                me.hideDialog();
+            });
+        },
+
+        addUgc: function(){
+            var me = this;
+
+            me.ugcBtn.unbind().bind('click', function(){
+                var uid = $.trim($(this).data('uid')),
+                    cid = $.trim($(this).data('cid'));
+                me.subBtn.attr('data-uid', uid);
+                me.subBtn.attr('data-cid', cid);
+                me.showDialog();
+            })
+        },
+
+        postData: function(){
+            var me = this,
+                aj = null;
+            me.subBtn.unbind().bind('click', function(){
+                var uid = $.trim($(this).data('uid')),
+                    cid = $.trim($(this).data('cid')),
+                    hid = $.trim(me.hid.val());
+                
+                if(!uid || !cid || !hid){
+                    alert('参数错误.');
+                    return false;
+                }
+
+                aj = $.ajax({
+                    type: 'GET',
+                    dataType: 'json',
+                    url: '/user/addUgc?uid=' + uid + '&cid=' + cid + '&hid=' + hid,
+                    success: function(json){
+                        if(json.errCode == 200){
+                            window.location = "/sport/ugc?uid=" + uid;
+                        }
+                        else{
+                            alert(json.errMessage);
+                            return false;
+                        }
+                    },
+                    beforeSend: function () {
+                        if(aj != null) {
+                            aj.abort();
+                        }
+                    },
+                });
+            });
+        },
+    };
+
+    student.init();
+})()
 </script>
+
 
 </body>
 </html><?php }} ?>

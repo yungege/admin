@@ -54,10 +54,37 @@ class Service_Sport_ProjectModel extends BasePageService {
 
         if(empty($list))
             return $this->resData;
+
+        $pids = array_column($list, '_id');
+        $skus = $this->projectSkuModel->getProjectSkuInfoByProjectIds($pids, ['_id','project_id','difficulty']);
+        // $skus = array_column($skus, null, 'project_id');
+
         foreach ($list as &$row) {
             $row['gender'] = Tools::getSexInfo($row['gender']);
             foreach ($row['grade_apply'] as &$val) {
                 $val = Tools::getGradeInfo($val);
+            }
+
+            $row['skus'] = [];
+            if(!empty($skus)){
+                foreach ($skus as $sk => $sv) {
+                    if($sv['project_id'] == $row['_id']){
+                        $row['skus'][] = $sv;
+                        unset($skus[$sk]);
+                    }
+                }
+            }
+            $row['skus'] = Tools::multiArraySort($row['skus'], 'difficulty', SORT_ASC);
+
+            if($row['has_level'] == 1){
+                if(count($row['skus']) < 3){
+                    $row['add'] = 1;
+                }
+            }
+            else{
+                if(empty($row['skus'])){
+                    $row['add'] = 1;
+                }
             }
 
             $img = (string)$row['coverimg'];

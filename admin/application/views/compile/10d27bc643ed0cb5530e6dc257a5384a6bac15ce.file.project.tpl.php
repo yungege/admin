@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-03 10:20:30
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-08 13:30:05
          compiled from "/var/www/aa/admin/admin/application/views/template/sport/project.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10506754415982886eaaf0e7-16093883%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:123407962959894c5d4aabc7-58911636%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '10d27bc643ed0cb5530e6dc257a5384a6bac15ce' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/sport/project.tpl',
-      1 => 1501639058,
+      1 => 1502155540,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501669497,
+      1 => 1502137853,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10506754415982886eaaf0e7-16093883',
+  'nocache_hash' => '123407962959894c5d4aabc7-58911636',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5982886eb43e39_79879095',
+  'unifunc' => 'content_59894c5d507e15_86306102',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5982886eb43e39_79879095')) {function content_5982886eb43e39_79879095($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59894c5d507e15_86306102')) {function content_59894c5d507e15_86306102($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -170,7 +170,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/user/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
                             </li> -->
                             <li>
-                                <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">学校管理</a>
+                                <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
                             </li>
                         </ul>
                     </li>
@@ -260,7 +260,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <th class="text-center">封面图片</th>
                         <th class="text-center">适用性别</th>
                         <th class="text-center">适用年级</th>
-                        <th class="text-center" style="width:300px;">描述</th>
+                        <th class="text-center" width="300">描述</th>
                         <th class="text-center">创建时间</th>
                         <th class="text-center">操作</th>
                     </tr>
@@ -271,7 +271,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                    <tr>
+                    <tr data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+">
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
 </td>
                         <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['coverimg'];?>
@@ -290,7 +291,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                                 <?php } ?>
                             <?php }?>
                         </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
+                        <td width="400"><?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
 </td>
                         <td>
                             <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['ctime'],"%Y-%m-%d");?>

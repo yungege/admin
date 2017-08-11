@@ -6,6 +6,11 @@ class Service_User_LoginModel extends BasePageService {
 	protected $reqData;
 	protected $resData;
 
+    private static $admin = [
+        13522213145,
+        13161486949
+    ];
+
     public function __construct() {
 		$this->userModel = Dao_UserModel::getInstance();
     }
@@ -24,6 +29,10 @@ class Service_User_LoginModel extends BasePageService {
             $this->errMsg = '账号或密码错误';
             return false;
         }
+        if($res === -1){
+            $this->errNo = -2;
+            return false;
+        }
 
         $_SESSION['userInfo'] = $res;
         setcookie(session_name(), session_id(), time() + 30*86400, '/', '.ttxs.com');
@@ -32,11 +41,18 @@ class Service_User_LoginModel extends BasePageService {
 	}
 
     protected function doLogin($req){
+        // $req['mob'] = 13161486949;
+        // $req['pwd'] = 'qwertyu';
+
         if(!preg_match("/^1\d{10}$/", $req['mob'])){
             return false;
         }
 
-        if(!preg_match("/^[a-zA-Z]\w{5,17}$/", $req['pwd'])){
+        // if(!preg_match("/^[a-zA-Z]\w{5,17}$/", $req['pwd'])){
+        //     return false;
+        // }
+
+        if(!in_array($req['mob'],self::$admin)){
             return false;
         }
 
@@ -44,12 +60,20 @@ class Service_User_LoginModel extends BasePageService {
 
         $userInfo = $this->userModel->queryOne([
             'mobileno' => (int)$req['mob'],
-            'password' => (string)$req['pwd']
             ]);
 
         if(empty($userInfo)){
             return false;
         }
+
+        if(empty($userInfo['password'])){
+            return -1;
+        }
+
+        if($req['pwd'] != $userInfo['password']){
+            return false;
+        }
+
 
         $newUserInfo = [
             '_id' => $userInfo['_id'],

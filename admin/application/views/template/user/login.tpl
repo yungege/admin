@@ -39,7 +39,7 @@
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              Auto login in month
+              Auto login in month</br>
             </label>
           </div>
         </div>
@@ -99,18 +99,18 @@
         }
     },
 
-    checkPwd: function(){
-        var me = this,
-            pwd = me.pwd.val();
-        if(/^[a-zA-Z]\w{5,17}$/.test(pwd) === false){
-            me.errInfo(1, '您输入的密码有误');
-            return false;
-        }
-        else{
-            me.errInfo();
-            return true;
-        }
-    },
+    // checkPwd: function(){
+    //     var me = this,
+    //         pwd = me.pwd.val();
+    //     if(/^[a-zA-Z]\w{5,17}$/.test(pwd) === false){
+    //         me.errInfo(1, '您输入的密码有误');
+    //         return false;
+    //     }
+    //     else{
+    //         me.errInfo();
+    //         return true;
+    //     }
+    // },
 
     errInfo: function(type, msg){
         var me = this;
@@ -126,8 +126,8 @@
         var me = this;
         me.subBtn.unbind().bind('click',function(){
             var mobRes = me.checkMobile();
-            var pwdRes = me.checkPwd();
-            if(mobRes === false || pwdRes === false){
+            // var pwdRes = me.checkPwd();
+            if(mobRes === false ){
                 return false;
             }
 
@@ -135,7 +135,10 @@
                 '/user/dologin',
                 $('form[name=login]').serialize(),
                 function(json){
-                    if(json.errCode != 0){
+                    if(json.errCode == -2){
+                        window.location.href = '/user/register?mod=' + me.mob.val();
+                        
+                    }else if(json.errCode != 0){
                         me.errInfo(1, json.errMessage);
                     }
                     else{
