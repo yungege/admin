@@ -110,4 +110,20 @@ class Dao_ExerciseProjectSkuModel extends Db_Mongodb {
 
         return $this->queryOne($where, $options);
     }
+
+    public function getProjectSkuInfoByProjectIds(array $ids, array $fields=[], array $options=[]){
+        $where = [
+            'project_id' => [
+                '$in' => $ids,
+            ],
+        ];
+
+        $fields = $fields ? $this->filterFields($fields) : [];
+        if(!empty($fields)){
+            $options['projection'] = $fields;
+        }
+        $options['limit'] = 0;
+
+        return $this->query($where, $options);
+    }
 }

@@ -1724,4 +1724,32 @@ class Tools {
         return $info;
     }
 
+    /**
+     * 二维数组排序
+     * @Author    422909231@qq.com
+     * @DateTime  2017-05-18
+     * @param     array            $array
+     * @param     string           $sortKey
+     * @param     [type]           $sort    SORT_DESC|SORT_ASC
+     * @return    array
+     */
+    public static function multiArraySort(array $array , string $sortKey, $sort = SORT_DESC){
+        $sortKeyVals = [];
+
+        if(is_array($array)){
+            foreach ($array as $row){
+                if(is_array($row)){
+                    $sortKeyVals[] = $row[$sortKey];
+                }else{
+                    return [];
+                }
+            }
+        }else{
+            return [];
+        }
+
+        array_multisort($sortKeyVals, $sort, $array);
+        return $array;
+    }
+
 }

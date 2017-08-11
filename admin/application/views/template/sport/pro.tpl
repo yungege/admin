@@ -198,7 +198,7 @@ h4{
         </table>
     </div>
     {%elseif $pinfo.has_level eq -1%}
-    <div class="col-md-6">
+    <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-body">
                 <table class="table text-center table-condensed">
