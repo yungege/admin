@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-07 13:56:39
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-07 19:00:51
          compiled from "/var/www/admin/admin/application/views/template/project/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1866143365988011710b880-93541802%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1785742065598848632f79b6-96193565%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '56bf414123df06e3f174b7b0a62fd3d4913ea192' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/project/add.tpl',
-      1 => 1502085398,
+      1 => 1502085660,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501753699,
+      1 => 1501753746,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1866143365988011710b880-93541802',
+  'nocache_hash' => '1785742065598848632f79b6-96193565',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59880117163456_33574810',
+  'unifunc' => 'content_59884863340213_73823360',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59880117163456_33574810')) {function content_59880117163456_33574810($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59884863340213_73823360')) {function content_59884863340213_73823360($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -394,22 +394,7 @@ $_smarty_tpl->tpl_vars['re']->_loop = true;
     </script>
 
     
-<script type="text/javascript">
-    !(function(){
-        var publish = {
-            init: function(){
-                this.getDom();
-
-            },
-            getDom: function(){
-                
-            },
-            
-        };
-
-        publish.init();
-    })()
-</script>
+<script type="text/javascript" src="/static/sport/js/project.js"></script>
 
 </body>
 </html><?php }} ?>
