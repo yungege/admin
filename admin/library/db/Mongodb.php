@@ -81,7 +81,8 @@ class Db_Mongodb {
      */
     private function connect (){
         $uri = "mongodb://{$this->user}:{$this->pwd}@{$this->host}:{$this->port}/{$this->db}";
-        $this->connection[$this->host][$this->port] = new MongoDB\Driver\Manager($uri);
+        $options = ['connectTimeoutMS' => 50000, 'socketTimeoutMS' => 50000];
+        $this->connection[$this->host][$this->port] = new MongoDB\Driver\Manager($uri, $options);
     }
 
     /**
