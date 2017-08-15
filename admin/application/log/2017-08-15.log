@@ -1,0 +1,160 @@
+=====================2017-08-15 10:51:16===========================
+service_cost:1.239
+time:15/Aug/2017:10:51:16 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:likei9g8q1uji57tki44mo9bd6;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 10:51:18===========================
+service_cost:0.013000000000041
+time:15/Aug/2017:10:51:18 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393
+ourl:/
+request_method:GET
+cookie:PHPSESSID:likei9g8q1uji57tki44mo9bd6;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 10:51:25===========================
+service_cost:2.183
+time:15/Aug/2017:10:51:25 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393
+ourl:/user/student
+request_method:GET
+cookie:PHPSESSID:likei9g8q1uji57tki44mo9bd6;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 10:51:26===========================
+service_cost:2.297
+time:15/Aug/2017:10:51:26 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:likei9g8q1uji57tki44mo9bd6;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 10:51:30===========================
+service_cost:2.264
+time:15/Aug/2017:10:51:30 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393
+ourl:/user/student?grade=-1&username=&uid=&parentname=&mobile=13011802768
+request_method:GET
+cookie:PHPSESSID:likei9g8q1uji57tki44mo9bd6;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 11:40:48===========================
+service_cost:2.648
+time:15/Aug/2017:11:40:48 +0800
+entrance_type:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36 QQBrowser/4.1.4132.400
+ourl:/sport/action
+request_method:GET
+cookie:PHPSESSID:gvqp5865algv33cah6n3pkh6q3;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 11:40:50===========================
+service_cost:2.525
+time:15/Aug/2017:11:40:50 +0800
+entrance_type:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36 QQBrowser/4.1.4132.400
+ourl:/sport/action?pn=1
+request_method:GET
+cookie:PHPSESSID:gvqp5865algv33cah6n3pkh6q3;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 11:41:00===========================
+service_cost:2.793
+time:15/Aug/2017:11:41:00 +0800
+entrance_type:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36 QQBrowser/4.1.4132.400
+ourl:/sport/action?pn=2
+request_method:GET
+cookie:PHPSESSID:gvqp5865algv33cah6n3pkh6q3;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 11:41:06===========================
+service_cost:2.743
+time:15/Aug/2017:11:41:06 +0800
+entrance_type:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36 QQBrowser/4.1.4132.400
+ourl:/sport/action?pn=3
+request_method:GET
+cookie:PHPSESSID:gvqp5865algv33cah6n3pkh6q3;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 11:48:21===========================
+service_cost:2.7309999999999
+time:15/Aug/2017:11:48:21 +0800
+entrance_type:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36 QQBrowser/4.1.4132.400
+ourl:/sport/action?pn=4
+request_method:GET
+cookie:PHPSESSID:gvqp5865algv33cah6n3pkh6q3;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 12:41:16===========================
+service_cost:2.725
+time:15/Aug/2017:12:41:16 +0800
+entrance_type:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36 QQBrowser/4.1.4132.400
+ourl:/sport/action?pn=5
+request_method:GET
+cookie:PHPSESSID:gvqp5865algv33cah6n3pkh6q3;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 12:41:25===========================
+service_cost:3.243
+time:15/Aug/2017:12:41:25 +0800
+entrance_type:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36 QQBrowser/4.1.4132.400
+ourl:/sport/project
+request_method:GET
+cookie:PHPSESSID:gvqp5865algv33cah6n3pkh6q3;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 12:41:25===========================
+service_cost:2.374
+time:15/Aug/2017:12:41:25 +0800
+entrance_type:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36 QQBrowser/4.1.4132.400
+ourl:/sport/project?pn=1
+request_method:GET
+cookie:PHPSESSID:gvqp5865algv33cah6n3pkh6q3;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 12:43:27===========================
+service_cost:3.359
+time:15/Aug/2017:12:43:27 +0800
+entrance_type:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36 QQBrowser/4.1.4132.400
+ourl:/project/sku/598c2766e1382305641836b3.html
+request_method:GET
+cookie:PHPSESSID:gvqp5865algv33cah6n3pkh6q3;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 12:43:29===========================
+service_cost:14.265
+time:15/Aug/2017:12:43:29 +0800
+entrance_type:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36 QQBrowser/4.1.4132.400
+ourl:/sport/homework
+request_method:GET
+cookie:PHPSESSID:gvqp5865algv33cah6n3pkh6q3;
+client_ip:222.128.169.151
+error_no
+error_msg:success
+=====================2017-08-15 12:43:29===========================
+service_cost:12.636
+time:15/Aug/2017:12:43:29 +0800
+entrance_type:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36 QQBrowser/4.1.4132.400
+ourl:/sport/homework?pn=1
+request_method:GET
+cookie:PHPSESSID:gvqp5865algv33cah6n3pkh6q3;
+client_ip:222.128.169.151
+error_no
+error_msg:success
