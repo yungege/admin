@@ -31,7 +31,7 @@ class Service_Project_AddSkuModel extends BasePageService {
         $req = $req['post'];
 
         $this->checkParams($req);
-print_r($req);exit;
+
         $res = $this->projectSkuModel->insert($req);
         if($res === false){
             throw new Exception("", PROJECT_ADD_FAILED);
@@ -76,18 +76,26 @@ print_r($req);exit;
                 throw new Exception("{$actionInfo['name']} 已被删除", -1);
             }
 
-            if($aval['type'] == 1){
+            if($aval['type'] != 4){
                 $actionCount += 1;
                 $filesize += $actionInfo['vfilesize'];
-                $time += ($aval['count'] * $actionInfo['singletime']);
-                $calorie += ($aval['count'] * $actionInfo['calorie']);
+
+                if($actionInfo['singletime'] == 0){
+                    $time += $aval['count'];
+                    $calorie += ($aval['count'] * $actionInfo['calorie']);
+                }
+                else{
+                    $time += ($aval['count'] * $actionInfo['singletime']);
+                    $calorie += ($aval['count'] * $actionInfo['calorie'] * $actionInfo['singletime']);
+                }
+                
             }
 
             $actions[] = [
                 'action_id' => $aval['id'],
-                'action_time' => (int)($aval['count'] * $actionInfo['singletime']),
+                'action_time' => ($actionInfo['singletime'] != 0 ? (int)($aval['count'] * $actionInfo['singletime']) : (int)$aval['count']),
                 'action_groupno' => (int)$aval['count'],
-                'calorie' => (float)($aval['count'] * $actionInfo['calorie']),
+                'calorie' => ($aval['type'] == 4 ? 0 : ($actionInfo['singletime'] != 0 ? (float)($aval['count'] * $actionInfo['calorie'] * $actionInfo['singletime']) : (float)($aval['count'] * $actionInfo['calorie']))),
             ];
         }
 

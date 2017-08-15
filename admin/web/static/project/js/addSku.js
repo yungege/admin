@@ -45,7 +45,7 @@ $(function(){
                         $.each(json.data.list, function(i, item){
                             option += "<optgroup label='"+item.name+"'>";
                             $.each(item.list, function(ci, citem){
-                                option += ("<option value='"+item.list[ci]._id+"'>" + item.list[ci].name + "</option>");
+                                option += ("<option value='"+item.list[ci]._id+"' type-no='"+item.list[ci].typeno+"'>" + item.list[ci].name + "</option>");
                             });
                             option += "</optgroup>";
                         });
@@ -63,7 +63,7 @@ $(function(){
             me.addAction(me.addBtn, me.actionList, me.actionListSelect, 0);
             me.addAction(me.addBtnRest, me.actionListRest, me.actionListSelect, 1);
         },
-        // actionType 0-动作 1-休息
+        // actionType 1-记时 2-记组 3-节拍 4-休息
         addAction: function(obj, fromSet, toSet, actionType){
             var me = this;
             obj.unbind().bind('click', function(){
@@ -82,11 +82,24 @@ $(function(){
 
                 // 验证年级是否已经加入
                 $.each(opt, function(i, item){
-                    var aid = item.value,
-                        txt = item.text;
+                    var aid = $(this).val(),
+                        txt = $(this).text(),
+                        type = $(this).attr('type-no');
+
+                    var num = type == 4 ? 1 : 0;
+                    var unit = '';
+                    if(type == 1){
+                        unit = '计时| ';
+                    }
+                    else if(type == 2){
+                        unit = '计组| ';
+                    }
+                    else if(type == 3){
+                        unit = '节拍| ';
+                    }
 
                     // if($.inArray(aid, selectedAid) == -1){
-                        var optionItem = '<option value="'+aid+'" groupNo="'+actionType+'" actionType="'+actionType+'">'+txt+' ['+actionType+']</option>';
+                        var optionItem = '<option value="'+aid+'" groupNo="'+num+'" actionType="'+type+'">'+unit+txt+' ['+num+']</option>';
                         optionHtml.push(optionItem);
                     // };
                 })
@@ -153,7 +166,7 @@ $(function(){
                     aType   = selectedOpt.actionType.value,
                     aNum    = selectedOpt.groupNo.value,
                     name    = $(this).find('option:selected')[0].text;
-                if(aType == 1) return false;
+                if(aType == 4) return false;
 
                 me.actionNameSpan.text(name.replace(/\[\d+\]/,''));
                 me.fixIntWrmp.fadeIn(200);

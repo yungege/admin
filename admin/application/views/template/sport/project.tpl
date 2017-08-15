@@ -72,11 +72,11 @@
                 </tbody>
             </table>
         </div>
-        {%if $pageCount > 1%}
+
         <div class="text-center tt-page">
             {%$page%}
         </div>
-        {%/if%}
+
     </div>
 </div>
 

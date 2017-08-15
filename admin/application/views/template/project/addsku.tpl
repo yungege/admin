@@ -118,7 +118,7 @@
             {%foreach from=$actionList item=ac key=idx%}
                 <optgroup label="{%$type[$idx]%}">
                     {%foreach from=$ac item=acl%}
-                    <option value="{%$acl._id%}">{%$acl.name%}</option>
+                    <option value="{%$acl._id%}" type-no="{%$acl.typeno%}">{%$acl.name%}</option>
                     {%/foreach%}
                 </optgroup>
             {%/foreach%}
@@ -145,7 +145,7 @@
     <div class="col-lg-2" style="border: 1px solid #ccc;padding: 15px;">
         <select multiple class="form-control" id="action-list-rest">
             {%foreach from=$restList item=re%}
-            <option value="{%$re._id%}">{%$re.name%}【{%$re.singletime%} s】</option>
+            <option value="{%$re._id%}" type-no="4">{%$re.name%}【{%$re.singletime%} s】</option>
             {%/foreach%}
         </select>
     </div>

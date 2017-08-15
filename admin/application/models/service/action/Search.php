@@ -54,7 +54,7 @@ class Service_Action_SearchModel extends BasePageService {
             $where['physicalquality'] = (int)$req['physicalquality'];
         }
 
-        if(isset(Dao_ExerciseactionModel::$sex[$req['sex']])){
+        if(isset(Dao_ExerciseactionModel::$sex[$req['sex']]) && $req['sex'] != 2){
             $where['sex'] = (int)$req['sex'];
         }
 

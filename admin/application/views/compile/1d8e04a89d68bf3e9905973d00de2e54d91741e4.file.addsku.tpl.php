@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-15 16:25:51
-         compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9853285665992b00fdfcc11-26917244%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-15 16:26:06
+         compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:11511337125992b01eccd838-21030578%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'ad43ff6ec9a4519069b557f1cbae4ad86c5fbbf9' => 
+    '1d8e04a89d68bf3e9905973d00de2e54d91741e4' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/sport/project.tpl',
-      1 => 1502777640,
+      0 => '/var/www/admin/admin/application/views/template/project/addsku.tpl',
+      1 => 1502783323,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9853285665992b00fdfcc11-26917244',
+  'nocache_hash' => '11511337125992b01eccd838-21030578',
   'function' => 
   array (
   ),
@@ -29,10 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5992b00fecbbb8_83513966',
+  'unifunc' => 'content_5992b01edbf545_42687640',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5992b00fecbbb8_83513966')) {function content_5992b00fecbbb8_83513966($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5992b01edbf545_42687640')) {function content_5992b01edbf545_42687640($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -108,7 +107,54 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
-
+    .fx-btn{
+        border: 1px solid #ccc;
+        padding: 165px 20px 0 20px;
+        height: 532px;
+    }
+    .fx-btn a{
+        display: block;
+        margin-bottom: 10px;
+    }
+    #action-list,#action-list-select,#action-list-rest{
+        height: 500px;
+    }
+    .border-h3{
+        border-left: 5px solid #5bc0de;
+        padding-left: 15px;
+        font-size: 20px;
+    }
+    .fix-int-wrmp{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background-color: rgba(0,0,0,0.4);
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .fix-int{
+        width: 400px;
+        height: 160px;
+        background-color: white;
+        border: 1px solid #333;
+        padding: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -80px;
+        margin-left: -200px;
+    }
+    .btn-success{
+        margin-right: 10px;
+    }
+    #actionNameSpan{
+        padding-left: 15px;
+        font-size: 14px;
+        color: #565656;
+        color: #0c9;
+    }
 </style>
 
 </head>
@@ -252,7 +298,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / 锻炼方案管理 <a href="/project/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">创建锻炼方案</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 锻炼内容管理 / 发布新方案
                             </li>
                         </ol>
                     </div>
@@ -262,101 +308,162 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                 
 <div class="row">
     <div class="col-lg-12">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped text-center">
-                <thead>
-                    <tr>
-                        <th class="text-center">项目名称</th>
-                        <th class="text-center">封面图片</th>
-                        <th class="text-center">适用性别</th>
-                        <th class="text-center">适用年级</th>
-                        <th class="text-center">锻炼内容</th>
-                        <th class="text-center" width="300">描述</th>
-                        <th class="text-center">创建时间</th>
-                        <th class="">操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
-$_smarty_tpl->tpl_vars['row']->_loop = true;
-?>
-                    <tr data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-">
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+        <h3 class="border-h3">当前项目信息</h3>
+        <table class="table table-bordered">
+            <tr>
+                <td style="line-height: 7;"><?php echo $_smarty_tpl->tpl_vars['project']->value['name'];?>
 </td>
-                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['coverimg'];?>
-"></td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['gender'];?>
-</td>
-                        <td>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['grade_apply']){?>
-                                <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['row']->value['grade_apply']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
-$_smarty_tpl->tpl_vars['v']->_loop = true;
-?>
-                                    <?php echo $_smarty_tpl->tpl_vars['v']->value;?>
-<br/>
-                                <?php } ?>
-                            <?php }?>
-                        </td>
-                        <td>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['skus']){?>
-                                <?php  $_smarty_tpl->tpl_vars['sk'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['sk']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['row']->value['skus']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['sk']->key => $_smarty_tpl->tpl_vars['sk']->value){
-$_smarty_tpl->tpl_vars['sk']->_loop = true;
-?>
-                                    <?php if ($_smarty_tpl->tpl_vars['sk']->value['difficulty']==-1){?>
-                                        难度级别：无<br/>
-                                    <?php }elseif($_smarty_tpl->tpl_vars['sk']->value['difficulty']==0){?>
-                                        难度级别：低<br/>
-                                    <?php }elseif($_smarty_tpl->tpl_vars['sk']->value['difficulty']==1){?>
-                                        难度级别：中<br/>
-                                    <?php }elseif($_smarty_tpl->tpl_vars['sk']->value['difficulty']==2){?>
-                                        难度级别：高<br/>
-                                    <?php }else{ ?>
-                                        难度级别：未知
-                                    <?php }?>
-                                <?php } ?>
-                            <?php }else{ ?>
-                                无锻炼内容，<a href="/project/sku/<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-.html">立即添加</a>?
-                            <?php }?>
-                        </td>
-                        <td width="400"><?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
-</td>
-                        <td>
-                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['ctime'],"%Y-%m-%d");?>
-<br/>
-                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['ctime'],"%H:%M:%S");?>
-
-                        </td>
-                        <td class="text-left">
-                            <a href="/sport/p/<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-.html" class="btn btn-sm btn btn-primary">查 看</a>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['add']==1){?>
-                            <a href="/project/sku/<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-.html" class="btn btn-sm btn btn-info">添 加</a>
-                            <?php }?>
-                            <!-- <button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-.html" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
-                        </td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="text-center tt-page">
-            <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
-
-        </div>
-
+                <td><img src="<?php echo $_smarty_tpl->tpl_vars['project']->value['coverimg'];?>
+?imageView2/2/h/100"></td>
+            </tr>
+        </table>
     </div>
 </div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="border-h3">添加锻炼内容</h3><br/>
+        <form class="form-inline" name="action">
+            <div class="form-group">
+                <label for="action-name">动作名称</label>
+                <input type="text" class="form-control" name="name" id="action-name">
+            </div>
+            <div class="form-group">
+                <label for="action-type">动作类型</label>
+                <select class="form-control" name="typeno" id="action-type">
+                    <option value="">ALL</option>
+                    <option value="1">计时锻炼</option>
+                    <option value="2">计组数锻炼</option>
+                    <option value="3">节拍锻炼</option>
+                    <!-- 4 => '休息', -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="action-item">检测项目</label>
+                <select class="form-control" name="physicalquality" id="action-item">
+                    <option value="">ALL</option>
+                    <option value="0">耐力素质</option>
+                    <option value="1">上肢力量</option>
+                    <option value="2">腹肌耐力</option>
+                    <option value="3">柔韧素质</option>
+                    <option value="4">速度素质</option>
+                    <option value="5">下肢力量</option>
+                    <option value="6">综合素质</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sex">性别</label>
+                <select class="form-control" name="sex" id="sex">
+                    <option value="2">ALL</option>
+                    <option value="0">男</option>
+                    <option value="1">女</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-info" id="search">检索</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="row" style="margin-top: 20px;padding: 15px;">
+    <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="action-list">
+            <?php  $_smarty_tpl->tpl_vars['ac'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ac']->_loop = false;
+ $_smarty_tpl->tpl_vars['idx'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['actionList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ac']->key => $_smarty_tpl->tpl_vars['ac']->value){
+$_smarty_tpl->tpl_vars['ac']->_loop = true;
+ $_smarty_tpl->tpl_vars['idx']->value = $_smarty_tpl->tpl_vars['ac']->key;
+?>
+                <optgroup label="<?php echo $_smarty_tpl->tpl_vars['type']->value[$_smarty_tpl->tpl_vars['idx']->value];?>
+">
+                    <?php  $_smarty_tpl->tpl_vars['acl'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['acl']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['ac']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['acl']->key => $_smarty_tpl->tpl_vars['acl']->value){
+$_smarty_tpl->tpl_vars['acl']->_loop = true;
+?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['acl']->value['_id'];?>
+" type-no="<?php echo $_smarty_tpl->tpl_vars['acl']->value['typeno'];?>
+"><?php echo $_smarty_tpl->tpl_vars['acl']->value['name'];?>
+</option>
+                    <?php } ?>
+                </optgroup>
+            <?php } ?>
+        </select>
+    </div>
+    <div class="col-lg-2">
+        <div class="text-center fx-btn" >
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" id="addBtn">添加 >></a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" id="delBtn">删除 <<</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" id="upBtn">前移</a>
+            <a style="margin-bottom: 0;" href="javascript:void(0)" id="downBtn" class="btn btn-sm btn-default">后移</a>
+        </div>
+    </div>
+    <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="action-list-select">
+            <!-- <option>1</option> -->
+        </select>
+    </div>
+    <div class="col-lg-2">
+        <div class="text-center fx-btn">
+            <a href="javascript:void(0)" class="btn btn-sm btn-default" id="rest-add-btn"><< 添加</a>
+        </div>
+    </div>
+    <div class="col-lg-2" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="action-list-rest">
+            <?php  $_smarty_tpl->tpl_vars['re'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['re']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['restList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['re']->key => $_smarty_tpl->tpl_vars['re']->value){
+$_smarty_tpl->tpl_vars['re']->_loop = true;
+?>
+            <option value="<?php echo $_smarty_tpl->tpl_vars['re']->value['_id'];?>
+" type-no="4"><?php echo $_smarty_tpl->tpl_vars['re']->value['name'];?>
+【<?php echo $_smarty_tpl->tpl_vars['re']->value['singletime'];?>
+ s】</option>
+            <?php } ?>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <form class="form-inline" name="sku">
+            <div class="form-group">
+                <label for="difficulty">难度：</label>
+                <select class="form-control" name="difficulty">
+                    <?php if ($_smarty_tpl->tpl_vars['project']->value['has_level']==-1){?>
+                    <option value="-1">无难度级别</option>
+                    <?php }else{ ?>
+                        <option value="-1">请选择难度级别</option>
+                        <?php  $_smarty_tpl->tpl_vars['darr'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['darr']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['project']->value['difficultyVal']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['darr']->key => $_smarty_tpl->tpl_vars['darr']->value){
+$_smarty_tpl->tpl_vars['darr']->_loop = true;
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['darr']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['project']->value['difficultyArr'][$_smarty_tpl->tpl_vars['darr']->value];?>
+</option>
+                        <?php } ?>
+                    <?php }?>
+                </select>
+            </div>
+            <input type="hidden" name="project_id" value="<?php echo $_smarty_tpl->tpl_vars['project']->value['_id'];?>
+">
+            <button type="button" id="addSkuBtn" class="btn btn-md btn-primary">确认提交</button>
+        </form>
+    </div>
+</div>
+
+<div class="fix-int-wrmp">
+    <div class="fix-int">
+        <h4>请输入循环次数<span id="actionNameSpan"></span></h4>
+        <input type="text" id="actionNo" class="form-control">
+        <br/>
+        <button class="btn btn-default pull-right" type="button" id="canNo">&emsp;取&emsp;消&emsp;</button>
+        <button class="btn btn-success pull-right" type="button" id="subNo">&emsp;确&emsp;定&emsp;</button>
+    </div>
+</div>  
 
 
 
@@ -388,23 +495,7 @@ $_smarty_tpl->tpl_vars['sk']->_loop = true;
     </script>
 
     
-<script type="text/javascript">
-    function del(el){
-        // if(!confirm('确定要删除该动作？')) return false;
-
-        // var id = $(el).data('id');
-        // if(!id) return false;
-
-        // $.post('/sport/actionDel',{'id':id},function(json){
-        //     if(json.errCode == 0){
-        //         window.location.reload();
-        //     }
-        //     else{
-        //         alert('删除失败.');
-        //     }
-        // });
-    }
-</script>
+<script type="text/javascript" src="/static/project/js/addSku.js"></script>
 
 </body>
 </html><?php }} ?>
