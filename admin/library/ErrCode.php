@@ -141,6 +141,7 @@ define('CRON_OPEN_FAILED',800);                 //打开素材资源数据库失
 define('ACTION_ADD_FAILED',801);                //动作添加失败
 define('ACTION_VIDEO_SIZE_ERROR',802);          //动作视频文件错误
 define('PROJECT_ADD_FAILED', 803);              //方案添加失败
+define('PROJECT_SKU_EXISTS', 804);              //方案已存在该难度项目，无法再次添加
 
 
 // 锻炼 900 ~
@@ -572,6 +573,9 @@ function setError($errorCode, $errorMsg=''){
             break;
         case PROJECT_ADD_FAILED:
             $msg = '方案添加失败';
+            break;
+        case PROJECT_SKU_EXISTS:
+            $msg = '方案已存在该难度项目';
             break;
         
 

@@ -9,9 +9,7 @@ class Service_Sport_ActionModel extends BasePageService {
     protected $reqData;
     protected $resData = [
         'pageTag' => '3-3',
-        'pageCount' => 0,
         'list' => [],
-        'pn' => 1,
     ];
 
     protected static $grade = [
@@ -48,7 +46,7 @@ class Service_Sport_ActionModel extends BasePageService {
         $req = $req['get'];
         if(!isset($req['pn']) || !is_numeric($req['pn']))
             $req['pn'] = 1;
-        $this->resData['pn'] = $req['pn'];
+
         $offset = ($req['pn'] - 1) * self::PAGESIZE;
         $sort = ['createtime' => -1];
         
@@ -59,7 +57,9 @@ class Service_Sport_ActionModel extends BasePageService {
             'sort' => $sort,
         ];
         $count = $this->actionModel->count($where);
-        $this->resData['pageCount'] = ceil($count / self::PAGESIZE);
+        $page = new Page($count, self::PAGESIZE);
+        $this->resData['page'] = $page->show();
+
         if($count <= 0)
             return $this->resData;
 
