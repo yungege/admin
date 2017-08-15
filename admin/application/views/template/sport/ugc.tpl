@@ -147,34 +147,4 @@
 {%block name="js"%}
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="/static/ugc/index.js"></script>
-
-<!-- <script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script> -->
-<script type="text/javascript">
-    
-
-    // var currentPage = {%$pn%};
-    // var pageCount = {%$pageCount%};
-    // var urlPage = parseInt($("#page").data('url-pn'));
-    // var queryStr = $("#page").data('query');
-    // if(isNaN(urlPage)){
-    //     urlPage = 0;
-    // }
-
-    // $('#page').twbsPagination({
-    //     totalPages: pageCount,
-    //     visiblePages: 7,
-    //     version: '1.1',
-    //     first: '首页',
-    //     prev: '上一页',
-    //     next: '下一页',
-    //     last: '尾页',
-    //     startPage: currentPage,
-    //     onPageClick: function (event, page) {
-    //         if(urlPage == page)
-    //             return;
-
-    //         window.location = "?" + queryStr + '&pn=' + page;
-    //     }
-    // });
-</script>
 {%/block%}

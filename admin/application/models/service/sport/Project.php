@@ -11,9 +11,8 @@ class Service_Sport_ProjectModel extends BasePageService {
     protected $reqData;
     protected $resData = [
         'pageTag' => '3-2',
-        'pageCount' => 0,
         'list' => [],
-        'pn' => 1,
+        'page' => '',
     ];
 
     public function __construct() {
@@ -33,7 +32,6 @@ class Service_Sport_ProjectModel extends BasePageService {
         if(!isset($req['pn']) || !is_numeric($req['pn']))
             $req['pn'] = 1;
 
-        $this->resData['pn'] = $req['pn'];
         $where = [
             'status' => ['$ne' => -9],
         ];
@@ -46,7 +44,9 @@ class Service_Sport_ProjectModel extends BasePageService {
             'sort' => $sort,
         ];
         $count = $this->projectModel->count($where);
-        $this->resData['pageCount'] = ceil($count / self::PAGESIZE);
+        $page = new Page($count, self::PAGESIZE);
+        $this->resData['page'] = $page->show();
+
         if($count == 0)
             return $this->resData;
         
