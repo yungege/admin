@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-14 14:50:29
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-21 17:46:17
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:168202799259914835842341-09678253%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1651632995599aabe9d84eb4-67769459%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-      1 => 1501724060,
+      1 => 1503308630,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501753746,
+      1 => 1502435993,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '168202799259914835842341-09678253',
+  'nocache_hash' => '1651632995599aabe9d84eb4-67769459',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599148358a3f41_33458553',
+  'unifunc' => 'content_599aabe9dd0aa0_46139699',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599148358a3f41_33458553')) {function content_599148358a3f41_33458553($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_599aabe9dd0aa0_46139699')) {function content_599aabe9dd0aa0_46139699($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -56,6 +56,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <!-- Custom Fonts -->
     <link href="/static/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/static/widget/alertBox/alert.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -94,6 +96,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             margin-right: 5px;
             border: 1px solid #333;
             background: #fff;
+        }
+        /*alert 插件*/
+        .alert-btn-p{
+            /*width: 100%!important;*/
+            margin-bottom: 0!important;
+        }
+        .alert-container{
+            width: 400px!important;
         }
     </style>
     
@@ -384,8 +394,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></a></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['hname'];?>
 </td>
-                        <td><a href="/sport/p/<?php echo $_smarty_tpl->tpl_vars['row']->value['pid'];?>
-.html"><?php echo $_smarty_tpl->tpl_vars['row']->value['pname'];?>
+                        <td><a href="<?php if ($_smarty_tpl->tpl_vars['row']->value['is_old']==1){?>javascript:void(0)<?php }else{ ?>/sport/p/<?php echo $_smarty_tpl->tpl_vars['row']->value['pid'];?>
+.html<?php }?>"><?php echo $_smarty_tpl->tpl_vars['row']->value['pname'];?>
 </a></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['burncalories'];?>
 </td>
@@ -439,6 +449,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/widget/alertBox/alert.js"></script>
 
     <script type="text/javascript">
         !(function(){
@@ -455,38 +466,6 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="/static/ugc/index.js"></script>
-
-<!-- <script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script> -->
-<script type="text/javascript">
-    
-
-    // var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
-;
-    // var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
-;
-    // var urlPage = parseInt($("#page").data('url-pn'));
-    // var queryStr = $("#page").data('query');
-    // if(isNaN(urlPage)){
-    //     urlPage = 0;
-    // }
-
-    // $('#page').twbsPagination({
-    //     totalPages: pageCount,
-    //     visiblePages: 7,
-    //     version: '1.1',
-    //     first: '首页',
-    //     prev: '上一页',
-    //     next: '下一页',
-    //     last: '尾页',
-    //     startPage: currentPage,
-    //     onPageClick: function (event, page) {
-    //         if(urlPage == page)
-    //             return;
-
-    //         window.location = "?" + queryStr + '&pn=' + page;
-    //     }
-    // });
-</script>
 
 </body>
 </html><?php }} ?>

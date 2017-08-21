@@ -9,6 +9,9 @@ class Service_Sport_UGCModel extends BasePageService {
     protected $userModel;
     protected $shareModel;
 
+    protected $programModel;
+    protected $homeworkModel;
+
     public static $delay = [
         '1' => 2,
         '-1' => 0,
@@ -25,6 +28,9 @@ class Service_Sport_UGCModel extends BasePageService {
         $this->trainModel  = Dao_TrainingdoneModel::getInstance();
         $this->userModel  = Dao_UserModel::getInstance();
         $this->shareModel = Dao_ShareModel::getInstance();
+
+        $this->programModel = Dao_ExerciseprogramModel::getInstance();
+        $this->homeworkModel = Dao_ExerciseHomeworkModel::getInstance();
     }
 
     protected function __declare() {
@@ -124,14 +130,32 @@ class Service_Sport_UGCModel extends BasePageService {
             $row['username'] = $userInfo[$row['userid']]['username'];
             $row['nickname'] = $userInfo[$row['userid']]['nickname'];
             $row['iconurl'] = $userInfo[$row['userid']]['iconurl'] ? : '';
-            $row['hname'] = Dao_ExerciseHomeworkModel::$type[$row['htype']];
-            $row['pname'] = ($row['htype'] != 3 && empty($proInfo[$row['trainingid']]['name'])) ? '测试项目' : $proInfo[$row['trainingid']]['name'];
-            $row['pid'] = ($row['htype'] != 3 && !empty($proInfo[$row['trainingid']]['name'])) ? $proInfo[$row['trainingid']]['pid'] : '';
             $row['burncalories'] = number_format($row['burncalories'], 2, '.', '');
             $row['distance'] = $row['htype'] == 3 ? number_format($row['distance'], 2, '.', '') : '';
             $row['share'] = isset($shareInfo[$row['_id']]) ? 1 : 0;
             $row['avgSpeed'] = ($row['htype'] == 3 && (float)$row['distance'] > 0) ? number_format(($row['distance']/(($row['endtime']-$row['starttime'])/3.6)), 2, '.', '') : 0;
+
+            // 检验是否就数据 做兼容处理
+            $nowWorkData = $this->homeworkModel->getInfoById($row['homeworkid'], ['_id']);
+            $nowProData = $this->projectSkuModel->getInfoById($row['trainingid'], ['_id']);
+
+            if(!empty($nowWorkData) && !empty($nowProData)){
+                $row['hname'] = Dao_ExerciseHomeworkModel::$type[$row['htype']];
+                $row['pname'] = ($row['htype'] != 3 && empty($proInfo[$row['trainingid']]['name'])) ? '测试项目' : $proInfo[$row['trainingid']]['name'];
+                $row['pid'] = ($row['htype'] != 3 && !empty($proInfo[$row['trainingid']]['name'])) ? $proInfo[$row['trainingid']]['pid'] : '';
+            }
+            else{
+                $oldWorkData = $this->programModel->getInfoById($row['homeworkid'], ['_id','name']);
+                $oldProData = $this->programModel->getInfoById($row['trainingid'], ['_id','name']);
+                if(!empty($oldWorkData) && !empty($oldProData)){
+                    $row['pname'] = $oldProData['name'].'<span class="label label-warning">旧数据</span>';
+                    $row['pid'] = $oldProData['_id'];
+                    $row['hname'] = $oldWorkData['name'];
+                    $row['is_old'] = 1;
+                }
+            }
         }
+     
         $this->resData['list'] = $trainList;
         $this->resData['page'] = $show;
         
