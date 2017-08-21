@@ -29,12 +29,8 @@ class Service_Sport_HomeworkModel extends BasePageService {
         $req = $req['get'];
         if(!isset($req['pn']) || !is_numeric($req['pn'])){
             $req['pn'] = 1;
-<<<<<<< HEAD
         }
-        $this->resData['pn'] = $req['pn'];
-=======
-
->>>>>>> 1ec9385b08f801a4830551ec1ce6092f0e8c8d71
+ 
         $offset = ($req['pn'] - 1) * self::PAGESIZE;
         $sort = ['deadline_time' => -1];
 
@@ -45,16 +41,10 @@ class Service_Sport_HomeworkModel extends BasePageService {
         ];
 
         $count = $this->homeworkModel->count();
-<<<<<<< HEAD
-        // echo $count;exit;
-        $this->resData['pageCount'] = ceil($count / self::PAGESIZE);
-        if($count == 0){
-=======
         $page = new Page($count, self::PAGESIZE);
         $this->resData['page'] = $page->show();
 
-        if($count == 0)
->>>>>>> 1ec9385b08f801a4830551ec1ce6092f0e8c8d71
+        if($count == 0){
             return $this->resData;
         }
 

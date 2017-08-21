@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-20 23:10:42
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-21 08:57:37
          compiled from "/var/www/aa/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1065178675999a672930de3-50303460%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1257001999599a30011ecc15-91265748%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7149e509b3912102662f2fb70041ae61f2b51250' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/sport/homework.tpl',
-      1 => 1502933547,
+      1 => 1503275848,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1502137853,
+      1 => 1503275848,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1065178675999a672930de3-50303460',
+  'nocache_hash' => '1257001999599a30011ecc15-91265748',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5999a672a0e444_05896506',
+  'unifunc' => 'content_599a30012bd641_62904016',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5999a672a0e444_05896506')) {function content_5999a672a0e444_05896506($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
+<?php if ($_valid && !is_callable('content_599a30012bd641_62904016')) {function content_599a30012bd641_62904016($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
 if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
@@ -57,6 +57,8 @@ if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admi
 
     <!-- Custom Fonts -->
     <link href="/static/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/static/widget/alertBox/alert.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -95,6 +97,14 @@ if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admi
             margin-right: 5px;
             border: 1px solid #333;
             background: #fff;
+        }
+        /*alert 插件*/
+        .alert-btn-p{
+            /*width: 100%!important;*/
+            margin-bottom: 0!important;
+        }
+        .alert-container{
+            width: 400px!important;
         }
     </style>
     
@@ -332,12 +342,12 @@ $_smarty_tpl->tpl_vars['pro']->_loop = true;
                 </tbody>
             </table>
         </div>
-        <?php if ($_smarty_tpl->tpl_vars['pageCount']->value>1){?>
-        <div class="text-center">
-            <ul id="page" style="margin: 0;" data-url-pn="<?php echo $_GET['pn'];?>
-"></ul>
+
+        <div class="text-center tt-page">
+            <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+
         </div>
-        <?php }?>
+
     </div>
 </div>
 
@@ -371,6 +381,7 @@ $_smarty_tpl->tpl_vars['pro']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/widget/alertBox/alert.js"></script>
 
     <script type="text/javascript">
         !(function(){
@@ -385,33 +396,7 @@ $_smarty_tpl->tpl_vars['pro']->_loop = true;
     </script>
 
     
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
 <script type="text/javascript">
-    var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
-;
-    var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
-;
-    var urlPage = parseInt($("#page").data('url-pn'));
-    if(isNaN(urlPage)){
-        urlPage = 0;
-    }
-
-    $('#page').twbsPagination({
-        totalPages: pageCount,
-        visiblePages: 7,
-        version: '1.1',
-        first: '首页',
-        prev: '上一页',
-        next: '下一页',
-        last: '尾页',
-        startPage: currentPage,
-        onPageClick: function (event, page) {
-            if(urlPage == page)
-                return;
-
-            window.location = "?pn=" + page;
-        }
-    });
 
     function del(el){
         if(!confirm('确定要删除该动作？')) return false;

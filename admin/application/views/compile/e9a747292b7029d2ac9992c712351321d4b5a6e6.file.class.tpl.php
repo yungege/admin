@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-20 23:11:00
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-21 08:57:29
          compiled from "/var/www/aa/admin/admin/application/views/template/user/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7630380565999a684caf956-14591506%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1300827723599a2ff957a035-80286430%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1502137853,
+      1 => 1503275848,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7630380565999a684caf956-14591506',
+  'nocache_hash' => '1300827723599a2ff957a035-80286430',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5999a684d0bd82_19129201',
+  'unifunc' => 'content_599a2ff95e76f0_13235191',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5999a684d0bd82_19129201')) {function content_5999a684d0bd82_19129201($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599a2ff95e76f0_13235191')) {function content_599a2ff95e76f0_13235191($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -55,6 +55,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <!-- Custom Fonts -->
     <link href="/static/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/static/widget/alertBox/alert.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -93,6 +95,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             margin-right: 5px;
             border: 1px solid #333;
             background: #fff;
+        }
+        /*alert 插件*/
+        .alert-btn-p{
+            /*width: 100%!important;*/
+            margin-bottom: 0!important;
+        }
+        .alert-container{
+            width: 400px!important;
         }
     </style>
     
@@ -389,6 +399,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/widget/alertBox/alert.js"></script>
 
     <script type="text/javascript">
         !(function(){
