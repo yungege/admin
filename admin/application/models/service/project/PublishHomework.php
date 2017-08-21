@@ -32,7 +32,7 @@ class Service_Project_PublishHomeworkModel extends BasePageService {
 		$data['gender'] = 2;
 		$data['project_id'][0] = $req['projectId'];
 		$data['create_time'] = time();	
-		$data['weekdoneno'] = $req['weekDoneNo'];
+		$data['weekdoneno'] = (int)$req['weekDoneNo'];
 		$data['makeup_limit'] = (int)$req['makeupLimit'] * 60 * 60;
 		$data['homework_require'] = $req['homeworkRequire'];
 		$data['makeup_interval'] = (int)$req['makeupInterval'];
