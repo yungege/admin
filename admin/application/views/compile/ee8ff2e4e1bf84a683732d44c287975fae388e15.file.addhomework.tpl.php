@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-21 08:57:41
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-21 13:19:01
          compiled from "/var/www/aa/admin/admin/application/views/template/project/addhomework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1356597305599a30051396a9-61880739%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:791308047599a6d451f31e7-45939503%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ee8ff2e4e1bf84a683732d44c287975fae388e15' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/project/addhomework.tpl',
-      1 => 1502954008,
+      1 => 1503292738,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1356597305599a30051396a9-61880739',
+  'nocache_hash' => '791308047599a6d451f31e7-45939503',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599a30051b11f8_77702195',
+  'unifunc' => 'content_599a6d45275777_26134223',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599a30051b11f8_77702195')) {function content_599a30051b11f8_77702195($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599a6d45275777_26134223')) {function content_599a6d45275777_26134223($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -283,8 +283,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
 <div class="row">
     <div class="col-lg-12">
-        <h3 class="border-h3">所选方案 ：<?php echo $_smarty_tpl->tpl_vars['projectName']->value;?>
- </h3>
+        <h3 class="border-h3">所选方案 ：<?php if ($_smarty_tpl->tpl_vars['projectName']->value!=''){?>  <?php echo $_smarty_tpl->tpl_vars['projectName']->value;?>
+   <?php }else{ ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/sport/project">选择</a>  <?php }?></h3>
         
     </div>
 </div>

@@ -31,7 +31,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <h3 class="border-h3">所选方案 ：{%$projectName%} </h3>
+        <h3 class="border-h3">所选方案 ：{%if $projectName neq "" %}  {%$projectName%}   {%else%}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/sport/project">选择</a>  {%/if%}</h3>
         
     </div>
 </div>
