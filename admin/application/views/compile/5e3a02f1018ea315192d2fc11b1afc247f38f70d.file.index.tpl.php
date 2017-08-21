@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-14 14:48:39
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-18 17:24:24
          compiled from "/var/www/admin/admin/application/views/template/version/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1856607605599147c75eaf49-39367545%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20412390445996b248d05716-48982761%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501753746,
+      1 => 1502785667,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1856607605599147c75eaf49-39367545',
+  'nocache_hash' => '20412390445996b248d05716-48982761',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599147c7638381_94075886',
+  'unifunc' => 'content_5996b248d54aa0_58444638',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599147c7638381_94075886')) {function content_599147c7638381_94075886($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5996b248d54aa0_58444638')) {function content_5996b248d54aa0_58444638($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -56,6 +56,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <!-- Custom Fonts -->
     <link href="/static/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/static/widget/alertBox/alert.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -94,6 +96,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             margin-right: 5px;
             border: 1px solid #333;
             background: #fff;
+        }
+        /*alert 插件*/
+        .alert-btn-p{
+            /*width: 100%!important;*/
+            margin-bottom: 0!important;
+        }
+        .alert-container{
+            width: 400px!important;
         }
     </style>
     
@@ -342,6 +352,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/widget/alertBox/alert.js"></script>
 
     <script type="text/javascript">
         !(function(){
