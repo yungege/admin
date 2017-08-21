@@ -1,19 +1,19 @@
 <<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-09 13:34:20
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-14 11:14:54
          compiled from "/var/www/admin/admin/application/views/template/sport/pro.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:440186679598a9edc492076-74084073%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:936804791599115aea53353-53213823%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 =======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-10 11:15:45
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-15 16:25:23
          compiled from "/var/www/admin/admin/application/views/template/sport/pro.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:741196898598bcfe1934ec9-67886713%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> f52ff1ab5a41698e6692f48297365872976601e9
+<?php /*%%SmartyHeaderCode:970434405992aff33011e8-43464886%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> bc62b7ab306e794c8ee6e60e4f799c6503d839bb
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '310eddac9d26dc72a5ef5358f10af9ece24579b3' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/pro.tpl',
-      1 => 1502328734,
+      1 => 1502419197,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -24,14 +24,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '440186679598a9edc492076-74084073',
+  'nocache_hash' => '936804791599115aea53353-53213823',
 =======
-      1 => 1501753699,
+      1 => 1502435993,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '741196898598bcfe1934ec9-67886713',
->>>>>>> f52ff1ab5a41698e6692f48297365872976601e9
+  'nocache_hash' => '970434405992aff33011e8-43464886',
+>>>>>>> bc62b7ab306e794c8ee6e60e4f799c6503d839bb
   'function' => 
   array (
   ),
@@ -44,14 +44,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
-  'unifunc' => 'content_598a9edc517981_66826668',
+  'unifunc' => 'content_599115aeadd584_29129797',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598a9edc517981_66826668')) {function content_598a9edc517981_66826668($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_599115aeadd584_29129797')) {function content_599115aeadd584_29129797($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 =======
-  'unifunc' => 'content_598bcfe19b03a5_06206411',
+  'unifunc' => 'content_5992aff34527a7_60596344',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598bcfe19b03a5_06206411')) {function content_598bcfe19b03a5_06206411($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> f52ff1ab5a41698e6692f48297365872976601e9
+<?php if ($_valid && !is_callable('content_5992aff34527a7_60596344')) {function content_5992aff34527a7_60596344($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> bc62b7ab306e794c8ee6e60e4f799c6503d839bb
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -76,6 +76,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <!-- Custom Fonts -->
     <link href="/static/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/static/widget/alertBox/alert.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -114,6 +116,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             margin-right: 5px;
             border: 1px solid #333;
             background: #fff;
+        }
+        /*alert 插件*/
+        .alert-btn-p{
+            /*width: 100%!important;*/
+            margin-bottom: 0!important;
+        }
+        .alert-container{
+            width: 400px!important;
         }
     </style>
     
@@ -726,6 +736,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/widget/alertBox/alert.js"></script>
 
     <script type="text/javascript">
         !(function(){

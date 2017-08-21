@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-11 09:14:33
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-15 16:18:24
          compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1669224053598d04f93d7d99-30292076%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1741230875992ae503b7d27-19653153%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '713206737d6eb09c8f72027c7313a6d885305480' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/login.tpl',
-      1 => 1501062598,
+      1 => 1502419197,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1669224053598d04f93d7d99-30292076',
+  'nocache_hash' => '1741230875992ae503b7d27-19653153',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_598d04f93ee923_30910376',
+  'unifunc' => 'content_5992ae503cdc69_95310033',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598d04f93ee923_30910376')) {function content_598d04f93ee923_30910376($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5992ae503cdc69_95310033')) {function content_5992ae503cdc69_95310033($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -60,7 +60,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              Auto login in month
+              Auto login in month</br>
             </label>
           </div>
         </div>
@@ -120,18 +120,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     },
 
-    checkPwd: function(){
-        var me = this,
-            pwd = me.pwd.val();
-        if(/^[a-zA-Z]\w{5,17}$/.test(pwd) === false){
-            me.errInfo(1, '您输入的密码有误');
-            return false;
-        }
-        else{
-            me.errInfo();
-            return true;
-        }
-    },
+    // checkPwd: function(){
+    //     var me = this,
+    //         pwd = me.pwd.val();
+    //     if(/^[a-zA-Z]\w{5,17}$/.test(pwd) === false){
+    //         me.errInfo(1, '您输入的密码有误');
+    //         return false;
+    //     }
+    //     else{
+    //         me.errInfo();
+    //         return true;
+    //     }
+    // },
 
     errInfo: function(type, msg){
         var me = this;
@@ -147,8 +147,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         var me = this;
         me.subBtn.unbind().bind('click',function(){
             var mobRes = me.checkMobile();
-            var pwdRes = me.checkPwd();
-            if(mobRes === false || pwdRes === false){
+            // var pwdRes = me.checkPwd();
+            if(mobRes === false ){
                 return false;
             }
 
@@ -156,7 +156,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 '/user/dologin',
                 $('form[name=login]').serialize(),
                 function(json){
-                    if(json.errCode != 0){
+                    if(json.errCode == -2){
+                        window.location.href = '/user/register?mod=' + me.mob.val();
+                        
+                    }else if(json.errCode != 0){
                         me.errInfo(1, json.errMessage);
                     }
                     else{
