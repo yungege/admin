@@ -106,7 +106,7 @@ class Service_Class_InsertModel extends BasePageService {
 		$res = $this->classModel->insert($data);
 		
 		if($res === false){
-			return $this->errNo = PROJECT_ADD_FAILED;
+			return $this->errNo = CLASS_ADD_FAULT;
 		}
 		$this->resData['classId'] = $res;
 		

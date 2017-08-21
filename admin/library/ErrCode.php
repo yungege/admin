@@ -176,6 +176,10 @@ define('FEEDBACK_DATA_ERR',1302);               //反馈信息为空
 //排名
 define('RANK_TYPE_ERR', 1401);                  //排名类型错误
 
+//学校及班级
+define('SCHOOL_ADD_FAULT', 1501);               //学校添加失败
+define('CLASS_ADD_FAULT', 1502);                //班级添加失败
+
 function setError($errorCode, $errorMsg=''){
     switch($errorCode){
         case SUCCESS:
@@ -577,8 +581,13 @@ function setError($errorCode, $errorMsg=''){
         case PROJECT_SKU_EXISTS:
             $msg = '方案已存在该难度项目';
             break;
-        
-
+        case SCHOOL_ADD_FAULT;
+            $msg = '学校添加失败';
+            break;
+        case CLASS_ADD_FAULT;
+            $msg = '班级添加失败';
+            break;
+    
         default :
             $msg = '未知错误';
             break;

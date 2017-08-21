@@ -56,7 +56,7 @@ class Service_School_InsertModel extends BasePageService {
 			$this->resData['schoolId'] = $result;
 			return $this->resData;
 		}else{
-			return $this->errNo = PROJECT_ADD_FAILED;
+			return $this->errNo = SCHOOL_ADD_FAULT;
 		}
 		
 	}
