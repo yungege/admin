@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-10 09:57:42
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-20 23:10:42
          compiled from "/var/www/aa/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1087962446598bbd964d2779-21773278%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1065178675999a672930de3-50303460%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7149e509b3912102662f2fb70041ae61f2b51250' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/sport/homework.tpl',
-      1 => 1502155540,
+      1 => 1502933547,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1087962446598bbd964d2779-21773278',
+  'nocache_hash' => '1065178675999a672930de3-50303460',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_598bbd96558978_69367536',
+  'unifunc' => 'content_5999a672a0e444_05896506',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598bbd96558978_69367536')) {function content_598bbd96558978_69367536($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
+<?php if ($_valid && !is_callable('content_5999a672a0e444_05896506')) {function content_5999a672a0e444_05896506($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
 if (!is_callable('smarty_modifier_date_format')) include '/var/www/aa/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
@@ -243,7 +243,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / 作业管理
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / 作业管理  <a href="/sport/project" class="btn btn-primary btn-sm" style="margin-left: 10px;">发布作业</a>
                             </li>
                         </ol>
                     </div>

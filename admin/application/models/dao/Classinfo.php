@@ -90,5 +90,15 @@ class Dao_ClassinfoModel extends Db_Mongodb {
             $newOptions['sort'] = $options['sort'];
         return $this->query($where, $newOptions);
     }
+
+    public function getList(array $where, array $fields = [] ,array $options = []){
+
+       $fields = $this->filterFields($fields);
+        if(!empty($fields)){
+            $newOptions['projection'] = $fields;
+        }
+        
+        return $this->query($where, $newOptions);
+    }
     
 }

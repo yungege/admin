@@ -5,7 +5,7 @@
     
 </style>
 {%/block%}
-{%block name="bread"%}用户管理 / 班级管理{%/block%}
+{%block name="bread"%}用户管理 / 班级管理  <a href="/class/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加班级</a>{%/block%}
 {%block name="content"%}
 <div class="row">
     <div class="col-lg-12">

@@ -38,12 +38,37 @@ class Dao_SchoolinfoModel extends Db_Mongodb {
     public function getListByPage(array $where, array $fields = [], array $options = []){
        
         $fields = $this->filterFields($fields);
-        if(!empty($fields))
+        if(!empty($fields)){
             $newOptions['projection'] = $fields;
-        $newOptions['limit'] = (int)$options['limit'];
-        // $newOptions['skip'] = (int)$options['offset'];
-        if(!empty($options['sort']))
+        }
+
+        if(!empty($options['limit'])){
+            $newOptions['limit'] = (int)$options['limit'];
+        }
+
+        if(!empty($options['offset'])){
+            $newOptions['skip'] = (int)$options['offset'];
+        } 
+            
+        if(!empty($options['sort'])){
             $newOptions['sort'] = $options['sort'];
+        }
+        
         return $this->query($where, $newOptions);
     }
+
+    public function getSchoolById(string $id, array $fields = [], array $options = []){
+
+        $where = [
+            '_id' => $id,
+        ];
+
+        $fields = $this->filterFields($fields);
+        if(!empty($fields)){
+            $newOptions['projection'] = $fields;
+        }
+
+        return $this->queryOne($where, $newOptions);
+    }
+
 }

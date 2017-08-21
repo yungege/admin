@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-10 09:55:14
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-20 23:11:00
          compiled from "/var/www/aa/admin/admin/application/views/template/user/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:882263038598bbd02a79f36-64458957%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:7630380565999a684caf956-14591506%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e9a747292b7029d2ac9992c712351321d4b5a6e6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/user/class.tpl',
-      1 => 1501742111,
+      1 => 1503043993,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '882263038598bbd02a79f36-64458957',
+  'nocache_hash' => '7630380565999a684caf956-14591506',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_598bbd02aeb040_60542938',
+  'unifunc' => 'content_5999a684d0bd82_19129201',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598bbd02aeb040_60542938')) {function content_598bbd02aeb040_60542938($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5999a684d0bd82_19129201')) {function content_5999a684d0bd82_19129201($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -241,7 +241,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 用户管理 / 班级管理
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 用户管理 / 班级管理  <a href="/class/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加班级</a>
                             </li>
                         </ol>
                     </div>

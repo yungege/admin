@@ -1,6 +1,6 @@
 {%extends file="common/page/layout.tpl"%} 
 {%block name="title"%}天天向尚管理后台{%/block%}
-{%block name="bread"%}运动圈 / 作业管理{%/block%}
+{%block name="bread"%}运动圈 / 作业管理  <a href="/sport/project" class="btn btn-primary btn-sm" style="margin-left: 10px;">发布作业</a>{%/block%}
 {%block name="css"%}
 <style type="text/css">
 
