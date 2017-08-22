@@ -117,7 +117,7 @@
                         <td>姓名：<a href="/user/student?uid={%$row.userid%}">{%$row.username%}</a><br/>昵称：<a href="/user/student?uid={%$row.userid%}">{%$row.nickname%}</a></td>
                         <td><a href="/user/student?uid={%$row.userid%}"><img src="{%$row.iconurl%}?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></a></td>
                         <td>{%$row.hname%}</td>
-                        <td><a href="/sport/p/{%$row.pid%}.html">{%$row.pname%}</a></td>
+                        <td><a href="{%if $row.is_old eq 1%}javascript:void(0){%else%}/sport/p/{%$row.pid%}.html{%/if%}">{%$row.pname%}</a></td>
                         <td>{%$row.burncalories%}</td>
                         <td>
                             {%$row.distance%}<br/>

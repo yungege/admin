@@ -1,0 +1,1180 @@
+=====================2017-08-20 20:53:02===========================
+service_cost:51.2
+time:20/Aug/2017:20:53:02 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:53:52===========================
+service_cost:51.444
+time:20/Aug/2017:20:53:52 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:54:02===========================
+service_cost:23.484
+time:20/Aug/2017:20:54:02 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:m5kptgunhv4cgcl21oli1gecn4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:54:42===========================
+service_cost:53.418
+time:20/Aug/2017:20:54:42 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:54:52===========================
+service_cost:44.366
+time:20/Aug/2017:20:54:52 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:m5kptgunhv4cgcl21oli1gecn4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:55:32===========================
+service_cost:33.176
+time:20/Aug/2017:20:55:32 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:55:42===========================
+service_cost:45.515
+time:20/Aug/2017:20:55:42 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:m5kptgunhv4cgcl21oli1gecn4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:56:22===========================
+service_cost:20.337
+time:20/Aug/2017:20:56:22 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:56:32===========================
+service_cost:23.951
+time:20/Aug/2017:20:56:32 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:m5kptgunhv4cgcl21oli1gecn4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:57:12===========================
+service_cost:34.907
+time:20/Aug/2017:20:57:12 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:57:22===========================
+service_cost:38.166
+time:20/Aug/2017:20:57:22 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:m5kptgunhv4cgcl21oli1gecn4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:58:02===========================
+service_cost:19.979
+time:20/Aug/2017:20:58:02 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:58:12===========================
+service_cost:36.254
+time:20/Aug/2017:20:58:12 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:m5kptgunhv4cgcl21oli1gecn4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:58:52===========================
+service_cost:31.854
+time:20/Aug/2017:20:58:52 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:59:02===========================
+service_cost:44.293
+time:20/Aug/2017:20:59:02 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:m5kptgunhv4cgcl21oli1gecn4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:59:42===========================
+service_cost:59.894
+time:20/Aug/2017:20:59:42 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 20:59:52===========================
+service_cost:35.902
+time:20/Aug/2017:20:59:52 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:m5kptgunhv4cgcl21oli1gecn4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 21:00:32===========================
+service_cost:9.328
+time:20/Aug/2017:21:00:32 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 21:00:42===========================
+service_cost:0.84200000000001
+time:20/Aug/2017:21:00:42 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:m5kptgunhv4cgcl21oli1gecn4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 21:01:22===========================
+service_cost:33.02
+time:20/Aug/2017:21:01:22 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 21:01:32===========================
+service_cost:25.819
+time:20/Aug/2017:21:01:32 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:m5kptgunhv4cgcl21oli1gecn4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 21:02:12===========================
+service_cost:24.714
+time:20/Aug/2017:21:02:12 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 21:02:22===========================
+service_cost:5.154
+time:20/Aug/2017:21:02:22 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:m5kptgunhv4cgcl21oli1gecn4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 21:03:03===========================
+service_cost:-956.951
+time:20/Aug/2017:21:03:03 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 21:03:12===========================
+service_cost:26.546
+time:20/Aug/2017:21:03:12 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:m5kptgunhv4cgcl21oli1gecn4;
+client_ip:192.168.1.102
+error_no:13053
+error_msg:No suitable servers found (`serverSelectionTryOnce` set): [socket timeout calling ismaster on '60.205.136.72:27001']
+=====================2017-08-20 21:03:12===========================
+service_cost:66.383
+time:20/Aug/2017:21:03:12 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:m5kptgunhv4cgcl21oli1gecn4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:04:53===========================
+service_cost:66.864
+time:20/Aug/2017:21:04:53 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:04:53===========================
+service_cost:0.02599999999997
+time:20/Aug/2017:21:04:53 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:04:57===========================
+service_cost:181.18
+time:20/Aug/2017:21:04:57 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/student
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:04:57===========================
+service_cost:161.712
+time:20/Aug/2017:21:04:57 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:05:00===========================
+service_cost:606.149
+time:20/Aug/2017:21:05:00 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/homework
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:05:01===========================
+service_cost:349.846
+time:20/Aug/2017:21:05:01 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/homework?pn=1
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:05:09===========================
+service_cost:138.913
+time:20/Aug/2017:21:05:09 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/project
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:05:10===========================
+service_cost:62.537
+time:20/Aug/2017:21:05:10 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/project?pn=1
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:05:11===========================
+service_cost:60.456
+time:20/Aug/2017:21:05:11 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/action
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:05:12===========================
+service_cost:109.347
+time:20/Aug/2017:21:05:12 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/action?pn=1
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:05:16===========================
+service_cost:37.48
+time:20/Aug/2017:21:05:16 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/school
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:05:23===========================
+service_cost:0.032000000000032
+time:20/Aug/2017:21:05:23 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/school/insert
+request_method:POST
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 21:05:28===========================
+service_cost:27.286
+time:20/Aug/2017:21:05:28 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/class
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:40===========================
+service_cost:0.01599999999996
+time:20/Aug/2017:21:11:40 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/index.html
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:44===========================
+service_cost:41.865
+time:20/Aug/2017:21:11:44 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/action
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:44===========================
+service_cost:38.245
+time:20/Aug/2017:21:11:44 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/action?pn=1
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:45===========================
+service_cost:279.265
+time:20/Aug/2017:21:11:45 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/homework
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:46===========================
+service_cost:-700.274
+time:20/Aug/2017:21:11:46 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/homework?pn=1
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:49===========================
+service_cost:44.451
+time:20/Aug/2017:21:11:49 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/project
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:49===========================
+service_cost:263.533
+time:20/Aug/2017:21:11:49 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/project?pn=1
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:50===========================
+service_cost:32.658
+time:20/Aug/2017:21:11:50 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/action
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:50===========================
+service_cost:71.252
+time:20/Aug/2017:21:11:50 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/action?pn=1
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:51===========================
+service_cost:261.652
+time:20/Aug/2017:21:11:51 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/homework
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:52===========================
+service_cost:304.097
+time:20/Aug/2017:21:11:52 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/homework?pn=1
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:52===========================
+service_cost:36.333
+time:20/Aug/2017:21:11:52 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/project
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:53===========================
+service_cost:113.745
+time:20/Aug/2017:21:11:53 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/project?pn=1
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:54===========================
+service_cost:28.929
+time:20/Aug/2017:21:11:54 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/action
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:54===========================
+service_cost:39.415
+time:20/Aug/2017:21:11:54 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/sport/action?pn=1
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 21:11:59===========================
+service_cost:31.614
+time:20/Aug/2017:21:11:59 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/class
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:13:20===========================
+service_cost:25.16
+time:20/Aug/2017:22:13:20 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/dologin
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:13:20===========================
+service_cost:0.014000000000014
+time:20/Aug/2017:22:13:20 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:13:24===========================
+service_cost:487.838
+time:20/Aug/2017:22:13:24 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/sport/homework
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:13:25===========================
+service_cost:-725.689
+time:20/Aug/2017:22:13:25 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/sport/homework?pn=1
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:13:27===========================
+service_cost:26.478
+time:20/Aug/2017:22:13:27 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/school
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:13:31===========================
+service_cost:30.029
+time:20/Aug/2017:22:13:31 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:40:40===========================
+service_cost:0.024999999999997
+time:20/Aug/2017:22:40:40 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/class/insert
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:42:23===========================
+service_cost:0.080999999999998
+time:20/Aug/2017:22:42:23 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/class/insert
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 22:42:49===========================
+service_cost:0.018000000000001
+time:20/Aug/2017:22:42:49 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 22:42:53===========================
+service_cost:0.016000000000016
+time:20/Aug/2017:22:42:53 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 22:42:57===========================
+service_cost:0.017000000000045
+time:20/Aug/2017:22:42:57 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 22:43:21===========================
+service_cost:0.012999999999985
+time:20/Aug/2017:22:43:21 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 22:43:36===========================
+service_cost:0.043000000000001
+time:20/Aug/2017:22:43:36 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 22:43:52===========================
+service_cost:25.843
+time:20/Aug/2017:22:43:52 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/school
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:43:57===========================
+service_cost:26.451
+time:20/Aug/2017:22:43:57 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/school?schoolname=%E6%B5%8B%E8%AF%95&schoolid=&projectId=
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:44:01===========================
+service_cost:24.499
+time:20/Aug/2017:22:44:01 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/school?schoolname=%E6%B5%8B%E8%AF%95&schoolid=&projectId=
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:44:02===========================
+service_cost:19.876
+time:20/Aug/2017:22:44:02 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/school?schoolname=%E6%B5%8B%E8%AF%95&schoolid=&projectId=
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:44:28===========================
+service_cost:36.047
+time:20/Aug/2017:22:44:28 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:46:13===========================
+service_cost:35.519
+time:20/Aug/2017:22:46:13 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:46:15===========================
+service_cost:26.185
+time:20/Aug/2017:22:46:15 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class?schoolid=undefined
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:46:32===========================
+service_cost:24.327
+time:20/Aug/2017:22:46:32 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class?grade=-1&schoolname=&schoolid=undefined&classname=&classid=
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:46:46===========================
+service_cost:24.459
+time:20/Aug/2017:22:46:46 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class?grade=11&schoolname=%E6%B5%8B%E8%AF%95&schoolid=undefined&classname=&classid=
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:46:49===========================
+service_cost:369.355
+time:20/Aug/2017:22:46:49 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class?grade=11&schoolname=%E6%B5%8B%E8%AF%95&schoolid=undefined&classname=&classid=
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:46:58===========================
+service_cost:25.525
+time:20/Aug/2017:22:46:58 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class?grade=11&schoolname=&schoolid=undefined&classname=&classid=
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:47:04===========================
+service_cost:22.425
+time:20/Aug/2017:22:47:04 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class?grade=11&schoolname=%E6%B5%8B%E8%AF%95&schoolid=&classname=&classid=
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:50:42===========================
+service_cost:26.491
+time:20/Aug/2017:22:50:42 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:50:47===========================
+service_cost:39
+time:20/Aug/2017:22:50:47 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/student
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:50:47===========================
+service_cost:69.332
+time:20/Aug/2017:22:50:47 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/student?imageView2/2/w/100/h/60/q/100
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:50:50===========================
+service_cost:29.381
+time:20/Aug/2017:22:50:50 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:50:55===========================
+service_cost:33.861
+time:20/Aug/2017:22:50:55 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:51:04===========================
+service_cost:-975.413
+time:20/Aug/2017:22:51:04 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/school
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:51:07===========================
+service_cost:21.489
+time:20/Aug/2017:22:51:07 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/school?schoolname=%E6%B5%8B%E8%AF%95&schoolid=&projectId=
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:51:14===========================
+service_cost:31.245
+time:20/Aug/2017:22:51:14 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:58:27===========================
+service_cost:-912.533
+time:20/Aug/2017:22:58:27 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 22:59:43===========================
+service_cost:53.563
+time:20/Aug/2017:22:59:43 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:00:00===========================
+service_cost:39.285
+time:20/Aug/2017:23:00:00 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:00:35===========================
+service_cost:28.306
+time:20/Aug/2017:23:00:35 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 23:00:44===========================
+service_cost:27.161
+time:20/Aug/2017:23:00:44 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 23:01:09===========================
+service_cost:22.156
+time:20/Aug/2017:23:01:09 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 23:01:28===========================
+service_cost:21.177
+time:20/Aug/2017:23:01:28 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 23:01:40===========================
+service_cost:31.071
+time:20/Aug/2017:23:01:40 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/school
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:01:43===========================
+service_cost:186.234
+time:20/Aug/2017:23:01:43 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/school?schoolname=%E6%B5%8B%E8%AF%95&schoolid=&projectId=
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:01:57===========================
+service_cost:19.73
+time:20/Aug/2017:23:01:57 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 23:02:04===========================
+service_cost:21.917
+time:20/Aug/2017:23:02:04 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 23:02:42===========================
+service_cost:45.887
+time:20/Aug/2017:23:02:42 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no:7
+error_msg:请求参数错误
+=====================2017-08-20 23:05:48===========================
+service_cost:260.465
+time:20/Aug/2017:23:05:48 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:07:17===========================
+service_cost:23.607
+time:20/Aug/2017:23:07:17 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/school
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:07:19===========================
+service_cost:23.756
+time:20/Aug/2017:23:07:19 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/class
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:07:21===========================
+service_cost:59.469
+time:20/Aug/2017:23:07:21 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/class
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:07:31===========================
+service_cost:17.947
+time:20/Aug/2017:23:07:31 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0
+ourl:/user/class?grade=-1&schoolname=&schoolid=&classname=&classid=ee
+request_method:GET
+cookie:PHPSESSID:tm82vtaaj07p4db0h4q51e8in4;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:09:38===========================
+service_cost:33.556
+time:20/Aug/2017:23:09:38 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:09:39===========================
+service_cost:19.279
+time:20/Aug/2017:23:09:39 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class?classid=undefined
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:10:03===========================
+service_cost:64.762
+time:20/Aug/2017:23:10:03 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/class/insert
+request_method:POST
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:10:04===========================
+service_cost:26.284
+time:20/Aug/2017:23:10:04 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class?classid=5999a64b3987f42740501d53
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:10:42===========================
+service_cost:-684.58
+time:20/Aug/2017:23:10:42 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/sport/homework
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:10:42===========================
+service_cost:313.406
+time:20/Aug/2017:23:10:42 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/sport/homework?pn=1
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:10:44===========================
+service_cost:48.399
+time:20/Aug/2017:23:10:44 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/sport/project
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:10:45===========================
+service_cost:53.579
+time:20/Aug/2017:23:10:45 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/sport/project?pn=1
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:10:47===========================
+service_cost:38.243
+time:20/Aug/2017:23:10:47 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/sport/p/598c2766e1382305641836b3.html
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:10:48===========================
+service_cost:21.259
+time:20/Aug/2017:23:10:48 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/project/addhomework?projectId=598c2766e1382305641836b3
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:10:55===========================
+service_cost:26.288
+time:20/Aug/2017:23:10:55 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/school
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:11:00===========================
+service_cost:43.754
+time:20/Aug/2017:23:11:00 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/class
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success
+=====================2017-08-20 23:12:09===========================
+service_cost:30.63
+time:20/Aug/2017:23:12:09 +0800
+entrance_type:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+ourl:/user/school
+request_method:GET
+cookie:PHPSESSID:6nht9828eoe2muh4b8eagld4g2;
+client_ip:192.168.1.102
+error_no
+error_msg:success

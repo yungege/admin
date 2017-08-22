@@ -19,7 +19,7 @@ h4{
 {%block name="content"%}
 <div class="row">
     <div class="col-lg-12">
-        <h1>{%$pinfo.name%}</h1>
+        <h1>{%$pinfo.name%}  <a href="/project/addhomework?projectId={%$pinfo._id%}">创建作业</a></h1>
         <p><h1><small>{%$pinfo.desc%}</small></h1></p>
     </div>
 </div>
