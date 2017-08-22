@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-21 17:44:11
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-22 22:23:57
          compiled from "/var/www/admin/admin/application/views/template/sport/pro.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:716229385599aab6b8aaf07-16648855%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1913692514599c3e7db595a8-25856819%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '310eddac9d26dc72a5ef5358f10af9ece24579b3' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/pro.tpl',
-      1 => 1502328734,
+      1 => 1503411493,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1502435993,
+      1 => 1503411493,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '716229385599aab6b8aaf07-16648855',
+  'nocache_hash' => '1913692514599c3e7db595a8-25856819',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599aab6b9fd161_65850871',
+  'unifunc' => 'content_599c3e7dbed830_72942459',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599aab6b9fd161_65850871')) {function content_599aab6b9fd161_65850871($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_599c3e7dbed830_72942459')) {function content_599c3e7dbed830_72942459($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -273,7 +273,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 <div class="row">
     <div class="col-lg-12">
         <h1><?php echo $_smarty_tpl->tpl_vars['pinfo']->value['name'];?>
-</h1>
+  <a href="/project/addhomework?projectId=<?php echo $_smarty_tpl->tpl_vars['pinfo']->value['_id'];?>
+">创建作业</a></h1>
         <p><h1><small><?php echo $_smarty_tpl->tpl_vars['pinfo']->value['desc'];?>
 </small></h1></p>
     </div>

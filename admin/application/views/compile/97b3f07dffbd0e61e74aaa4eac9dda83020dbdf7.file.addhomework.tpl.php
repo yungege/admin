@@ -1,12 +1,12 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-22 22:28:11
-         compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1645461694599c3f7bc173b6-48841365%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-22 22:24:02
+         compiled from "/var/www/admin/admin/application/views/template/project/addhomework.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1173752597599c3e823bb354-53309995%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'b4a1f2066f4bec0287ce25061e47e07da8bb62fd' => 
+    '97b3f07dffbd0e61e74aaa4eac9dda83020dbdf7' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/version/add.tpl',
+      0 => '/var/www/admin/admin/application/views/template/project/addhomework.tpl',
       1 => 1503411493,
       2 => 'file',
     ),
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1645461694599c3f7bc173b6-48841365',
+  'nocache_hash' => '1173752597599c3e823bb354-53309995',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599c3f7bc6bdc2_26109037',
+  'unifunc' => 'content_599c3e8241dbc0_97365405',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599c3f7bc6bdc2_26109037')) {function content_599c3f7bc6bdc2_26109037($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599c3e8241dbc0_97365405')) {function content_599c3e8241dbc0_97365405($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -106,6 +106,31 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<style type="text/css">
+    .fx-btn{
+        border: 1px solid #ccc;
+        padding: 165px 20px 0 20px;
+        height: 532px;
+    }
+    .fx-btn a{
+        display: block;
+        margin-bottom: 10px;
+    }
+    #class-list,#class-list-select,#class-list-rest{
+        height: 500px;
+    }
+    .border-h3{
+        border-left: 5px solid #5bc0de;
+        padding-left: 15px;
+        font-size: 20px;
+    }
+
+  /*  #start,#end,#homework-type,#homework-name,#homework-describe,#homework-require,#homework-type,#makeup-limit,#makeup-interval{
+        width: 700px;
+    }*/
+   
+</style>
+
 </head>
 
 <body>
@@ -247,7 +272,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 客户端管理 / 发布新版本
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 发布作业
                             </li>
                         </ol>
                     </div>
@@ -258,44 +283,186 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
 <div class="row">
     <div class="col-lg-12">
-        <form name="version">
+        <h3 class="border-h3">所选方案 ：<?php if ($_smarty_tpl->tpl_vars['projectName']->value!=''){?>  <?php echo $_smarty_tpl->tpl_vars['projectName']->value;?>
+   <?php }else{ ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/sport/project">选择</a>  <?php }?></h3>
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="border-h3">所选学校 ：<?php echo $_smarty_tpl->tpl_vars['schoolName']->value;?>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="/user/school?type=1&projectId=<?php echo $_smarty_tpl->tpl_vars['projectId']->value;?>
+">选择</a></h3>
+        
+    </div>
+</div>
+                                                    
+<div class="row">
+    <div class="col-lg-12">
+    <h3 class="border-h3">起止时间</h3>
+    <div class="col-sm-5 input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
+        <input readonly type="text" class="form-control" id="start" name="start" value="<?php echo $_GET['start'];?>
+" >
+        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+    </div>
+    
+    <div class="col-sm-5 input-group date date_end" data-date="" data-date-format="yyyy-mm-dd">
+        <input readonly type="text" class="form-control" id="end" name="end" value="<?php echo $_GET['end'];?>
+">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+    </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+    <h3 class="border-h3">作业类型</h3>
+    <select class="form-control" name="homework-type" id="homework-type">
+        <option value=1>翻转课堂</option>
+        <option value=2>身体素质作业</option>
+    </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+    <H3 class="border-h3">作业名字</H3>
+    <input type="text" class="form-control" name="homework-name" id="homework-name">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+    <H3 class="border-h3">作业描述</H3>
+    <input type="text" class="form-control" name="homework-describe" id="homework-describe">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+    <H3 class="border-h3">作业要求</H3>
+    <input type="text" class="form-control" name="homework-require" id="homework-require">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+    <h3 class="border-h3">周锻炼次数</h3>
+    <select class="form-control" name="week-done-no" id="week-done-no">
+        <option value=1>每周1天</option>
+        <option value=2>每周2天</option>
+        <option value=3>每周3天</option>
+        <option value=4>每周4天</option>
+        <option value=5>每周5天</option>
+        <option value=6>每周6天</option>
+        <option value=7>每周7天</option>
+    </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+    <H3 class="border-h3">锻炼时间间隔(每隔几小时锻炼一次)</H3>
+    <input type="text" class="form-control" name="makeup-limit" id="makeup-limit">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+    <H3 class="border-h3">补作业锻炼限制(允许补多少天以内的作业)</H3>
+    <input type="text" class="form-control" name="makeup-interval" id="makeup-interval">
+    </div>
+</div>
+          
+
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="border-h3">添加班级</h3><br/>
+        <form class="form-inline" name="class">
             <div class="form-group">
-                <label for="platform">发布平台</label>
-                <select id="platform" class="form-control" name="type">
-                    <option value="-1">选择发布平台</option>
-                    <option value="0" >iOS【当前最新版本 <?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
-】</option>
-                    <option value="1">Android【当前最新版本 <?php echo $_smarty_tpl->tpl_vars['android']->value;?>
-】</option>
+                <label for="grade-type">年级</label>
+                <select class="form-control" name="grade" id="grade-type">
+                    <option value="">ALL</option>
+                    <option value="11">小学1年级</option>
+                    <option value="12">小学2年级</option>
+                    <option value="13">小学3年级</option>
+                    <option value="14">小学4年级</option>
+                    <option value="15">小学5年级</option>
+                    <option value="16">小学6年级</option>
+                    <option value="21">初中1年级</option>
+                    <option value="22">初中2年级</option>
+                    <option value="23">初中3年级</option>
+                    <option value="31">高中1年级</option>
+                    <option value="32">高中2年级</option>
+                    <option value="33">高中3年级</option>
+                    <!-- 4 => '休息', -->
                 </select>
             </div>
-
             <div class="form-group">
-                <label for="vname">版本名称</label>
-                <input type="text" class="form-control" id="vname" placeholder="Version Name" name="version">
+                <label for="grade-name">班级名称</label>
+                <input type="text" class="form-control" name="name" id="action-name">
             </div>
-
             <div class="form-group">
-                <label for="vno">版本号</label>
-                <input type="text" class="form-control" id="vno" placeholder="Version No" name="versionno">
+                <input type="hidden" class="form-control" name="schoolId" value="<?php echo $_smarty_tpl->tpl_vars['schoolId']->value;?>
+">
+                <input type="hidden" class="form-control" name="projectId" value="<?php echo $_smarty_tpl->tpl_vars['projectId']->value;?>
+">
             </div>
-
-            <div class="form-group">
-                <label for="description">更新说明</label>
-                <textarea id="description" class="form-control" rows="3" name="description"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="downloadurl">下载URL</label>
-                <input type="text" class="form-control" id="downloadurl" placeholder="Download URL" name="downloadurl">
-            </div>
-              
-            <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
-" data-1="<?php echo $_smarty_tpl->tpl_vars['android']->value;?>
-">确认发布</button>
+            
+            <button type="button" class="btn btn-info" id="search">检索</button>
         </form>
     </div>
 </div>
+
+
+<div class="row" style="margin-top: 20px;padding: 15px;">
+    <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="class-list">
+            <?php  $_smarty_tpl->tpl_vars['ac'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ac']->_loop = false;
+ $_smarty_tpl->tpl_vars['idx'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['actionList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ac']->key => $_smarty_tpl->tpl_vars['ac']->value){
+$_smarty_tpl->tpl_vars['ac']->_loop = true;
+ $_smarty_tpl->tpl_vars['idx']->value = $_smarty_tpl->tpl_vars['ac']->key;
+?>
+                <optgroup label="<?php echo $_smarty_tpl->tpl_vars['type']->value[$_smarty_tpl->tpl_vars['idx']->value];?>
+">
+                    <?php  $_smarty_tpl->tpl_vars['acl'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['acl']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['ac']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['acl']->key => $_smarty_tpl->tpl_vars['acl']->value){
+$_smarty_tpl->tpl_vars['acl']->_loop = true;
+?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['acl']->value['_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['acl']->value['name'];?>
+</option>
+                    <?php } ?>
+                </optgroup>
+            <?php } ?>
+        </select>
+    </div>
+    <div class="col-lg-2">
+        <div class="text-center fx-btn" >
+            <a id="t-r" href="javascript:void(0)" class="btn btn-sm btn-default">添加</a>
+            <a id="t-l" href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
+        </div>
+    </div>
+    <div class="col-lg-3" style="border: 1px solid #ccc;padding: 15px;">
+        <select multiple class="form-control" id="class-list-select">
+            <!-- <option>1</option> -->
+        </select>
+    </div>
+    
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <form class="form-inline" name="sku">
+            <button type="button" id="addHomeworkBtn" class="btn btn-md btn-primary">发布作业</button>
+        </form>
+    </div>
+</div>
+        
 
 
 
@@ -327,89 +494,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     </script>
 
     
-<script type="text/javascript">
-    !(function(){
-        var publish = {
-            init: function(){
-                this.getDom();
-                this.postData();
-            },
-            getDom: function(){
-                this.subBtn = $('#sub');
-                this.pt = $('#platform');
-                this.vname = $('#vname');
-                this.no = $('#vno');
-                this.desc = $('#description');
-                this.url = $('#downloadurl');
-                this.form = $('form[name=version]');
-            },
-            checkParams: function(){
-                var me = this;
-
-                var pt = me.pt.val();
-
-                if(pt != 0 && pt != 1){
-                    alert('请选择发布平台.');
-                    return false;
-                }
-
-                var name = $.trim(me.vname.val());
-                if(!name){
-                    alert('请输入版本名.');
-                    return false;
-                }
-
-                var no = parseInt($.trim(me.no.val()));
-                if(!no || typeof(no) == 'undefiend'){
-                    alert('请输入正确的版本号.');
-                    return false;
-                }
-
-                var desc = $.trim(me.desc.val());
-                if(!name){
-                    alert('请输入版本更新说明.');
-                    return false;
-                }
-
-                var url = $.trim(me.url.val());
-                if(!url && !url.match(/(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/g)){
-                    alert('请输入合法的URL.');
-                    return false;
-                }
-            },
-            postData: function(){
-                var me = this;
-
-                me.subBtn.unbind().bind('click', function(){
-                    var res = me.checkParams();
-                    if(res === false){
-                        return false;
-                    }
-
-                    var curentNo = $(this).attr('data-'+me.pt.val());
-                    if(curentNo >= $.trim(me.no.val())){
-                        alert('请检查您输入的版本号是否低于当前版本号.');
-                        return false;
-                    }
-
-                    var formdata = me.form.serialize();
-                    $.post('/version/publish', formdata, function(json){
-                        if(json.code != -1){
-                            window.location = '/version/index';
-                        }
-                        else{
-                            alert('发布失败.');
-                            return false;
-                        }
-                    });
-                })
-            }
-
-        };
-
-        publish.init();
-    })()
-</script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/static/project/js/addHomework.js"></script>
+<script type="text/javascript" src="/static/ugc/index.js"></script>
 
 </body>
 </html><?php }} ?>
