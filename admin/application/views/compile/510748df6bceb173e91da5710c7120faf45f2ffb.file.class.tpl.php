@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-14 14:50:21
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-22 22:23:43
          compiled from "/var/www/admin/admin/application/views/template/user/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:16061352015991482d582510-73104417%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:464569638599c3e6f272e12-08054017%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '510748df6bceb173e91da5710c7120faf45f2ffb' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/class.tpl',
-      1 => 1501741066,
+      1 => 1503411493,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501753746,
+      1 => 1503411493,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16061352015991482d582510-73104417',
+  'nocache_hash' => '464569638599c3e6f272e12-08054017',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5991482d5cf512_68415596',
+  'unifunc' => 'content_599c3e6f30a920_63483598',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5991482d5cf512_68415596')) {function content_5991482d5cf512_68415596($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599c3e6f30a920_63483598')) {function content_599c3e6f30a920_63483598($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -55,6 +55,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <!-- Custom Fonts -->
     <link href="/static/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/static/widget/alertBox/alert.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -93,6 +95,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             margin-right: 5px;
             border: 1px solid #333;
             background: #fff;
+        }
+        /*alert 插件*/
+        .alert-btn-p{
+            /*width: 100%!important;*/
+            margin-bottom: 0!important;
+        }
+        .alert-container{
+            width: 400px!important;
         }
     </style>
     
@@ -241,7 +251,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 用户管理 / 班级管理
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 用户管理 / 班级管理  <a href="/class/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加班级</a>
                             </li>
                         </ol>
                     </div>
@@ -389,6 +399,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/widget/alertBox/alert.js"></script>
 
     <script type="text/javascript">
         !(function(){
