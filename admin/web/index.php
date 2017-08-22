@@ -7,7 +7,7 @@ define('APP_DOMAIN', '');
 define('APPLICATION_PATH', dirname(dirname(__FILE__)));
 define('APP_PATH', APPLICATION_PATH.'/application');
 define('VIEW_PATH', APP_PATH.'/views');
-define('LOG_DIR', APP_PATH . '/log/');
+define('LOG_DIR', '/var/log/admin/php');
 
 ini_set('yaf.use_spl_autoload', 1);
 
