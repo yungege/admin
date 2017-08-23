@@ -59,7 +59,7 @@ class UmengPush {
 
 	}
 
-	public function androidPush($title,$content,$deviceToken){
+	public function androidPushByListcast($title,$content,$deviceToken){
 
 		$postData['appkey'] = self::appKey;
 		$postData['timestamp'] = time();
