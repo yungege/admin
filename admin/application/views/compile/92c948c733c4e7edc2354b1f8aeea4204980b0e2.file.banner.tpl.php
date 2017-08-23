@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 09:37:26
          compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1105361844599cdc560b3851-44832664%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-22 11:05:12
+         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1802930341599b9f681896c6-36616142%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> d5f7702ede91fcd2bea15e2e3daac029e9e88000
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '92c948c733c4e7edc2354b1f8aeea4204980b0e2' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/banner.tpl',
+<<<<<<< HEAD
       1 => 1503411493,
+=======
+      1 => 1501642381,
+>>>>>>> d5f7702ede91fcd2bea15e2e3daac029e9e88000
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1503417617,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '1105361844599cdc560b3851-44832664',
+=======
+      1 => 1502435993,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1802930341599b9f681896c6-36616142',
+>>>>>>> d5f7702ede91fcd2bea15e2e3daac029e9e88000
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_599cdc5615ccc8_43196574',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_599cdc5615ccc8_43196574')) {function content_599cdc5615ccc8_43196574($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_599b9f682bb6d1_51059857',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_599b9f682bb6d1_51059857')) {function content_599b9f682bb6d1_51059857($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> d5f7702ede91fcd2bea15e2e3daac029e9e88000
 <html lang="en">
 
 <head>
@@ -491,7 +515,11 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<<<<<<< HEAD
    <!--  <script src="/static/widget/alertBox/alert.js"></script> -->
+=======
+    <script src="/static/widget/alertBox/alert.js"></script>
+>>>>>>> d5f7702ede91fcd2bea15e2e3daac029e9e88000
 
     <script type="text/javascript">
         !(function(){

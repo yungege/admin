@@ -9,9 +9,8 @@ class Service_Feedback_IndexModel extends BasePageService {
     protected $reqData;
     protected $resData = [
         'pageTag' => '4-5',
-        'pageCount' => 0,
         'list' => [],
-        'pn' => 1,
+        'page' => '',
     ];
 
     public function __construct() {
@@ -27,7 +26,6 @@ class Service_Feedback_IndexModel extends BasePageService {
         $req = $req['get'];
         if(!isset($req['pn']) || !is_numeric($req['pn']))
             $req['pn'] = 1;
-        $this->resData['pn'] = $req['pn'];
         $offset = ($req['pn'] - 1) * self::PAGESIZE;
         $sort = ['createtime' => -1];
         
@@ -37,7 +35,8 @@ class Service_Feedback_IndexModel extends BasePageService {
             'sort' => $sort,
         ];
         $count = $this->fedModel->count();
-        $this->resData['pageCount'] = ceil($count / self::PAGESIZE);
+        $page = new Page($count, self::PAGESIZE);
+        $this->resData['page'] = $page->show();
         if($count <= 0)
             return $this->resData;
 
@@ -74,7 +73,6 @@ class Service_Feedback_IndexModel extends BasePageService {
         }
 
         $this->resData['list'] = $list;
-
         return $this->resData;
     }
 
