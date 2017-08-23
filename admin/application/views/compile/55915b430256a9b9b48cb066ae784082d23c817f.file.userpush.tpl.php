@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 13:23:51
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 13:55:30
          compiled from "/var/www/admin/admin/application/views/template/push/userpush.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1852127742599d11671a8107-84243705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:243638772599d18d2d28476-16620232%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '55915b430256a9b9b48cb066ae784082d23c817f' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/userpush.tpl',
-      1 => 1503465815,
+      1 => 1503466595,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1852127742599d11671a8107-84243705',
+  'nocache_hash' => '243638772599d18d2d28476-16620232',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599d11671f3834_38276778',
+  'unifunc' => 'content_599d18d2d730a9_93429724',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599d11671f3834_38276778')) {function content_599d11671f3834_38276778($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599d18d2d730a9_93429724')) {function content_599d18d2d730a9_93429724($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -377,11 +377,12 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                     $.post('/push/puserpush', formdata, function(json){
 
-                        if(json.code != -1){
-                            window.location = '/version/index';
+                        if(json.code == 0){
+                            alert('推送成功.');
+                            window.location = '/push/puserpush';
                         }
                         else{
-                            alert('发布失败.');
+                            alert('托送失败.');
                             return false;
                         }
                     });
