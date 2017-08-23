@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 02:34:56
          compiled from "/var/www/admin/admin/application/views/template/project/add.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:553507205599c7950b49a61-00065762%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -7,6 +8,11 @@
          compiled from "/var/www/admin/admin/application/views/template/project/add.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:170628098599aa04f49b7c9-17520674%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 >>>>>>> d5f7702ede91fcd2bea15e2e3daac029e9e88000
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-22 15:28:54
+         compiled from "/var/www/admin/admin/application/views/template/project/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1087072171599bdd368bbc02-52646309%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> e42072933fe48e8c92c9cbb42809062c093217d4
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -34,8 +40,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '170628098599aa04f49b7c9-17520674',
 >>>>>>> d5f7702ede91fcd2bea15e2e3daac029e9e88000
+=======
+  'nocache_hash' => '1087072171599bdd368bbc02-52646309',
+>>>>>>> e42072933fe48e8c92c9cbb42809062c093217d4
   'function' => 
   array (
   ),
@@ -48,6 +58,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
+<<<<<<< HEAD
   'unifunc' => 'content_599c7950bb0861_63084387',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_599c7950bb0861_63084387')) {function content_599c7950bb0861_63084387($_smarty_tpl) {?><!DOCTYPE html>
@@ -56,6 +67,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_599aa04f4e23f6_33809051')) {function content_599aa04f4e23f6_33809051($_smarty_tpl) {?><!DOCTYPE html>
 >>>>>>> d5f7702ede91fcd2bea15e2e3daac029e9e88000
+=======
+  'unifunc' => 'content_599bdd36903457_01024204',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_599bdd36903457_01024204')) {function content_599bdd36903457_01024204($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> e42072933fe48e8c92c9cbb42809062c093217d4
 <html lang="en">
 
 <head>

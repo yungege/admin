@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 02:54:37
          compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:316406239599c7ded7584c0-61934352%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-22 15:33:41
+         compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1387151216599bde554bdff5-60292821%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> e42072933fe48e8c92c9cbb42809062c093217d4
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1d8e04a89d68bf3e9905973d00de2e54d91741e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/project/addsku.tpl',
+<<<<<<< HEAD
       1 => 1503411493,
+=======
+      1 => 1502785667,
+>>>>>>> e42072933fe48e8c92c9cbb42809062c093217d4
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1503417617,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '316406239599c7ded7584c0-61934352',
+=======
+      1 => 1502785667,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1387151216599bde554bdff5-60292821',
+>>>>>>> e42072933fe48e8c92c9cbb42809062c093217d4
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_599c7ded7bd128_40313184',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_599c7ded7bd128_40313184')) {function content_599c7ded7bd128_40313184($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_599bde5550db64_08564682',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_599bde5550db64_08564682')) {function content_599bde5550db64_08564682($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> e42072933fe48e8c92c9cbb42809062c093217d4
 <html lang="en">
 
 <head>
