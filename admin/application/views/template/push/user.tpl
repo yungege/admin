@@ -78,7 +78,7 @@
 
                     $.post('/push/puserpush', formdata, function(json){
 
-                        if(json.code == 0){
+                        if(json.code != -1){
                             alert('推送成功.');
                             window.location = '/push/puserpush';
                         }
