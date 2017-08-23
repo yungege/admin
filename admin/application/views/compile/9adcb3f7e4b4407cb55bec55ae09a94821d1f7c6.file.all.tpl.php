@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 16:36:45
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 17:29:24
          compiled from "/var/www/admin/admin/application/views/template/push/all.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:757298756599d3e9d503786-33330564%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2063736794599d4af41d21c4-07390491%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9adcb3f7e4b4407cb55bec55ae09a94821d1f7c6' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/all.tpl',
-      1 => 1503476045,
+      1 => 1503480535,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '757298756599d3e9d503786-33330564',
+  'nocache_hash' => '2063736794599d4af41d21c4-07390491',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599d3e9d5d9c06_32018227',
+  'unifunc' => 'content_599d4af42859c8_26267754',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599d3e9d5d9c06_32018227')) {function content_599d3e9d5d9c06_32018227($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599d4af42859c8_26267754')) {function content_599d4af42859c8_26267754($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -362,12 +362,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     }
 
                     var formdata = me.form.serialize();
-
                     $.post('/push/pall', formdata, function(json){
-
-alert(json);
-return false;
-
                         if(json.errCode == 0){
                             alert('推送成功.');
                             window.location = '/push/all';
