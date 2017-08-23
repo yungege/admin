@@ -42,8 +42,8 @@ class Service_Push_PUserPushModel extends BasePageService {
 
 		$data['theme'] = trim($req['theme']);
 		$data['content'] = trim($req['description']);
-		implode("," , $deviceToken['ios']);
-		implode("," , $deviceToken['android']);
+		$deviceToken['ios'] = implode("," , $deviceToken['ios']);
+		$deviceToken['android'] = implode("," , $deviceToken['android']);
 
 		$uMPush = new UmengPush();
 		$uMPush->iosPushByListcast($data['theme'],$data['content'],$deviceToken['ios']);
