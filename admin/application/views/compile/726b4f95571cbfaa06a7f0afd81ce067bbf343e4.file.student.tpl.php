@@ -1,23 +1,43 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 16:40:07
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1428413348599d3f67a13319-70540658%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 16:37:31
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1473859322599d3ecb9719a5-46728300%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 16:33:51
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:818065990599d3def03f444-78303285%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 340bb587e50740ed4fee9ea4380deabcef5506fc
+>>>>>>> f2e346fe852be542e674c4024f82183c49f726f1
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-      1 => 1501753746,
+      1 => 1503477447,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503467778,
+      1 => 1503467346,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '1428413348599d3f67a13319-70540658',
+=======
+<<<<<<< HEAD
+  'nocache_hash' => '1473859322599d3ecb9719a5-46728300',
+=======
+  'nocache_hash' => '818065990599d3def03f444-78303285',
+>>>>>>> 340bb587e50740ed4fee9ea4380deabcef5506fc
+>>>>>>> f2e346fe852be542e674c4024f82183c49f726f1
   'function' => 
   array (
   ),
@@ -29,9 +49,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_599d3f67a763e3_02671342',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_599d3f67a763e3_02671342')) {function content_599d3f67a763e3_02671342($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_599d3ecba98579_48770112',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_599d3ecba98579_48770112')) {function content_599d3ecba98579_48770112($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_599d3def0a3302_95159246',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_599d3def0a3302_95159246')) {function content_599d3def0a3302_95159246($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 340bb587e50740ed4fee9ea4380deabcef5506fc
+>>>>>>> f2e346fe852be542e674c4024f82183c49f726f1
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -405,6 +437,7 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                         <!-- <th class="text-center">ID</th> -->
                         <th>头像</th>
                         <th>姓名/昵称</th>
+                        <th>用户ID</th>
                         <th>学校</th>
                         <th>年级</th>
                         <th>班级</th>
@@ -432,6 +465,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></td>
                         <td>姓名：<?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
 <br/>昵称：<?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 </td>
                         <td><a href="/user/school?schoolid=<?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolid'];?>
 "><?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolname'];?>

@@ -1,33 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 15:43:44
-         compiled from "/var/www/admin/admin/application/views/template/push/user.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1658663418599d3230166fe4-09572529%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 15:30:59
-         compiled from "/var/www/admin/admin/application/views/template/push/user.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:371247397599d2f33115498-03682284%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> f8ef186d2c06e5f421a828f8a1969bbec44150c6
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 16:33:27
-         compiled from "/var/www/admin/admin/application/views/template/push/user.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1233217772599d3dd7a3e8a4-53964728%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 340bb587e50740ed4fee9ea4380deabcef5506fc
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 16:36:45
+         compiled from "/var/www/admin/admin/application/views/template/push/all.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:757298756599d3e9d503786-33330564%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'bef1c2f4509611994eddbb75e05c1271229adb5e' => 
+    '9adcb3f7e4b4407cb55bec55ae09a94821d1f7c6' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/push/user.tpl',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      1 => 1503474210,
-=======
-      1 => 1503470593,
->>>>>>> f8ef186d2c06e5f421a828f8a1969bbec44150c6
-=======
-      1 => 1503473695,
->>>>>>> 340bb587e50740ed4fee9ea4380deabcef5506fc
+      0 => '/var/www/admin/admin/application/views/template/push/all.tpl',
+      1 => 1503476045,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -37,15 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-<<<<<<< HEAD
-  'nocache_hash' => '1658663418599d3230166fe4-09572529',
-=======
-  'nocache_hash' => '371247397599d2f33115498-03682284',
->>>>>>> f8ef186d2c06e5f421a828f8a1969bbec44150c6
-=======
-  'nocache_hash' => '1233217772599d3dd7a3e8a4-53964728',
->>>>>>> 340bb587e50740ed4fee9ea4380deabcef5506fc
+  'nocache_hash' => '757298756599d3e9d503786-33330564',
   'function' => 
   array (
   ),
@@ -57,21 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-<<<<<<< HEAD
-  'unifunc' => 'content_599d32301f9f25_31695368',
+  'unifunc' => 'content_599d3e9d5d9c06_32018227',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599d32301f9f25_31695368')) {function content_599d32301f9f25_31695368($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_599d2f3315fea2_49825534',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599d2f3315fea2_49825534')) {function content_599d2f3315fea2_49825534($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> f8ef186d2c06e5f421a828f8a1969bbec44150c6
-=======
-  'unifunc' => 'content_599d3dd7a8aa03_77859170',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599d3dd7a8aa03_77859170')) {function content_599d3dd7a8aa03_77859170($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 340bb587e50740ed4fee9ea4380deabcef5506fc
+<?php if ($_valid && !is_callable('content_599d3e9d5d9c06_32018227')) {function content_599d3e9d5d9c06_32018227($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -304,7 +264,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 推送管理 / 个人推送
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 推送管理 / 全员推送
                             </li>
                         </ol>
                     </div>
@@ -318,18 +278,13 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
         <form name="push">
 
             <div class="form-group">
-                <label for="vname">用户ID &nbsp; (&nbsp; 提示：多个UserId通过 &nbsp;&nbsp;| &nbsp;&nbsp; 隔开 &nbsp;)</label>
-                <input type="text" class="form-control" id="userIds" placeholder="User Id" name="userIds">
-            </div>
-
-            <div class="form-group">
                 <label for="vno">推送主题</label>
                 <input type="text" class="form-control" id="theme" placeholder="Push Theme" name="theme">
             </div>
 
             <div class="form-group">
                 <label for="description">推送内容</label>
-                <textarea id="description" class="form-control"  placeholder="Push Content" rows="3" name="description"></textarea>
+                <textarea id="description" class="form-control" placeholder="Push  Content" rows="3" name="description"></textarea>
             </div>
               
             <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
@@ -378,19 +333,12 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             },
             getDom: function(){
                 this.subBtn = $('#sub');
-                this.userIds = $('#userIds');
                 this.theme = $('#theme');
                 this.desc = $('#description');
                 this.form = $('form[name=push]');
             },
             checkParams: function(){
                 var me = this;
-
-                var userIds = $.trim(me.userIds.val());
-                if(!userIds){
-                    alert('请输入用户ID.');
-                    return false;
-                }
 
                 var theme = $.trim(me.theme.val());
                 if(!theme){
@@ -415,11 +363,11 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                     var formdata = me.form.serialize();
 
-<<<<<<< HEAD
                     $.post('/push/pall', formdata, function(json){
-=======
-                    $.post('/push/puser', formdata, function(json){
->>>>>>> 340bb587e50740ed4fee9ea4380deabcef5506fc
+
+alert(json);
+return false;
+
                         if(json.errCode == 0){
                             alert('推送成功.');
                             window.location = '/push/all';

@@ -13,7 +13,7 @@ class UmengPush {
 	const httpMethod = 'POST';
 
 
-	public function iosPushByListcast($title,$content,$deviceToken){
+	protected function iosPushByListcast($title,$content,$deviceToken){
 
 		$postData['appkey'] = self::iosAppKey;
 		$postData['timestamp'] = time();
@@ -28,7 +28,30 @@ class UmengPush {
 		$postData['filter']['where']['and'][] = $filter;
 		$postData['production_mode'] = 'true';
 
-		$post_body = json_encode($postData);
+		$output = $this->sendPushByIos($postData);
+		return $output;
+	}
+
+	protected function androidPushByListcast($title,$content,$deviceToken){
+
+		$postData['appkey'] = self::androidAppKey;
+		$postData['timestamp'] = time();
+		$postData['type'] = 'listcast';
+		$postData['device_tokens'] = $deviceToken;
+		$postData['payload']['display_type'] = "notification";
+		$postData['payload']['body']['ticker'] = $title;
+		$postData['payload']['body']['title'] = $title;
+		$postData['payload']['body']['text'] = $content ;
+		$postData['payload']['businessname'] = 0;
+		$postData['production_model'] = "true";
+
+		$output = $this->sendPushByAndroid($postData);
+		return $output;
+	}
+
+	protected function sendPushByIos($data){
+
+		$post_body = json_encode($data);
 		// 请求方法
 		$http_method = self::httpMethod;
 		// 请求url信息
@@ -56,20 +79,9 @@ class UmengPush {
 	    return $output;
 	}
 
-	public function androidPushByListcast($title,$content,$deviceToken){
+	protected function sendPushByAndroid($data){
 
-		$postData['appkey'] = self::androidAppKey;
-		$postData['timestamp'] = time();
-		$postData['type'] = 'listcast';
-		$postData['device_tokens'] = $deviceToken;
-		$postData['payload']['display_type'] = "notification";
-		$postData['payload']['body']['ticker'] = $title;
-		$postData['payload']['body']['title'] = $title;
-		$postData['payload']['body']['text'] = $content ;
-		$postData['payload']['businessname'] = 0;
-		$postData['production_model'] = "true";
-
-		$post_body = json_encode($postData);
+		$post_body = json_encode($data);
 		// 请求方法
 		$http_method = self::httpMethod;
 		// 请求url信息
@@ -96,6 +108,38 @@ class UmengPush {
 	    return $output;
 	}
 
+	protected function iosPushByBroadcast($title,$content){
+
+		$postData['appkey'] = self::iosAppKey;
+		$postData['timestamp'] = time();
+		$postData['type'] = 'broadcast';
+		$postData['payload']['aps']['alert']['title'] = $title;
+		$postData['payload']['aps']['alert']['body'] = $content;
+		$postData['payload']['aps']['badge'] = 1;
+		$postData['payload']['aps']['sound'] = "bingbong.aiff";
+		$postData['payload']['businessname'] = 0;
+		// $postData['filter']['where']['and'][] = $filter;
+		$postData['production_mode'] = 'true';
+
+		$output = $this->sendPushByIos($postData);
+		return $output;
+	}
+
+	protected function androidPushByBroadcast($title,$content){
+
+		$postData['appkey'] = self::androidAppKey;
+		$postData['timestamp'] = time();
+		$postData['type'] = 'broadcast';
+		$postData['payload']['display_type'] = "notification";
+		$postData['payload']['body']['ticker'] = $title;
+		$postData['payload']['body']['title'] = $title;
+		$postData['payload']['body']['text'] = $content ;
+		$postData['payload']['businessname'] = 0;
+		$postData['production_model'] = "true";
+
+		$output = $this->sendPushByIos($postData);
+		return $output;
+	}
 
 
 
