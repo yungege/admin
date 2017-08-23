@@ -46,9 +46,10 @@ class Service_Push_PUserPushModel extends BasePageService {
 		$deviceToken['android'] = implode("," , $deviceToken['android']);
 
 		$uMPush = new UmengPush();
-		$ret = $uMPush->iosPushByListcast($data['theme'],$data['content'],$deviceToken['ios']);
+		$retIos = $uMPush->iosPushByListcast($data['theme'],$data['content'],$deviceToken['ios']);
+		$retAndroid = $uMPush->androidPushByListcast($data['theme'],$data['content'],$deviceToken['android']);
 
-		if($ret == 'SUCCESS'){
+		if($retIos == 'SUCCESS' && $retAndroid == 'SUCCESS'){
 			return ;
 		}else{
 			$this->errNo = PUSH_FAULT;
