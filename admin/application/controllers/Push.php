@@ -1,8 +1,9 @@
 <?php
 class PushController extends Yaf_Controller_Abstract {
 	public $actions = array(
-		'userpush'		=> 'actions/push/UserPush.php',
-		'puserpush'     => 'actions/push/PUserPush.php',
+		'user'		=> 'actions/push/User.php',
+		'puser'     => 'actions/push/PUser.php',
+		'all'       => 'actions/push/All.php',
 	);
 
 }

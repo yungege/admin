@@ -1,5 +1,5 @@
 <?php
-class Service_Push_PUserPushModel extends BasePageService {
+class Service_Push_PUserModel extends BasePageService {
 
 	protected $userModel;
 
@@ -49,12 +49,7 @@ class Service_Push_PUserPushModel extends BasePageService {
 		$retIos = $uMPush->iosPushByListcast($data['theme'],$data['content'],$deviceToken['ios']);
 		$retAndroid = $uMPush->androidPushByListcast($data['theme'],$data['content'],$deviceToken['android']);
 
-		if($retIos == 'SUCCESS' && $retAndroid == 'SUCCESS'){
-			return ;
-		}else{
-			$this->errNo = PUSH_FAULT;
-			return false;
-		}
+		return ;
 
 	}
 
