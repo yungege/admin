@@ -77,7 +77,7 @@
                     var formdata = me.form.serialize();
 
                     $.post('/push/puser', formdata, function(json){
-alert(11);
+alert(json);
 return false;
                         if(json.errCode == 0){
                             alert('推送成功.');
