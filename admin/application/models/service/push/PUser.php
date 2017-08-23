@@ -54,6 +54,9 @@ class Service_Push_PUserModel extends BasePageService {
 			$retAndroid = $uMPush->androidPushByListcast($data['theme'],$data['content'],$deviceToken['android']);
 		}
 
+var_dump($deviceToken);
+
+exit;
 		return ;
 
 	}
