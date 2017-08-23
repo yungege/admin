@@ -5,7 +5,8 @@
 
 class UmengPush {
 
-	const appKey = "582ed0a0677baa081c000ab2";
+	const iosAppKey = "582ed0a0677baa081c000ab2";
+	const androidAppKey = "57e4e7fde0f55aa8a60008ef";
 	const uMengUrl =  "http://msg.umeng.com/api/send";
 	const appMasterSecret = "lsnn5qf9pjggson7uxuvfyhnkaagxlmv";
 	const httpMethod = 'POST';
@@ -13,7 +14,7 @@ class UmengPush {
 
 	public function iosPushByListcast($title,$content,$deviceToken){
 
-		$postData['appkey'] = self::appKey;
+		$postData['appkey'] = self::iosAppKey;
 		$postData['timestamp'] = time();
 		$postData['type'] = 'listcast';
 		$postData['device_tokens'] = $deviceToken;
@@ -57,7 +58,7 @@ class UmengPush {
 
 	public function androidPushByListcast($title,$content,$deviceToken){
 
-		$postData['appkey'] = self::appKey;
+		$postData['appkey'] = self::androidAppKey;
 		$postData['timestamp'] = time();
 		$postData['type'] = 'listcast';
 		$postData['device_tokens'] = $deviceToken;
