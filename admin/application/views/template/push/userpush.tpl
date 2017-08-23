@@ -78,11 +78,12 @@
 
                     $.post('/push/puserpush', formdata, function(json){
 
-                        if(json.code != -1){
-                            window.location = '/version/index';
+                        if(json.code == 0){
+                            alert('推送成功.');
+                            window.location = '/push/puserpush';
                         }
                         else{
-                            alert('发布失败.');
+                            alert('托送失败.');
                             return false;
                         }
                     });
