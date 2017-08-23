@@ -63,12 +63,7 @@
                     }
 
                     var formdata = me.form.serialize();
-
                     $.post('/push/pall', formdata, function(json){
-
-alert(json);
-return false;
-
                         if(json.errCode == 0){
                             alert('推送成功.');
                             window.location = '/push/all';

@@ -13,7 +13,8 @@ class UmengPush {
 	const httpMethod = 'POST';
 
 
-	protected function iosPushByListcast($title,$content,$deviceToken){
+
+	public function iosPushByListcast($title,$content,$deviceToken){
 
 		$postData['appkey'] = self::iosAppKey;
 		$postData['timestamp'] = time();
@@ -32,7 +33,7 @@ class UmengPush {
 		return $output;
 	}
 
-	protected function androidPushByListcast($title,$content,$deviceToken){
+	public function androidPushByListcast($title,$content,$deviceToken){
 
 		$postData['appkey'] = self::androidAppKey;
 		$postData['timestamp'] = time();
@@ -49,7 +50,7 @@ class UmengPush {
 		return $output;
 	}
 
-	protected function sendPushByIos($data){
+	public function sendPushByIos($data){
 
 		$post_body = json_encode($data);
 		// 请求方法
@@ -79,7 +80,7 @@ class UmengPush {
 	    return $output;
 	}
 
-	protected function sendPushByAndroid($data){
+	public function sendPushByAndroid($data){
 
 		$post_body = json_encode($data);
 		// 请求方法
@@ -108,7 +109,7 @@ class UmengPush {
 	    return $output;
 	}
 
-	protected function iosPushByBroadcast($title,$content){
+	public function iosPushByBroadcast($title,$content){
 
 		$postData['appkey'] = self::iosAppKey;
 		$postData['timestamp'] = time();
@@ -125,7 +126,7 @@ class UmengPush {
 		return $output;
 	}
 
-	protected function androidPushByBroadcast($title,$content){
+	public function androidPushByBroadcast($title,$content){
 
 		$postData['appkey'] = self::androidAppKey;
 		$postData['timestamp'] = time();
@@ -140,7 +141,7 @@ class UmengPush {
 		$output = $this->sendPushByIos($postData);
 		return $output;
 	}
-
+    
 
 
 }

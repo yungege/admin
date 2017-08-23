@@ -2,7 +2,7 @@
 class Service_Push_PAllModel extends BasePageService {
 
 	public function __construct(){
-		$this->userModel = Dao_UserModel::getInstance();
+		
 	}
 
 	protected function __declare(){
@@ -16,17 +16,8 @@ class Service_Push_PAllModel extends BasePageService {
 		$data['content'] = trim($req['description']);
 
 		$uMPush = new UmengPush();
-		if(!empty($deviceToken['ios'])){
-			$retIos = $uMPush->iosPushByBroadcast($data['theme'],$data['content']);
-		}
-		
-		if(!empty($deviceToken['android'])){
-			$retAndroid = $uMPush->androidPushByBroadcast($data['theme'],$data['content']);
-		}
-
-
-		var_dump(11);
-		exit;
+		$retIos = $uMPush->iosPushByBroadcast($data['theme'],$data['content']);
+		$retAndroid = $uMPush->androidPushByBroadcast($data['theme'],$data['content']);
 
 		return ;
 
