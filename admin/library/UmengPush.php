@@ -32,12 +32,10 @@ class UmengPush {
 		// 请求url信息
 		$url = self::uMengUrl;
 		$app_master_secret = self::appMasterSecret;
-
 		// 生成自己的签名
 		$mysign = MD5($http_method.$url.$post_body.$app_master_secret);
 		// 友盟推送调用地址
 		$url = "http://msg.umeng.com/api/send?sign=$mysign";
-
 		// 初始化cURL
 		$ch = curl_init();
 		// 设置访问的url地址
@@ -52,11 +50,8 @@ class UmengPush {
 	    $output = curl_exec($ch);
 	    // 关闭cURL会话
 	    curl_close($ch);
-
 	    $ret = $output->ret;
-
 	    return $ret;
-
 	}
 
 	public function androidPushByListcast($title,$content,$deviceToken){
@@ -94,12 +89,13 @@ class UmengPush {
 		curl_setopt($ch,CURLOPT_POSTFIELDS,$post_body);
 		// 运行当前的cURL句柄
 	    $output = curl_exec($ch);
-	    curl_close($ch);
-	    
-	    $ret = $output->ret;
-	  
-	    return $ret;
+	    curl_close($ch);   
+	    $ret = $output->ret;  
 
+
+	    var_dump($postData);
+	    var_dump($ret);
+	    return $ret;
 	}
 
 
