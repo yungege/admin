@@ -24,7 +24,7 @@ class Service_Push_PUserPushModel extends BasePageService {
 
 		$option['projection'] = [
 			'devicetoken' => 1 ,
-			'clientsource' => 1,
+			'clientsource' => 1 ,
 		];
 
 		$deviceToken['ios'] = [];
@@ -46,11 +46,14 @@ class Service_Push_PUserPushModel extends BasePageService {
 		$deviceToken['android'] = implode("," , $deviceToken['android']);
 
 		$uMPush = new UmengPush();
-		$uMPush->iosPushByListcast($data['theme'],$data['content'],$deviceToken['ios']);
-		var_dump($uMPush);
-		exit;
+		$ret = $uMPush->iosPushByListcast($data['theme'],$data['content'],$deviceToken['ios']);
 
-		
+		if($ret == 'SUCCESS'){
+			return ;
+		}else{
+			$this->errNo = PUSH_FAULT;
+			return false;
+		}
 
 	}
 
