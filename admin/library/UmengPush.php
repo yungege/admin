@@ -26,10 +26,6 @@ class UmengPush {
 		$postData['filter']['where']['and'][] = $filter;
 		$postData['production_mode'] = 'true';
 
-		var_dump($postData);
-		exit;
-
-
 		$post_body = json_encode($postData);
 		// 请求方法
 		$http_method = self::httpMethod;
