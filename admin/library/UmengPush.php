@@ -51,6 +51,7 @@ class UmengPush {
 	    // 关闭cURL会话
 	    curl_close($ch);
 	    $ret = $output->ret;
+	   
 	    return $ret;
 	}
 
@@ -91,10 +92,10 @@ class UmengPush {
 	    $output = curl_exec($ch);
 	    curl_close($ch);   
 	    $ret = $output->ret;  
-
-
-	    var_dump($postData);
-	    var_dump($ret);
+	    
+	    var_dump($output);
+	    exit;
+	   
 	    return $ret;
 	}
 
