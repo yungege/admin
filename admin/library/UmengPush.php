@@ -55,9 +55,7 @@ class UmengPush {
 
 	    $ret = $output->ret;
 
-	    var_dump($output);
-	    var_dump($ret);
-	    exit;
+	    return $ret;
 
 	}
 
