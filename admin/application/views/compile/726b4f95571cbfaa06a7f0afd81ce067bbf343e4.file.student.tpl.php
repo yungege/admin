@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 15:27:05
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 16:37:31
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13309711599d2e49b04b75-31839270%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1473859322599d3ecb9719a5-46728300%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-      1 => 1501753746,
+      1 => 1503477447,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503467778,
+      1 => 1503467346,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13309711599d2e49b04b75-31839270',
+  'nocache_hash' => '1473859322599d3ecb9719a5-46728300',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599d2e49b6f278_33855323',
+  'unifunc' => 'content_599d3ecba98579_48770112',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599d2e49b6f278_33855323')) {function content_599d2e49b6f278_33855323($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_599d3ecba98579_48770112')) {function content_599d3ecba98579_48770112($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -405,6 +405,7 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                         <!-- <th class="text-center">ID</th> -->
                         <th>头像</th>
                         <th>姓名/昵称</th>
+                        <th>用户ID</th>
                         <th>学校</th>
                         <th>年级</th>
                         <th>班级</th>
@@ -432,6 +433,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></td>
                         <td>姓名：<?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
 <br/>昵称：<?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 </td>
                         <td><a href="/user/school?schoolid=<?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolid'];?>
 "><?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolname'];?>

@@ -62,6 +62,4 @@ class Service_Push_PUserModel extends BasePageService {
 		$value = trim($value);
 	}
 
-
-
 }
