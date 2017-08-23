@@ -78,8 +78,6 @@
 
                     $.post('/push/puserpush', formdata, function(json){
 
-                        alert(json);
-                    return false;
                         if(json.code != -1){
                             window.location = '/version/index';
                         }
