@@ -52,9 +52,8 @@ class UmengPush {
 	    $output = curl_exec($ch);
 	    // 关闭cURL会话
 	    curl_close($ch);
-	    $ret = $output->ret;
 	   
-	    return $ret;
+	    return $output;
 	}
 
 	public function androidPushByListcast($title,$content,$deviceToken){
@@ -77,10 +76,6 @@ class UmengPush {
 		$url = self::uMengUrl;
 		$app_master_secret = self::androidAppMasterSecret;
 		// 生成自己的签名
-		var_dump($post_body);
-		var_dump($http_method);
-		var_dump($url);
-		var_dump($app_master_secret);
 		$mysign = MD5($http_method.$url.$post_body.$app_master_secret);
 		// 友盟推送调用地址
 		$url = "http://msg.umeng.com/api/send?sign=$mysign";
@@ -97,12 +92,8 @@ class UmengPush {
 		// 运行当前的cURL句柄
 	    $output = curl_exec($ch);
 	    curl_close($ch);   
-	    $ret = $output->ret;  
-	    
-	    var_dump($output);
-	    exit;
 	   
-	    return $ret;
+	    return $output;
 	}
 
 
