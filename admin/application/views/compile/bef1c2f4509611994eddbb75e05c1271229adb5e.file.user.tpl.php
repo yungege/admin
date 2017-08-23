@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 15:43:44
          compiled from "/var/www/admin/admin/application/views/template/push/user.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1658663418599d3230166fe4-09572529%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 15:30:59
+         compiled from "/var/www/admin/admin/application/views/template/push/user.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:371247397599d2f33115498-03682284%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> f8ef186d2c06e5f421a828f8a1969bbec44150c6
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bef1c2f4509611994eddbb75e05c1271229adb5e' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/user.tpl',
+<<<<<<< HEAD
       1 => 1503474210,
+=======
+      1 => 1503470593,
+>>>>>>> f8ef186d2c06e5f421a828f8a1969bbec44150c6
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +27,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '1658663418599d3230166fe4-09572529',
+=======
+  'nocache_hash' => '371247397599d2f33115498-03682284',
+>>>>>>> f8ef186d2c06e5f421a828f8a1969bbec44150c6
   'function' => 
   array (
   ),
@@ -29,9 +43,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_599d32301f9f25_31695368',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_599d32301f9f25_31695368')) {function content_599d32301f9f25_31695368($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_599d2f3315fea2_49825534',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_599d2f3315fea2_49825534')) {function content_599d2f3315fea2_49825534($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> f8ef186d2c06e5f421a828f8a1969bbec44150c6
 <html lang="en">
 
 <head>
