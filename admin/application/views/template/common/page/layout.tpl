@@ -198,10 +198,10 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="push" class="collapse {%if $tag.0 == 5%}in{%/if%}">
                             <li>
-                                <a href="#" class="{%if $tag.0 == 6 && $tag.1 == 1%}cy-child-active{%/if%}">全员推送</a>
+                                <a href="/push/all" class="{%if $tag.0 == 6 && $tag.1 == 1%}cy-child-active{%/if%}">全员推送</a>
                             </li>
                             <li>
-                                <a href="/push/userpush" class="{%if $tag.0 == 6 && $tag.1 == 1%}cy-child-active{%/if%}">个人推送</a>
+                                <a href="/push/user" class="{%if $tag.0 == 6 && $tag.1 == 1%}cy-child-active{%/if%}">个人推送</a>
                             </li>
                             <li>
                                 <a href="#" class="{%if $tag.0 == 6 && $tag.1 == 2%}cy-child-active{%/if%}">校园推送</a>

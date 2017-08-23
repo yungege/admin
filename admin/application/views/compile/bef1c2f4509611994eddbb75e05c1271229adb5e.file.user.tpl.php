@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 13:23:51
-         compiled from "/var/www/admin/admin/application/views/template/push/userpush.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1852127742599d11671a8107-84243705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 13:49:12
+         compiled from "/var/www/admin/admin/application/views/template/push/user.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1758431374599d1758e29db0-60198592%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '55915b430256a9b9b48cb066ae784082d23c817f' => 
+    'bef1c2f4509611994eddbb75e05c1271229adb5e' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/push/userpush.tpl',
-      1 => 1503465815,
+      0 => '/var/www/admin/admin/application/views/template/push/user.tpl',
+      1 => 1503465962,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503463371,
+      1 => 1503467346,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1852127742599d11671a8107-84243705',
+  'nocache_hash' => '1758431374599d1758e29db0-60198592',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599d11671f3834_38276778',
+  'unifunc' => 'content_599d1758eb17f4_49510752',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599d11671f3834_38276778')) {function content_599d11671f3834_38276778($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599d1758eb17f4_49510752')) {function content_599d1758eb17f4_49510752($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -235,10 +235,10 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5){?>in<?php }?>">
                             <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
+                                <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
                             </li>
                             <li>
-                                <a href="/push/userpush" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">个人推送</a>
+                                <a href="/push/user" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">个人推送</a>
                             </li>
                             <li>
                                 <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">校园推送</a>
@@ -377,11 +377,12 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                     $.post('/push/puserpush', formdata, function(json){
 
-                        if(json.code != -1){
-                            window.location = '/version/index';
+                        if(json.code == 0){
+                            alert('推送成功.');
+                            window.location = '/push/puserpush';
                         }
                         else{
-                            alert('发布失败.');
+                            alert('托送失败.');
                             return false;
                         }
                     });
