@@ -10,11 +10,11 @@ class Service_School_InsertModel extends BasePageService {
 
 	}
 
-	public function __declare(){
+	protected function __declare(){
 
 	}
 
-	public function __execute($req){
+	protected function __execute($req){
 
 		$req = $req['post'];
 

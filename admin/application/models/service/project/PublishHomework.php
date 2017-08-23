@@ -8,11 +8,11 @@ class Service_Project_PublishHomeworkModel extends BasePageService {
 		$this->homeworkModel = Dao_ExerciseHomeworkModel::getInstance();
 	}
 
-	public function __declare(){
+	protected function __declare(){
 		
 	}
 
-	public function __execute($req){
+	protected function __execute($req){
 
 		$req = $req['post'];
 		if(empty($req['schoolId']) || empty($req['projectId']) || empty($req['startTime']) || empty($req['endTime']) || empty($req['classIds']) || empty($req['homeworkName']) || empty($req['weekDoneNo']) || empty($req['homeworkType'])){

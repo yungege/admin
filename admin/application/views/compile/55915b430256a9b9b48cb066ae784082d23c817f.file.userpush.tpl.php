@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 09:37:14
-         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1062403248599cdc4a0e7dd7-78385001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 09:41:36
+         compiled from "/var/www/admin/admin/application/views/template/push/userpush.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1133043606599cdd50996a93-01322941%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
+    '55915b430256a9b9b48cb066ae784082d23c817f' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-      1 => 1503411493,
+      0 => '/var/www/admin/admin/application/views/template/push/userpush.tpl',
+      1 => 1503451193,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1062403248599cdc4a0e7dd7-78385001',
+  'nocache_hash' => '1133043606599cdd50996a93-01322941',
   'function' => 
   array (
   ),
@@ -29,10 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599cdc4a1986d1_19821216',
+  'unifunc' => 'content_599cdd50a0acc1_18443368',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599cdc4a1986d1_19821216')) {function content_599cdc4a1986d1_19821216($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599cdd50a0acc1_18443368')) {function content_599cdd50a0acc1_18443368($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -107,47 +106,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
-<style type="text/css">
-    .add-ugc-fix{
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: rgba(0,0,0,0.4);
-        z-index: 9999;
-        display: none;
-    }
-    .add-ugc-inner{
-        width: 500px;
-        height: 200px;
-        border: 1px solid white;
-        background-color: white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -100px;
-        margin-left: -250px;
-        border-radius: 4px;
-        padding: 10px;
-    }
-    .add-ugc-inner > h4{
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 5px;
-    }
-    .glyphicon-remove{
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        cursor: pointer;
-        padding: 10px;
-    }
-    .glyphicon-remove:hover{
-        color: red;
-    }
-    
-</style>
-
 </head>
 
 <body>
@@ -306,7 +264,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 用户管理 / 学生管理
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 推送管理 / 个人推送
                             </li>
                         </ol>
                     </div>
@@ -314,189 +272,29 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
-<div class="row">
-    <div class="col-lg-12">
-        <form method="get" >
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <div class="form-horizontal row">
-
-                        <div class="col-md-3">
-                            <div class="row">
-                                <label class="col-md-4 paddZero control-label">年级：</label>
-
-                                <div class="col-md-8">
-                                    <select class="input-sm form-control" name="grade">
-                                        <option value="-1">选择年级</option>
-                                        <?php  $_smarty_tpl->tpl_vars['val'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['val']->_loop = false;
- $_smarty_tpl->tpl_vars['idx'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['grade']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['val']->key => $_smarty_tpl->tpl_vars['val']->value){
-$_smarty_tpl->tpl_vars['val']->_loop = true;
- $_smarty_tpl->tpl_vars['idx']->value = $_smarty_tpl->tpl_vars['val']->key;
-?>
-                                        <option <?php echo isset($_GET['grade'])&&($_smarty_tpl->tpl_vars['idx']->value==$_GET['grade']) ? 'selected' : '';?>
- value="<?php echo $_smarty_tpl->tpl_vars['idx']->value;?>
-" ><?php echo $_smarty_tpl->tpl_vars['val']->value;?>
-</option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-5">
-                            <div class="row">
-                                <label class="col-md-6 paddZero control-label">学生姓名/昵称：</label>
-                                <div class="col-md-6">
-                                    <input type="text" name="username" class="input-sm form-control" value="<?php echo $_GET['username'];?>
-">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="row">
-                                <label class="col-md-4 paddZero control-label">学生ID：</label>
-                                <div class="col-md-8">
-                                    <input type="text" name="uid" class="input-sm form-control" value="<?php echo $_GET['uid'];?>
-">
-                                </div>
-                            </div>
-                        </div>
-                    </div><br/>
-                    <div class="form-horizontal row">
-                        <div class="col-md-3">
-                            <div class="row">
-                                <label class="col-md-4 paddZero control-label">家长姓名：</label>
-                                <div class="col-md-8">
-                                    <input type="text" name="parentname" class="input-sm form-control" value="<?php echo $_GET['parentname'];?>
-">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="row">
-                                <label class="col-md-6 paddZero control-label">家长手机：</label>
-                                <div class="col-md-6">
-                                    <input type="text" name="mobile" class="input-sm form-control" value="<?php echo $_GET['mobile'];?>
-">
-                                </div>
-                            </div>
-                        </div>
-                    </div><br/>
-                    <div class="form-horizontal row">
-                        <div class="col-md-4 col-md-offset-1">
-                            <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
 
 <div class="row">
     <div class="col-lg-12">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped">
-                <thead>
-                    <tr>
-                        <!-- <th class="text-center">ID</th> -->
-                        <th>头像</th>
-                        <th>姓名/昵称</th>
-                        <th>学校</th>
-                        <th>年级</th>
-                        <th>班级</th>
-                        <th>平台（版本号）</th>
-                        <th>绑定手机</th>
-                        <th>家长</th>
-                        <th>生日</th>
-                        <th>性别</th>
-                        <th>注册日期</th>
-                        <th>上次登录</th>
-                        <th>上次锻炼</th>
-                        <!-- <th>关联账号</th> -->
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
-$_smarty_tpl->tpl_vars['row']->_loop = true;
-?>
-                    <tr data-uid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-">
-                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['iconurl'];?>
-?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></td>
-                        <td>姓名：<?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
-<br/>昵称：<?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
-</td>
-                        <td><a href="/user/school?schoolid=<?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolid'];?>
-"><?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolname'];?>
-</a></td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['grade'];?>
-</td>
-                        <td><a href="/user/class?classid=<?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classid'];?>
-"><?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classname'];?>
-</a></td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['clientsource'];?>
-<br/><?php echo $_smarty_tpl->tpl_vars['row']->value['versions'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['mobileno'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['parentname'];?>
-</td>
-                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['birthday'],"%Y-%m-%d");?>
-</td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['sex']==1){?>女<?php }else{ ?>男<?php }?></td>
-                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%Y-%m-%d");?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['lastlogin'];?>
-</td>
-                        <td>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['lastsubmittime']!=0){?>
-                                <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['lastsubmittime'],"%Y-%m-%d");?>
-<br/>
-                                <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['lastsubmittime'],"%H:%M:%S");?>
-<br/>
-                            <?php }else{ ?>
-                                <span class="label label-warning">无记录</span>
-                            <?php }?>
-                        </td>
-                        <!-- <td></td> -->
-                        <td>
-                            <a href="/sport/ugc?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-default btn-xs">UGC</a>
-                            <a data-uid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" data-cid="<?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classid'];?>
-" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补交UGC</a>
-                        </td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
-        </div>
-        
-        <div class="text-center tt-page">
-            <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+        <form name="push">
 
-        </div>
-        
-    </div>
-</div>
-
-<div class="add-ugc-fix">
-    <div class="add-ugc-inner">
-        <h4>补交UGC</h4>
-        <i class="glyphicon glyphicon-remove"></i>
-        <form name="ugc" class="ugcform">
             <div class="form-group">
-                <label for="hid">作业 ID</label>
-                <input type="text" class="form-control" id="hid" placeholder="">
+                <label for="vname">用户ID &nbsp; (&nbsp; 提示：多个UserId通过 &nbsp;&nbsp;| &nbsp;&nbsp; 隔开 &nbsp;)</label>
+                <input type="text" class="form-control" id="userIds" placeholder="User Id" name="userIds">
             </div>
-            <button id="sub" type="button" class="btn btn-default pull-right">Submit</button>
+
+            <div class="form-group">
+                <label for="vno">推送主题</label>
+                <input type="text" class="form-control" id="theme" placeholder="Push Theme" name="theme">
+            </div>
+
+            <div class="form-group">
+                <label for="description">推送内容</label>
+                <textarea id="description" class="form-control" rows="3" name="description"></textarea>
+            </div>
+              
+            <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
+" data-1="<?php echo $_smarty_tpl->tpl_vars['android']->value;?>
+">确认推送</button>
         </form>
     </div>
 </div>
@@ -532,97 +330,71 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     
 <script type="text/javascript">
-!(function(){
-    var student = {
+    !(function(){
+        var publish = {
+            init: function(){
+                this.getDom();
+                this.postData();
+            },
+            getDom: function(){
+                this.subBtn = $('#sub');
+                this.userIds = $('#userIds');
+                this.theme = $('#theme');
+                this.desc = $('#description');
+                this.form = $('form[name=push]');
+            },
+            checkParams: function(){
+                var me = this;
 
-        init: function (){
-            this.getDom();
-            this.addUgc();
-            this.clickCloseFix();
-            this.postData();
-        },
-
-        getDom: function(){
-            this.ugcBtn = $('.addUgc');
-            this.form = $('form[name=ugc]');
-            this.hid = $('#hid');
-            this.fixBox = $('.add-ugc-fix');
-            this.closeFixBoxBtn = $('.glyphicon-remove');
-            this.subBtn = $('#sub');
-        },
-
-        showDialog: function(){
-            var me = this;
-
-            me.fixBox.fadeIn(200);
-        },
-
-        hideDialog: function(){
-            var me = this;
-
-            me.fixBox.fadeOut(200);
-        },
-
-        clickCloseFix: function(){
-            var me = this;
-
-            me.closeFixBoxBtn.click(function(){
-                me.hideDialog();
-            });
-        },
-
-        addUgc: function(){
-            var me = this;
-
-            me.ugcBtn.unbind().bind('click', function(){
-                var uid = $.trim($(this).data('uid')),
-                    cid = $.trim($(this).data('cid'));
-                me.subBtn.attr('data-uid', uid);
-                me.subBtn.attr('data-cid', cid);
-                me.showDialog();
-            })
-        },
-
-        postData: function(){
-            var me = this,
-                aj = null;
-            me.subBtn.unbind().bind('click', function(){
-                var uid = $.trim($(this).data('uid')),
-                    cid = $.trim($(this).data('cid')),
-                    hid = $.trim(me.hid.val());
-                
-                if(!uid || !cid || !hid){
-                    alert('参数错误.');
+                var userIds = $.trim(me.userIds.val());
+                if(!userIds){
+                    alert('请输入用户ID.');
                     return false;
                 }
 
-                aj = $.ajax({
-                    type: 'GET',
-                    dataType: 'json',
-                    url: '/user/addUgc?uid=' + uid + '&cid=' + cid + '&hid=' + hid,
-                    success: function(json){
-                        if(json.errCode == 200){
-                            window.location = "/sport/ugc?uid=" + uid;
+                var theme = $.trim(me.theme.val());
+                if(!theme){
+                    alert('请输入推送主题.');
+                    return false;
+                }
+
+                var desc = $.trim(me.desc.val());
+                if(!desc){
+                    alert('请输入推送主体内容.');
+                    return false;
+                }
+            },
+            postData: function(){
+                var me = this;
+
+                me.subBtn.unbind().bind('click', function(){
+                    var res = me.checkParams();
+                    if(res === false){
+                        return false;
+                    }
+
+                    var formdata = me.form.serialize();
+
+                    $.post('/push/puserpush', formdata, function(json){
+
+                        alert(json);
+                    return false;
+                        if(json.code != -1){
+                            window.location = '/version/index';
                         }
                         else{
-                            alert(json.errMessage);
+                            alert('发布失败.');
                             return false;
                         }
-                    },
-                    beforeSend: function () {
-                        if(aj != null) {
-                            aj.abort();
-                        }
-                    },
-                });
-            });
-        },
-    };
+                    });
+                })
+            }
 
-    student.init();
-})()
+        };
+
+        publish.init();
+    })()
 </script>
-
 
 </body>
 </html><?php }} ?>

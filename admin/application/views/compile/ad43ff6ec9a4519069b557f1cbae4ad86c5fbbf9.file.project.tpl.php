@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-22 22:23:56
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 09:10:51
          compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1055588285599c3e7c1d3947-21338400%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1258194638599cd61bba3823-73820382%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503411493,
+      1 => 1503417617,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1055588285599c3e7c1d3947-21338400',
+  'nocache_hash' => '1258194638599cd61bba3823-73820382',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599c3e7c252b54_96288744',
+  'unifunc' => 'content_599cd61bc14d59_87987372',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599c3e7c252b54_96288744')) {function content_599c3e7c252b54_96288744($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_599cd61bc14d59_87987372')) {function content_599cd61bc14d59_87987372($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -176,9 +176,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/user/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
                             </li>
-                           <!--  <li>
-                                <a href="/user/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
-                            </li> -->
                             <li>
                                 <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
                             </li>
@@ -238,6 +235,26 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                         </ul>
                     </li>
+
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5){?>in<?php }?>">
+                            <li>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/userpush" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">个人推送</a>
+                            </li>
+                            <li>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">校园推送</a>
+                            </li>
+                            <li>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">地理位置推送</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -373,7 +390,7 @@ $_smarty_tpl->tpl_vars['sk']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/static/widget/alertBox/alert.js"></script>
+   <!--  <script src="/static/widget/alertBox/alert.js"></script> -->
 
     <script type="text/javascript">
         !(function(){

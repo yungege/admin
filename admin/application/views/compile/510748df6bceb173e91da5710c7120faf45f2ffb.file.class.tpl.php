@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-22 22:23:43
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 09:37:21
          compiled from "/var/www/admin/admin/application/views/template/user/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:464569638599c3e6f272e12-08054017%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:588593861599cdc519d4be5-77938430%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503411493,
+      1 => 1503417617,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '464569638599c3e6f272e12-08054017',
+  'nocache_hash' => '588593861599cdc519d4be5-77938430',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599c3e6f30a920_63483598',
+  'unifunc' => 'content_599cdc51a84fb8_81568672',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599c3e6f30a920_63483598')) {function content_599c3e6f30a920_63483598($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599cdc51a84fb8_81568672')) {function content_599cdc51a84fb8_81568672($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -175,9 +175,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/user/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
                             </li>
-                           <!--  <li>
-                                <a href="/user/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
-                            </li> -->
                             <li>
                                 <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
                             </li>
@@ -237,6 +234,26 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                         </ul>
                     </li>
+
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5){?>in<?php }?>">
+                            <li>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/userpush" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">个人推送</a>
+                            </li>
+                            <li>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">校园推送</a>
+                            </li>
+                            <li>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">地理位置推送</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -399,7 +416,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/static/widget/alertBox/alert.js"></script>
+   <!--  <script src="/static/widget/alertBox/alert.js"></script> -->
 
     <script type="text/javascript">
         !(function(){
