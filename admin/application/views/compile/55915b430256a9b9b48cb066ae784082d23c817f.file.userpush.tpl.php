@@ -1,51 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 12:36:51
-         compiled from "/var/www/admin/admin/application/views/template/sport/action.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1492520409599d06630bd984-56144491%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 09:37:32
-         compiled from "/var/www/admin/admin/application/views/template/sport/action.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:290837923599cdc5c3f31a5-15136214%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-22 11:06:56
-         compiled from "/var/www/admin/admin/application/views/template/sport/action.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2078047457599b9fd0b4bea0-03362247%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> d5f7702ede91fcd2bea15e2e3daac029e9e88000
->>>>>>> 72fbd71573ce63e4b46ae85a64426c8513615731
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 09:41:36
+         compiled from "/var/www/admin/admin/application/views/template/push/userpush.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1133043606599cdd50996a93-01322941%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'e1aa31fe68596b69275b00bb70552d612bede4f8' => 
+    '55915b430256a9b9b48cb066ae784082d23c817f' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/sport/action.tpl',
-      1 => 1502785667,
+      0 => '/var/www/admin/admin/application/views/template/push/userpush.tpl',
+      1 => 1503451193,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1502785667,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '1492520409599d06630bd984-56144491',
-=======
-<<<<<<< HEAD
       1 => 1503417617,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '290837923599cdc5c3f31a5-15136214',
-=======
-      1 => 1502435993,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '2078047457599b9fd0b4bea0-03362247',
->>>>>>> d5f7702ede91fcd2bea15e2e3daac029e9e88000
->>>>>>> 72fbd71573ce63e4b46ae85a64426c8513615731
+  'nocache_hash' => '1133043606599cdd50996a93-01322941',
   'function' => 
   array (
   ),
@@ -57,22 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_599d066310fac0_23125684',
+  'unifunc' => 'content_599cdd50a0acc1_18443368',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599d066310fac0_23125684')) {function content_599d066310fac0_23125684($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_599cdc5c46aae1_27530206',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599cdc5c46aae1_27530206')) {function content_599cdc5c46aae1_27530206($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-  'unifunc' => 'content_599b9fd0b94486_97827075',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599b9fd0b94486_97827075')) {function content_599b9fd0b94486_97827075($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> d5f7702ede91fcd2bea15e2e3daac029e9e88000
->>>>>>> 72fbd71573ce63e4b46ae85a64426c8513615731
-?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599cdd50a0acc1_18443368')) {function content_599cdd50a0acc1_18443368($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -147,27 +106,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
-<style type="text/css">
-.video{
-    cursor: pointer;
-    border: 1px solid #ccc;
-    padding: 5px 15px 5px 15px;
-    border-radius: 3px;
-    display: inline-block;
-    width: 60px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-.video:hover{
-    border-color: #0c9;
-    background-color: #0c9;
-    color: white;
-}
-</style>
-
 </head>
 
 <body>
@@ -326,7 +264,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / 动作管理 <a href="/action/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">上传新动作</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 推送管理 / 个人推送
                             </li>
                         </ol>
                     </div>
@@ -334,108 +272,30 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
+
 <div class="row">
     <div class="col-lg-12">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped text-center">
-                <thead>
-                    <tr>
-                        <th class="text-center">动作名称</th>
-                        <th class="text-center">动作类型</th>
-                        <th class="text-center">封面图片</th>
-                        <th class="text-center">视频文件</th>
-                        <th class="text-center">文件大小</th>
-                        <th class="text-center">耗时（单次）</th>
-                        <th class="text-center">能量（单次）</th>
-                        <th class="text-center">年级难度</th>
-                        <th class="text-center">检测项目</th>
-                        <th class="text-center" style="width:300px;">描述</th>
-                        <th class="text-center">创建人</th>
-                        <th class="text-center">创建时间</th>
-                        <th class="text-center">操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
-$_smarty_tpl->tpl_vars['row']->_loop = true;
-?>
-                    <tr>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['typeno'];?>
-</td>
-                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['coverimg'];?>
-"></td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['video']){?>
-                            <!-- <img src="/static/imgs/video.png" alt="..." width="40" height="40" style="cursor: pointer;"> -->
-                            <span data-toggle="modal" data-target="#video" class="video" data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" data-uri="<?php echo $_smarty_tpl->tpl_vars['row']->value['video'];?>
-">播放</span><?php }?>
-                        </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['vfilesize'];?>
-MB</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['singletime'];?>
-秒</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['calorie'];?>
-千卡</td>
-                        <td>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['gradedifficulty']){?>
-                                <ul>
-                                <?php  $_smarty_tpl->tpl_vars['fid'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['fid']->_loop = false;
- $_smarty_tpl->tpl_vars['grade'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['row']->value['gradedifficulty']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['fid']->key => $_smarty_tpl->tpl_vars['fid']->value){
-$_smarty_tpl->tpl_vars['fid']->_loop = true;
- $_smarty_tpl->tpl_vars['grade']->value = $_smarty_tpl->tpl_vars['fid']->key;
-?>
-                                    <li><?php echo $_smarty_tpl->tpl_vars['grade']->value;?>
- -- <?php echo $_smarty_tpl->tpl_vars['fid']->value;?>
-</li>
-                                <?php } ?>
-                                </ul>
-                            <?php }?>
-                        </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['physicalquality'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['describe'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['createor'];?>
-</td>
-                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%Y-%m-%d");?>
-<br/><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%H:%M:%S");?>
-</td>
-                        <td>
-                            <!-- <button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
-                        </td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
-        </div>
+        <form name="push">
 
-        <div class="text-center tt-page">
-            <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- modal -->
-<div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
-    <div class="modal-dialog" role="document" style="margin-top:7%;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabel">动作视频</h4>
+            <div class="form-group">
+                <label for="vname">用户ID &nbsp; (&nbsp; 提示：多个UserId通过 &nbsp;&nbsp;| &nbsp;&nbsp; 隔开 &nbsp;)</label>
+                <input type="text" class="form-control" id="userIds" placeholder="User Id" name="userIds">
             </div>
-            <div class="modal-body" id="display-body">
-                
+
+            <div class="form-group">
+                <label for="vno">推送主题</label>
+                <input type="text" class="form-control" id="theme" placeholder="Push Theme" name="theme">
             </div>
-        </div>
+
+            <div class="form-group">
+                <label for="description">推送内容</label>
+                <textarea id="description" class="form-control" rows="3" name="description"></textarea>
+            </div>
+              
+            <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
+" data-1="<?php echo $_smarty_tpl->tpl_vars['android']->value;?>
+">确认推送</button>
+        </form>
     </div>
 </div>
 
@@ -470,49 +330,70 @@ $_smarty_tpl->tpl_vars['fid']->_loop = true;
 
     
 <script type="text/javascript">
-    function del(el){
-        if(!confirm('确定要删除该动作？')) return false;
+    !(function(){
+        var publish = {
+            init: function(){
+                this.getDom();
+                this.postData();
+            },
+            getDom: function(){
+                this.subBtn = $('#sub');
+                this.userIds = $('#userIds');
+                this.theme = $('#theme');
+                this.desc = $('#description');
+                this.form = $('form[name=push]');
+            },
+            checkParams: function(){
+                var me = this;
 
-        var id = $(el).data('id');
-        if(!id) return false;
+                var userIds = $.trim(me.userIds.val());
+                if(!userIds){
+                    alert('请输入用户ID.');
+                    return false;
+                }
 
-        $.post('/sport/actionDel',{'id':id},function(json){
-            if(json.errCode == 0){
-                window.location.reload();
+                var theme = $.trim(me.theme.val());
+                if(!theme){
+                    alert('请输入推送主题.');
+                    return false;
+                }
+
+                var desc = $.trim(me.desc.val());
+                if(!desc){
+                    alert('请输入推送主体内容.');
+                    return false;
+                }
+            },
+            postData: function(){
+                var me = this;
+
+                me.subBtn.unbind().bind('click', function(){
+                    var res = me.checkParams();
+                    if(res === false){
+                        return false;
+                    }
+
+                    var formdata = me.form.serialize();
+
+                    $.post('/push/puserpush', formdata, function(json){
+
+                        alert(json);
+                    return false;
+                        if(json.code != -1){
+                            window.location = '/version/index';
+                        }
+                        else{
+                            alert('发布失败.');
+                            return false;
+                        }
+                    });
+                })
             }
-            else{
-                alert('删除失败.');
-            }
-        });
-    }
 
-    var video = {
-        init: function () {
-            this.getDom();
-            this.display();
-        },
+        };
 
-        getDom: function () {
-            this.disBtn = $('.video');
-            this.videoTitle = $('#modalLabel');
-            this.videoUri = $('#display-body');
-        },
-
-        display: function () {
-            var me = this;
-            me.disBtn.unbind().bind('click', function(){
-                var uri = $(this).data('uri');
-                var name = $(this).data('name');
-                me.videoTitle.text(name);
-                var html = "<video style=\"width:100%;\" controls autobuffer autoplay>" +
-                                "<source src='" + uri + "' type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'></source>" +
-                            "</video>";
-                me.videoUri.html(html);
-            })
-        }
-    };
-
-    video.init();
+        publish.init();
+    })()
 </script>
 
 </body>
