@@ -8,7 +8,8 @@ class UmengPush {
 	const iosAppKey = "582ed0a0677baa081c000ab2";
 	const androidAppKey = "57e4e7fde0f55aa8a60008ef";
 	const uMengUrl =  "http://msg.umeng.com/api/send";
-	const appMasterSecret = "lsnn5qf9pjggson7uxuvfyhnkaagxlmv";
+	const iosAppMasterSecret = "lsnn5qf9pjggson7uxuvfyhnkaagxlmv";
+	const androidAppMasterSecret = "1qpeclzvoca6ufo0m62hanejhqrfl2ca";
 	const httpMethod = 'POST';
 
 
@@ -32,7 +33,7 @@ class UmengPush {
 		$http_method = self::httpMethod;
 		// 请求url信息
 		$url = self::uMengUrl;
-		$app_master_secret = self::appMasterSecret;
+		$app_master_secret = self::iosAppMasterSecret;
 		// 生成自己的签名
 		$mysign = MD5($http_method.$url.$post_body.$app_master_secret);
 		// 友盟推送调用地址
@@ -74,8 +75,12 @@ class UmengPush {
 		$http_method = self::httpMethod;
 		// 请求url信息
 		$url = self::uMengUrl;
-		$app_master_secret = self::appMasterSecret;
+		$app_master_secret = self::androidAppMasterSecret;
 		// 生成自己的签名
+		var_dump($post_body);
+		var_dump($http_method);
+		var_dump($url);
+		var_dump($app_master_secret);
 		$mysign = MD5($http_method.$url.$post_body.$app_master_secret);
 		// 友盟推送调用地址
 		$url = "http://msg.umeng.com/api/send?sign=$mysign";
