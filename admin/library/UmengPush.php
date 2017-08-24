@@ -30,7 +30,6 @@ class UmengPush {
 		$postData['production_mode'] = 'true';
 
 		$output = $this->sendPushByIos($postData);
-		var_dump($output);
 		return $output;
 	}
 
@@ -78,7 +77,8 @@ class UmengPush {
 	    $output = curl_exec($ch);
 	    // 关闭cURL会话
 	    curl_close($ch);
-	   
+	   var_dump($output);
+	   exit;
 	    return $output;
 	}
 
