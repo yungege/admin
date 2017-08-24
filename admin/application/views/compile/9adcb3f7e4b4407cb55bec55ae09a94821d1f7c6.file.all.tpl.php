@@ -1,24 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-24 12:41:14
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-24 13:39:32
          compiled from "/var/www/admin/admin/application/views/template/push/all.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1179220727599e58eaaf9436-65063622%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 17:15:58
-         compiled from "/var/www/admin/admin/application/views/template/push/all.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1108680587599d47ce0ca021-19455102%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 17:29:24
-         compiled from "/var/www/admin/admin/application/views/template/push/all.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2063736794599d4af41d21c4-07390491%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> a3659bef638c29d3f343059b6ff4e05b848fbb3a
->>>>>>> c0a8fc3fad60fbb6101e4fc6aed4bf6fda3d3937
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 17:38:04
-         compiled from "/var/www/admin/admin/application/views/template/push/all.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:465336980599d4cfcf0af14-10943999%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 20fb56adf4963e1c9d1adfafa9c728d7f9f2c17a
+<?php /*%%SmartyHeaderCode:1989306709599e6694043349-80990744%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -31,27 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1503481205,
+      1 => 1503551408,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1179220727599e58eaaf9436-65063622',
-=======
-      1 => 1503467778,
-      2 => 'file',
-    ),
-  ),
-<<<<<<< HEAD
-<<<<<<< HEAD
-  'nocache_hash' => '1108680587599d47ce0ca021-19455102',
-=======
-  'nocache_hash' => '2063736794599d4af41d21c4-07390491',
->>>>>>> a3659bef638c29d3f343059b6ff4e05b848fbb3a
->>>>>>> c0a8fc3fad60fbb6101e4fc6aed4bf6fda3d3937
-=======
-  'nocache_hash' => '465336980599d4cfcf0af14-10943999',
->>>>>>> 20fb56adf4963e1c9d1adfafa9c728d7f9f2c17a
+  'nocache_hash' => '1989306709599e6694043349-80990744',
   'function' => 
   array (
   ),
@@ -63,27 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-<<<<<<< HEAD
-  'unifunc' => 'content_599e58eab672a5_41055012',
+  'unifunc' => 'content_599e6694092ec0_04620952',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599e58eab672a5_41055012')) {function content_599e58eab672a5_41055012($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_599d47ce113c44_33012567',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599d47ce113c44_33012567')) {function content_599d47ce113c44_33012567($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_599d4af42859c8_26267754',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599d4af42859c8_26267754')) {function content_599d4af42859c8_26267754($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> a3659bef638c29d3f343059b6ff4e05b848fbb3a
->>>>>>> c0a8fc3fad60fbb6101e4fc6aed4bf6fda3d3937
-=======
-  'unifunc' => 'content_599d4cfd015d25_17913292',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599d4cfd015d25_17913292')) {function content_599d4cfd015d25_17913292($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 20fb56adf4963e1c9d1adfafa9c728d7f9f2c17a
+<?php if ($_valid && !is_callable('content_599e6694092ec0_04620952')) {function content_599e6694092ec0_04620952($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
