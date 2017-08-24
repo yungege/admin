@@ -5,6 +5,12 @@ class PushController extends Yaf_Controller_Abstract {
 		'puser'     => 'actions/push/PUser.php',
 		'all'       => 'actions/push/All.php',
 		'pall'      => 'actions/push/PAll.php',
+		'school'    => 'actions/push/School.php',
+		'pschool'   => 'actions/push/PSchool.php',
+		'grade'     => 'actions/push/Grade.php',
+		'pgrade'    => 'actions/push/PGrade.php',
+		'class'     => 'actions/push/Class.php',
+		'pclass'    => 'actions/push/PClass.php',
 	);
 
 }

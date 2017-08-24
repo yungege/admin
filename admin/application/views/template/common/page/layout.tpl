@@ -201,14 +201,20 @@
                                 <a href="/push/all" class="{%if $tag.0 == 6 && $tag.1 == 1%}cy-child-active{%/if%}">全员推送</a>
                             </li>
                             <li>
-                                <a href="/push/user" class="{%if $tag.0 == 6 && $tag.1 == 1%}cy-child-active{%/if%}">个人推送</a>
+                                <a href="/push/user" class="{%if $tag.0 == 6 && $tag.1 == 2%}cy-child-active{%/if%}">个人推送</a>
                             </li>
                             <li>
-                                <a href="#" class="{%if $tag.0 == 6 && $tag.1 == 2%}cy-child-active{%/if%}">校园推送</a>
+                                <a href="/push/school" class="{%if $tag.0 == 6 && $tag.1 == 3%}cy-child-active{%/if%}">学校推送</a>
                             </li>
                             <li>
+                                <a href="/push/grade" class="{%if $tag.0 == 6 && $tag.1 == 4%}cy-child-active{%/if%}">年级推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/class" class="{%if $tag.0 == 6 && $tag.1 == 5%}cy-child-active{%/if%}">班级推送</a>
+                            </li>
+                           <!--  <li>
                                 <a href="#" class="{%if $tag.0 == 6 && $tag.1 == 3%}cy-child-active{%/if%}">地理位置推送</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
 

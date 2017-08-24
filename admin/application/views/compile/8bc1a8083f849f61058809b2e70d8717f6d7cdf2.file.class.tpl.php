@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-24 12:41:41
-         compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1151784750599e5905cadc03-41161297%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-24 12:41:51
+         compiled from "/var/www/admin/admin/application/views/template/push/class.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:115536081599e590fd3ec30-04940790%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '40aa92acd3ad6c442774640e7d702a6b3a0a6d84' => 
+    '8bc1a8083f849f61058809b2e70d8717f6d7cdf2' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/index/index.tpl',
-      1 => 1503411493,
+      0 => '/var/www/admin/admin/application/views/template/push/class.tpl',
+      1 => 1503538737,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1151784750599e5905cadc03-41161297',
+  'nocache_hash' => '115536081599e590fd3ec30-04940790',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599e5905d159b4_23764298',
+  'unifunc' => 'content_599e590fdb8567_37981129',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599e5905d159b4_23764298')) {function content_599e5905d159b4_23764298($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599e590fdb8567_37981129')) {function content_599e590fdb8567_37981129($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -270,7 +270,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> HOME PAGE
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 推送管理 / 班级推送
                             </li>
                         </ol>
                     </div>
@@ -278,97 +278,33 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
+
 <div class="row">
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-mortar-board fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="huge">26</div>
-                        <div>今日活跃人数</div>
-                    </div>
-                </div>
+    <div class="col-lg-12">
+        <form name="push">
+
+            <div class="form-group">
+                <label for="vname">班级ID &nbsp; (&nbsp; 提示：多个ClassId通过 &nbsp;&nbsp;| &nbsp;&nbsp; 隔开 &nbsp;)</label>
+                <input type="text" class="form-control" id="classIds" placeholder="Class Id" name="classIds">
             </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-green">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-tasks fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="huge">12</div>
-                        <div>今日完成锻炼人数</div>
-                    </div>
-                </div>
+
+            <div class="form-group">
+                <label for="vno">推送主题</label>
+                <input type="text" class="form-control" id="theme" placeholder="Push Theme" name="theme">
             </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-yellow">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-plug fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="huge">124</div>
-                        <div>近两周未登陆人数</div>
-                    </div>
-                </div>
+
+            <div class="form-group">
+                <label for="description">推送内容</label>
+                <textarea id="description" class="form-control"  placeholder="Push Content" rows="3" name="description"></textarea>
             </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-lightseagreen" style="border-color: lightseagreen;background-color: lightseagreen;color: white;">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-apple fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="huge">13</div>
-                        <div>最新客户端人数</div>
-                    </div>
-                </div>
-            </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left" style="color: lightseagreen;">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
+              
+            <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
+" data-1="<?php echo $_smarty_tpl->tpl_vars['android']->value;?>
+">确认推送</button>
+        </form>
     </div>
 </div>
-<!-- /.row -->
+
 
 
                 <!-- footer -->
@@ -399,5 +335,76 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     </script>
 
     
+<script type="text/javascript">
+    !(function(){
+        var publish = {
+            init: function(){
+                this.getDom();
+                this.postData();
+            },
+            getDom: function(){
+                this.subBtn = $('#sub');
+                this.classIds = $('#classIds');
+                this.theme = $('#theme');
+                this.desc = $('#description');
+                this.form = $('form[name=push]');
+            },
+            checkParams: function(){
+                var me = this;
+
+                var classIds = $.trim(me.classIds.val());
+                if(!classIds){
+                    alert('请输入班级ID.');
+                    return false;
+                }
+
+                var theme = $.trim(me.theme.val());
+                if(!theme){
+                    alert('请输入推送主题.');
+                    return false;
+                }
+
+                var desc = $.trim(me.desc.val());
+                if(!desc){
+                    alert('请输入推送主体内容.');
+                    return false;
+                }
+            },
+            postData: function(){
+                var me = this;
+
+                me.subBtn.unbind().bind('click', function(){
+                    var res = me.checkParams();
+                    if(res === false){
+                        return false;
+                    }
+
+                    var formdata = me.form.serialize();
+
+                    $.post('/push/pclass', formdata, function(json){
+
+                        alert(json);
+
+                        return false;
+
+
+                        if(json.errCode == 0){
+                            alert('推送成功.');
+                            window.location = '/push/class';
+                        }
+                        else{
+                            alert('托送失败.');
+                            return false;
+                        }
+                    });
+                })
+            }
+
+        };
+
+        publish.init();
+    })()
+</script>
+
 </body>
 </html><?php }} ?>
