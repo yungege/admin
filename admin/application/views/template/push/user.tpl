@@ -76,10 +76,10 @@
 
                     var formdata = me.form.serialize();
 
-                    $.post('/push/pall', formdata, function(json){
+                    $.post('/push/puser', formdata, function(json){
                         if(json.errCode == 0){
                             alert('推送成功.');
-                            window.location = '/push/all';
+                            window.location = '/push/user';
                         }
                         else{
                             alert('托送失败.');
