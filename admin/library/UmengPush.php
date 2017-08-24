@@ -30,6 +30,7 @@ class UmengPush {
 		$postData['production_mode'] = 'true';
 
 		$output = $this->sendPushByIos($postData);
+		var_dump($output);
 		return $output;
 	}
 
@@ -47,6 +48,7 @@ class UmengPush {
 		$postData['production_model'] = "true";
 
 		$output = $this->sendPushByAndroid($postData);
+		var_dump($output);
 		return $output;
 	}
 
