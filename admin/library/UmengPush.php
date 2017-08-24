@@ -22,7 +22,6 @@ class UmengPush {
 		$postData['device_tokens'] = $deviceToken;
 		$postData['payload']['aps']['alert']['title'] = $title;
 		$postData['payload']['aps']['alert']['body'] = $content;
-
 		$postData['payload']['aps']['badge'] = 1;
 		$postData['payload']['aps']['sound'] = "bingbong.aiff";
 		$postData['payload']['businessname'] = 0;
@@ -47,7 +46,6 @@ class UmengPush {
 		$postData['production_model'] = "true";
 
 		$output = $this->sendPushByAndroid($postData);
-		var_dump($output);
 		return $output;
 	}
 
@@ -77,8 +75,7 @@ class UmengPush {
 	    $output = curl_exec($ch);
 	    // 关闭cURL会话
 	    curl_close($ch);
-	   var_dump($output);
-	   exit;
+	 
 	    return $output;
 	}
 
