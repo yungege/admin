@@ -64,7 +64,7 @@ class Service_Push_PClassModel extends BasePageService {
 
 			$this->deviceToken['android'] = array_unique($this->deviceToken['android']);
 			$this->deviceToken['android'] = array_chunk($this->deviceToken['android'],2);
-			array_walk($this->deviceToken['android'],array($this,'pushByAndroid'));
+			// array_walk($this->deviceToken['android'],array($this,'pushByAndroid'));
 		}
 
 		return ;
@@ -77,14 +77,14 @@ class Service_Push_PClassModel extends BasePageService {
 
 	protected function pushByIos($deviceToken){
 
-		$this->deviceToken['ios'] = implode("," , $deviceToken);
+		$deviceToken = implode("," , $deviceToken);
 		$this->uMPush->iosPushByListcast($this->theme,$this->content,$deviceToken);
 		return true;
 	}
 
 	protected function pushByAndroid($deviceToken){
 
-		$this->deviceToken = implode("," , $deviceToken);
+		$deviceToken = implode("," , $deviceToken);
 		$this->uMPush->androidPushByListcast($this->theme,$this->content,$deviceToken);
 		return true;
 	}
