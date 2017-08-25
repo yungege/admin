@@ -40,7 +40,6 @@ class Service_School_InsertModel extends BasePageService {
 		$data['city_id'] = trim($req['city']);
 		$data['district_id'] = trim($req['district']);
 
-
 		$provinceWhere = [
 			'_id' => $data['province_id'],
 		];
