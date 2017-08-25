@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-24 12:41:19
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-25 17:04:15
          compiled from "/var/www/admin/admin/application/views/template/push/school.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2004167439599e58ef4eed50-40543424%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:546230979599fe80f7ee7a2-14234151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9afa1d660f5dfd26a8046e30396437b1204f3690' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/school.tpl',
-      1 => 1503484493,
+      1 => 1503561284,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2004167439599e58ef4eed50-40543424',
+  'nocache_hash' => '546230979599fe80f7ee7a2-14234151',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599e58ef55cb16_04796268',
+  'unifunc' => 'content_599fe80f859112_53237322',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599e58ef55cb16_04796268')) {function content_599e58ef55cb16_04796268($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599fe80f859112_53237322')) {function content_599fe80f859112_53237322($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -382,9 +382,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     var formdata = me.form.serialize();
 
                     $.post('/push/pschool', formdata, function(json){
-
-alert(json);
-return false;
 
                         if(json.errCode == 0){
                             alert('推送成功.');

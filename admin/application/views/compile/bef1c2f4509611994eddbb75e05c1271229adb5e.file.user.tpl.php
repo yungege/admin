@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-24 13:39:22
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-25 17:04:13
          compiled from "/var/www/admin/admin/application/views/template/push/user.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2049968867599e668a4574b6-17793163%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1205830501599fe80db34782-57692012%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bef1c2f4509611994eddbb75e05c1271229adb5e' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/user.tpl',
-      1 => 1503477649,
+      1 => 1503555847,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503551408,
+      1 => 1503481205,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2049968867599e668a4574b6-17793163',
+  'nocache_hash' => '1205830501599fe80db34782-57692012',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599e668a4a5210_19984361',
+  'unifunc' => 'content_599fe80dbccb57_70681398',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599e668a4a5210_19984361')) {function content_599e668a4a5210_19984361($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599fe80dbccb57_70681398')) {function content_599fe80dbccb57_70681398($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -381,10 +381,13 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                     var formdata = me.form.serialize();
 
-                    $.post('/push/pall', formdata, function(json){
+                    $.post('/push/puser', formdata, function(json){
+alert(json);
+return false;
+
                         if(json.errCode == 0){
                             alert('推送成功.');
-                            window.location = '/push/all';
+                            window.location = '/push/user';
                         }
                         else{
                             alert('托送失败.');

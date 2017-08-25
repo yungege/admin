@@ -4,7 +4,8 @@ class Service_Push_PClassModel extends BasePageService {
 	protected $theme;
 	protected $content;
 	protected $deviceToken = [];
-	protected $userInfo;
+	protected $userInfos;
+	protected $classIds;
 
 	protected $userModel;
 	protected $uMPush;
@@ -22,14 +23,19 @@ class Service_Push_PClassModel extends BasePageService {
 	protected function __execute($req){
 
 		$req = $req['post'];
-		$classIds = explode('|', $req['classIds']);
+		if(empty($req['theme']) || empty($req['description']) || empty($req['classIds'])){
+			
+			$this->errNo = REQUEST_PARAMS_ERROR;
+			return false;
+		}
 
+		$this->classIds = explode('|', $req['classIds']);
 		$this->theme = trim($req['theme']);
 		$this->content = trim($req['description']);
-		array_walk($classIds,array($this,'trimValue'));
+		array_walk($this->classIds,array($this,'trimValue'));
 
 		$whereUser = [
-			'classinfo.classid' => ['$in' => $classIds],
+			'classinfo.classid' => ['$in' => $this->classIds],
 			'devicetoken' => [ '$nin' => [null , ""]],
 		];
 
@@ -56,15 +62,15 @@ class Service_Push_PClassModel extends BasePageService {
 		if(!empty($this->deviceToken['ios'])){
 
 			$this->deviceToken['ios'] = array_unique($this->deviceToken['ios']);
-			$this->deviceToken['ios'] = array_chunk($this->deviceToken['ios'],2);
+			$this->deviceToken['ios'] = array_chunk($this->deviceToken['ios'],500);
 			array_walk($this->deviceToken['ios'],array($this,'pushByIos'));
 		}
-		
+	
 		if(!empty($this->deviceToken['android'])){
 
 			$this->deviceToken['android'] = array_unique($this->deviceToken['android']);
-			$this->deviceToken['android'] = array_chunk($this->deviceToken['android'],2);
-			// array_walk($this->deviceToken['android'],array($this,'pushByAndroid'));
+			$this->deviceToken['android'] = array_chunk($this->deviceToken['android'],500);
+			array_walk($this->deviceToken['android'],array($this,'pushByAndroid'));
 		}
 
 		return ;

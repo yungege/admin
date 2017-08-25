@@ -2,11 +2,22 @@
 class Service_School_InsertModel extends BasePageService {
 
 	protected $schoolModel;
+	protected $provinceModel;
+	protected $cityModel;
+	protected $districtModel;
+
 	protected $resData = [];
+	protected $provinceInfo;
+	protected $cityInfo;
+	protected $districtInfo;
+
 
 	public function __construct(){
 
 		$this->schoolModel = Dao_SchoolinfoModel::getInstance();
+		$this->provinceModel = Dao_ProvinceModel::getInstance();
+		$this->cityModel = Dao_CityModel::getInstance();
+		$this->districtModel = Dao_DistrictModel::getInstance();
 
 	}
 
@@ -23,9 +34,49 @@ class Service_School_InsertModel extends BasePageService {
             return false;
 		}
 
+		$data['name'] = trim($req['name']);
+		$data['createtime'] = time();
+		$data['province_id'] = trim($req['province']);
+		$data['city_id'] = trim($req['city']);
+		$data['district_id'] = trim($req['district']);
+
+
+		$provinceWhere = [
+			'_id' => $data['province_id'],
+		];
+		$pOptions['projection'] = ['name' => 1];
+		$this->provinceInfo = $this->provinceModel->queryOne($provinceWhere,$pOptions);
+		if(empty($this->provinceInfo)){
+			$this->errNo = PROVINCE_NOT_EXIST;
+            return false;
+		}
+		$data['province'] = $this->provinceInfo['name'];
+
+		$cityWhere = [
+			'_id' => $data['city_id'],
+		];
+		$cOptions['projection'] = ['name' => 1];
+		$this->cityInfo = $this->cityModel->queryOne($cityWhere,$cOptions);
+		if(empty($this->cityInfo)){
+			$this->errNo = CITY_NOT_EXIST;
+            return false;
+		}
+		$data['city'] = $this->cityInfo['name'];
+
+		$districtWhere = [
+			'_id' => $data['district_id'],
+		];
+		$dOptions['projection'] = ['name' => 1];
+		$this->districtInfo = $this->districtModel->queryOne($districtWhere,$dOptions);
+		if(empty($this->districtInfo)){
+			$this->errNo = DISTRICT_NOT_EXIST;
+            return false;
+		}
+		$data['district'] = $this->districtInfo['name'];
+
 		$schoolWhere = [
 			'name' => trim($req['name']),
-			'city' => trim($req['city']),
+			'city_id' => $data['city_id'],
 		];
 		$options['projection'] = [
 			'_id' => 1,
@@ -37,21 +88,16 @@ class Service_School_InsertModel extends BasePageService {
             return false;
 		}
 
-		$data['name'] = trim($req['name']);
-		$data['createtime'] = time();
-		$data['province'] = $req['province'];
-		$data['city'] = $req['city'];
-		$data['district'] = $req['district'];
 		if(!empty($req['adress'])){
-			$data['adress'] = $req['adress'];
+			$data['adress'] = trim($req['adress']);
 		}
 
 		if(!empty($req['introduction'])){
-			$data['introduction'] = $data['introduction'];
+			$data['introduction'] = trim($data['introduction']);
 		}
 
 		$result = $this->schoolModel->insert($data);
-
+	
 		if($result !== false){
 			$this->resData['schoolId'] = $result;
 			return $this->resData;

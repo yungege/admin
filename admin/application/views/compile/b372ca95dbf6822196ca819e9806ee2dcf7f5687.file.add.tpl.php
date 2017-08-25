@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 13:40:50
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-25 17:32:21
          compiled from "/var/www/admin/admin/application/views/template/school/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1969468262599d15628455c0-94585929%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:696398183599feea5a906c0-08903798%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b372ca95dbf6822196ca819e9806ee2dcf7f5687' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/school/add.tpl',
-      1 => 1503411493,
+      1 => 1503653358,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503417617,
+      1 => 1503481205,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1969468262599d15628455c0-94585929',
+  'nocache_hash' => '696398183599feea5a906c0-08903798',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599d15628da5b8_98459826',
+  'unifunc' => 'content_599feea5b00d76_35490730',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599d15628da5b8_98459826')) {function content_599d15628da5b8_98459826($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599feea5b00d76_35490730')) {function content_599feea5b00d76_35490730($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -267,17 +267,23 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5){?>in<?php }?>">
                             <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
+                                <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
                             </li>
                             <li>
-                                <a href="/push/userpush" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">个人推送</a>
+                                <a href="/push/user" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">个人推送</a>
                             </li>
                             <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">校园推送</a>
+                                <a href="/push/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校推送</a>
                             </li>
                             <li>
+                                <a href="/push/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">年级推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
+                            </li>
+                           <!--  <li>
                                 <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">地理位置推送</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
 
@@ -311,45 +317,39 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             <form name="school">
                 <div class="form-group">
                     <label for="aname">学校名称</label>
-                    <input type="text" class="form-control" id="aname" placeholder="School Name" name="name">
+                    <input type="text" class="form-control" id="schoolName" placeholder="School Name" name="name">
                 </div>
 
                 <div class="form-group">
-                    <label for="atype">所属省份</label>
-                    <select id="atype" class="form-control" name="province">
-                        <option value="-1">请选择学校所在省份</option>
-                        <option value="北京" selected>北京</option>
+                    <label for="province">所属省份</label>
+                    <select id="province" class="form-control" name="province">
+                        <option value="-1" selected>请选择学校所在省份</option>
+                        <?php  $_smarty_tpl->tpl_vars['provinceName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['provinceName']->_loop = false;
+ $_smarty_tpl->tpl_vars['provinceId'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['provinceList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['provinceName']->key => $_smarty_tpl->tpl_vars['provinceName']->value){
+$_smarty_tpl->tpl_vars['provinceName']->_loop = true;
+ $_smarty_tpl->tpl_vars['provinceId']->value = $_smarty_tpl->tpl_vars['provinceName']->key;
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['provinceId']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['provinceName']->value;?>
+</option>
+                        <?php } ?>          
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">所在城市</label>
+                    <select id="city" class="form-control" name="city">
+                        <option value="-1" selected>请选择学校所在城市</option>
                        
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="ftype">所在城市</label>
-                    <select id="ftype" class="form-control" name="city">
-                        <option value="-1">请选择学校所在城市</option>
-                        <option value="北京" selected>北京市</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="sex">所在区</label>
-                    <select id="sex" class="form-control" name="district">
-                        <option value="-1">请选择学校所在区</option>
-                        <option value="东城">东城区</option>
-                        <option value="西城">西城区</option>
-                        <option value="朝阳">朝阳区</option>
-                        <option value="海淀">海淀区</option>
-                        <option value="丰台">丰台区</option>
-                        <option value="通州">通州区</option>
-                        <option value="昌平">昌平区</option>
-                        <option value="石景山">石景山区</option>
-                        <option value="房山">房山区</option>
-                        <option value="门头沟">门头沟区</option>
-                        <option value="顺义">顺义区</option>
-                        <option value="怀柔">怀柔区</option>
-                        <option value="平谷">平谷区</option>
-                        <option value="密云">密云区</option>
-                        <option value="延庆">延庆区</option>
+                    <label for="district">所在区</label>
+                    <select id="district" class="form-control" name="district">
+                        <option value="-1" selected>请选择学校所在区</option>
                     </select>
                 </div>
 
