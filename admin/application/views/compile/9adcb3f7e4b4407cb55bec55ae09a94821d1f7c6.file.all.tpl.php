@@ -1,23 +1,33 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-08-24 13:43:28
          compiled from "/var/www/admin/admin/application/views/template/push/all.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:909330518599e6780984c30-44928382%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-25 17:40:58
+         compiled from "/var/www/admin/admin/application/views/template/push/all.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:72542139599ff0aa031df8-02970300%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 311628f982d91bac081c5e9dfc93f5a8148e1065
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9adcb3f7e4b4407cb55bec55ae09a94821d1f7c6' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/all.tpl',
-      1 => 1503480604,
+      1 => 1503480535,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503551408,
+      1 => 1503481205,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '909330518599e6780984c30-44928382',
+=======
+  'nocache_hash' => '72542139599ff0aa031df8-02970300',
+>>>>>>> 311628f982d91bac081c5e9dfc93f5a8148e1065
   'function' => 
   array (
   ),
@@ -29,9 +39,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_599e67809d5615_52752958',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_599e67809d5615_52752958')) {function content_599e67809d5615_52752958($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_599ff0aa09d833_28656166',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_599ff0aa09d833_28656166')) {function content_599ff0aa09d833_28656166($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 311628f982d91bac081c5e9dfc93f5a8148e1065
 <html lang="en">
 
 <head>

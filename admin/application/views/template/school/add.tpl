@@ -42,45 +42,31 @@
             <form name="school">
                 <div class="form-group">
                     <label for="aname">学校名称</label>
-                    <input type="text" class="form-control" id="aname" placeholder="School Name" name="name">
+                    <input type="text" class="form-control" id="schoolName" placeholder="School Name" name="name">
                 </div>
 
                 <div class="form-group">
-                    <label for="atype">所属省份</label>
-                    <select id="atype" class="form-control" name="province">
-                        <option value="-1">请选择学校所在省份</option>
-                        <option value="北京" selected>北京</option>
+                    <label for="province">所属省份</label>
+                    <select id="province" class="form-control" name="province">
+                        <option value="-1" selected>请选择学校所在省份</option>
+                        {%foreach from=$provinceList item=provinceName key=provinceId %}
+                            <option value="{%$provinceId%}">{%$provinceName%}</option>
+                        {%/foreach%}          
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">所在城市</label>
+                    <select id="city" class="form-control" name="city">
+                        <option value="-1" selected>请选择学校所在城市</option>
                        
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="ftype">所在城市</label>
-                    <select id="ftype" class="form-control" name="city">
-                        <option value="-1">请选择学校所在城市</option>
-                        <option value="北京" selected>北京市</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="sex">所在区</label>
-                    <select id="sex" class="form-control" name="district">
-                        <option value="-1">请选择学校所在区</option>
-                        <option value="东城">东城区</option>
-                        <option value="西城">西城区</option>
-                        <option value="朝阳">朝阳区</option>
-                        <option value="海淀">海淀区</option>
-                        <option value="丰台">丰台区</option>
-                        <option value="通州">通州区</option>
-                        <option value="昌平">昌平区</option>
-                        <option value="石景山">石景山区</option>
-                        <option value="房山">房山区</option>
-                        <option value="门头沟">门头沟区</option>
-                        <option value="顺义">顺义区</option>
-                        <option value="怀柔">怀柔区</option>
-                        <option value="平谷">平谷区</option>
-                        <option value="密云">密云区</option>
-                        <option value="延庆">延庆区</option>
+                    <label for="district">所在区</label>
+                    <select id="district" class="form-control" name="district">
+                        <option value="-1" selected>请选择学校所在区</option>
                     </select>
                 </div>
 

@@ -180,6 +180,11 @@ define('RANK_TYPE_ERR', 1401);                  //排名类型错误
 define('SCHOOL_ADD_FAULT', 1501);               //学校添加失败
 define('CLASS_ADD_FAULT', 1502);                //班级添加失败
 
+//地区
+define('PROVINCE_NOT_EXIST',1601);              //不存在该省信息
+define('CITY_NOT_EXIST',1602);                  //不存在该市信息
+define('DISTRICT_NOT_EXIST',1603);              //不存在该区信息
+
 function setError($errorCode, $errorMsg=''){
     switch($errorCode){
         case SUCCESS:
@@ -581,13 +586,22 @@ function setError($errorCode, $errorMsg=''){
         case PROJECT_SKU_EXISTS:
             $msg = '方案已存在该难度项目';
             break;
-        case SCHOOL_ADD_FAULT;
+        case SCHOOL_ADD_FAULT:
             $msg = '学校添加失败';
             break;
-        case CLASS_ADD_FAULT;
+        case CLASS_ADD_FAULT:
             $msg = '班级添加失败';
             break;
-    
+        case PROVINCE_NOT_EXIST:
+            $msg = '不存在该省信息';
+            break;
+        case CITY_NOT_EXIST:
+            $msg = '不存在该市信息';
+            break;
+        case DISTRICT_NOT_EXIST:
+            $msg = '不存在该区信息';
+            break;
+
         default :
             $msg = '未知错误';
             break;
