@@ -9,5 +9,7 @@ class UserAction extends BaseAction {
                 'tplName' => 'push/user.tpl',
             ],
         ];
+
+        $this->res['data']['pageTag'] = '6-2';
     }
 }

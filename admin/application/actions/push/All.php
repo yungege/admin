@@ -9,5 +9,6 @@ class AllAction extends BaseAction {
                 'tplName' => 'push/all.tpl',
             ],
         ];
+        $this->res['data']['pageTag'] = '6-1';
     }
 }

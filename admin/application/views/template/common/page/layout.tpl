@@ -170,7 +170,7 @@
                             </li>
 
                             <li>
-                                <a href="/data/statistics" class="{%if $tag.0 == 4 && $tag.1 == 3%}cy-child-active{%/if%}">统计数据</a>
+                                <a href="/stat/statistics" class="{%if $tag.0 == 4 && $tag.1 == 3%}cy-child-active{%/if%}">统计数据</a>
                             </li>
 
                             <li>
@@ -196,7 +196,7 @@
 
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="push" class="collapse {%if $tag.0 == 5%}in{%/if%}">
+                        <ul id="push" class="collapse {%if $tag.0 == 6%}in{%/if%}">
                             <li>
                                 <a href="/push/all" class="{%if $tag.0 == 6 && $tag.1 == 1%}cy-child-active{%/if%}">全员推送</a>
                             </li>

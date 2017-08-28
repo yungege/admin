@@ -9,5 +9,7 @@ class ClassAction extends BaseAction {
                 'tplName' => 'push/class.tpl',
             ],
         ];
+
+        $this->res['data']['pageTag'] = '6-5';
     }
 }

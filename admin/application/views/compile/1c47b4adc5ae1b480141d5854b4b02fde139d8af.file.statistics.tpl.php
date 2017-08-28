@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 18:17:55
-         compiled from "/var/www/admin/admin/application/views/template/push/grade.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:211447154359a3edd3d69c05-78331059%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 18:17:12
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:43538469559a3eda82abc23-93826657%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '8d2000e20c4522c32adedf0eae0eab7a54854af3' => 
+    '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/push/grade.tpl',
-      1 => 1503901944,
+      0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
+      1 => 1503913563,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '211447154359a3edd3d69c05-78331059',
+  'nocache_hash' => '43538469559a3eda82abc23-93826657',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59a3edd3da7875_75373302',
+  'unifunc' => 'content_59a3eda82ebc35_43918652',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a3edd3da7875_75373302')) {function content_59a3edd3da7875_75373302($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59a3eda82ebc35_43918652')) {function content_59a3eda82ebc35_43918652($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -107,51 +107,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
-    .fix-per{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        background: rgba(0,0,0,0.4);
-        z-index: 9999;
-        display: none;
-    }
-    .fix-per .fix-cont{
-        width: 400px;
-        height: 200px;
-        line-height: 200px;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -200px;
-        margin-top: -100px;
-        font-size: 100px;
-        color: orange;
-    }
-    .form-wrap{
-        border: 1px solid #ccc;
-        padding: 8px 15px 15px 15px;
-        border-radius: 5px;
-    }
-    #grade_apply,#grade_apply_select,.fx-btn{
-        height: 254px;
-    }
-    #grade_apply_select{
-        color: black;
-    }
     
-    .fx-btn{
-        border: 1px solid #ccc;
-        margin-top: 25px;
-    }
-    .fx-btn > a{
-        display: block;
-        width: 60%;
-        margin: 0 auto 10px auto;
-    }
 </style>
 
 </head>
@@ -318,7 +274,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 推送管理 / 年级推送
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运营管理 / 业务数据统计 
                             </li>
                         </ol>
                     </div>
@@ -326,74 +282,66 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
-
 <div class="row">
-    <div class="col-lg-12">
-        <form name="push">
-            
-            <div class="form-group">
-                <label for="name">学校ID &nbsp;( 提示 ：多个学校ID通过 &nbsp; | &nbsp; 隔开 )</label>
-                <input type="text" class="form-control" id="schoolIds" name="schoolIds">
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="grade_apply">适用年级</label>
-                        <select multiple id="grade_apply" class="form-control">
-                            <?php  $_smarty_tpl->tpl_vars['gl'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['gl']->_loop = false;
- $_smarty_tpl->tpl_vars['idx'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['grade']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['gl']->key => $_smarty_tpl->tpl_vars['gl']->value){
-$_smarty_tpl->tpl_vars['gl']->_loop = true;
- $_smarty_tpl->tpl_vars['idx']->value = $_smarty_tpl->tpl_vars['gl']->key;
+     <div class="col-md-12">
+        <form name ="form">
+        <ul class="list-unstyled" style="border:1px solid #ddd;overflow:hidden;padding:20px;border-radius: 5px;">
+            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
+                <p><strong>空间维度：</strong></p>
+                <select class="form-control" id="province" name="province" style="margin-bottom:15px;width: 110px;">
+                    <option value="-1">全部</option>
+                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['data']->value['province']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
+$_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['idx']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['gl']->value;?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
 </option>
-                            <?php } ?>
-                        </select>
+                    <?php } ?>
+                </select>
+            </li>
+            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="control-label" for="ctime">时间维度：</label>
+                            <div class="input-group">
+                                <input readonly="true" value="" data-type="time" id="ctime-start" name="start" type="text" class="form-control" />
+                                <div class="input-group-addon" style="border-left: 0;border-right: 0;"> 至 </div>
+                                <input readonly="true" value="" data-type="time" id="ctime-end" name="end" type="text" class="form-control" />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="text-center fx-btn" >
-                        <a id="t-r" href="javascript:void(0)" class="btn btn-sm btn-default" style="margin-top:87px;">添加</a>
-                        <a id="t-l" href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="grade_apply_select">已选年级</label>
-                        <select multiple class="form-control" id="grade_apply_select">
-                        </select>
-                    </div>
-                </div>
+            </li>
 
-            </div>
+            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
+                <label class="control-label" style="width:80px;">数据指标：</label>
+                
+                <label class="checkbox-inline" style="width:115px;">
+                    <input tag="source" type="checkbox" value="" name="">总人数
+                </label>
+            </li>
+            
+            <li style="overflow:hidden;">
+                <button type="button" class="btn btn-primary" id="subbtn" style="width:80px;">查询</button>
+                <a href="javascript:down()" type="button" class="btn btn-info" id="export" style="width:80px;margin-left:20px;" >导出</a>
+            </li>
+        </ul>
 
-            <div class="form-group">
-                <label for="name">推送主题</label>
-                <input type="text" class="form-control" id="theme" name="theme">
-            </div>
-
-            <div class="form-group">
-                <label for="desc">推送内容</label>
-                <textarea id="desc" class="form-control" rows="3" name="desc"></textarea>
-            </div>
-
-            <button id="sub" type="button" class="btn btn-primary">确认推送</button>
         </form>
     </div>
 </div>
 
-<!-- modal-add -->
-<div class="fix-per">
-    <div class="fix-cont">
-        <!-- 100% -->
-    </div>
-    
-</div>
+<!-- 图表 -->
+<div class="row">
+    <div class="col-md-12">
+        <div id="charts" style="height:450px;border:1px solid #ddd;margin-bottom:15px;border-radius: 5px;">
 
+        </div>
+    </div>
+</div>
 
 
                 <!-- footer -->
@@ -424,7 +372,7 @@ $_smarty_tpl->tpl_vars['gl']->_loop = true;
     </script>
 
     
-<script type="text/javascript" src="/static/push/js/gradePush.js"></script>
+<script src="/static/stat/contrist.js"></script>
 
 </body>
 </html><?php }} ?>
