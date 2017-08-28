@@ -50,7 +50,7 @@ $(function(){
 			var me = this;
 			me.province.unbind().bind('change',function(){
 
-				var option = "<option value='" + "-1" + "'selected>请选择学校所在区</option>";
+				var option = "<option value='" + "-1" + "'selected>请选择学校所在城市</option>";
 				var data = 'provinceId=' + me.province.val();
 				$.post(
 					'/area/city',

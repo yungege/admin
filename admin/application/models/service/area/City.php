@@ -29,7 +29,8 @@ class Service_Area_CityModel extends BasePageService {
         ];
 
         $this->cityList = $this->cityModel->query($cityWhere,$options);
-        $this->cityList = array_column($this->cityList,'name','_id');
+        //$this->cityList = array_column($this->cityList,'name','_id');
+        
         $this->resData['cityList'] = $this->cityList;
      
         return $this->resData;
