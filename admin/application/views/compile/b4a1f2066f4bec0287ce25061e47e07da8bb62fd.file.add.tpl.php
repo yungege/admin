@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 14:38:39
          compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:729382878599d22efaca958-39891598%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-25 16:29:24
+         compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1125281604599fdfe44e2f22-07559499%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 75486c36460b1af2c1303a91a2a2642a757eb641
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +19,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1503470315,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '729382878599d22efaca958-39891598',
+=======
+      1 => 1503481205,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1125281604599fdfe44e2f22-07559499',
+>>>>>>> 75486c36460b1af2c1303a91a2a2642a757eb641
   'function' => 
   array (
   ),
@@ -29,9 +43,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_599d22efbc5424_54141067',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_599d22efbc5424_54141067')) {function content_599d22efbc5424_54141067($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_599fdfe4552154_20026977',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_599fdfe4552154_20026977')) {function content_599fdfe4552154_20026977($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 75486c36460b1af2c1303a91a2a2642a757eb641
 <html lang="en">
 
 <head>
@@ -171,9 +191,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/user/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
                             </li>
-                           <!--  <li>
-                                <a href="/user/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
-                            </li> -->
                             <li>
                                 <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
                             </li>
@@ -233,6 +250,32 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                         </ul>
                     </li>
+
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5){?>in<?php }?>">
+                            <li>
+                                <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/user" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">个人推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">年级推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
+                            </li>
+                           <!--  <li>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">地理位置推送</a>
+                            </li> -->
+                        </ul>
+                    </li>
+
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -312,7 +355,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/static/widget/alertBox/alert.js"></script>
+   <!--  <script src="/static/widget/alertBox/alert.js"></script> -->
 
     <script type="text/javascript">
         !(function(){

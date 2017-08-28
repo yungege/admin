@@ -60,11 +60,11 @@ class Service_Class_InsertModel extends BasePageService {
 		$this->schoolModel = Dao_SchoolinfoModel::getInstance();
 	}
 
-	public function __declare() {
+	protected function __declare() {
 
 	}
 
-	public function __execute($req) {
+	protected function __execute($req) {
 
 		$req = $req['post'];
 		if(empty($req['schoolId']) || empty($req['grade']) || empty($req['classNo']) || empty($req['startTime'])){

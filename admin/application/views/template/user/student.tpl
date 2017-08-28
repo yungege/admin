@@ -122,6 +122,7 @@
                         <!-- <th class="text-center">ID</th> -->
                         <th>头像</th>
                         <th>姓名/昵称</th>
+                        <th>用户ID</th>
                         <th>学校</th>
                         <th>年级</th>
                         <th>班级</th>
@@ -142,6 +143,7 @@
                     <tr data-uid="{%$row._id%}">
                         <td><img src="{%$row.iconurl%}?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></td>
                         <td>姓名：{%$row.username%}<br/>昵称：{%$row.nickname%}</td>
+                        <td>{%$row._id%}</td>
                         <td><a href="/user/school?schoolid={%$row.schoolinfo.schoolid%}">{%$row.schoolinfo.schoolname%}</a></td>
                         <td>{%$row.grade%}</td>
                         <td><a href="/user/class?classid={%$row.classinfo.classid%}">{%$row.classinfo.classname%}</a></td>

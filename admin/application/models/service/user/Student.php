@@ -38,6 +38,7 @@ class Service_User_StudentModel extends BasePageService {
         ];
 
         $fields = [
+            '_id',
             'username',
             'nickname',
             'birthday',

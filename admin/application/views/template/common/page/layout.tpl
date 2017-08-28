@@ -134,9 +134,6 @@
                             <li>
                                 <a href="/user/class" class="{%if $tag.0 == 2 && $tag.1 == 2%}cy-child-active{%/if%}">班级管理</a>
                             </li>
-                           <!--  <li>
-                                <a href="/user/grade" class="{%if $tag.0 == 2 && $tag.1 == 3%}cy-child-active{%/if%}">年级管理</a>
-                            </li> -->
                             <li>
                                 <a href="/user/school" class="{%if $tag.0 == 2 && $tag.1 == 3%}cy-child-active{%/if%}">学校管理</a>
                             </li>
@@ -196,6 +193,32 @@
                             </li>
                         </ul>
                     </li>
+
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="push" class="collapse {%if $tag.0 == 5%}in{%/if%}">
+                            <li>
+                                <a href="/push/all" class="{%if $tag.0 == 6 && $tag.1 == 1%}cy-child-active{%/if%}">全员推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/user" class="{%if $tag.0 == 6 && $tag.1 == 2%}cy-child-active{%/if%}">个人推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/school" class="{%if $tag.0 == 6 && $tag.1 == 3%}cy-child-active{%/if%}">学校推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/grade" class="{%if $tag.0 == 6 && $tag.1 == 4%}cy-child-active{%/if%}">年级推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/class" class="{%if $tag.0 == 6 && $tag.1 == 5%}cy-child-active{%/if%}">班级推送</a>
+                            </li>
+                           <!--  <li>
+                                <a href="#" class="{%if $tag.0 == 6 && $tag.1 == 3%}cy-child-active{%/if%}">地理位置推送</a>
+                            </li> -->
+                        </ul>
+                    </li>
+
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -232,7 +255,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/static/widget/alertBox/alert.js"></script>
+   <!--  <script src="/static/widget/alertBox/alert.js"></script> -->
 
     <script type="text/javascript">
         !(function(){
