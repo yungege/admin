@@ -173,7 +173,7 @@
                             </li>
 
                             <li>
-                                <a href="#" class="{%if $tag.0 == 4 && $tag.1 == 3%}cy-child-active{%/if%}">统计数据</a>
+                                <a href="/data/statistics" class="{%if $tag.0 == 4 && $tag.1 == 3%}cy-child-active{%/if%}">统计数据</a>
                             </li>
 
                             <li>
