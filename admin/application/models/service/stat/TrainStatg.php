@@ -9,7 +9,6 @@ class Service_Stat_TrainStatModel extends BasePageService {
     protected $proSkuModel;
     protected $statData = [];
     protected $gradeNo = [11,12,13,14,15,16];
-    protected $classModel;
 
     public function __construct() {
         
@@ -17,7 +16,6 @@ class Service_Stat_TrainStatModel extends BasePageService {
         $this->userModel = Dao_UserModel::getInstance();
         $this->trainModel = Dao_TrainingdoneModel::getInstance();
         $this->proSkuModel = Dao_ExerciseProjectSkuModel::getInstance();
-        $this->classModel = Dao_ClassinfoModel::getInstance();
     }
 
     protected function __declare() {
@@ -51,7 +49,7 @@ class Service_Stat_TrainStatModel extends BasePageService {
                                      ->setCategory("Test result file");
 
         $objPHPExcel->setActiveSheetIndex(0)
-                        ->setCellValue('A1', '班级名')
+                        ->setCellValue('A1', '年级编号')
                         ->setCellValue('B1', '总人数')
                         ->setCellValue('C1', '总锻炼次数')
                         ->setCellValue('D1', '总锻炼时间')
@@ -68,17 +66,8 @@ class Service_Stat_TrainStatModel extends BasePageService {
         $proSku = $this->proSkuModel->query($proSkuWhere,$options);
         $proSku = array_column($proSku,'time_cost','_id');
 
-        $classWhere = [
-            'schoolid' => $this->schoolId,
-            'is_test' => 0.0,
-        ];
-        $classFields = ['name'];
-        $classOptions['sort'] = ['grade' => 1,'classno' => 1];
-        $classInfos = $this->classModel->query($classWhere,$classFields,$classOptions['sort']);
-        
-
         $i = 2;
-        foreach($classInfos as $classInfo){
+        foreach($this->gradeNo as $grade){
             $a = 'A' . $i;
             $b = 'B' . $i;
             $c = 'C' . $i;
@@ -87,8 +76,10 @@ class Service_Stat_TrainStatModel extends BasePageService {
             $f = 'F' . $i;
 
             $userWhere = [
-                'classinfo.classid' => $classInfo['_id'],
+                'schoolinfo.schoolid' => $this->schoolId,
+                'classinfo.classname' => ['$ne' => '测试班级'],
                 'type' => 1,
+                'grade' => $grade,
             ];
             $option['projection'] = ['username' => 1,'ssoid' => 1,'mobileno' => 1,'_id' => 1, 'schoolinfo' => 1];
             $userInfos = $this->userModel->query($userWhere,$option);
@@ -129,13 +120,24 @@ class Service_Stat_TrainStatModel extends BasePageService {
 
             // Add some data
             
+
+
             $studentNo = count($userInfos);
             $trainNo = count($trainDatas);
             $avg = round($trainNo / $studentNo ,2);
 
+    // var_dump($schoolInfo['name']);
+    // var_dump($studentNo);
+    // var_dump($trainNo);
+    // var_dump($this->statData['timeSum']);
+    // var_dump($this->statData['burncalorieSum']);
+    // var_dump($avg);
+    // exit;
+
+
             // Miscellaneous glyphs, UTF-8
             $objPHPExcel->setActiveSheetIndex(0)
-                        ->setCellValue($a, $classInfo['name'])
+                        ->setCellValue($a, $grade)
                         ->setCellValue($b, $studentNo)
                         ->setCellValue($c, $trainNo)
                         ->setCellValue($d, $this->statData['timeSum'])

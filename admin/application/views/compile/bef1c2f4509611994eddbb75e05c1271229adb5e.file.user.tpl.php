@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-25 17:44:26
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 18:27:44
          compiled from "/var/www/admin/admin/application/views/template/push/user.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1631355716599ff17a109336-05728234%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:45660214259a3f0208a1eb2-73638842%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503481205,
+      1 => 1503888525,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1631355716599ff17a109336-05728234',
+  'nocache_hash' => '45660214259a3f0208a1eb2-73638842',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_599ff17a175707_20551091',
+  'unifunc' => 'content_59a3f02093af67_66847470',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599ff17a175707_20551091')) {function content_599ff17a175707_20551091($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59a3f02093af67_66847470')) {function content_59a3f02093af67_66847470($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -250,7 +250,13 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
                             </li>
                            <!--  <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">地理位置推送</a>
+                                <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/city" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">市推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/district" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==8){?>cy-child-active<?php }?>">区推送</a>
                             </li> -->
                         </ul>
                     </li>

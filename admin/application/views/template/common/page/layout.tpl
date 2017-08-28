@@ -213,7 +213,13 @@
                                 <a href="/push/class" class="{%if $tag.0 == 6 && $tag.1 == 5%}cy-child-active{%/if%}">班级推送</a>
                             </li>
                            <!--  <li>
-                                <a href="#" class="{%if $tag.0 == 6 && $tag.1 == 3%}cy-child-active{%/if%}">地理位置推送</a>
+                                <a href="/push/province" class="{%if $tag.0 == 6 && $tag.1 == 6%}cy-child-active{%/if%}">省推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/city" class="{%if $tag.0 == 6 && $tag.1 == 7%}cy-child-active{%/if%}">市推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/district" class="{%if $tag.0 == 6 && $tag.1 == 8%}cy-child-active{%/if%}">区推送</a>
                             </li> -->
                         </ul>
                     </li>

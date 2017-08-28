@@ -11,6 +11,9 @@ class PushController extends Yaf_Controller_Abstract {
 		'pgrade'    => 'actions/push/PGrade.php',
 		'class'     => 'actions/push/Class.php',
 		'pclass'    => 'actions/push/PClass.php',
+		'province'  => 'actions/push/Province.php',
+		'city'      => 'actions/push/City.php',
+		'district'  => 'actions/push/District.php',
 	);
 
 }

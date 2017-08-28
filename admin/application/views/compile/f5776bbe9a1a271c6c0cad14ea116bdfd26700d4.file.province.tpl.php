@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 18:25:15
-         compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:69899475759a3ef8bb96064-88227797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 09:47:53
+         compiled from "/var/www/admin/admin/application/views/template/push/province.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:73663455559a376495abfe7-70505660%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '40aa92acd3ad6c442774640e7d702a6b3a0a6d84' => 
+    'f5776bbe9a1a271c6c0cad14ea116bdfd26700d4' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/index/index.tpl',
-      1 => 1503411493,
+      0 => '/var/www/admin/admin/application/views/template/push/province.tpl',
+      1 => 1503884869,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503888525,
+      1 => 1503883762,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '69899475759a3ef8bb96064-88227797',
+  'nocache_hash' => '73663455559a376495abfe7-70505660',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59a3ef8bc42870_32117194',
+  'unifunc' => 'content_59a376496eaa03_15062612',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a3ef8bc42870_32117194')) {function content_59a3ef8bc42870_32117194($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59a376496eaa03_15062612')) {function content_59a376496eaa03_15062612($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -106,6 +106,54 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<style type="text/css">
+    .fix-per{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgba(0,0,0,0.4);
+        z-index: 9999;
+        display: none;
+    }
+    .fix-per .fix-cont{
+        width: 400px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -200px;
+        margin-top: -100px;
+        font-size: 100px;
+        color: orange;
+    }
+    .form-wrap{
+        border: 1px solid #ccc;
+        padding: 8px 15px 15px 15px;
+        border-radius: 5px;
+    }
+    #grade_apply,#grade_apply_select,.fx-btn{
+        height: 254px;
+    }
+    #grade_apply_select{
+        color: black;
+    }
+    
+    .fx-btn{
+        border: 1px solid #ccc;
+        margin-top: 25px;
+    }
+    .fx-btn > a{
+        display: block;
+        width: 60%;
+        margin: 0 auto 10px auto;
+    }
+</style>
+
 </head>
 
 <body>
@@ -249,7 +297,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                              <li>
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
                             </li>
-                           <!--  <li>
+                            <li>
                                 <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
                             </li>
                              <li>
@@ -257,7 +305,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                              <li>
                                 <a href="/push/district" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==8){?>cy-child-active<?php }?>">区推送</a>
-                            </li> -->
+                            </li>
                         </ul>
                     </li>
 
@@ -276,7 +324,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> HOME PAGE
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 推送管理 / 省份推送
                             </li>
                         </ol>
                     </div>
@@ -284,97 +332,68 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
+
 <div class="row">
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-mortar-board fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="huge">26</div>
-                        <div>今日活跃人数</div>
+    <div class="col-lg-12">
+        <form name="push">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="grade_apply">选择推送的省份</label>
+                        <select multiple id="grade_apply" class="form-control">
+                            <?php  $_smarty_tpl->tpl_vars['gl'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['gl']->_loop = false;
+ $_smarty_tpl->tpl_vars['idx'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['grade']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['gl']->key => $_smarty_tpl->tpl_vars['gl']->value){
+$_smarty_tpl->tpl_vars['gl']->_loop = true;
+ $_smarty_tpl->tpl_vars['idx']->value = $_smarty_tpl->tpl_vars['gl']->key;
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['idx']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['gl']->value;?>
+</option>
+                            <?php } ?>
+                        </select>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="text-center fx-btn" >
+                        <a id="t-r" href="javascript:void(0)" class="btn btn-sm btn-default" style="margin-top:87px;">添加</a>
+                        <a id="t-l" href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="grade_apply_select">已选省份</label>
+                        <select multiple class="form-control" id="grade_apply_select">
+                        </select>
+                    </div>
+                </div>
+
             </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-green">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-tasks fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="huge">12</div>
-                        <div>今日完成锻炼人数</div>
-                    </div>
-                </div>
+
+            <div class="form-group">
+                <label for="name">推送主题</label>
+                <input type="text" class="form-control" id="theme" name="theme">
             </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-yellow">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-plug fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="huge">124</div>
-                        <div>近两周未登陆人数</div>
-                    </div>
-                </div>
+
+            <div class="form-group">
+                <label for="desc">推送内容</label>
+                <textarea id="desc" class="form-control" rows="3" name="desc"></textarea>
             </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-lightseagreen" style="border-color: lightseagreen;background-color: lightseagreen;color: white;">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-apple fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="huge">13</div>
-                        <div>最新客户端人数</div>
-                    </div>
-                </div>
-            </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left" style="color: lightseagreen;">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
+
+            <button id="sub" type="button" class="btn btn-primary">确认推送</button>
+        </form>
     </div>
 </div>
-<!-- /.row -->
+
+<!-- modal-add -->
+<div class="fix-per">
+    <div class="fix-cont">
+        <!-- 100% -->
+    </div>
+    
+</div>
+
 
 
                 <!-- footer -->
@@ -405,5 +424,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     </script>
 
     
+<script type="text/javascript" src="/static/push/js/gradePush.js"></script>
+
 </body>
 </html><?php }} ?>
