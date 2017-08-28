@@ -1,9 +1,7 @@
 <?php
-class Service_Push_GradeModel extends BasePageService {
+class Service_Push_DistrictModel extends BasePageService {
 
-	protected $resData = [
-        'pageTag' => '6-4',
-    ];
+	protected $resData = [];
 
 	protected static $grade = [
 

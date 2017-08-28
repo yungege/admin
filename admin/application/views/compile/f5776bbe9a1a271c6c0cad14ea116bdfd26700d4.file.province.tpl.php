@@ -1,55 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-25 17:49:44
-         compiled from "/var/www/admin/admin/application/views/template/push/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1255768046599ff2b809a566-22576881%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 14:43:19
-         compiled from "/var/www/admin/admin/application/views/template/push/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20630912959a3bb873fcb63-39764295%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 18:17:53
-         compiled from "/var/www/admin/admin/application/views/template/push/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:205301805259a3edd1b5a290-73210225%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
->>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 09:47:53
+         compiled from "/var/www/admin/admin/application/views/template/push/province.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:73663455559a376495abfe7-70505660%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '8bc1a8083f849f61058809b2e70d8717f6d7cdf2' => 
+    'f5776bbe9a1a271c6c0cad14ea116bdfd26700d4' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/push/class.tpl',
-<<<<<<< HEAD
-      1 => 1503654498,
-=======
-      1 => 1503901944,
->>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+      0 => '/var/www/admin/admin/application/views/template/push/province.tpl',
+      1 => 1503884869,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1503551408,
+      1 => 1503883762,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1255768046599ff2b809a566-22576881',
-=======
-<<<<<<< HEAD
-      1 => 1503888525,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '20630912959a3bb873fcb63-39764295',
-=======
-      1 => 1503915249,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '205301805259a3edd1b5a290-73210225',
->>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
->>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+  'nocache_hash' => '73663455559a376495abfe7-70505660',
   'function' => 
   array (
   ),
@@ -61,21 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_599ff2b80ee336_66073387',
+  'unifunc' => 'content_59a376496eaa03_15062612',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599ff2b80ee336_66073387')) {function content_599ff2b80ee336_66073387($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_59a3bb87478d56_70244516',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a3bb87478d56_70244516')) {function content_59a3bb87478d56_70244516($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59a3edd1b97ce4_39243128',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a3edd1b97ce4_39243128')) {function content_59a3edd1b97ce4_39243128($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
->>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+<?php if ($_valid && !is_callable('content_59a376496eaa03_15062612')) {function content_59a376496eaa03_15062612($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -150,6 +106,54 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<style type="text/css">
+    .fix-per{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgba(0,0,0,0.4);
+        z-index: 9999;
+        display: none;
+    }
+    .fix-per .fix-cont{
+        width: 400px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -200px;
+        margin-top: -100px;
+        font-size: 100px;
+        color: orange;
+    }
+    .form-wrap{
+        border: 1px solid #ccc;
+        padding: 8px 15px 15px 15px;
+        border-radius: 5px;
+    }
+    #grade_apply,#grade_apply_select,.fx-btn{
+        height: 254px;
+    }
+    #grade_apply_select{
+        color: black;
+    }
+    
+    .fx-btn{
+        border: 1px solid #ccc;
+        margin-top: 25px;
+    }
+    .fx-btn > a{
+        display: block;
+        width: 60%;
+        margin: 0 auto 10px auto;
+    }
+</style>
+
 </head>
 
 <body>
@@ -251,7 +255,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
 
                             <li>
-                                <a href="/stat/statistics" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">统计数据</a>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">统计数据</a>
                             </li>
 
                             <li>
@@ -277,7 +281,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
+                        <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5){?>in<?php }?>">
                             <li>
                                 <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
                             </li>
@@ -293,7 +297,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                              <li>
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
                             </li>
-                           <!--  <li>
+                            <li>
                                 <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
                             </li>
                              <li>
@@ -301,7 +305,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                              <li>
                                 <a href="/push/district" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==8){?>cy-child-active<?php }?>">区推送</a>
-                            </li> -->
+                            </li>
                         </ul>
                     </li>
 
@@ -320,7 +324,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 推送管理 / 班级推送
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 推送管理 / 省份推送
                             </li>
                         </ol>
                     </div>
@@ -332,27 +336,62 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 <div class="row">
     <div class="col-lg-12">
         <form name="push">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="grade_apply">选择推送的省份</label>
+                        <select multiple id="grade_apply" class="form-control">
+                            <?php  $_smarty_tpl->tpl_vars['gl'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['gl']->_loop = false;
+ $_smarty_tpl->tpl_vars['idx'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['grade']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['gl']->key => $_smarty_tpl->tpl_vars['gl']->value){
+$_smarty_tpl->tpl_vars['gl']->_loop = true;
+ $_smarty_tpl->tpl_vars['idx']->value = $_smarty_tpl->tpl_vars['gl']->key;
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['idx']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['gl']->value;?>
+</option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center fx-btn" >
+                        <a id="t-r" href="javascript:void(0)" class="btn btn-sm btn-default" style="margin-top:87px;">添加</a>
+                        <a id="t-l" href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="grade_apply_select">已选省份</label>
+                        <select multiple class="form-control" id="grade_apply_select">
+                        </select>
+                    </div>
+                </div>
 
-            <div class="form-group">
-                <label for="vname">班级ID &nbsp; (&nbsp; 提示：多个ClassId通过 &nbsp;&nbsp;| &nbsp;&nbsp; 隔开 &nbsp;)</label>
-                <input type="text" class="form-control" id="classIds" placeholder="Class Id" name="classIds">
             </div>
 
             <div class="form-group">
-                <label for="vno">推送主题</label>
-                <input type="text" class="form-control" id="theme" placeholder="Push Theme" name="theme">
+                <label for="name">推送主题</label>
+                <input type="text" class="form-control" id="theme" name="theme">
             </div>
 
             <div class="form-group">
-                <label for="description">推送内容</label>
-                <textarea id="description" class="form-control"  placeholder="Push Content" rows="3" name="description"></textarea>
+                <label for="desc">推送内容</label>
+                <textarea id="desc" class="form-control" rows="3" name="desc"></textarea>
             </div>
-              
-            <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
-" data-1="<?php echo $_smarty_tpl->tpl_vars['android']->value;?>
-">确认推送</button>
+
+            <button id="sub" type="button" class="btn btn-primary">确认推送</button>
         </form>
     </div>
+</div>
+
+<!-- modal-add -->
+<div class="fix-per">
+    <div class="fix-cont">
+        <!-- 100% -->
+    </div>
+    
 </div>
 
 
@@ -385,71 +424,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     </script>
 
     
-<script type="text/javascript">
-    !(function(){
-        var publish = {
-            init: function(){
-                this.getDom();
-                this.postData();
-            },
-            getDom: function(){
-                this.subBtn = $('#sub');
-                this.classIds = $('#classIds');
-                this.theme = $('#theme');
-                this.desc = $('#description');
-                this.form = $('form[name=push]');
-            },
-            checkParams: function(){
-                var me = this;
-
-                var classIds = $.trim(me.classIds.val());
-                if(!classIds){
-                    alert('请输入班级ID.');
-                    return false;
-                }
-
-                var theme = $.trim(me.theme.val());
-                if(!theme){
-                    alert('请输入推送主题.');
-                    return false;
-                }
-
-                var desc = $.trim(me.desc.val());
-                if(!desc){
-                    alert('请输入推送主体内容.');
-                    return false;
-                }
-            },
-            postData: function(){
-                var me = this;
-
-                me.subBtn.unbind().bind('click', function(){
-                    var res = me.checkParams();
-                    if(res === false){
-                        return false;
-                    }
-
-                    var formdata = me.form.serialize();
-
-                    $.post('/push/pclass', formdata, function(json){
-
-                        if(json.errCode == 0){
-                            alert('推送成功.');
-                            window.location = '/push/class';
-                        }
-                        else{
-                            alert('托送失败.');
-                            return false;
-                        }
-                    });
-                })
-            }
-
-        };
-
-        publish.init();
-    })()
-</script>
+<script type="text/javascript" src="/static/push/js/gradePush.js"></script>
 
 </body>
 </html><?php }} ?>

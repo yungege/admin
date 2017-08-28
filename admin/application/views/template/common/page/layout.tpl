@@ -170,7 +170,7 @@
                             </li>
 
                             <li>
-                                <a href="#" class="{%if $tag.0 == 4 && $tag.1 == 3%}cy-child-active{%/if%}">统计数据</a>
+                                <a href="/stat/statistics" class="{%if $tag.0 == 4 && $tag.1 == 3%}cy-child-active{%/if%}">统计数据</a>
                             </li>
 
                             <li>
@@ -196,7 +196,7 @@
 
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="push" class="collapse {%if $tag.0 == 5%}in{%/if%}">
+                        <ul id="push" class="collapse {%if $tag.0 == 6%}in{%/if%}">
                             <li>
                                 <a href="/push/all" class="{%if $tag.0 == 6 && $tag.1 == 1%}cy-child-active{%/if%}">全员推送</a>
                             </li>
@@ -213,7 +213,13 @@
                                 <a href="/push/class" class="{%if $tag.0 == 6 && $tag.1 == 5%}cy-child-active{%/if%}">班级推送</a>
                             </li>
                            <!--  <li>
-                                <a href="#" class="{%if $tag.0 == 6 && $tag.1 == 3%}cy-child-active{%/if%}">地理位置推送</a>
+                                <a href="/push/province" class="{%if $tag.0 == 6 && $tag.1 == 6%}cy-child-active{%/if%}">省推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/city" class="{%if $tag.0 == 6 && $tag.1 == 7%}cy-child-active{%/if%}">市推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/district" class="{%if $tag.0 == 6 && $tag.1 == 8%}cy-child-active{%/if%}">区推送</a>
                             </li> -->
                         </ul>
                     </li>

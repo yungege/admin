@@ -1,14 +1,13 @@
 <?php
-class GradeAction extends BaseAction {
+class CityAction extends BaseAction {
 
     protected function __declare(){
         $this->declareParams = true;
-        $this->declarePageService = 'Service_Push_GradeModel';
+        $this->declarePageService = 'Service_Push_CityModel';
         $this->declareRender = [
             'tpl' => [
-                'tplName' => 'push/grade.tpl',
+                'tplName' => 'push/city.tpl',
             ],
         ];
-
     }
 }

@@ -1,55 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-25 17:49:44
-         compiled from "/var/www/admin/admin/application/views/template/push/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1255768046599ff2b809a566-22576881%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 14:43:19
-         compiled from "/var/www/admin/admin/application/views/template/push/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20630912959a3bb873fcb63-39764295%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 18:17:53
-         compiled from "/var/www/admin/admin/application/views/template/push/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:205301805259a3edd1b5a290-73210225%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
->>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 18:17:12
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:43538469559a3eda82abc23-93826657%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '8bc1a8083f849f61058809b2e70d8717f6d7cdf2' => 
+    '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/push/class.tpl',
-<<<<<<< HEAD
-      1 => 1503654498,
-=======
-      1 => 1503901944,
->>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+      0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
+      1 => 1503913563,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1503551408,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '1255768046599ff2b809a566-22576881',
-=======
-<<<<<<< HEAD
-      1 => 1503888525,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '20630912959a3bb873fcb63-39764295',
-=======
       1 => 1503915249,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '205301805259a3edd1b5a290-73210225',
->>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
->>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+  'nocache_hash' => '43538469559a3eda82abc23-93826657',
   'function' => 
   array (
   ),
@@ -61,21 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_599ff2b80ee336_66073387',
+  'unifunc' => 'content_59a3eda82ebc35_43918652',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599ff2b80ee336_66073387')) {function content_599ff2b80ee336_66073387($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_59a3bb87478d56_70244516',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a3bb87478d56_70244516')) {function content_59a3bb87478d56_70244516($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59a3edd1b97ce4_39243128',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a3edd1b97ce4_39243128')) {function content_59a3edd1b97ce4_39243128($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
->>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+<?php if ($_valid && !is_callable('content_59a3eda82ebc35_43918652')) {function content_59a3eda82ebc35_43918652($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -150,6 +106,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<style type="text/css">
+    
+</style>
+
 </head>
 
 <body>
@@ -294,13 +254,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
                             </li>
                            <!--  <li>
-                                <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
-                            </li>
-                             <li>
-                                <a href="/push/city" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">市推送</a>
-                            </li>
-                             <li>
-                                <a href="/push/district" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==8){?>cy-child-active<?php }?>">区推送</a>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">地理位置推送</a>
                             </li> -->
                         </ul>
                     </li>
@@ -320,7 +274,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 推送管理 / 班级推送
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运营管理 / 业务数据统计 
                             </li>
                         </ol>
                     </div>
@@ -328,33 +282,66 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
-
 <div class="row">
-    <div class="col-lg-12">
-        <form name="push">
+     <div class="col-md-12">
+        <form name ="form">
+        <ul class="list-unstyled" style="border:1px solid #ddd;overflow:hidden;padding:20px;border-radius: 5px;">
+            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
+                <p><strong>空间维度：</strong></p>
+                <select class="form-control" id="province" name="province" style="margin-bottom:15px;width: 110px;">
+                    <option value="-1">全部</option>
+                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['data']->value['province']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
+$_smarty_tpl->tpl_vars['row']->_loop = true;
+?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+</option>
+                    <?php } ?>
+                </select>
+            </li>
+            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="control-label" for="ctime">时间维度：</label>
+                            <div class="input-group">
+                                <input readonly="true" value="" data-type="time" id="ctime-start" name="start" type="text" class="form-control" />
+                                <div class="input-group-addon" style="border-left: 0;border-right: 0;"> 至 </div>
+                                <input readonly="true" value="" data-type="time" id="ctime-end" name="end" type="text" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
 
-            <div class="form-group">
-                <label for="vname">班级ID &nbsp; (&nbsp; 提示：多个ClassId通过 &nbsp;&nbsp;| &nbsp;&nbsp; 隔开 &nbsp;)</label>
-                <input type="text" class="form-control" id="classIds" placeholder="Class Id" name="classIds">
-            </div>
+            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
+                <label class="control-label" style="width:80px;">数据指标：</label>
+                
+                <label class="checkbox-inline" style="width:115px;">
+                    <input tag="source" type="checkbox" value="" name="">总人数
+                </label>
+            </li>
+            
+            <li style="overflow:hidden;">
+                <button type="button" class="btn btn-primary" id="subbtn" style="width:80px;">查询</button>
+                <a href="javascript:down()" type="button" class="btn btn-info" id="export" style="width:80px;margin-left:20px;" >导出</a>
+            </li>
+        </ul>
 
-            <div class="form-group">
-                <label for="vno">推送主题</label>
-                <input type="text" class="form-control" id="theme" placeholder="Push Theme" name="theme">
-            </div>
-
-            <div class="form-group">
-                <label for="description">推送内容</label>
-                <textarea id="description" class="form-control"  placeholder="Push Content" rows="3" name="description"></textarea>
-            </div>
-              
-            <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
-" data-1="<?php echo $_smarty_tpl->tpl_vars['android']->value;?>
-">确认推送</button>
         </form>
     </div>
 </div>
 
+<!-- 图表 -->
+<div class="row">
+    <div class="col-md-12">
+        <div id="charts" style="height:450px;border:1px solid #ddd;margin-bottom:15px;border-radius: 5px;">
+
+        </div>
+    </div>
+</div>
 
 
                 <!-- footer -->
@@ -385,71 +372,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     </script>
 
     
-<script type="text/javascript">
-    !(function(){
-        var publish = {
-            init: function(){
-                this.getDom();
-                this.postData();
-            },
-            getDom: function(){
-                this.subBtn = $('#sub');
-                this.classIds = $('#classIds');
-                this.theme = $('#theme');
-                this.desc = $('#description');
-                this.form = $('form[name=push]');
-            },
-            checkParams: function(){
-                var me = this;
-
-                var classIds = $.trim(me.classIds.val());
-                if(!classIds){
-                    alert('请输入班级ID.');
-                    return false;
-                }
-
-                var theme = $.trim(me.theme.val());
-                if(!theme){
-                    alert('请输入推送主题.');
-                    return false;
-                }
-
-                var desc = $.trim(me.desc.val());
-                if(!desc){
-                    alert('请输入推送主体内容.');
-                    return false;
-                }
-            },
-            postData: function(){
-                var me = this;
-
-                me.subBtn.unbind().bind('click', function(){
-                    var res = me.checkParams();
-                    if(res === false){
-                        return false;
-                    }
-
-                    var formdata = me.form.serialize();
-
-                    $.post('/push/pclass', formdata, function(json){
-
-                        if(json.errCode == 0){
-                            alert('推送成功.');
-                            window.location = '/push/class';
-                        }
-                        else{
-                            alert('托送失败.');
-                            return false;
-                        }
-                    });
-                })
-            }
-
-        };
-
-        publish.init();
-    })()
-</script>
+<script src="/static/stat/contrist.js"></script>
 
 </body>
 </html><?php }} ?>
