@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 22:14:26
+         compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:133476314859a42542100053-17239293%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 16:14:35
          compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:128697039459a3d0eb9f1636-15904978%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -19,12 +24,20 @@
 >>>>>>> 311628f982d91bac081c5e9dfc93f5a8148e1065
 >>>>>>> 75486c36460b1af2c1303a91a2a2642a757eb641
 >>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
+>>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '713206737d6eb09c8f72027c7313a6d885305480' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/login.tpl',
+<<<<<<< HEAD
+      1 => 1502419197,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '133476314859a42542100053-17239293',
+=======
 <<<<<<< HEAD
       1 => 1502187739,
       2 => 'file',
@@ -46,11 +59,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> 311628f982d91bac081c5e9dfc93f5a8148e1065
 >>>>>>> 75486c36460b1af2c1303a91a2a2642a757eb641
 >>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
+>>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_59a425421162e6_93154249',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59a425421162e6_93154249')) {function content_59a425421162e6_93154249($_smarty_tpl) {?><!DOCTYPE html>
+=======
 <<<<<<< HEAD
   'unifunc' => 'content_59a3d0eba0caf3_94762983',
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -72,6 +91,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> 311628f982d91bac081c5e9dfc93f5a8148e1065
 >>>>>>> 75486c36460b1af2c1303a91a2a2642a757eb641
 >>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
+>>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
