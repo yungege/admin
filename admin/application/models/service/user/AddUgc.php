@@ -77,7 +77,7 @@ class Service_User_AddUgcModel extends BasePageService {
             "status"        => 0
         ];
         // 暂时不开放
-        throw new Exception("此功能请联系管理员.", -1);
+        // throw new Exception("此功能请联系管理员.", -1);
         
         $res = $this->trainModel->insert($data);
         if($res === false)

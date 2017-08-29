@@ -6,6 +6,7 @@ class Service_User_ClassModel extends BasePageService {
 	protected $classModel;
 	protected $resData = [
         'list' => [],
+        'pageTag' => '2-2'
     ];
 
     public function __construct() {

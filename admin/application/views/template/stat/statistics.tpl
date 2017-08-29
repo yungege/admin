@@ -13,7 +13,7 @@
         <ul class="list-unstyled" style="border:1px solid #ddd;overflow:hidden;padding:20px;border-radius: 5px;">
             <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
                 <p><strong>空间维度：</strong></p>
-                <select class="form-control" id="province" name="province" style="margin-bottom:15px;width: 110px;">
+                <select class="form-control" id="province" name="province" style="margin-bottom:15px;width: 110px;float: left;">
                     <option value="-1">全部</option>
                     {%foreach from=$data.province item=row%}
                     <option value="{%$row._id%}">{%$row.name%}</option>
