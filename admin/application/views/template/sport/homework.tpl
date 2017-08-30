@@ -13,13 +13,12 @@
             <table class="table table-bordered table-hover table-striped text-center">
                 <thead>
                     <tr>
-                        <th class="text-center">作业名称</th>
-                        <th class="text-center">作业类型</th>
-                        <th class="text-center">封面图片</th>
+                        <th class="text-center">ID</th>
+                        <th class="text-center">名称</th>
+                        <th class="text-center">类型</th>
+                        <th class="text-center">封面</th>
                         <th class="text-center">学校</th>
-                        <th class="text-center">年级</th>
                         <th class="text-center">班级</th>
-                        <!-- <th class="text-center">周锻炼时间</th> -->
                         <th class="text-center">周锻炼次数</th>
                         <th class="text-center">作业间隔</th>
                         <th class="text-center">补作业间隔</th>
@@ -34,13 +33,12 @@
                 <tbody>
                     {%foreach from=$list item=row%}
                     <tr data-id="{%$row._id%}">
+                        <td>{%$row._id%}</td>
                         <td>{%$row.name%}</td>
                         <td>{%if $row.type eq 1%}<span class="label label-warning">翻</span>{%else%}<span class="label label-primary">素</span>{%/if%}</td>
                         <td><img src="{%$row.project[0].coverimg%}" width="100"></td>
                         <td>{%$row.school%}</td>
-                        <td>{%$row.grade%}</td>
                         <td><button type="button" data-id="{%$row._id%}" class="btn btn-sm btn-success" onclick="getClass(this)">查 看</button></td>
-                        <!-- <td>{%$row.exertime%}</td> -->
                         <td>{%$row.weekdoneno%}</td>
                         <td>{%$row.makeup_limit|ttxs_parse_stamp%}</td>
                         <td>{%if $row.makeup_interval eq 0%}无限制{%else%}{%$row.makeup_interval%}天{%/if%}</td>
