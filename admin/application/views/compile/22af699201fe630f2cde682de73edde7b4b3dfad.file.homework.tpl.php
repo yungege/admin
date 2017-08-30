@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-13 21:11:16
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-30 20:41:04
          compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:159318003259904ff4b5cda6-12038821%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-29 10:14:14
-         compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:49994277859a4cdf6e8de60-42996754%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> d8ecc286ef82ad8c42d0cc20df8ab6563af1e4ad
+<?php /*%%SmartyHeaderCode:89173943359a6b260193985-08925816%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '22af699201fe630f2cde682de73edde7b4b3dfad' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/homework.tpl',
-<<<<<<< HEAD
-      1 => 1501980439,
-=======
-      1 => 1503370676,
->>>>>>> d8ecc286ef82ad8c42d0cc20df8ab6563af1e4ad
+      1 => 1504096013,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1502629828,
+      1 => 1504096796,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '159318003259904ff4b5cda6-12038821',
-=======
-      1 => 1503930850,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '49994277859a4cdf6e8de60-42996754',
->>>>>>> d8ecc286ef82ad8c42d0cc20df8ab6563af1e4ad
+  'nocache_hash' => '89173943359a6b260193985-08925816',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59904ff4bc6203_99271431',
+  'unifunc' => 'content_59a6b260229d21_49478667',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59904ff4bc6203_99271431')) {function content_59904ff4bc6203_99271431($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
-=======
-  'unifunc' => 'content_59a4cdf6ef0b57_35280129',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a4cdf6ef0b57_35280129')) {function content_59a4cdf6ef0b57_35280129($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
->>>>>>> d8ecc286ef82ad8c42d0cc20df8ab6563af1e4ad
+<?php if ($_valid && !is_callable('content_59a6b260229d21_49478667')) {function content_59a6b260229d21_49478667($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
 if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
@@ -262,7 +238,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     </li>
 
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-paper-plane"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
                             <li>
                                 <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
@@ -320,13 +296,12 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             <table class="table table-bordered table-hover table-striped text-center">
                 <thead>
                     <tr>
-                        <th class="text-center">作业名称</th>
-                        <th class="text-center">作业类型</th>
-                        <th class="text-center">封面图片</th>
+                        <th class="text-center">ID</th>
+                        <th class="text-center">名称</th>
+                        <th class="text-center">类型</th>
+                        <th class="text-center">封面</th>
                         <th class="text-center">学校</th>
-                        <th class="text-center">年级</th>
                         <th class="text-center">班级</th>
-                        <!-- <th class="text-center">周锻炼时间</th> -->
                         <th class="text-center">周锻炼次数</th>
                         <th class="text-center">作业间隔</th>
                         <th class="text-center">补作业间隔</th>
@@ -346,6 +321,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
                     <tr data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 ">
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+</td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
 </td>
                         <td><?php if ($_smarty_tpl->tpl_vars['row']->value['type']==1){?><span class="label label-warning">翻</span><?php }else{ ?><span class="label label-primary">素</span><?php }?></td>
@@ -353,12 +330,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 " width="100"></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['school'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['grade'];?>
-</td>
                         <td><button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " class="btn btn-sm btn-success" onclick="getClass(this)">查 看</button></td>
-                        <!-- <td><?php echo $_smarty_tpl->tpl_vars['row']->value['exertime'];?>
-</td> -->
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['weekdoneno'];?>
 </td>
                         <td><?php echo smarty_modifier_ttxs_parse_stamp($_smarty_tpl->tpl_vars['row']->value['makeup_limit']);?>
@@ -434,11 +407,7 @@ $_smarty_tpl->tpl_vars['pro']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-<<<<<<< HEAD
-    <script src="/static/widget/alertBox/alert.js"></script>
-=======
    <!--  <script src="/static/widget/alertBox/alert.js"></script> -->
->>>>>>> d8ecc286ef82ad8c42d0cc20df8ab6563af1e4ad
 
     <script type="text/javascript">
         !(function(){
