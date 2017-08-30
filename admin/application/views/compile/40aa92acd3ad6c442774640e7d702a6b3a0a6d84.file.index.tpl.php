@@ -1,37 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-10 17:02:14
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-13 21:11:11
          compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1048640728598c2116c8c014-30360874%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-10 16:49:25
-         compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1815211955598c1e1513d5f5-53223187%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> f52ff1ab5a41698e6692f48297365872976601e9
+<?php /*%%SmartyHeaderCode:29962563959904fef57b650-08411723%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '40aa92acd3ad6c442774640e7d702a6b3a0a6d84' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/index/index.tpl',
-      1 => 1501062598,
+      1 => 1494210642,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1501753746,
+      1 => 1502629828,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1048640728598c2116c8c014-30360874',
-=======
-      1 => 1501753699,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '1815211955598c1e1513d5f5-53223187',
->>>>>>> f52ff1ab5a41698e6692f48297365872976601e9
+  'nocache_hash' => '29962563959904fef57b650-08411723',
   'function' => 
   array (
   ),
@@ -43,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_598c2116cccc69_25955760',
+  'unifunc' => 'content_59904fef5e96b2_38971310',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598c2116cccc69_25955760')) {function content_598c2116cccc69_25955760($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_598c1e1517a7c7_98267693',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598c1e1517a7c7_98267693')) {function content_598c1e1517a7c7_98267693($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> f52ff1ab5a41698e6692f48297365872976601e9
+<?php if ($_valid && !is_callable('content_59904fef5e96b2_38971310')) {function content_59904fef5e96b2_38971310($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -75,6 +55,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <!-- Custom Fonts -->
     <link href="/static/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/static/widget/alertBox/alert.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -113,6 +95,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             margin-right: 5px;
             border: 1px solid #333;
             background: #fff;
+        }
+        /*alert 插件*/
+        .alert-btn-p{
+            /*width: 100%!important;*/
+            margin-bottom: 0!important;
+        }
+        .alert-container{
+            width: 400px!important;
         }
     </style>
     
@@ -371,6 +361,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/widget/alertBox/alert.js"></script>
 
     <script type="text/javascript">
         !(function(){
