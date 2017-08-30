@@ -176,6 +176,7 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
         Yaf_Loader::import(APPLICATION_PATH . '/library/ErrCode.php');
         Yaf_Loader::import(APPLICATION_PATH . '/library/SysDefine.php');
         Yaf_Loader::import(APPLICATION_PATH . '/vendor/autoload.php');
+        Yaf_Loader::import(APPLICATION_PATH . '/library/Common.func.php');
     }
 
     //开启session

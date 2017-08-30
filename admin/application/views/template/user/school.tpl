@@ -5,7 +5,7 @@
     
 </style>
 {%/block%}
-{%block name="bread"%}用户管理 / 学校管理{%/block%}
+{%block name="bread"%}用户管理 / 学校管理   <a href="/school/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加学校</a>{%/block%}
 {%block name="content"%}
 <div class="row">
     <div class="col-lg-12">
@@ -31,6 +31,26 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-md-5">
+                            <div class="row">
+                                <label class="col-md-6 paddZero control-label"></label>
+                                <div class="col-md-6">
+                                    <input type="hidden" name="projectId" class="input-sm form-control" value="{%$projectId%}">
+                                </div>
+                            </div>
+                        </div>
+                        {%if $type eq 1%}
+                        <div class="col-md-7">
+                            <div class="row">
+                                <label class="col-md-8 paddZero control-label"></label>
+                                <div class="col-md-8">
+                                    <input type="hidden" name="type" class="input-sm form-control" value=1>
+                                </div>
+                            </div>
+                        </div>
+
+                        {%/if%}
 
 
                     </div><br/>
@@ -70,7 +90,9 @@
                         <td>{%$row.city%}</td>
                         <!-- <td></td> -->
                         <td>
-                            <a href="" class="btn btn-default btn-xs">点击</a>
+
+                            {%if $type eq 1%} <a href="/project/addhomework?schoolId={%$row._id%}&projectId={%$projectId%}" class="btn btn-default btn-xs">选择</a> {%else%} <a href="" class="btn btn-default btn-xs">点击</a> {%/if%}
+                            <!-- <a href="" class="btn btn-default btn-xs">点击</a> -->
                         </td>
                     </tr>
                     {%/foreach%}

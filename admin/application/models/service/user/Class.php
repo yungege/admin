@@ -4,12 +4,9 @@ class Service_User_ClassModel extends BasePageService {
 	const PAGESIZE = 15;
 
 	protected $classModel;
-
-	protected $reqData;
 	protected $resData = [
-        'pageTag' => '2-2',
         'list' => [],
-        'pn' => 1,
+        'pageTag' => '2-2'
     ];
 
     public function __construct() {
@@ -31,9 +28,7 @@ class Service_User_ClassModel extends BasePageService {
             $req['pn'] = 1;
         }
 
-        $this->resData['pn'] = $req['pn'];
         $offset = ($req['pn'] - 1) * self::PAGESIZE;
-
         $options = [
             'limit' => self::PAGESIZE,
             'offset' => $offset,
@@ -65,7 +60,6 @@ class Service_User_ClassModel extends BasePageService {
     	];
     	
     	$list = $this->classModel->getListByPage($match, $fields, $options);
-
         $count = $this->classModel->count($match);
         $page  = new Page($count,15);
         $show  = $page->show();

@@ -1,5 +1,5 @@
 <?php
-class Dao_ExerciseProgramModel extends Db_Mongodb {
+class Dao_ExerciseprogramModel extends Db_Mongodb {
     
     protected $table = 'exerciseprogram';
 

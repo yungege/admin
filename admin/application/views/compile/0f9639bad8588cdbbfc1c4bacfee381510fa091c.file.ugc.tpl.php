@@ -1,23 +1,89 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-10 14:28:07
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-29 10:05:27
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:410169334598bfcf76e2458-79826694%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:192784217959a4cbe7c9fb87-35148913%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-29 09:36:01
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:84423646859a4c50189b302-48721381%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 22:01:40
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:51187474259a42244947559-19188340%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 10:55:48
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:73218587159a38634917857-99718853%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 14:17:02
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1609900949599d1dde2d11d1-12142236%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-25 16:29:30
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1035131207599fdfea21af75-26360204%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 75486c36460b1af2c1303a91a2a2642a757eb641
+>>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
+>>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+>>>>>>> d00423a43e776eea37dc90e941d3225cadf4732a
+>>>>>>> 08594c69a045f0666e47ac3eec457155ca62b7f0
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-      1 => 1501724060,
+<<<<<<< HEAD
+      1 => 1503370315,
+=======
+      1 => 1503370676,
+>>>>>>> d00423a43e776eea37dc90e941d3225cadf4732a
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1501753746,
+<<<<<<< HEAD
+      1 => 1503930850,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '410169334598bfcf76e2458-79826694',
+  'nocache_hash' => '192784217959a4cbe7c9fb87-35148913',
+=======
+<<<<<<< HEAD
+      1 => 1503916173,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '84423646859a4c50189b302-48721381',
+=======
+<<<<<<< HEAD
+      1 => 1503551408,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '51187474259a42244947559-19188340',
+=======
+      1 => 1503888525,
+      2 => 'file',
+    ),
+  ),
+<<<<<<< HEAD
+  'nocache_hash' => '73218587159a38634917857-99718853',
+=======
+<<<<<<< HEAD
+  'nocache_hash' => '1609900949599d1dde2d11d1-12142236',
+=======
+  'nocache_hash' => '1035131207599fdfea21af75-26360204',
+>>>>>>> 75486c36460b1af2c1303a91a2a2642a757eb641
+>>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
+>>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+>>>>>>> d00423a43e776eea37dc90e941d3225cadf4732a
+>>>>>>> 08594c69a045f0666e47ac3eec457155ca62b7f0
   'function' => 
   array (
   ),
@@ -29,9 +95,39 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_598bfcf7745e35_67894176',
+<<<<<<< HEAD
+  'unifunc' => 'content_59a4cbe7d0f293_50856058',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598bfcf7745e35_67894176')) {function content_598bfcf7745e35_67894176($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59a4cbe7d0f293_50856058')) {function content_59a4cbe7d0f293_50856058($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_59a4c50194f8b3_74236865',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59a4c50194f8b3_74236865')) {function content_59a4c50194f8b3_74236865($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_59a422449b3a48_31292866',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59a422449b3a48_31292866')) {function content_59a422449b3a48_31292866($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_59a386349cea34_24126039',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59a386349cea34_24126039')) {function content_59a386349cea34_24126039($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_599d1dde31e564_83719908',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_599d1dde31e564_83719908')) {function content_599d1dde31e564_83719908($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_599fdfea353547_31554052',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_599fdfea353547_31554052')) {function content_599fdfea353547_31554052($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 75486c36460b1af2c1303a91a2a2642a757eb641
+>>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
+>>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+>>>>>>> d00423a43e776eea37dc90e941d3225cadf4732a
+>>>>>>> 08594c69a045f0666e47ac3eec457155ca62b7f0
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -56,6 +152,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <!-- Custom Fonts -->
     <link href="/static/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/static/widget/alertBox/alert.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -94,6 +192,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             margin-right: 5px;
             border: 1px solid #333;
             background: #fff;
+        }
+        /*alert 插件*/
+        .alert-btn-p{
+            /*width: 100%!important;*/
+            margin-bottom: 0!important;
+        }
+        .alert-container{
+            width: 400px!important;
         }
     </style>
     
@@ -172,9 +278,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/user/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
                             </li>
-                           <!--  <li>
-                                <a href="/user/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">年级管理</a>
-                            </li> -->
                             <li>
                                 <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
                             </li>
@@ -211,7 +314,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
 
                             <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">统计数据</a>
+                                <a href="/stat/statistics" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">统计数据</a>
                             </li>
 
                             <li>
@@ -234,6 +337,38 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                         </ul>
                     </li>
+
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
+                            <li>
+                                <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/user" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">个人推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">年级推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
+                            </li>
+                           <!--  <li>
+                                <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/city" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">市推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/district" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==8){?>cy-child-active<?php }?>">区推送</a>
+                            </li> -->
+                        </ul>
+                    </li>
+
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -384,8 +519,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></a></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['hname'];?>
 </td>
-                        <td><a href="/sport/p/<?php echo $_smarty_tpl->tpl_vars['row']->value['pid'];?>
-.html"><?php echo $_smarty_tpl->tpl_vars['row']->value['pname'];?>
+                        <td><a href="<?php if ($_smarty_tpl->tpl_vars['row']->value['is_old']==1){?>javascript:void(0)<?php }else{ ?>/sport/p/<?php echo $_smarty_tpl->tpl_vars['row']->value['pid'];?>
+.html<?php }?>"><?php echo $_smarty_tpl->tpl_vars['row']->value['pname'];?>
 </a></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['burncalories'];?>
 </td>
@@ -439,6 +574,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+   <!--  <script src="/static/widget/alertBox/alert.js"></script> -->
 
     <script type="text/javascript">
         !(function(){
@@ -455,38 +591,6 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="/static/ugc/index.js"></script>
-
-<!-- <script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script> -->
-<script type="text/javascript">
-    
-
-    // var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
-;
-    // var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
-;
-    // var urlPage = parseInt($("#page").data('url-pn'));
-    // var queryStr = $("#page").data('query');
-    // if(isNaN(urlPage)){
-    //     urlPage = 0;
-    // }
-
-    // $('#page').twbsPagination({
-    //     totalPages: pageCount,
-    //     visiblePages: 7,
-    //     version: '1.1',
-    //     first: '首页',
-    //     prev: '上一页',
-    //     next: '下一页',
-    //     last: '尾页',
-    //     startPage: currentPage,
-    //     onPageClick: function (event, page) {
-    //         if(urlPage == page)
-    //             return;
-
-    //         window.location = "?" + queryStr + '&pn=' + page;
-    //     }
-    // });
-</script>
 
 </body>
 </html><?php }} ?>

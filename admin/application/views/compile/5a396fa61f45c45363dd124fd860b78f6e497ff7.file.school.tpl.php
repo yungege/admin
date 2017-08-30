@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-10 09:55:12
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-21 13:20:05
          compiled from "/var/www/aa/admin/admin/application/views/template/user/school.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1263952727598bbd00eb2454-09656051%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1894844109599a6d850d1b11-14524059%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5a396fa61f45c45363dd124fd860b78f6e497ff7' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/user/school.tpl',
-      1 => 1501666611,
+      1 => 1503031878,
       2 => 'file',
     ),
     '29e75058da3e02dbeb1c4f16cdcca6bb7fcb9ff6' => 
     array (
       0 => '/var/www/aa/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1502137853,
+      1 => 1503275848,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1263952727598bbd00eb2454-09656051',
+  'nocache_hash' => '1894844109599a6d850d1b11-14524059',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_598bbd0101ae13_36807680',
+  'unifunc' => 'content_599a6d851664b0_79647174',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_598bbd0101ae13_36807680')) {function content_598bbd0101ae13_36807680($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_599a6d851664b0_79647174')) {function content_599a6d851664b0_79647174($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -55,6 +55,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <!-- Custom Fonts -->
     <link href="/static/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/static/widget/alertBox/alert.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -93,6 +95,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             margin-right: 5px;
             border: 1px solid #333;
             background: #fff;
+        }
+        /*alert 插件*/
+        .alert-btn-p{
+            /*width: 100%!important;*/
+            margin-bottom: 0!important;
+        }
+        .alert-container{
+            width: 400px!important;
         }
     </style>
     
@@ -241,7 +251,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 用户管理 / 学校管理
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 用户管理 / 学校管理   <a href="/school/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加学校</a>
                             </li>
                         </ol>
                     </div>
@@ -275,6 +285,27 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-md-5">
+                            <div class="row">
+                                <label class="col-md-6 paddZero control-label"></label>
+                                <div class="col-md-6">
+                                    <input type="hidden" name="projectId" class="input-sm form-control" value="<?php echo $_smarty_tpl->tpl_vars['projectId']->value;?>
+">
+                                </div>
+                            </div>
+                        </div>
+                        <?php if ($_smarty_tpl->tpl_vars['type']->value==1){?>
+                        <div class="col-md-7">
+                            <div class="row">
+                                <label class="col-md-8 paddZero control-label"></label>
+                                <div class="col-md-8">
+                                    <input type="hidden" name="type" class="input-sm form-control" value=1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <?php }?>
 
 
                     </div><br/>
@@ -322,7 +353,11 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </td>
                         <!-- <td></td> -->
                         <td>
-                            <a href="" class="btn btn-default btn-xs">点击</a>
+
+                            <?php if ($_smarty_tpl->tpl_vars['type']->value==1){?> <a href="/project/addhomework?schoolId=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+&projectId=<?php echo $_smarty_tpl->tpl_vars['projectId']->value;?>
+" class="btn btn-default btn-xs">选择</a> <?php }else{ ?> <a href="" class="btn btn-default btn-xs">点击</a> <?php }?>
+                            <!-- <a href="" class="btn btn-default btn-xs">点击</a> -->
                         </td>
                     </tr>
                     <?php } ?>
@@ -349,6 +384,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/widget/alertBox/alert.js"></script>
 
     <script type="text/javascript">
         !(function(){

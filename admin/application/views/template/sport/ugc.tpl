@@ -117,7 +117,7 @@
                         <td>姓名：<a href="/user/student?uid={%$row.userid%}">{%$row.username%}</a><br/>昵称：<a href="/user/student?uid={%$row.userid%}">{%$row.nickname%}</a></td>
                         <td><a href="/user/student?uid={%$row.userid%}"><img src="{%$row.iconurl%}?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></a></td>
                         <td>{%$row.hname%}</td>
-                        <td><a href="/sport/p/{%$row.pid%}.html">{%$row.pname%}</a></td>
+                        <td><a href="{%if $row.is_old eq 1%}javascript:void(0){%else%}/sport/p/{%$row.pid%}.html{%/if%}">{%$row.pname%}</a></td>
                         <td>{%$row.burncalories%}</td>
                         <td>
                             {%$row.distance%}<br/>
@@ -147,34 +147,4 @@
 {%block name="js"%}
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="/static/ugc/index.js"></script>
-
-<!-- <script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script> -->
-<script type="text/javascript">
-    
-
-    // var currentPage = {%$pn%};
-    // var pageCount = {%$pageCount%};
-    // var urlPage = parseInt($("#page").data('url-pn'));
-    // var queryStr = $("#page").data('query');
-    // if(isNaN(urlPage)){
-    //     urlPage = 0;
-    // }
-
-    // $('#page').twbsPagination({
-    //     totalPages: pageCount,
-    //     visiblePages: 7,
-    //     version: '1.1',
-    //     first: '首页',
-    //     prev: '上一页',
-    //     next: '下一页',
-    //     last: '尾页',
-    //     startPage: currentPage,
-    //     onPageClick: function (event, page) {
-    //         if(urlPage == page)
-    //             return;
-
-    //         window.location = "?" + queryStr + '&pn=' + page;
-    //     }
-    // });
-</script>
 {%/block%}

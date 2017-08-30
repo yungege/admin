@@ -4,13 +4,10 @@ class Service_User_SchoolModel extends BasePageService {
 	const PAGESIZE = 15;
 
 	protected $schoolModel;
-
-	protected $reqData;
 	protected $resData = [
-        'pageTag' => '2-3',
         'list' => [],
+        'pageTag' => '2-3'
     ];
-
 
     public function __construct() {
 
@@ -28,7 +25,9 @@ class Service_User_SchoolModel extends BasePageService {
         if(!isset($req['pn']) || !is_numeric($req['pn'])){
           $req['pn'] = 1;
         }
-        $this->resData['pn'] = $req['pn'];
+
+        $this->resData['type'] = $req['type'];
+        $this->resData['projectId'] = $req['projectId'];
         $offset = ($req['pn'] - 1) * self::PAGESIZE;
         $options = [
           'limit' => self::PAGESIZE,
@@ -49,7 +48,7 @@ class Service_User_SchoolModel extends BasePageService {
     		'province',
             'city',
     	];
-
+        
     	$list = $this->schoolModel->getListByPage($match, $fields, $options);
         $count = $this->schoolModel->count($match);
         $page  = new Page($count,15);
