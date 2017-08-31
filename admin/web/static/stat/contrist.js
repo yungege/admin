@@ -10,6 +10,7 @@ $(function(){
             this.getStudent();
 
             this.initDate();
+            this.postData();
         },
 
         getDom: function(){
@@ -19,8 +20,12 @@ $(function(){
             this.kj             = $('#kj');
 
             // 时间维度
-            this.startBtn = $('.date_start');
-            this.endBtn = $('.date_end');
+            this.startBtn       = $('.date_start');
+            this.endBtn         = $('.date_end');
+
+            this.subBtn         = $('#subbtn');
+            this.downBtn        = $('#export');
+            this.form           = $('form[name=form]');
         },
 
         getCity: function(){
@@ -185,6 +190,7 @@ $(function(){
                 autoclose: 1,
                 todayHighlight: 1,
                 minView: 2,
+                endDate: new Date(),
             });
 
             me.endBtn.datetimepicker({
@@ -193,6 +199,34 @@ $(function(){
                 autoclose: 1,
                 todayHighlight: 1,
                 minView: 2,
+            });
+        },
+
+        postData: function(){
+            var me = this,
+                ax = null;
+            me.subBtn.unbind().bind('click', function(){
+                var data = me.form.serialize(),
+                    startTime = Date.parse(new Date(me.startBtn.val()+' 00:00:00'))/1000,
+                    endTime = Date.parse(new Date(me.endBtn.val()+' 00:00:00'))/1000;
+                if(startTime > endTime){
+                    alert('起始时间不能大于结束时间');
+                }
+
+                ax = $.ajax({
+                    url:'/stat/contrist', 
+                    data:data, 
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function(json){
+                        console.log(json.data);
+                    },
+                    beforeSend: function () {
+                        if(ax != null) {
+                            ax.abort();
+                        }
+                    },
+                });
             });
         },
     };

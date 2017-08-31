@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-29 18:06:22
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-31 10:48:32
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:192822373759a53c9eaea720-70902898%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-30 23:17:40
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:184003939859a6d714b34754-16926122%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> f4898287a2242d0bbfe09109a3707b4b14a227d1
+<?php /*%%SmartyHeaderCode:181931313659a77900baa885-74459705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-<<<<<<< HEAD
-      1 => 1504001179,
-=======
-      1 => 1504105950,
->>>>>>> f4898287a2242d0bbfe09109a3707b4b14a227d1
+      1 => 1504147711,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1503916173,
+      1 => 1504142268,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '192822373759a53c9eaea720-70902898',
-=======
-      1 => 1504096796,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '184003939859a6d714b34754-16926122',
->>>>>>> f4898287a2242d0bbfe09109a3707b4b14a227d1
+  'nocache_hash' => '181931313659a77900baa885-74459705',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59a53c9eb72cc1_84628928',
+  'unifunc' => 'content_59a77900c01880_47731989',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a53c9eb72cc1_84628928')) {function content_59a53c9eb72cc1_84628928($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59a6d714badd31_83037574',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a6d714badd31_83037574')) {function content_59a6d714badd31_83037574($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> f4898287a2242d0bbfe09109a3707b4b14a227d1
+<?php if ($_valid && !is_callable('content_59a77900c01880_47731989')) {function content_59a77900c01880_47731989($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -343,9 +319,11 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <div class="form-group">
                             <label class="control-label">时间维度：</label>
                             <div class="input-group">
-                                <input readonly="true" value="" data-type="time" id="date_start" name="start" type="text" class="form-control date_start date" data-date-format="yyyy-mm-dd"/>
+                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initStart'];?>
+" data-type="time" id="date_start" name="start" type="text" class="form-control date_start date" data-date-format="yyyy-mm-dd"/>
                                 <div class="input-group-addon" style="border-left: 0;border-right: 0;"> 至 </div>
-                                <input readonly="true" value="" data-type="time" id="date_end" name="end" type="text" class="form-control date_end date" data-date-format="yyyy-mm-dd"/>
+                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initEnd'];?>
+" data-type="time" id="date_end" name="end" type="text" class="form-control date_end date" data-date-format="yyyy-mm-dd"/>
                             </div>
                         </div>
                     </div>
@@ -355,14 +333,20 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
                 <label class="control-label" style="width:80px;">数据指标：</label>
                 
-                <label class="checkbox-inline" style="width:115px;">
-                    <input tag="source" type="checkbox" value="" name="">总人数
+                <label class="radio-inline" style="width:95px;">
+                    <input type="radio" value="1" name="source" checked="true">总体数据
+                </label>
+                <label class="radio-inline" style="width:95px;">
+                    <input type="radio" value="2" name="source">分项数据
+                </label>
+                <label class="radio-inline" style="width:120px;">
+                    <input type="radio" value="3" name="source">体测与锻炼数据
                 </label>
             </li>
             
             <li style="overflow:hidden;">
                 <button type="button" class="btn btn-primary" id="subbtn" style="width:80px;">查询</button>
-                <a href="javascript:down()" type="button" class="btn btn-info" id="export" style="width:80px;margin-left:20px;" >导出</a>
+                <button type="button" class="btn btn-info" id="export" style="width:80px;margin-left:20px;" >导出</button>
             </li>
         </ul>
 
