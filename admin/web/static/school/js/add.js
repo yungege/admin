@@ -58,7 +58,7 @@ $(function(){
 					function(json){
 						me.city.find("option").empty();
 						$.each(json.data.cityList,function(key,value){
-							option = option + "<option value=" + key + " >" + value + "</option>";
+							option = option + "<option value=" + value._id + " >" + value.name + "</option>";
 						});
 						me.city[0].innerHTML = option;
 					}
@@ -79,7 +79,7 @@ $(function(){
 					data,
 					function(json){
 						$.each(json.data.districtList,function(key,value){
-							option = option + "<option value=" + key + ">" + value + "</option>";
+							option = option + "<option value=" + value._id + ">" + value.name + "</option>";
 						});
 						me.district[0].innerHTML = option;
 					}

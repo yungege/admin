@@ -194,4 +194,20 @@ class Dao_UserModel extends Db_Mongodb{
         return $this->update($where, $set);
     }
 
+    public function getUserListByClassId(string $classId, array $fields){
+        $where = [
+            'classinfo.classid' => $classId,
+        ];
+
+        $fields = $this->filterFields($fields);
+
+        if(!empty($fields)){
+            $options['projection'] = $fields;
+        }
+
+        $options['limit'] = 0;
+        
+        return $this->query($where, $options);
+    }
+
 }

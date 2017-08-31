@@ -28,7 +28,7 @@ class Service_Area_DistrictModel extends BasePageService {
         ];
 
         $this->districtList = $this->districtModel->query($cityWhere,$options);
-        $this->districtList = array_column($this->districtList,'name','_id');
+        // $this->districtList = array_column($this->districtList,'name','_id');
         $this->resData['districtList'] = $this->districtList;
      
         return $this->resData;

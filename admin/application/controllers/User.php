@@ -13,5 +13,6 @@ class UserController extends Yaf_Controller_Abstract{
         'addugc'    => 'actions/user/AddUgc.php',
         'classsearch' =>'actions/user/ClassSearch.php',
         'addschool' => 'actions/user/AddSchool.php',
+        'index'     => 'actions/user/Index.php',    
         );
 }

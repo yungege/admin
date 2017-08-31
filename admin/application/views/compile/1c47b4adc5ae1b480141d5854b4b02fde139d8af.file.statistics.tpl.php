@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 22:36:06
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-29 18:06:22
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12029474859a42a562d51f3-21345153%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-29 09:32:49
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:44632423159a4c441c4abd9-03407065%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 08594c69a045f0666e47ac3eec457155ca62b7f0
+<?php /*%%SmartyHeaderCode:192822373759a53c9eaea720-70902898%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-<<<<<<< HEAD
-      1 => 1503930850,
-=======
-      1 => 1503917104,
->>>>>>> 08594c69a045f0666e47ac3eec457155ca62b7f0
+      1 => 1504001179,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1503930850,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '12029474859a42a562d51f3-21345153',
-=======
       1 => 1503916173,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '44632423159a4c441c4abd9-03407065',
->>>>>>> 08594c69a045f0666e47ac3eec457155ca62b7f0
+  'nocache_hash' => '192822373759a53c9eaea720-70902898',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59a42a563280d7_76980479',
+  'unifunc' => 'content_59a53c9eb72cc1_84628928',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a42a563280d7_76980479')) {function content_59a42a563280d7_76980479($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59a4c441c9e931_07002995',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a4c441c9e931_07002995')) {function content_59a4c441c9e931_07002995($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 08594c69a045f0666e47ac3eec457155ca62b7f0
+<?php if ($_valid && !is_callable('content_59a53c9eb72cc1_84628928')) {function content_59a53c9eb72cc1_84628928($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -130,8 +106,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
-    
+.datetimepicker{
+    margin-top: 50px;
+}
+.today{
+    border: 1px solid #d9edf7!important;
+}
 </style>
 
 </head>
@@ -316,7 +298,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
      <div class="col-md-12">
         <form name ="form">
         <ul class="list-unstyled" style="border:1px solid #ddd;overflow:hidden;padding:20px;border-radius: 5px;">
-            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
+            <li id="kj" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
                 <p><strong>空间维度：</strong></p>
                 <select class="form-control" id="province" name="province" style="margin-bottom:15px;width: 110px;float: left;">
                     <option value="-1">全部</option>
@@ -335,11 +317,11 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label class="control-label" for="ctime">时间维度：</label>
+                            <label class="control-label">时间维度：</label>
                             <div class="input-group">
-                                <input readonly="true" value="" data-type="time" id="ctime-start" name="start" type="text" class="form-control" />
+                                <input readonly="true" value="" data-type="time" id="date_start" name="start" type="text" class="form-control date_start date" data-date-format="yyyy-mm-dd"/>
                                 <div class="input-group-addon" style="border-left: 0;border-right: 0;"> 至 </div>
-                                <input readonly="true" value="" data-type="time" id="ctime-end" name="end" type="text" class="form-control" />
+                                <input readonly="true" value="" data-type="time" id="date_end" name="end" type="text" class="form-control date_end date" data-date-format="yyyy-mm-dd"/>
                             </div>
                         </div>
                     </div>
@@ -402,6 +384,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 <script src="/static/stat/contrist.js"></script>
 
 </body>
