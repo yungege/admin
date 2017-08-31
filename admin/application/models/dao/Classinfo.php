@@ -101,5 +101,28 @@ class Dao_ClassinfoModel extends Db_Mongodb {
             $newOptions['sort'] = $options['sort'];
         return $this->query($where, $newOptions);
     }
+
+    public function getGradeList(array $where){
+        $fields = [
+            '$project' => [
+                '_id' => 1,
+                'grade' => 1,
+            ]
+        ];
+
+        $group = [
+            '$group' => [
+                '_id' => '$grade',
+            ]
+        ];
+        $aggregate = [
+            ['$match' => $where],
+            $fields,
+            $group,
+            ['$sort' => ['_id' => 1]],
+        ];
+
+        return $this->aggregate($aggregate);
+    }
     
 }

@@ -1,5 +1,5 @@
 <?php
-class Service_Stat_StatisticsModel extends BasePageService {
+class Service_Stat_ContristModel extends BasePageService {
 
     protected $province;
     protected $city;
@@ -10,10 +10,8 @@ class Service_Stat_StatisticsModel extends BasePageService {
 
     protected $trainModel;
 
-    protected $resData = [
-        'pageTag' => '4-3',
-        'data'  => [],
-    ];
+    protected $resData;
+    public $map = [];
 
     public function __construct() {
         // $this->province     = Dao_ProvinceModel::getInstance();
@@ -30,13 +28,27 @@ class Service_Stat_StatisticsModel extends BasePageService {
     }
 
     protected function __execute($req) {
-        $this->resData['data']['province'] = CommonFuc::getProvince();
-        $this->resData['data']['initStart'] = date('Y-m-d');
-        $this->resData['data']['initEnd'] = date('Y-m-d');
-
-        return $this->resData;
+        $this->getWhere($req);
     }
 
-    
+    protected function getWhere($req){
+
+        // [province] => 599bda9c2173cc77db5a526c
+        // [city] => 599bdad02173cc77db5a526d
+        // [district] => 599bdc112173cc77db5a526e
+        // [school] => 587f31732a46800e0a8b4567
+        // [grade] => 12
+        // [class] => 587f31732a46800e0a8b4576
+        // [user] => 587f31732a46800e0a8b45be
+        // [start] => 2017-08-31
+        // [end] => 2017-08-31
+        // [source] => 1
+
+        $req = $req['post'];
+
+        if($req['province']){
+            
+        }
+    }
 
 }
