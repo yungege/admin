@@ -8,7 +8,8 @@ class Service_User_DoregisterModel extends BasePageService {
 
     private static $admin = [
         13522213145,
-        13161486949
+        13161486949,
+        18513886256,
     ];
 
     public function __construct() {
