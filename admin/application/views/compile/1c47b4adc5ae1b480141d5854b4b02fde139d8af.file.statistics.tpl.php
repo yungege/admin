@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-08-29 18:06:22
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:192822373759a53c9eaea720-70902898%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-30 23:17:40
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:184003939859a6d714b34754-16926122%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> f4898287a2242d0bbfe09109a3707b4b14a227d1
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
+<<<<<<< HEAD
       1 => 1504001179,
+=======
+      1 => 1504105950,
+>>>>>>> f4898287a2242d0bbfe09109a3707b4b14a227d1
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1503916173,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '192822373759a53c9eaea720-70902898',
+=======
+      1 => 1504096796,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '184003939859a6d714b34754-16926122',
+>>>>>>> f4898287a2242d0bbfe09109a3707b4b14a227d1
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59a53c9eb72cc1_84628928',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59a53c9eb72cc1_84628928')) {function content_59a53c9eb72cc1_84628928($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59a6d714badd31_83037574',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59a6d714badd31_83037574')) {function content_59a6d714badd31_83037574($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> f4898287a2242d0bbfe09109a3707b4b14a227d1
 <html lang="en">
 
 <head>
@@ -242,7 +266,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     </li>
 
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-paper-plane"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
                             <li>
                                 <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>

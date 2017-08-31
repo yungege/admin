@@ -11,5 +11,6 @@ class SportController extends Yaf_Controller_Abstract{
         'project'       => 'actions/sport/Project.php',
         'pro'           => 'actions/sport/Pro.php',
         'ugc'           => 'actions/sport/UGC.php',
+        'updatedeadlinetime' => 'actions/sport/UpdateDeadlineTime.php',
         );
 }

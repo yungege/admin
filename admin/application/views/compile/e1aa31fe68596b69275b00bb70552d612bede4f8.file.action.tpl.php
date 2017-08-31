@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 18:18:09
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-30 20:41:04
          compiled from "/var/www/admin/admin/application/views/template/sport/action.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:54897601459a3ede14b7782-53236785%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:167800887959a6b260ba4042-05231854%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e1aa31fe68596b69275b00bb70552d612bede4f8' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/action.tpl',
-      1 => 1502777547,
+      1 => 1504095261,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503915249,
+      1 => 1504096796,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '54897601459a3ede14b7782-53236785',
+  'nocache_hash' => '167800887959a6b260ba4042-05231854',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59a3ede1501f99_09265902',
+  'unifunc' => 'content_59a6b260c24218_84531484',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a3ede1501f99_09265902')) {function content_59a3ede1501f99_09265902($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59a6b260c24218_84531484')) {function content_59a6b260c24218_84531484($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -254,7 +254,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     </li>
 
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-paper-plane"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
                             <li>
                                 <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
@@ -272,7 +272,13 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
                             </li>
                            <!--  <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">地理位置推送</a>
+                                <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/city" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">市推送</a>
+                            </li>
+                             <li>
+                                <a href="/push/district" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==8){?>cy-child-active<?php }?>">区推送</a>
                             </li> -->
                         </ul>
                     </li>

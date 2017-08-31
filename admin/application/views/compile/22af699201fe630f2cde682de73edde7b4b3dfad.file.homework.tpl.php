@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-29 10:14:14
+<?php /* Smarty version Smarty-3.1.13, created on 2017-08-31 00:41:57
          compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:49994277859a4cdf6e8de60-42996754%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:212724432359a6ead5ddffa8-79027910%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '22af699201fe630f2cde682de73edde7b4b3dfad' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/homework.tpl',
-      1 => 1503370676,
+      1 => 1504111091,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503930850,
+      1 => 1504096796,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '49994277859a4cdf6e8de60-42996754',
+  'nocache_hash' => '212724432359a6ead5ddffa8-79027910',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59a4cdf6ef0b57_35280129',
+  'unifunc' => 'content_59a6ead5e80108_94787933',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a4cdf6ef0b57_35280129')) {function content_59a4cdf6ef0b57_35280129($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
+<?php if ($_valid && !is_callable('content_59a6ead5e80108_94787933')) {function content_59a6ead5e80108_94787933($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
 if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
@@ -108,8 +108,39 @@ if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/l
         }
     </style>
     
+<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
-
+.datetimepicker{
+    margin-top: 50px!important;
+}
+.fix-box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.fix-box-inner{
+    width: 400px;
+    height: 160px;
+    background-color: white;
+    padding: 15px;
+    border: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -200px;
+}
+.inner-btn{
+    margin-top: 15px;
+}
+.inner-btn .btn{
+    width: 80px;
+}
 </style>
 
 </head>
@@ -238,7 +269,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     </li>
 
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-paper-plane"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
                             <li>
                                 <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
@@ -296,19 +327,18 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             <table class="table table-bordered table-hover table-striped text-center">
                 <thead>
                     <tr>
-                        <th class="text-center">作业名称</th>
-                        <th class="text-center">作业类型</th>
-                        <th class="text-center">封面图片</th>
+                        <th class="text-center">ID</th>
+                        <th class="text-center">名称</th>
+                        <th class="text-center">类型</th>
+                        <th class="text-center">封面</th>
                         <th class="text-center">学校</th>
-                        <th class="text-center">年级</th>
                         <th class="text-center">班级</th>
-                        <!-- <th class="text-center">周锻炼时间</th> -->
                         <th class="text-center">周锻炼次数</th>
                         <th class="text-center">作业间隔</th>
                         <th class="text-center">补作业间隔</th>
                         <th class="text-center">性别</th>
                         <th class="text-center">项目</th>
-                        <th style="width: 170px;" class="text-center">有效期</th>
+                        <th style="width: 100px;" class="text-center">有效期</th>
                         <th style="width: 100px;" class="text-center">创建时间</th>
                         <th>状态</th>
                         <th class="text-center">操作</th>
@@ -322,6 +352,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
                     <tr data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 ">
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+</td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
 </td>
                         <td><?php if ($_smarty_tpl->tpl_vars['row']->value['type']==1){?><span class="label label-warning">翻</span><?php }else{ ?><span class="label label-primary">素</span><?php }?></td>
@@ -329,12 +361,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 " width="100"></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['school'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['grade'];?>
-</td>
                         <td><button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " class="btn btn-sm btn-success" onclick="getClass(this)">查 看</button></td>
-                        <!-- <td><?php echo $_smarty_tpl->tpl_vars['row']->value['exertime'];?>
-</td> -->
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['weekdoneno'];?>
 </td>
                         <td><?php echo smarty_modifier_ttxs_parse_stamp($_smarty_tpl->tpl_vars['row']->value['makeup_limit']);?>
@@ -354,9 +382,9 @@ $_smarty_tpl->tpl_vars['pro']->_loop = true;
                             <?php } ?>
                         </td>
                         <td>
-                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['start_time'],"%Y-%m-%d %H:%M:%S");?>
+                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['start_time'],"%Y-%m-%d");?>
 <br/>
-                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['deadline_time'],"%Y-%m-%d %H:%M:%S");?>
+                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['deadline_time'],"%Y-%m-%d");?>
 
                         </td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['create_time'],"%Y-%m-%d");?>
@@ -365,6 +393,11 @@ $_smarty_tpl->tpl_vars['pro']->_loop = true;
                         <td>
                             <!-- <button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['status']==1){?>
+                            <button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-old-date="<?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['deadline_time'],'%Y-%m-%d');?>
+" class="btn btn-sm btn-primary delay_date">修改结束时间</button>
+                            <?php }?>
                         </td>
                     </tr>
                     <?php } ?>
@@ -381,17 +414,22 @@ $_smarty_tpl->tpl_vars['pro']->_loop = true;
 </div>
 
 <!-- modal -->
-<div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
-    <div class="modal-dialog" role="document" style="margin-top:7%;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabel">动作视频</h4>
+<div class="fix-box">
+    <div class="fix-box-inner">
+        <h4>修改作业结束时间</h4>
+        <form class="form" name="work">
+            <div class="input-append date" id="datetimepicker" data-date-format="yyyy-mm-dd">
+                <input class="form-control" readonly size="16" id="deadline_time" name="deadline_time" type="text">
+                <span class="add-on"><i class="icon-remove"></i></span>
+                <span class="add-on"><i class="icon-th"></i></span>
+            </div>   
+           <input type="hidden" name="hid">
+           <input type="hidden" name="old">
+            <div class="inner-btn">
+                <button id="sub" type="button" class="btn btn-primary">确定</button>
+                <button id="can" type="button" class="btn btn-default">取消</button>
             </div>
-            <div class="modal-body" id="display-body">
-                
-            </div>
-        </div>
+        </form>
     </div>
 </div>
 
@@ -425,6 +463,7 @@ $_smarty_tpl->tpl_vars['pro']->_loop = true;
     </script>
 
     
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 <script type="text/javascript">
 
     function del(el){
@@ -443,33 +482,83 @@ $_smarty_tpl->tpl_vars['pro']->_loop = true;
         });
     }
 
-    var video = {
-        init: function () {
-            this.getDom();
-            this.display();
-        },
+    $(function(){
+        var delayDate = {
+            init: function(){
+                this.getDom();
+                this.displayBox();
+                this.hideBox();
+                this.initDate();
+                this.postData();
+            },
+            getDom: function(){
+                this.showBtn = $('.delay_date');
+                this.hideBtn = $('#can');
+                this.showBox = $('.fix-box');
+                this.timeInt = $('#deadline_time');
+                this.timeShow = $('#datetimepicker');
+                this.subBtn = $('#sub');
 
-        getDom: function () {
-            this.disBtn = $('.video');
-            this.videoTitle = $('#modalLabel');
-            this.videoUri = $('#display-body');
-        },
+                this.old = $('input[name=old]');
+                this.hid = $('input[name=hid]');
+                this.form = $('form[name=work]')
+            },
+            initDate: function(){
+                var me = this;
 
-        display: function () {
-            var me = this;
-            me.disBtn.unbind().bind('click', function(){
-                var uri = $(this).data('uri');
-                var name = $(this).data('name');
-                me.videoTitle.text(name);
-                var html = "<video style=\"width:100%;\" controls autobuffer autoplay>" +
-                                "<source src='" + uri + "' type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'></source>" +
-                            "</video>";
-                me.videoUri.html(html);
-            })
-        }
-    };
+                me.timeShow.datetimepicker({
+                    autoclose: 1,
+                    todayHighlight: 1,
+                    minView: 2,
+                    forceParse: 0,
+                    startDate: new Date(),
+                });
+            },
+            displayBox: function(){
+                var me = this;
+                me.showBtn.unbind().bind('click', function(){
+                    var date = $(this).data('old-date'),
+                        id = $(this).data('id');
+                    me.timeInt.attr('placeholder', date);
+                    me.showBox.fadeIn(200);
 
-    video.init();
+                    me.old.val(date);
+                    me.hid.val(id);
+                });
+            },
+            hideBox: function(){
+                var me = this;
+                me.hideBtn.unbind().bind('click', function(){
+                    me.showBox.fadeOut(200);
+                    me.old.val('');
+                    me.hid.val('');
+                    me.timeInt.attr('placeholder', '');
+                });
+            },
+
+            postData: function(){
+                var me = this;
+                me.subBtn.unbind().bind('click', function(){
+                    if(!me.timeInt.val){
+                        alert('请选择结束日期');
+                        return false;
+                    }
+                    var data = me.form.serialize();
+                    $.post('/sport/updateDeadlineTime', data, function(json){
+                        if(json.errCode == 0){
+                            window.location.reload();
+                        }
+                        else{
+                            alert(json.errMessage);
+                        }
+                    })
+                });
+                
+            }
+        };
+
+        delayDate.init()
+    })
 </script>
 
 </body>
