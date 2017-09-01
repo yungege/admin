@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-31 10:48:32
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-01 16:34:57
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:181931313659a77900baa885-74459705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:178669183659a91bb109b241-41262354%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1504147711,
+      1 => 1504232744,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '181931313659a77900baa885-74459705',
+  'nocache_hash' => '178669183659a91bb109b241-41262354',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59a77900c01880_47731989',
+  'unifunc' => 'content_59a91bb10e5ee2_39809005',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a77900c01880_47731989')) {function content_59a77900c01880_47731989($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59a91bb10e5ee2_39809005')) {function content_59a91bb10e5ee2_39809005($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -357,8 +357,13 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 <!-- 图表 -->
 <div class="row">
     <div class="col-md-12">
-        <div id="charts" style="height:450px;border:1px solid #ddd;margin-bottom:15px;border-radius: 5px;">
+        <div style="border-radius: 5px;border:1px solid #ddd;padding: 15px;">
+            <div id="charts" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;">
 
+            </div>
+            <table class="table table-bordered table-striped table-hover" id="charts-table">
+                
+            </table>
         </div>
     </div>
 </div>
@@ -392,7 +397,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script src="/static/widget/echarts/echarts.min.js"></script>
 <script src="/static/stat/contrist.js"></script>
 
 </body>

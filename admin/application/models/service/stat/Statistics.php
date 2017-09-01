@@ -31,7 +31,7 @@ class Service_Stat_StatisticsModel extends BasePageService {
 
     protected function __execute($req) {
         $this->resData['data']['province'] = CommonFuc::getProvince();
-        $this->resData['data']['initStart'] = date('Y-m-d');
+        $this->resData['data']['initStart'] = date('Y-m-d', strtotime('-7 day'));
         $this->resData['data']['initEnd'] = date('Y-m-d');
 
         return $this->resData;

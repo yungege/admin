@@ -493,7 +493,28 @@ class Db_Mongodb {
     }
 
     // map reduce
-    public function mapReduce(){}
+    public function mapReduce($map, $reduce, $options){
+        $cmd = [
+            'mapReduce' => $table ? : $this->table,
+            'map' => $map,
+            'reduce' => $reduce,
+            'out'   => 'res',
+            'query' => $options['query'],
+        ];
+
+        $cursor = $this->execute($cmd);
+
+        print_r($cursor);exit;
+        foreach ($cursor as $document) {
+            $itemArr = Tools::object_array($document);
+            if(isset($itemArr[$this->pk]['oid'])){
+                $itemArr[$this->pk] = $itemArr[$this->pk]['oid'];
+            }
+            $list[] = $itemArr;
+        }
+        
+        return $list;
+    }
 
     /**
      * 生成 ObjectId

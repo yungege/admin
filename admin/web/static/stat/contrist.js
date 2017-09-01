@@ -11,6 +11,7 @@ $(function(){
 
             this.initDate();
             this.postData();
+            this.download();
         },
 
         getDom: function(){
@@ -26,6 +27,9 @@ $(function(){
             this.subBtn         = $('#subbtn');
             this.downBtn        = $('#export');
             this.form           = $('form[name=form]');
+
+            this.charts         = $('#charts');
+            this.table          = $('#charts-table');
         },
 
         getCity: function(){
@@ -81,8 +85,7 @@ $(function(){
                     that = $(this);
                 
                 if(districtId != -1){
-                    $.post('/school/index?districtId='+districtId, function(json){
-                        // console.log(json.data.schoolList);
+                    $.get('/school/index?districtId='+districtId, function(json){
                         if(json.data.schoolList.length != 0){
                             me.createSel(json.data.schoolList, 'school');
                         }
@@ -216,10 +219,10 @@ $(function(){
                 ax = $.ajax({
                     url:'/stat/contrist', 
                     data:data, 
-                    type: 'POST',
+                    type: 'GET',
                     dataType: 'json',
                     success: function(json){
-                        console.log(json.data);
+                        me.makeCharts(json.data);
                     },
                     beforeSend: function () {
                         if(ax != null) {
@@ -229,7 +232,108 @@ $(function(){
                 });
             });
         },
+
+        makeCharts: function(data){
+            var me = this;
+            var option = {
+                color: ['#3398DB'],
+                tooltip : {
+                    trigger: 'axis',
+                    axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                    }
+                },
+                xAxis : [
+                    {
+                        type : 'category',
+                        data : data.xkeys,
+                        axisTick: {
+                            alignWithLabel: true
+                        }
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value'
+                    }
+                ],
+                series : [
+                    {
+                        name:'',
+                        type:'bar',
+                        barWidth: '60%',
+                        data:data.yvals
+                    }
+                ],
+                label:{ 
+                    normal:{ 
+                        show: true, 
+                        position: 'top'
+                    } 
+                },
+            };
+            var chartArea = document.getElementById('charts');
+            var myChart = echarts.init(chartArea);
+            myChart.setOption(option);
+            window.onresize = function (){
+                myChart.resize();
+            }
+            
+            me.makeTable(data);
+        },
+
+        makeTable: function(data){
+            var me = this,
+                tableHtml = '<caption>数据表</caption><tr>';
+            $.each(data.xkeys, function(i, val){
+                tableHtml += '<td>'+val+'</td>';
+            })
+            tableHtml += '</tr><tr>';
+
+            $.each(data.yvals, function(i, val){
+                tableHtml += '<td>'+val+'</td>';
+            })
+            tableHtml += '</tr>';
+
+            me.table.html(tableHtml);
+        },
+
+        download: function(){
+            var me = this;
+            me.downBtn.unbind().bind('click', function(){
+                var file = [],
+                    plat = me.provinceSel.val(),
+                    city = $('#city').find('option:selected').text(),
+                    district = $('#district').find('option:selected').text(),
+                    school = $('#school').find('option:selected').text(),
+                    grade = $('#grade').find('option:selected').text(),
+                    className = $('#class').find('option:selected').text(),
+                    user = $('#user').find('option:selected').text(),
+                    startTime = me.startBtn.val(),
+                    endTime = me.endBtn.val();
+
+                if(plat == -1){
+                    file.push('全平台');
+                }
+                else{
+                    file.push(me.provinceSel.find('option:selected').text());
+                }
+                
+                file.push(city,district,school,grade,className,user);
+                file = file.filter(function(v){
+                    return (v != '' && v != '全部');
+                });
+
+                startTime = startTime.replace(/(-)/g, '/');
+                endTime = endTime.replace(/(-)/g, '/');
+                file.push(startTime,endTime);
+
+                file = file.join('-');
+                window.location = '/stat/contrist?down='+encodeURI(file)+'&'+me.form.serialize();
+            })
+        },
     };
 
     contrist.init();
+    $('#subbtn').trigger('click');
 })

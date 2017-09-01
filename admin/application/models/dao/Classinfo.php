@@ -3,6 +3,8 @@ class Dao_ClassinfoModel extends Db_Mongodb {
     
     protected $table = 'classinfo';
 
+    const TEST_CLASS = '5881dabb565bc00a259718a6';
+
     protected $fields = [
         'name' => '',                   // 班级名称
         'schoolname' => '',             // 学校名称

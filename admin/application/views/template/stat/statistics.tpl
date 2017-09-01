@@ -68,8 +68,13 @@
 <!-- 图表 -->
 <div class="row">
     <div class="col-md-12">
-        <div id="charts" style="height:450px;border:1px solid #ddd;margin-bottom:15px;border-radius: 5px;">
+        <div style="border-radius: 5px;border:1px solid #ddd;padding: 15px;">
+            <div id="charts" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;">
 
+            </div>
+            <table class="table table-bordered table-striped table-hover" id="charts-table">
+                
+            </table>
         </div>
     </div>
 </div>
