@@ -8,10 +8,8 @@ class Service_Stat_TrainStatModel extends BasePageService {
     protected $trainModel;
     protected $proSkuModel;
     protected $statData = [];
-    protected $gradeNo = [11,12,13,14,15,16,21];
+    protected $gradeNo = [11,12,13,14,15,16];
     protected $classModel;
-    protected $startTime;
-    protected $endTime;
 
     public function __construct() {
         
@@ -20,8 +18,6 @@ class Service_Stat_TrainStatModel extends BasePageService {
         $this->trainModel = Dao_TrainingdoneModel::getInstance();
         $this->proSkuModel = Dao_ExerciseProjectSkuModel::getInstance();
         $this->classModel = Dao_ClassinfoModel::getInstance();
-        $this->startTime = 1499875200;
-        $this->endTime = time();
     }
 
     protected function __declare() {
@@ -55,78 +51,102 @@ class Service_Stat_TrainStatModel extends BasePageService {
                                      ->setCategory("Test result file");
 
         $objPHPExcel->setActiveSheetIndex(0)
-                        ->setCellValue('A1', '姓名')
-                        ->setCellValue('B1', '锻炼次数')
-                        ->setCellValue('C1', '班级')
-                        ->setCellValue('D1', '联系电话')
-                        ->setCellValue('E1', '是否注册');
+                        ->setCellValue('A1', '班级名')
+                        ->setCellValue('B1', '总人数')
+                        ->setCellValue('C1', '总锻炼次数')
+                        ->setCellValue('D1', '总锻炼时间')
+                        ->setCellValue('E1', '总消耗卡路里')
+                        ->setCellValue('F1', '人均锻炼次数');
 
-                        $i = 2;
+
+
         $this->schoolId = "587f31732a46800e0a8b4567";
+        $schoolFields = ['name'];
+        $schoolInfo = $this->schoolModel->getSchoolById($this->schoolId,$schoolFields);
+        $proSkuWhere = [];
+        $options['projection'] = ['time_cost' => 1];
+        $proSku = $this->proSkuModel->query($proSkuWhere,$options);
+        $proSku = array_column($proSku,'time_cost','_id');
+
         $classWhere = [
             'schoolid' => $this->schoolId,
             'is_test' => 0.0,
-            'grade' => ['$in' => $this->gradeNo],
         ];
+        $classFields = ['name'];
         $classOptions['sort'] = ['grade' => 1,'classno' => 1];
-        $classOptions['projection'] = ['name' => 1];
-        $classInfos = $this->classModel->query($classWhere,$classOptions);
+        $classInfos = $this->classModel->query($classWhere,$classFields,$classOptions['sort']);
+        
 
+        $i = 2;
         foreach($classInfos as $classInfo){
+            $a = 'A' . $i;
+            $b = 'B' . $i;
+            $c = 'C' . $i;
+            $d = 'D' . $i;
+            $e = 'E' . $i;
+            $f = 'F' . $i;
 
             $userWhere = [
                 'classinfo.classid' => $classInfo['_id'],
+                'type' => 1,
             ];
-            $userOption['projection'] = ['username' => 1, 'mobileno' => 1, 'ssoid' => 1,'_id' => 1,'classinfo' =>1];
+            $option['projection'] = ['username' => 1,'ssoid' => 1,'mobileno' => 1,'_id' => 1, 'schoolinfo' => 1];
+            $userInfos = $this->userModel->query($userWhere,$option);
 
-            $userDatas = $this->userModel->query($userWhere,$userOption);
-            foreach($userDatas as $userData){
-                $trainWhere =[
-                    'userid' => $userData['_id'],
-                   'starttime' => ['$gte' => $this->startTime],
-                    'endtime' => ['$lte' => $this->endTime],
-                ];
-                $trainNo = $this->trainModel->count($trainWhere);
-                if($trainNo < 3){
-                    if(empty($userData['mobileno'])){
-                        $mobileNo = '无';
-                    }else{
-                        if(is_array($userData['mobileno'])){
-                            $mobileNo = implode(',',$userData['mobileno']);
-                        }else{
-                            $mobileNo = $userData['mobileno'];
-                        }
-                    }
-                    if(empty($userData['mobileno']) && empty($userData['ssoid'])){
-                        $isRegister = '未注册';
-                    }else{
-                        $isRegister = '已注册';
-                    }
-
-                    $a = 'A' . $i;
-                    $b = 'B' . $i;
-                    $c = 'C' . $i;
-                    $d = 'D' . $i;
-                    $e = 'E' . $i;
-                    $f = 'F' . $i;
-
-                    
-
-                    // Miscellaneous glyphs, UTF-8
-                    $objPHPExcel->setActiveSheetIndex(0)
-                                ->setCellValue($a, $userData['username'])
-                                ->setCellValue($b, $trainNo)
-                                ->setCellValue($c, $userData['classinfo']['classname'])
-                                ->setCellValue($d, $mobileNo)
-                                ->setCellValue($e, $isRegister);
-                    $i++;
-
-                }
-
-            }
             
+            
+            $userIds = array_column($userInfos,'_id');
+
+            $trainWhere = [
+                'userid' => ['$in' => $userIds],
+                'starttime' => ['$gte' => 1499875200],
+                'endtime' => ['$lte' => 1503885600],
+                'htype' => ['$in' => [1,2,3]],
+            ];
+            $option['projection'] = [
+                'userid' => 1,'trainingid' => 1,'burncalories' => 1, 'htype' => 1,'endtime' => 1,'starttime' => 1
+            ];
+            
+            $trainDatas = $this->trainModel->query($trainWhere,$option);
+
+            $this->statData['timeSum'] = 0;
+            $this->statData['burncalorieSum'] = 0;
+            foreach($trainDatas as $trainData){
+                if(!empty($trainData['trainingid'])){
+                    if(!empty($proSku[$trainData['trainingid']])){
+                        $this->statData['timeSum'] += $proSku[$trainData['trainingid']];
+                        $this->statData['burncalorieSum'] += $trainData['burncalories'];
+                    }
+                }else{
+                    $this->statData['timeSum'] += ($trainData['endtime'] - $trainData['starttime']);
+                    $this->statData['burncalorieSum'] += $trainData['burncalories'];
+                }
+                
+            }
+
+            $this->statData['timeSum'] = round( $this->statData['timeSum'] / 60 ,2);
+            $this->statData['burncalorieSum'] = round($this->statData['burncalorieSum'],2);
+
+            // Add some data
+            
+            $studentNo = count($userInfos);
+            $trainNo = count($trainDatas);
+            $avg = round($trainNo / $studentNo ,2);
+
+            // Miscellaneous glyphs, UTF-8
+            $objPHPExcel->setActiveSheetIndex(0)
+                        ->setCellValue($a, $classInfo['name'])
+                        ->setCellValue($b, $studentNo)
+                        ->setCellValue($c, $trainNo)
+                        ->setCellValue($d, $this->statData['timeSum'])
+                        ->setCellValue($e, $this->statData['burncalorieSum'])
+                        ->setCellValue($f, $avg);
+            $i++;
+
         }
-   
+
+        
+        
 
         // Rename worksheet
         $objPHPExcel->getActiveSheet()->setTitle('学校统计');
