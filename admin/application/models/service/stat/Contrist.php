@@ -285,9 +285,9 @@ class Service_Stat_ContristModel extends BasePageService {
             }
         }
 
-        $this->resData['trainTime'] = (float)sprintf('%.2f',$this->resData['trainTime']/60);
-        $this->resData['trainAvg'] = (float)sprintf('%.2f',$this->resData['trainCount']/$this->resData['userCount']);
-        $this->resData['doneRate'] = (float)sprintf('%.4f',$userDoneNum / count($list)) * 100;
+        $this->resData['trainTime'] = !empty($list) ? ((float)sprintf('%.2f',$this->resData['trainTime']/60)) : 0;
+        $this->resData['trainAvg'] = !empty($list) ? ((float)sprintf('%.2f',$this->resData['trainCount']/$this->resData['userCount'])) : 0;
+        $this->resData['doneRate'] = !empty($list) ? ((float)sprintf('%.4f',$userDoneNum / count($list)) * 100) : 0;
     }
 
     protected function formatData(){
