@@ -265,7 +265,6 @@ $(function(){
                 yAxis : [
                     {
                         type : 'value',
-                        // title: '完成人数',
                     }
                 ],
                 series : [
@@ -398,8 +397,11 @@ $(function(){
                         name: '完成比例',
                         min: 0,
                         axisLabel: {
-                            formatter: '{value} %'
-                        }
+                            formatter: '{value} %',
+                            textStyle: {
+                                color: 'red',
+                            }
+                        },
                     }
                 ],
                 series: [
@@ -413,6 +415,21 @@ $(function(){
                         type:'line',
                         yAxisIndex: 1,
                         data:data.doneRate,
+                        itemStyle : {
+                            normal : {
+                                color:'red',
+                                label : {
+                                    show : true,
+                                    position : 'middle',
+                                    textStyle : {
+                                        color:'red'
+                                    }
+                                },
+                                lineStyle:{
+                                    color:'red'
+                                }
+                            }
+                        },
                     }
                 ]
             };
@@ -444,9 +461,23 @@ $(function(){
                 tableHtml += '<td>'+val+'%</td>';
             })
             tableHtml += '</tr>';
-            var p = '<p>总人数：'+ data.userCount + '&emsp;总次数(身体素质锻炼)：' + data.totalCount + '</p>';
+            if(data.doneNumUsers.length != 0){
+                tableHtml += '<tr><td>学生信息</td>';
+                $.each(data.doneNumUsers, function(i, val){
+                    tableHtml += '<td>';
+                    $.each(val, function(i, item){
+                        tableHtml += '<a style="display:block;float:left;margin-left:5px;text-decoration: underline;" href="/user/student?uid='+item._id+'">'+item.username+'</a>';
+                    })
+                    tableHtml += '</td>';
+                })
+                tableHtml += '</tr>';
+            }
+
+            per = data.yvals[data.yvals.length - 1];
+            var p = '<p>总人数：'+ data.userCount + '(人)&emsp;总次数(身体素质锻炼)：' + data.totalCount + '(次)&emsp;参与锻炼人数：' + (data.userCount - per) + '(人)&emsp;无锻炼记录人数：' + per + '(人)</p>';
 
             me.table.html(tableHtml);
+            me.table.nextAll().remove();
             me.table.after(p);
         },
     };

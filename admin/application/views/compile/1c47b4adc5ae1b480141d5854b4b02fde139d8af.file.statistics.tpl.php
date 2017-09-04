@@ -1,37 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-03 12:51:41
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-04 17:59:34
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:157813358659ab8a5d799423-60536996%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-04 15:16:05
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:98989715559acfdb5c51ad9-00213651%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> a6d50aaecd8e05cc6be9626074048139b246e47c
+<?php /*%%SmartyHeaderCode:189102525059ad24063dd289-79559691%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-<<<<<<< HEAD
-      1 => 1504254954,
-=======
-      1 => 1504507961,
->>>>>>> a6d50aaecd8e05cc6be9626074048139b246e47c
+      1 => 1504519039,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1504097049,
+      1 => 1504142268,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '157813358659ab8a5d799423-60536996',
-=======
-  'nocache_hash' => '98989715559acfdb5c51ad9-00213651',
->>>>>>> a6d50aaecd8e05cc6be9626074048139b246e47c
+  'nocache_hash' => '189102525059ad24063dd289-79559691',
   'function' => 
   array (
   ),
@@ -43,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59ab8a5d7ed867_61051408',
+  'unifunc' => 'content_59ad2406424f92_97217434',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ab8a5d7ed867_61051408')) {function content_59ab8a5d7ed867_61051408($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59acfdb5ca5641_67230255',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59acfdb5ca5641_67230255')) {function content_59acfdb5ca5641_67230255($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> a6d50aaecd8e05cc6be9626074048139b246e47c
+<?php if ($_valid && !is_callable('content_59ad2406424f92_97217434')) {function content_59ad2406424f92_97217434($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -378,7 +358,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 <div class="row">
     <div class="col-md-12">
         <div style="border-radius: 5px;border:1px solid #ddd;padding: 15px;">
-            <div id="charts" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;">
+            <div id="charts" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
 
             </div>
             <table class="table table-bordered table-striped table-hover" id="charts-table">
