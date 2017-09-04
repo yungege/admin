@@ -305,9 +305,17 @@ class Service_Stat_ContristModel extends BasePageService {
      */
     protected function getDoneRate(){
         $this->getUserCount();
+        $this->resData['xkeys'] = ['0次'];
+        $this->resData['yvals'] = [$this->resData['userCount']];
+        $this->resData['doneRate'] = [100];
+        $this->resData['totalCount'] = 0;
+        $this->resData['doneNumUsers'] = [];
 
         $numPerDay = sprintf('%.2f', 4/7);
         $needNum = ceil($numPerDay * sprintf('%.2f', ($this->map['time']['end'] - $this->map['time']['start'])/86400));
+
+        // 及格次数
+        $this->resData['needNum'] = $needNum;
 
         $where = [
             'htype' => 2,
@@ -356,9 +364,7 @@ class Service_Stat_ContristModel extends BasePageService {
         ];
 
         $list = $this->trainModel->aggregate($aggregate);
-
         if(!empty($list)){
-            $doneNum = array_column($list, '_id');
             $this->resData['xkeys'] = array_map(function($v){
                 return $v.'次';
             }, array_column($list, '_id'));
@@ -371,10 +377,31 @@ class Service_Stat_ContristModel extends BasePageService {
                 return (float)sprintf('%.4f', $v/$this->resData['userCount']) * 100;
             }, $this->resData['yvals']);
 
+            // 总锻炼次数
             $this->resData['totalCount'] = array_sum(array_column($list, 'sum'));
-        }
 
-        $this->resData['needNum'] = $needNum;
+            // 获取学生信息
+            if(isset($this->map['class']['_id'])){
+                $users = $this->userModel->getUserListByClassId($this->map['class']['_id'], ['username','nickname']);
+                $users = array_column($users, null, '_id');
+                foreach ($list as $row) {
+                    $userRange = [];
+                    foreach ($row['user'] as $uid) {
+                        if(isset($users[$uid])){
+                            if(empty($users[$uid]['username'])){
+                                $users[$uid]['username'] = $users[$uid]['nickname'];
+                            }
+                            $userRange[] = $users[$uid];
+                            unset($users[$uid]);
+                        }
+                    }
+                    $this->resData['doneNumUsers'][] = $userRange;
+                }
+                if(!empty($users)){
+                    $this->resData['doneNumUsers'][] = $users;
+                }
+            }
+        }
 
         if(!empty($this->map['down'])){
             $file = $this->map['down'];
@@ -388,6 +415,7 @@ class Service_Stat_ContristModel extends BasePageService {
             xlsOutput(array_keys($this->resData['xkeys']), [$this->resData['doneRate']]);
             exit;
         }
+
     }
 
 }
