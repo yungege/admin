@@ -14,11 +14,11 @@ class Service_Stat_ContristModel extends BasePageService {
     public $filename = '';
 
     public static $keyName = [
-        'userCount'     => '总人数',
-        'trainCount'    => '总锻炼数',
+        'userCount'     => '总人数(人)',
+        'trainCount'    => '总锻炼数(次)',
         'trainTime'     => '总时长(min)',
         'trainCal'      => '总能量(千卡)',
-        'trainAvg'      => '人均锻炼数',
+        'trainAvg'      => '人均锻炼数(次/人)',
         'doneRate'      => '完成率(%)',
     ];
 
@@ -49,7 +49,7 @@ class Service_Stat_ContristModel extends BasePageService {
                 $this->getAllData();
                 break;
             case 2:
-                # code...
+                $this->getDoneRate();
                 break;
             case 3:
                 # code...
@@ -294,6 +294,99 @@ class Service_Stat_ContristModel extends BasePageService {
         foreach ($this->resData as $k => $v) {
             $this->resData['xkeys'][] = self::$keyName[$k];
             $this->resData['yvals'][] = $v;
+        }
+    }
+
+    /**
+     * 完成次数比例
+     * @Author    422909231@qq.com
+     * @DateTime  2017-09-04
+     * @version   1.0
+     */
+    protected function getDoneRate(){
+        $this->getUserCount();
+
+        $numPerDay = sprintf('%.2f', 4/7);
+        $needNum = ceil($numPerDay * sprintf('%.2f', ($this->map['time']['end'] - $this->map['time']['start'])/86400));
+
+        $where = [
+            'htype' => 2,
+            'originaltime' => [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ],
+            'userid' => [
+                '$in' => $this->userlist,
+            ],
+        ];
+
+        $fields = [
+            '$project' => [
+                'userid' => 1,
+            ]
+        ];
+
+        $group = [
+            '$group' => [
+                '_id' => '$userid',
+                'count' => ['$sum' => 1],
+            ]
+        ];
+
+        // 二次聚合
+        $sgroup = [
+            '$group' => [
+                '_id' => '$count',
+                'count' => ['$sum' => 1],
+                'sum' => ['$sum' => '$count'],
+            ]
+        ];
+
+        // 班级级别获取每个学生信息
+        if(isset($this->map['class']['_id'])){
+            $sgroup['$group']['user'] = ['$addToSet' => '$_id'];
+        }
+
+        $aggregate = [
+            ['$match' => $where],
+            $fields,
+            $group,
+            $sgroup,
+            ['$sort' => ['_id' => -1]],
+        ];
+
+        $list = $this->trainModel->aggregate($aggregate);
+
+        if(!empty($list)){
+            $doneNum = array_column($list, '_id');
+            $this->resData['xkeys'] = array_map(function($v){
+                return $v.'次';
+            }, array_column($list, '_id'));
+            $this->resData['yvals'] = array_column($list, 'count');
+            // 0次人数
+            array_push($this->resData['xkeys'], '0次');
+            array_push($this->resData['yvals'], $this->resData['userCount'] - array_sum($this->resData['yvals']));
+
+            $this->resData['doneRate'] = array_map(function($v){
+                return (float)sprintf('%.4f', $v/$this->resData['userCount']) * 100;
+            }, $this->resData['yvals']);
+
+            $this->resData['totalCount'] = array_sum(array_column($list, 'sum'));
+        }
+
+        $this->resData['needNum'] = $needNum;
+
+        if(!empty($this->map['down'])){
+            $file = $this->map['down'];
+            array_unshift($this->resData['xkeys'], '完成次数');
+            xlsHeader($this->resData['xkeys'], $file);
+
+            array_unshift($this->resData['yvals'], '完成人数');
+            xlsOutput(array_keys($this->resData['xkeys']), [$this->resData['yvals']]);
+
+            array_unshift($this->resData['doneRate'], '完成比例');
+            xlsOutput(array_keys($this->resData['xkeys']), [$this->resData['doneRate']]);
+            exit;
         }
     }
 

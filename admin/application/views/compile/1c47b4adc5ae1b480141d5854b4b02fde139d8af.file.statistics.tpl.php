@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-03 12:51:41
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:157813358659ab8a5d799423-60536996%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-04 15:16:05
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:98989715559acfdb5c51ad9-00213651%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> a6d50aaecd8e05cc6be9626074048139b246e47c
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
+<<<<<<< HEAD
       1 => 1504254954,
+=======
+      1 => 1504507961,
+>>>>>>> a6d50aaecd8e05cc6be9626074048139b246e47c
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +27,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '157813358659ab8a5d799423-60536996',
+=======
+  'nocache_hash' => '98989715559acfdb5c51ad9-00213651',
+>>>>>>> a6d50aaecd8e05cc6be9626074048139b246e47c
   'function' => 
   array (
   ),
@@ -29,9 +43,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59ab8a5d7ed867_61051408',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59ab8a5d7ed867_61051408')) {function content_59ab8a5d7ed867_61051408($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59acfdb5ca5641_67230255',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59acfdb5ca5641_67230255')) {function content_59acfdb5ca5641_67230255($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> a6d50aaecd8e05cc6be9626074048139b246e47c
 <html lang="en">
 
 <head>
@@ -334,13 +354,13 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 <label class="control-label" style="width:80px;">数据指标：</label>
                 
                 <label class="radio-inline" style="width:95px;">
-                    <input type="radio" value="1" name="source" checked="true">总体数据
+                    <input type="radio" value="1" name="source" checked="true"/>总体数据
                 </label>
                 <label class="radio-inline" style="width:95px;">
-                    <input type="radio" value="2" name="source">分项数据
+                    <input type="radio" value="2" name="source"/>分项数据
                 </label>
                 <label class="radio-inline" style="width:120px;">
-                    <input type="radio" value="3" name="source">体测与锻炼数据
+                    <input type="radio" value="3" name="source"/>体测与锻炼数据
                 </label>
             </li>
             
