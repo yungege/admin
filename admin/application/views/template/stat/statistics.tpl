@@ -45,13 +45,13 @@
                 <label class="control-label" style="width:80px;">数据指标：</label>
                 
                 <label class="radio-inline" style="width:95px;">
-                    <input type="radio" value="1" name="source" checked="true">总体数据
+                    <input type="radio" value="1" name="source" checked="true"/>总体数据
                 </label>
                 <label class="radio-inline" style="width:95px;">
-                    <input type="radio" value="2" name="source">分项数据
+                    <input type="radio" value="2" name="source"/>分项数据
                 </label>
                 <label class="radio-inline" style="width:120px;">
-                    <input type="radio" value="3" name="source">体测与锻炼数据
+                    <input type="radio" value="3" name="source"/>体测与锻炼数据
                 </label>
             </li>
             

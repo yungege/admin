@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-01 16:39:18
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-04 15:16:05
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:23806794959a91cb6ea5713-90622435%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:98989715559acfdb5c51ad9-00213651%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1504232744,
+      1 => 1504507961,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '23806794959a91cb6ea5713-90622435',
+  'nocache_hash' => '98989715559acfdb5c51ad9-00213651',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59a91cb6ef76f2_72496531',
+  'unifunc' => 'content_59acfdb5ca5641_67230255',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a91cb6ef76f2_72496531')) {function content_59a91cb6ef76f2_72496531($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59acfdb5ca5641_67230255')) {function content_59acfdb5ca5641_67230255($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -334,13 +334,13 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 <label class="control-label" style="width:80px;">数据指标：</label>
                 
                 <label class="radio-inline" style="width:95px;">
-                    <input type="radio" value="1" name="source" checked="true">总体数据
+                    <input type="radio" value="1" name="source" checked="true"/>总体数据
                 </label>
                 <label class="radio-inline" style="width:95px;">
-                    <input type="radio" value="2" name="source">分项数据
+                    <input type="radio" value="2" name="source"/>分项数据
                 </label>
                 <label class="radio-inline" style="width:120px;">
-                    <input type="radio" value="3" name="source">体测与锻炼数据
+                    <input type="radio" value="3" name="source"/>体测与锻炼数据
                 </label>
             </li>
             
