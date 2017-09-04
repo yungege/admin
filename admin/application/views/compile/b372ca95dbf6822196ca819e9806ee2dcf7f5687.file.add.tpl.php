@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-29 14:11:06
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-01 18:00:11
          compiled from "/var/www/admin/admin/application/views/template/school/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:98794390459a5057a687272-75242456%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:71437079359a92fabc6af31-20417431%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b372ca95dbf6822196ca819e9806ee2dcf7f5687' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/school/add.tpl',
-      1 => 1503901944,
+      1 => 1503654498,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503916173,
+      1 => 1504097049,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '98794390459a5057a687272-75242456',
+  'nocache_hash' => '71437079359a92fabc6af31-20417431',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59a5057a6d2a72_05429334',
+  'unifunc' => 'content_59a92fabcbc0f4_55181452',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a5057a6d2a72_05429334')) {function content_59a5057a6d2a72_05429334($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59a92fabcbc0f4_55181452')) {function content_59a92fabcbc0f4_55181452($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -264,7 +264,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     </li>
 
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-paper-plane"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
                             <li>
                                 <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
