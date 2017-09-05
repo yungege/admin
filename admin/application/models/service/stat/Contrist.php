@@ -548,10 +548,10 @@ class Service_Stat_ContristModel extends BasePageService {
             'userlist' => [],
         ];
         $format = [
-            '90-100次'     => $item,
-            '80-90次'      => $item,
-            '70-80次'      => $item,
-            '70次以下'     => $item,
+            '90-100分'     => $item,
+            '80-90分'      => $item,
+            '70-80分'      => $item,
+            '70分以下'     => $item,
             '无体测数据' => $item,
         ];
 
@@ -569,29 +569,99 @@ class Service_Stat_ContristModel extends BasePageService {
             [
                 'name'      => '总人数',
                 'type'      => 'bar',
+                'barWidth'  => '20%',
                 'data'      => array_column($format, 'userCount'),
             ],
             [
                 'name'      => '总锻炼数',
                 'type'      => 'bar',
+                'barWidth'  => '20%',
                 'data'      => array_column($format, 'trainCount'),
+                'itemStyle' => [
+                    'normal' => [
+                        'color' => '#64BD3D',
+                        'label' => [
+                            'show' => true,
+                            'textStyle' => [
+                                'color' => '#64BD3D',
+                            ],
+                        ],
+                        'lineStyle' => [
+                            'color' => '#64BD3D',
+                        ]
+                    ],
+                ],
             ],
             [
                 'name'      => '人均锻炼数',
-                'type'      => 'line',
+                'type'      => 'bar',
+                'barWidth'  => '20%',
                 'data'      => array_column($format, 'avgTrainCount'),
+                'itemStyle' => [
+                    'normal' => [
+                        'color' => '#EFE42A',
+                        'label' => [
+                            'show' => true,
+                            'position' => 'top',
+                            'textStyle' => [
+                                'color' => '#EFE42A',
+                            ],
+                        ],
+                        'lineStyle' => [
+                            'color' => '#EFE42A',
+                        ]
+                    ],
+                ],
             ],
             [
                 'name'      => '完成比例',
                 'type'      => 'line',
+                'yAxisIndex' => 1,
                 'data'      => array_column($format, 'doneRate'),
+                'itemStyle' => [
+                    'normal' => [
+                        'color' => 'red',
+                        'label' => [
+                            'show' => true,
+                            'position' => 'top',
+                            'textStyle' => [
+                                'color' => 'red',
+                            ],
+                        ],
+                        'lineStyle' => [
+                            'color' => 'red',
+                        ]
+                    ],
+                ],
             ],
         ];
         $this->resData['legend'] = [
             '总人数','总锻炼数','人均锻炼数','完成比例'
         ];
 
-        return $this->resData;
+        $this->resData['yAxis'] = [
+            [
+                'type' => 'value',
+                'name' => '完成人数|总锻炼数|人均锻炼数',
+                'axisLabel' => [
+                    'formatter' => '{value}',
+                ],
+            ],
+            [
+                'type' => 'value',
+                'name' => '完成比例',
+                'axisLabel' => [
+                    'formatter' => '{value} %',
+                    'textStyle' => [
+                        'color' => 'red',
+                    ],
+                ],
+            ],
+        ];
+
+        $this->resData['tableDataHtml'] = '';
+
+        $this->resData['warmHtml'] = '';
     }
 
     protected function getPhyData(&$format){
@@ -618,20 +688,20 @@ class Service_Stat_ContristModel extends BasePageService {
 
     protected function getScoreRange($score, $uid, &$format){
         if($score >= 90){
-            $format['90-100次']['userCount'] += 1;
-            $format['90-100次']['userlist'][] = $uid;
+            $format['90-100分']['userCount'] += 1;
+            $format['90-100分']['userlist'][] = $uid;
         }
         else if($score >= 80){
-            $format['80-90次']['userCount'] += 1;
-            $format['80-90次']['userlist'][] = $uid;
+            $format['80-90分']['userCount'] += 1;
+            $format['80-90分']['userlist'][] = $uid;
         }
         else if($score >= 70){
-            $format['70-80次']['userCount'] += 1;
-            $format['70-80次']['userlist'][] = $uid;
+            $format['70-80分']['userCount'] += 1;
+            $format['70-80分']['userlist'][] = $uid;
         }
         else{
-            $format['70次以下']['userCount'] += 1;
-            $format['70次以下']['userlist'][] = $uid;
+            $format['70分以下']['userCount'] += 1;
+            $format['70分以下']['userlist'][] = $uid;
         }
     }
 

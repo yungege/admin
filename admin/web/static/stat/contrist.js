@@ -229,7 +229,7 @@ $(function(){
                         if(source== 1){
                             me.makeCharts(json.data);
                         }
-                        else if(source == 2){
+                        else if(source == 2 || source == 3){
                             me.makeMixCharts(json.data);
                         }
                         
