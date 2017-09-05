@@ -410,8 +410,8 @@ class Service_Stat_ContristModel extends BasePageService {
             // 0次人数
             array_push($this->resData['xkeys'], '0次');
             $yvals = array_column($list, 'count');
-            $zeroUserCount = $this->resData['userCount'] - array_sum($yvals);
-            array_push($yvals, $zeroUserCount);
+            $this->undoneUserCount = $this->resData['userCount'] - array_sum($yvals);
+            array_push($yvals, $this->undoneUserCount);
             $this->resData['yvals'] = [
                 [
                     'name'      => '完成人数',
