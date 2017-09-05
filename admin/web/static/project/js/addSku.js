@@ -192,7 +192,7 @@ $(function(){
                 }
                 else{
 
-                    var option = me.actionListSelect.find('option[value='+aId+']');
+                    var option = me.actionListSelect.find('option:selected');
                     option.attr('groupNo', num);
                     option.text(option.text().replace(/\d+/, num));
                     me.fixIntWrmp.fadeOut(200);
