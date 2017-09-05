@@ -5,5 +5,6 @@ class SchoolController extends Yaf_Controller_Abstract{
 
         'add'        => 'actions/school/Add.php',
         'insert'     => 'actions/school/Insert.php',
+        'index'      => 'actions/school/Index.php',
     );
 }

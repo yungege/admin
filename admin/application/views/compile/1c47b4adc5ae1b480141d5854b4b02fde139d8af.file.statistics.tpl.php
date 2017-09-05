@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-30 23:17:40
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-05 18:25:20
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:184003939859a6d714b34754-16926122%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:76290035059ae7b904bc098-26422340%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1504105950,
+      1 => 1504597336,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1504096796,
+      1 => 1504142268,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '184003939859a6d714b34754-16926122',
+  'nocache_hash' => '76290035059ae7b904bc098-26422340',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59a6d714badd31_83037574',
+  'unifunc' => 'content_59ae7b90564812_70391104',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a6d714badd31_83037574')) {function content_59a6d714badd31_83037574($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59ae7b90564812_70391104')) {function content_59ae7b90564812_70391104($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -106,8 +106,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
-    
+.datetimepicker{
+    margin-top: 50px;
+}
+.today{
+    border: 1px solid #d9edf7!important;
+}
+.user-a{
+    display: block;
+    float: left;
+    margin-left: 5px;
+    text-decoration: underline;
+}
 </style>
 
 </head>
@@ -292,7 +304,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
      <div class="col-md-12">
         <form name ="form">
         <ul class="list-unstyled" style="border:1px solid #ddd;overflow:hidden;padding:20px;border-radius: 5px;">
-            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
+            <li id="kj" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
                 <p><strong>空间维度：</strong></p>
                 <select class="form-control" id="province" name="province" style="margin-bottom:15px;width: 110px;float: left;">
                     <option value="-1">全部</option>
@@ -311,11 +323,13 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label class="control-label" for="ctime">时间维度：</label>
+                            <label class="control-label">时间维度：</label>
                             <div class="input-group">
-                                <input readonly="true" value="" data-type="time" id="ctime-start" name="start" type="text" class="form-control" />
+                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initStart'];?>
+" data-type="time" id="date_start" name="start" type="text" class="form-control date_start date" data-date-format="yyyy-mm-dd"/>
                                 <div class="input-group-addon" style="border-left: 0;border-right: 0;"> 至 </div>
-                                <input readonly="true" value="" data-type="time" id="ctime-end" name="end" type="text" class="form-control" />
+                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initEnd'];?>
+" data-type="time" id="date_end" name="end" type="text" class="form-control date_end date" data-date-format="yyyy-mm-dd"/>
                             </div>
                         </div>
                     </div>
@@ -325,14 +339,20 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
                 <label class="control-label" style="width:80px;">数据指标：</label>
                 
-                <label class="checkbox-inline" style="width:115px;">
-                    <input tag="source" type="checkbox" value="" name="">总人数
+                <label class="radio-inline" style="width:95px;">
+                    <input type="radio" value="1" name="source" checked="true"/>总体数据
+                </label>
+                <label class="radio-inline" style="width:95px;">
+                    <input type="radio" value="2" name="source"/>分项数据
+                </label>
+                <label class="radio-inline" style="width:120px;">
+                    <input type="radio" value="3" name="source"/>体测与锻炼数据
                 </label>
             </li>
             
             <li style="overflow:hidden;">
                 <button type="button" class="btn btn-primary" id="subbtn" style="width:80px;">查询</button>
-                <a href="javascript:down()" type="button" class="btn btn-info" id="export" style="width:80px;margin-left:20px;" >导出</a>
+                <button type="button" class="btn btn-info" id="export" style="width:80px;margin-left:20px;" >导出</button>
             </li>
         </ul>
 
@@ -343,8 +363,15 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 <!-- 图表 -->
 <div class="row">
     <div class="col-md-12">
-        <div id="charts" style="height:450px;border:1px solid #ddd;margin-bottom:15px;border-radius: 5px;">
+        <div class="" style="border-radius: 5px;border:1px solid #ddd;padding: 15px;">
+            <div id="charts" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
 
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover" id="charts-table">
+                
+                </table>
+            </div>
         </div>
     </div>
 </div>
@@ -378,6 +405,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
+<script src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script src="/static/widget/echarts/echarts.min.js"></script>
 <script src="/static/stat/contrist.js"></script>
 
 </body>

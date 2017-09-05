@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-25 17:49:47
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-01 18:00:11
          compiled from "/var/www/admin/admin/application/views/template/school/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1193768169599ff2bb8b8714-75568788%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 18:27:22
-         compiled from "/var/www/admin/admin/application/views/template/school/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:43242826359a3f00a5bc341-41176357%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+<?php /*%%SmartyHeaderCode:71437079359a92fabc6af31-20417431%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -19,19 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1503551408,
+      1 => 1504097049,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1193768169599ff2bb8b8714-75568788',
-=======
-      1 => 1503888525,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '43242826359a3f00a5bc341-41176357',
->>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+  'nocache_hash' => '71437079359a92fabc6af31-20417431',
   'function' => 
   array (
   ),
@@ -43,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_599ff2bb9081c9_52429411',
+  'unifunc' => 'content_59a92fabcbc0f4_55181452',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599ff2bb9081c9_52429411')) {function content_599ff2bb9081c9_52429411($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59a3f00a688a37_80143597',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a3f00a688a37_80143597')) {function content_59a3f00a688a37_80143597($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 4cf46004091532ccaa240333d8c946e184121eff
+<?php if ($_valid && !is_callable('content_59a92fabcbc0f4_55181452')) {function content_59a92fabcbc0f4_55181452($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -259,7 +239,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
 
                             <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">统计数据</a>
+                                <a href="/stat/statistics" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">统计数据</a>
                             </li>
 
                             <li>
@@ -284,8 +264,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     </li>
 
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5){?>in<?php }?>">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-paper-plane"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
                             <li>
                                 <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
                             </li>

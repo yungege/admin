@@ -3,6 +3,8 @@ class Dao_ClassinfoModel extends Db_Mongodb {
     
     protected $table = 'classinfo';
 
+    const TEST_CLASS = '5881dabb565bc00a259718a6';
+
     protected $fields = [
         'name' => '',                   // 班级名称
         'schoolname' => '',             // 学校名称
@@ -100,6 +102,29 @@ class Dao_ClassinfoModel extends Db_Mongodb {
         if(!empty($options['sort']))
             $newOptions['sort'] = $options['sort'];
         return $this->query($where, $newOptions);
+    }
+
+    public function getGradeList(array $where){
+        $fields = [
+            '$project' => [
+                '_id' => 1,
+                'grade' => 1,
+            ]
+        ];
+
+        $group = [
+            '$group' => [
+                '_id' => '$grade',
+            ]
+        ];
+        $aggregate = [
+            ['$match' => $where],
+            $fields,
+            $group,
+            ['$sort' => ['_id' => 1]],
+        ];
+
+        return $this->aggregate($aggregate);
     }
     
 }

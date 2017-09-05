@@ -1,6 +1,18 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-30 15:01:20
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-05 17:25:47
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:108477018959a662c0da39a7-83266439%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:202715746759ae6d9be2c017-39247170%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-05 17:13:06
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:37517102859ae6aa2ede334-45473182%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-05 10:37:34
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:506890359ae0dee4abf17-48628176%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> affb3d9adf8bf4aa8506b7243e18c275c33f0051
+>>>>>>> ab95a1fb5beedc93b8956bfdb2c68bdce923ef9d
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +25,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503930850,
+      1 => 1504097049,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '108477018959a662c0da39a7-83266439',
+<<<<<<< HEAD
+  'nocache_hash' => '202715746759ae6d9be2c017-39247170',
+=======
+<<<<<<< HEAD
+  'nocache_hash' => '37517102859ae6aa2ede334-45473182',
+=======
+  'nocache_hash' => '506890359ae0dee4abf17-48628176',
+>>>>>>> affb3d9adf8bf4aa8506b7243e18c275c33f0051
+>>>>>>> ab95a1fb5beedc93b8956bfdb2c68bdce923ef9d
   'function' => 
   array (
   ),
@@ -29,9 +49,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59a662c0e0e842_89816709',
+<<<<<<< HEAD
+  'unifunc' => 'content_59ae6d9be99f39_11796286',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a662c0e0e842_89816709')) {function content_59a662c0e0e842_89816709($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59ae6d9be99f39_11796286')) {function content_59ae6d9be99f39_11796286($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_59ae6aa2f39b89_77403448',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59ae6aa2f39b89_77403448')) {function content_59ae6aa2f39b89_77403448($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_59ae0dee516388_57402439',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59ae0dee516388_57402439')) {function content_59ae0dee516388_57402439($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> affb3d9adf8bf4aa8506b7243e18c275c33f0051
+>>>>>>> ab95a1fb5beedc93b8956bfdb2c68bdce923ef9d
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -274,7 +306,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     </li>
 
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-paper-plane"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
                             <li>
                                 <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
