@@ -197,6 +197,7 @@
                     me.old.val('');
                     me.hid.val('');
                     me.timeInt.attr('placeholder', '');
+                    me.timeInt.val('');
                 });
             },
 
