@@ -32,7 +32,7 @@ class Service_Project_AddProModel extends BasePageService {
             return $this->errNo = PROJECT_ADD_FAILED;
         }
         
-        return;
+        return ['id' => $res];
     }
 
     protected function checkParams($req, &$newReq){

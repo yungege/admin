@@ -100,7 +100,7 @@ $(function(){
                         }
                         else{
                             if(confirm('创建方案成功,立即添加方案内容？')){
-                                window.location = '/project/sku';
+                                window.location = '/project/sku/'+json.data.id+'.html';
                             }
                             else{
                                 window.location = '/sport/project';
