@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-04 17:59:34
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-05 17:24:15
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:189102525059ad24063dd289-79559691%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:51762938759ae6d3f88f891-51945251%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1504519039,
+      1 => 1504597336,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '189102525059ad24063dd289-79559691',
+  'nocache_hash' => '51762938759ae6d3f88f891-51945251',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59ad2406424f92_97217434',
+  'unifunc' => 'content_59ae6d3f950f94_33286157',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ad2406424f92_97217434')) {function content_59ad2406424f92_97217434($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59ae6d3f950f94_33286157')) {function content_59ae6d3f950f94_33286157($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -113,6 +113,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 }
 .today{
     border: 1px solid #d9edf7!important;
+}
+.user-a{
+    display: block;
+    float: left;
+    margin-left: 5px;
+    text-decoration: underline;
 }
 </style>
 
@@ -357,13 +363,15 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 <!-- 图表 -->
 <div class="row">
     <div class="col-md-12">
-        <div style="border-radius: 5px;border:1px solid #ddd;padding: 15px;">
+        <div class="" style="border-radius: 5px;border:1px solid #ddd;padding: 15px;">
             <div id="charts" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
 
             </div>
-            <table class="table table-bordered table-striped table-hover" id="charts-table">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover" id="charts-table">
                 
-            </table>
+                </table>
+            </div>
         </div>
     </div>
 </div>

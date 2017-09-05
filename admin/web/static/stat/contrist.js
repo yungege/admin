@@ -372,7 +372,7 @@ $(function(){
                     }
                 },
                 legend: {
-                    data:['完成人数','完成比例']
+                    data:data.legend,
                 },
                 xAxis: [
                     {
@@ -383,55 +383,8 @@ $(function(){
                         }
                     }
                 ],
-                yAxis: [
-                    {
-                        type: 'value',
-                        name: '完成人数',
-                        min: 0,
-                        axisLabel: {
-                            formatter: '{value} 人'
-                        }
-                    },
-                    {
-                        type: 'value',
-                        name: '完成比例',
-                        min: 0,
-                        axisLabel: {
-                            formatter: '{value} %',
-                            textStyle: {
-                                color: 'red',
-                            }
-                        },
-                    }
-                ],
-                series: [
-                    {
-                        name:'完成人数',
-                        type:'bar',
-                        data:data.yvals
-                    },
-                    {
-                        name:'完成比例',
-                        type:'line',
-                        yAxisIndex: 1,
-                        data:data.doneRate,
-                        itemStyle : {
-                            normal : {
-                                color:'red',
-                                label : {
-                                    show : true,
-                                    position : 'middle',
-                                    textStyle : {
-                                        color:'red'
-                                    }
-                                },
-                                lineStyle:{
-                                    color:'red'
-                                }
-                            }
-                        },
-                    }
-                ]
+                yAxis: data.yAxis,
+                series: data.yvals,
             };
 
             var chartArea = document.getElementById('charts');
@@ -445,40 +398,11 @@ $(function(){
         },
 
         makeMixTable: function(data){
-            var me = this,
-                tableHtml = '<caption>数据表&emsp;</caption><tr><td>完成次数</td>';
-            $.each(data.xkeys, function(i, val){
-                tableHtml += '<td>'+val+'</td>';
-            })
-            tableHtml += '</tr><tr><td>完成人数</td>';
+            var me = this;
 
-            $.each(data.yvals, function(i, val){
-                tableHtml += '<td>'+val+'人</td>';
-            })
-            tableHtml += '</tr><tr><td>完成比例</td>';
-
-            $.each(data.doneRate, function(i, val){
-                tableHtml += '<td>'+val+'%</td>';
-            })
-            tableHtml += '</tr>';
-            if(data.doneNumUsers.length != 0){
-                tableHtml += '<tr><td>学生信息</td>';
-                $.each(data.doneNumUsers, function(i, val){
-                    tableHtml += '<td>';
-                    $.each(val, function(i, item){
-                        tableHtml += '<a style="display:block;float:left;margin-left:5px;text-decoration: underline;" href="/user/student?uid='+item._id+'">'+item.username+'</a>';
-                    })
-                    tableHtml += '</td>';
-                })
-                tableHtml += '</tr>';
-            }
-
-            per = data.yvals[data.yvals.length - 1];
-            var p = '<p>总人数：'+ data.userCount + '(人)&emsp;总次数(身体素质锻炼)：' + data.totalCount + '(次)&emsp;参与锻炼人数：' + (data.userCount - per) + '(人)&emsp;无锻炼记录人数：' + per + '(人)</p>';
-
-            me.table.html(tableHtml);
+            me.table.html(data.tableDataHtml);
             me.table.nextAll().remove();
-            me.table.after(p);
+            me.table.after(data.warmHtml);
         },
     };
 

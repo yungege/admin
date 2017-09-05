@@ -38,4 +38,22 @@ class Dao_PhysicalfitnesstestModel extends Db_Mongodb {
 
         return $this->query($where);
     }
+
+    public function getPhyInfoByUserids(array $userIds, array $fields = []){
+        $where = [
+            'userid' => [
+                '$in' => $userIds
+            ],
+        ];
+
+        $options['limit'] = 0;
+        if(!empty($fields)){
+            $fields = $this->filterFields($fields);
+            if(!empty($fields)){
+                $options['projection'] = $fields;
+            }
+        }
+
+        return $this->query($where, $options);
+    }
 }
