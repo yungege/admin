@@ -43,7 +43,7 @@ class Service_Action_SearchModel extends BasePageService {
         ];
         
         if(!empty(trim($req['name']))){
-            $where['name'] = ['$regex' => addslashes($req['name']), '$options' => 'i'];
+            $where['name'] = ['$regex' => addslashes(trim($req['name'])), '$options' => 'i'];
         }
 
         if(isset(Dao_ExerciseactionModel::$type[$req['typeno']])){
