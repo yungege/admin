@@ -541,23 +541,23 @@ class Service_Stat_ContristModel extends BasePageService {
      */
     protected function getScoreTarinData(){
         $item = [
-            'trainCount' => 0,
-            'userCount' => 0,
+            'trainCount'    => 0,
+            'userCount'     => 0,
             'avgTrainCount' => 0,
-            'doneRate' => 0,
-            'userlist' => [],
+            'doneRate'      => 0,
+            'userlist'      => [],
         ];
         $format = [
             '90-100分'     => $item,
             '80-90分'      => $item,
             '70-80分'      => $item,
             '70分以下'     => $item,
-            '无体测数据' => $item,
+            '无体测数据'   => $item,
         ];
 
         // 获取该空间维度下的学生列表
         $this->getUserCount();
-
+        $this->doNumCount = 0; // 有锻炼记录人数
         // 获取学生体测数据
         $this->getPhyData($format);
         
@@ -659,9 +659,30 @@ class Service_Stat_ContristModel extends BasePageService {
             ],
         ];
 
-        $this->resData['tableDataHtml'] = '';
+        // 生成表格数据
+        $this->getPhyTableHtml();
 
-        $this->resData['warmHtml'] = '';
+        // 下载数据
+        if(!empty($this->map['down'])){
+            $file = $this->map['down'];
+            array_unshift($this->resData['xkeys'], '数据项') ;
+
+            $bodyer = [];
+            foreach ($this->resData['yvals'] as $yval) {
+                $itemval = [$yval['name']];
+                foreach ($yval['data'] as $yitem) {
+                    if($yval['name'] == '完成比例'){
+                        $yitem .= ' %';
+                    }
+                    $itemval[] = $yitem;
+                }
+                $bodyer[] = $itemval;
+            }
+
+            xlsHeader($this->resData['xkeys'], $file);
+            xlsOutput(array_keys($this->resData['xkeys']), $bodyer);
+            exit;
+        }
     }
 
     protected function getPhyData(&$format){
@@ -749,6 +770,9 @@ class Service_Stat_ContristModel extends BasePageService {
                         if($lval['count'] >= $this->passNum){
                             $sval['doneRate'] += 1;
                         }
+                        if($lval['count'] > 0){
+                            $this->doNumCount += 1;
+                        }
                     }
                 }
 
@@ -758,6 +782,33 @@ class Service_Stat_ContristModel extends BasePageService {
                 unset($sval['userlist']);
             }
         }
+    }
+
+    protected function getPhyTableHtml(){
+        $this->resData['tableDataHtml'] = "<caption>数据表</caption><thead><tr><th>数据项</th>";
+        $thead = '';
+        array_map(function($v) use (&$thead){
+            $thead .= '<th>'.$v.'</th>'; 
+        }, array_values($this->resData['xkeys']));
+        $this->resData['tableDataHtml'] .= $thead . '</tr></thead><tbody>';
+
+        $totalCount = 0;
+        foreach ($this->resData['yvals'] as $yval) {
+            $this->resData['tableDataHtml'] .= "</tr><td>{$yval['name']}</td>";
+            foreach ($yval['data'] as $yitem) {
+                if($yval['name'] == '完成比例'){
+                    $yitem .= ' %';
+                }
+                $this->resData['tableDataHtml'] .= "<td>{$yitem}</td>";
+            }
+            if($yval['name'] == '总锻炼数'){
+                $totalCount = array_sum($yval['data']);
+            }
+            $this->resData['tableDataHtml'] .= '</tr>';
+        }
+        $this->resData['tableDataHtml'] .= "</tbody>";
+
+        $this->resData['warmHtml'] = '<p>该时段内应完成次数：'.$this->passNum.'次&emsp;总人数: '.$this->resData['userCount'].'人&emsp;总锻炼次数：'.$totalCount.'次&emsp;参与锻炼人数：'.$this->doNumCount.'人&emsp;无锻炼记录人数：'.($this->resData['userCount']-$this->doNumCount).'人';
     }
 
 }
