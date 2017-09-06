@@ -116,7 +116,7 @@ class Service_User_StudentModel extends BasePageService {
                 if($row['lastlogin']['logintype'] == 'phone'){
                     $lastlogin .= '手机：<a href="tel:'.$row['lastlogin']['phone'].'">'.$row['lastlogin']['phone'].'</a><br/>';
                 }
-                $lastlogin .= '时间：'.date('Y-m-d H:i:s', $row['lastlogin']['time']);
+                $lastlogin .= '时间：'.date('Y-m-d', $row['lastlogin']['time']);
             }
             else{
                 $lastlogin = '<span class="label label-warning">无记录</span>';
