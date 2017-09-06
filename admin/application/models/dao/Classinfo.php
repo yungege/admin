@@ -6,19 +6,20 @@ class Dao_ClassinfoModel extends Db_Mongodb {
     const TEST_CLASS = '5881dabb565bc00a259718a6';
 
     protected $fields = [
-        'name' => '',                   // 班级名称
-        'schoolname' => '',             // 学校名称
-        'schoolid' => '',               // 学校id号
-        'createtime' => 0,             // 信息创建时间
+        'name'          => '',                   // 班级名称
+        'schoolname'    => '',             // 学校名称
+        'schoolid'      => '',               // 学校id号
+        'createtime'    => 0,             // 信息创建时间
         'admissiontime' => 0,          // 班级入学时间
-        'grade' => '',                  // 年级
-        'classno' => '',                // 班级编号
+        'grade'         => '',                  // 年级
+        'classno'       => '',                // 班级编号
         'malemembersid' => [],          // 男生成员id信息
         'femalemembersid' => [],        // 女生成员id信息
-        'gymteacherid' => [],           // 管理体育老师id号
-        'studentno' => 0,              // 学生总数量
-        'pushtime' => [],               // 推送时间
+        'gymteacherid'  => [],           // 管理体育老师id号
+        'studentno'     => 0,              // 学生总数量
+        'pushtime'      => [],               // 推送时间
         'exerciseproject' => [],        // 锻炼项目信息:[{type(锻炼类型),exerciseid(锻炼项目id),createtime(锻炼项目创建时间),endtime(项目截止时间),weekdoneno(周计划锻炼次数)}......]
+        'branch_school' => null,
 	];
 
     protected function __construct(){
@@ -95,7 +96,7 @@ class Dao_ClassinfoModel extends Db_Mongodb {
 
     public function getList(array $where, array $fields = [] ,array $options = []){
 
-       $fields = $this->filterFields($fields);
+        $fields = $this->filterFields($fields);
         if(!empty($fields)){
             $newOptions['projection'] = $fields;
         }
@@ -125,6 +126,28 @@ class Dao_ClassinfoModel extends Db_Mongodb {
         ];
 
         return $this->aggregate($aggregate);
+    }
+
+    public function getBranchAndTestClass(array $fields = [], array $options = []){
+        $match1 = [
+            'branch_school' => [
+                '$ne' => null,
+            ],
+        ];
+
+        $match2 = [
+            'is_test' => 1,
+        ];
+
+        $fields = $this->filterFields($fields);
+        if(!empty($fields)){
+            $options['projection'] = $fields;
+        }
+
+        $branch = $this->query($match1, $options);
+        $test = $this->query($match2, $options);
+
+        return array_merge($branch, $test);
     }
     
 }
