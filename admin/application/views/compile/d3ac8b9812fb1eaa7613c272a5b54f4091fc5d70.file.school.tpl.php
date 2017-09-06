@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-03 12:51:27
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-06 15:44:51
          compiled from "/var/www/admin/admin/application/views/template/user/school.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:49366260259ab8a4fbfe7c0-55835676%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:151103975559afa7737a8911-04117393%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd3ac8b9812fb1eaa7613c272a5b54f4091fc5d70' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/school.tpl',
-      1 => 1503370676,
+      1 => 1503309873,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1504097049,
+      1 => 1504661091,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '49366260259ab8a4fbfe7c0-55835676',
+  'nocache_hash' => '151103975559afa7737a8911-04117393',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59ab8a4fc5cf74_57133532',
+  'unifunc' => 'content_59afa7738724f8_79753131',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ab8a4fc5cf74_57133532')) {function content_59ab8a4fc5cf74_57133532($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59afa7738724f8_79753131')) {function content_59afa7738724f8_79753131($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -413,7 +413,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-   <!--  <script src="/static/widget/alertBox/alert.js"></script> -->
+    <script src="/static/widget/alertBox/alert.js"></script>
 
     <script type="text/javascript">
         !(function(){

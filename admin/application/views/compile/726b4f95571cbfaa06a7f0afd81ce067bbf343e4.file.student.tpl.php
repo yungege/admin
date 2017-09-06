@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-06 18:32:36
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-06 18:41:08
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:98844867159afcec4df60c5-03540517%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:43543338959afd0c4af1796-76650814%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-      1 => 1503477649,
+      1 => 1504694438,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '98844867159afcec4df60c5-03540517',
+  'nocache_hash' => '43543338959afd0c4af1796-76650814',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59afcec4e61578_92593389',
+  'unifunc' => 'content_59afd0c4b608b7_64431423',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59afcec4e61578_92593389')) {function content_59afcec4e61578_92593389($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59afd0c4b608b7_64431423')) {function content_59afd0c4b608b7_64431423($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -108,7 +108,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
-    .add-ugc-fix{
+    .add-ugc-fix,.add-mobile-fix{
         width: 100%;
         height: 100%;
         position: fixed;
@@ -130,6 +130,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         margin-left: -250px;
         border-radius: 4px;
         padding: 10px;
+    }
+    .add-mobile-inner{
+        height: 340px;
+        margin-top: -170px;
     }
     .add-ugc-inner > h4{
         border-bottom: 1px solid #ccc;
@@ -333,6 +337,16 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                 <div class="panel-heading">
                     <div class="form-horizontal row">
 
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">班级ID：</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="cid" class="input-sm form-control" value="<?php echo $_GET['cid'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-md-3">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">年级：</label>
@@ -366,7 +380,8 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                                 </div>
                             </div>
                         </div>
-
+                    </div><br/>
+                    <div class="form-horizontal row">
                         <div class="col-md-4">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">学生ID：</label>
@@ -376,8 +391,6 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                                 </div>
                             </div>
                         </div>
-                    </div><br/>
-                    <div class="form-horizontal row">
                         <div class="col-md-3">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">家长姓名：</label>
@@ -400,6 +413,7 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                     <div class="form-horizontal row">
                         <div class="col-md-4 col-md-offset-1">
                             <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
+                            <button class="btn btn-warning btn-sm reset-btn" type="button">清除条件</button>
                         </div>
                     </div>
                 </div>
@@ -453,14 +467,22 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </a></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['grade'];?>
 </td>
-                        <td><a href="/user/class?classid=<?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classid'];?>
+                        <td>
+                            <a href="/user/class?classid=<?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classid'];?>
 "><?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classname'];?>
-</a></td>
+</a><br/>
+                            <a class="btn btn-xs btn-primary" href="?cid=<?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classid'];?>
+">只看本班？</a>
+                        </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['clientsource'];?>
 <br/><?php echo $_smarty_tpl->tpl_vars['row']->value['versions'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['mobileno'];?>
-</td>
+                        <td>
+                            <?php echo $_smarty_tpl->tpl_vars['row']->value['mobileno'];?>
+<br/>
+                            <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" class="btn btn-xs btn-primary add-mobile" href="javascript:void(0)">添加手机？</a>
+                        </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['parentname'];?>
 </td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['birthday'],"%Y-%m-%d");?>
@@ -516,6 +538,38 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </div>
 </div>
 
+<div class="add-mobile-fix">
+    <div class="add-ugc-inner add-mobile-inner">
+        <h4>新增绑定关系</h4>
+        <i class="glyphicon glyphicon-remove"></i>
+        <form name="relation">
+            <div class="form-group">
+                <label for="re-mobile">手机号码</label>
+                <input type="text" class="form-control" id="re-mobile" name="re-mobile">
+            </div>
+            <div class="form-group">
+                <label for="re-name">家长姓名</label>
+                <input type="text" class="form-control" id="re-name" name="re-name">
+            </div>
+            <div class="form-group">
+                <label for="re-sel">绑定关系</label>
+                <select class="form-control" id="re-sel" name="re-sel">
+                    <option value="-1">请选择绑定关系</option>
+                    <option value="1">父亲</option>
+                    <option value="2">母亲</option>
+                    <option value="3">外公</option>
+                    <option value="4">外婆</option>
+                    <option value="5">爷爷</option>
+                    <option value="6">奶奶</option>
+                    <option value="7">其他</option>
+                </select>
+            </div>
+            <input type="hidden" name="uid" id="hide-uid">
+            <button id="re-sub" type="button" class="btn btn-primary pull-right">Submit</button>
+        </form>
+    </div>
+</div>
+
 
 
                 <!-- footer -->
@@ -547,6 +601,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     
 <script type="text/javascript">
+
 !(function(){
     var student = {
 
@@ -555,6 +610,10 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             this.addUgc();
             this.clickCloseFix();
             this.postData();
+            this.resetForm();
+
+            this.addRelation();
+            this.postRelationData();
         },
 
         getDom: function(){
@@ -564,6 +623,23 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             this.fixBox = $('.add-ugc-fix');
             this.closeFixBoxBtn = $('.glyphicon-remove');
             this.subBtn = $('#sub');
+            this.resetBtn = $('.reset-btn');
+
+            this.reBtn = $('.add-mobile');
+            this.reFixBox = $('.add-mobile-fix');
+            this.reSubBtn = $('#re-sub');
+            this.hideUid = $('#hide-uid');
+            this.reMobile = $('#re-mobile');
+            this.reName = $('#re-name');
+            this.reSel = $('#re-sel');
+            this.reForm = $('form[name=relation]');
+        },
+
+        resetForm: function(){
+            var me = this;
+            me.resetBtn.unbind().bind('click', function(){
+                me.form.submit();
+            });
         },
 
         showDialog: function(){
@@ -576,6 +652,10 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             var me = this;
 
             me.fixBox.fadeOut(200);
+
+            me.reFixBox.fadeOut(200);
+            me.hideUid.val('');
+            me.reForm[0].reset();
         },
 
         clickCloseFix: function(){
@@ -598,6 +678,43 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             })
         },
 
+        addRelation: function(){
+            var me = this;
+            me.reBtn.unbind().bind('click', function(){
+                var uid = $.trim($(this).data('id'));
+                me.hideUid.val(uid);
+                me.reFixBox.fadeIn(200);
+            });
+        },
+
+        postRelationData: function(){
+            var me = this,
+                aj = null;
+            me.reSubBtn.unbind().bind('click', function(){
+                var data = me.reForm.serialize();
+
+                aj = $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: '/user/addRelation', data,
+                    success: function(json){
+                        if(json.errCode == 0){
+                            window.location.reload();
+                        }
+                        else{
+                            alert(json.errMessage);
+                            return false;
+                        }
+                    },
+                    beforeSend: function () {
+                        if(aj != null) {
+                            aj.abort();
+                        }
+                    },
+                });
+            });
+        },
+
         postData: function(){
             var me = this,
                 aj = null;
@@ -616,7 +733,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                     dataType: 'json',
                     url: '/user/addUgc?uid=' + uid + '&cid=' + cid + '&hid=' + hid,
                     success: function(json){
-                        if(json.errCode == 200){
+                        if(json.errCode == 0){
                             window.location = "/sport/ugc?uid=" + uid;
                         }
                         else{
