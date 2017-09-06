@@ -281,15 +281,24 @@ $(function(){
                         position: 'top'
                     } 
                 },
+                color: [
+                    '#5bc0de', '#f98b24', '#1fc659', '#1689ce', '#e2346e', '#d52f30',
+                    '#5d6dbe', '#1a9ce2', '#25e47b', '#fda639', '#f44c86', '#eb393a',
+                    '#5f77b1', '#34b6f3', '#6cf090', '#fdad2a', '#f06997', '#ec5454',
+                    '#7a88c9', '#59c7ef', '#6feeaf', '#feb657', '#f290b1', '#e27375',
+                    '#9fa9d8', '#84d5f8', '#bbf5cb', '#fecc86', '#f6bbd0', '#ed9a9b'
+                ],
             };
             var chartArea = document.getElementById('charts');
             var myChart = echarts.init(chartArea);
+            myChart.clear();
             myChart.setOption(option);
             window.onresize = function (){
                 myChart.resize();
             }
             
             me.makeTable(data);
+            me.table.nextAll().remove();
         },
 
         makeTable: function(data){
@@ -385,10 +394,18 @@ $(function(){
                 ],
                 yAxis: data.yAxis,
                 series: data.yvals,
+                color: [
+                    '#5bc0de', 'red', '#1fc659', '#f98b24', '#e2346e', '#d52f30',
+                    '#5d6dbe', '#1a9ce2', '#25e47b', '#fda639', '#f44c86', '#eb393a',
+                    '#5f77b1', '#34b6f3', '#6cf090', '#fdad2a', '#f06997', '#ec5454',
+                    '#7a88c9', '#59c7ef', '#6feeaf', '#feb657', '#f290b1', '#e27375',
+                    '#9fa9d8', '#84d5f8', '#bbf5cb', '#fecc86', '#f6bbd0', '#ed9a9b'
+                ],
             };
 
             var chartArea = document.getElementById('charts');
             var myChart = echarts.init(chartArea);
+            myChart.clear();
             myChart.setOption(option);
             window.onresize = function (){
                 myChart.resize();

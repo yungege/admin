@@ -14,6 +14,7 @@ class Service_Stat_ContristModel extends BasePageService {
     public $userlist = [];
     public $filename = '';
     public $passNum = 0;
+    public $brachClass = [];
 
     public static $keyName = [
         'userCount'     => '总人数(人)',
@@ -45,6 +46,7 @@ class Service_Stat_ContristModel extends BasePageService {
     protected function __execute($req) {
         $this->getWhere($req);
         $this->getSchool();
+        $this->getBranchAndTestClass();
         // $this->getClass();
 
         switch ($req['get']['source']) {
@@ -180,13 +182,22 @@ class Service_Stat_ContristModel extends BasePageService {
         $this->classList = $this->class->query($where, $options);
     }
 
+    // 获取分校班级(包含测试班级)
+    protected function getBranchAndTestClass(){
+        $list = $this->class->getBranchAndTestClass(['name']);
+        $this->brachClass = array_column($list, '_id');
+    }
+
     // 总人数
     protected function getUserCount(){
         $userCountMap = [
             'type' => 1,
             'classinfo.classid' => [
-                '$ne' => Dao_ClassinfoModel::TEST_CLASS,
+                '$nin' => $this->brachClass,
             ],
+            'grade' => [
+                '$lte' => 16,
+            ]
         ];
 
         if(!empty($this->map['school'])){
@@ -430,21 +441,6 @@ class Service_Stat_ContristModel extends BasePageService {
                 'type'      => 'line',
                 'data'      => $doneRate,
                 'yAxisIndex' => 1,
-                'itemStyle' => [
-                    'normal' => [
-                        'color' => 'red',
-                        'label' => [
-                            'show' => true,
-                            'position' => 'middle',
-                            'textStyle' => [
-                                'color' => 'red',
-                            ],
-                        ],
-                        'lineStyle' => [
-                            'color' => 'red',
-                        ]
-                    ],
-                ],
             ];
 
             // 总锻炼次数
@@ -577,62 +573,18 @@ class Service_Stat_ContristModel extends BasePageService {
                 'type'      => 'bar',
                 'barWidth'  => '20%',
                 'data'      => array_column($format, 'trainCount'),
-                'itemStyle' => [
-                    'normal' => [
-                        'color' => '#64BD3D',
-                        'label' => [
-                            'show' => true,
-                            'textStyle' => [
-                                'color' => '#64BD3D',
-                            ],
-                        ],
-                        'lineStyle' => [
-                            'color' => '#64BD3D',
-                        ]
-                    ],
-                ],
             ],
             [
                 'name'      => '人均锻炼数',
                 'type'      => 'bar',
                 'barWidth'  => '20%',
                 'data'      => array_column($format, 'avgTrainCount'),
-                'itemStyle' => [
-                    'normal' => [
-                        'color' => '#EFE42A',
-                        'label' => [
-                            'show' => true,
-                            'position' => 'top',
-                            'textStyle' => [
-                                'color' => '#EFE42A',
-                            ],
-                        ],
-                        'lineStyle' => [
-                            'color' => '#EFE42A',
-                        ]
-                    ],
-                ],
             ],
             [
                 'name'      => '完成比例',
                 'type'      => 'line',
                 'yAxisIndex' => 1,
                 'data'      => array_column($format, 'doneRate'),
-                'itemStyle' => [
-                    'normal' => [
-                        'color' => 'red',
-                        'label' => [
-                            'show' => true,
-                            'position' => 'top',
-                            'textStyle' => [
-                                'color' => 'red',
-                            ],
-                        ],
-                        'lineStyle' => [
-                            'color' => 'red',
-                        ]
-                    ],
-                ],
             ],
         ];
         $this->resData['legend'] = [
