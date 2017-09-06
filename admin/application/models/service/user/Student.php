@@ -58,24 +58,28 @@ class Service_User_StudentModel extends BasePageService {
             'lastlogin',
         ];
 
+        if(preg_match("/\w+/", $req['cid'])){
+            $match['classinfo.classid'] = trim($req['cid']);
+        }
+
         if(is_numeric($req['grade']) && isset(Dao_UserModel::$grade[$req['grade']])){
             $match['grade'] = (int)$req['grade'];
         }
 
-        if(!empty($req['username'])){
+        if(!empty(trim($req['username']))){
             $match['$or'] = [
-                ['username' => ['$regex' => addslashes($req['username']), '$options' => 'i']],
-                ['nickname' => ['$regex' => addslashes($req['username']), '$options' => 'i']],
+                ['username' => ['$regex' => addslashes(trim($req['username'])), '$options' => 'i']],
+                ['nickname' => ['$regex' => addslashes(trim($req['username'])), '$options' => 'i']],
             ];
         }
 
         if(preg_match("/\w+/", $req['uid'])){
-            $uid = addslashes($req['uid']);
+            $uid = trim($req['uid']);
             $match['_id'] = $this->userModel->makeObjectId($uid);
         }
 
         if(!empty($req['parentname'])){
-            $match['parentname'] = ['$regex' => addslashes($req['parentname']), '$options' => 'i'];
+            $match['parentname'] = ['$regex' => addslashes(trim($req['parentname'])), '$options' => 'i'];
         }
 
         if(preg_match("/^1\d{10}$/", $req['mobile'])){

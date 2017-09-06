@@ -51,6 +51,15 @@
                 <div class="panel-heading">
                     <div class="form-horizontal row">
 
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">班级ID：</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="cid" class="input-sm form-control" value="{%$smarty.get.cid%}">
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-md-3">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">年级：</label>
@@ -74,7 +83,8 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div><br/>
+                    <div class="form-horizontal row">
                         <div class="col-md-4">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">学生ID：</label>
@@ -83,8 +93,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div><br/>
-                    <div class="form-horizontal row">
                         <div class="col-md-3">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">家长姓名：</label>

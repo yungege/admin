@@ -1,37 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-06 09:16:55
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-06 16:24:23
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:55676587759af4c87686337-22714231%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-06 09:58:55
-         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:170284126059af565fbaa2d7-11133892%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> b17f6cab5a84307d11d0c9acab4b0f97324ac449
+<?php /*%%SmartyHeaderCode:162690930859afb0b7110578-50137407%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-      1 => 1503901944,
+      1 => 1504686013,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1504620741,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '55676587759af4c87686337-22714231',
-=======
       1 => 1504661091,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '170284126059af565fbaa2d7-11133892',
->>>>>>> b17f6cab5a84307d11d0c9acab4b0f97324ac449
+  'nocache_hash' => '162690930859afb0b7110578-50137407',
   'function' => 
   array (
   ),
@@ -43,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59af4c876f05c5_84837208',
+  'unifunc' => 'content_59afb0b716e3b8_13470581',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59af4c876f05c5_84837208')) {function content_59af4c876f05c5_84837208($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-  'unifunc' => 'content_59af565fc55a48_91420870',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59af565fc55a48_91420870')) {function content_59af565fc55a48_91420870($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> b17f6cab5a84307d11d0c9acab4b0f97324ac449
+<?php if ($_valid && !is_callable('content_59afb0b716e3b8_13470581')) {function content_59afb0b716e3b8_13470581($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -353,6 +333,16 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                 <div class="panel-heading">
                     <div class="form-horizontal row">
 
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">班级ID：</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="cid" class="input-sm form-control" value="<?php echo $_GET['cid'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-md-3">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">年级：</label>
@@ -386,7 +376,8 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                                 </div>
                             </div>
                         </div>
-
+                    </div><br/>
+                    <div class="form-horizontal row">
                         <div class="col-md-4">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">学生ID：</label>
@@ -396,8 +387,6 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                                 </div>
                             </div>
                         </div>
-                    </div><br/>
-                    <div class="form-horizontal row">
                         <div class="col-md-3">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">家长姓名：</label>
