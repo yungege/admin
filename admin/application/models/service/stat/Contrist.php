@@ -14,6 +14,7 @@ class Service_Stat_ContristModel extends BasePageService {
     public $userlist = [];
     public $filename = '';
     public $passNum = 0;
+    public $brachClass = [];
 
     public static $keyName = [
         'userCount'     => '总人数(人)',
@@ -45,6 +46,7 @@ class Service_Stat_ContristModel extends BasePageService {
     protected function __execute($req) {
         $this->getWhere($req);
         $this->getSchool();
+        $this->getBranchAndTestClass();
         // $this->getClass();
 
         switch ($req['get']['source']) {
@@ -180,13 +182,22 @@ class Service_Stat_ContristModel extends BasePageService {
         $this->classList = $this->class->query($where, $options);
     }
 
+    // 获取分校班级(包含测试班级)
+    protected function getBranchAndTestClass(){
+        $list = $this->class->getBranchAndTestClass(['name']);
+        $this->brachClass = array_column($list, '_id');
+    }
+
     // 总人数
     protected function getUserCount(){
         $userCountMap = [
             'type' => 1,
             'classinfo.classid' => [
-                '$ne' => Dao_ClassinfoModel::TEST_CLASS,
+                '$nin' => $this->brachClass,
             ],
+            'grade' => [
+                '$lte' => 16,
+            ]
         ];
 
         if(!empty($this->map['school'])){
@@ -430,21 +441,6 @@ class Service_Stat_ContristModel extends BasePageService {
                 'type'      => 'line',
                 'data'      => $doneRate,
                 'yAxisIndex' => 1,
-                'itemStyle' => [
-                    'normal' => [
-                        'color' => 'red',
-                        'label' => [
-                            'show' => true,
-                            'position' => 'middle',
-                            'textStyle' => [
-                                'color' => 'red',
-                            ],
-                        ],
-                        'lineStyle' => [
-                            'color' => 'red',
-                        ]
-                    ],
-                ],
             ];
 
             // 总锻炼次数
@@ -541,23 +537,23 @@ class Service_Stat_ContristModel extends BasePageService {
      */
     protected function getScoreTarinData(){
         $item = [
-            'trainCount' => 0,
-            'userCount' => 0,
+            'trainCount'    => 0,
+            'userCount'     => 0,
             'avgTrainCount' => 0,
-            'doneRate' => 0,
-            'userlist' => [],
+            'doneRate'      => 0,
+            'userlist'      => [],
         ];
         $format = [
             '90-100分'     => $item,
             '80-90分'      => $item,
             '70-80分'      => $item,
             '70分以下'     => $item,
-            '无体测数据' => $item,
+            '无体测数据'   => $item,
         ];
 
         // 获取该空间维度下的学生列表
         $this->getUserCount();
-
+        $this->doNumCount = 0; // 有锻炼记录人数
         // 获取学生体测数据
         $this->getPhyData($format);
         
@@ -577,62 +573,18 @@ class Service_Stat_ContristModel extends BasePageService {
                 'type'      => 'bar',
                 'barWidth'  => '20%',
                 'data'      => array_column($format, 'trainCount'),
-                'itemStyle' => [
-                    'normal' => [
-                        'color' => '#64BD3D',
-                        'label' => [
-                            'show' => true,
-                            'textStyle' => [
-                                'color' => '#64BD3D',
-                            ],
-                        ],
-                        'lineStyle' => [
-                            'color' => '#64BD3D',
-                        ]
-                    ],
-                ],
             ],
             [
                 'name'      => '人均锻炼数',
                 'type'      => 'bar',
                 'barWidth'  => '20%',
                 'data'      => array_column($format, 'avgTrainCount'),
-                'itemStyle' => [
-                    'normal' => [
-                        'color' => '#EFE42A',
-                        'label' => [
-                            'show' => true,
-                            'position' => 'top',
-                            'textStyle' => [
-                                'color' => '#EFE42A',
-                            ],
-                        ],
-                        'lineStyle' => [
-                            'color' => '#EFE42A',
-                        ]
-                    ],
-                ],
             ],
             [
                 'name'      => '完成比例',
                 'type'      => 'line',
                 'yAxisIndex' => 1,
                 'data'      => array_column($format, 'doneRate'),
-                'itemStyle' => [
-                    'normal' => [
-                        'color' => 'red',
-                        'label' => [
-                            'show' => true,
-                            'position' => 'top',
-                            'textStyle' => [
-                                'color' => 'red',
-                            ],
-                        ],
-                        'lineStyle' => [
-                            'color' => 'red',
-                        ]
-                    ],
-                ],
             ],
         ];
         $this->resData['legend'] = [
@@ -659,9 +611,30 @@ class Service_Stat_ContristModel extends BasePageService {
             ],
         ];
 
-        $this->resData['tableDataHtml'] = '';
+        // 生成表格数据
+        $this->getPhyTableHtml();
 
-        $this->resData['warmHtml'] = '';
+        // 下载数据
+        if(!empty($this->map['down'])){
+            $file = $this->map['down'];
+            array_unshift($this->resData['xkeys'], '数据项') ;
+
+            $bodyer = [];
+            foreach ($this->resData['yvals'] as $yval) {
+                $itemval = [$yval['name']];
+                foreach ($yval['data'] as $yitem) {
+                    if($yval['name'] == '完成比例'){
+                        $yitem .= ' %';
+                    }
+                    $itemval[] = $yitem;
+                }
+                $bodyer[] = $itemval;
+            }
+
+            xlsHeader($this->resData['xkeys'], $file);
+            xlsOutput(array_keys($this->resData['xkeys']), $bodyer);
+            exit;
+        }
     }
 
     protected function getPhyData(&$format){
@@ -749,6 +722,9 @@ class Service_Stat_ContristModel extends BasePageService {
                         if($lval['count'] >= $this->passNum){
                             $sval['doneRate'] += 1;
                         }
+                        if($lval['count'] > 0){
+                            $this->doNumCount += 1;
+                        }
                     }
                 }
 
@@ -758,6 +734,33 @@ class Service_Stat_ContristModel extends BasePageService {
                 unset($sval['userlist']);
             }
         }
+    }
+
+    protected function getPhyTableHtml(){
+        $this->resData['tableDataHtml'] = "<caption>数据表</caption><thead><tr><th>数据项</th>";
+        $thead = '';
+        array_map(function($v) use (&$thead){
+            $thead .= '<th>'.$v.'</th>'; 
+        }, array_values($this->resData['xkeys']));
+        $this->resData['tableDataHtml'] .= $thead . '</tr></thead><tbody>';
+
+        $totalCount = 0;
+        foreach ($this->resData['yvals'] as $yval) {
+            $this->resData['tableDataHtml'] .= "</tr><td>{$yval['name']}</td>";
+            foreach ($yval['data'] as $yitem) {
+                if($yval['name'] == '完成比例'){
+                    $yitem .= ' %';
+                }
+                $this->resData['tableDataHtml'] .= "<td>{$yitem}</td>";
+            }
+            if($yval['name'] == '总锻炼数'){
+                $totalCount = array_sum($yval['data']);
+            }
+            $this->resData['tableDataHtml'] .= '</tr>';
+        }
+        $this->resData['tableDataHtml'] .= "</tbody>";
+
+        $this->resData['warmHtml'] = '<p>该时段内应完成次数：'.$this->passNum.'次&emsp;总人数: '.$this->resData['userCount'].'人&emsp;总锻炼次数：'.$totalCount.'次&emsp;参与锻炼人数：'.$this->doNumCount.'人&emsp;无锻炼记录人数：'.($this->resData['userCount']-$this->doNumCount).'人';
     }
 
 }

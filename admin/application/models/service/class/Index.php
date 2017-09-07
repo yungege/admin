@@ -32,6 +32,7 @@ class Service_Class_IndexModel extends BasePageService {
     protected function getClassList($req){
         $where = [
             'is_test' => 0,
+            'branch_school' => null,
         ];
 
         if(isset($req['schoolId']) && preg_match("/\w+/", $req['schoolId'])){
@@ -60,7 +61,11 @@ class Service_Class_IndexModel extends BasePageService {
     }
 
     protected function getGradeList($req){
-        $where = [];
+        $where = [
+            'grade' => [
+                '$lte' => 16,
+            ],
+        ];
 
         if(isset($req['schoolId']) && preg_match("/\w+/", $req['schoolId'])){
             $where['schoolid'] = addslashes($req['schoolId']);
