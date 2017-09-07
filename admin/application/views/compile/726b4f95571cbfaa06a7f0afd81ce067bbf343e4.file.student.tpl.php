@@ -1,43 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-05 17:25:47
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-07 22:13:17
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:202715746759ae6d9be2c017-39247170%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-05 17:13:06
-         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:37517102859ae6aa2ede334-45473182%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-05 10:37:34
-         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:506890359ae0dee4abf17-48628176%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> affb3d9adf8bf4aa8506b7243e18c275c33f0051
->>>>>>> ab95a1fb5beedc93b8956bfdb2c68bdce923ef9d
+<?php /*%%SmartyHeaderCode:202796277459b153fd4a35b5-95306826%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-      1 => 1503477649,
+      1 => 1504095261,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1504097049,
+      1 => 1504619863,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '202715746759ae6d9be2c017-39247170',
-=======
-<<<<<<< HEAD
-  'nocache_hash' => '37517102859ae6aa2ede334-45473182',
-=======
-  'nocache_hash' => '506890359ae0dee4abf17-48628176',
->>>>>>> affb3d9adf8bf4aa8506b7243e18c275c33f0051
->>>>>>> ab95a1fb5beedc93b8956bfdb2c68bdce923ef9d
+  'nocache_hash' => '202796277459b153fd4a35b5-95306826',
   'function' => 
   array (
   ),
@@ -49,21 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59ae6d9be99f39_11796286',
+  'unifunc' => 'content_59b153fd5460a6_17028063',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ae6d9be99f39_11796286')) {function content_59ae6d9be99f39_11796286($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_59ae6aa2f39b89_77403448',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ae6aa2f39b89_77403448')) {function content_59ae6aa2f39b89_77403448($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-  'unifunc' => 'content_59ae0dee516388_57402439',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ae0dee516388_57402439')) {function content_59ae0dee516388_57402439($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> affb3d9adf8bf4aa8506b7243e18c275c33f0051
->>>>>>> ab95a1fb5beedc93b8956bfdb2c68bdce923ef9d
+<?php if ($_valid && !is_callable('content_59b153fd5460a6_17028063')) {function content_59b153fd5460a6_17028063($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -563,7 +531,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-   <!--  <script src="/static/widget/alertBox/alert.js"></script> -->
+    <script src="/static/widget/alertBox/alert.js"></script>
 
     <script type="text/javascript">
         !(function(){
