@@ -43,6 +43,9 @@
             font-size: 11px;
             border-top: 1px solid #ccc;
         }
+        .tt-page{
+            margin-top: 15px;
+        }
         .tt-page a{
             padding: 6px 12px;
             margin-right: 5px; 
