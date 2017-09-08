@@ -46,7 +46,7 @@
     
 </style>
 {%/block%}
-{%block name="bread"%}用户管理 / 学生管理{%/block%}
+{%block name="bread"%}用户管理 / 学生管理<a href="/student/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加学生</a>{%/block%}
 {%block name="content"%}
 <div class="row">
     <div class="col-lg-12">

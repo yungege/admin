@@ -3,6 +3,7 @@ class Service_Push_PUserModel extends BasePageService {
 
 	protected $userModel;
 	protected $uMPush;
+	protected $messageModel;
 
 	protected $deviceToken = [];
 	protected $theme;
@@ -14,6 +15,7 @@ class Service_Push_PUserModel extends BasePageService {
 
 		$this->uMPush = new UmengPush();
 		$this->userModel = Dao_UserModel::getInstance();
+		$this->messageModel = Dao_MessageModel::getInstance();
 	}
 
 	protected function __declare(){
@@ -40,11 +42,25 @@ class Service_Push_PUserModel extends BasePageService {
 		$option['projection'] = [
 			'devicetoken' => 1 ,
 			'clientsource' => 1 ,
+			'_id' =>1
 		];
 
 		$this->deviceToken['ios'] = [];
 		$this->deviceToken['android'] = [];
 		$this->userInfos = $this->userModel->query($whereUser,$option);
+
+		foreach($this->userInfos as $userInfo){
+			$this->message['platform'] = 1;
+			$this->message['type'] = 3;
+			$this->message['title'] = $this->theme;
+			$this->message['to_id'] = $userInfo['_id'];
+			$this->message['sendtime'] = time();
+			$this->message['content'] = $this->content;
+			$this->message['status'] = 1;
+			$this->message['ctime'] = time();
+			$this->message['utime'] = time();
+			$result = $this->messageModel->add($this->message);
+		}
 
 		foreach($this->userInfos as $userInfo){
 			if($userInfo['clientsource'] == 'ios' && !empty($userInfo['devicetoken'])){

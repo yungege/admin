@@ -1,23 +1,51 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-07 16:54:15
          compiled from "/var/www/admin/admin/application/views/template/sport/pro.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:174189235759b109373e5086-81978024%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-08 10:05:42
+         compiled from "/var/www/admin/admin/application/views/template/sport/pro.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:153533153659b1faf6549be7-80118564%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-06 18:44:33
+         compiled from "/var/www/admin/admin/application/views/template/sport/pro.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:150379434559afd191d1a345-83798213%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> aca1a76f6047e6650dd74beff90dd8a36bc2818c
+>>>>>>> ceb32de00710e6dbd83a96c22ba73b15fbda05c0
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '310eddac9d26dc72a5ef5358f10af9ece24579b3' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/pro.tpl',
+<<<<<<< HEAD
+      1 => 1504258102,
+=======
       1 => 1503370676,
+>>>>>>> aca1a76f6047e6650dd74beff90dd8a36bc2818c
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
+      1 => 1504482334,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '153533153659b1faf6549be7-80118564',
+=======
       1 => 1504620741,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '174189235759b109373e5086-81978024',
+=======
+  'nocache_hash' => '150379434559afd191d1a345-83798213',
+>>>>>>> aca1a76f6047e6650dd74beff90dd8a36bc2818c
+>>>>>>> ceb32de00710e6dbd83a96c22ba73b15fbda05c0
   'function' => 
   array (
   ),
@@ -29,9 +57,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59b10937488863_34749067',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59b10937488863_34749067')) {function content_59b10937488863_34749067($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_59b1faf667b5d0_40491304',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59b1faf667b5d0_40491304')) {function content_59b1faf667b5d0_40491304($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_59afd191db41a0_51808421',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59afd191db41a0_51808421')) {function content_59afd191db41a0_51808421($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> aca1a76f6047e6650dd74beff90dd8a36bc2818c
+>>>>>>> ceb32de00710e6dbd83a96c22ba73b15fbda05c0
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -231,6 +271,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
+                            </li>
+                             <li>
+                                <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
                             </li>
                         </ul>
                     </li>

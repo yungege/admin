@@ -6,6 +6,7 @@ class Service_Push_PClassModel extends BasePageService {
 	protected $deviceToken = [];
 	protected $userInfos;
 	protected $classIds;
+	protected $messageModel;
 
 	protected $userModel;
 	protected $uMPush;
@@ -13,6 +14,7 @@ class Service_Push_PClassModel extends BasePageService {
 	public function __construct(){
 
 		$this->userModel = Dao_UserModel::getInstance();
+		$this->messageModel = Dao_MessageModel::getInstance();
 		$this->uMPush = new UmengPush();
 	}
 
@@ -47,6 +49,19 @@ class Service_Push_PClassModel extends BasePageService {
 		$this->deviceToken['ios'] = [];
 		$this->deviceToken['android'] = [];
 		$this->userInfos = $this->userModel->query($whereUser,$option);
+
+		foreach($this->classIds as $classId){
+			$this->message['platform'] = 2;
+			$this->message['type'] = 3;
+			$this->message['title'] = $this->theme;
+			$this->message['to_id'] = $classId;
+			$this->message['sendtime'] = time();
+			$this->message['content'] = $this->content;
+			$this->message['status'] = 1;
+			$this->message['ctime'] = time();
+			$this->message['utime'] = time();
+			$result = $this->messageModel->add($this->message);
+		}
 
 		foreach($this->userInfos as $userInfo){
 
