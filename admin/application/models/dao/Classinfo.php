@@ -149,5 +149,26 @@ class Dao_ClassinfoModel extends Db_Mongodb {
 
         return array_merge($branch, $test);
     }
+
+    public function getClassInfoByTime($monthStartTime, &$historyClass = [], &$schoolId = ''){
+        $classId = '';
+        
+        if(empty($historyClass)) return $classId;
+
+        foreach ($historyClass as $hv) {
+            $gradeStart = strtotime($hv['date']);
+            $dateTimeArr = explode('-', $hv['date']);
+            $dateTimeArr[0] += 1;
+            $gradeEnd = strtotime(implode('-', $dateTimeArr).' 00:00:00');
+
+            if($monthStartTime >= $gradeStart && $monthStartTime < $gradeEnd){
+                $classId = $hv['classid'];
+                $schoolId = $hv['schoolid'];
+                break;
+            }
+        }
+
+        return $classId;
+    }
     
 }

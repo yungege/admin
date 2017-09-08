@@ -1,7 +1,11 @@
 {%extends file="common/page/layout.tpl"%} 
 {%block name="title"%}天天向尚管理后台{%/block%}
 {%block name="css"%}
+<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
+    .datetimepicker{
+        margin-top: 50px;
+    }
     .add-ugc-fix,.add-mobile-fix{
         width: 100%;
         height: 100%;
@@ -14,16 +18,16 @@
     }
     .add-ugc-inner{
         width: 500px;
-        height: 200px;
+        height: auto;
         border: 1px solid white;
         background-color: white;
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top: -100px;
+        margin-top: -15%;
         margin-left: -250px;
         border-radius: 4px;
-        padding: 10px;
+        padding: 15px;
     }
     .add-mobile-inner{
         height: 340px;
@@ -43,7 +47,9 @@
     .glyphicon-remove:hover{
         color: red;
     }
-    
+    .run-type,.normal{
+        display: none;
+    }
 </style>
 {%/block%}
 {%block name="bread"%}用户管理 / 学生管理{%/block%}
@@ -184,7 +190,7 @@
                         <!-- <td></td> -->
                         <td>
                             <a href="/sport/ugc?uid={%$row._id%}" class="btn btn-default btn-xs">UGC</a>
-                            <a data-uid="{%$row._id%}" data-cid="{%$row.classinfo.classid%}" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补交UGC</a>
+                            <a data-uname="{%$row.username%}" data-uid="{%$row._id%}" data-cid="{%$row.classinfo.classid%}" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补作业</a>
                         </td>
                     </tr>
                     {%/foreach%}
@@ -201,13 +207,40 @@
 
 <div class="add-ugc-fix">
     <div class="add-ugc-inner">
-        <h4>补交UGC</h4>
+        <h4>补作业&emsp;&emsp;<small>学生信息：<span id="uname"></span></small></h4>
         <i class="glyphicon glyphicon-remove"></i>
         <form name="ugc" class="ugcform">
             <div class="form-group">
-                <label for="hid">作业 ID</label>
-                <input type="text" class="form-control" id="hid" placeholder="">
+                <label>作业时间</label>
+                <input readonly="true" data-type="time" name="wtime" type="text" class="form-control wtime date" data-date-format="yyyy-mm-dd"/>
             </div>
+            <div class="form-group">
+                <label>作业类型</label>
+                <select class="form-control htype" name="htype">
+                    <option value="-1">请选择作业类型</option>
+                    <option value="1">翻转课堂</option>
+                    <option value="2">身体素质</option>
+                    <option value="3">跑步作业</option>
+                </select>
+            </div>
+
+            <!-- 翻转课堂 + 身体素质 -->
+            <div class="normal">
+                
+            </div>
+            
+            <!-- 跑步 -->
+            <div class="run-type">
+                <div class="form-group">
+                    <label>跑步时长(min)</label>
+                    <input class="form-control" type="text" name="time_cost">
+                </div>
+                <div class="form-group">
+                    <label>跑步距离(km)</label>
+                    <input class="form-control" type="text" name="time_cost">
+                </div>
+            </div>
+            
             <button id="sub" type="button" class="btn btn-default pull-right">Submit</button>
         </form>
     </div>
@@ -248,6 +281,7 @@
 {%/block%}
 
 {%block name="js"%}
+<script src="/static/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript">
 
 !(function(){
@@ -258,20 +292,38 @@
             this.addUgc();
             this.clickCloseFix();
             this.postData();
+            this.initDate();
+            this.matchHomework();
+
             this.resetForm();
 
             this.addRelation();
             this.postRelationData();
         },
 
+        initDate: function(){
+            var me = this;
+            me.dateBtn.datetimepicker({
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                minView: 2,
+                endDate: new Date(),
+            })
+        },
+
         getDom: function(){
             this.ugcBtn = $('.addUgc');
             this.form = $('form[name=ugc]');
-            this.hid = $('#hid');
             this.fixBox = $('.add-ugc-fix');
             this.closeFixBoxBtn = $('.glyphicon-remove');
             this.subBtn = $('#sub');
             this.resetBtn = $('.reset-btn');
+            this.dateBtn = $('.wtime');
+            this.uname = $('#uname');
+            this.htype = $('.htype');
+            this.runTypeDiv = $('.run-type');
+            this.normalDiv = $('.normal');
 
             this.reBtn = $('.add-mobile');
             this.reFixBox = $('.add-mobile-fix');
@@ -283,6 +335,7 @@
             this.reForm = $('form[name=relation]');
         },
 
+        // 清楚查询条件
         resetForm: function(){
             var me = this;
             me.resetBtn.unbind().bind('click', function(){
@@ -290,16 +343,13 @@
             });
         },
 
-        showDialog: function(){
-            var me = this;
-
-            me.fixBox.fadeIn(200);
-        },
-
         hideDialog: function(){
             var me = this;
 
             me.fixBox.fadeOut(200);
+            me.subBtn.attr('data-uid', '');
+            me.subBtn.attr('data-cid', '');
+            me.uname.text('');
 
             me.reFixBox.fadeOut(200);
             me.hideUid.val('');
@@ -319,10 +369,73 @@
 
             me.ugcBtn.unbind().bind('click', function(){
                 var uid = $.trim($(this).data('uid')),
-                    cid = $.trim($(this).data('cid'));
+                    cid = $.trim($(this).data('cid')),
+                    sname = $.trim($(this).data('uname'))
                 me.subBtn.attr('data-uid', uid);
                 me.subBtn.attr('data-cid', cid);
-                me.showDialog();
+                me.uname.text(sname);
+                
+                me.fixBox.fadeIn(200);
+            })
+        },
+
+        // 根据时间和作业类型匹配作业信息
+        matchHomework: function(){
+            var me = this;
+
+            // date
+            me.dateBtn.on('changeDate', function(){
+                var htype = me.htype.val(),
+                    uid = me.subBtn.attr('data-uid'),
+                    cid = me.subBtn.attr('data-cid'),
+                    date = me.dateBtn.val();
+                if(htype == -1){
+                    me.normalDiv.slideUp(200);
+                    me.runTypeDiv.slideUp(200);
+                }
+                else if(htype == 3){
+                    me.normalDiv.hide();
+                    me.runTypeDiv.slideDown(200);
+                }
+                else{
+                    $.get(
+                        '/homework/match?cid='+cid+'&uid='+uid+'&type='+htype+'&date='+date,
+                        function(json){
+
+                        }
+                    );
+                    me.runTypeDiv.hide();
+                    me.normalDiv.slideDown(200);
+                }
+            });
+
+            // htype
+            me.htype.on('change', function(){
+                var htype = $(this).val(),
+                    uid = me.subBtn.attr('data-uid'),
+                    cid = me.subBtn.attr('data-cid'),
+                    date = me.dateBtn.val();
+                if(htype == -1){
+                    me.normalDiv.slideUp(200);
+                    me.runTypeDiv.slideUp(200);
+                }
+                else if(htype == 3){
+                    me.normalDiv.hide();
+                    me.runTypeDiv.slideDown(200);
+                }
+                else{
+                    if(!date) return;
+
+                    $.get(
+                        '/homework/match?cid='+cid+'&uid='+uid+'&type='+htype+'&date='+date,
+                        function(json){
+                            
+                        }
+                    );
+
+                    me.runTypeDiv.hide();
+                    me.normalDiv.slideDown(200);
+                }
             })
         },
 
@@ -368,10 +481,9 @@
                 aj = null;
             me.subBtn.unbind().bind('click', function(){
                 var uid = $.trim($(this).data('uid')),
-                    cid = $.trim($(this).data('cid')),
-                    hid = $.trim(me.hid.val());
-                
-                if(!uid || !cid || !hid){
+                    cid = $.trim($(this).data('cid'));
+
+                if(!uid || !cid){
                     alert('参数错误.');
                     return false;
                 }
