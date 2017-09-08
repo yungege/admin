@@ -25,7 +25,7 @@ class Service_Homework_MatchModel extends BasePageService {
             !preg_match("/(\d{4})-(\d{2})-(\d{2})/", $req['date']) ||
             !preg_match("/\w+/", $req['cid']) ||
             !preg_match("/\w+/", $req['uid']) ||
-            !in_array($req['type'], [1,2,3])
+            !in_array($req['type'], [1,2])
         ){
             throw new Exception("", REQUEST_PARAMS_ERROR);
         }
@@ -52,10 +52,13 @@ class Service_Homework_MatchModel extends BasePageService {
             $classId = $hisCid;
         }
 
-        $this->getHomeWorkByDate($schoolId, $classId, $originalTime);
+        $homeworkList = $this->getHomeWorkByDate($schoolId, $classId, $originalTime, $req['type']);
+        print_r($homeworkList);exit;
     }
 
-    protected function getHomeWorkByDate($sId, $cId, $time){
+    protected function getHomeWorkByDate($sId, $cId, $time, $type){
+        $works = [];
+
         $userData = [
             'schoolinfo' => [
                 'schoolid' => $sId,
@@ -68,7 +71,15 @@ class Service_Homework_MatchModel extends BasePageService {
         $list = $this->workModel->getNowHomeworkInfos($userData, $time, [
             '_id','name','project_id','type'
         ]);
-        print_r($list);exit;
+        if(empty($list)) return $works;
+
+        foreach ($list as $row) {
+            if($row['type'] == $type){
+                $works[] = $row;
+            }
+        }
+
+        return $works;
     }
 
 }
