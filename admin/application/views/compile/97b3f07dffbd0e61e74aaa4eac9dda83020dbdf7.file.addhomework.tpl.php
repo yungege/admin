@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-08 10:05:43
          compiled from "/var/www/admin/admin/application/views/template/project/addhomework.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:172691837859b1faf762c4a7-40034271%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-03 12:52:37
+         compiled from "/var/www/admin/admin/application/views/template/project/addhomework.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:98557435859ab8a9538f022-62613846%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> aca1a76f6047e6650dd74beff90dd8a36bc2818c
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '97b3f07dffbd0e61e74aaa4eac9dda83020dbdf7' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/project/addhomework.tpl',
+<<<<<<< HEAD
       1 => 1504258102,
+=======
+      1 => 1503370676,
+>>>>>>> aca1a76f6047e6650dd74beff90dd8a36bc2818c
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1504482334,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '172691837859b1faf762c4a7-40034271',
+=======
+      1 => 1504097049,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '98557435859ab8a9538f022-62613846',
+>>>>>>> aca1a76f6047e6650dd74beff90dd8a36bc2818c
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59b1faf76e6777_80626695',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59b1faf76e6777_80626695')) {function content_59b1faf76e6777_80626695($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59ab8a953ed522_22334718',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59ab8a953ed522_22334718')) {function content_59ab8a953ed522_22334718($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> aca1a76f6047e6650dd74beff90dd8a36bc2818c
 <html lang="en">
 
 <head>

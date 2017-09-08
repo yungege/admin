@@ -26,6 +26,7 @@ define('MATCHING_FAULT',18);                    //匹配失败
 define('UNALLOW_MOBILE_LOGIN',19);              //该号码无权限
 define('SSO_ID_HAS_BIND',20);                   //该ssoid已经绑定
 define('MOBILE_ERROR',21);                      //手机号格式错误
+define('MOBILE_HAS_BIND',22);                      //手机号已经被绑定
 
 
 // public50~99
@@ -239,6 +240,9 @@ function setError($errorCode, $errorMsg=''){
             break;
         case MOBILE_ERROR:
             $msg = '手机号格式错误';
+            break;
+        case MOBILE_HAS_BIND:
+            $msg = '该手机号已被绑定过';
             break;
 
         // 栏目错误

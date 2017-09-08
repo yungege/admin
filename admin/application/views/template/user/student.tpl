@@ -2,7 +2,7 @@
 {%block name="title"%}天天向尚管理后台{%/block%}
 {%block name="css"%}
 <style type="text/css">
-    .add-ugc-fix{
+    .add-ugc-fix,.add-mobile-fix{
         width: 100%;
         height: 100%;
         position: fixed;
@@ -24,6 +24,10 @@
         margin-left: -250px;
         border-radius: 4px;
         padding: 10px;
+    }
+    .add-mobile-inner{
+        height: 340px;
+        margin-top: -170px;
     }
     .add-ugc-inner > h4{
         border-bottom: 1px solid #ccc;
@@ -51,6 +55,15 @@
                 <div class="panel-heading">
                     <div class="form-horizontal row">
 
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">班级ID：</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="cid" class="input-sm form-control" value="{%$smarty.get.cid%}">
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-md-3">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">年级：</label>
@@ -74,7 +87,8 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div><br/>
+                    <div class="form-horizontal row">
                         <div class="col-md-4">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">学生ID：</label>
@@ -83,8 +97,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div><br/>
-                    <div class="form-horizontal row">
                         <div class="col-md-3">
                             <div class="row">
                                 <label class="col-md-4 paddZero control-label">家长姓名：</label>
@@ -105,6 +117,7 @@
                     <div class="form-horizontal row">
                         <div class="col-md-4 col-md-offset-1">
                             <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
+                            <button class="btn btn-warning btn-sm reset-btn" type="button">清除条件</button>
                         </div>
                     </div>
                 </div>
@@ -146,9 +159,15 @@
                         <td>{%$row._id%}</td>
                         <td><a href="/user/school?schoolid={%$row.schoolinfo.schoolid%}">{%$row.schoolinfo.schoolname%}</a></td>
                         <td>{%$row.grade%}</td>
-                        <td><a href="/user/class?classid={%$row.classinfo.classid%}">{%$row.classinfo.classname%}</a></td>
+                        <td>
+                            <a href="/user/class?classid={%$row.classinfo.classid%}">{%$row.classinfo.classname%}</a><br/>
+                            <a class="btn btn-xs btn-primary" href="?cid={%$row.classinfo.classid%}">只看本班？</a>
+                        </td>
                         <td>{%$row.clientsource%}<br/>{%$row.versions%}</td>
-                        <td>{%$row.mobileno%}</td>
+                        <td>
+                            {%$row.mobileno%}<br/>
+                            <a data-id="{%$row._id%}" class="btn btn-xs btn-primary add-mobile" href="javascript:void(0)">添加手机？</a>
+                        </td>
                         <td>{%$row.parentname%}</td>
                         <td>{%$row.birthday|date_format:"%Y-%m-%d"%}</td>
                         <td>{%if $row.sex eq 1%}女{%else%}男{%/if%}</td>
@@ -194,10 +213,43 @@
     </div>
 </div>
 
+<div class="add-mobile-fix">
+    <div class="add-ugc-inner add-mobile-inner">
+        <h4>新增绑定关系</h4>
+        <i class="glyphicon glyphicon-remove"></i>
+        <form name="relation">
+            <div class="form-group">
+                <label for="re-mobile">手机号码</label>
+                <input type="text" class="form-control" id="re-mobile" name="re-mobile">
+            </div>
+            <div class="form-group">
+                <label for="re-name">家长姓名</label>
+                <input type="text" class="form-control" id="re-name" name="re-name">
+            </div>
+            <div class="form-group">
+                <label for="re-sel">绑定关系</label>
+                <select class="form-control" id="re-sel" name="re-sel">
+                    <option value="-1">请选择绑定关系</option>
+                    <option value="1">父亲</option>
+                    <option value="2">母亲</option>
+                    <option value="3">外公</option>
+                    <option value="4">外婆</option>
+                    <option value="5">爷爷</option>
+                    <option value="6">奶奶</option>
+                    <option value="7">其他</option>
+                </select>
+            </div>
+            <input type="hidden" name="uid" id="hide-uid">
+            <button id="re-sub" type="button" class="btn btn-primary pull-right">Submit</button>
+        </form>
+    </div>
+</div>
+
 {%/block%}
 
 {%block name="js"%}
 <script type="text/javascript">
+
 !(function(){
     var student = {
 
@@ -206,6 +258,10 @@
             this.addUgc();
             this.clickCloseFix();
             this.postData();
+            this.resetForm();
+
+            this.addRelation();
+            this.postRelationData();
         },
 
         getDom: function(){
@@ -215,6 +271,23 @@
             this.fixBox = $('.add-ugc-fix');
             this.closeFixBoxBtn = $('.glyphicon-remove');
             this.subBtn = $('#sub');
+            this.resetBtn = $('.reset-btn');
+
+            this.reBtn = $('.add-mobile');
+            this.reFixBox = $('.add-mobile-fix');
+            this.reSubBtn = $('#re-sub');
+            this.hideUid = $('#hide-uid');
+            this.reMobile = $('#re-mobile');
+            this.reName = $('#re-name');
+            this.reSel = $('#re-sel');
+            this.reForm = $('form[name=relation]');
+        },
+
+        resetForm: function(){
+            var me = this;
+            me.resetBtn.unbind().bind('click', function(){
+                me.form.submit();
+            });
         },
 
         showDialog: function(){
@@ -227,6 +300,10 @@
             var me = this;
 
             me.fixBox.fadeOut(200);
+
+            me.reFixBox.fadeOut(200);
+            me.hideUid.val('');
+            me.reForm[0].reset();
         },
 
         clickCloseFix: function(){
@@ -249,6 +326,43 @@
             })
         },
 
+        addRelation: function(){
+            var me = this;
+            me.reBtn.unbind().bind('click', function(){
+                var uid = $.trim($(this).data('id'));
+                me.hideUid.val(uid);
+                me.reFixBox.fadeIn(200);
+            });
+        },
+
+        postRelationData: function(){
+            var me = this,
+                aj = null;
+            me.reSubBtn.unbind().bind('click', function(){
+                var data = me.reForm.serialize();
+
+                aj = $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: '/user/addRelation', data,
+                    success: function(json){
+                        if(json.errCode == 0){
+                            window.location.reload();
+                        }
+                        else{
+                            alert(json.errMessage);
+                            return false;
+                        }
+                    },
+                    beforeSend: function () {
+                        if(aj != null) {
+                            aj.abort();
+                        }
+                    },
+                });
+            });
+        },
+
         postData: function(){
             var me = this,
                 aj = null;
@@ -267,7 +381,7 @@
                     dataType: 'json',
                     url: '/user/addUgc?uid=' + uid + '&cid=' + cid + '&hid=' + hid,
                     success: function(json){
-                        if(json.errCode == 200){
+                        if(json.errCode == 0){
                             window.location = "/sport/ugc?uid=" + uid;
                         }
                         else{

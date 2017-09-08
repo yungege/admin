@@ -9,6 +9,12 @@
 .today{
     border: 1px solid #d9edf7!important;
 }
+.user-a{
+    display: block;
+    float: left;
+    margin-left: 5px;
+    text-decoration: underline;
+}
 </style>
 {%/block%}
 {%block name="bread"%}运营管理 / 业务数据统计 {%/block%}
@@ -45,13 +51,13 @@
                 <label class="control-label" style="width:80px;">数据指标：</label>
                 
                 <label class="radio-inline" style="width:95px;">
-                    <input type="radio" value="1" name="source" checked="true">总体数据
+                    <input type="radio" value="1" name="source" checked="true"/>总体数据
                 </label>
                 <label class="radio-inline" style="width:95px;">
-                    <input type="radio" value="2" name="source">分项数据
+                    <input type="radio" value="2" name="source"/>分项数据
                 </label>
                 <label class="radio-inline" style="width:120px;">
-                    <input type="radio" value="3" name="source">体测与锻炼数据
+                    <input type="radio" value="3" name="source"/>体测与锻炼数据
                 </label>
             </li>
             
@@ -68,13 +74,15 @@
 <!-- 图表 -->
 <div class="row">
     <div class="col-md-12">
-        <div style="border-radius: 5px;border:1px solid #ddd;padding: 15px;">
-            <div id="charts" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;">
+        <div class="" style="border-radius: 5px;border:1px solid #ddd;padding: 15px;">
+            <div id="charts" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
 
             </div>
-            <table class="table table-bordered table-striped table-hover" id="charts-table">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover" id="charts-table">
                 
-            </table>
+                </table>
+            </div>
         </div>
     </div>
 </div>

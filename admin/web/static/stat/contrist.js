@@ -30,6 +30,8 @@ $(function(){
 
             this.charts         = $('#charts');
             this.table          = $('#charts-table');
+
+            this.source         = $('input[name=source]');
         },
 
         getCity: function(){
@@ -211,7 +213,9 @@ $(function(){
             me.subBtn.unbind().bind('click', function(){
                 var data = me.form.serialize(),
                     startTime = Date.parse(new Date(me.startBtn.val()+' 00:00:00'))/1000,
-                    endTime = Date.parse(new Date(me.endBtn.val()+' 00:00:00'))/1000;
+                    endTime = Date.parse(new Date(me.endBtn.val()+' 00:00:00'))/1000,
+                    source = $('input[type=\'radio\']:checked').val();
+
                 if(startTime > endTime){
                     alert('起始时间不能大于结束时间');
                 }
@@ -222,7 +226,13 @@ $(function(){
                     type: 'GET',
                     dataType: 'json',
                     success: function(json){
-                        me.makeCharts(json.data);
+                        if(source== 1){
+                            me.makeCharts(json.data);
+                        }
+                        else if(source == 2 || source == 3){
+                            me.makeMixCharts(json.data);
+                        }
+                        
                     },
                     beforeSend: function () {
                         if(ax != null) {
@@ -241,7 +251,7 @@ $(function(){
                     trigger: 'axis',
                     axisPointer : {            // 坐标轴指示器，坐标轴触发有效
                         type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-                    }
+                    },
                 },
                 xAxis : [
                     {
@@ -254,7 +264,7 @@ $(function(){
                 ],
                 yAxis : [
                     {
-                        type : 'value'
+                        type : 'value',
                     }
                 ],
                 series : [
@@ -271,15 +281,24 @@ $(function(){
                         position: 'top'
                     } 
                 },
+                color: [
+                    '#5bc0de', '#f98b24', '#1fc659', '#1689ce', '#e2346e', '#d52f30',
+                    '#5d6dbe', '#1a9ce2', '#25e47b', '#fda639', '#f44c86', '#eb393a',
+                    '#5f77b1', '#34b6f3', '#6cf090', '#fdad2a', '#f06997', '#ec5454',
+                    '#7a88c9', '#59c7ef', '#6feeaf', '#feb657', '#f290b1', '#e27375',
+                    '#9fa9d8', '#84d5f8', '#bbf5cb', '#fecc86', '#f6bbd0', '#ed9a9b'
+                ],
             };
             var chartArea = document.getElementById('charts');
             var myChart = echarts.init(chartArea);
+            myChart.clear();
             myChart.setOption(option);
             window.onresize = function (){
                 myChart.resize();
             }
             
             me.makeTable(data);
+            me.table.nextAll().remove();
         },
 
         makeTable: function(data){
@@ -299,7 +318,13 @@ $(function(){
         },
 
         download: function(){
-            var me = this;
+            var me = this,
+                sourceName = [
+                    '总体数据',
+                    '分项数据',
+                    '体测与锻炼数据',
+                ];
+                    
             me.downBtn.unbind().bind('click', function(){
                 var file = [],
                     plat = me.provinceSel.val(),
@@ -310,7 +335,9 @@ $(function(){
                     className = $('#class').find('option:selected').text(),
                     user = $('#user').find('option:selected').text(),
                     startTime = me.startBtn.val(),
-                    endTime = me.endBtn.val();
+                    endTime = me.endBtn.val(),
+                    source = $('input[type=\'radio\']:checked').val() - 1;
+                source = sourceName[source];
 
                 if(plat == -1){
                     file.push('全平台');
@@ -326,11 +353,73 @@ $(function(){
 
                 startTime = startTime.replace(/(-)/g, '/');
                 endTime = endTime.replace(/(-)/g, '/');
-                file.push(startTime,endTime);
-
+                file.push(startTime, endTime);
+                file.push(source);
                 file = file.join('-');
                 window.location = '/stat/contrist?down='+encodeURI(file)+'&'+me.form.serialize();
             })
+        },
+
+        makeMixCharts: function(data){
+            var me = this;
+            var option = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross',
+                        crossStyle: {
+                            color: '#999'
+                        }
+                    }
+                },
+                toolbox: {
+                    feature: {
+                        dataView: {show: true, readOnly: false},
+                        magicType: {show: true, type: ['line', 'bar']},
+                        restore: {show: true},
+                        saveAsImage: {show: true}
+                    }
+                },
+                legend: {
+                    data:data.legend,
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: data.xkeys,
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    }
+                ],
+                yAxis: data.yAxis,
+                series: data.yvals,
+                color: [
+                    '#5bc0de', 'red', '#1fc659', '#f98b24', '#e2346e', '#d52f30',
+                    '#5d6dbe', '#1a9ce2', '#25e47b', '#fda639', '#f44c86', '#eb393a',
+                    '#5f77b1', '#34b6f3', '#6cf090', '#fdad2a', '#f06997', '#ec5454',
+                    '#7a88c9', '#59c7ef', '#6feeaf', '#feb657', '#f290b1', '#e27375',
+                    '#9fa9d8', '#84d5f8', '#bbf5cb', '#fecc86', '#f6bbd0', '#ed9a9b'
+                ],
+            };
+
+            var chartArea = document.getElementById('charts');
+            var myChart = echarts.init(chartArea);
+            myChart.clear();
+            myChart.setOption(option);
+            window.onresize = function (){
+                myChart.resize();
+            }
+
+            me.makeMixTable(data);
+        },
+
+        makeMixTable: function(data){
+            var me = this;
+
+            me.table.html(data.tableDataHtml);
+            me.table.nextAll().remove();
+            me.table.after(data.warmHtml);
         },
     };
 

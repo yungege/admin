@@ -187,13 +187,12 @@ $(function(){
             me.addNumBtn.click(function(){
                 var num = $.trim(me.numInt.val()),
                     aId = $(this).attr('data-aid');
-                
-                if(/\d+/.test(num) === false){
+                if(/^[1-9]\d*$/.test(num) === false){
                     me.alertMsg('动作循环次数必须为正整数,真调皮.','dialog2');
                 }
                 else{
 
-                    var option = me.actionListSelect.find('option[value='+aId+']');
+                    var option = me.actionListSelect.find('option:selected');
                     option.attr('groupNo', num);
                     option.text(option.text().replace(/\d+/, num));
                     me.fixIntWrmp.fadeOut(200);

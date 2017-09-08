@@ -5,6 +5,7 @@ class Service_Stat_ContristModel extends BasePageService {
     protected $class;
     protected $userModel;
     protected $trainModel;
+    protected $tcModel;
 
     protected $resData;
     public $map = [];
@@ -12,13 +13,15 @@ class Service_Stat_ContristModel extends BasePageService {
     public $classList = [];
     public $userlist = [];
     public $filename = '';
+    public $passNum = 0;
+    public $brachClass = [];
 
     public static $keyName = [
-        'userCount'     => '总人数',
-        'trainCount'    => '总锻炼数',
+        'userCount'     => '总人数(人)',
+        'trainCount'    => '总锻炼数(次)',
         'trainTime'     => '总时长(min)',
         'trainCal'      => '总能量(千卡)',
-        'trainAvg'      => '人均锻炼数',
+        'trainAvg'      => '人均锻炼数(次/人)',
         'doneRate'      => '完成率(%)',
     ];
 
@@ -33,6 +36,7 @@ class Service_Stat_ContristModel extends BasePageService {
         $this->class        = Dao_ClassinfoModel::getInstance();
         $this->userModel    = Dao_UserModel::getInstance();
         $this->trainModel   = Dao_TrainingdoneModel::getInstance();
+        $this->tcModel      = Dao_PhysicalfitnesstestModel::getInstance();
     }
 
     protected function __declare() {
@@ -42,6 +46,7 @@ class Service_Stat_ContristModel extends BasePageService {
     protected function __execute($req) {
         $this->getWhere($req);
         $this->getSchool();
+        $this->getBranchAndTestClass();
         // $this->getClass();
 
         switch ($req['get']['source']) {
@@ -49,10 +54,10 @@ class Service_Stat_ContristModel extends BasePageService {
                 $this->getAllData();
                 break;
             case 2:
-                # code...
+                $this->getDoneRate();
                 break;
             case 3:
-                # code...
+                $this->getScoreTarinData();
                 break;
             
             default:
@@ -118,6 +123,9 @@ class Service_Stat_ContristModel extends BasePageService {
         if(isset($req['down'])){
             $this->map['down'] = $req['down'];
         }
+
+        $numPerDay = sprintf('%.2f', 4/7);
+        $this->passNum = ceil($numPerDay * sprintf('%.2f', ($this->map['time']['end'] - $this->map['time']['start'])/86400));
     }
 
     /**
@@ -174,13 +182,22 @@ class Service_Stat_ContristModel extends BasePageService {
         $this->classList = $this->class->query($where, $options);
     }
 
+    // 获取分校班级(包含测试班级)
+    protected function getBranchAndTestClass(){
+        $list = $this->class->getBranchAndTestClass(['name']);
+        $this->brachClass = array_column($list, '_id');
+    }
+
     // 总人数
     protected function getUserCount(){
         $userCountMap = [
             'type' => 1,
             'classinfo.classid' => [
-                '$ne' => Dao_ClassinfoModel::TEST_CLASS,
+                '$nin' => $this->brachClass,
             ],
+            'grade' => [
+                '$lte' => 16,
+            ]
         ];
 
         if(!empty($this->map['school'])){
@@ -264,10 +281,6 @@ class Service_Stat_ContristModel extends BasePageService {
 
         $userDoneNum = 0;
 
-        $numPerDay = (float)sprintf('%.2f', 4/7);
-        $dayCount = (float)sprintf('%.2f',($this->map['time']['end'] + 1 - $this->map['time']['start'])/86400);
-        $needNum = sprintf('%.2f', ($numPerDay * $dayCount));
-
         if(!empty($list)){
             foreach ($list as $row) {
                 $this->resData['trainCount'] += (int)$row['count'];
@@ -279,7 +292,7 @@ class Service_Stat_ContristModel extends BasePageService {
                         $thisUserDoneNum += 1;
                     }
                 }
-                if($thisUserDoneNum >= $needNum){
+                if($thisUserDoneNum >= ($this->passNum)){
                     $userDoneNum += 1;
                 }
             }
@@ -295,6 +308,459 @@ class Service_Stat_ContristModel extends BasePageService {
             $this->resData['xkeys'][] = self::$keyName[$k];
             $this->resData['yvals'][] = $v;
         }
+    }
+
+    /**
+     * 完成次数比例
+     * @Author    422909231@qq.com
+     * @DateTime  2017-09-04
+     * @version   1.0
+     */
+    protected function getDoneRate(){
+        $this->getUserCount();
+        $this->resData['xkeys'] = ['0次'];
+        $this->resData['yvals'] = [
+            [
+                'name'      => '完成人数',
+                'type'      => 'bar',
+                'data'      => [$this->resData['userCount']],
+            ],
+            [
+                'name'      => '人数占比',
+                'type'      => 'line',
+                'yAxisIndex' => 1,
+                'data'      => [100],
+            ]
+        ];
+
+        $this->resData['legend'] = [
+            '完成人数','人数占比',
+        ];
+
+        $this->resData['yAxis'] = [
+            [
+                'type' => 'value',
+                'name' => '完成人数',
+                'axisLabel' => [
+                    'formatter' => '{value} 人',
+                ],
+            ],
+            [
+                'type' => 'value',
+                'name' => '人数占比',
+                'axisLabel' => [
+                    'formatter' => '{value} %',
+                    'textStyle' => [
+                        'color' => 'red',
+                    ],
+                ],
+            ],
+        ];
+
+        $this->resData['totalCount'] = 0; // 总锻炼次数
+        $this->resData['doneNumUsers'] = []; // 各次学生信息
+
+        // 及格次数
+        $this->resData['needNum'] = $this->passNum;
+
+        $where = [
+            'htype' => [
+                '$in' => [1,2,3],
+            ],
+            'originaltime' => [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ],
+            'userid' => [
+                '$in' => $this->userlist,
+            ],
+        ];
+
+        $fields = [
+            '$project' => [
+                'userid' => 1,
+            ]
+        ];
+
+        $group = [
+            '$group' => [
+                '_id' => '$userid',
+                'count' => ['$sum' => 1],
+            ]
+        ];
+
+        // 二次聚合
+        $sgroup = [
+            '$group' => [
+                '_id' => '$count',
+                'count' => ['$sum' => 1],
+                'sum' => ['$sum' => '$count'],
+            ]
+        ];
+
+        // 班级级别获取每个学生信息
+        if(isset($this->map['class']['_id']) && !isset($this->map['user']['_id'])){
+            $sgroup['$group']['user'] = ['$addToSet' => '$_id'];
+        }
+
+        $aggregate = [
+            ['$match' => $where],
+            $fields,
+            $group,
+            $sgroup,
+            ['$sort' => ['_id' => -1]],
+        ];
+
+        $list = $this->trainModel->aggregate($aggregate);
+        $this->undoneUserCount = $this->resData['userCount'];
+        if(!empty($list)){
+            $this->resData['xkeys'] = array_map(function($v){
+                return $v.'次';
+            }, array_column($list, '_id'));
+
+            // 0次人数
+            array_push($this->resData['xkeys'], '0次');
+            $yvals = array_column($list, 'count');
+            $this->undoneUserCount = $this->resData['userCount'] - array_sum($yvals);
+            array_push($yvals, $this->undoneUserCount);
+            $this->resData['yvals'] = [
+                [
+                    'name'      => '完成人数',
+                    'type'      => 'bar',
+                    'data'      => $yvals,
+                ],
+            ];
+
+            $doneRate = array_map(function($v){
+                // if()
+                return (float)sprintf('%.4f', $v/$this->resData['userCount']) * 100;
+            }, $yvals);
+
+            $this->resData['yvals'][] = [
+                'name'      => '人数占比',
+                'type'      => 'line',
+                'data'      => $doneRate,
+                'yAxisIndex' => 1,
+            ];
+
+            // 总锻炼次数
+            $this->resData['totalCount'] = array_sum(array_column($list, 'sum'));
+        }
+
+        // 获取学生信息
+        if(isset($this->map['class']['_id']) && !isset($this->map['user']['_id'])){
+            $users = $this->userModel->getUserListByClassId($this->map['class']['_id'], ['username','nickname']);
+            $users = array_column($users, null, '_id');
+            if(!empty($list)){
+                foreach ($list as $row) {
+                    $userRange = [];
+                    foreach ($row['user'] as $uid) {
+                        if(isset($users[$uid])){
+                            if(empty($users[$uid]['username'])){
+                                $users[$uid]['username'] = $users[$uid]['nickname'];
+                            }
+                            $userRange[] = $users[$uid];
+                            unset($users[$uid]);
+                        }
+                    }
+                    $this->resData['doneNumUsers'][] = $userRange;
+                }
+            }
+
+            if(!empty($users)){
+                $this->resData['doneNumUsers'][] = array_values($users);
+                $this->undoneUserCount = count($users);
+            }
+        }
+
+        // 生成表格数据
+        $this->getTableHtml();
+
+        // 下载数据
+        if(!empty($this->map['down'])){
+            $file = $this->map['down'];
+            $header = [
+                '完成次数','完成人数(人)','人数占比(%)','学生信息'
+            ];
+
+            $bodyer = [];
+            foreach ($this->resData['xkeys'] as $tk => $tval) {
+                $itemVal = [$tval];
+                foreach ($this->resData['yvals'] as $yval) {
+                    $itemVal[] = $yval['data'][$tk];
+                }
+                $userVal = [];
+                if(!empty($this->resData['doneNumUsers'])){
+                    foreach ($this->resData['doneNumUsers'][$tk] as $uval) {
+                        $userVal[] = $uval['username'];
+                    }
+                }
+                $itemVal[] = implode('、', $userVal);
+                $bodyer[] = $itemVal;
+            }
+
+            xlsHeader($header, $file);
+            xlsOutput(array_keys($header), $bodyer);
+            exit;
+        }
+
+        unset($this->resData['doneNumUsers']);
+        unset($this->resData['doneRate']);
+    }
+
+    protected function getTableHtml(){
+        $this->resData['tableDataHtml'] = "<caption>数据表</caption><thead><tr><th>完成次数</th><th>完成人数(人)</th><th>人数占比(%)</th><th style='width:40%;'>学生信息</th></tr></thead><tbody>";
+        
+        foreach ($this->resData['xkeys'] as $tk => $tval) {
+            $this->resData['tableDataHtml'] .= "</tr><td>{$tval}</td>";
+            foreach ($this->resData['yvals'] as $yval) {
+                $this->resData['tableDataHtml'] .= "<td>{$yval['data'][$tk]}</td>";
+            }
+            $aHtml = '';
+            if(!empty($this->resData['doneNumUsers'])){
+                foreach ($this->resData['doneNumUsers'][$tk] as $uval) {
+                    $aHtml .= '<a class="user-a" href="/user/student?uid='.$uval['_id'].'">'.$uval['username'].'</a>';
+                }
+            }
+            $this->resData['tableDataHtml'] .= '<td>'.$aHtml.'</td></tr>';
+        }
+        $this->resData['tableDataHtml'] .= "</tbody>";
+
+        $this->resData['warmHtml'] = '<p>该时段内应完成次数：'.$this->passNum.'次&emsp;总人数: '.$this->resData['userCount'].'人&emsp;总锻炼次数：'.$this->resData['totalCount'].'次&emsp;参与锻炼人数：'.($this->resData['userCount']-$this->undoneUserCount).'人&emsp;无锻炼记录人数：'.$this->undoneUserCount.'人';
+    }
+
+    /**
+     * 各体测分数区间段的锻炼数据
+     * @Author    422909231@qq.com
+     * @DateTime  2017-09-05
+     * @version   1.0
+     */
+    protected function getScoreTarinData(){
+        $item = [
+            'trainCount'    => 0,
+            'userCount'     => 0,
+            'avgTrainCount' => 0,
+            'doneRate'      => 0,
+            'userlist'      => [],
+        ];
+        $format = [
+            '90-100分'     => $item,
+            '80-90分'      => $item,
+            '70-80分'      => $item,
+            '70分以下'     => $item,
+            '无体测数据'   => $item,
+        ];
+
+        // 获取该空间维度下的学生列表
+        $this->getUserCount();
+        $this->doNumCount = 0; // 有锻炼记录人数
+        // 获取学生体测数据
+        $this->getPhyData($format);
+        
+        // 获取学生锻炼数据
+        $this->getTrainData($format);
+
+        $this->resData['xkeys'] = array_keys($format);
+        $this->resData['yvals'] = [
+            [
+                'name'      => '总人数',
+                'type'      => 'bar',
+                'barWidth'  => '20%',
+                'data'      => array_column($format, 'userCount'),
+            ],
+            [
+                'name'      => '总锻炼数',
+                'type'      => 'bar',
+                'barWidth'  => '20%',
+                'data'      => array_column($format, 'trainCount'),
+            ],
+            [
+                'name'      => '人均锻炼数',
+                'type'      => 'bar',
+                'barWidth'  => '20%',
+                'data'      => array_column($format, 'avgTrainCount'),
+            ],
+            [
+                'name'      => '完成比例',
+                'type'      => 'line',
+                'yAxisIndex' => 1,
+                'data'      => array_column($format, 'doneRate'),
+            ],
+        ];
+        $this->resData['legend'] = [
+            '总人数','总锻炼数','人均锻炼数','完成比例'
+        ];
+
+        $this->resData['yAxis'] = [
+            [
+                'type' => 'value',
+                'name' => '完成人数|总锻炼数|人均锻炼数',
+                'axisLabel' => [
+                    'formatter' => '{value}',
+                ],
+            ],
+            [
+                'type' => 'value',
+                'name' => '完成比例',
+                'axisLabel' => [
+                    'formatter' => '{value} %',
+                    'textStyle' => [
+                        'color' => 'red',
+                    ],
+                ],
+            ],
+        ];
+
+        // 生成表格数据
+        $this->getPhyTableHtml();
+
+        // 下载数据
+        if(!empty($this->map['down'])){
+            $file = $this->map['down'];
+            array_unshift($this->resData['xkeys'], '数据项') ;
+
+            $bodyer = [];
+            foreach ($this->resData['yvals'] as $yval) {
+                $itemval = [$yval['name']];
+                foreach ($yval['data'] as $yitem) {
+                    if($yval['name'] == '完成比例'){
+                        $yitem .= ' %';
+                    }
+                    $itemval[] = $yitem;
+                }
+                $bodyer[] = $itemval;
+            }
+
+            xlsHeader($this->resData['xkeys'], $file);
+            xlsOutput(array_keys($this->resData['xkeys']), $bodyer);
+            exit;
+        }
+    }
+
+    protected function getPhyData(&$format){
+        $tcList = $this->tcModel->getPhyInfoByUserids($this->userlist, ['userid','totalscore']);
+        if(!empty($tcList)) $tcList = array_column($tcList, null, 'userid');
+
+        foreach ($this->userlist as $uid) {
+            if(isset($tcList[$uid])){
+                if(!empty($tcList[$uid]['totalscore'])){
+                    $score = (float)$tcList[$uid]['totalscore'][0]['score'];
+                    $this->getScoreRange($score, $uid, $format);
+                }
+                else{
+                    $format['无体测数据']['userCount'] += 1;
+                    $format['无体测数据']['userlist'][] = $uid;
+                }
+            }
+            else{
+                $format['无体测数据']['userCount'] += 1;
+                $format['无体测数据']['userlist'][] = $uid;
+            }
+        }
+    }
+
+    protected function getScoreRange($score, $uid, &$format){
+        if($score >= 90){
+            $format['90-100分']['userCount'] += 1;
+            $format['90-100分']['userlist'][] = $uid;
+        }
+        else if($score >= 80){
+            $format['80-90分']['userCount'] += 1;
+            $format['80-90分']['userlist'][] = $uid;
+        }
+        else if($score >= 70){
+            $format['70-80分']['userCount'] += 1;
+            $format['70-80分']['userlist'][] = $uid;
+        }
+        else{
+            $format['70分以下']['userCount'] += 1;
+            $format['70分以下']['userlist'][] = $uid;
+        }
+    }
+
+    protected function getTrainData(&$format){
+        $where = [
+            'htype' => [
+                '$in' => [1,2,3],
+            ],
+            'originaltime' => [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ],
+        ];
+
+        $fields = [
+            '$project' => [
+                'userid' => 1,
+            ]
+        ];
+
+        $group = [
+            '$group' => [
+                '_id' => '$userid',
+                'count' => ['$sum' => 1],
+            ]
+        ];
+
+        foreach ($format as $skey => &$sval) {
+            if(!empty($sval['userlist'])){
+                $where['userid'] = [
+                    '$in' => $sval['userlist'],
+                ];
+
+                $aggregate = [
+                    ['$match' => $where],
+                    $fields,
+                    $group,
+                    ['$sort' => ['_id' => -1]],
+                ];
+
+                $list = $this->trainModel->aggregate($aggregate);
+                if(!empty($list)){
+                    foreach ($list as $lval) {
+                        $sval['trainCount'] += $lval['count'];
+                        if($lval['count'] >= $this->passNum){
+                            $sval['doneRate'] += 1;
+                        }
+                        if($lval['count'] > 0){
+                            $this->doNumCount += 1;
+                        }
+                    }
+                }
+
+                $sval['avgTrainCount'] = (float)sprintf('%.2f', $sval['trainCount']/$sval['userCount']);
+                $sval['doneRate'] = (float)sprintf('%.4f', $sval['doneRate']/$sval['userCount']) * 100;
+
+                unset($sval['userlist']);
+            }
+        }
+    }
+
+    protected function getPhyTableHtml(){
+        $this->resData['tableDataHtml'] = "<caption>数据表</caption><thead><tr><th>数据项</th>";
+        $thead = '';
+        array_map(function($v) use (&$thead){
+            $thead .= '<th>'.$v.'</th>'; 
+        }, array_values($this->resData['xkeys']));
+        $this->resData['tableDataHtml'] .= $thead . '</tr></thead><tbody>';
+
+        $totalCount = 0;
+        foreach ($this->resData['yvals'] as $yval) {
+            $this->resData['tableDataHtml'] .= "</tr><td>{$yval['name']}</td>";
+            foreach ($yval['data'] as $yitem) {
+                if($yval['name'] == '完成比例'){
+                    $yitem .= ' %';
+                }
+                $this->resData['tableDataHtml'] .= "<td>{$yitem}</td>";
+            }
+            if($yval['name'] == '总锻炼数'){
+                $totalCount = array_sum($yval['data']);
+            }
+            $this->resData['tableDataHtml'] .= '</tr>';
+        }
+        $this->resData['tableDataHtml'] .= "</tbody>";
+
+        $this->resData['warmHtml'] = '<p>该时段内应完成次数：'.$this->passNum.'次&emsp;总人数: '.$this->resData['userCount'].'人&emsp;总锻炼次数：'.$totalCount.'次&emsp;参与锻炼人数：'.$this->doNumCount.'人&emsp;无锻炼记录人数：'.($this->resData['userCount']-$this->doNumCount).'人';
     }
 
 }
