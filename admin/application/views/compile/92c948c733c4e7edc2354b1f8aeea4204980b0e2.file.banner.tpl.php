@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-08 10:04:54
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-08 16:08:47
          compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:129400040859b1fac62841a2-06721238%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-07 23:35:06
-         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:132814463859b1672aba0bc6-37159779%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> aca1a76f6047e6650dd74beff90dd8a36bc2818c
+<?php /*%%SmartyHeaderCode:20853219059b2500fb676a0-00751788%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '92c948c733c4e7edc2354b1f8aeea4204980b0e2' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/banner.tpl',
-<<<<<<< HEAD
       1 => 1504258102,
-=======
-      1 => 1501253091,
->>>>>>> aca1a76f6047e6650dd74beff90dd8a36bc2818c
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1504482334,
+      1 => 1504856947,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '129400040859b1fac62841a2-06721238',
-=======
-      1 => 1504619863,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '132814463859b1672aba0bc6-37159779',
->>>>>>> aca1a76f6047e6650dd74beff90dd8a36bc2818c
+  'nocache_hash' => '20853219059b2500fb676a0-00751788',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59b1fac639cac5_91771693',
+  'unifunc' => 'content_59b2500fdc3ba2_01184894',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b1fac639cac5_91771693')) {function content_59b1fac639cac5_91771693($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59b1672ac4f6f2_49523089',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b1672ac4f6f2_49523089')) {function content_59b1672ac4f6f2_49523089($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> aca1a76f6047e6650dd74beff90dd8a36bc2818c
+<?php if ($_valid && !is_callable('content_59b2500fdc3ba2_01184894')) {function content_59b2500fdc3ba2_01184894($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -256,9 +232,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
-                             <li>
+                            <!--  <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <li>

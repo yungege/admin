@@ -47,7 +47,7 @@ class Service_Push_PSchoolModel extends BasePageService {
 			$this->message['status'] = 1;
 			$this->message['ctime'] = time();
 			$this->message['utime'] = time();
-			$result = $this->messageModel->add($this->message);
+			$result = $this->messageModel->insert($this->message);
 		}
 
 		$whereUser = [

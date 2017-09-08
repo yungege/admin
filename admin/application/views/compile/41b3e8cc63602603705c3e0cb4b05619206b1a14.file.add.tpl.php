@@ -1,42 +1,23 @@
-<<<<<<< HEAD:admin/application/views/compile/531936fc9b9fd10b7f0f8c440772742b67814f7b.file.add.tpl.php
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-07 16:43:44
-         compiled from "/var/www/admin/admin/application/views/template/action/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:75219705759b106c08ad999-49096905%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-08 15:42:54
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-08 16:11:42
          compiled from "/var/www/admin/admin/application/views/template/student/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:115961343359b249fe1bc7c6-26103243%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> ceb32de00710e6dbd83a96c22ba73b15fbda05c0:admin/application/views/compile/41b3e8cc63602603705c3e0cb4b05619206b1a14.file.add.tpl.php
+<?php /*%%SmartyHeaderCode:144647475959b250be22faa8-90573309%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '41b3e8cc63602603705c3e0cb4b05619206b1a14' => 
     array (
-<<<<<<< HEAD:admin/application/views/compile/531936fc9b9fd10b7f0f8c440772742b67814f7b.file.add.tpl.php
-      0 => '/var/www/admin/admin/application/views/template/action/add.tpl',
-      1 => 1501239097,
-=======
       0 => '/var/www/admin/admin/application/views/template/student/add.tpl',
       1 => 1504855801,
->>>>>>> ceb32de00710e6dbd83a96c22ba73b15fbda05c0:admin/application/views/compile/41b3e8cc63602603705c3e0cb4b05619206b1a14.file.add.tpl.php
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD:admin/application/views/compile/531936fc9b9fd10b7f0f8c440772742b67814f7b.file.add.tpl.php
-      1 => 1504620741,
+      1 => 1504856947,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '75219705759b106c08ad999-49096905',
-=======
-      1 => 1504856510,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '115961343359b249fe1bc7c6-26103243',
->>>>>>> ceb32de00710e6dbd83a96c22ba73b15fbda05c0:admin/application/views/compile/41b3e8cc63602603705c3e0cb4b05619206b1a14.file.add.tpl.php
+  'nocache_hash' => '144647475959b250be22faa8-90573309',
   'function' => 
   array (
   ),
@@ -48,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD:admin/application/views/compile/531936fc9b9fd10b7f0f8c440772742b67814f7b.file.add.tpl.php
-  'unifunc' => 'content_59b106c08fe233_00366734',
+  'unifunc' => 'content_59b250be3153f4_54409056',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b106c08fe233_00366734')) {function content_59b106c08fe233_00366734($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59b249fe232e76_61580131',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b249fe232e76_61580131')) {function content_59b249fe232e76_61580131($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> ceb32de00710e6dbd83a96c22ba73b15fbda05c0:admin/application/views/compile/41b3e8cc63602603705c3e0cb4b05619206b1a14.file.add.tpl.php
+<?php if ($_valid && !is_callable('content_59b250be3153f4_54409056')) {function content_59b250be3153f4_54409056($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -477,11 +452,7 @@ $_smarty_tpl->tpl_vars['sexName']->_loop = true;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-<<<<<<< HEAD:admin/application/views/compile/531936fc9b9fd10b7f0f8c440772742b67814f7b.file.add.tpl.php
     <script src="/static/widget/alertBox/alert.js"></script>
-=======
-   <!--  <script src="/static/widget/alertBox/alert.js"></script> -->
->>>>>>> ceb32de00710e6dbd83a96c22ba73b15fbda05c0:admin/application/views/compile/41b3e8cc63602603705c3e0cb4b05619206b1a14.file.add.tpl.php
 
     <script type="text/javascript">
         !(function(){
