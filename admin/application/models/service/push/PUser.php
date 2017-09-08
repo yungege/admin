@@ -47,6 +47,8 @@ class Service_Push_PUserModel extends BasePageService {
 
 		$this->deviceToken['ios'] = [];
 		$this->deviceToken['android'] = [];
+		$this->theme = trim($req['theme']);
+		$this->content = trim($req['description']);
 		$this->userInfos = $this->userModel->query($whereUser,$option);
 
 		foreach($this->userInfos as $userInfo){
@@ -59,7 +61,7 @@ class Service_Push_PUserModel extends BasePageService {
 			$this->message['status'] = 1;
 			$this->message['ctime'] = time();
 			$this->message['utime'] = time();
-			$result = $this->messageModel->add($this->message);
+			$result = $this->messageModel->insert($this->message);
 		}
 
 		foreach($this->userInfos as $userInfo){
@@ -71,8 +73,6 @@ class Service_Push_PUserModel extends BasePageService {
 			}
 		}
 
-		$this->theme = trim($req['theme']);
-		$this->content = trim($req['description']);
 		$this->deviceToken['ios'] = implode("," , $this->deviceToken['ios']);
 		$this->deviceToken['android'] = implode("," , $this->deviceToken['android']);
 
