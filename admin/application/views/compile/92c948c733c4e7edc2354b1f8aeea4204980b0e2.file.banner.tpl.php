@@ -1,43 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 10:55:44
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-08 10:04:54
          compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:159011126059a386300bfd21-12582756%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-23 14:16:54
-         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:999881147599d1dd629e920-93138169%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-24 16:11:16
-         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1674295884599e8a24ebce13-71612064%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 75486c36460b1af2c1303a91a2a2642a757eb641
->>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
+<?php /*%%SmartyHeaderCode:129400040859b1fac62841a2-06721238%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '92c948c733c4e7edc2354b1f8aeea4204980b0e2' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/banner.tpl',
-      1 => 1503411493,
+      1 => 1504258102,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503888525,
+      1 => 1504482334,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '159011126059a386300bfd21-12582756',
-=======
-<<<<<<< HEAD
-  'nocache_hash' => '999881147599d1dd629e920-93138169',
-=======
-  'nocache_hash' => '1674295884599e8a24ebce13-71612064',
->>>>>>> 75486c36460b1af2c1303a91a2a2642a757eb641
->>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
+  'nocache_hash' => '129400040859b1fac62841a2-06721238',
   'function' => 
   array (
   ),
@@ -49,21 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59a386301509a6_81611809',
+  'unifunc' => 'content_59b1fac639cac5_91771693',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a386301509a6_81611809')) {function content_59a386301509a6_81611809($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_599d1dd64082c7_70836648',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599d1dd64082c7_70836648')) {function content_599d1dd64082c7_70836648($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_599e8a25006fb5_79384047',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_599e8a25006fb5_79384047')) {function content_599e8a25006fb5_79384047($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 75486c36460b1af2c1303a91a2a2642a757eb641
->>>>>>> 2a26efb8314e2c26f45bc6ef7de4621d49f05966
+<?php if ($_valid && !is_callable('content_59b1fac639cac5_91771693')) {function content_59b1fac639cac5_91771693($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -254,7 +222,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
 
                             <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">统计数据</a>
+                                <a href="/stat/statistics" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">统计数据</a>
                             </li>
 
                             <li>
@@ -263,6 +231,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
+                            </li>
+                             <li>
+                                <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
                             </li>
                         </ul>
                     </li>
@@ -279,8 +250,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     </li>
 
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5){?>in<?php }?>">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-paper-plane"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
                             <li>
                                 <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
                             </li>

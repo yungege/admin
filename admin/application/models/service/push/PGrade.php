@@ -7,13 +7,19 @@ class Service_Push_PGradeModel extends BasePageService {
 	protected $userInfos;
 	protected $schoolIds;
 	protected $selectedGrade;
+	protected $classInfos;
+	protected $classIds;
 
+	protected $messageModel;
 	protected $userModel;
+	protected $classModel;
 	protected $uMPush;
 
 	public function __construct(){
 
 		$this->userModel = Dao_UserModel::getInstance();
+		$this->classModel = Dao_Classinfo::getInstance();
+		$this->messageModel = Dao_MessageModel::getInstance();
 		$this->uMPush = new UmengPush();
 	}
 
@@ -51,6 +57,31 @@ class Service_Push_PGradeModel extends BasePageService {
 		$this->deviceToken['ios'] = [];
 		$this->deviceToken['android'] = [];
 		$this->userInfos = $this->userModel->query($whereUser,$option);
+
+		$classWhere = [
+			'schoolid' => ['$in' => $this->schoolIds],
+			'grade' => ['$in' => $this->selectedGrade],
+		];
+
+		$classOptions['projection'] = [
+			'_id' => 1,
+		];
+
+		$this->classInfos = $this->classModel->query($classWhere,$classOptions);
+		$this->classIds = array($this->classInfos,'_id');
+
+		foreach($this->classIds as $classId){
+			$this->message['platform'] = 2;
+			$this->message['type'] = 3;
+			$this->message['title'] = $this->theme;
+			$this->message['to_id'] = $classId;
+			$this->message['sendtime'] = time();
+			$this->message['content'] = $this->content;
+			$this->message['status'] = 1;
+			$this->message['ctime'] = time();
+			$this->message['utime'] = time();
+			$result = $this->messageModel->add($this->message);
+		}
 
 		foreach($this->userInfos as $userInfo){
 

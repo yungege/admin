@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-01 08:26:20
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-08 09:51:16
          compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:102811044359a8a92c3afee6-54317139%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:62474015059b1f794bf5bf5-87886227%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '713206737d6eb09c8f72027c7313a6d885305480' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/login.tpl',
-      1 => 1502419197,
+      1 => 1504474027,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '102811044359a8a92c3afee6-54317139',
+  'nocache_hash' => '62474015059b1f794bf5bf5-87886227',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59a8a92c3c6419_49791253',
+  'unifunc' => 'content_59b1f794c81e44_64770272',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a8a92c3c6419_49791253')) {function content_59a8a92c3c6419_49791253($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59b1f794c81e44_64770272')) {function content_59b1f794c81e44_64770272($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -146,6 +146,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     subData: function(){
         var me = this;
         me.subBtn.unbind().bind('click',function(){
+
             var mobRes = me.checkMobile();
             // var pwdRes = me.checkPwd();
             if(mobRes === false ){
@@ -156,6 +157,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 '/user/dologin',
                 $('form[name=login]').serialize(),
                 function(json){
+                   
                     if(json.errCode == -2){
                         window.location.href = '/user/register?mod=' + me.mob.val();
                         

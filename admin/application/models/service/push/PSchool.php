@@ -6,13 +6,16 @@ class Service_Push_PSchoolModel extends BasePageService {
 	protected $deviceToken = [];
 	protected $userInfos;
 	protected $schoolIds;
+	protected $message;
 
 	protected $userModel;
+	protected $messageModel;
 	protected $uMPush;
 
 	public function __construct(){
 
 		$this->userModel = Dao_UserModel::getInstance();
+		$this->messageModel = Dao_MessageModel::getInstance();
 		$this->uMPush = new UmengPush();
 	}
 
@@ -33,6 +36,19 @@ class Service_Push_PSchoolModel extends BasePageService {
 		$this->theme = trim($req['theme']);
 		$this->content = trim($req['description']);
 		array_walk($this->schoolIds,array($this,'trimValue'));
+
+		foreach($this->schoolIds as $schoolId){
+			$this->message['platform'] = 3;
+			$this->message['type'] = 3;
+			$this->message['title'] = $this->theme;
+			$this->message['to_id'] = $schoolId;
+			$this->message['sendtime'] = time();
+			$this->message['content'] = $this->content;
+			$this->message['status'] = 1;
+			$this->message['ctime'] = time();
+			$this->message['utime'] = time();
+			$result = $this->messageModel->add($this->message);
+		}
 
 		$whereUser = [
 			'schoolinfo.schoolid' => ['$in' => $this->schoolIds],
