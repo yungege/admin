@@ -183,6 +183,9 @@
                             <li>
                                 <a href="/feedback/index" class="{%if $tag.0 == 4 && $tag.1 == 5%}cy-child-active{%/if%}">反馈建议</a>
                             </li>
+                            <!--  <li>
+                                <a href="/upload/index" class="{%if $tag.0 == 4 && $tag.1 == 6%}cy-child-active{%/if%}">上传学生数据</a>
+                            </li> -->
                         </ul>
                     </li>
                     <li>

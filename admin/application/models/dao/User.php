@@ -116,6 +116,7 @@ class Dao_UserModel extends Db_Mongodb{
             'logintype' => '',
             'phone' => 0,
         ],
+        'upgrade_year' => 0, // 升级年级信息(升级年-月) 脚本专用
     ];
     
     protected function __construct(){

@@ -125,6 +125,7 @@
     subData: function(){
         var me = this;
         me.subBtn.unbind().bind('click',function(){
+
             var mobRes = me.checkMobile();
             // var pwdRes = me.checkPwd();
             if(mobRes === false ){
@@ -135,6 +136,7 @@
                 '/user/dologin',
                 $('form[name=login]').serialize(),
                 function(json){
+                   
                     if(json.errCode == -2){
                         window.location.href = '/user/register?mod=' + me.mob.val();
                         
