@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 12:41:52
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 14:02:43
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:116292795659b765902fc2f5-95874571%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 13:29:35
-         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:166111444059b770bf9d8459-75974713%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 8c56e2e0048be4f12e4a8a6b087331099cd7e76c
+<?php /*%%SmartyHeaderCode:88210965759b77883814547-57164293%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-<<<<<<< HEAD
-      1 => 1504865546,
-=======
-      1 => 1505193731,
->>>>>>> 8c56e2e0048be4f12e4a8a6b087331099cd7e76c
+      1 => 1505196162,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1504865546,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '116292795659b765902fc2f5-95874571',
-=======
       1 => 1504866109,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '166111444059b770bf9d8459-75974713',
->>>>>>> 8c56e2e0048be4f12e4a8a6b087331099cd7e76c
+  'nocache_hash' => '88210965759b77883814547-57164293',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59b7659036a3c8_97859141',
+  'unifunc' => 'content_59b7788388ef27_76915616',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b7659036a3c8_97859141')) {function content_59b7659036a3c8_97859141($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-  'unifunc' => 'content_59b770bfa4ded9_01862939',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b770bfa4ded9_01862939')) {function content_59b770bfa4ded9_01862939($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> 8c56e2e0048be4f12e4a8a6b087331099cd7e76c
+<?php if ($_valid && !is_callable('content_59b7788388ef27_76915616')) {function content_59b7788388ef27_76915616($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -578,7 +554,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
         <form name="ugc" class="ugcform">
             <div class="form-group">
                 <label>作业时间</label>
-                <input readonly="true" data-type="time" name="wtime" type="text" class="form-control wtime date" data-date-format="yyyy-mm-dd"/>
+                <input readonly="true" data-type="time" name="wtime" type="text" class="form-control wtime date" data-date-format="yyyy-mm-dd" value="<?php echo $_smarty_tpl->tpl_vars['today']->value;?>
+" />
             </div>
             <div class="form-group">
                 <label>作业类型</label>
@@ -746,6 +723,10 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             me.subBtn.attr('data-uid', '');
             me.subBtn.attr('data-cid', '');
             me.uname.text('');
+            me.workarea.html('');
+            me.form[0].reset();
+            me.normalDiv.slideUp(200);
+            me.runTypeDiv.slideUp(200);
 
             me.reFixBox.fadeOut(200);
             me.hideUid.val('');
@@ -802,14 +783,14 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 ];
 
             if(type == -1){
-                me.normalDiv.slideUp(200);
-                me.runTypeDiv.slideUp(200);
+                me.normalDiv.slideUp(100);
+                me.runTypeDiv.slideUp(100);
                 me.workarea.html('');
                 return;
             }
             else if(type == 3){
                 me.normalDiv.hide();
-                me.runTypeDiv.slideDown(200);
+                me.runTypeDiv.slideDown(100);
                 me.workarea.html('');
                 return;
             }
@@ -820,7 +801,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                     me.workarea.html('');
                     return;
                 };
-                me.normalDiv.slideDown(200);
+                me.normalDiv.slideDown(100);
 
                 $.get(
                     '/homework/match?cid='+cid+'&uid='+uid+'&type='+type+'&date='+date,
