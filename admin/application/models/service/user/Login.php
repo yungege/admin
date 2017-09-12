@@ -37,8 +37,9 @@ class Service_User_LoginModel extends BasePageService {
             return false;
         }
         $_SESSION['userInfo'] = $res;
-        setcookie(session_name(), session_id(), time() + 30*86400, '/', '.ttxs.com');
-        setcookie('ttxs', serialize($res), time() + 30*86400, '/', '.ttxs.com');
+        $host = $_SERVER['SERVER_NAME'];
+        setcookie(session_name(), session_id(), time() + 30*86400, '/', $host);
+        setcookie('ttxs', serialize($res), time() + 30*86400, '/', $host);
         return $res;
 	}
 
