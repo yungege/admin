@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-11 13:52:24
-         compiled from "/var/www/admin/admin/application/views/template/push/school.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:183070012359b624982dc5b9-47953829%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-11 13:36:50
+         compiled from "/var/www/admin/admin/application/views/template/class/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:172472452359b620f244ca47-80014685%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '9afa1d660f5dfd26a8046e30396437b1204f3690' => 
+    '47f3c465d19b6e4eb353312b6f7fa98038af585a' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/push/school.tpl',
-      1 => 1503654498,
+      0 => '/var/www/admin/admin/application/views/template/class/add.tpl',
+      1 => 1503370676,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '183070012359b624982dc5b9-47953829',
+  'nocache_hash' => '172472452359b620f244ca47-80014685',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59b6249832c250_95117802',
+  'unifunc' => 'content_59b620f24a1db3_80287579',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b6249832c250_95117802')) {function content_59b6249832c250_95117802($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59b620f24a1db3_80287579')) {function content_59b620f24a1db3_80287579($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -109,6 +109,38 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<style type="text/css">
+    .fix-per{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgba(0,0,0,0.4);
+        z-index: 9999;
+        display: none;
+    }
+    .fix-per .fix-cont{
+        width: 400px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -200px;
+        margin-top: -100px;
+        font-size: 100px;
+        color: orange;
+    }
+    .form-wrap{
+        border: 1px solid #ccc;
+        padding: 8px 15px 15px 15px;
+        border-radius: 5px;
+    }
+</style>
+
 </head>
 
 <body>
@@ -282,7 +314,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 推送管理 / 学校推送
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 班级信息管理 / 添加班级
                             </li>
                         </ol>
                     </div>
@@ -290,31 +322,95 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
-
 <div class="row">
-    <div class="col-lg-12">
-        <form name="push">
+    <div class="col-lg-8">
+        <div class="form-wrap">
+            
+            <form name="class">
+                <div class="form-group">
+                    <label for="aname">学校ID</label>
+                    <input type="text" class="form-control" id="schoolId" placeholder="School ID" name="schoolId">
+                </div>
 
-            <div class="form-group">
-                <label for="vname">学校ID &nbsp; (&nbsp; 提示：多个SchoolId通过 &nbsp;&nbsp;| &nbsp;&nbsp; 隔开 &nbsp;)</label>
-                <input type="text" class="form-control" id="schoolIds" placeholder="School Id" name="schoolIds">
-            </div>
+                <div class="form-group"> 
+                    <label for="start">入学时间</label>
+                    <div class="col-sm-5 input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
 
-            <div class="form-group">
-                <label for="vno">推送主题</label>
-                <input type="text" class="form-control" id="theme" placeholder="Push Theme" name="theme">
-            </div>
+                        <input readonly type="text" class="form-control" id="start" name="start" value="<?php echo $_GET['start'];?>
+" >
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                </div>
 
-            <div class="form-group">
-                <label for="description">推送内容</label>
-                <textarea id="description" class="form-control"  placeholder="Push Content" rows="3" name="description"></textarea>
-            </div>
-              
-            <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
-" data-1="<?php echo $_smarty_tpl->tpl_vars['android']->value;?>
-">确认推送</button>
-        </form>
+                <div class="form-group">
+                    <label for="grade">年级</label>
+                    <select id="grade" class="form-control" name="grade">
+                        <option value="-1">请选择班级所在年级</option>
+                        <option value="11">小学1年级</option>
+                        <option value="12">小学2年级</option>
+                        <option value="13">小学3年级</option>
+                        <option value="14">小学4年级</option>
+                        <option value="15">小学5年级</option>
+                        <option value="16">小学6年级</option>
+                        <option value="21">初中1年级</option>
+                        <option value="22">初中2年级</option>
+                        <option value="23">初中3年级</option>
+                        <option value="31">高中1年级</option>
+                        <option value="32">高中2年级</option>
+                        <option value="33">高中3年级</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="classNo">所在班级</label>
+                    <select id="classNo" class="form-control" name="classNo">
+                        <option value="-1">请选择班级号</option>
+                        <option value="1">1班</option>
+                        <option value="2">2班</option>
+                        <option value="3">3班</option>
+                        <option value="4">4班</option>
+                        <option value="5">5班</option>
+                        <option value="6">6班</option>
+                        <option value="7">7班</option>
+                        <option value="8">8班</option>
+                        <option value="9">9班</option>
+                        <option value="10">10班</option>
+                        <option value="11">11班</option>
+                        <option value="12">12班</option>
+                        <option value="13">13班</option>
+                        <option value="14">14班</option>
+                        <option value="15">15班</option>
+                        <option value="16">16班</option>
+                        <option value="17">17班</option>
+                        <option value="18">18班</option>
+                        <option value="19">19班</option>
+                        <option value="20">20班</option>
+                        <option value="21">21班</option>
+                        <option value="22">22班</option>
+                        <option value="23">23班</option>
+                        <option value="24">24班</option>
+                        <option value="25">25班</option>
+                        <option value="26">26班</option>
+                        <option value="27">27班</option>
+                        <option value="28">28班</option>
+                        <option value="29">29班</option>
+                        <option value="30">30班</option>
+                    </select>
+                </div>
+                            
+                <button id="sub" type="button" class="btn btn-primary">确认提交</button>
+               <!--  <button id="button" type="button" class="btn btn-danger" >取&emsp;消</button> -->
+            </form>
+        </div>
     </div>
+</div>
+
+<!-- modal-add -->
+<div class="fix-per">
+    <div class="fix-cont">
+        <!-- 100% -->
+    </div>
+    
 </div>
 
 
@@ -347,71 +443,10 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     </script>
 
     
-<script type="text/javascript">
-    !(function(){
-        var publish = {
-            init: function(){
-                this.getDom();
-                this.postData();
-            },
-            getDom: function(){
-                this.subBtn = $('#sub');
-                this.schoolIds = $('#schoolIds');
-                this.theme = $('#theme');
-                this.desc = $('#description');
-                this.form = $('form[name=push]');
-            },
-            checkParams: function(){
-                var me = this;
 
-                var schoolIds = $.trim(me.schoolIds.val());
-                if(!schoolIds){
-                    alert('请输入学校ID.');
-                    return false;
-                }
-
-                var theme = $.trim(me.theme.val());
-                if(!theme){
-                    alert('请输入推送主题.');
-                    return false;
-                }
-
-                var desc = $.trim(me.desc.val());
-                if(!desc){
-                    alert('请输入推送主体内容.');
-                    return false;
-                }
-            },
-            postData: function(){
-                var me = this;
-
-                me.subBtn.unbind().bind('click', function(){
-                    var res = me.checkParams();
-                    if(res === false){
-                        return false;
-                    }
-
-                    var formdata = me.form.serialize();
-
-                    $.post('/push/pschool', formdata, function(json){
-
-                        if(json.errCode == 0){
-                            alert('推送成功.');
-                            window.location = '/push/school';
-                        }
-                        else{
-                            alert('托送失败.');
-                            return false;
-                        }
-                    });
-                })
-            }
-
-        };
-
-        publish.init();
-    })()
-</script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/static/class/js/add.js"></script>
+<script type="text/javascript" src="/static/ugc/index.js"></script>
 
 </body>
 </html><?php }} ?>
