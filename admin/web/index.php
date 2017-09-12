@@ -2,7 +2,6 @@
 /**
  * @declare 入口文件
  */
-
 define('APP_NAME', 'ttxs_admin');
 define('APP_DOMAIN', '');
 define('APPLICATION_PATH', dirname(dirname(__FILE__)));
