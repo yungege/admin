@@ -22,6 +22,7 @@ class Service_User_StudentModel extends BasePageService {
     }
 
     protected function __execute($req) {
+        $this->resData['today'] = date('Y-m-d');
         $match = [];
         $req = $req['get'];
         $this->resData['grade'] = Dao_UserModel::$grade;
