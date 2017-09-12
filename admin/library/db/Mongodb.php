@@ -3,6 +3,7 @@
  * mongodb 简单 封装
  * @author 422909231@qq.com
  */
+require_once CONFIG_PATH . "/NDBConfig.class.php";
 class Db_Mongodb {
     
     protected $host     = 'localhost';
@@ -61,18 +62,32 @@ class Db_Mongodb {
      * @return [type]
      */
     private function parseConfig (){
-        $config = Yaf_Registry::get('mongodb')['master'];
+        $config = NDBConfig::getAllServers();
+        $master = $config['master'];
+        $slave  = $config['slave'];
 
-        if (!empty($config)) {
-            $this->host = $config['server'];
-            $this->port = $config['port'];
-            $this->db   = $config['database'];
-            $this->user = $config['user'];
-            $this->pwd  = $config['password'];
+        if (!empty($master)) {
+            $this->host = $master[0]['server'];
+            $this->port = $master[0]['port'];
+            $this->db   = $master[0]['database'];
+            $this->user = $master[0]['user'];
+            $this->pwd  = $master[0]['password'];
         }
         else {
             throw new Exception('Mongo config file not exists.');
         }
+        // $config = Yaf_Registry::get('mongodb')['master'];
+
+        // if (!empty($config)) {
+        //     $this->host = $config['server'];
+        //     $this->port = $config['port'];
+        //     $this->db   = $config['database'];
+        //     $this->user = $config['user'];
+        //     $this->pwd  = $config['password'];
+        // }
+        // else {
+        //     throw new Exception('Mongo config file not exists.');
+        // }
     }
 
     /**
