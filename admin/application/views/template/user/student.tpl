@@ -432,6 +432,7 @@
                 me.normalDiv.hide();
                 me.runTypeDiv.slideDown(100);
                 me.workarea.html('');
+                me.subBtn.show();
                 return;
             }
             else{
