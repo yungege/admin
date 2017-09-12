@@ -11,6 +11,8 @@ class Service_User_LoginModel extends BasePageService {
         13161486949,
         18513886256,
         17701306902,
+        18600024371,
+        18210085688,
     ];
 
     public function __construct() {
@@ -35,10 +37,13 @@ class Service_User_LoginModel extends BasePageService {
             $this->errNo = -2;
             return false;
         }
-
         $_SESSION['userInfo'] = $res;
-        setcookie(session_name(), session_id(), time() + 30*86400, '/', '.ttxs.com');
-        setcookie('ttxs', serialize($res), time() + 30*86400, '/', '.ttxs.com');
+        $host = $_SERVER['SERVER_NAME'];
+        if($host == 'localhost'){
+            $host = $_SERVER['SERVER_ADDR'];
+        }
+        setcookie(session_name(), session_id(), time() + 30*86400, '/', $host);
+        setcookie('ttxs', serialize($res), time() + 30*86400, '/', $host);
         return $res;
 	}
 

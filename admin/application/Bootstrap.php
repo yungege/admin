@@ -130,40 +130,40 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
 
     public function _initMongo(Yaf_Dispatcher $dispatcher) {
         // mongo server 初始化
-        $servers = array();
-        $database = $this->config->mongodb;
-        $servers['master'] = $database->master->toArray(); // master
-        $slaves = $database->slaves; // slaves
+    //     $servers = array();
+    //     $database = $this->config->mongodb;
+    //     $servers['master'] = $database->master->toArray(); // master
+    //     $slaves = $database->slaves; // slaves
 
-        if (!empty($slaves))
-        {
-            $slave_servers	 = explode('|', $slaves->servers);
-            $slave_ports	 = explode('|', $slaves->ports);
-            $slave_users	 = explode('|', $slaves->users);
-            $slave_passwords = explode('|', $slaves->passwords);
-            $slave_databases = explode('|', $slaves->databases);
-            $slaves = array();
+    //     if (!empty($slaves))
+    //     {
+    //         $slave_servers	 = explode('|', $slaves->servers);
+    //         $slave_ports	 = explode('|', $slaves->ports);
+    //         $slave_users	 = explode('|', $slaves->users);
+    //         $slave_passwords = explode('|', $slaves->passwords);
+    //         $slave_databases = explode('|', $slaves->databases);
+    //         $slaves = array();
 
-            foreach ($slave_servers as $key => $slave_server)
-            {
-                if (
-                    isset($slave_ports[$key]) &&
-                    isset($slave_users[$key]) && 
-                    isset($slave_passwords[$key]) && 
-                    isset($slave_databases[$key])
-				){
-                    $slaves[] = array(
-                        'server' => $slave_server,
-                        'port' => $slave_ports[$key],
-                        'database' => $slave_databases[$key],
-                        'user' => $slave_users[$key],
-                        'password' => $slave_passwords[$key],
-                        );
-                }
-            }
-            $servers['slaves'] = $slaves[array_rand($slaves)];
-        }
-        Yaf_Registry::set('mongodb', $servers);
+    //         foreach ($slave_servers as $key => $slave_server)
+    //         {
+    //             if (
+    //                 isset($slave_ports[$key]) &&
+    //                 isset($slave_users[$key]) && 
+    //                 isset($slave_passwords[$key]) && 
+    //                 isset($slave_databases[$key])
+				// ){
+    //                 $slaves[] = array(
+    //                     'server' => $slave_server,
+    //                     'port' => $slave_ports[$key],
+    //                     'database' => $slave_databases[$key],
+    //                     'user' => $slave_users[$key],
+    //                     'password' => $slave_passwords[$key],
+    //                     );
+    //             }
+    //         }
+    //         $servers['slaves'] = $slaves[array_rand($slaves)];
+    //     }
+    //     Yaf_Registry::set('mongodb', $servers);
     }
 
     /**
@@ -181,7 +181,14 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
 
     //开启session
     public function _initSession(){
-        session_start();
+        // session_save_path('/tmp/session');
+        $session = Yaf_Session::getInstance();
+        // echo "<pre>";
+        // print_r(session_save_path());exit;
+        $session->start();
+        // session_save_path('/tmp/session');
+        // session_start();
+        // ini_set('Yaf_Session ', newvalue)
     }
 
 }

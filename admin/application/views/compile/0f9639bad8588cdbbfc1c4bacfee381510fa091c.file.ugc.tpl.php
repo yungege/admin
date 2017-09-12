@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 18:11:19
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:37311617159b7b2c7bb50d1-03935303%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 18:07:05
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:156130360659b7b1c9ba6940-30438058%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 0250f8631a4490176b21f4cb323fe462c6bb06e6
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
+<<<<<<< HEAD
       1 => 1505207683,
+=======
+      1 => 1505194859,
+>>>>>>> 0250f8631a4490176b21f4cb323fe462c6bb06e6
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1505113102,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '37311617159b7b2c7bb50d1-03935303',
+=======
+      1 => 1505194859,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '156130360659b7b1c9ba6940-30438058',
+>>>>>>> 0250f8631a4490176b21f4cb323fe462c6bb06e6
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59b7b2c7cc3dc5_07198999',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59b7b2c7cc3dc5_07198999')) {function content_59b7b2c7cc3dc5_07198999($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_59b7b1c9d0c617_65271368',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59b7b1c9d0c617_65271368')) {function content_59b7b1c9d0c617_65271368($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 0250f8631a4490176b21f4cb323fe462c6bb06e6
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -76,6 +100,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             padding-top: 15px;
             font-size: 11px;
             border-top: 1px solid #ccc;
+        }
+        .tt-page{
+            margin-top: 15px;
         }
         .tt-page a{
             padding: 6px 12px;
@@ -228,9 +255,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
-                             <li>
+                            <!--  <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <li>
@@ -397,7 +424,7 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                         <th>作业类型</th>
                         <th>锻炼项目</th>
                         <th>能量/千卡</th>
-                        <th>跑步路程/m</th>
+                        <th>跑步路程/km</th>
                         <th>开始时间</th>
                         <th>结束时间</th>
                         <th>提交时间</th>
@@ -434,7 +461,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <td>
                             <?php echo $_smarty_tpl->tpl_vars['row']->value['distance'];?>
 <br/>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['avgSpeed']){?>平均速度：<?php echo $_smarty_tpl->tpl_vars['row']->value['avgSpeed'];?>
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['avgSpeed']){?>均速：<?php echo $_smarty_tpl->tpl_vars['row']->value['avgSpeed'];?>
  km/h<?php }?>
                         </td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['starttime'],"%Y-%m-%d");?>

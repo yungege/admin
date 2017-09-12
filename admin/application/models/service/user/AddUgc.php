@@ -5,13 +5,14 @@ class Service_User_AddUgcModel extends BasePageService {
     protected $projectSkuModel;
     protected $homeworkModel;
     protected $trainModel;
+    protected $redis;
 
     protected $reqData;
     protected $resData;
 
 
     public function __construct() {
-
+        $this->redis = Cache_CacheRedis::getInstance();
         $this->projectModel = Dao_ExerciseProjectModel::getInstance();
         $this->projectSkuModel = Dao_ExerciseProjectSkuModel::getInstance();
         $this->homeworkModel = Dao_ExerciseHomeworkModel::getInstance();
@@ -19,70 +20,125 @@ class Service_User_AddUgcModel extends BasePageService {
     }
 
     protected function __declare() {
-        
+        $this->declareCheckXss = true;
     }
 
     protected function __execute($req) {
-        $uid = $req['get']['uid'];
-        $cid = $req['get']['cid'];
-        $hid = $req['get']['hid'];
+        $this->checkXss($req['post']);
+        $req = $req['post'];
 
         if(
-            empty($uid) ||
-            !preg_match("/\w+/", $uid) ||
-            empty($cid) ||
-            !preg_match("/\w+/", $cid) ||
-            empty($hid) ||
-            !preg_match("/\w+/", $hid)
+            empty($req['uid']) ||
+            !preg_match("/\w+/", $req['uid']) ||
+            !in_array($req['htype'], [1,2,3]) ||
+            !preg_match("/(\d{4})-(\d{2})-(\d{2})/", $req['wtime'])
         ){
             throw new Exception("Error Params", -1);
         }
 
-        $hasDo = $this->trainModel->getTodayBjTrain($uid);
-        if(!empty($hasDo))
-            throw new Exception("", TRAINING_BJ_ERROR);
+        switch ($req['htype']) {
+            // 跑步
+            case 3:
+                $this->addRun($req);
+                break;
             
+            default:
+                $this->addNormal($req);
+                break;
+        }
+    }
 
-        // $homeworkInfo = $this->homeworkModel->getLastHomeworkByClassId($cid, ['project_id']);
+    // 跑步数据
+    protected function addRun($req){
+        if(!preg_match("/^[1-9]\d+$/", $req['time_cost'])){
+            throw new Exception("跑步时长错误.", -1);
+        }
 
-        
-        $homeworkInfo = $this->homeworkModel->checkHomeworkExists($hid, $cid, ['projection'=>['_id'=>1,'project_id'=>1,'type'=>1]]);
-        if(empty($homeworkInfo))
-            throw new Exception("", HOMEWORK_NOT_EXISTS);
+        if(!is_numeric($req['distance']) || (int)$req['distance'] <= 0){
+            throw new Exception("跑步距离错误.", -1);
+        }
 
-        $matchModel = new Data_TrainMatchingModel($uid);
-        $level = $matchModel->getUserDefaultLevel();
-        $protectInfo = $this->projectSkuModel->getProjectSkuInfoByProjectIdAndDifficulty(
-            $homeworkInfo['project_id'][0], $level);
-
-        // 身体素质
-        $trainData = [
-            "type"          => 5,
-            "htype"         => $homeworkInfo['type'],
-            "trainingtype"  => 1,
-            "trainingid"    => $protectInfo['_id'],
-            "userid"        => $uid,
-            "originaltime"  => strtotime(date('Y-m-d').' 00:00:00'),
-            "starttime"     => strtotime(date('Y-m-d').' 00:00:00'),
-            "endtime"       => strtotime(date('Y-m-d').' 00:00:00') + $protectInfo['time_cost'],
-            "createtime"    => time(),
-            "actioncount"   => $protectInfo['action_count'],
-            "burncalories"  => $protectInfo['calorie_cost'],
-            "exciseimg"     => [ 
-                // 待确认
-                // "https://oi7ro6pyq.qnssl.com/da50314efa4516261ca7de69010b039f.gif", 
-                // "https://oi7ro6pyq.qnssl.com/c9245fe1f280554bf6be8a9fe1f102fd.gif"
+        $data = [
+            'starttime' => (int)strtotime($req['wtime'].' 19:00:00'),
+            'endtime'   => intval(strtotime($req['wtime'].' 19:00:00') + $req['time_cost']),
+            'type'      => 3,
+            'htype'     => 3,
+            'userid'    => $req['uid'],
+            'burncalories'  => CommonFuc::calCalorie($req['distance'] * 1000, $req['time_cost']),
+            'projecttime'   => (int)$req['time_cost'],
+            'commenttext'   => '系统补交',
+            'exciseimg'     => [
+                'https://oi7ro6pyq.qnssl.com/o_1bpq74tqm1vdj18dd118o1ko01mumd.jpg',
             ],
-            "homeworkid"    => $homeworkInfo['_id'],
-            "status"        => 0
+            'route' => [
+            ],
+            'distance' => floatval($req['distance'] * 1000),
+            'region' => [
+                "maxlat" => 39.940865,
+                "maxlon" => 116.41684,
+                "minlat" => 39.939175,
+                "minlon" => 116.41034,
+            ],
+            'createtime' => time(),
+            'status' => 0,
         ];
-        // 暂时不开放
-        // throw new Exception("此功能请联系管理员.", -1);
-        
+
         $res = $this->trainModel->insert($data);
-        if($res === false)
-            throw new Exception("", TRAINING_BJ_ERROR);
-            
+        if($res === false){
+            throw new Exception("操作失败", -1);
+        }
+
+        $redisKey = CommonFuc::getRedisKey($req['uid'].'_'.date('Y_m',$data['endtime']), 'train_history');
+
+        $this->redis->delete($redisKey);
+        return;
+    }
+
+    protected function addNormal($req){
+        if(!isset($req['h-pid']) || empty($req['h-pid'])){
+            throw new Exception("请选择要补交的锻炼项目.", -1);
+        }
+
+        list($hid, $pid, $cal, $time,$count) = explode('|', $req['h-pid']);
+        if(
+            !preg_match("/\w+/", $hid) || 
+            !preg_match("/\w+/", $pid) ||
+            !is_numeric($cal) || empty($cal) ||
+            !preg_match("/^[1-9]\d+$/", $time) ||
+            !preg_match("/^[1-9]\d+$/", $count)
+        ){
+            throw new Exception("作业信息错误.", -1);
+        }
+
+        $data = [
+            "originaltime"  => (int)strtotime($req['wtime'].' 00:00:00'),
+            "starttime"     => (int)strtotime($req['wtime'].' 19:00:00'),
+            "endtime"       => intval(strtotime($req['wtime'].' 19:00:00')+$time),
+            "actioncount"   => (int)$count,
+            "burncalories"  => (float)$cal,
+            "commenttext"   => "系统补交",
+            "exciseimg"     => [ 
+                "https://oi7ro6pyq.qnssl.com/o_1bpq74tqm1vdj18dd118o1ko01mumd.jpg"
+            ],
+            "createtime"    => time(),
+            "type"          => 5,
+            "trainingtype"  => 2,
+            "userid"        => $req['uid'],
+            "trainingid"    => $pid,
+            "homeworkid"    => $hid,
+            "status"        => 0,
+            "htype"         => (int)$req['htype'],
+            "projecttime"   => (int)$time
+        ];
+
+        $res = $this->trainModel->insert($data);
+        if($res === false){
+            throw new Exception("操作失败", -1);
+        }
+
+        $redisKey = CommonFuc::getRedisKey($req['uid'].'_'.date('Y_m',$data['endtime']), 'train_history');
+
+        $this->redis->delete($redisKey);
         return;
     }
 }

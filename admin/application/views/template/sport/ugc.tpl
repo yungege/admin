@@ -100,7 +100,7 @@
                         <th>作业类型</th>
                         <th>锻炼项目</th>
                         <th>能量/千卡</th>
-                        <th>跑步路程/m</th>
+                        <th>跑步路程/km</th>
                         <th>开始时间</th>
                         <th>结束时间</th>
                         <th>提交时间</th>
@@ -121,7 +121,7 @@
                         <td>{%$row.burncalories%}</td>
                         <td>
                             {%$row.distance%}<br/>
-                            {%if $row.avgSpeed%}平均速度：{%$row.avgSpeed%} km/h{%/if%}
+                            {%if $row.avgSpeed%}均速：{%$row.avgSpeed%} km/h{%/if%}
                         </td>
                         <td>{%$row.starttime|date_format:"%Y-%m-%d"%}<br>{%$row.starttime|date_format:"%H:%M:%S"%}</td>
                         <td>{%$row.endtime|date_format:"%Y-%m-%d"%}<br>{%$row.endtime|date_format:"%H:%M:%S"%}</td>

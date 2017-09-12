@@ -1,23 +1,37 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 17:12:19
          compiled from "/var/www/admin/admin/application/views/template/push/user.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:127348759159b7a4f37994a2-86126249%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 15:37:20
+         compiled from "/var/www/admin/admin/application/views/template/push/user.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:199156254159b78eb0615dc2-36448260%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 0250f8631a4490176b21f4cb323fe462c6bb06e6
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bef1c2f4509611994eddbb75e05c1271229adb5e' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/user.tpl',
-      1 => 1504860474,
+      1 => 1505194859,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1505113102,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '127348759159b7a4f37994a2-86126249',
+=======
+      1 => 1505194859,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '199156254159b78eb0615dc2-36448260',
+>>>>>>> 0250f8631a4490176b21f4cb323fe462c6bb06e6
   'function' => 
   array (
   ),
@@ -29,9 +43,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59b7a4f3860b07_66253657',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59b7a4f3860b07_66253657')) {function content_59b7a4f3860b07_66253657($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59b78eb07b1153_65079615',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59b78eb07b1153_65079615')) {function content_59b78eb07b1153_65079615($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 0250f8631a4490176b21f4cb323fe462c6bb06e6
 <html lang="en">
 
 <head>
@@ -75,6 +95,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             padding-top: 15px;
             font-size: 11px;
             border-top: 1px solid #ccc;
+        }
+        .tt-page{
+            margin-top: 15px;
         }
         .tt-page a{
             padding: 6px 12px;
