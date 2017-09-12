@@ -55,11 +55,38 @@
 <div class="row">
     <div class="col-lg-12">
         <form name="upload" enctype="multipart/form-data" action="user" method="post">
-            
+
             <div class="form-group">
-                <label for="schoolId"> 学校ID </label>
-                <input type="text" class="form-control" id="schoolId" name="schoolId">
-            </div>
+                    <label for="province">所属省份</label>
+                    <select id="province" class="form-control" name="province">
+                        <option value="-1" selected>请选择学校所在省份</option>
+                        {%foreach from=$provinceList item=provinceName key=provinceId %}
+                            <option value="{%$provinceId%}">{%$provinceName%}</option>
+                        {%/foreach%}          
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">所在城市</label>
+                    <select id="city" class="form-control" name="city">
+                        <option value="-1" selected>请选择学校所在城市</option>
+                       
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="district">所在区</label>
+                    <select id="district" class="form-control" name="district">
+                        <option value="-1" selected>请选择学校所在区</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="school">所在学校</label>
+                    <select id="school" class="form-control" name="school">
+                        <option value="-1" selected>请选择学生所在学校</option>
+                    </select>
+                </div>
 
             <div class="form-group">
                 <label for="file"> Excel </label>
@@ -67,7 +94,8 @@
             </div>
 
             <div class="form-group">
-            <input type="submit" name="submit" value="Submit" />
+           <!--  <input type="submit" name="submit" value="Submit" /> -->
+            <button id="sub" type="button" class="btn btn-primary">确认提交</button>
             </div>
             
         </form>
@@ -85,9 +113,5 @@
 {%/block%}
 
 {%block name="js"%}
-<script type="text/javascript" src="/static/qiniu/moxie.min.js"></script>
-<script type="text/javascript" src="/static/qiniu/plupload.full.min.js"></script>
-<script type="text/javascript" src="/static/qiniu/zh_CN.js"></script>
-<script type="text/javascript" src="/static/qiniu/qiniu.min.js"></script>
-<script type="text/javascript" src="/static/project/js/addPro.js"></script>
+<script type="text/javascript" src="/static/upload/js/index.js"></script>
 {%/block%}

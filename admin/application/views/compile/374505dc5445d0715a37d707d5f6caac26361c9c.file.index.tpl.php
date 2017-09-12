@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-08 10:05:00
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 18:11:01
          compiled from "/var/www/admin/admin/application/views/template/upload/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:213085505459b1faccbaa721-71964917%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:10639984659b7b2b5f2d807-94505005%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '374505dc5445d0715a37d707d5f6caac26361c9c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/upload/index.tpl',
-      1 => 1504666844,
+      1 => 1505117019,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1504482334,
+      1 => 1505113102,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '213085505459b1faccbaa721-71964917',
+  'nocache_hash' => '10639984659b7b2b5f2d807-94505005',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59b1faccc2dac7_18265174',
+  'unifunc' => 'content_59b7b2b60b4be1_25169557',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b1faccc2dac7_18265174')) {function content_59b1faccc2dac7_18265174($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59b7b2b60b4be1_25169557')) {function content_59b7b2b60b4be1_25169557($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -339,11 +339,46 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 <div class="row">
     <div class="col-lg-12">
         <form name="upload" enctype="multipart/form-data" action="user" method="post">
-            
+
             <div class="form-group">
-                <label for="schoolId"> 学校ID </label>
-                <input type="text" class="form-control" id="schoolId" name="schoolId">
-            </div>
+                    <label for="province">所属省份</label>
+                    <select id="province" class="form-control" name="province">
+                        <option value="-1" selected>请选择学校所在省份</option>
+                        <?php  $_smarty_tpl->tpl_vars['provinceName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['provinceName']->_loop = false;
+ $_smarty_tpl->tpl_vars['provinceId'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['provinceList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['provinceName']->key => $_smarty_tpl->tpl_vars['provinceName']->value){
+$_smarty_tpl->tpl_vars['provinceName']->_loop = true;
+ $_smarty_tpl->tpl_vars['provinceId']->value = $_smarty_tpl->tpl_vars['provinceName']->key;
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['provinceId']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['provinceName']->value;?>
+</option>
+                        <?php } ?>          
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">所在城市</label>
+                    <select id="city" class="form-control" name="city">
+                        <option value="-1" selected>请选择学校所在城市</option>
+                       
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="district">所在区</label>
+                    <select id="district" class="form-control" name="district">
+                        <option value="-1" selected>请选择学校所在区</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="school">所在学校</label>
+                    <select id="school" class="form-control" name="school">
+                        <option value="-1" selected>请选择学生所在学校</option>
+                    </select>
+                </div>
 
             <div class="form-group">
                 <label for="file"> Excel </label>
@@ -351,7 +386,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             </div>
 
             <div class="form-group">
-            <input type="submit" name="submit" value="Submit" />
+           <!--  <input type="submit" name="submit" value="Submit" /> -->
+            <button id="sub" type="button" class="btn btn-primary">确认提交</button>
             </div>
             
         </form>
@@ -381,7 +417,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-   <!--  <script src="/static/widget/alertBox/alert.js"></script> -->
+    <script src="/static/widget/alertBox/alert.js"></script>
 
     <script type="text/javascript">
         !(function(){
@@ -396,11 +432,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     </script>
 
     
-<script type="text/javascript" src="/static/qiniu/moxie.min.js"></script>
-<script type="text/javascript" src="/static/qiniu/plupload.full.min.js"></script>
-<script type="text/javascript" src="/static/qiniu/zh_CN.js"></script>
-<script type="text/javascript" src="/static/qiniu/qiniu.min.js"></script>
-<script type="text/javascript" src="/static/project/js/addPro.js"></script>
+<script type="text/javascript" src="/static/upload/js/index.js"></script>
 
 </body>
 </html><?php }} ?>

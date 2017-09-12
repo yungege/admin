@@ -30,6 +30,7 @@ class Dao_TrainingdoneModel extends Db_Mongodb {
         'isdelay'           => 0,    // 是否是延期作业(2-是，0-不是)
         'homeworkid'        => '',   // 作业ID
         'status'            => 0,    // 1-已统计 0-未统计
+        'mark'              => '',   // 标记
 	];
 
     protected function __construct(){
@@ -68,5 +69,15 @@ class Dao_TrainingdoneModel extends Db_Mongodb {
         ];
 
         return $this->queryOne($where, $option);
+    }
+
+    public function getTrainList(array $where,array $fields){
+
+         $fields = $this->filterFields($fields);
+         if(!empty($fields)){
+            $options['protection'] = $fields;
+         }
+         
+         return $this->query($where,$options);
     }
 }

@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 16:17:20
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:39675668159b79810b663b0-25563410%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 15:08:08
+         compiled from "/var/www/admin/admin/application/views/template/class/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:41565061259b787d82e04c4-29678954%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
+    '47f3c465d19b6e4eb353312b6f7fa98038af585a' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1504856947,
+      0 => '/var/www/admin/admin/application/views/template/class/add.tpl',
+      1 => 1504258102,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '39675668159b79810b663b0-25563410',
+  'nocache_hash' => '41565061259b787d82e04c4-29678954',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59b79810bf8ef3_09526801',
+  'unifunc' => 'content_59b787d8378e32_99411154',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b79810bf8ef3_09526801')) {function content_59b79810bf8ef3_09526801($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59b787d8378e32_99411154')) {function content_59b787d8378e32_99411154($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -106,20 +106,36 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
-<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
-.datetimepicker{
-    margin-top: 50px;
-}
-.today{
-    border: 1px solid #d9edf7!important;
-}
-.user-a{
-    display: block;
-    float: left;
-    margin-left: 5px;
-    text-decoration: underline;
-}
+    .fix-per{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgba(0,0,0,0.4);
+        z-index: 9999;
+        display: none;
+    }
+    .fix-per .fix-cont{
+        width: 400px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -200px;
+        margin-top: -100px;
+        font-size: 100px;
+        color: orange;
+    }
+    .form-wrap{
+        border: 1px solid #ccc;
+        padding: 8px 15px 15px 15px;
+        border-radius: 5px;
+    }
 </style>
 
 </head>
@@ -295,7 +311,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运营管理 / 业务数据统计 
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 班级信息管理 / 添加班级
                             </li>
                         </ol>
                     </div>
@@ -304,80 +320,96 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                 <!-- 用户数据 -->
                 
 <div class="row">
-     <div class="col-md-12">
-        <form name ="form">
-        <ul class="list-unstyled" style="border:1px solid #ddd;overflow:hidden;padding:20px;border-radius: 5px;">
-            <li id="kj" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
-                <p><strong>空间维度：</strong></p>
-                <select class="form-control" id="province" name="province" style="margin-bottom:15px;width: 110px;float: left;">
-                    <option value="-1">全部</option>
-                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['data']->value['province']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
-$_smarty_tpl->tpl_vars['row']->_loop = true;
-?>
-                    <option value="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-</option>
-                    <?php } ?>
-                </select>
-            </li>
-            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label class="control-label">时间维度：</label>
-                            <div class="input-group">
-                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initStart'];?>
-" data-type="time" id="date_start" name="start" type="text" class="form-control date_start date" data-date-format="yyyy-mm-dd"/>
-                                <div class="input-group-addon" style="border-left: 0;border-right: 0;"> 至 </div>
-                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initEnd'];?>
-" data-type="time" id="date_end" name="end" type="text" class="form-control date_end date" data-date-format="yyyy-mm-dd"/>
-                            </div>
-                        </div>
+    <div class="col-lg-8">
+        <div class="form-wrap">
+            
+            <form name="class">
+                <div class="form-group">
+                    <label for="aname">学校ID</label>
+                    <input type="text" class="form-control" id="schoolId" placeholder="School ID" name="schoolId">
+                </div>
+
+                <div class="form-group"> 
+                    <label for="start">入学时间</label>
+                    <div class="col-sm-5 input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
+
+                        <input readonly type="text" class="form-control" id="start" name="start" value="<?php echo $_GET['start'];?>
+" >
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                     </div>
                 </div>
-            </li>
 
-            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
-                <label class="control-label" style="width:80px;">数据指标：</label>
-                
-                <label class="radio-inline" style="width:95px;">
-                    <input type="radio" value="1" name="source" checked="true"/>总体数据
-                </label>
-                <label class="radio-inline" style="width:95px;">
-                    <input type="radio" value="2" name="source"/>分项数据
-                </label>
-                <label class="radio-inline" style="width:120px;">
-                    <input type="radio" value="3" name="source"/>体测与锻炼数据
-                </label>
-            </li>
-            
-            <li style="overflow:hidden;">
-                <button type="button" class="btn btn-primary" id="subbtn" style="width:80px;">查询</button>
-                <button type="button" class="btn btn-info" id="export" style="width:80px;margin-left:20px;" >导出</button>
-            </li>
-        </ul>
+                <div class="form-group">
+                    <label for="grade">年级</label>
+                    <select id="grade" class="form-control" name="grade">
+                        <option value="-1">请选择班级所在年级</option>
+                        <option value="11">小学1年级</option>
+                        <option value="12">小学2年级</option>
+                        <option value="13">小学3年级</option>
+                        <option value="14">小学4年级</option>
+                        <option value="15">小学5年级</option>
+                        <option value="16">小学6年级</option>
+                        <option value="21">初中1年级</option>
+                        <option value="22">初中2年级</option>
+                        <option value="23">初中3年级</option>
+                        <option value="31">高中1年级</option>
+                        <option value="32">高中2年级</option>
+                        <option value="33">高中3年级</option>
+                    </select>
+                </div>
 
-        </form>
-    </div>
-</div>
-
-<!-- 图表 -->
-<div class="row">
-    <div class="col-md-12">
-        <div class="" style="border-radius: 5px;border:1px solid #ddd;padding: 15px;">
-            <div id="charts" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
-
-            </div>
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped table-hover" id="charts-table">
-                
-                </table>
-            </div>
+                <div class="form-group">
+                    <label for="classNo">所在班级</label>
+                    <select id="classNo" class="form-control" name="classNo">
+                        <option value="-1">请选择班级号</option>
+                        <option value="1">1班</option>
+                        <option value="2">2班</option>
+                        <option value="3">3班</option>
+                        <option value="4">4班</option>
+                        <option value="5">5班</option>
+                        <option value="6">6班</option>
+                        <option value="7">7班</option>
+                        <option value="8">8班</option>
+                        <option value="9">9班</option>
+                        <option value="10">10班</option>
+                        <option value="11">11班</option>
+                        <option value="12">12班</option>
+                        <option value="13">13班</option>
+                        <option value="14">14班</option>
+                        <option value="15">15班</option>
+                        <option value="16">16班</option>
+                        <option value="17">17班</option>
+                        <option value="18">18班</option>
+                        <option value="19">19班</option>
+                        <option value="20">20班</option>
+                        <option value="21">21班</option>
+                        <option value="22">22班</option>
+                        <option value="23">23班</option>
+                        <option value="24">24班</option>
+                        <option value="25">25班</option>
+                        <option value="26">26班</option>
+                        <option value="27">27班</option>
+                        <option value="28">28班</option>
+                        <option value="29">29班</option>
+                        <option value="30">30班</option>
+                    </select>
+                </div>
+                            
+                <button id="sub" type="button" class="btn btn-primary">确认提交</button>
+               <!--  <button id="button" type="button" class="btn btn-danger" >取&emsp;消</button> -->
+            </form>
         </div>
     </div>
 </div>
+
+<!-- modal-add -->
+<div class="fix-per">
+    <div class="fix-cont">
+        <!-- 100% -->
+    </div>
+    
+</div>
+
 
 
                 <!-- footer -->
@@ -408,9 +440,10 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
-<script src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<script src="/static/widget/echarts/echarts.min.js"></script>
-<script src="/static/stat/contrist.js"></script>
+
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/static/class/js/add.js"></script>
+<script type="text/javascript" src="/static/ugc/index.js"></script>
 
 </body>
 </html><?php }} ?>

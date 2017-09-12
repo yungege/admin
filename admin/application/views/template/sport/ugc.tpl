@@ -129,8 +129,8 @@
                         <td>{%$row.originaltime|date_format:"%Y-%m-%d"%}</td>
                         <td>{%if $row.isdelay == 2%}<span class="label label-danger">是</span>{%else%}<span class="label label-default">否</span>{%/if%}</td>
                         <td><button data-id="{%$row._id%}" class="btn btn-sm btn-info">查看</button></td>
-                        <td>{%if $row.htype != 3 and $row.share == 1%}<button data-id="{%$row._id%}" class="btn btn-sm btn-info">查看</button>{%/if%}</td>
-                        <td></td>
+                        <td>{%if $row.htype != 3 and $row.share == 1%}<button data-id="{%$row._id%}" class="btn btn-sm btn-info"><a href="/ugc/share?userId={%$row.userid%}&trainingId={%$row._id%}">查看</a></button>{%/if%}</td>     
+                        <td><button data-id="{%$row._id%}" class="btn btn-sm btn-info"><a href="/ugc/mark?trainingId={%$row._id%}">标记</a></button></td>
                     </tr>
                     {%/foreach%}
                 </tbody>
