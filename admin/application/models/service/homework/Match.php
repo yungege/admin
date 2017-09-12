@@ -3,12 +3,14 @@ class Service_Homework_MatchModel extends BasePageService {
 
     protected $workModel;
     protected $skuModel;
+    protected $proModel;
     protected $classModel;
     protected $userModel;
 
     public function __construct() {
         $this->workModel = Dao_ExerciseHomeworkModel::getInstance();
         $this->skuModel = Dao_ExerciseProjectSkuModel::getInstance();
+        $this->proModel = Dao_ExerciseProjectModel::getInstance();
         $this->classModel = Dao_ClassinfoModel::getInstance();
         $this->userModel = Dao_UserModel::getInstance();
     }
@@ -19,7 +21,7 @@ class Service_Homework_MatchModel extends BasePageService {
 
     protected function __execute($req) {
         $req = $req['get'];
-        
+
         if(
             empty($req['date']) || 
             !preg_match("/(\d{4})-(\d{2})-(\d{2})/", $req['date']) ||
@@ -52,8 +54,9 @@ class Service_Homework_MatchModel extends BasePageService {
             $classId = $hisCid;
         }
 
+        $this->diff = (new Data_TrainMatchingModel($req['uid']))->getUserDefaultLevel();
         $homeworkList = $this->getHomeWorkByDate($schoolId, $classId, $originalTime, $req['type']);
-        print_r($homeworkList);exit;
+        return ['works' => $homeworkList];
     }
 
     protected function getHomeWorkByDate($sId, $cId, $time, $type){
@@ -73,8 +76,18 @@ class Service_Homework_MatchModel extends BasePageService {
         ]);
         if(empty($list)) return $works;
 
-        foreach ($list as $row) {
+        foreach ($list as &$row) {
             if($row['type'] == $type){
+                $proInfo = $this->proModel->batchGetInfoByIds((array)$row['project_id'], ['_id','name']);
+                if(empty($proInfo)) continue;
+                foreach ($proInfo as &$pro) {
+                    $sku = $this->skuModel->getProjectSkuInfoByProjectIdAndDifficulty($pro['_id'], $this->diff, ['id','calorie_cost','time_cost','action_count']);
+                    $pro['sku_id'] = $sku['_id'];
+                    $pro['calorie'] = $sku['calorie_cost'];
+                    $pro['time'] = $sku['time_cost'];
+                    $pro['action'] = $sku['action_count'];
+                }
+                $row['projects'] = $proInfo;
                 $works[] = $row;
             }
         }

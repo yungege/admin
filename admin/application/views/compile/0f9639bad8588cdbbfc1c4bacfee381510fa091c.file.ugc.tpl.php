@@ -1,23 +1,37 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 12:59:53
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:48591225759b769c984aa56-61502052%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 13:29:44
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:8421946859b770c8df8bb1-20500521%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 8c56e2e0048be4f12e4a8a6b087331099cd7e76c
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-      1 => 1503370676,
+      1 => 1505192549,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1504865546,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '48591225759b769c984aa56-61502052',
+=======
+      1 => 1504866109,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '8421946859b770c8df8bb1-20500521',
+>>>>>>> 8c56e2e0048be4f12e4a8a6b087331099cd7e76c
   'function' => 
   array (
   ),
@@ -29,9 +43,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59b769c98bac65_60798008',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59b769c98bac65_60798008')) {function content_59b769c98bac65_60798008($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_59b770c8e54151_95557394',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59b770c8e54151_95557394')) {function content_59b770c8e54151_95557394($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 8c56e2e0048be4f12e4a8a6b087331099cd7e76c
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -400,7 +420,7 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                         <th>作业类型</th>
                         <th>锻炼项目</th>
                         <th>能量/千卡</th>
-                        <th>跑步路程/m</th>
+                        <th>跑步路程/km</th>
                         <th>开始时间</th>
                         <th>结束时间</th>
                         <th>提交时间</th>
@@ -437,7 +457,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <td>
                             <?php echo $_smarty_tpl->tpl_vars['row']->value['distance'];?>
 <br/>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['avgSpeed']){?>平均速度：<?php echo $_smarty_tpl->tpl_vars['row']->value['avgSpeed'];?>
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['avgSpeed']){?>均速：<?php echo $_smarty_tpl->tpl_vars['row']->value['avgSpeed'];?>
  km/h<?php }?>
                         </td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['starttime'],"%Y-%m-%d");?>

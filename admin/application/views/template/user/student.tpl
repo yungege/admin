@@ -50,6 +50,16 @@
     .run-type,.normal{
         display: none;
     }
+    .homework-inner{
+        border: 1px solid #31b0d5;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    .checkbox-inline+.checkbox-inline, .radio-inline+.radio-inline,.radio-inline{
+        margin-left: 0;
+        margin-right: 10px;
+    }
 </style>
 {%/block%}
 {%block name="bread"%}用户管理 / 学生管理<a href="/student/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加学生</a>{%/block%}
@@ -226,18 +236,20 @@
 
             <!-- 翻转课堂 + 身体素质 -->
             <div class="normal">
-                
+                <label>请选择作业</label><br/>
+                <div class="homework-inner">
+                </div>
             </div>
             
             <!-- 跑步 -->
             <div class="run-type">
                 <div class="form-group">
-                    <label>跑步时长(min)</label>
+                    <label>跑步时长(sec)</label>
                     <input class="form-control" type="text" name="time_cost">
                 </div>
                 <div class="form-group">
                     <label>跑步距离(km)</label>
-                    <input class="form-control" type="text" name="time_cost">
+                    <input class="form-control" type="text" name="distance">
                 </div>
             </div>
             
@@ -324,6 +336,7 @@
             this.htype = $('.htype');
             this.runTypeDiv = $('.run-type');
             this.normalDiv = $('.normal');
+            this.workarea = $('.homework-inner');
 
             this.reBtn = $('.add-mobile');
             this.reFixBox = $('.add-mobile-fix');
@@ -385,58 +398,70 @@
 
             // date
             me.dateBtn.on('changeDate', function(){
-                var htype = me.htype.val(),
-                    uid = me.subBtn.attr('data-uid'),
-                    cid = me.subBtn.attr('data-cid'),
-                    date = me.dateBtn.val();
-                if(htype == -1){
-                    me.normalDiv.slideUp(200);
-                    me.runTypeDiv.slideUp(200);
-                }
-                else if(htype == 3){
-                    me.normalDiv.hide();
-                    me.runTypeDiv.slideDown(200);
-                }
-                else{
-                    $.get(
-                        '/homework/match?cid='+cid+'&uid='+uid+'&type='+htype+'&date='+date,
-                        function(json){
-
-                        }
-                    );
-                    me.runTypeDiv.hide();
-                    me.normalDiv.slideDown(200);
-                }
+                var htype = me.htype.val();
+                me.xhrGetHomework(htype);
             });
 
             // htype
             me.htype.on('change', function(){
-                var htype = $(this).val(),
-                    uid = me.subBtn.attr('data-uid'),
-                    cid = me.subBtn.attr('data-cid'),
-                    date = me.dateBtn.val();
-                if(htype == -1){
-                    me.normalDiv.slideUp(200);
-                    me.runTypeDiv.slideUp(200);
-                }
-                else if(htype == 3){
-                    me.normalDiv.hide();
-                    me.runTypeDiv.slideDown(200);
-                }
-                else{
-                    if(!date) return;
-
-                    $.get(
-                        '/homework/match?cid='+cid+'&uid='+uid+'&type='+htype+'&date='+date,
-                        function(json){
-                            
-                        }
-                    );
-
-                    me.runTypeDiv.hide();
-                    me.normalDiv.slideDown(200);
-                }
+                me.xhrGetHomework($(this).val());
             })
+        },
+
+        xhrGetHomework: function(type){
+            var me = this;
+            var uid = me.subBtn.attr('data-uid'),
+                cid = me.subBtn.attr('data-cid'),
+                date = me.dateBtn.val(),
+                work = [
+                    '翻转课堂作业',
+                    '身体素质作业',
+                ];
+
+            if(type == -1){
+                me.normalDiv.slideUp(200);
+                me.runTypeDiv.slideUp(200);
+                me.workarea.html('');
+                return;
+            }
+            else if(type == 3){
+                me.normalDiv.hide();
+                me.runTypeDiv.slideDown(200);
+                me.workarea.html('');
+                return;
+            }
+            else{
+                me.runTypeDiv.hide();
+
+                if(!date || (type != 2 && type != 1)){
+                    me.workarea.html('');
+                    return;
+                };
+                me.normalDiv.slideDown(200);
+
+                $.get(
+                    '/homework/match?cid='+cid+'&uid='+uid+'&type='+type+'&date='+date,
+                    function(json){
+                        if(json.data.works.length == 0){
+                            me.workarea.html('该学生在 ' + date + ' 无 ' + work[type-1]);
+                            me.subBtn.hide();
+                        }
+                        else{
+                            var checkBox = '';
+                            for(var i in json.data.works){
+                                checkBox = '<h5>'+(parseInt(i)+1)+'、'+json.data.works[i].name+'</h5>';
+                                $.each(json.data.works[i].projects, function(k,v){
+                                    var kval = json.data.works[i]._id+'|'+v.sku_id+'|'+v.calorie+'|'+v.time+'|'+v.action;
+                                    checkBox += '<label class="radio-inline"><input type="radio" name="h-pid" value="'+kval+'">' + v.name+'('+v.calorie+'千卡)' + '</label>';
+                                });
+                                
+                            }
+                            me.workarea.html(checkBox);
+                            me.subBtn.show();
+                        }
+                    }
+                );
+            }
         },
 
         addRelation: function(){
@@ -488,10 +513,14 @@
                     return false;
                 }
 
+                var data = me.form.serialize() + '&uid='+uid;
+                
+
                 aj = $.ajax({
-                    type: 'GET',
+                    type: 'POST',
                     dataType: 'json',
-                    url: '/user/addUgc?uid=' + uid + '&cid=' + cid + '&hid=' + hid,
+                    url: '/user/addUgc',
+                    data: data,
                     success: function(json){
                         if(json.errCode == 0){
                             window.location = "/sport/ugc?uid=" + uid;

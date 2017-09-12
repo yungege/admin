@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 12:41:52
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:116292795659b765902fc2f5-95874571%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 13:29:35
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:166111444059b770bf9d8459-75974713%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 8c56e2e0048be4f12e4a8a6b087331099cd7e76c
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
+<<<<<<< HEAD
       1 => 1504865546,
+=======
+      1 => 1505193731,
+>>>>>>> 8c56e2e0048be4f12e4a8a6b087331099cd7e76c
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1504865546,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '116292795659b765902fc2f5-95874571',
+=======
+      1 => 1504866109,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '166111444059b770bf9d8459-75974713',
+>>>>>>> 8c56e2e0048be4f12e4a8a6b087331099cd7e76c
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59b7659036a3c8_97859141',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59b7659036a3c8_97859141')) {function content_59b7659036a3c8_97859141($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_59b770bfa4ded9_01862939',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59b770bfa4ded9_01862939')) {function content_59b770bfa4ded9_01862939($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 8c56e2e0048be4f12e4a8a6b087331099cd7e76c
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -158,6 +182,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     }
     .run-type,.normal{
         display: none;
+    }
+    .homework-inner{
+        border: 1px solid #31b0d5;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    .checkbox-inline+.checkbox-inline, .radio-inline+.radio-inline,.radio-inline{
+        margin-left: 0;
+        margin-right: 10px;
     }
 </style>
 
@@ -558,18 +592,20 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
             <!-- 翻转课堂 + 身体素质 -->
             <div class="normal">
-                
+                <label>请选择作业</label><br/>
+                <div class="homework-inner">
+                </div>
             </div>
             
             <!-- 跑步 -->
             <div class="run-type">
                 <div class="form-group">
-                    <label>跑步时长(min)</label>
+                    <label>跑步时长(sec)</label>
                     <input class="form-control" type="text" name="time_cost">
                 </div>
                 <div class="form-group">
                     <label>跑步距离(km)</label>
-                    <input class="form-control" type="text" name="time_cost">
+                    <input class="form-control" type="text" name="distance">
                 </div>
             </div>
             
@@ -683,6 +719,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             this.htype = $('.htype');
             this.runTypeDiv = $('.run-type');
             this.normalDiv = $('.normal');
+            this.workarea = $('.homework-inner');
 
             this.reBtn = $('.add-mobile');
             this.reFixBox = $('.add-mobile-fix');
@@ -744,58 +781,70 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
             // date
             me.dateBtn.on('changeDate', function(){
-                var htype = me.htype.val(),
-                    uid = me.subBtn.attr('data-uid'),
-                    cid = me.subBtn.attr('data-cid'),
-                    date = me.dateBtn.val();
-                if(htype == -1){
-                    me.normalDiv.slideUp(200);
-                    me.runTypeDiv.slideUp(200);
-                }
-                else if(htype == 3){
-                    me.normalDiv.hide();
-                    me.runTypeDiv.slideDown(200);
-                }
-                else{
-                    $.get(
-                        '/homework/match?cid='+cid+'&uid='+uid+'&type='+htype+'&date='+date,
-                        function(json){
-
-                        }
-                    );
-                    me.runTypeDiv.hide();
-                    me.normalDiv.slideDown(200);
-                }
+                var htype = me.htype.val();
+                me.xhrGetHomework(htype);
             });
 
             // htype
             me.htype.on('change', function(){
-                var htype = $(this).val(),
-                    uid = me.subBtn.attr('data-uid'),
-                    cid = me.subBtn.attr('data-cid'),
-                    date = me.dateBtn.val();
-                if(htype == -1){
-                    me.normalDiv.slideUp(200);
-                    me.runTypeDiv.slideUp(200);
-                }
-                else if(htype == 3){
-                    me.normalDiv.hide();
-                    me.runTypeDiv.slideDown(200);
-                }
-                else{
-                    if(!date) return;
-
-                    $.get(
-                        '/homework/match?cid='+cid+'&uid='+uid+'&type='+htype+'&date='+date,
-                        function(json){
-                            
-                        }
-                    );
-
-                    me.runTypeDiv.hide();
-                    me.normalDiv.slideDown(200);
-                }
+                me.xhrGetHomework($(this).val());
             })
+        },
+
+        xhrGetHomework: function(type){
+            var me = this;
+            var uid = me.subBtn.attr('data-uid'),
+                cid = me.subBtn.attr('data-cid'),
+                date = me.dateBtn.val(),
+                work = [
+                    '翻转课堂作业',
+                    '身体素质作业',
+                ];
+
+            if(type == -1){
+                me.normalDiv.slideUp(200);
+                me.runTypeDiv.slideUp(200);
+                me.workarea.html('');
+                return;
+            }
+            else if(type == 3){
+                me.normalDiv.hide();
+                me.runTypeDiv.slideDown(200);
+                me.workarea.html('');
+                return;
+            }
+            else{
+                me.runTypeDiv.hide();
+
+                if(!date || (type != 2 && type != 1)){
+                    me.workarea.html('');
+                    return;
+                };
+                me.normalDiv.slideDown(200);
+
+                $.get(
+                    '/homework/match?cid='+cid+'&uid='+uid+'&type='+type+'&date='+date,
+                    function(json){
+                        if(json.data.works.length == 0){
+                            me.workarea.html('该学生在 ' + date + ' 无 ' + work[type-1]);
+                            me.subBtn.hide();
+                        }
+                        else{
+                            var checkBox = '';
+                            for(var i in json.data.works){
+                                checkBox = '<h5>'+(parseInt(i)+1)+'、'+json.data.works[i].name+'</h5>';
+                                $.each(json.data.works[i].projects, function(k,v){
+                                    var kval = json.data.works[i]._id+'|'+v.sku_id+'|'+v.calorie+'|'+v.time+'|'+v.action;
+                                    checkBox += '<label class="radio-inline"><input type="radio" name="h-pid" value="'+kval+'">' + v.name+'('+v.calorie+'千卡)' + '</label>';
+                                });
+                                
+                            }
+                            me.workarea.html(checkBox);
+                            me.subBtn.show();
+                        }
+                    }
+                );
+            }
         },
 
         addRelation: function(){
@@ -847,10 +896,14 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                     return false;
                 }
 
+                var data = me.form.serialize() + '&uid='+uid;
+                
+
                 aj = $.ajax({
-                    type: 'GET',
+                    type: 'POST',
                     dataType: 'json',
-                    url: '/user/addUgc?uid=' + uid + '&cid=' + cid + '&hid=' + hid,
+                    url: '/user/addUgc',
+                    data: data,
                     success: function(json){
                         if(json.errCode == 0){
                             window.location = "/sport/ugc?uid=" + uid;
