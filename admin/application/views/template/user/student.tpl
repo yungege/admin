@@ -222,7 +222,7 @@
         <form name="ugc" class="ugcform">
             <div class="form-group">
                 <label>作业时间</label>
-                <input readonly="true" data-type="time" name="wtime" type="text" class="form-control wtime date" data-date-format="yyyy-mm-dd"/>
+                <input readonly="true" data-type="time" name="wtime" type="text" class="form-control wtime date" data-date-format="yyyy-mm-dd" value="{%$today%}" />
             </div>
             <div class="form-group">
                 <label>作业类型</label>
@@ -363,6 +363,10 @@
             me.subBtn.attr('data-uid', '');
             me.subBtn.attr('data-cid', '');
             me.uname.text('');
+            me.workarea.html('');
+            me.form[0].reset();
+            me.normalDiv.slideUp(200);
+            me.runTypeDiv.slideUp(200);
 
             me.reFixBox.fadeOut(200);
             me.hideUid.val('');
@@ -419,14 +423,14 @@
                 ];
 
             if(type == -1){
-                me.normalDiv.slideUp(200);
-                me.runTypeDiv.slideUp(200);
+                me.normalDiv.slideUp(100);
+                me.runTypeDiv.slideUp(100);
                 me.workarea.html('');
                 return;
             }
             else if(type == 3){
                 me.normalDiv.hide();
-                me.runTypeDiv.slideDown(200);
+                me.runTypeDiv.slideDown(100);
                 me.workarea.html('');
                 return;
             }
@@ -437,7 +441,7 @@
                     me.workarea.html('');
                     return;
                 };
-                me.normalDiv.slideDown(200);
+                me.normalDiv.slideDown(100);
 
                 $.get(
                     '/homework/match?cid='+cid+'&uid='+uid+'&type='+type+'&date='+date,
