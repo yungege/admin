@@ -181,7 +181,11 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
 
     //开启session
     public function _initSession(){
-        session_start();
+        $session = Yaf_Session::getInstance();
+        $session->start();
+        session_save_path('/tmp/session');
+        // session_start();
+        // ini_set('Yaf_Session ', newvalue)
     }
 
 }
