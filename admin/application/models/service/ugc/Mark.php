@@ -2,6 +2,7 @@
 class Service_Ugc_MarkModel extends BasePageService {
 
     protected $trainingId;
+    protected $mark;
     protected $trainModel;
     protected $trainData = [];
     protected $resData;
@@ -18,14 +19,18 @@ class Service_Ugc_MarkModel extends BasePageService {
     protected function __execute($req) {
 
        $req = $req['post'];
-       $this->trainingId = $req['trainingId'];
-       $trainWhere = [];
-       $trainFields = ['mark'];
+       $this->trainingId = $req['trainId'];
+       $this->mark = $req['description'];
+       
+       $trainFields = ['mark' => $this->mark];
+       $resutl = $this->trainModel->updataById($this->trainingId,$trainFields);
 
-       $this->trainData = $this->trainModel->getTrainList($trainWhere,$trainFields)[0];
-       $this->resData['mark'] = $this->trainData['mark'];
+       if($result === false){
 
-       return $this->resData;
+          return $this->errNo = TRAINING_MASK_FAULT;
+       }
+
+       return ;
     }
 
 }

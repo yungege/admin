@@ -6,8 +6,8 @@ class MarkAction extends BaseAction {
 		$this->declareParams = true;
         $this->declarePageService = 'Service_Ugc_MarkModel';
         $this->declareRender = [
-            'tpl' => [
-                'tplName' => 'ugc/mark.tpl',
+            'interface' => [
+                
             ],
         ];
 	}

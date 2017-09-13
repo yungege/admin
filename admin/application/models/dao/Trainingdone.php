@@ -80,4 +80,13 @@ class Dao_TrainingdoneModel extends Db_Mongodb {
          
          return $this->query($where,$options);
     }
+
+    public function updataById(string $id,array $fields){
+
+        $where = [
+            '_id' => $id,
+        ];
+
+        return $this->update($where,$fields);
+    }
 }

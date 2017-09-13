@@ -9,6 +9,29 @@
 .datetimepicker{
     margin-top: 50px!important;
 }
+.fix-box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.fix-box-inner{
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    padding: 15px;
+    border: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -200px;
+}
+}
 </style>
 {%/block%}
 {%block name="bread"%}运营管理 / UGC{%/block%}
@@ -130,7 +153,11 @@
                         <td>{%if $row.isdelay == 2%}<span class="label label-danger">是</span>{%else%}<span class="label label-default">否</span>{%/if%}</td>
                         <td><button data-id="{%$row._id%}" class="btn btn-sm btn-info">查看</button></td>
                         <td>{%if $row.htype != 3 and $row.share == 1%}<button data-id="{%$row._id%}" class="btn btn-sm btn-info"><a href="/ugc/share?userId={%$row.userid%}&trainingId={%$row._id%}">查看</a></button>{%/if%}</td>     
-                        <td><button data-id="{%$row._id%}" class="btn btn-sm btn-info"><a href="/ugc/mark?trainingId={%$row._id%}">标记</a></button></td>
+                        <td>
+                        {%if $row.mark == null%}<button  data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">标记</button>
+                        {%else%} 
+                            <button  data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">已标记</button></td>
+                        {%/if%}
                     </tr>
                     {%/foreach%}
                 </tbody>
@@ -139,6 +166,27 @@
         <div class="text-center tt-page">
             {%$page%}
         </div>
+    </div>
+</div>
+
+<div class="fix-box">
+    <div class="fix-box-inner">
+        <h4>标记作业</h4>
+        <form class="form" name="mark">
+            <div class="input-append date" id="datetimepicker" data-date-format="yyyy-mm-dd">
+            
+                <div class="form-group">
+                    <textarea id="description" class="form-control" rows="8"  name="description" >{%$mark%}</textarea>
+                </div>
+                <span class="add-on"><i class="icon-remove"></i></span>
+                <span class="add-on"><i class="icon-th"></i></span>
+            </div>   
+           <input type="hidden" name="trainId">
+            <div class="inner-btn">
+                <button id="sub" type="button" class="btn btn-primary">确定</button>
+                <button id="can" type="button" class="btn btn-default">取消</button>
+            </div>
+        </form>
     </div>
 </div>
 
