@@ -8,6 +8,7 @@ $(function(){
             this.displayBox();
             this.hideBox();
             this.postData();
+            this.pictureBox();
         },
 
         getDom: function(){
@@ -16,6 +17,7 @@ $(function(){
             this.endBtn = $('.date_end');
             this.pictureBtn = $('.btn_picture');
             this.markBtn = $('.btn_mark');
+            this.returnBtn = $('#subReturn');
             this.sub = $('#sub');
             this.can = $('#can');
             this.showBox = $('.fix-box');
@@ -23,7 +25,7 @@ $(function(){
             this.description = $('#description');
             this.trainId = $('input[name=trainId]');
             this.form = $('form[name=mark]');
-
+            this.imgBoxInner = $('#imgBoxInner');
         },
 
         initDate: function(){
@@ -61,24 +63,53 @@ $(function(){
                 me.trainId.val(id); 
                 me.description.val(mark);
             });
-
-            me.pictureBtn.unbind().bind('click',function(){
-                
-                me.showPictureBox.fadeIn(200);
-
-            });
-
         },
 
         hideBox: function(){
             var me = this;
 
             me.can.unbind().bind('click',function(){
-
                 me.description.val("");
                 me.showBox.fadeOut(200);
-                
             });
+
+            me.returnBtn.unbind().bind('click',function(){
+                me.showPictureBox.fadeOut(200);
+            });
+        },
+
+        pictureBox: function(){
+            var me = this;
+            
+            me.pictureBtn.unbind().bind('click',function(){
+
+                var id = $(this).data('id');
+                var data = 'trainingId=' + id;
+                var img = "";
+                me.imgBoxInner[0].innerHTML = "";
+                
+                $.post('/ugc/picture', data, function(json){
+
+                    if(json.errCode != 0){
+                        return false;
+
+                    }else{
+
+                        var pictures = json.data.exciseimg;
+                        $.each(pictures,function(index,value){
+                            img = img + '<div><img src="' + value +'" width=' + '"100px"></div>';         
+                        });
+
+                        me.imgBoxInner[0].innerHTML = img;
+                        jPicture("#imgBox", {
+                            type: "slide",
+                            autoplay: 1500
+                        });
+                        me.showPictureBox.fadeIn(200);
+                    }
+                });    
+            });
+
         },
 
         postData: function(){
@@ -92,22 +123,19 @@ $(function(){
                 }
 
                 var data = me.form.serialize();
-
                 $.post('/ugc/mark', data, function(json){
 
                     if(json.errCode != 0){
-                            alert(json.errMessage ? json.errMessage : '提交失败！');
-                            return false;
-                        }else{
-                            alert('标记成功.');
-                            window.location = '/sport/ugc';
-                            
-                        }
+                        alert(json.errMessage ? json.errMessage : '提交失败！');
+                        return false;
+                    }else{
+                        alert('标记成功.');
+                        window.location = '/sport/ugc';
+                        
+                    }
                 })
-
             });
         }
-
     };
 
     ugc.init();

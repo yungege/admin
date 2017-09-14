@@ -2,6 +2,9 @@
 {%block name="title"%}天天向尚管理后台{%/block%}
 {%block name="css"%}
 <link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="/static/ugc/css/jPicture.min.css">
+
+
 <style type="text/css">
 .date_start,.date_end{
     float: left!important;
@@ -42,8 +45,8 @@
     display: none;
 }
 .fix-box-inner-picture{
-    width: 400px;
-    height: 300px;
+    width: 530px;
+    height: 430px;
     background-color: white;
     padding: 15px;
     border: #ccc;
@@ -52,6 +55,10 @@
     left: 50%;
     margin-top: -80px;
     margin-left: -200px;
+}
+#imgBox{
+    width:500px;
+    height:300px;
 }
 
 
@@ -218,18 +225,22 @@
 <div class="fix-box-picture">
     <div class="fix-box-inner-picture">
         <h4>锻炼图片</h4>
-       
-            <div>
-            
-                <div class="form-group">
-                    哈哈，兄弟们，快点来啊!
-                </div>
-               
+            <div>  
+                <div id="imgBox">
+                    <div id="imgBoxInner">
+
+                        <!-- <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
+                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
+                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
+                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
+                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>    -->
+
+                    </div>
+                </div>               
             </div>   
-           
+            <br>           
             <div class="inner-btn-picture">
-                <button id="subb" type="button" class="btn btn-primary">确定</button>
-                <button id="cann" type="button" class="btn btn-default">取消</button>
+                <button id="subReturn" type="button" class="btn btn-primary">返回</button>
             </div>
         
     </div>
@@ -241,5 +252,6 @@
 {%block name="js"%}
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="/static/ugc/js/index.js"></script>
-<script type="text/javascript" src="/static/ugc/js/jqueryPhoto.js"></script>
+<script type="text/javascript" src="/static/ugc/js/jPicture.min.js"></script>
+
 {%/block%}

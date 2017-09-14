@@ -81,7 +81,7 @@ class Dao_TrainingdoneModel extends Db_Mongodb {
          return $this->query($where,$options);
     }
 
-    public function updataById(string $id,array $fields){
+    public function updataById(string $id, array $fields){
 
         $where = [
             '_id' => $id,
@@ -89,4 +89,19 @@ class Dao_TrainingdoneModel extends Db_Mongodb {
 
         return $this->update($where,$fields);
     }
+
+    public function getTrainById(string $id, array $fields){
+
+        $where = [
+            '_id' => $id,
+        ];
+
+        $fields = $this->filterFields($fields);
+        if(!empty($fields)){
+            $options['protection'] = $fields;
+        }
+         
+        return $this->queryOne($where,$options);
+    }
+
 }

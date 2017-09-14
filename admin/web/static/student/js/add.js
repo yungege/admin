@@ -10,6 +10,7 @@ $(function(){
 			this.getDistrict();
 			this.getSchool();
 			this.getClass();
+			this.initDate();
 		},
 
 		getDom: function(){
@@ -25,7 +26,33 @@ $(function(){
 			this.username = $('#username');
 			this.birthday = $('#start');
 			this.sex = $('#sex');
+			this.startBtn = $('.date_start');
+            this.endBtn = $('.date_end');
 		},
+
+		initDate: function(){
+            var me = this;
+
+            me.startBtn.datetimepicker({
+                language: 'zh-CN',
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                minView: 2,
+                forceParse: 0,
+                pickerPosition: "bottom-left",
+            });
+
+            me.endBtn.datetimepicker({
+                language: 'zh-CN',
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                minView: 2,
+                forceParse: 0,
+                pickerPosition: "bottom-left",
+            });
+        },
 
 		checkParams: function(){
 

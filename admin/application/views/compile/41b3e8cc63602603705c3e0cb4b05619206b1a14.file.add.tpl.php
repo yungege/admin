@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 09:05:58
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 09:57:46
          compiled from "/var/www/admin/admin/application/views/template/student/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:117732776959b9d5f6b92ff6-98539000%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:206834342459b9e21aa767f6-54901320%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '41b3e8cc63602603705c3e0cb4b05619206b1a14' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/student/add.tpl',
-      1 => 1505316453,
+      1 => 1505354219,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '117732776959b9d5f6b92ff6-98539000',
+  'nocache_hash' => '206834342459b9e21aa767f6-54901320',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59b9d5f6c0f378_06217847',
+  'unifunc' => 'content_59b9e21ab29348_64055156',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b9d5f6c0f378_06217847')) {function content_59b9d5f6c0f378_06217847($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59b9e21ab29348_64055156')) {function content_59b9e21ab29348_64055156($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -473,7 +473,7 @@ $_smarty_tpl->tpl_vars['sexName']->_loop = true;
 
 <script type="text/javascript" src="/static/student/js/add.js"></script>
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/static/ugc/index.js"></script>
+<!-- <script type="text/javascript" src="/static/ugc/index.js"></script> -->
 
 
 </body>

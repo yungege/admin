@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 08:37:47
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 15:47:55
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:167727000859b9cf5b8e8f38-87007671%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:146693274459ba342b1b1156-36539514%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-      1 => 1505349374,
+      1 => 1505370472,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '167727000859b9cf5b8e8f38-87007671',
+  'nocache_hash' => '146693274459ba342b1b1156-36539514',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59b9cf5b9f8d61_59343160',
+  'unifunc' => 'content_59ba342b26aa42_68323691',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b9cf5b9f8d61_59343160')) {function content_59b9cf5b9f8d61_59343160($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59ba342b26aa42_68323691')) {function content_59ba342b26aa42_68323691($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -111,7 +111,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
-<link href="/static/ugc/css/swipeslider.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/ugc/css/jPicture.min.css">
+
 
 <style type="text/css">
 .date_start,.date_end{
@@ -153,8 +154,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     display: none;
 }
 .fix-box-inner-picture{
-    width: 400px;
-    height: 300px;
+    width: 530px;
+    height: 430px;
     background-color: white;
     padding: 15px;
     border: #ccc;
@@ -163,6 +164,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     left: 50%;
     margin-top: -80px;
     margin-left: -200px;
+}
+#imgBox{
+    width:500px;
+    height:300px;
 }
 
 
@@ -554,36 +559,22 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 <div class="fix-box-picture">
     <div class="fix-box-inner-picture">
         <h4>锻炼图片</h4>
-       
-            <div>
-            
-                <figure id="full_feature" class="swipslider">
-                    <ul class="sw-slides">
-                        <li class="sw-slide">
-                            <img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" alt="Summer beach concept" width="300px">
-                        </li>
-                        <li class="sw-slide">
-                            <img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" alt="Lang from Yie Ar Kung Fu" width="100px">
-                        </li>
-                        <li class="sw-slide">
-                            <img src="https://oi7ro6pyq.qnssl.com/%E8%B7%B3%E7%BB%B3%E6%93%8D%E8%AF%A6%E6%83%85%E9%A1%B5%E5%B0%81%E9%9D%A2%E5%9B%BE.png" alt="Tiny Tina" width="100px">
-                        </li>
-                        <li class="sw-slide">
-                            <img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" alt="Tiny Tina from Borderlands 2" width="100px">
-                        </li>
-                        <li class="sw-slide">
-                            <img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" alt="Redhead girl" width="100px">
-                        </li>
-                    </ul>
-                </figure>
+            <div>  
+                <div id="imgBox">
+                    <div id="imgBoxInner">
 
+                        <!-- <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
+                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
+                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
+                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
+                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>    -->
 
-               
+                    </div>
+                </div>               
             </div>   
-           
+            <br>           
             <div class="inner-btn-picture">
-                <button id="subb" type="button" class="btn btn-primary">确定</button>
-                <button id="cann" type="button" class="btn btn-default">取消</button>
+                <button id="subReturn" type="button" class="btn btn-primary">返回</button>
             </div>
         
     </div>
@@ -622,8 +613,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="/static/ugc/js/index.js"></script>
-<script type="text/javascript" src="/static/ugc/js/swipeslider.min.js"></script>
-
+<script type="text/javascript" src="/static/ugc/js/jPicture.min.js"></script>
 
 
 </body>
