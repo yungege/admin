@@ -101,10 +101,13 @@ $(function(){
                         });
 
                         me.imgBoxInner[0].innerHTML = img;
-                        jPicture("#imgBox", {
-                            type: "slide",
-                            autoplay: 2000
-                        });
+
+                        $(document).ready(function(){
+                    　　　　jPicture("#imgBox", {
+                                type: "slide",
+                                autoplay: 5000
+                            });
+                    　　}); 
                         me.showPictureBox.fadeIn(200);
                     }
                 });    
