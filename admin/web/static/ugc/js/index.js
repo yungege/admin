@@ -7,7 +7,7 @@ $(function(){
             this.initDate();
             this.displayBox();
             this.hideBox();
-           
+            this.postData();
         },
 
         getDom: function(){
@@ -65,9 +65,6 @@ $(function(){
             me.pictureBtn.unbind().bind('click',function(){
                 
                 me.showPictureBox.fadeIn(200);
-                // $(window).load(function() {
-                //      $('#full_feature').swipeslider();
-                // }
 
             });
 
@@ -84,7 +81,32 @@ $(function(){
             });
         },
 
-        
+        postData: function(){
+            var me = this;
+
+            me.sub.unbind().bind('click',function(){
+
+                if(me.description.val() == ""){
+                    alert('请填入标记内容。');
+                    return false;
+                }
+
+                var data = me.form.serialize();
+
+                $.post('/ugc/mark', data, function(json){
+
+                    if(json.errCode != 0){
+                            alert(json.errMessage ? json.errMessage : '提交失败！');
+                            return false;
+                        }else{
+                            alert('标记成功.');
+                            window.location = '/sport/ugc';
+                            
+                        }
+                })
+
+            });
+        }
 
     };
 

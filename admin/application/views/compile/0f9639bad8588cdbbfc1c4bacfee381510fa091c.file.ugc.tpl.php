@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 05:44:29
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 08:37:47
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:106804693759b9a6bd955826-86125375%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:167727000859b9cf5b8e8f38-87007671%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-      1 => 1505338899,
+      1 => 1505349374,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '106804693759b9a6bd955826-86125375',
+  'nocache_hash' => '167727000859b9cf5b8e8f38-87007671',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59b9a6bdb185e9_36828304',
+  'unifunc' => 'content_59b9cf5b9f8d61_59343160',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b9a6bdb185e9_36828304')) {function content_59b9a6bdb185e9_36828304($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59b9cf5b9f8d61_59343160')) {function content_59b9cf5b9f8d61_59343160($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -111,6 +111,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link href="/static/ugc/css/swipeslider.css" rel="stylesheet">
+
 <style type="text/css">
 .date_start,.date_end{
     float: left!important;
@@ -140,6 +142,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     margin-top: -80px;
     margin-left: -200px;
 }
+.fix-box-picture{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.fix-box-inner-picture{
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    padding: 15px;
+    border: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -200px;
+}
+
+
 }
 </style>
 
@@ -476,7 +502,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </td>
                         <td><?php if ($_smarty_tpl->tpl_vars['row']->value['isdelay']==2){?><span class="label label-danger">是</span><?php }else{ ?><span class="label label-default">否</span><?php }?></td>
                         <td><button data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-sm btn-info">查看</button></td>
+" class="btn btn-sm btn-info btn_picture">查看</button></td>
                         <td><?php if ($_smarty_tpl->tpl_vars['row']->value['htype']!=3&&$_smarty_tpl->tpl_vars['row']->value['share']==1){?><button data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " class="btn btn-sm btn-info"><a href="/ugc/share?userId=<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
 &trainingId=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
@@ -506,7 +532,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     <div class="fix-box-inner">
         <h4>标记作业</h4>
         <form class="form" name="mark">
-            <div class="input-append date" id="datetimepicker" data-date-format="yyyy-mm-dd">
+            <div>
             
                 <div class="form-group">
                     <textarea id="description" class="form-control" rows="8"  name="description" ><?php echo $_smarty_tpl->tpl_vars['mark']->value;?>
@@ -523,6 +549,46 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
         </form>
     </div>
 </div>
+
+
+<div class="fix-box-picture">
+    <div class="fix-box-inner-picture">
+        <h4>锻炼图片</h4>
+       
+            <div>
+            
+                <figure id="full_feature" class="swipslider">
+                    <ul class="sw-slides">
+                        <li class="sw-slide">
+                            <img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" alt="Summer beach concept" width="300px">
+                        </li>
+                        <li class="sw-slide">
+                            <img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" alt="Lang from Yie Ar Kung Fu" width="100px">
+                        </li>
+                        <li class="sw-slide">
+                            <img src="https://oi7ro6pyq.qnssl.com/%E8%B7%B3%E7%BB%B3%E6%93%8D%E8%AF%A6%E6%83%85%E9%A1%B5%E5%B0%81%E9%9D%A2%E5%9B%BE.png" alt="Tiny Tina" width="100px">
+                        </li>
+                        <li class="sw-slide">
+                            <img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" alt="Tiny Tina from Borderlands 2" width="100px">
+                        </li>
+                        <li class="sw-slide">
+                            <img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" alt="Redhead girl" width="100px">
+                        </li>
+                    </ul>
+                </figure>
+
+
+               
+            </div>   
+           
+            <div class="inner-btn-picture">
+                <button id="subb" type="button" class="btn btn-primary">确定</button>
+                <button id="cann" type="button" class="btn btn-default">取消</button>
+            </div>
+        
+    </div>
+</div>
+
 
 
 
@@ -555,7 +621,10 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/static/ugc/index.js"></script>
+<script type="text/javascript" src="/static/ugc/js/index.js"></script>
+<script type="text/javascript" src="/static/ugc/js/swipeslider.min.js"></script>
+
+
 
 </body>
 </html><?php }} ?>

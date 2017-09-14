@@ -31,6 +31,30 @@
     margin-top: -80px;
     margin-left: -200px;
 }
+.fix-box-picture{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.fix-box-inner-picture{
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    padding: 15px;
+    border: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -200px;
+}
+
+
 }
 </style>
 {%/block%}
@@ -151,7 +175,7 @@
                         <td>{%$row.createtime|date_format:"%Y-%m-%d"%}<br>{%$row.createtime|date_format:"%H:%M:%S"%}</td>
                         <td>{%$row.originaltime|date_format:"%Y-%m-%d"%}</td>
                         <td>{%if $row.isdelay == 2%}<span class="label label-danger">是</span>{%else%}<span class="label label-default">否</span>{%/if%}</td>
-                        <td><button data-id="{%$row._id%}" class="btn btn-sm btn-info">查看</button></td>
+                        <td><button data-id="{%$row._id%}" class="btn btn-sm btn-info btn_picture">查看</button></td>
                         <td>{%if $row.htype != 3 and $row.share == 1%}<button data-id="{%$row._id%}" class="btn btn-sm btn-info"><a href="/ugc/share?userId={%$row.userid%}&trainingId={%$row._id%}">查看</a></button>{%/if%}</td>     
                         <td>
                         {%if $row.mark == null%}<button  data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">标记</button>
@@ -173,7 +197,7 @@
     <div class="fix-box-inner">
         <h4>标记作业</h4>
         <form class="form" name="mark">
-            <div class="input-append date" id="datetimepicker" data-date-format="yyyy-mm-dd">
+            <div>
             
                 <div class="form-group">
                     <textarea id="description" class="form-control" rows="8"  name="description" >{%$mark%}</textarea>
@@ -190,9 +214,32 @@
     </div>
 </div>
 
+
+<div class="fix-box-picture">
+    <div class="fix-box-inner-picture">
+        <h4>锻炼图片</h4>
+       
+            <div>
+            
+                <div class="form-group">
+                    哈哈，兄弟们，快点来啊!
+                </div>
+               
+            </div>   
+           
+            <div class="inner-btn-picture">
+                <button id="subb" type="button" class="btn btn-primary">确定</button>
+                <button id="cann" type="button" class="btn btn-default">取消</button>
+            </div>
+        
+    </div>
+</div>
+
+
 {%/block%}
 
 {%block name="js"%}
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/static/ugc/index.js"></script>
+<script type="text/javascript" src="/static/ugc/js/index.js"></script>
+<script type="text/javascript" src="/static/ugc/js/jqueryPhoto.js"></script>
 {%/block%}
