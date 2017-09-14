@@ -103,7 +103,7 @@ $(function(){
                         me.imgBoxInner[0].innerHTML = img;
                         jPicture("#imgBox", {
                             type: "slide",
-                            autoplay: 1500
+                            autoplay: 2000
                         });
                         me.showPictureBox.fadeIn(200);
                     }
