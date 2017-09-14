@@ -34,10 +34,13 @@ class Service_Sport_UGCModel extends BasePageService {
     }
 
     protected function __declare() {
+        $this->declareCheckXss = true;
         
     }
 
     protected function __execute($req) {
+        $this->checkXss($req);
+        
         $req = $req['get'];
         $where = [];
 

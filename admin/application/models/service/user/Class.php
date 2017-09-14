@@ -15,11 +15,12 @@ class Service_User_ClassModel extends BasePageService {
     }
 
     protected function __declare() {
-        
+        $this->declareCheckXss = true;
     }
 
     protected function __execute($req) {
-
+        $this->checkXss($req);
+        
     	$match = [];
     	$req = $req['get'];
         $this->resData['grade'] = Dao_UserModel::$grade;
