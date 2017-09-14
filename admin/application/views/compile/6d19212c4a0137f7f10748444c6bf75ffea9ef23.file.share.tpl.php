@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 12:32:01
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 17:56:59
          compiled from "/var/www/admin/admin/application/views/template/ugc/share.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:127471470459ba0641073149-82563806%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:128931202059ba526be0bd23-74762874%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6d19212c4a0137f7f10748444c6bf75ffea9ef23' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/ugc/share.tpl',
-      1 => 1505207223,
+      1 => 1505379175,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '127471470459ba0641073149-82563806',
+  'nocache_hash' => '128931202059ba526be0bd23-74762874',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59ba0641166137_19980340',
+  'unifunc' => 'content_59ba526be9a6b4_26204992',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ba0641166137_19980340')) {function content_59ba0641166137_19980340($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59ba526be9a6b4_26204992')) {function content_59ba526be9a6b4_26204992($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -307,15 +307,13 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             <table class="table table-bordered table-hover table-striped">
                 <thead>
                     <tr>
-
                         <th>分享人</th>
                         <th>学校</th>
                         <th>班级</th>
                         <th>分享类型</th>
                         <th>分享时间</th>
                         <th>点赞数</th>      
-                        <th>锻炼图片</th>      
-                        
+                        <th>锻炼图片</th>                      
                     </tr>
                 </thead>
                 <tbody>
@@ -331,14 +329,12 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classname'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['share_type'];?>
-</td>
+                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['share_type']==0){?>系统分享<?php }else{ ?>用户主动分享<?php }?></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['ctime'];?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['up_num'];?>
 </td>
-                        <td>查看</td>
-                       
+                        <td>查看</td>                
                     </tr>
                     <?php } ?>
                 </tbody>
