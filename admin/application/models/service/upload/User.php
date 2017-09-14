@@ -45,6 +45,10 @@ class Service_Upload_UserModel extends BasePageService {
         $schoolFields = ['name','_id'];
         $this->schoolInfo = $this->schoolModel->getSchoolById($this->schoolId,$schoolFields);
         $datas = $this->importExcel($_FILES['tmp_name'],$ext);
+
+        var_dump($datas);
+        exit;
+
         $this->userBaseData($datas);
 
         return ;
@@ -57,6 +61,8 @@ class Service_Upload_UserModel extends BasePageService {
     }
 
     protected function userBaseData($datas) {
+
+        exit;
 
         $class = [];
         unset($datas[1]);
