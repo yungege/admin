@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 16:08:24
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:120382839759ba38f85add62-61922133%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 16:09:04
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:103545882459ba39200aafc1-44509518%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> ae4fb59582d0d3c2736d9d4fbf599cd244f0185f
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
+<<<<<<< HEAD
       1 => 1505212517,
+=======
+      1 => 1505370472,
+>>>>>>> ae4fb59582d0d3c2736d9d4fbf599cd244f0185f
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1505212517,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '120382839759ba38f85add62-61922133',
+=======
+      1 => 1505222262,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '103545882459ba39200aafc1-44509518',
+>>>>>>> ae4fb59582d0d3c2736d9d4fbf599cd244f0185f
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59ba38f86bbc38_73051566',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59ba38f86bbc38_73051566')) {function content_59ba38f86bbc38_73051566($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_59ba3920238237_77612888',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59ba3920238237_77612888')) {function content_59ba3920238237_77612888($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> ae4fb59582d0d3c2736d9d4fbf599cd244f0185f
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -111,12 +135,66 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="/static/ugc/css/jPicture.min.css">
+
+
 <style type="text/css">
 .date_start,.date_end{
     float: left!important;
 }
 .datetimepicker{
     margin-top: 50px!important;
+}
+.fix-box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.fix-box-inner{
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    padding: 15px;
+    border: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -200px;
+}
+.fix-box-picture{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.fix-box-inner-picture{
+    width: 530px;
+    height: 430px;
+    background-color: white;
+    padding: 15px;
+    border: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -200px;
+}
+#imgBox{
+    width:500px;
+    height:300px;
+}
+
+
 }
 </style>
 
@@ -231,9 +309,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
-                            <!--  <li>
+                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
-                            </li> -->
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -453,10 +531,20 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </td>
                         <td><?php if ($_smarty_tpl->tpl_vars['row']->value['isdelay']==2){?><span class="label label-danger">是</span><?php }else{ ?><span class="label label-default">否</span><?php }?></td>
                         <td><button data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-sm btn-info">查看</button></td>
+" class="btn btn-sm btn-info btn_picture">查看</button></td>
                         <td><?php if ($_smarty_tpl->tpl_vars['row']->value['htype']!=3&&$_smarty_tpl->tpl_vars['row']->value['share']==1){?><button data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-sm btn-info">查看</button><?php }?></td>
-                        <td></td>
+" class="btn btn-sm btn-info"><a href="/ugc/share?userId=<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
+&trainingId=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+">查看</a></button><?php }?></td>     
+                        <td>
+                        <?php if ($_smarty_tpl->tpl_vars['row']->value['mark']==null){?><button  data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-mark="<?php echo $_smarty_tpl->tpl_vars['row']->value['mark'];?>
+" class="btn btn-sm btn-info btn_mark">标记</button>
+                        <?php }else{ ?> 
+                            <button  data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-mark="<?php echo $_smarty_tpl->tpl_vars['row']->value['mark'];?>
+" class="btn btn-sm btn-info btn_mark">已标记</button></td>
+                        <?php }?>
                     </tr>
                     <?php } ?>
                 </tbody>
@@ -468,6 +556,54 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
         </div>
     </div>
 </div>
+
+<div class="fix-box">
+    <div class="fix-box-inner">
+        <h4>标记作业</h4>
+        <form class="form" name="mark">
+            <div>
+            
+                <div class="form-group">
+                    <textarea id="description" class="form-control" rows="8"  name="description" ><?php echo $_smarty_tpl->tpl_vars['mark']->value;?>
+</textarea>
+                </div>
+                <span class="add-on"><i class="icon-remove"></i></span>
+                <span class="add-on"><i class="icon-th"></i></span>
+            </div>   
+           <input type="hidden" name="trainId">
+            <div class="inner-btn">
+                <button id="sub" type="button" class="btn btn-primary">确定</button>
+                <button id="can" type="button" class="btn btn-default">取消</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="fix-box-picture">
+    <div class="fix-box-inner-picture">
+        <h4>锻炼图片</h4>
+            <div>  
+                <div id="imgBox">
+                    <div id="imgBoxInner">
+
+                        <!-- <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
+                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
+                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
+                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
+                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>    -->
+
+                    </div>
+                </div>               
+            </div>   
+            <br>           
+            <div class="inner-btn-picture">
+                <button id="subReturn" type="button" class="btn btn-primary">返回</button>
+            </div>
+        
+    </div>
+</div>
+
 
 
 
@@ -500,7 +636,9 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/static/ugc/index.js"></script>
+<script type="text/javascript" src="/static/ugc/js/index.js"></script>
+<script type="text/javascript" src="/static/ugc/js/jPicture.min.js"></script>
+
 
 </body>
 </html><?php }} ?>

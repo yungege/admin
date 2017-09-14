@@ -86,6 +86,7 @@ class Service_Sport_UGCModel extends BasePageService {
             'distance',
             'isdelay',
             'homeworkid',
+            'mark',
         ];
 
         $offset = ($req['pn'] - 1) * self::PAGESIZE;

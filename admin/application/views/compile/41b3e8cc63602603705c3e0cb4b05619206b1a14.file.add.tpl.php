@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-11 14:17:42
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 09:57:46
          compiled from "/var/www/admin/admin/application/views/template/student/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:53908956859b62a86d83598-61389351%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:206834342459b9e21aa767f6-54901320%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '41b3e8cc63602603705c3e0cb4b05619206b1a14' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/student/add.tpl',
-      1 => 1504857674,
+      1 => 1505354219,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1504865546,
+      1 => 1505222262,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '53908956859b62a86d83598-61389351',
+  'nocache_hash' => '206834342459b9e21aa767f6-54901320',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59b62a86ddbab6_25013640',
+  'unifunc' => 'content_59b9e21ab29348_64055156',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b62a86ddbab6_25013640')) {function content_59b62a86ddbab6_25013640($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59b9e21ab29348_64055156')) {function content_59b9e21ab29348_64055156($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -252,9 +252,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
-                            <!--  <li>
+                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
-                            </li> -->
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -473,7 +473,7 @@ $_smarty_tpl->tpl_vars['sexName']->_loop = true;
 
 <script type="text/javascript" src="/static/student/js/add.js"></script>
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/static/ugc/index.js"></script>
+<!-- <script type="text/javascript" src="/static/ugc/index.js"></script> -->
 
 
 </body>

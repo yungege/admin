@@ -8,9 +8,12 @@ $(function(){
             this.delClass();
             this.searchClass();
             this.postData();
+            this.initDate();
         },
 
         getDom: function(){
+            this.startBtn = $('.date_start');
+            this.endBtn = $('.date_end');
             this.searchBtn = $('#search');
             this.form = $('form[name=class]');
             this.addBtn = $('#t-r');
@@ -27,6 +30,30 @@ $(function(){
             this.weekDoneNo = $('#week-done-no');
             this.makeupLimit = $('#makeup-limit');
             this.makeupInterval = $('#makeup-interval');
+        },
+
+        initDate: function(){
+            var me = this;
+
+            me.startBtn.datetimepicker({
+                language: 'zh-CN',
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                minView: 2,
+                forceParse: 0,
+                pickerPosition: "bottom-left",
+            });
+
+            me.endBtn.datetimepicker({
+                language: 'zh-CN',
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                minView: 2,
+                forceParse: 0,
+                pickerPosition: "bottom-left",
+            });
         },
 
         searchClass: function(){

@@ -211,4 +211,13 @@ class Dao_UserModel extends Db_Mongodb{
         return $this->query($where, $options);
     }
 
+    public function getUserList(array $where,array $fields){
+        
+        $fields = $this->filterFields($fields);
+        if(!empty($fields)){
+            $options['projection'] = $fields;
+        }
+        return $this->query($where, $options);
+    }
+
 }
