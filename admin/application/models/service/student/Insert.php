@@ -34,7 +34,7 @@ class Service_Student_InsertModel extends BasePageService {
 			empty($req['username']) ||
 			empty($req['birthday']) ||
 			!strtotime($req['birthday']) ||
-			empty($req['sex']) ||
+	//		empty($req['sex']) ||
 			!preg_match('/^[0-1]$/',$req['sex'])
 			){
 			$this->errNo = REQUEST_PARAMS_ERROR;
