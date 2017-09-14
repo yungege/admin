@@ -25,8 +25,7 @@
                         <th>班级</th>
                         <th>分享类型</th>
                         <th>分享时间</th>
-                        <th>点赞数</th>      
-                        <th>锻炼图片</th>                      
+                        <th>点赞数</th>                        
                     </tr>
                 </thead>
                 <tbody>
@@ -37,8 +36,7 @@
                         <td>{%$row.classinfo.classname%}</td>
                         <td>{%if $row.share_type == 0%}系统分享{%else%}用户主动分享{%/if%}</td>
                         <td>{%$row.ctime%}</td>
-                        <td>{%$row.up_num%}</td>
-                        <td>查看</td>                
+                        <td>{%$row.up_num%}</td>              
                     </tr>
                     {%/foreach%}
                 </tbody>
