@@ -1,23 +1,51 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 09:14:07
          compiled from "/var/www/admin/admin/application/views/template/student/add.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:133769623959b9d7dfa21285-73852548%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-13 23:15:45
+         compiled from "/var/www/admin/admin/application/views/template/student/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:60741472459b94ba17d3282-24392587%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 09:57:46
+         compiled from "/var/www/admin/admin/application/views/template/student/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:206834342459b9e21aa767f6-54901320%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 6a458b29c95397511f5674c2a53df40fdef08b8e
+>>>>>>> 56c9bb418d48cd9f4e8c75630650715e9f0bdfd3
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '41b3e8cc63602603705c3e0cb4b05619206b1a14' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/student/add.tpl',
+<<<<<<< HEAD
       1 => 1505194859,
+=======
+      1 => 1505354219,
+>>>>>>> 56c9bb418d48cd9f4e8c75630650715e9f0bdfd3
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1505194859,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '133769623959b9d7dfa21285-73852548',
+=======
+      1 => 1505222262,
+      2 => 'file',
+    ),
+  ),
+<<<<<<< HEAD
+  'nocache_hash' => '60741472459b94ba17d3282-24392587',
+=======
+  'nocache_hash' => '206834342459b9e21aa767f6-54901320',
+>>>>>>> 6a458b29c95397511f5674c2a53df40fdef08b8e
+>>>>>>> 56c9bb418d48cd9f4e8c75630650715e9f0bdfd3
   'function' => 
   array (
   ),
@@ -29,9 +57,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59b9d7dfb28947_55522004',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59b9d7dfb28947_55522004')) {function content_59b9d7dfb28947_55522004($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_59b94ba182af36_80546108',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59b94ba182af36_80546108')) {function content_59b94ba182af36_80546108($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59b9e21ab29348_64055156',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59b9e21ab29348_64055156')) {function content_59b9e21ab29348_64055156($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 6a458b29c95397511f5674c2a53df40fdef08b8e
+>>>>>>> 56c9bb418d48cd9f4e8c75630650715e9f0bdfd3
 <html lang="en">
 
 <head>
@@ -252,9 +292,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
-                            <!--  <li>
+                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
-                            </li> -->
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -473,7 +513,7 @@ $_smarty_tpl->tpl_vars['sexName']->_loop = true;
 
 <script type="text/javascript" src="/static/student/js/add.js"></script>
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/static/ugc/index.js"></script>
+<!-- <script type="text/javascript" src="/static/ugc/index.js"></script> -->
 
 
 </body>

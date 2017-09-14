@@ -34,10 +34,13 @@ class Service_Sport_UGCModel extends BasePageService {
     }
 
     protected function __declare() {
+        $this->declareCheckXss = true;
         
     }
 
     protected function __execute($req) {
+        $this->checkXss($req);
+        
         $req = $req['get'];
         $where = [];
 
@@ -83,6 +86,7 @@ class Service_Sport_UGCModel extends BasePageService {
             'distance',
             'isdelay',
             'homeworkid',
+            'mark',
         ];
 
         $offset = ($req['pn'] - 1) * self::PAGESIZE;

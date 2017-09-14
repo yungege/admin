@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-11 13:52:27
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 16:12:39
          compiled from "/var/www/admin/admin/application/views/template/push/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:195028914959b6249beecec9-97952022%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:151289618959ba39f72be9f6-52631766%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8bc1a8083f849f61058809b2e70d8717f6d7cdf2' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/class.tpl',
-      1 => 1503654498,
+      1 => 1505212517,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1504865546,
+      1 => 1505376701,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '195028914959b6249beecec9-97952022',
+  'nocache_hash' => '151289618959ba39f72be9f6-52631766',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59b6249bf40323_71068346',
+  'unifunc' => 'content_59ba39f7301fc8_32145625',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b6249bf40323_71068346')) {function content_59b6249bf40323_71068346($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59ba39f7301fc8_32145625')) {function content_59ba39f7301fc8_32145625($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -220,9 +220,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
-                            <!--  <li>
+                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
-                            </li> -->
+                            </li>
                         </ul>
                     </li>
                     <li>

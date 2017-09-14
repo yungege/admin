@@ -18,10 +18,12 @@ class Service_User_StudentModel extends BasePageService {
     }
 
     protected function __declare() {
-        
+        $this->declareCheckXss = true;
     }
 
     protected function __execute($req) {
+        $this->checkXss($req);
+
         $this->resData['today'] = date('Y-m-d');
         $match = [];
         $req = $req['get'];
