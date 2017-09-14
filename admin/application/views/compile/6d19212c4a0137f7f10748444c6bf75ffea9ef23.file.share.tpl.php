@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 17:56:59
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 18:00:29
          compiled from "/var/www/admin/admin/application/views/template/ugc/share.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:128931202059ba526be0bd23-74762874%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:110119107859ba533d072c21-60351461%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6d19212c4a0137f7f10748444c6bf75ffea9ef23' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/ugc/share.tpl',
-      1 => 1505379175,
+      1 => 1505383216,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '128931202059ba526be0bd23-74762874',
+  'nocache_hash' => '110119107859ba533d072c21-60351461',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59ba526be9a6b4_26204992',
+  'unifunc' => 'content_59ba533d0f54b4_11927478',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ba526be9a6b4_26204992')) {function content_59ba526be9a6b4_26204992($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59ba533d0f54b4_11927478')) {function content_59ba533d0f54b4_11927478($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -312,8 +312,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <th>班级</th>
                         <th>分享类型</th>
                         <th>分享时间</th>
-                        <th>点赞数</th>      
-                        <th>锻炼图片</th>                      
+                        <th>点赞数</th>                        
                     </tr>
                 </thead>
                 <tbody>
@@ -333,8 +332,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['ctime'];?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['up_num'];?>
-</td>
-                        <td>查看</td>                
+</td>              
                     </tr>
                     <?php } ?>
                 </tbody>
