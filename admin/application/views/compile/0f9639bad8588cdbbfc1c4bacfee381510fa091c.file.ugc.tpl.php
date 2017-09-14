@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 10:10:42
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:209344167959b9e522644ef4-77879587%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-13 22:53:43
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:125831192059b94677b0c105-60953934%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -13,6 +18,7 @@
 <?php /*%%SmartyHeaderCode:103545882459ba39200aafc1-44509518%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 >>>>>>> ae4fb59582d0d3c2736d9d4fbf599cd244f0185f
 >>>>>>> 6a458b29c95397511f5674c2a53df40fdef08b8e
+>>>>>>> 56c9bb418d48cd9f4e8c75630650715e9f0bdfd3
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -45,6 +51,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
+  'nocache_hash' => '209344167959b9e522644ef4-77879587',
+=======
   'nocache_hash' => '120382839759ba38f85add62-61922133',
 =======
       1 => 1505222262,
@@ -54,6 +63,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '103545882459ba39200aafc1-44509518',
 >>>>>>> ae4fb59582d0d3c2736d9d4fbf599cd244f0185f
 >>>>>>> 6a458b29c95397511f5674c2a53df40fdef08b8e
+>>>>>>> 56c9bb418d48cd9f4e8c75630650715e9f0bdfd3
   'function' => 
   array (
   ),
@@ -65,6 +75,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_59b9e5227c0f05_48758057',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59b9e5227c0f05_48758057')) {function content_59b9e5227c0f05_48758057($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
 <<<<<<< HEAD
   'unifunc' => 'content_59b94677b79618_13487687',
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -80,6 +95,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_59ba3920238237_77612888')) {function content_59ba3920238237_77612888($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 >>>>>>> ae4fb59582d0d3c2736d9d4fbf599cd244f0185f
 >>>>>>> 6a458b29c95397511f5674c2a53df40fdef08b8e
+>>>>>>> 56c9bb418d48cd9f4e8c75630650715e9f0bdfd3
 ?><!DOCTYPE html>
 <html lang="en">
 

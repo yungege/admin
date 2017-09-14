@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 10:07:30
+         compiled from "/var/www/admin/admin/application/views/template/user/class.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:204993299959b9e462389667-52125406%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-13 18:46:22
          compiled from "/var/www/admin/admin/application/views/template/user/class.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:213048827959b90c7ee7cb99-05390557%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -13,6 +18,7 @@
 <?php /*%%SmartyHeaderCode:14778046059b9e22cb6ac68-50900227%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 >>>>>>> ae4fb59582d0d3c2736d9d4fbf599cd244f0185f
 >>>>>>> 6a458b29c95397511f5674c2a53df40fdef08b8e
+>>>>>>> 56c9bb418d48cd9f4e8c75630650715e9f0bdfd3
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -38,6 +44,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
+  'nocache_hash' => '204993299959b9e462389667-52125406',
+=======
   'nocache_hash' => '213048827959b90c7ee7cb99-05390557',
 =======
 <<<<<<< HEAD
@@ -54,6 +63,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '14778046059b9e22cb6ac68-50900227',
 >>>>>>> ae4fb59582d0d3c2736d9d4fbf599cd244f0185f
 >>>>>>> 6a458b29c95397511f5674c2a53df40fdef08b8e
+>>>>>>> 56c9bb418d48cd9f4e8c75630650715e9f0bdfd3
   'function' => 
   array (
   ),
@@ -65,6 +75,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_59b9e4624abe00_02470612',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59b9e4624abe00_02470612')) {function content_59b9e4624abe00_02470612($_smarty_tpl) {?><!DOCTYPE html>
+=======
 <<<<<<< HEAD
   'unifunc' => 'content_59b90c7eed8dc4_53696642',
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -80,6 +95,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_59b9e22cbfc0c2_52601067')) {function content_59b9e22cbfc0c2_52601067($_smarty_tpl) {?><!DOCTYPE html>
 >>>>>>> ae4fb59582d0d3c2736d9d4fbf599cd244f0185f
 >>>>>>> 6a458b29c95397511f5674c2a53df40fdef08b8e
+>>>>>>> 56c9bb418d48cd9f4e8c75630650715e9f0bdfd3
 <html lang="en">
 
 <head>
