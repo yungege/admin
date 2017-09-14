@@ -15,10 +15,11 @@ class Service_User_SchoolModel extends BasePageService {
     }
 
     protected function __declare() {
-        
+        $this->declareCheckXss = true;
     }
 
     protected function __execute($req) {
+        $this->checkXss($req);
 
     	$match = [];
     	$req = $req['get'];

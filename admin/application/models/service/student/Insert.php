@@ -34,13 +34,17 @@ class Service_Student_InsertModel extends BasePageService {
 			empty($req['username']) ||
 			empty($req['birthday']) ||
 			!strtotime($req['birthday']) ||
+<<<<<<< HEAD
 	//		empty($req['sex']) ||
+=======
+			// empty($req['sex']) ||
+>>>>>>> 6a458b29c95397511f5674c2a53df40fdef08b8e
 			!preg_match('/^[0-1]$/',$req['sex'])
 			){
 			$this->errNo = REQUEST_PARAMS_ERROR;
             return false;
 		}
-
+		
 		$this->schoolId = $req['school'];
 		$schoolFiedls = ['name','_id'];
 		$this->schoolInfo = $this->schoolModel->getSchoolById($this->schoolId,$schoolFiedls);
