@@ -9,6 +9,7 @@ $(function(){
             this.hideBox();
             this.postData();
             this.pictureBox();
+            this.directShare();
         },
 
         getDom: function(){
@@ -18,6 +19,7 @@ $(function(){
             this.pictureBtn = $('.btn_picture');
             this.markBtn = $('.btn_mark');
             this.returnBtn = $('#subReturn');
+            this.shareBtn = $('.btn_share');
             this.sub = $('#sub');
             this.can = $('#can');
             this.showBox = $('.fix-box');
@@ -26,6 +28,7 @@ $(function(){
             this.trainId = $('input[name=trainId]');
             this.form = $('form[name=mark]');
             this.imgBoxInner = $('#imgBoxInner');
+
         },
 
         initDate: function(){
@@ -113,6 +116,18 @@ $(function(){
                 });    
             });
 
+        },
+
+        directShare: function(){
+            var me = this;
+            
+
+            me.shareBtn.unbind().bind('click',function(){
+                var id = $(this).data('id');
+                var userId = $(this).data('userid');
+
+                window.location = '/ugc/share?userId=' + userId + '&trainingId=' + id;
+            });
         },
 
         postData: function(){
