@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-15 15:42:49
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:30147287459bb84790c49e5-77610020%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-15 16:13:32
+         compiled from "/var/www/admin/admin/application/views/template/upload/outsport.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:68467513059bb8bac592108-86680914%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
+    '224468b56f7e2163bdd0ed47cbe330534c273483' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1504856947,
+      0 => '/var/www/admin/admin/application/views/template/upload/outsport.tpl',
+      1 => 1505452457,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '30147287459bb84790c49e5-77610020',
+  'nocache_hash' => '68467513059bb8bac592108-86680914',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59bb84791390e0_94226086',
+  'unifunc' => 'content_59bb8bac60b559_52257132',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59bb84791390e0_94226086')) {function content_59bb84791390e0_94226086($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59bb8bac60b559_52257132')) {function content_59bb8bac60b559_52257132($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -109,20 +109,53 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
-<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
-.datetimepicker{
-    margin-top: 50px;
-}
-.today{
-    border: 1px solid #d9edf7!important;
-}
-.user-a{
-    display: block;
-    float: left;
-    margin-left: 5px;
-    text-decoration: underline;
-}
+    .fix-per{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgba(0,0,0,0.4);
+        z-index: 9999;
+        display: none;
+    }
+    .fix-per .fix-cont{
+        width: 400px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -200px;
+        margin-top: -100px;
+        font-size: 100px;
+        color: orange;
+    }
+    .form-wrap{
+        border: 1px solid #ccc;
+        padding: 8px 15px 15px 15px;
+        border-radius: 5px;
+    }
+    #grade_apply,#grade_apply_select,.fx-btn{
+        height: 254px;
+    }
+    #grade_apply_select{
+        color: black;
+    }
+    
+    .fx-btn{
+        border: 1px solid #ccc;
+        margin-top: 25px;
+    }
+    .fx-btn > a{
+        display: block;
+        width: 60%;
+        margin: 0 auto 10px auto;
+    }
+    
 </style>
 
 </head>
@@ -303,7 +336,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运营管理 / 业务数据统计 
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运营管理 / 上传课外锻炼作业数据
                             </li>
                         </ol>
                     </div>
@@ -311,81 +344,72 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
+
 <div class="row">
-     <div class="col-md-12">
-        <form name ="form">
-        <ul class="list-unstyled" style="border:1px solid #ddd;overflow:hidden;padding:20px;border-radius: 5px;">
-            <li id="kj" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
-                <p><strong>空间维度：</strong></p>
-                <select class="form-control" id="province" name="province" style="margin-bottom:15px;width: 110px;float: left;">
-                    <option value="-1">全部</option>
-                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['data']->value['province']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
-$_smarty_tpl->tpl_vars['row']->_loop = true;
+    <div class="col-lg-12">
+        <form name="upload" enctype="multipart/form-data" action="user" method="post">
+
+            <div class="form-group">
+                    <label for="province">所属省份</label>
+                    <select id="province" class="form-control" name="province">
+                        <option value="-1" selected>请选择学校所在省份</option>
+                        <?php  $_smarty_tpl->tpl_vars['provinceName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['provinceName']->_loop = false;
+ $_smarty_tpl->tpl_vars['provinceId'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['provinceList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['provinceName']->key => $_smarty_tpl->tpl_vars['provinceName']->value){
+$_smarty_tpl->tpl_vars['provinceName']->_loop = true;
+ $_smarty_tpl->tpl_vars['provinceId']->value = $_smarty_tpl->tpl_vars['provinceName']->key;
 ?>
-                    <option value="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['provinceId']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['provinceName']->value;?>
 </option>
-                    <?php } ?>
-                </select>
-            </li>
-            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label class="control-label">时间维度：</label>
-                            <div class="input-group">
-                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initStart'];?>
-" data-type="time" id="date_start" name="start" type="text" class="form-control date_start date" data-date-format="yyyy-mm-dd"/>
-                                <div class="input-group-addon" style="border-left: 0;border-right: 0;"> 至 </div>
-                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initEnd'];?>
-" data-type="time" id="date_end" name="end" type="text" class="form-control date_end date" data-date-format="yyyy-mm-dd"/>
-                            </div>
-                        </div>
-                    </div>
+                        <?php } ?>          
+                    </select>
                 </div>
-            </li>
 
-            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
-                <label class="control-label" style="width:80px;">数据指标：</label>
-                
-                <label class="radio-inline" style="width:95px;">
-                    <input type="radio" value="1" name="source" checked="true"/>总体数据
-                </label>
-                <label class="radio-inline" style="width:95px;">
-                    <input type="radio" value="2" name="source"/>分项数据
-                </label>
-                <label class="radio-inline" style="width:120px;">
-                    <input type="radio" value="3" name="source"/>体测与锻炼数据
-                </label>
-            </li>
+                <div class="form-group">
+                    <label for="city">所在城市</label>
+                    <select id="city" class="form-control" name="city">
+                        <option value="-1" selected>请选择学校所在城市</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="district">所在区</label>
+                    <select id="district" class="form-control" name="district">
+                        <option value="-1" selected>请选择学校所在区</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="school">所在学校</label>
+                    <select id="school" class="form-control" name="school">
+                        <option value="-1" selected>请选择学生所在学校</option>
+                    </select>
+                </div>
+
+            <div class="form-group">
+                <label for="file"> Excel </label>
+                <input type="file" class="form-control" id="file" name="file">
+            </div>
+
+            <div class="form-group">
+           <!--  <input type="submit" name="submit" value="Submit" /> -->
+            <button id="sub" type="button" class="btn btn-primary">确认提交</button>
+            </div>
             
-            <li style="overflow:hidden;">
-                <button type="button" class="btn btn-primary" id="subbtn" style="width:80px;">查询</button>
-                <button type="button" class="btn btn-info" id="export" style="width:80px;margin-left:20px;" >导出</button>
-            </li>
-        </ul>
-
         </form>
     </div>
 </div>
 
-<!-- 图表 -->
-<div class="row">
-    <div class="col-md-12">
-        <div class="" style="border-radius: 5px;border:1px solid #ddd;padding: 15px;">
-            <div id="charts" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
-
-            </div>
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped table-hover" id="charts-table">
-                
-                </table>
-            </div>
-        </div>
+<!-- modal-add -->
+<div class="fix-per">
+    <div class="fix-cont">
+        <!-- 100% -->
     </div>
+    
 </div>
+
 
 
                 <!-- footer -->
@@ -416,9 +440,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
-<script src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<script src="/static/widget/echarts/echarts.min.js"></script>
-<script src="/static/stat/contrist.js"></script>
+<script type="text/javascript" src="/static/upload/js/outsport.js"></script>
 
 </body>
 </html><?php }} ?>

@@ -10,6 +10,7 @@ $(function(){
             this.postData();
             this.pictureBox();
             this.directShare();
+            // this.pictureInit();
         },
 
         getDom: function(){
@@ -29,6 +30,16 @@ $(function(){
             this.form = $('form[name=mark]');
             this.imgBoxInner = $('#imgBoxInner');
 
+        },
+
+        pictureInit: function(){
+
+            $(document).ready(function(){
+        　　　　jPicture("#imgBox", {
+                    type: "slide",
+                    autoplay: 5000
+                });
+        　　});
         },
 
         initDate: function(){
@@ -88,32 +99,29 @@ $(function(){
 
                 var id = $(this).data('id');
                 var data = 'trainingId=' + id;
-                var img = "";
-                me.imgBoxInner[0].innerHTML = "";
-                
+
                 $.post('/ugc/picture', data, function(json){
 
                     if(json.errCode != 0){
                         return false;
 
                     }else{
-
+                        
+                        var img = "";
                         var pictures = json.data.exciseimg;
                         $.each(pictures,function(index,value){
                             img = img + '<div><img src="' + value +'" width=' + '"100px"></div>';         
                         });
-
                         me.imgBoxInner[0].innerHTML = img;
-
-                        $(document).ready(function(){
-                    　　　　jPicture("#imgBox", {
-                                type: "slide",
-                                autoplay: 5000
-                            });
-                    　　}); 
-                        me.showPictureBox.fadeIn(200);
+                       
+                        jPicture("#imgBox", {
+                            type: "slide",
+                            autoplay: 5000
+                        }); 
+                        
+                        me.showPictureBox.fadeIn(300);        
                     }
-                });    
+                }); 
             });
 
         },
