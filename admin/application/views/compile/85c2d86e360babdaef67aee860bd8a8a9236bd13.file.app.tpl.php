@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-15 18:58:35
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-15 19:07:15
          compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:209878475859bbb25b7c8573-42800831%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:98265960559bbb4638128c0-83387818%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '85c2d86e360babdaef67aee860bd8a8a9236bd13' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/app.tpl',
-      1 => 1505467166,
+      1 => 1505473582,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1505458749,
+      1 => 1505473621,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '209878475859bbb25b7c8573-42800831',
+  'nocache_hash' => '98265960559bbb4638128c0-83387818',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59bbb25b818490_51171247',
+  'unifunc' => 'content_59bbb463924503_94404077',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59bbb25b818490_51171247')) {function content_59bbb25b818490_51171247($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59bbb463924503_94404077')) {function content_59bbb463924503_94404077($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -243,6 +243,11 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
                             </li>
+                            <li>
+                                <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
+                            </li>
+
+
                         </ul>
                     </li>
                     <li>
@@ -457,11 +462,32 @@ $(function(){
         },
 
         sendXhr: function(){
-            var me = this;
+            var me = this,
+                xhr = null;
             me.subBtn.unbind().bind('click',function(){
-                var xhr = null,
-                    data = me.form.serialize();
-                console.log(data);
+                var data = me.form.serialize();
+                xhr = $.ajax({
+                    url:'/push/appnotice', 
+                    data:data, 
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function(json){
+                        if(json.errCode == 0){
+                            alert('推送成功');
+                            window.location.reload();
+                        }
+                        else{
+                            alert(json.errMessage);
+                            return false;
+                        }
+                        
+                    },
+                    beforeSend: function () {
+                        if(xhr != null) {
+                            xhr.abort();
+                        }
+                    },
+                });
             })
         },
     }
