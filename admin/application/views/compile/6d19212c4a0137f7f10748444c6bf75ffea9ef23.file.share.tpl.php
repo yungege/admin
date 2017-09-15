@@ -1,6 +1,30 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-15 12:21:51
          compiled from "/var/www/admin/admin/application/views/template/ugc/share.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:57430559659bb555f3ef6a6-80964981%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 18:39:18
+         compiled from "/var/www/admin/admin/application/views/template/ugc/share.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:21570098859ba5c56c7df61-32934272%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 17:59:34
+         compiled from "/var/www/admin/admin/application/views/template/ugc/share.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:13677128259ba53061d2ff1-59372631%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 17:59:08
+         compiled from "/var/www/admin/admin/application/views/template/ugc/share.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:3885372459ba52ec206fc8-85079921%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-14 18:02:20
+         compiled from "/var/www/admin/admin/application/views/template/ugc/share.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:134933924459ba53ac05f1f9-02529854%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 8e8c9309a5f66a59db3212bc82849ea7d013691e
+>>>>>>> a80dcc56530b367facdfb4614e9abee94e4e40be
+>>>>>>> a52777a422fa2aaafb1554914b78af6d270352b0
+>>>>>>> e6522d4afb901829a02ab2a5a2e18000cdbf0278
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -17,7 +41,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '57430559659bb555f3ef6a6-80964981',
+=======
+<<<<<<< HEAD
+  'nocache_hash' => '21570098859ba5c56c7df61-32934272',
+=======
+  'nocache_hash' => '13677128259ba53061d2ff1-59372631',
+=======
+      1 => 1505376780,
+      2 => 'file',
+    ),
+  ),
+<<<<<<< HEAD
+  'nocache_hash' => '3885372459ba52ec206fc8-85079921',
+=======
+  'nocache_hash' => '134933924459ba53ac05f1f9-02529854',
+>>>>>>> 8e8c9309a5f66a59db3212bc82849ea7d013691e
+>>>>>>> a80dcc56530b367facdfb4614e9abee94e4e40be
+>>>>>>> a52777a422fa2aaafb1554914b78af6d270352b0
+>>>>>>> e6522d4afb901829a02ab2a5a2e18000cdbf0278
   'function' => 
   array (
   ),
@@ -29,9 +72,33 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59bb555f5001c8_82306369',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59bb555f5001c8_82306369')) {function content_59bb555f5001c8_82306369($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_59ba5c56d032c9_16888767',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59ba5c56d032c9_16888767')) {function content_59ba5c56d032c9_16888767($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_59ba53062c7093_05187172',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59ba53062c7093_05187172')) {function content_59ba53062c7093_05187172($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_59ba52ec259c10_93843826',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59ba52ec259c10_93843826')) {function content_59ba52ec259c10_93843826($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59ba53ac16af26_90056033',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59ba53ac16af26_90056033')) {function content_59ba53ac16af26_90056033($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 8e8c9309a5f66a59db3212bc82849ea7d013691e
+>>>>>>> a80dcc56530b367facdfb4614e9abee94e4e40be
+>>>>>>> a52777a422fa2aaafb1554914b78af6d270352b0
+>>>>>>> e6522d4afb901829a02ab2a5a2e18000cdbf0278
 <html lang="en">
 
 <head>
