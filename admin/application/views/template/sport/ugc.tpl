@@ -4,7 +4,6 @@
 <link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <link rel="stylesheet" href="/static/ugc/css/jPicture.min.css">
 
-
 <style type="text/css">
 .date_start,.date_end{
     float: left!important;
@@ -167,7 +166,7 @@
                 </thead>
                 <tbody>
                     {%foreach from=$list item=row%}
-                    <tr data-id="{%$row._id%}">
+                    <tr data-id="{%$row._id%}" data-userId="{%$row.userid%}">
                         <td>姓名：<a href="/user/student?uid={%$row.userid%}">{%$row.username%}</a><br/>昵称：<a href="/user/student?uid={%$row.userid%}">{%$row.nickname%}</a></td>
                         <td><a href="/user/student?uid={%$row.userid%}"><img src="{%$row.iconurl%}?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></a></td>
                         <td>{%$row.hname%}</td>
@@ -182,8 +181,8 @@
                         <td>{%$row.createtime|date_format:"%Y-%m-%d"%}<br>{%$row.createtime|date_format:"%H:%M:%S"%}</td>
                         <td>{%$row.originaltime|date_format:"%Y-%m-%d"%}</td>
                         <td>{%if $row.isdelay == 2%}<span class="label label-danger">是</span>{%else%}<span class="label label-default">否</span>{%/if%}</td>
-                        <td><button data-id="{%$row._id%}" class="btn btn-sm btn-info btn_picture">查看</button></td>
-                        <td>{%if $row.htype != 3 and $row.share == 1%}<button data-id="{%$row._id%}" class="btn btn-sm btn-info"><a href="/ugc/share?userId={%$row.userid%}&trainingId={%$row._id%}">查看</a></button>{%/if%}</td>     
+                        <td>{%if $row.exciseimg != 1%}<button data-id="{%$row._id%}" class="btn btn-sm btn-info btn_picture">查看</button>{%/if%}</td>
+                        <td>{%if $row.htype != 3 and $row.share == 1%}<button data-userid="{%$row.userid%}" data-id="{%$row._id%}" class="btn btn-sm btn-info btn_share">查看</button>{%/if%}</td>     
                         <td>
                         {%if $row.mark == null%}<button  data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">标记</button>
                         {%else%} 
@@ -221,19 +220,12 @@
     </div>
 </div>
 
-
 <div class="fix-box-picture">
     <div class="fix-box-inner-picture">
         <h4>锻炼图片</h4>
             <div>  
                 <div id="imgBox">
                     <div id="imgBoxInner">
-
-                        <!-- <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
-                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
-                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
-                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>
-                        <div><img src="https://oi7ro6pyq.qnssl.com/da6dfd4159d0db1446f4a83ec57c81da.gif" width="100px"></div>    -->
 
                     </div>
                 </div>               
@@ -245,7 +237,6 @@
         
     </div>
 </div>
-
 
 {%/block%}
 

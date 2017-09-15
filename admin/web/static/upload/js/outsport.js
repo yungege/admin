@@ -125,26 +125,20 @@ $(function(){
 
 		        $.ajax(  
 		        {  
-		            url:"/upload/user",  
+		            url:"/upload/ioutsport",  
 		            type: "POST",  
 		            processData:false,  
 		            contentType:false,  
 		            data:pic_data ,  
 		            success:function(json){  
-		                 
-		            	alert(json);
-		            	return false;
 
 		                if(json.errCode != 0){
-							alert(json.errMessage ? json.errMessage : '提交失败！');
+							alert(json.errMessage ? json.errMessage : '失败！');
                             return false;
 						}else{
-							if(confirm('学生添加成功,立即查看？')){
-                                window.location = '/user/student';
-                            }
-                            else{
-                                window.location = '/upload/index';
-                            }
+								alert('上传数据完成');
+                                window.location = '/upload/outsport';
+                            
 						} 
 		            }  
 		        });

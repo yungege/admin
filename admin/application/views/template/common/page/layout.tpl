@@ -186,6 +186,11 @@
                             <li>
                                 <a href="/upload/index" class="{%if $tag.0 == 4 && $tag.1 == 6%}cy-child-active{%/if%}">上传学生数据</a>
                             </li>
+                            <li>
+                                <a href="/upload/outSport" class="{%if $tag.0 == 4 && $tag.1 == 7%}cy-child-active{%/if%}">上传课外活动数据</a>
+                            </li>
+
+
                         </ul>
                     </li>
                     <li>
