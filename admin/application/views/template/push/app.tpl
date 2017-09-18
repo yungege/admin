@@ -19,6 +19,7 @@
         width: 100px;
         border-radius: 5px;
         overflow: hidden;
+        background-repeat: no-repeat;
     }
 </style>
 {%/block%}
