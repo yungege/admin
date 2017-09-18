@@ -46,8 +46,8 @@ class Service_Upload_UserModel extends BasePageService {
         $this->schoolInfo = $this->schoolModel->getSchoolById($this->schoolId,$schoolFields);
         $datas = $this->importExcel($_FILES['tmp_name'],$ext);
 
-        var_dump($datas);
-        exit;
+        // var_dump($datas);
+        // exit;
 
         $this->userBaseData($datas);
 
@@ -62,7 +62,7 @@ class Service_Upload_UserModel extends BasePageService {
 
     protected function userBaseData($datas) {
 
-        exit;
+        // exit;
 
         $class = [];
         unset($datas[1]);
@@ -103,6 +103,7 @@ class Service_Upload_UserModel extends BasePageService {
             $this->userInfo['classinfo']['classid'] = $this->classInfos[$this->userInfo['classinfo']['classname']]['classid'];
             $this->userInfo['grade'] = $this->classInfos[$this->userInfo['classinfo']['classname']]['grade'];
             $this->userInfo['birthday'] = strtotime(trim($data[6]));
+            $this->userInfo['create_time'] = time();
             if($data[1] == '男'){
                 $this->userInfo['sex'] = 0;
             }else{
