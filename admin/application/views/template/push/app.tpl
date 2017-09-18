@@ -125,7 +125,7 @@ $(function(){
                     'FileUploaded': function(up, file, info) {
                         if(info.status == 200){
                             var url = domain + eval('('+info.response+')')['key'];
-                            me.picshow.css({'background':'url('+url+') center center','background-size':'auto 46px','border-color':'#ccc'});
+                            me.picshow.css({'background':'url('+url+') no-repeat center center','background-size':'auto 46px','border-color':'#ccc'});
                             me.picUrl.val(url);
                         }
                     },
