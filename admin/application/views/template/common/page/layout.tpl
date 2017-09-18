@@ -129,8 +129,8 @@
                         <a href="/index.html"><i class="fa fa-fw fa-dashboard"></i> HOME PAGE</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="user" class="collapse {%if $tag.0 == 2%}in{%/if%}">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#m-user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="m-user" class="collapse {%if $tag.0 == 2%}in{%/if%}">
                             <li>
                                 <a href="/user/student" class="{%if $tag.0 == 2 && $tag.1 == 1%}cy-child-active{%/if%}">学生管理</a>
                             </li>
