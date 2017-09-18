@@ -4,6 +4,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
 	protected $trainSchoolModel;
 	protected $trainOutModel; 
 	protected $userModel;
+    protected $trainDone
 	protected $resData = [];
 
 	public function __construct(){
