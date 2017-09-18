@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-15 19:07:15
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 12:33:48
          compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:98265960559bbb4638128c0-83387818%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:203967553259bf4cacbb6932-20647947%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '85c2d86e360babdaef67aee860bd8a8a9236bd13' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/app.tpl',
-      1 => 1505473582,
+      1 => 1505709218,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '98265960559bbb4638128c0-83387818',
+  'nocache_hash' => '203967553259bf4cacbb6932-20647947',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59bbb463924503_94404077',
+  'unifunc' => 'content_59bf4cacc7f3b2_74662417',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59bbb463924503_94404077')) {function content_59bbb463924503_94404077($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59bf4cacc7f3b2_74662417')) {function content_59bf4cacc7f3b2_74662417($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -346,7 +346,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">新闻内容</label>
+                <label class="col-sm-2 control-label">消息内容</label>
                 <div class="col-sm-10">
                     <div id="editor" name="content"></div>
                 </div>

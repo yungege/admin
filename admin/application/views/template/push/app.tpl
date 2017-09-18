@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">新闻内容</label>
+                <label class="col-sm-2 control-label">消息内容</label>
                 <div class="col-sm-10">
                     <div id="editor" name="content"></div>
                 </div>
