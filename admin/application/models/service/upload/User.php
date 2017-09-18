@@ -80,7 +80,7 @@ class Service_Upload_UserModel extends BasePageService {
             'schoolid' => $this->schoolId,
         ];
         $options['projection'] = [
-            'name' => 1,'_id' =>1
+            'name' => 1,'_id' =>1,'grade'=>1
         ];
 
         $this->classInfos = $this->classModel->query($classWhere,$options);
