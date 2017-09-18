@@ -112,6 +112,9 @@ class Service_User_StudentModel extends BasePageService {
             if(!empty($mobileArr)){
                 $row['mobileno'] = implode('<br/>', $mobileArr);
             }
+            else{
+                $row['mobileno'] = '<span style="display:inline-block;margin-bottom:2px;" class="label label-warning">无记录</span>';
+            }
 
             $lastlogin = '';
             if(!empty($row['lastlogin'])){
