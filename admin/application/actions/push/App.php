@@ -9,6 +9,6 @@ class AppAction extends BaseAction {
                 'tplName' => 'push/app.tpl',
             ],
         ];
-        $this->res['data']['pageTag'] = '6-6';
+        
     }
 }
