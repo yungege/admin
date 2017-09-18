@@ -154,7 +154,7 @@ class Uploader
             //移动成功
             $this->stateInfo = $this->stateMap[0];
         }
-
+        
         // 此处需要将文件上传到七牛云
         $uploadMgr = new UploadManager();
         $uptoken = $this->getUpToken();
