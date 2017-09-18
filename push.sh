@@ -6,6 +6,6 @@ fi
 
 git pull
 git add --all
-git commit -m 't'
+git commit -m $msg
 git push origin master
 git pull

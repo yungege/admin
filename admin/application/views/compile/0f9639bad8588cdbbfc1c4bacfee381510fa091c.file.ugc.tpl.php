@@ -1,33 +1,59 @@
 <<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-07 11:03:56
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 16:03:25
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:60956036659b0b71c1fbba3-02225242%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:69418335859bf7dcd3e7426-23977569%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 =======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-07 13:41:49
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-15 16:48:20
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:180519064159b0dc1d514bd3-72008590%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> f50fedec77a2cda7929bcb8ada05efbed6ee7cd4
+<?php /*%%SmartyHeaderCode:135099773359bb93d4c3eeb2-04897170%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 15:37:03
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:159801406659bf779f64ffb3-80945927%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 56d373970c48c240640297505b3f1614f0320e22
+>>>>>>> 77cf38391b73e2dac4951fb936dda10b7bfa536e
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-      1 => 1503370315,
+<<<<<<< HEAD
+      1 => 1505473727,
+=======
+<<<<<<< HEAD
+      1 => 1505465296,
+=======
+      1 => 1505473621,
+>>>>>>> 56d373970c48c240640297505b3f1614f0320e22
+>>>>>>> 77cf38391b73e2dac4951fb936dda10b7bfa536e
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1504661091,
+<<<<<<< HEAD
+      1 => 1505720839,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '60956036659b0b71c1fbba3-02225242',
+  'nocache_hash' => '69418335859bf7dcd3e7426-23977569',
 =======
-  'nocache_hash' => '180519064159b0dc1d514bd3-72008590',
->>>>>>> f50fedec77a2cda7929bcb8ada05efbed6ee7cd4
+<<<<<<< HEAD
+      1 => 1505445554,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '135099773359bb93d4c3eeb2-04897170',
+=======
+      1 => 1505473621,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '159801406659bf779f64ffb3-80945927',
+>>>>>>> 56d373970c48c240640297505b3f1614f0320e22
+>>>>>>> 77cf38391b73e2dac4951fb936dda10b7bfa536e
   'function' => 
   array (
   ),
@@ -40,14 +66,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
-  'unifunc' => 'content_59b0b71c26cae5_39416632',
+  'unifunc' => 'content_59bf7dcd58a279_72710739',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b0b71c26cae5_39416632')) {function content_59b0b71c26cae5_39416632($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59bf7dcd58a279_72710739')) {function content_59bf7dcd58a279_72710739($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 =======
-  'unifunc' => 'content_59b0dc1d590840_22649352',
+<<<<<<< HEAD
+  'unifunc' => 'content_59bb93d4d00fa2_16955312',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59b0dc1d590840_22649352')) {function content_59b0dc1d590840_22649352($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> f50fedec77a2cda7929bcb8ada05efbed6ee7cd4
+<?php if ($_valid && !is_callable('content_59bb93d4d00fa2_16955312')) {function content_59bb93d4d00fa2_16955312($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_59bf779f6b5e24_92331052',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59bf779f6b5e24_92331052')) {function content_59bf779f6b5e24_92331052($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 56d373970c48c240640297505b3f1614f0320e22
+>>>>>>> 77cf38391b73e2dac4951fb936dda10b7bfa536e
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -93,6 +125,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             font-size: 11px;
             border-top: 1px solid #ccc;
         }
+        .tt-page{
+            margin-top: 15px;
+        }
         .tt-page a{
             padding: 6px 12px;
             margin-right: 5px; 
@@ -124,12 +159,65 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="/static/ugc/css/jPicture.min.css">
+
 <style type="text/css">
 .date_start,.date_end{
     float: left!important;
 }
 .datetimepicker{
     margin-top: 50px!important;
+}
+.fix-box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.fix-box-inner{
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    padding: 15px;
+    border: #ccc;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -200px;
+}
+.fix-box-picture{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.fix-box-inner-picture{
+    width: 530px;
+    height: 430px;
+    background-color: white;
+    padding: 15px;
+    border: #ccc;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -200px;
+}
+#imgBox{
+    width:500px;
+    height:300px;
+}
+
+
 }
 </style>
 
@@ -190,8 +278,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <a href="/index.html"><i class="fa fa-fw fa-dashboard"></i> HOME PAGE</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="user" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2){?>in<?php }?>">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#m-user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="m-user" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2){?>in<?php }?>">
                             <li>
                                 <a href="/user/student" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">学生管理</a>
                             </li>
@@ -244,6 +332,14 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
+                            <li>
+                                <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
+                            </li>
+                            <li>
+                                <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
+                            </li>
+
+
                         </ul>
                     </li>
                     <li>
@@ -273,8 +369,11 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/push/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">年级推送</a>
                             </li>
-                             <li>
+                            <li>
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台消息推送</a>
                             </li>
                            <!--  <li>
                                 <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
@@ -410,7 +509,7 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                         <th>作业类型</th>
                         <th>锻炼项目</th>
                         <th>能量/千卡</th>
-                        <th>跑步路程/m</th>
+                        <th>跑步路程/km</th>
                         <th>开始时间</th>
                         <th>结束时间</th>
                         <th>提交时间</th>
@@ -428,6 +527,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars[
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
                     <tr data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-userId="<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
 ">
                         <td>姓名：<a href="/user/student?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
 "><?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
@@ -447,7 +547,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <td>
                             <?php echo $_smarty_tpl->tpl_vars['row']->value['distance'];?>
 <br/>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['avgSpeed']){?>平均速度：<?php echo $_smarty_tpl->tpl_vars['row']->value['avgSpeed'];?>
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['avgSpeed']){?>均速：<?php echo $_smarty_tpl->tpl_vars['row']->value['avgSpeed'];?>
  km/h<?php }?>
                         </td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['starttime'],"%Y-%m-%d");?>
@@ -462,11 +562,20 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['originaltime'],"%Y-%m-%d");?>
 </td>
                         <td><?php if ($_smarty_tpl->tpl_vars['row']->value['isdelay']==2){?><span class="label label-danger">是</span><?php }else{ ?><span class="label label-default">否</span><?php }?></td>
-                        <td><button data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-sm btn-info">查看</button></td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['htype']!=3&&$_smarty_tpl->tpl_vars['row']->value['share']==1){?><button data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-sm btn-info">查看</button><?php }?></td>
-                        <td></td>
+                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['exciseimg']!=1){?><button data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" class="btn btn-sm btn-info btn_picture">查看</button><?php }?></td>
+                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['htype']!=3&&$_smarty_tpl->tpl_vars['row']->value['share']==1){?><button data-userid="<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
+" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" class="btn btn-sm btn-info btn_share">查看</button><?php }?></td>     
+                        <td>
+                        <?php if ($_smarty_tpl->tpl_vars['row']->value['mark']==null){?><button  data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-mark="<?php echo $_smarty_tpl->tpl_vars['row']->value['mark'];?>
+" class="btn btn-sm btn-info btn_mark">标记</button>
+                        <?php }else{ ?> 
+                            <button  data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-mark="<?php echo $_smarty_tpl->tpl_vars['row']->value['mark'];?>
+" class="btn btn-sm btn-info btn_mark">已标记</button></td>
+                        <?php }?>
                     </tr>
                     <?php } ?>
                 </tbody>
@@ -476,6 +585,46 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
 
         </div>
+    </div>
+</div>
+
+<div class="fix-box">
+    <div class="fix-box-inner">
+        <h4>标记作业</h4>
+        <form class="form" name="mark">
+            <div>
+            
+                <div class="form-group">
+                    <textarea id="description" class="form-control" rows="8"  name="description" ><?php echo $_smarty_tpl->tpl_vars['mark']->value;?>
+</textarea>
+                </div>
+                <span class="add-on"><i class="icon-remove"></i></span>
+                <span class="add-on"><i class="icon-th"></i></span>
+            </div>   
+           <input type="hidden" name="trainId">
+            <div class="inner-btn">
+                <button id="sub" type="button" class="btn btn-primary">确定</button>
+                <button id="can" type="button" class="btn btn-default">取消</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="fix-box-picture">
+    <div class="fix-box-inner-picture">
+        <h4>锻炼图片</h4>
+            <div>  
+                <div id="imgBox">
+                    <div id="imgBoxInner">
+
+                    </div>
+                </div>               
+            </div>   
+            <br>           
+            <div class="inner-btn-picture">
+                <button id="subReturn" type="button" class="btn btn-primary">返回</button>
+            </div>
+        
     </div>
 </div>
 
@@ -510,7 +659,9 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/static/ugc/index.js"></script>
+<script type="text/javascript" src="/static/ugc/js/index.js"></script>
+<script type="text/javascript" src="/static/ugc/js/jPicture.min.js"></script>
+
 
 </body>
 </html><?php }} ?>

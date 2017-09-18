@@ -1,0 +1,30 @@
+<?php
+class Dao_TrainingDoneOutside extends Db_Mongodb {
+
+	protected $table = 'training_done_outside';
+	protected $fields = [
+
+		'train_name' => '',
+		'train_start' => 0,
+		'train_end' => 0,
+		'actioncout' => 0,
+		'burncalories' => 0.00,
+		'comment_text' => '',
+		'exercising' => [],
+		'userid' => '',
+		'originaltime' => 0, 
+	];
+
+	public function __construct(){
+
+		parent::__construct();
+	}
+
+	public static function getInstance(){
+
+		if(!self::$instance instanceof self){
+			self::$instance = new self();
+		}
+	}
+	
+}

@@ -1,8 +1,14 @@
 <?php
 class Service_Push_PAllModel extends BasePageService {
 
+	protected $messageModel;
+	protected $message = [];
+	protected $theme;
+	protected $content;
+
 	public function __construct(){
 		
+		$this->messageModel = Dao_MessageModel::getInstance();
 	}
 
 	protected function __declare(){
@@ -12,17 +18,32 @@ class Service_Push_PAllModel extends BasePageService {
 	protected function __execute($req){
 
 		$req = $req['post'];
-		$data['theme'] = trim($req['theme']);
-		$data['content'] = trim($req['description']);
+		$this->theme = trim($req['theme']);
+		$this->content = trim($req['description']);
 
-		if(empty($data['theme']) || empty($data['content'])){
+		if(empty($this->theme) || empty($this->content)){
 			$this->errNo = REQUEST_PARAMS_ERROR;
 			return false;
 		}
 
+		$this->message['platform'] = 4;
+		$this->message['type'] = 3;
+		$this->message['title'] = $this->theme;
+		$this->message['to_id'] = 0;
+		$this->message['sendtime'] = time();
+		$this->message['content'] = $this->content;
+		$this->message['status'] = 1;
+		$this->message['ctime'] = time();
+		$this->message['utime'] = time();
+		$result = $this->messageModel->insert($this->message);
+		if($result === false){
+			$this->errNo = PUSH_FAULT;
+			return false;
+		}
+
 		$uMPush = new UmengPush();
-		$retIos = $uMPush->iosPushByBroadcast($data['theme'],$data['content']);
-		$retAndroid = $uMPush->androidPushByBroadcast($data['theme'],$data['content']);
+		$retIos = $uMPush->iosPushByBroadcast($this->theme,$this->content);
+		$retAndroid = $uMPush->androidPushByBroadcast($this->theme,$this->content);
 
 		return ;
 

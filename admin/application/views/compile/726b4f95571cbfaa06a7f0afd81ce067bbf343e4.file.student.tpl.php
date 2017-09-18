@@ -1,23 +1,59 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 20:54:09
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15182827559bfc1f1443bb8-24459722%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 17:25:03
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:124877540059bf90efcbfbe4-45137879%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 16:56:00
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:46071453559bf8a2044d694-87782288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 7a0df4073f2b866524f74430e14f7557b4fca5ea
+>>>>>>> dfd4edf417022a6cc8db9f96f1260ce43f07faed
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
+<<<<<<< HEAD
       1 => 1504798504,
+=======
+<<<<<<< HEAD
+      1 => 1505212132,
+=======
+      1 => 1505212197,
+>>>>>>> 7a0df4073f2b866524f74430e14f7557b4fca5ea
+>>>>>>> dfd4edf417022a6cc8db9f96f1260ce43f07faed
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1504619863,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '15182827559bfc1f1443bb8-24459722',
+=======
+<<<<<<< HEAD
+      1 => 1505720828,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '124877540059bf90efcbfbe4-45137879',
+=======
+      1 => 1505720839,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '46071453559bf8a2044d694-87782288',
+>>>>>>> 7a0df4073f2b866524f74430e14f7557b4fca5ea
+>>>>>>> dfd4edf417022a6cc8db9f96f1260ce43f07faed
   'function' => 
   array (
   ),
@@ -29,9 +65,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59bfc1f14b0b06_04420926',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59bfc1f14b0b06_04420926')) {function content_59bfc1f14b0b06_04420926($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_59bf90efd32ac0_96075278',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59bf90efd32ac0_96075278')) {function content_59bf90efd32ac0_96075278($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_59bf8a205d43d7_98383360',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59bf8a205d43d7_98383360')) {function content_59bf8a205d43d7_98383360($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 7a0df4073f2b866524f74430e14f7557b4fca5ea
+>>>>>>> dfd4edf417022a6cc8db9f96f1260ce43f07faed
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -77,6 +125,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             font-size: 11px;
             border-top: 1px solid #ccc;
         }
+        .tt-page{
+            margin-top: 15px;
+        }
         .tt-page a{
             padding: 6px 12px;
             margin-right: 5px; 
@@ -107,7 +158,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
+    .datetimepicker{
+        margin-top: 50px;
+    }
     .add-ugc-fix,.add-mobile-fix{
         width: 100%;
         height: 100%;
@@ -120,16 +175,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     }
     .add-ugc-inner{
         width: 500px;
-        height: 200px;
+        height: auto;
         border: 1px solid white;
         background-color: white;
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top: -100px;
+        margin-top: -15%;
         margin-left: -250px;
         border-radius: 4px;
-        padding: 10px;
+        padding: 15px;
     }
     .add-mobile-inner{
         height: 340px;
@@ -149,7 +204,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     .glyphicon-remove:hover{
         color: red;
     }
-    
+    .run-type,.normal{
+        display: none;
+    }
+    .homework-inner{
+        border: 1px solid #31b0d5;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    .checkbox-inline+.checkbox-inline, .radio-inline+.radio-inline,.radio-inline{
+        margin-left: 0;
+        margin-right: 10px;
+    }
 </style>
 
 </head>
@@ -209,8 +276,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <a href="/index.html"><i class="fa fa-fw fa-dashboard"></i> HOME PAGE</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="user" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2){?>in<?php }?>">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#m-user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="m-user" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2){?>in<?php }?>">
                             <li>
                                 <a href="/user/student" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">学生管理</a>
                             </li>
@@ -263,6 +330,14 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
+                            <li>
+                                <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
+                            </li>
+                            <li>
+                                <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
+                            </li>
+
+
                         </ul>
                     </li>
                     <li>
@@ -292,8 +367,11 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/push/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">年级推送</a>
                             </li>
-                             <li>
+                            <li>
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台消息推送</a>
                             </li>
                            <!--  <li>
                                 <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
@@ -322,7 +400,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 用户管理 / 学生管理
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 用户管理 / 学生管理<a href="/student/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加学生</a>
                             </li>
                         </ol>
                     </div>
@@ -506,9 +584,10 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <td>
                             <a href="/sport/ugc?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " class="btn btn-default btn-xs">UGC</a>
-                            <a data-uid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+                            <a data-uname="<?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
+" data-uid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-cid="<?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classid'];?>
-" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补交UGC</a>
+" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补作业</a>
                         </td>
                     </tr>
                     <?php } ?>
@@ -526,13 +605,43 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
 <div class="add-ugc-fix">
     <div class="add-ugc-inner">
-        <h4>补交UGC</h4>
+        <h4>补作业&emsp;&emsp;<small>学生信息：<span id="uname"></span></small></h4>
         <i class="glyphicon glyphicon-remove"></i>
         <form name="ugc" class="ugcform">
             <div class="form-group">
-                <label for="hid">作业 ID</label>
-                <input type="text" class="form-control" id="hid" placeholder="">
+                <label>作业时间</label>
+                <input readonly="true" data-type="time" name="wtime" type="text" class="form-control wtime date" data-date-format="yyyy-mm-dd" value="<?php echo $_smarty_tpl->tpl_vars['today']->value;?>
+" />
             </div>
+            <div class="form-group">
+                <label>作业类型</label>
+                <select class="form-control htype" name="htype">
+                    <option value="-1">请选择作业类型</option>
+                    <option value="1">翻转课堂</option>
+                    <option value="2">身体素质</option>
+                    <option value="3">跑步作业</option>
+                </select>
+            </div>
+
+            <!-- 翻转课堂 + 身体素质 -->
+            <div class="normal">
+                <label>请选择作业</label><br/>
+                <div class="homework-inner">
+                </div>
+            </div>
+            
+            <!-- 跑步 -->
+            <div class="run-type">
+                <div class="form-group">
+                    <label>跑步时长(sec)</label>
+                    <input class="form-control" type="text" name="time_cost">
+                </div>
+                <div class="form-group">
+                    <label>跑步距离(km)</label>
+                    <input class="form-control" type="text" name="distance">
+                </div>
+            </div>
+            
             <button id="sub" type="button" class="btn btn-default pull-right">Submit</button>
         </form>
     </div>
@@ -600,6 +709,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
+<script src="/static/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript">
 
 !(function(){
@@ -610,20 +720,39 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             this.addUgc();
             this.clickCloseFix();
             this.postData();
+            this.initDate();
+            this.matchHomework();
+
             this.resetForm();
 
             this.addRelation();
             this.postRelationData();
         },
 
+        initDate: function(){
+            var me = this;
+            me.dateBtn.datetimepicker({
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                minView: 2,
+                endDate: new Date(),
+            })
+        },
+
         getDom: function(){
             this.ugcBtn = $('.addUgc');
             this.form = $('form[name=ugc]');
-            this.hid = $('#hid');
             this.fixBox = $('.add-ugc-fix');
             this.closeFixBoxBtn = $('.glyphicon-remove');
             this.subBtn = $('#sub');
             this.resetBtn = $('.reset-btn');
+            this.dateBtn = $('.wtime');
+            this.uname = $('#uname');
+            this.htype = $('.htype');
+            this.runTypeDiv = $('.run-type');
+            this.normalDiv = $('.normal');
+            this.workarea = $('.homework-inner');
 
             this.reBtn = $('.add-mobile');
             this.reFixBox = $('.add-mobile-fix');
@@ -635,6 +764,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             this.reForm = $('form[name=relation]');
         },
 
+        // 清楚查询条件
         resetForm: function(){
             var me = this;
             me.resetBtn.unbind().bind('click', function(){
@@ -642,16 +772,17 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             });
         },
 
-        showDialog: function(){
-            var me = this;
-
-            me.fixBox.fadeIn(200);
-        },
-
         hideDialog: function(){
             var me = this;
 
             me.fixBox.fadeOut(200);
+            me.subBtn.attr('data-uid', '');
+            me.subBtn.attr('data-cid', '');
+            me.uname.text('');
+            me.workarea.html('');
+            me.form[0].reset();
+            me.normalDiv.slideUp(200);
+            me.runTypeDiv.slideUp(200);
 
             me.reFixBox.fadeOut(200);
             me.hideUid.val('');
@@ -671,11 +802,87 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
             me.ugcBtn.unbind().bind('click', function(){
                 var uid = $.trim($(this).data('uid')),
-                    cid = $.trim($(this).data('cid'));
+                    cid = $.trim($(this).data('cid')),
+                    sname = $.trim($(this).data('uname'))
                 me.subBtn.attr('data-uid', uid);
                 me.subBtn.attr('data-cid', cid);
-                me.showDialog();
+                me.uname.text(sname);
+                
+                me.fixBox.fadeIn(200);
             })
+        },
+
+        // 根据时间和作业类型匹配作业信息
+        matchHomework: function(){
+            var me = this;
+
+            // date
+            me.dateBtn.on('changeDate', function(){
+                var htype = me.htype.val();
+                me.xhrGetHomework(htype);
+            });
+
+            // htype
+            me.htype.on('change', function(){
+                me.xhrGetHomework($(this).val());
+            })
+        },
+
+        xhrGetHomework: function(type){
+            var me = this;
+            var uid = me.subBtn.attr('data-uid'),
+                cid = me.subBtn.attr('data-cid'),
+                date = me.dateBtn.val(),
+                work = [
+                    '翻转课堂作业',
+                    '身体素质作业',
+                ];
+
+            if(type == -1){
+                me.normalDiv.slideUp(100);
+                me.runTypeDiv.slideUp(100);
+                me.workarea.html('');
+                return;
+            }
+            else if(type == 3){
+                me.normalDiv.hide();
+                me.runTypeDiv.slideDown(100);
+                me.workarea.html('');
+                me.subBtn.show();
+                return;
+            }
+            else{
+                me.runTypeDiv.hide();
+
+                if(!date || (type != 2 && type != 1)){
+                    me.workarea.html('');
+                    return;
+                };
+                me.normalDiv.slideDown(100);
+
+                $.get(
+                    '/homework/match?cid='+cid+'&uid='+uid+'&type='+type+'&date='+date,
+                    function(json){
+                        if(json.data.works.length == 0){
+                            me.workarea.html('该学生在 ' + date + ' 无 ' + work[type-1]);
+                            me.subBtn.hide();
+                        }
+                        else{
+                            var checkBox = '';
+                            for(var i in json.data.works){
+                                checkBox = '<h5>'+(parseInt(i)+1)+'、'+json.data.works[i].name+'</h5>';
+                                $.each(json.data.works[i].projects, function(k,v){
+                                    var kval = json.data.works[i]._id+'|'+v.sku_id+'|'+v.calorie+'|'+v.time+'|'+v.action;
+                                    checkBox += '<label class="radio-inline"><input type="radio" name="h-pid" value="'+kval+'">' + v.name+'('+v.calorie+'千卡)' + '</label>';
+                                });
+                                
+                            }
+                            me.workarea.html(checkBox);
+                            me.subBtn.show();
+                        }
+                    }
+                );
+            }
         },
 
         addRelation: function(){
@@ -720,18 +927,21 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 aj = null;
             me.subBtn.unbind().bind('click', function(){
                 var uid = $.trim($(this).data('uid')),
-                    cid = $.trim($(this).data('cid')),
-                    hid = $.trim(me.hid.val());
-                
-                if(!uid || !cid || !hid){
+                    cid = $.trim($(this).data('cid'));
+
+                if(!uid || !cid){
                     alert('参数错误.');
                     return false;
                 }
 
+                var data = me.form.serialize() + '&uid='+uid;
+                
+
                 aj = $.ajax({
-                    type: 'GET',
+                    type: 'POST',
                     dataType: 'json',
-                    url: '/user/addUgc?uid=' + uid + '&cid=' + cid + '&hid=' + hid,
+                    url: '/user/addUgc',
+                    data: data,
                     success: function(json){
                         if(json.errCode == 0){
                             window.location = "/sport/ugc?uid=" + uid;

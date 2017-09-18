@@ -11,6 +11,8 @@ class Service_User_RegisterModel extends BasePageService {
         13161486949,
         18513886256,
         17701306902,
+        18600024371,
+        18210085688,
     ];
 
     public function __construct() {

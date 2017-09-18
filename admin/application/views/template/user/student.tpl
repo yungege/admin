@@ -1,7 +1,11 @@
 {%extends file="common/page/layout.tpl"%} 
 {%block name="title"%}天天向尚管理后台{%/block%}
 {%block name="css"%}
+<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
+    .datetimepicker{
+        margin-top: 50px;
+    }
     .add-ugc-fix,.add-mobile-fix{
         width: 100%;
         height: 100%;
@@ -14,16 +18,16 @@
     }
     .add-ugc-inner{
         width: 500px;
-        height: 200px;
+        height: auto;
         border: 1px solid white;
         background-color: white;
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top: -100px;
+        margin-top: -15%;
         margin-left: -250px;
         border-radius: 4px;
-        padding: 10px;
+        padding: 15px;
     }
     .add-mobile-inner{
         height: 340px;
@@ -43,10 +47,22 @@
     .glyphicon-remove:hover{
         color: red;
     }
-    
+    .run-type,.normal{
+        display: none;
+    }
+    .homework-inner{
+        border: 1px solid #31b0d5;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    .checkbox-inline+.checkbox-inline, .radio-inline+.radio-inline,.radio-inline{
+        margin-left: 0;
+        margin-right: 10px;
+    }
 </style>
 {%/block%}
-{%block name="bread"%}用户管理 / 学生管理{%/block%}
+{%block name="bread"%}用户管理 / 学生管理<a href="/student/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加学生</a>{%/block%}
 {%block name="content"%}
 <div class="row">
     <div class="col-lg-12">
@@ -184,7 +200,7 @@
                         <!-- <td></td> -->
                         <td>
                             <a href="/sport/ugc?uid={%$row._id%}" class="btn btn-default btn-xs">UGC</a>
-                            <a data-uid="{%$row._id%}" data-cid="{%$row.classinfo.classid%}" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补交UGC</a>
+                            <a data-uname="{%$row.username%}" data-uid="{%$row._id%}" data-cid="{%$row.classinfo.classid%}" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补作业</a>
                         </td>
                     </tr>
                     {%/foreach%}
@@ -201,13 +217,42 @@
 
 <div class="add-ugc-fix">
     <div class="add-ugc-inner">
-        <h4>补交UGC</h4>
+        <h4>补作业&emsp;&emsp;<small>学生信息：<span id="uname"></span></small></h4>
         <i class="glyphicon glyphicon-remove"></i>
         <form name="ugc" class="ugcform">
             <div class="form-group">
-                <label for="hid">作业 ID</label>
-                <input type="text" class="form-control" id="hid" placeholder="">
+                <label>作业时间</label>
+                <input readonly="true" data-type="time" name="wtime" type="text" class="form-control wtime date" data-date-format="yyyy-mm-dd" value="{%$today%}" />
             </div>
+            <div class="form-group">
+                <label>作业类型</label>
+                <select class="form-control htype" name="htype">
+                    <option value="-1">请选择作业类型</option>
+                    <option value="1">翻转课堂</option>
+                    <option value="2">身体素质</option>
+                    <option value="3">跑步作业</option>
+                </select>
+            </div>
+
+            <!-- 翻转课堂 + 身体素质 -->
+            <div class="normal">
+                <label>请选择作业</label><br/>
+                <div class="homework-inner">
+                </div>
+            </div>
+            
+            <!-- 跑步 -->
+            <div class="run-type">
+                <div class="form-group">
+                    <label>跑步时长(sec)</label>
+                    <input class="form-control" type="text" name="time_cost">
+                </div>
+                <div class="form-group">
+                    <label>跑步距离(km)</label>
+                    <input class="form-control" type="text" name="distance">
+                </div>
+            </div>
+            
             <button id="sub" type="button" class="btn btn-default pull-right">Submit</button>
         </form>
     </div>
@@ -248,6 +293,7 @@
 {%/block%}
 
 {%block name="js"%}
+<script src="/static/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript">
 
 !(function(){
@@ -258,20 +304,39 @@
             this.addUgc();
             this.clickCloseFix();
             this.postData();
+            this.initDate();
+            this.matchHomework();
+
             this.resetForm();
 
             this.addRelation();
             this.postRelationData();
         },
 
+        initDate: function(){
+            var me = this;
+            me.dateBtn.datetimepicker({
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                minView: 2,
+                endDate: new Date(),
+            })
+        },
+
         getDom: function(){
             this.ugcBtn = $('.addUgc');
             this.form = $('form[name=ugc]');
-            this.hid = $('#hid');
             this.fixBox = $('.add-ugc-fix');
             this.closeFixBoxBtn = $('.glyphicon-remove');
             this.subBtn = $('#sub');
             this.resetBtn = $('.reset-btn');
+            this.dateBtn = $('.wtime');
+            this.uname = $('#uname');
+            this.htype = $('.htype');
+            this.runTypeDiv = $('.run-type');
+            this.normalDiv = $('.normal');
+            this.workarea = $('.homework-inner');
 
             this.reBtn = $('.add-mobile');
             this.reFixBox = $('.add-mobile-fix');
@@ -283,6 +348,7 @@
             this.reForm = $('form[name=relation]');
         },
 
+        // 清楚查询条件
         resetForm: function(){
             var me = this;
             me.resetBtn.unbind().bind('click', function(){
@@ -290,16 +356,17 @@
             });
         },
 
-        showDialog: function(){
-            var me = this;
-
-            me.fixBox.fadeIn(200);
-        },
-
         hideDialog: function(){
             var me = this;
 
             me.fixBox.fadeOut(200);
+            me.subBtn.attr('data-uid', '');
+            me.subBtn.attr('data-cid', '');
+            me.uname.text('');
+            me.workarea.html('');
+            me.form[0].reset();
+            me.normalDiv.slideUp(200);
+            me.runTypeDiv.slideUp(200);
 
             me.reFixBox.fadeOut(200);
             me.hideUid.val('');
@@ -319,11 +386,87 @@
 
             me.ugcBtn.unbind().bind('click', function(){
                 var uid = $.trim($(this).data('uid')),
-                    cid = $.trim($(this).data('cid'));
+                    cid = $.trim($(this).data('cid')),
+                    sname = $.trim($(this).data('uname'))
                 me.subBtn.attr('data-uid', uid);
                 me.subBtn.attr('data-cid', cid);
-                me.showDialog();
+                me.uname.text(sname);
+                
+                me.fixBox.fadeIn(200);
             })
+        },
+
+        // 根据时间和作业类型匹配作业信息
+        matchHomework: function(){
+            var me = this;
+
+            // date
+            me.dateBtn.on('changeDate', function(){
+                var htype = me.htype.val();
+                me.xhrGetHomework(htype);
+            });
+
+            // htype
+            me.htype.on('change', function(){
+                me.xhrGetHomework($(this).val());
+            })
+        },
+
+        xhrGetHomework: function(type){
+            var me = this;
+            var uid = me.subBtn.attr('data-uid'),
+                cid = me.subBtn.attr('data-cid'),
+                date = me.dateBtn.val(),
+                work = [
+                    '翻转课堂作业',
+                    '身体素质作业',
+                ];
+
+            if(type == -1){
+                me.normalDiv.slideUp(100);
+                me.runTypeDiv.slideUp(100);
+                me.workarea.html('');
+                return;
+            }
+            else if(type == 3){
+                me.normalDiv.hide();
+                me.runTypeDiv.slideDown(100);
+                me.workarea.html('');
+                me.subBtn.show();
+                return;
+            }
+            else{
+                me.runTypeDiv.hide();
+
+                if(!date || (type != 2 && type != 1)){
+                    me.workarea.html('');
+                    return;
+                };
+                me.normalDiv.slideDown(100);
+
+                $.get(
+                    '/homework/match?cid='+cid+'&uid='+uid+'&type='+type+'&date='+date,
+                    function(json){
+                        if(json.data.works.length == 0){
+                            me.workarea.html('该学生在 ' + date + ' 无 ' + work[type-1]);
+                            me.subBtn.hide();
+                        }
+                        else{
+                            var checkBox = '';
+                            for(var i in json.data.works){
+                                checkBox = '<h5>'+(parseInt(i)+1)+'、'+json.data.works[i].name+'</h5>';
+                                $.each(json.data.works[i].projects, function(k,v){
+                                    var kval = json.data.works[i]._id+'|'+v.sku_id+'|'+v.calorie+'|'+v.time+'|'+v.action;
+                                    checkBox += '<label class="radio-inline"><input type="radio" name="h-pid" value="'+kval+'">' + v.name+'('+v.calorie+'千卡)' + '</label>';
+                                });
+                                
+                            }
+                            me.workarea.html(checkBox);
+                            me.subBtn.show();
+                        }
+                    }
+                );
+            }
         },
 
         addRelation: function(){
@@ -368,18 +511,21 @@
                 aj = null;
             me.subBtn.unbind().bind('click', function(){
                 var uid = $.trim($(this).data('uid')),
-                    cid = $.trim($(this).data('cid')),
-                    hid = $.trim(me.hid.val());
-                
-                if(!uid || !cid || !hid){
+                    cid = $.trim($(this).data('cid'));
+
+                if(!uid || !cid){
                     alert('参数错误.');
                     return false;
                 }
 
+                var data = me.form.serialize() + '&uid='+uid;
+                
+
                 aj = $.ajax({
-                    type: 'GET',
+                    type: 'POST',
                     dataType: 'json',
-                    url: '/user/addUgc?uid=' + uid + '&cid=' + cid + '&hid=' + hid,
+                    url: '/user/addUgc',
+                    data: data,
                     success: function(json){
                         if(json.errCode == 0){
                             window.location = "/sport/ugc?uid=" + uid;

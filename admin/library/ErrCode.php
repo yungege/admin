@@ -160,6 +160,8 @@ define('ACTION_TYPE_EMPTY',910);                //没有你想要的动作类型
 define('TRAINING_SUBMIT_ERROR',911);            //锻炼提交过于频繁
 define('TRAINING_BJ_ERROR',912);                //当天作业已经补交过
 define('HOMEWORK_NOT_EXISTS', 913);             //无匹配作业
+define('TRAINING_MASK_FAULT',914);              //锻炼标记失败
+
 
 // 推送
 define('PUSH_FAULT',1101);                      //推送失败
@@ -550,6 +552,9 @@ function setError($errorCode, $errorMsg=''){
             break;
         case HOMEWORK_NOT_EXISTS:
             $msg = '无匹配作业';
+            break;
+        case TRAINING_MASK_FAULT;
+            $msg = '锻炼标记失败';
             break;
 
         case PUSH_FAULT:

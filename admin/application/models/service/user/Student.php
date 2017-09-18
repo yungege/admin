@@ -18,10 +18,13 @@ class Service_User_StudentModel extends BasePageService {
     }
 
     protected function __declare() {
-        
+        $this->declareCheckXss = true;
     }
 
     protected function __execute($req) {
+        $this->checkXss($req);
+
+        $this->resData['today'] = date('Y-m-d');
         $match = [];
         $req = $req['get'];
         $this->resData['grade'] = Dao_UserModel::$grade;
@@ -108,6 +111,9 @@ class Service_User_StudentModel extends BasePageService {
             }
             if(!empty($mobileArr)){
                 $row['mobileno'] = implode('<br/>', $mobileArr);
+            }
+            else{
+                $row['mobileno'] = '<span style="display:inline-block;margin-bottom:2px;" class="label label-warning">无记录</span>';
             }
 
             $lastlogin = '';

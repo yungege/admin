@@ -116,6 +116,8 @@ class Dao_UserModel extends Db_Mongodb{
             'logintype' => '',
             'phone' => 0,
         ],
+        'upgrade_year' => 0, // 升级年级信息(升级年-月) 脚本专用
+        'create_time' => 0 , //创建时间
     ];
     
     protected function __construct(){
@@ -207,6 +209,15 @@ class Dao_UserModel extends Db_Mongodb{
 
         $options['limit'] = 0;
         
+        return $this->query($where, $options);
+    }
+
+    public function getUserList(array $where,array $fields){
+        
+        $fields = $this->filterFields($fields);
+        if(!empty($fields)){
+            $options['projection'] = $fields;
+        }
         return $this->query($where, $options);
     }
 

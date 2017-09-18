@@ -20,6 +20,7 @@ class Dao_ClassinfoModel extends Db_Mongodb {
         'pushtime'      => [],               // 推送时间
         'exerciseproject' => [],        // 锻炼项目信息:[{type(锻炼类型),exerciseid(锻炼项目id),createtime(锻炼项目创建时间),endtime(项目截止时间),weekdoneno(周计划锻炼次数)}......]
         'branch_school' => null,
+        'createtime' => 0,
 	];
 
     protected function __construct(){
@@ -148,6 +149,27 @@ class Dao_ClassinfoModel extends Db_Mongodb {
         $test = $this->query($match2, $options);
 
         return array_merge($branch, $test);
+    }
+
+    public function getClassInfoByTime($monthStartTime, &$historyClass = [], &$schoolId = ''){
+        $classId = '';
+        
+        if(empty($historyClass)) return $classId;
+
+        foreach ($historyClass as $hv) {
+            $gradeStart = strtotime($hv['date']);
+            $dateTimeArr = explode('-', $hv['date']);
+            $dateTimeArr[0] += 1;
+            $gradeEnd = strtotime(implode('-', $dateTimeArr).' 00:00:00');
+
+            if($monthStartTime >= $gradeStart && $monthStartTime < $gradeEnd){
+                $classId = $hv['classid'];
+                $schoolId = $hv['schoolid'];
+                break;
+            }
+        }
+
+        return $classId;
     }
     
 }

@@ -2,12 +2,65 @@
 {%block name="title"%}天天向尚管理后台{%/block%}
 {%block name="css"%}
 <link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="/static/ugc/css/jPicture.min.css">
+
 <style type="text/css">
 .date_start,.date_end{
     float: left!important;
 }
 .datetimepicker{
     margin-top: 50px!important;
+}
+.fix-box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.fix-box-inner{
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    padding: 15px;
+    border: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -200px;
+}
+.fix-box-picture{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.fix-box-inner-picture{
+    width: 530px;
+    height: 430px;
+    background-color: white;
+    padding: 15px;
+    border: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -200px;
+}
+#imgBox{
+    width:500px;
+    height:300px;
+}
+
+
 }
 </style>
 {%/block%}
@@ -100,7 +153,7 @@
                         <th>作业类型</th>
                         <th>锻炼项目</th>
                         <th>能量/千卡</th>
-                        <th>跑步路程/m</th>
+                        <th>跑步路程/km</th>
                         <th>开始时间</th>
                         <th>结束时间</th>
                         <th>提交时间</th>
@@ -113,7 +166,7 @@
                 </thead>
                 <tbody>
                     {%foreach from=$list item=row%}
-                    <tr data-id="{%$row._id%}">
+                    <tr data-id="{%$row._id%}" data-userId="{%$row.userid%}">
                         <td>姓名：<a href="/user/student?uid={%$row.userid%}">{%$row.username%}</a><br/>昵称：<a href="/user/student?uid={%$row.userid%}">{%$row.nickname%}</a></td>
                         <td><a href="/user/student?uid={%$row.userid%}"><img src="{%$row.iconurl%}?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></a></td>
                         <td>{%$row.hname%}</td>
@@ -121,16 +174,20 @@
                         <td>{%$row.burncalories%}</td>
                         <td>
                             {%$row.distance%}<br/>
-                            {%if $row.avgSpeed%}平均速度：{%$row.avgSpeed%} km/h{%/if%}
+                            {%if $row.avgSpeed%}均速：{%$row.avgSpeed%} km/h{%/if%}
                         </td>
                         <td>{%$row.starttime|date_format:"%Y-%m-%d"%}<br>{%$row.starttime|date_format:"%H:%M:%S"%}</td>
                         <td>{%$row.endtime|date_format:"%Y-%m-%d"%}<br>{%$row.endtime|date_format:"%H:%M:%S"%}</td>
                         <td>{%$row.createtime|date_format:"%Y-%m-%d"%}<br>{%$row.createtime|date_format:"%H:%M:%S"%}</td>
                         <td>{%$row.originaltime|date_format:"%Y-%m-%d"%}</td>
                         <td>{%if $row.isdelay == 2%}<span class="label label-danger">是</span>{%else%}<span class="label label-default">否</span>{%/if%}</td>
-                        <td><button data-id="{%$row._id%}" class="btn btn-sm btn-info">查看</button></td>
-                        <td>{%if $row.htype != 3 and $row.share == 1%}<button data-id="{%$row._id%}" class="btn btn-sm btn-info">查看</button>{%/if%}</td>
-                        <td></td>
+                        <td>{%if $row.exciseimg != 1%}<button data-id="{%$row._id%}" class="btn btn-sm btn-info btn_picture">查看</button>{%/if%}</td>
+                        <td>{%if $row.htype != 3 and $row.share == 1%}<button data-userid="{%$row.userid%}" data-id="{%$row._id%}" class="btn btn-sm btn-info btn_share">查看</button>{%/if%}</td>     
+                        <td>
+                        {%if $row.mark == null%}<button  data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">标记</button>
+                        {%else%} 
+                            <button  data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">已标记</button></td>
+                        {%/if%}
                     </tr>
                     {%/foreach%}
                 </tbody>
@@ -142,9 +199,50 @@
     </div>
 </div>
 
+<div class="fix-box">
+    <div class="fix-box-inner">
+        <h4>标记作业</h4>
+        <form class="form" name="mark">
+            <div>
+            
+                <div class="form-group">
+                    <textarea id="description" class="form-control" rows="8"  name="description" >{%$mark%}</textarea>
+                </div>
+                <span class="add-on"><i class="icon-remove"></i></span>
+                <span class="add-on"><i class="icon-th"></i></span>
+            </div>   
+           <input type="hidden" name="trainId">
+            <div class="inner-btn">
+                <button id="sub" type="button" class="btn btn-primary">确定</button>
+                <button id="can" type="button" class="btn btn-default">取消</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="fix-box-picture">
+    <div class="fix-box-inner-picture">
+        <h4>锻炼图片</h4>
+            <div>  
+                <div id="imgBox">
+                    <div id="imgBoxInner">
+
+                    </div>
+                </div>               
+            </div>   
+            <br>           
+            <div class="inner-btn-picture">
+                <button id="subReturn" type="button" class="btn btn-primary">返回</button>
+            </div>
+        
+    </div>
+</div>
+
 {%/block%}
 
 {%block name="js"%}
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/static/ugc/index.js"></script>
+<script type="text/javascript" src="/static/ugc/js/index.js"></script>
+<script type="text/javascript" src="/static/ugc/js/jPicture.min.js"></script>
+
 {%/block%}

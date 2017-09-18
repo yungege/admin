@@ -1,23 +1,41 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-08-28 10:55:28
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-12 15:08:08
          compiled from "/var/www/admin/admin/application/views/template/class/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:80050407159a386201c0070-11100100%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:41565061259b787d82e04c4-29678954%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-11 13:36:50
+         compiled from "/var/www/admin/admin/application/views/template/class/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:172472452359b620f244ca47-80014685%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 0250f8631a4490176b21f4cb323fe462c6bb06e6
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '47f3c465d19b6e4eb353312b6f7fa98038af585a' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/class/add.tpl',
-      1 => 1503411493,
+<<<<<<< HEAD
+      1 => 1504258102,
+=======
+      1 => 1503370676,
+>>>>>>> 0250f8631a4490176b21f4cb323fe462c6bb06e6
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1503888525,
+<<<<<<< HEAD
+      1 => 1505113102,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '80050407159a386201c0070-11100100',
+  'nocache_hash' => '41565061259b787d82e04c4-29678954',
+=======
+      1 => 1504865546,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '172472452359b620f244ca47-80014685',
+>>>>>>> 0250f8631a4490176b21f4cb323fe462c6bb06e6
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59a38620270098_68124599',
+<<<<<<< HEAD
+  'unifunc' => 'content_59b787d8378e32_99411154',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a38620270098_68124599')) {function content_59a38620270098_68124599($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59b787d8378e32_99411154')) {function content_59b787d8378e32_99411154($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59b620f24a1db3_80287579',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59b620f24a1db3_80287579')) {function content_59b620f24a1db3_80287579($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 0250f8631a4490176b21f4cb323fe462c6bb06e6
 <html lang="en">
 
 <head>
@@ -76,6 +100,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             font-size: 11px;
             border-top: 1px solid #ccc;
         }
+<<<<<<< HEAD
+=======
+        .tt-page{
+            margin-top: 15px;
+        }
+>>>>>>> 0250f8631a4490176b21f4cb323fe462c6bb06e6
         .tt-page a{
             padding: 6px 12px;
             margin-right: 5px; 
@@ -239,7 +269,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
 
                             <li>
-                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">统计数据</a>
+                                <a href="/stat/statistics" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">统计数据</a>
                             </li>
 
                             <li>
@@ -249,6 +279,15 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
+<<<<<<< HEAD
+                             <li>
+                                <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
+                            </li>
+=======
+                            <!--  <li>
+                                <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
+                            </li> -->
+>>>>>>> 0250f8631a4490176b21f4cb323fe462c6bb06e6
                         </ul>
                     </li>
                     <li>
@@ -264,8 +303,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     </li>
 
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-apple"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5){?>in<?php }?>">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-paper-plane"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
                             <li>
                                 <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
                             </li>
@@ -422,7 +461,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-   <!--  <script src="/static/widget/alertBox/alert.js"></script> -->
+    <script src="/static/widget/alertBox/alert.js"></script>
 
     <script type="text/javascript">
         !(function(){

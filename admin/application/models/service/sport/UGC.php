@@ -34,10 +34,13 @@ class Service_Sport_UGCModel extends BasePageService {
     }
 
     protected function __declare() {
+        $this->declareCheckXss = true;
         
     }
 
     protected function __execute($req) {
+        $this->checkXss($req);
+        
         $req = $req['get'];
         $where = [];
 
@@ -83,6 +86,8 @@ class Service_Sport_UGCModel extends BasePageService {
             'distance',
             'isdelay',
             'homeworkid',
+            'mark',
+            'exciseimg'
         ];
 
         $offset = ($req['pn'] - 1) * self::PAGESIZE;
@@ -133,7 +138,10 @@ class Service_Sport_UGCModel extends BasePageService {
             $row['burncalories'] = number_format($row['burncalories'], 2, '.', '');
             $row['distance'] = $row['htype'] == 3 ? number_format($row['distance'], 2, '.', '') : '';
             $row['share'] = isset($shareInfo[$row['_id']]) ? 1 : 0;
+            $row['exciseimg'] = empty($row['exciseimg']) ? 1 : 0;
             $row['avgSpeed'] = ($row['htype'] == 3 && (float)$row['distance'] > 0) ? number_format(($row['distance']/(($row['endtime']-$row['starttime'])/3.6)), 2, '.', '') : 0;
+            if($row['htype'] == 3)
+                $row['distance'] = sprintf('%.2f', $row['distance']/1000);
 
             // 检验是否旧数据 做兼容处理
             if($row['htype'] != 3){

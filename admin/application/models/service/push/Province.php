@@ -20,8 +20,8 @@ class Service_Push_ProvinceModel extends BasePageService {
 		$provinceOptions['projection'] = ['name'];
 		$this->provinceList = $provinceModel->query($provinceWhere,$provinceOptions);
 
-		var_dump($this->provinceList);
-		exit;
+		// var_dump($this->provinceList);
+		// exit;
 
 		return $this->resData;
 
