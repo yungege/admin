@@ -10,7 +10,10 @@ class Service_Push_AppModel extends BasePageService {
     }
 
     protected function __execute($req){
-        return ['uptoken' => getUploadToken()];
+        return [
+            'uptoken' => getUploadToken(),
+            'pageTag' => '6-6'
+        ];
     }
 
 }
