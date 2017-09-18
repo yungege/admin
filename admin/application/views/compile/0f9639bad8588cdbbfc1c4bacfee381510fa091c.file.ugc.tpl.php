@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 16:03:25
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:69418335859bf7dcd3e7426-23977569%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-15 16:48:20
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:135099773359bb93d4c3eeb2-04897170%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -7,6 +12,7 @@
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:159801406659bf779f64ffb3-80945927%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 >>>>>>> 56d373970c48c240640297505b3f1614f0320e22
+>>>>>>> 77cf38391b73e2dac4951fb936dda10b7bfa536e
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -14,15 +20,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
 <<<<<<< HEAD
+      1 => 1505473727,
+=======
+<<<<<<< HEAD
       1 => 1505465296,
 =======
       1 => 1505473621,
 >>>>>>> 56d373970c48c240640297505b3f1614f0320e22
+>>>>>>> 77cf38391b73e2dac4951fb936dda10b7bfa536e
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
+      1 => 1505720839,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '69418335859bf7dcd3e7426-23977569',
+=======
 <<<<<<< HEAD
       1 => 1505445554,
       2 => 'file',
@@ -36,6 +53,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '159801406659bf779f64ffb3-80945927',
 >>>>>>> 56d373970c48c240640297505b3f1614f0320e22
+>>>>>>> 77cf38391b73e2dac4951fb936dda10b7bfa536e
   'function' => 
   array (
   ),
@@ -48,6 +66,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
+  'unifunc' => 'content_59bf7dcd58a279_72710739',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59bf7dcd58a279_72710739')) {function content_59bf7dcd58a279_72710739($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+<<<<<<< HEAD
   'unifunc' => 'content_59bb93d4d00fa2_16955312',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59bb93d4d00fa2_16955312')) {function content_59bb93d4d00fa2_16955312($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
@@ -56,6 +79,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59bf779f6b5e24_92331052')) {function content_59bf779f6b5e24_92331052($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 >>>>>>> 56d373970c48c240640297505b3f1614f0320e22
+>>>>>>> 77cf38391b73e2dac4951fb936dda10b7bfa536e
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -254,8 +278,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <a href="/index.html"><i class="fa fa-fw fa-dashboard"></i> HOME PAGE</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="user" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2){?>in<?php }?>">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#m-user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="m-user" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2){?>in<?php }?>">
                             <li>
                                 <a href="/user/student" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">学生管理</a>
                             </li>
