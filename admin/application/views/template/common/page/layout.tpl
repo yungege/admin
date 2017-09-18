@@ -129,8 +129,8 @@
                         <a href="/index.html"><i class="fa fa-fw fa-dashboard"></i> HOME PAGE</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="user" class="collapse {%if $tag.0 == 2%}in{%/if%}">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#m-user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="m-user" class="collapse {%if $tag.0 == 2%}in{%/if%}">
                             <li>
                                 <a href="/user/student" class="{%if $tag.0 == 2 && $tag.1 == 1%}cy-child-active{%/if%}">学生管理</a>
                             </li>
@@ -220,8 +220,11 @@
                             <li>
                                 <a href="/push/grade" class="{%if $tag.0 == 6 && $tag.1 == 4%}cy-child-active{%/if%}">年级推送</a>
                             </li>
-                             <li>
+                            <li>
                                 <a href="/push/class" class="{%if $tag.0 == 6 && $tag.1 == 5%}cy-child-active{%/if%}">班级推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/app" class="{%if $tag.0 == 6 && $tag.1 == 6%}cy-child-active{%/if%}">平台消息推送</a>
                             </li>
                            <!--  <li>
                                 <a href="/push/province" class="{%if $tag.0 == 6 && $tag.1 == 6%}cy-child-active{%/if%}">省推送</a>

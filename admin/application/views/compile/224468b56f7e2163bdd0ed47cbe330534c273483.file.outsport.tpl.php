@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-15 16:13:32
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 15:38:35
          compiled from "/var/www/admin/admin/application/views/template/upload/outsport.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:68467513059bb8bac592108-86680914%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:66746509459bf77fb6f0141-03699647%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '224468b56f7e2163bdd0ed47cbe330534c273483' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/upload/outsport.tpl',
-      1 => 1505452457,
+      1 => 1505473621,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1505445554,
+      1 => 1505473621,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '68467513059bb8bac592108-86680914',
+  'nocache_hash' => '66746509459bf77fb6f0141-03699647',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59bb8bac60b559_52257132',
+  'unifunc' => 'content_59bf77fb73cc64_02430017',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59bb8bac60b559_52257132')) {function content_59bb8bac60b559_52257132($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59bf77fb73cc64_02430017')) {function content_59bf77fb73cc64_02430017($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -306,8 +306,11 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/push/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">年级推送</a>
                             </li>
-                             <li>
+                            <li>
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
+                            </li>
+                            <li>
+                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台消息推送</a>
                             </li>
                            <!--  <li>
                                 <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
