@@ -1,59 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 20:54:09
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 21:13:01
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15182827559bfc1f1443bb8-24459722%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 17:25:03
-         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:124877540059bf90efcbfbe4-45137879%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 16:56:00
-         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:46071453559bf8a2044d694-87782288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 7a0df4073f2b866524f74430e14f7557b4fca5ea
->>>>>>> dfd4edf417022a6cc8db9f96f1260ce43f07faed
+<?php /*%%SmartyHeaderCode:125457162059bfc65d7641c3-79189384%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-<<<<<<< HEAD
-      1 => 1504798504,
-=======
-<<<<<<< HEAD
-      1 => 1505212132,
-=======
-      1 => 1505212197,
->>>>>>> 7a0df4073f2b866524f74430e14f7557b4fca5ea
->>>>>>> dfd4edf417022a6cc8db9f96f1260ce43f07faed
+      1 => 1505739311,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1504619863,
+      1 => 1505739311,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '15182827559bfc1f1443bb8-24459722',
-=======
-<<<<<<< HEAD
-      1 => 1505720828,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '124877540059bf90efcbfbe4-45137879',
-=======
-      1 => 1505720839,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '46071453559bf8a2044d694-87782288',
->>>>>>> 7a0df4073f2b866524f74430e14f7557b4fca5ea
->>>>>>> dfd4edf417022a6cc8db9f96f1260ce43f07faed
+  'nocache_hash' => '125457162059bfc65d7641c3-79189384',
   'function' => 
   array (
   ),
@@ -65,21 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59bfc1f14b0b06_04420926',
+  'unifunc' => 'content_59bfc65d7cd490_95735615',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59bfc1f14b0b06_04420926')) {function content_59bfc1f14b0b06_04420926($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_59bf90efd32ac0_96075278',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59bf90efd32ac0_96075278')) {function content_59bf90efd32ac0_96075278($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-  'unifunc' => 'content_59bf8a205d43d7_98383360',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59bf8a205d43d7_98383360')) {function content_59bf8a205d43d7_98383360($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> 7a0df4073f2b866524f74430e14f7557b4fca5ea
->>>>>>> dfd4edf417022a6cc8db9f96f1260ce43f07faed
+<?php if ($_valid && !is_callable('content_59bfc65d7cd490_95735615')) {function content_59bfc65d7cd490_95735615($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
