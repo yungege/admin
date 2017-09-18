@@ -6,9 +6,9 @@ class Service_Upload_UserModel extends BasePageService {
     protected $classname;
     protected $classid;
     protected $schoolId;
+    protected $classInfos = [];
     protected $schoolInfo = [];
     protected $classInfo = [];
-    // protected $classInfos = [];
     protected $userInfo = [];
 
     protected $grades = [
@@ -69,41 +69,50 @@ class Service_Upload_UserModel extends BasePageService {
 
         $class = [];
         unset($datas[1]);
-        $classNames = [];
-        foreach($datas as $data){
+        // $classNames = [];
+        // foreach($datas as $data){
 
-            $className = trim($data[4]) . trim($data[5]);
-            $classNames[$className] =  $className;
-        }
+        //     $className = trim($data[4]) . trim($data[5]);
+        //     $classNames[$className] =  $className;
+        // }
 
-        foreach($classNames as $className){
-            $this->classInfo = [];
-            preg_match_all('/(\d+)年级(\d+)班/',$className,$classData);
-            $this->classInfo['is_test'] = 0;
-            $this->classInfo['name'] = $className;
-            $this->classInfo['schoolname'] = $this->schoolInfo['name'];
-            $this->classInfo['schoolid'] = $this->schoolInfo['_id'];
-            $this->classInfo['createtime'] = time();
-            $this->classInfo['grade'] = 11;
-            $this->classInfo['classno'] = $classData[2][0];
-            $this->classInfo['createtime'] = time();
-            $classId = $this->classModel->insert($this->classInfo);
-            $this->classInfo['classid'] = $classId; 
-            $this->classInfos[$className] = $this->classInfo;     
-        }
+        $classWhere = ['grade' => 11,
+            'schoolid' => $this->schoolId,
+        ];
+        $options['projection'] = [
+            'name' => 1,'_id' =>1
+        ];
+
+        $this->classInfos = $this->classModel->query($classWhere,$options);
+        $this->classInfos = array_column($this->classInfos,null,'name');
+
+        // foreach($classNames as $className){
+        //     $this->classInfo = [];
+        //     preg_match_all('/(\d+)年级(\d+)班/',$className,$classData);
+        //     $this->classInfo['is_test'] = 0;
+        //     $this->classInfo['name'] = $className;
+        //     $this->classInfo['schoolname'] = $this->schoolInfo['name'];
+        //     $this->classInfo['schoolid'] = $this->schoolInfo['_id'];
+        //     $this->classInfo['createtime'] = time();
+        //     $this->classInfo['grade'] = 11;
+        //     $this->classInfo['classno'] = $classData[2][0];
+        //     $this->classInfo['createtime'] = time();
+        //     $classId = $this->classModel->insert($this->classInfo);
+        //     $this->classInfo['classid'] = $classId; 
+        //     $this->classInfos[$className] = $this->classInfo;     
+        // }
 
         $this->userInfo['type'] = 1;
         $this->userInfo['profile'] = '好好学习，天天向上';
         $this->userInfo['createtime'] = time();
         $this->userInfo['schoolinfo']['schoolid'] = $this->schoolInfo['_id'];
         $this->userInfo['schoolinfo']['schoolname'] = $this->schoolInfo['name'];
-        // $this->userInfo['admissiontime'] = 
 
         foreach($datas as $data){
             $this->userInfo['username'] = trim($data[0]);
             $this->userInfo['nickname'] = trim($data[0]);
             $this->userInfo['classinfo']['classname'] = trim($data[4]) . trim($data[5]);
-            $this->userInfo['classinfo']['classid'] = $this->classInfos[$this->userInfo['classinfo']['classname']]['classid'];
+            $this->userInfo['classinfo']['classid'] = $this->classInfos[$this->userInfo['classinfo']['classname']]['_id'];
             $this->userInfo['grade'] = $this->classInfos[$this->userInfo['classinfo']['classname']]['grade'];
             $this->userInfo['birthday'] = strtotime(trim($data[6]));
             $this->userInfo['create_time'] = time();
