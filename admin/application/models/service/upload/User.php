@@ -11,6 +11,9 @@ class Service_Upload_UserModel extends BasePageService {
     // protected $classInfos = [];
     protected $userInfo = [];
 
+    protected $grades = [
+        '1年级' => 11,
+    ];
     protected $classModel;
     protected $schoolModel;
     protected $userModel;
@@ -81,7 +84,7 @@ class Service_Upload_UserModel extends BasePageService {
             $this->classInfo['schoolname'] = $this->schoolInfo['name'];
             $this->classInfo['schoolid'] = $this->schoolInfo['_id'];
             $this->classInfo['createtime'] = time();
-            $this->classInfo['grade'] = (int)$classData[1][0];
+            $this->classInfo['grade'] = 11;
             $this->classInfo['classno'] = $classData[2][0];
             $this->classInfo['createtime'] = time();
             $classId = $this->classModel->insert($this->classInfo);
