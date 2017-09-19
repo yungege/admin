@@ -105,7 +105,7 @@ class Service_User_AddUgcModel extends BasePageService {
             !preg_match("/\w+/", $pid) ||
             !is_numeric($cal) || empty($cal) ||
             !preg_match("/^[1-9]\d+$/", $time) ||
-            !preg_match("/^[1-9]\d+$/", $count)
+            !preg_match("/^[1-9]\d{0,1}$/", $count)
         ){
             throw new Exception("作业信息错误.", -1);
         }
