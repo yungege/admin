@@ -35,6 +35,7 @@ class Dao_TrainingdoneModel extends Db_Mongodb {
 
     protected function __construct(){
         parent::__construct();
+        $this->redis = Cache_CacheRedis::getInstance();
     }
 
     /**
@@ -102,6 +103,106 @@ class Dao_TrainingdoneModel extends Db_Mongodb {
         }
          
         return $this->queryOne($where,$options);
+    }
+
+    public function getListByMonth(array $match, array $fields = [], array $options = [], string $monthDate, &$resList){
+        $fields = $this->filterFields($fields);
+
+        $options['limit'] = 0;
+        $options['projection'] = empty($fields) ? $this->fields : $fields;
+
+        $list = $this->query($match, $options);
+        if(empty($list)) return;
+
+        $calorie = 0;
+        $trainCount = count($list);
+
+        foreach($list as $hData){
+            $trainData = [];
+
+            if($hData['htype'] == 1 || $hData['htype'] == 2){
+                if((int)$hData['originaltime'] <= 0){
+                    continue;
+                }
+                // 获取项目的锻炼时间
+                $timeCost = (int)$this->projectSkuModel->getInfoById(
+                    $hData['trainingid'] ,
+                    ['time_cost']
+                )['time_cost'];
+                if(empty($timeCost)){
+                    $timeCost = $hData['endtime'] - $hData['starttime'];
+                }
+                
+                $trainData['trainId'] = $hData['_id'];
+                $trainData['pName'] = $hData['htype'] == 1 ? '翻转课堂' : '身体素质锻炼';
+                $trainData['pId'] = (string)$hData['trainingid'];
+                $trainData['pInterval'] = (int)$timeCost;
+                $trainData['trainingImg'] = array_shift($hData['exciseimg']);
+                if(empty($trainData['trainingImg']) && !empty($hData['imginfo'])){
+                    $trainData['trainingImg'] = $hData['imginfo'][0]['gifUrl'];
+                }
+            }
+            else{
+                $trainData['trainId'] = $hData['_id'];
+                $trainData['pName'] = "跑步锻炼";
+                $trainData['pInterval'] = $hData['endtime'] - $hData['starttime'];
+                $trainData['pId'] = (string)$hData['_id'];
+                $trainData['trainingImg'] = array_shift($hData['exciseimg']);
+                if(empty($trainData['trainingImg']) && !empty($hData['mapurl'])){
+                    $trainData['trainingImg'] = $hData['mapurl'];
+                }
+            }
+            
+            $trainData['calorie'] = $hData['burncalories'];
+            $trainData['finishTime'] = $hData['endtime'];
+            $trainData['hType'] = $hData['htype'];
+            $trainData['hId'] = (string)$hData['homeworkid'];
+            $trainData['originalTime'] = $hData['originaltime'];
+
+            $calorie += (float)$trainData['calorie'];
+            $resList['list'][] = $trainData;
+
+            // 写入缓存
+            $this->addCacheDataByMonth($match['userid'], $monthDate, $trainData);
+        }
+
+        $resList['calorie'] = $calorie;
+        $resList['trainCount'] = $trainCount;
+    }
+
+    /**
+     * zset 类型(有序集合)
+     * @Author    422909231@qq.com
+     * @DateTime  2017-07-05
+     * @version   [version]
+     * @return    [type]           [description]
+     */
+    public function getCacheDataByMonth(string $uid, string $monthDate, int $pageNo = 1, int $pageSize = 10){
+        $calorie = 0;
+        $resList = [];
+        $start = ($pageNo - 1) * $pageSize;
+        $end = $start + $pageSize;
+
+        $redisKey = Tools::getRedisKey($uid.'_'.$monthDate, 'train_history');
+        $list = $this->redis->zRevrange($redisKey);
+        $count = count($list);
+        if($count == 0) return [];
+
+        foreach ($list as $key => $row) {
+            $item = [];
+            $item = json_decode($row, true);
+            $calorie += (float)$item['calorie'];
+            if($key >= $start && $key < $end){
+                $resList[] = $item;
+            }
+        }
+
+        return [
+            'pageCount'  => ceil($count / $pageSize),
+            'trainCount' => $count,
+            'calorie'    => $calorie,
+            'list'       => $resList,
+        ];
     }
 
 }

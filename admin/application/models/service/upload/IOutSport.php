@@ -5,6 +5,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
 	protected $trainOutModel; 
 	protected $userModel;
     protected $trainDoneOutsideModel;
+    protected $trainModel;
 	protected $resData = [];
     protected $startTime;
     protected $endTime;
@@ -19,6 +20,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
 		$this->trainOutModel = Dao_TrainingHomeworkModel::getInstance();
         $this->trainDoneOutsideModel = Dao_TrainingDoneOutsideModel::getInstance();
 		$this->userModel = Dao_UserModel::getInstance();
+        $this->trainModel = Dao_TrainingdoneModel::getInstance();
 	}
 
 	protected function __declare(){
@@ -74,9 +76,9 @@ class Service_Upload_IOutSportModel extends BasePageService {
     		$this->userData = $this->userModel->queryOne($userWhere,$options);
 
             if(empty($this->userData) || empty($data[2]) ||empty($data[5])){
-                
-                $err = file_put_contents('/tmp/test.txt',$data ,FILE_APPEND);
-                $err = file_put_contents('/tmp/test.txt',"\r\n" ,FILE_APPEND);
+                $data[8] = "信息不全";
+                $err = file_put_contents('/tmp/upload.txt',$data ,FILE_APPEND);
+                $err = file_put_contents('/tmp/upload.txt',"\r\n" ,FILE_APPEND);
                 continue;
             }
             preg_match_all('/(\d+)\.(\d+)\.(\d+)/',$data[3],$start_time);
@@ -85,12 +87,33 @@ class Service_Upload_IOutSportModel extends BasePageService {
             preg_match_all('/(\d+)\.(\d+)\.(\d+)/',$data[4],$end_time);
             $this->endTime = $end_time[1][0] . '-' . $end_time[2][0] . '-' . $end_time[3][0];
             $this->endTime = strtotime($this->endTime);
+            if($this->endTime > 1505577600 || $this->endTime == false){
+                $this->endTime = 1505577600;
+            }
+
+            if($this->startTime < 1483200000 || $this->startTime == false){
+                $this->startTime = 1483200000;
+            }
 
             if($this->endTime < $this->startTime){
-                $err = file_put_contents('/tmp/test.txt',$data ,FILE_APPEND);
-                $err = file_put_contents('/tmp/test.txt',"\r\n" ,FILE_APPEND);
+                $data[8] = '时间不对';
+                $err = file_put_contents('/tmp/upload.txt',$data ,FILE_APPEND);
+                $err = file_put_contents('/tmp/upload.txt',"\r\n" ,FILE_APPEND);
                 continue;
             }
+
+            $workData['train_name'] = (string)$data[2];
+            $workData['start_time'] = $this->startTime;
+            $workData['end_time'] = $this->endTime;
+            $workData['done_no'] = $data[5];
+            $workData['userid'] = (string)$this->userData['_id'];
+            $this->workData = $workData;
+            $this->workId = $this->trainOutModel->insert($workData);
+
+            $trainSchool['homework_id'] = (string)$this->workId;
+            $trainSchool['school_name'] = (string)$data[6];
+            $trainSchool['mobile'] = $data[7];
+            $this->trainSchoolModel->insert($trainSchool);
 
             if(preg_match('/^每周\d次$/',$data[5])){
                 $this->type = 1;
@@ -103,28 +126,16 @@ class Service_Upload_IOutSportModel extends BasePageService {
                 $this->weekNo($data);
             }else{
                 $this->type = 4;
-                $err = file_put_contents('/tmp/test.txt',$data ,FILE_APPEND);
-                $err = file_put_contents('/tmp/test.txt',"\r\n" ,FILE_APPEND);
+                $data[8] = "格式不对";
+                $err = file_put_contents('/tmp/upload.txt',$data ,FILE_APPEND);
+                $err = file_put_contents('/tmp/upload.txt',"\r\n" ,FILE_APPEND);
                 continue;
             }
-
-            $workData['train_name'] = (string)$data[2];
-            $workData['start_time'] = $this->startTime;
-            $workData['end_time'] = $this->endTime;
-            $workData['done_no'] = $data[5];
-            $workData['userid'] = (string)$this->userData['_id'];
-            $this->workId = $this->trainOutModel->insert($workData);
-
-            $trainSchool['homework_id'] = (string)$this->workId;
-            $trainSchool['school_name'] = (string)$data[6];
-            $trainSchool['mobile'] = $data[7];
-            $this->trainSchoolModel->insert($trainSchool);
-
             unset($workData);
             unset($trainSchool);
             unset($data);
-            
     	}
+        
         return ture;
 
     }
@@ -143,16 +154,21 @@ class Service_Upload_IOutSportModel extends BasePageService {
         for($i = 1 ,$weekNo = $startDay;$startTime <= $this->endTime;$weekNo++,$i++){
 
             $doneOutside['htype'] = 4;
+            $doneOutside['userid'] = $this->userData['_id'];
             $doneOutside['starttime'] = $startTime + 8 * 3600;
             $doneOutside['endtime'] =  $doneOutside['starttime'] + 3600;
-            $doneOutside['actioncount'] = 1;
-            $doneOutside['burncalories'] = mt_rand(90,110);
-            $doneOutside['userid'] = $this->userData['_id'];
-            $doneOutside['originaltime'] = $startTime;
+            $doneOutside['createtime'] = $doneOutside['endtime'];
             $doneOutside['homeworkid'] = $this->workId;
-            $doneOutside['status'] = 0;
+            $doneOutside['projecttime'] = $doneOutside['endtime'] - $doneOutside['starttime'];
+            $doneOutside['burncalories'] = mt_rand(90,110);
             $doneOutside['exciseimg'] = ["https://oi7ro6pyq.qnssl.com/o_1bpq74tqm1vdj18dd118o1ko01mumd.jpg"];
-            $this->trainDoneOutsideModel->insert($doneOutside);
+            $doneOutside['commenttext'] = '兴趣班';
+            $doneOutside['status'] = 0;
+            $doneOutside['train_name'] = $this->workData['train_name'];    
+            $result = $this->trainDoneOutsideModel->insert($doneOutside);
+            // 写入缓存 后期加入消息队列
+            $monthDate = date('Y_m', $doneOutside['endtime']);
+            $this->addCache($this->userData['_id'], $monthDate, $result, $doneOutside);
 
             if($i == $weekDoneNo || $weekNo == 7){
                 $startTime = $startTime + 86400 * (8 - $weekNo);
@@ -180,16 +196,21 @@ class Service_Upload_IOutSportModel extends BasePageService {
         for($i = 1;$i <= $DoneNo;$i++){
           
             $doneOutside['htype'] = 4;
+            $doneOutside['userid'] = $this->userData['_id'];
             $doneOutside['starttime'] = $startTime + 8 * 3600;
             $doneOutside['endtime'] =  $doneOutside['starttime'] + 3600;
-            $doneOutside['actioncount'] = 1;
-            $doneOutside['burncalories'] = mt_rand(90,110);
-            $doneOutside['userid'] = $this->userData['_id'];
-            $doneOutside['originaltime'] = $startTime;
+            $doneOutside['createtime'] = $doneOutside['endtime'];
             $doneOutside['homeworkid'] = $this->workId;
-            $doneOutside['status'] = 0;
+            $doneOutside['projecttime'] = $doneOutside['endtime'] - $doneOutside['starttime'];;
+            $doneOutside['burncalories'] = mt_rand(90,110);
             $doneOutside['exciseimg'] = ["https://oi7ro6pyq.qnssl.com/o_1bpq74tqm1vdj18dd118o1ko01mumd.jpg"];
-            $this->trainDoneOutsideModel->insert($doneOutside);
+            $doneOutside['commenttext'] = '兴趣班';
+            $doneOutside['status'] = 0;
+            $doneOutside['train_name'] = $this->workData['train_name'];
+            $result = $this->trainDoneOutsideModel->insert($doneOutside);
+            // 写入缓存 后期加入消息队列
+            $monthDate = date('Y_m', $doneOutside['endtime']);
+            $this->addCache($this->userData['_id'], $monthDate, $result, $doneOutside);
             $startTime = $startTime + 86400;
         }
 
@@ -213,21 +234,65 @@ class Service_Upload_IOutSportModel extends BasePageService {
                 $beginTime = $startTime + $values * 86400;
                 if($beginTime >= $this->startTime && $beginTime <= $this->endTime){
                     $doneOutside['htype'] = 4;
+                    $doneOutside['userid'] = $this->userData['_id'];
                     $doneOutside['starttime'] = $beginTime + 8 * 3600;
                     $doneOutside['endtime'] =  $doneOutside['starttime'] + 3600;
-                    $doneOutside['actioncount'] = 1;
-                    $doneOutside['burncalories'] = mt_rand(90,110);
-                    $doneOutside['userid'] = $this->userData['_id'];
-                    $doneOutside['originaltime'] = $beginTime;
+                    $doneOutside['createtime'] = $doneOutside['endtime'];
                     $doneOutside['homeworkid'] = $this->workId;
-                    $doneOutside['status'] = 0;
+                    $doneOutside['projecttime'] = $doneOutside['endtime'] - $doneOutside['starttime'];;
+                    $doneOutside['burncalories'] = mt_rand(90,110);
                     $doneOutside['exciseimg'] = ["https://oi7ro6pyq.qnssl.com/o_1bpq74tqm1vdj18dd118o1ko01mumd.jpg"];
-                    $this->trainDoneOutsideModel->insert($doneOutside);
+                    $doneOutside['commenttext'] = '兴趣班';
+                    $doneOutside['status'] = 0;
+                    $doneOutside['train_name'] = $this->workData['train_name'];
+                    $result = $this->trainDoneOutsideModel->insert($doneOutside);
+                    // 写入缓存 后期加入消息队列
+                    $monthDate = date('Y_m', $doneOutside['endtime']);
+                    $this->addCache($this->userData['_id'], $monthDate, $result, $doneOutside);
                 }
             }  
         }
 
         return ture;
+    }
+
+    // 加入缓存 todo 要加入的月份（当前）如果没有缓存数据 需要当月所有数据放入缓存
+    protected function addCache($uId, $monthDate, $trainId, $data){
+
+        $cacheRes = $this->trainDoneOutsideModel->getCacheDataByMonth($uId, $monthDate);
+        if(empty($cacheRes)){
+            $firstDay = strtotime(date('Y-m-01', $data['endtime']));
+            $lastDay = strtotime(date('Y-m-t', $data['endtime']) . ' 23:59:59');
+            $hMap = [
+                'userid' => $uId,
+                'endtime' => ['$gte' => $firstDay, '$lte' => $lastDay]
+            ];
+
+            // 锻炼历史
+            $options = [
+                'sort' => ['endtime' => -1],
+            ];
+            $fields = ['htype','starttime','endtime','burncalories','originaltime','exciseimg','homeworkid','train_name'];
+            $resList = [];
+            $this->trainDoneOutsideModel->getListByMonth($hMap, $fields, $options, $monthDate, $resList);
+        }
+        else{
+            $pInterval = 3600;
+            if(empty($pInterval)) $pInterval = ($data['endtime'] - $data['starttime']);
+            $cacheData = [
+                "trainId" => $trainId,
+                "pName" => $this->workData['train_name'],
+                "pInterval" => 3600,
+                "pId" => "",
+                "trainingImg" => array_shift($data['exciseimg']),
+                "calorie" => $data['burncalories'],
+                "finishTime" => $data['endtime'],
+                "hType" => $data['htype'],
+                "hId" => $data['homeworkid'],
+                "originalTime" => strtotime(date('Y-m-d',$data['starttime'])),
+            ];
+            $this->trainDoneOutsideModel->addCacheDataByMonth($uId, $monthDate, $cacheData);
+        }
     }
 
     protected function importExcel($file,$ext) {

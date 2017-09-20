@@ -1783,4 +1783,21 @@ class Tools {
         return $dates;
     }
 
+    /**
+     * 获取redis缓存键
+     * @Author    422909231@qq.com
+     * @DateTime  2017-07-05
+     * @version   [version]
+     * @param     string           $uniqueFlag
+     * @param     string           $type  session homeword project action train_history
+     * @return
+     */
+    public static function getRedisKey($uniqueFlag, string $type = 'session'){
+        if(empty($uniqueFlag) || !preg_match("/\w+/", $uniqueFlag)){
+            throw new Exception("get redis key 'uniqueFlag' empty", -1);
+        }
+        $key = 'ttxs_redis_' . $type . '_' . $uniqueFlag;
+        return $key;
+    }
+
 }
