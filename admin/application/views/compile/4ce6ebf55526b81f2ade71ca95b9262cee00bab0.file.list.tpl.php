@@ -1,4 +1,37 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-19 09:41:30
+         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:159852747359c075ca9befa0-12670372%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
+    array (
+      0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
+      1 => 1505723139,
+      2 => 'file',
+    ),
+    '1af1c7811d93168106c85becc3c13354fe96fe45' => 
+    array (
+      0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+      1 => 1505722731,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '159852747359c075ca9befa0-12670372',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'userInfo' => 0,
+    'pageTag' => 0,
+    'tag' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_59c075caa171d3_66862472',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59c075caa171d3_66862472')) {function content_59c075caa171d3_66862472($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +42,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{%block name="title"%}{%/block%}</title>
+    <title>天天向尚管理后台</title>
 
     <!-- ico -->
     <link rel="icon" href="/static/imgs/favicon.ico" type="image/x-icon"/>
@@ -75,7 +108,11 @@
             width: 400px!important;
         }
     </style>
-    {%block name="css"%}{%/block%}
+    
+<style type="text/css">
+    
+</style>
+
 </head>
 
 <body>
@@ -104,12 +141,14 @@
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    {%if $userInfo.iconurl%}
-                    <img src="{%$userInfo.iconurl%}" alt="..." width="20" height="20" style="border-radius: 10px;">
-                    {%else%}
+                    <?php if ($_smarty_tpl->tpl_vars['userInfo']->value['iconurl']){?>
+                    <img src="<?php echo $_smarty_tpl->tpl_vars['userInfo']->value['iconurl'];?>
+" alt="..." width="20" height="20" style="border-radius: 10px;">
+                    <?php }else{ ?>
                     <i class="fa fa-user"></i>
-                    {%/if%}
-                    {%$userInfo.username%} <b class="caret"></b></a>
+                    <?php }?>
+                    <?php echo $_smarty_tpl->tpl_vars['userInfo']->value['username'];?>
+ <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
@@ -124,21 +163,23 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    {%$tag=('-'|explode:$pageTag)%}
-                    <li {%if $tag.0 == 1%} class="active" {%/if%}>
+                    <?php if (isset($_smarty_tpl->tpl_vars['tag'])) {$_smarty_tpl->tpl_vars['tag'] = clone $_smarty_tpl->tpl_vars['tag'];
+$_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['pageTag']->value)); $_smarty_tpl->tpl_vars['tag']->nocache = null; $_smarty_tpl->tpl_vars['tag']->scope = 0;
+} else $_smarty_tpl->tpl_vars['tag'] = new Smarty_variable((explode('-',$_smarty_tpl->tpl_vars['pageTag']->value)), null, 0);?>
+                    <li <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==1){?> class="active" <?php }?>>
                         <a href="/index.html"><i class="fa fa-fw fa-dashboard"></i> HOME PAGE</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#m-user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="m-user" class="collapse {%if $tag.0 == 2%}in{%/if%}">
+                        <ul id="m-user" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2){?>in<?php }?>">
                             <li>
-                                <a href="/user/student" class="{%if $tag.0 == 2 && $tag.1 == 1%}cy-child-active{%/if%}">学生管理</a>
+                                <a href="/user/student" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">学生管理</a>
                             </li>
                             <li>
-                                <a href="/user/class" class="{%if $tag.0 == 2 && $tag.1 == 2%}cy-child-active{%/if%}">班级管理</a>
+                                <a href="/user/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">班级管理</a>
                             </li>
                             <li>
-                                <a href="/user/school" class="{%if $tag.0 == 2 && $tag.1 == 3%}cy-child-active{%/if%}">学校管理</a>
+                                <a href="/user/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校管理</a>
                             </li>
                         </ul>
                     </li>
@@ -146,48 +187,48 @@
                         <a href="#" data-toggle="collapse" data-target="#sport">
                             <i class="fa fa-fw fa-bicycle"></i> 锻炼内容管理 <i class="fa fa-fw fa-caret-down pull-right"></i>
                         </a>
-                        <ul id="sport" class="collapse {%if $tag.0 == 3%}in{%/if%}">
+                        <ul id="sport" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3){?>in<?php }?>">
                             <li>
-                                <a href="/sport/homework" class="{%if $tag.0 == 3 && $tag.1 == 1%}cy-child-active{%/if%}">作业</a>
+                                <a href="/sport/homework" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">作业</a>
                             </li>
                             <li>
-                                <a href="/sport/project" class="{%if $tag.0 == 3 && $tag.1 == 2%}cy-child-active{%/if%}">锻炼方案</a>
+                                <a href="/sport/project" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">锻炼方案</a>
                             </li>
                             <li>
-                                <a href="/sport/action" class="{%if $tag.0 == 3 && $tag.1 == 3%}cy-child-active{%/if%}">动作</a>
+                                <a href="/sport/action" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">动作</a>
                             </li>
                             <!-- <li>
-                                <a href="/train/list" class="{%if $tag.0 == 3 && $tag.1 == 4%}cy-child-active{%/if%}">锻炼内容</a>
+                                <a href="/train/list" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==3&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">锻炼内容</a>
                             </li> -->
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#basic"><i class="fa fa-fw fa-bar-chart-o"></i> 运营管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="basic" class="collapse {%if $tag.0 == 4%}in{%/if%}">
+                        <ul id="basic" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4){?>in<?php }?>">
                             <li>
-                                <a href="/sport/banner" class="{%if $tag.0 == 4 && $tag.1 == 1%}cy-child-active{%/if%}">Banner</a>
+                                <a href="/sport/banner" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">Banner</a>
                             </li>
 
                             <li>
-                                <a href="/sport/ugc" class="{%if $tag.0 == 4 && $tag.1 == 2%}cy-child-active{%/if%}">UGC</a>
+                                <a href="/sport/ugc" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">UGC</a>
                             </li>
 
                             <li>
-                                <a href="/stat/statistics" class="{%if $tag.0 == 4 && $tag.1 == 3%}cy-child-active{%/if%}">统计数据</a>
+                                <a href="/stat/statistics" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">统计数据</a>
                             </li>
 
                             <li>
-                                <a href="#" class="{%if $tag.0 == 4 && $tag.1 == 4%}cy-child-active{%/if%}">运动圈精华</a>
+                                <a href="#" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">运动圈精华</a>
                             </li>
 
                             <li>
-                                <a href="/feedback/index" class="{%if $tag.0 == 4 && $tag.1 == 5%}cy-child-active{%/if%}">反馈建议</a>
+                                <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
                             <li>
-                                <a href="/upload/index" class="{%if $tag.0 == 4 && $tag.1 == 6%}cy-child-active{%/if%}">上传学生数据</a>
+                                <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
                             </li>
                             <li>
-                                <a href="/upload/outSport" class="{%if $tag.0 == 4 && $tag.1 == 7%}cy-child-active{%/if%}">上传课外活动数据</a>
+                                <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
                             </li>
 
 
@@ -195,59 +236,59 @@
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#app"><i class="fa fa-fw fa-apple"></i> 平台设置 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="app" class="collapse {%if $tag.0 == 5%}in{%/if%}">
+                        <ul id="app" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5){?>in<?php }?>">
                             <li>
-                                <a href="/version/index" class="{%if $tag.0 == 5 && $tag.1 == 1%}cy-child-active{%/if%}">APP版本列表</a>
+                                <a href="/version/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">APP版本列表</a>
                             </li>
                             <li>
-                                <a href="/version/add" class="{%if $tag.0 == 5 && $tag.1 == 2%}cy-child-active{%/if%}">发布新版本</a>
+                                <a href="/version/add" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==5&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">发布新版本</a>
                             </li>
                         </ul>
                     </li>
 
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#push"><i class="fa fa-fw fa-paper-plane"></i> 推送管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="push" class="collapse {%if $tag.0 == 6%}in{%/if%}">
+                        <ul id="push" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6){?>in<?php }?>">
                             <li>
-                                <a href="/push/all" class="{%if $tag.0 == 6 && $tag.1 == 1%}cy-child-active{%/if%}">全员推送</a>
+                                <a href="/push/all" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">全员推送</a>
                             </li>
                             <li>
-                                <a href="/push/user" class="{%if $tag.0 == 6 && $tag.1 == 2%}cy-child-active{%/if%}">个人推送</a>
+                                <a href="/push/user" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">个人推送</a>
                             </li>
                             <li>
-                                <a href="/push/school" class="{%if $tag.0 == 6 && $tag.1 == 3%}cy-child-active{%/if%}">学校推送</a>
+                                <a href="/push/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校推送</a>
                             </li>
                             <li>
-                                <a href="/push/grade" class="{%if $tag.0 == 6 && $tag.1 == 4%}cy-child-active{%/if%}">年级推送</a>
+                                <a href="/push/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">年级推送</a>
                             </li>
                             <li>
-                                <a href="/push/class" class="{%if $tag.0 == 6 && $tag.1 == 5%}cy-child-active{%/if%}">班级推送</a>
+                                <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
                             </li>
                             <li>
-                                <a href="/push/app" class="{%if $tag.0 == 6 && $tag.1 == 6%}cy-child-active{%/if%}">平台消息推送</a>
+                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台消息推送</a>
                             </li>
                            <!--  <li>
-                                <a href="/push/province" class="{%if $tag.0 == 6 && $tag.1 == 6%}cy-child-active{%/if%}">省推送</a>
+                                <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
                             </li>
                              <li>
-                                <a href="/push/city" class="{%if $tag.0 == 6 && $tag.1 == 7%}cy-child-active{%/if%}">市推送</a>
+                                <a href="/push/city" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">市推送</a>
                             </li>
                              <li>
-                                <a href="/push/district" class="{%if $tag.0 == 6 && $tag.1 == 8%}cy-child-active{%/if%}">区推送</a>
+                                <a href="/push/district" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==8){?>cy-child-active<?php }?>">区推送</a>
                             </li> -->
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#meau-man"><i class="glyphicon glyphicon-list"></i> 菜单及权限分配 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="meau-man" class="collapse {%if $tag.0 == 7%}in{%/if%}">
+                        <ul id="meau-man" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7){?>in<?php }?>">
                             <li>
-                                <a href="/meau/list" class="{%if $tag.0 == 7 && $tag.1 == 1%}cy-child-active{%/if%}">菜单管理</a>
+                                <a href="/meau/list" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">菜单管理</a>
                             </li>
                             <li>
-                                <a href="" class="{%if $tag.0 == 7 && $tag.1 == 2%}cy-child-active{%/if%}">角色管理</a>
+                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">角色管理</a>
                             </li>
                             <li>
-                                <a href="" class="{%if $tag.0 == 7 && $tag.1 == 3%}cy-child-active{%/if%}">权限分配</a>
+                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
                     </li>
@@ -266,14 +307,21 @@
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> {%block name="bread"%}{%/block%}
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 菜单管理
                             </li>
                         </ol>
                     </div>
                 </div>
 
                 <!-- 用户数据 -->
-                {%block name="content"%}{%/block%}
+                
+
+<div class="row">
+    <div class="col-lg-12">
+    </div>
+</div>
+
+
 
                 <!-- footer -->
                 <footer class="text-center">
@@ -302,6 +350,8 @@
         })()
     </script>
 
-    {%block name="js"%}{%/block%}
+    
+
+
 </body>
-</html>
+</html><?php }} ?>
