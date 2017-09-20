@@ -1,43 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 14:21:36
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-20 09:03:38
          compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:135164850559bf65f0f16227-14586651%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 14:19:28
-         compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:48580357659bf6570649323-75600646%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 12:36:11
-         compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:80879444059bf4d3b6a0150-94535372%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> b67880403968e5803806a80cd32cc79a6376836f
->>>>>>> 5e071f35da50df1e5b59fe2fdc289deac1048310
+<?php /*%%SmartyHeaderCode:160532687359c1be6aa1c7a0-96376299%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '40aa92acd3ad6c442774640e7d702a6b3a0a6d84' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/index/index.tpl',
-      1 => 1501062598,
+      1 => 1505194859,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1505710098,
+      1 => 1505720839,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '135164850559bf65f0f16227-14586651',
-=======
-<<<<<<< HEAD
-  'nocache_hash' => '48580357659bf6570649323-75600646',
-=======
-  'nocache_hash' => '80879444059bf4d3b6a0150-94535372',
->>>>>>> b67880403968e5803806a80cd32cc79a6376836f
->>>>>>> 5e071f35da50df1e5b59fe2fdc289deac1048310
+  'nocache_hash' => '160532687359c1be6aa1c7a0-96376299',
   'function' => 
   array (
   ),
@@ -49,21 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59bf65f1029f96_10009780',
+  'unifunc' => 'content_59c1be6ab08dd2_49686384',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59bf65f1029f96_10009780')) {function content_59bf65f1029f96_10009780($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_59bf65707613d7_33056037',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59bf65707613d7_33056037')) {function content_59bf65707613d7_33056037($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59bf4d3b6f58f3_83731229',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59bf4d3b6f58f3_83731229')) {function content_59bf4d3b6f58f3_83731229($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> b67880403968e5803806a80cd32cc79a6376836f
->>>>>>> 5e071f35da50df1e5b59fe2fdc289deac1048310
+<?php if ($_valid && !is_callable('content_59c1be6ab08dd2_49686384')) {function content_59c1be6ab08dd2_49686384($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -198,8 +166,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                         <a href="/index.html"><i class="fa fa-fw fa-dashboard"></i> HOME PAGE</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
-                        <ul id="user" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2){?>in<?php }?>">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#m-user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="m-user" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2){?>in<?php }?>">
                             <li>
                                 <a href="/user/student" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==2&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">学生管理</a>
                             </li>

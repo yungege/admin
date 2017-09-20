@@ -8,7 +8,7 @@ class Dao_TrainingHomeworkModel extends Db_Mongodb {
 		'train_name' => '',                  //锻炼名字
 		'start_time' => '',                  //开始时间
 		'end_time' => '',                    //结束时间
-		'week_done_no' => 0,                 //周锻炼次数
+		'done_no' => '',                 //周锻炼次数
 		'userid' => '',                      //用户ID
 	];
 

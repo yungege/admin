@@ -1,5 +1,7 @@
 <?php
-class Service_Upload_IOutSportModel extends BasePageService {
+include_once "Cli.php";
+$app->execute(['Uploadoutside','init']);
+class Uploadoutside {
 
 	protected $trainSchoolModel;
 	protected $trainOutModel; 
@@ -13,19 +15,12 @@ class Service_Upload_IOutSportModel extends BasePageService {
     protected $userData;
     protected $workId;
 
-	public function __construct(){
+	protected function init(){
 
-		$this->trainSchoolModel = Dao_SchoolInfoTrainingModel::getInstance();
-		$this->trainOutModel = Dao_TrainingHomeworkModel::getInstance();
+        $this->trainSchoolModel = Dao_SchoolInfoTrainingModel::getInstance();
+        $this->trainOutModel = Dao_TrainingHomeworkModel::getInstance();
         $this->trainDoneOutsideModel = Dao_TrainingDoneOutsideModel::getInstance();
-		$this->userModel = Dao_UserModel::getInstance();
-	}
-
-	protected function __declare(){
-
-	}
-
-	protected function __execute($req){
+        $this->userModel = Dao_UserModel::getInstance();
         set_time_limit(0);
 		$req = $req['post'];
         $_FILES = $_FILES[0];
@@ -73,12 +68,12 @@ class Service_Upload_IOutSportModel extends BasePageService {
     		$options['projection'] = ['_id' => 1];
     		$this->userData = $this->userModel->queryOne($userWhere,$options);
 
-            if(empty($this->userData) || empty($data[2]) ||empty($data[5])){
+            // if(empty($userData) || empty($data[2]) ||empty($data[5])){
                 
-                $err = file_put_contents('/tmp/test.txt',$data ,FILE_APPEND);
-                $err = file_put_contents('/tmp/test.txt',"\r\n" ,FILE_APPEND);
-                continue;
-            }
+            //     $err = file_put_contents('/tmp/test.txt',$data ,FILE_APPEND);
+            //     $err = file_put_contents('/tmp/test.txt',"\r\n" ,FILE_APPEND);
+            //     continue;
+            // }
             preg_match_all('/(\d+)\.(\d+)\.(\d+)/',$data[3],$start_time);
             $this->startTime = $start_time[1][0] . '-' . $start_time[2][0] . '-' . $start_time[3][0];
             $this->startTime = strtotime($this->startTime);
@@ -86,11 +81,18 @@ class Service_Upload_IOutSportModel extends BasePageService {
             $this->endTime = $end_time[1][0] . '-' . $end_time[2][0] . '-' . $end_time[3][0];
             $this->endTime = strtotime($this->endTime);
 
-            if($this->endTime < $this->startTime){
-                $err = file_put_contents('/tmp/test.txt',$data ,FILE_APPEND);
-                $err = file_put_contents('/tmp/test.txt',"\r\n" ,FILE_APPEND);
-                continue;
-            }
+    		$workData['train_name'] = (string)$data[2];
+    		$workData['start_time'] = $this->startTime;
+    		$workData['end_time'] = $this->endTime;
+    		$workData['done_no'] = $data[5];
+    		$workData['userid'] = (string)$this->userData['_id'];
+    		$this->workId = $this->trainOutModel->insert($workData);
+
+    		$trainSchool['homework_id'] = (string)$this->workId;
+    		$trainSchool['school_name'] = (string)$data[6];
+    		$trainSchool['mobile'] = $data[7];
+    		$this->trainSchoolModel->insert($trainSchool);
+            // $this->startTime =  $start_time;
 
             if(preg_match('/^每周\d次$/',$data[5])){
                 $this->type = 1;
@@ -103,22 +105,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
                 $this->weekNo($data);
             }else{
                 $this->type = 4;
-                $err = file_put_contents('/tmp/test.txt',$data ,FILE_APPEND);
-                $err = file_put_contents('/tmp/test.txt',"\r\n" ,FILE_APPEND);
-                continue;
             }
-
-            $workData['train_name'] = (string)$data[2];
-            $workData['start_time'] = $this->startTime;
-            $workData['end_time'] = $this->endTime;
-            $workData['done_no'] = $data[5];
-            $workData['userid'] = (string)$this->userData['_id'];
-            $this->workId = $this->trainOutModel->insert($workData);
-
-            $trainSchool['homework_id'] = (string)$this->workId;
-            $trainSchool['school_name'] = (string)$data[6];
-            $trainSchool['mobile'] = $data[7];
-            $this->trainSchoolModel->insert($trainSchool);
 
             unset($workData);
             unset($trainSchool);
