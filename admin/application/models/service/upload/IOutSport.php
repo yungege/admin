@@ -76,7 +76,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
     		$this->userData = $this->userModel->queryOne($userWhere,$options);
 
             if(empty($this->userData) || empty($data[2]) ||empty($data[5])){
-                
+                $data[8] = "信息不全";
                 $err = file_put_contents('/tmp/upload.txt',$data ,FILE_APPEND);
                 $err = file_put_contents('/tmp/upload.txt',"\r\n" ,FILE_APPEND);
                 continue;
@@ -96,6 +96,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
             }
 
             if($this->endTime < $this->startTime){
+                $data[8] = '时间不对';
                 $err = file_put_contents('/tmp/upload.txt',$data ,FILE_APPEND);
                 $err = file_put_contents('/tmp/upload.txt',"\r\n" ,FILE_APPEND);
                 continue;
@@ -125,6 +126,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
                 $this->weekNo($data);
             }else{
                 $this->type = 4;
+                $data[8] = "格式不对";
                 $err = file_put_contents('/tmp/upload.txt',$data ,FILE_APPEND);
                 $err = file_put_contents('/tmp/upload.txt',"\r\n" ,FILE_APPEND);
                 continue;
