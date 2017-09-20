@@ -92,19 +92,6 @@ class Service_Upload_IOutSportModel extends BasePageService {
                 continue;
             }
 
-    		$workData['train_name'] = (string)$data[2];
-    		$workData['start_time'] = $this->startTime;
-    		$workData['end_time'] = $this->endTime;
-    		$workData['done_no'] = $data[5];
-    		$workData['userid'] = (string)$this->userData['_id'];
-    		$this->workId = $this->trainOutModel->insert($workData);
-
-    		$trainSchool['homework_id'] = (string)$this->workId;
-    		$trainSchool['school_name'] = (string)$data[6];
-    		$trainSchool['mobile'] = $data[7];
-    		$this->trainSchoolModel->insert($trainSchool);
-            // $this->startTime =  $start_time;
-
             if(preg_match('/^每周\d次$/',$data[5])){
                 $this->type = 1;
                 $this->weekDoneNo($data);
@@ -116,7 +103,22 @@ class Service_Upload_IOutSportModel extends BasePageService {
                 $this->weekNo($data);
             }else{
                 $this->type = 4;
+                $err = file_put_contents('/tmp/test.txt',$data ,FILE_APPEND);
+                $err = file_put_contents('/tmp/test.txt',"\r\n" ,FILE_APPEND);
+                continue;
             }
+
+            $workData['train_name'] = (string)$data[2];
+            $workData['start_time'] = $this->startTime;
+            $workData['end_time'] = $this->endTime;
+            $workData['done_no'] = $data[5];
+            $workData['userid'] = (string)$this->userData['_id'];
+            $this->workId = $this->trainOutModel->insert($workData);
+
+            $trainSchool['homework_id'] = (string)$this->workId;
+            $trainSchool['school_name'] = (string)$data[6];
+            $trainSchool['mobile'] = $data[7];
+            $this->trainSchoolModel->insert($trainSchool);
 
             unset($workData);
             unset($trainSchool);
