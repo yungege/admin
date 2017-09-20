@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-20 09:53:01
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:50650805459c1c9fdea7939-14956310%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-19 15:54:56
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:67728846559c0cd509b6a39-81016057%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -7,6 +12,7 @@
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:99123972659c1b51ec96b79-40921390%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 >>>>>>> 5993590e1e349b22f209636db566f4f709d91f14
+>>>>>>> e545b91ee4d24514057f59b1ffb0aceee854ecf9
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -14,15 +20,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
 <<<<<<< HEAD
+      1 => 1505719537,
+=======
+<<<<<<< HEAD
       1 => 1505212197,
 =======
       1 => 1505222262,
 >>>>>>> 5993590e1e349b22f209636db566f4f709d91f14
+>>>>>>> e545b91ee4d24514057f59b1ffb0aceee854ecf9
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
+      1 => 1505722731,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '50650805459c1c9fdea7939-14956310',
+=======
 <<<<<<< HEAD
       1 => 1505720839,
       2 => 'file',
@@ -36,6 +53,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '99123972659c1b51ec96b79-40921390',
 >>>>>>> 5993590e1e349b22f209636db566f4f709d91f14
+>>>>>>> e545b91ee4d24514057f59b1ffb0aceee854ecf9
   'function' => 
   array (
   ),
@@ -48,6 +66,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
+  'unifunc' => 'content_59c1c9fdf19e92_60644113',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59c1c9fdf19e92_60644113')) {function content_59c1c9fdf19e92_60644113($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+<<<<<<< HEAD
   'unifunc' => 'content_59c0cd50b3e591_18502057',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59c0cd50b3e591_18502057')) {function content_59c0cd50b3e591_18502057($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
@@ -56,6 +79,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59c1b51ed4fd59_13367115')) {function content_59c1b51ed4fd59_13367115($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 >>>>>>> 5993590e1e349b22f209636db566f4f709d91f14
+>>>>>>> e545b91ee4d24514057f59b1ffb0aceee854ecf9
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -360,7 +384,20 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li> -->
                         </ul>
                     </li>
-
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#meau-man"><i class="glyphicon glyphicon-list"></i> 菜单及权限分配 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="meau-man" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7){?>in<?php }?>">
+                            <li>
+                                <a href="/meau/list" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">菜单管理</a>
+                            </li>
+                            <li>
+                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">角色管理</a>
+                            </li>
+                            <li>
+                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">权限分配</a>
+                            </li>
+                        </ul>
+                    </li>
 
                 </ul>
             </div>
