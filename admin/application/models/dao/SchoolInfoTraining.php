@@ -7,7 +7,7 @@ class Dao_SchoolInfoTrainingModel extends Db_Mongodb {
        
         'homework_id' => '',               //作业ID
 		'school_name' => '',               //学校名字
-		'mobile' => 0,                   //学校练习电话
+		'mobile' => 0,                     //学校练习电话
 	];
 
     protected function __construct(){

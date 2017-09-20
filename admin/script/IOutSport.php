@@ -1,5 +1,7 @@
 <?php
-class Service_Upload_IOutSportModel extends BasePageService {
+include_once "Cli.php";
+$app->execute(['Uploadoutside','init']);
+class Uploadoutside {
 
 	protected $trainSchoolModel;
 	protected $trainOutModel; 
@@ -13,19 +15,12 @@ class Service_Upload_IOutSportModel extends BasePageService {
     protected $userData;
     protected $workId;
 
-	public function __construct(){
+	protected function init(){
 
-		$this->trainSchoolModel = Dao_SchoolInfoTrainingModel::getInstance();
-		$this->trainOutModel = Dao_TrainingHomeworkModel::getInstance();
+        $this->trainSchoolModel = Dao_SchoolInfoTrainingModel::getInstance();
+        $this->trainOutModel = Dao_TrainingHomeworkModel::getInstance();
         $this->trainDoneOutsideModel = Dao_TrainingDoneOutsideModel::getInstance();
-		$this->userModel = Dao_UserModel::getInstance();
-	}
-
-	protected function __declare(){
-
-	}
-
-	protected function __execute($req){
+        $this->userModel = Dao_UserModel::getInstance();
         set_time_limit(0);
 		$req = $req['post'];
         $_FILES = $_FILES[0];
