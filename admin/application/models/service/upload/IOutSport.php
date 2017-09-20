@@ -73,7 +73,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
     		$options['projection'] = ['_id' => 1];
     		$this->userData = $this->userModel->queryOne($userWhere,$options);
 
-            if(empty($userData) || empty($data[2]) ||empty($data[5])){
+            if(empty($this->userData) || empty($data[2]) ||empty($data[5])){
                 
                 $err = file_put_contents('/tmp/test.txt',$data ,FILE_APPEND);
                 $err = file_put_contents('/tmp/test.txt',"\r\n" ,FILE_APPEND);
