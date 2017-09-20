@@ -73,18 +73,24 @@ class Service_Upload_IOutSportModel extends BasePageService {
     		$options['projection'] = ['_id' => 1];
     		$this->userData = $this->userModel->queryOne($userWhere,$options);
 
-            // if(empty($userData) || empty($data[2]) ||empty($data[5])){
+            if(empty($userData) || empty($data[2]) ||empty($data[5])){
                 
-            //     $err = file_put_contents('/tmp/test.txt',$data ,FILE_APPEND);
-            //     $err = file_put_contents('/tmp/test.txt',"\r\n" ,FILE_APPEND);
-            //     continue;
-            // }
+                $err = file_put_contents('/tmp/test.txt',$data ,FILE_APPEND);
+                $err = file_put_contents('/tmp/test.txt',"\r\n" ,FILE_APPEND);
+                continue;
+            }
             preg_match_all('/(\d+)\.(\d+)\.(\d+)/',$data[3],$start_time);
             $this->startTime = $start_time[1][0] . '-' . $start_time[2][0] . '-' . $start_time[3][0];
             $this->startTime = strtotime($this->startTime);
             preg_match_all('/(\d+)\.(\d+)\.(\d+)/',$data[4],$end_time);
             $this->endTime = $end_time[1][0] . '-' . $end_time[2][0] . '-' . $end_time[3][0];
             $this->endTime = strtotime($this->endTime);
+
+            if($this->endTime < $this->startTime){
+                $err = file_put_contents('/tmp/test.txt',$data ,FILE_APPEND);
+                $err = file_put_contents('/tmp/test.txt',"\r\n" ,FILE_APPEND);
+                continue;
+            }
 
     		$workData['train_name'] = (string)$data[2];
     		$workData['start_time'] = $this->startTime;
