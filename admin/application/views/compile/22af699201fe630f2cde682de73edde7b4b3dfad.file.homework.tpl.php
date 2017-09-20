@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 20:55:46
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-20 16:16:32
          compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:211747072459bfc252ddb8b2-95732936%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:193518471559c223e0475427-14026707%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '22af699201fe630f2cde682de73edde7b4b3dfad' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/homework.tpl',
-      1 => 1504111658,
+      1 => 1505473681,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1505739311,
+      1 => 1505720828,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '211747072459bfc252ddb8b2-95732936',
+  'nocache_hash' => '193518471559c223e0475427-14026707',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59bfc252e43891_63323147',
+  'unifunc' => 'content_59c223e04e26d8_91374386',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59bfc252e43891_63323147')) {function content_59bfc252e43891_63323147($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
+<?php if ($_valid && !is_callable('content_59c223e04e26d8_91374386')) {function content_59c223e04e26d8_91374386($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
 if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
