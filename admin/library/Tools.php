@@ -1752,4 +1752,52 @@ class Tools {
         return $array;
     }
 
+    /**
+     * 获取一段时间内各周起始时间跟终止时间
+     * @DateTime  2017-04-27
+     * @copyright [copyright]
+     * @license   [license]
+     * @version   [version]
+     * @param     int              $starttime [description]
+     * @param     int              $endtime   [description]
+     * @param     array            $dates     [description]
+     * @return    [type]                      [description]
+     */
+    public static function getWeek(int $starttime, int $endtime, $dates = []){
+        // 求出起始时间该天的00：00分的时间戳
+        $timestart = strtotime(date('Y-m-d',$starttime));
+        $week = date('w', $starttime);
+        if($week == 0){
+            $week = 7;
+        }
+        // 求出该周的截止时间
+        $timeend = $timestart + 86400 * (8 - $week) - 1;
+        // 求出该周的周一时间
+        $timestart = $timestart - 86400 * ($week - 1);
+
+        $dates[$timestart] = $timeend;
+        // 递归求出下一周的起始时间和截止时间,如果这周的截止时间大于运动项目的截止时间,跳出该方法,返回所有计算出的时间
+        if($timeend < $endtime){
+            $dates = self::getWeek($timeend + 1,$endtime,$dates);
+        }
+        return $dates;
+    }
+
+    /**
+     * 获取redis缓存键
+     * @Author    422909231@qq.com
+     * @DateTime  2017-07-05
+     * @version   [version]
+     * @param     string           $uniqueFlag
+     * @param     string           $type  session homeword project action train_history
+     * @return
+     */
+    public static function getRedisKey($uniqueFlag, string $type = 'session'){
+        if(empty($uniqueFlag) || !preg_match("/\w+/", $uniqueFlag)){
+            throw new Exception("get redis key 'uniqueFlag' empty", -1);
+        }
+        $key = 'ttxs_redis_' . $type . '_' . $uniqueFlag;
+        return $key;
+    }
+
 }

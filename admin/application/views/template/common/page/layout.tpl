@@ -237,7 +237,20 @@
                             </li> -->
                         </ul>
                     </li>
-
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#meau-man"><i class="glyphicon glyphicon-list"></i> 菜单及权限分配 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="meau-man" class="collapse {%if $tag.0 == 7%}in{%/if%}">
+                            <li>
+                                <a href="/meau/list" class="{%if $tag.0 == 7 && $tag.1 == 1%}cy-child-active{%/if%}">菜单管理</a>
+                            </li>
+                            <li>
+                                <a href="" class="{%if $tag.0 == 7 && $tag.1 == 2%}cy-child-active{%/if%}">角色管理</a>
+                            </li>
+                            <li>
+                                <a href="" class="{%if $tag.0 == 7 && $tag.1 == 3%}cy-child-active{%/if%}">权限分配</a>
+                            </li>
+                        </ul>
+                    </li>
 
                 </ul>
             </div>

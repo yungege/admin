@@ -132,6 +132,9 @@ $(function(){
 		            data:pic_data ,  
 		            success:function(json){  
 
+alert(json);
+return false;
+
 		                if(json.errCode != 0){
 							alert(json.errMessage ? json.errMessage : '失败！');
                             return false;

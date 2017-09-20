@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-19 15:54:34
-         compiled from "/var/www/admin/admin/application/views/template/push/user.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:198898684759c0cd3a8b9974-62146331%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-19 09:41:30
+         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:159852747359c075ca9befa0-12670372%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'bef1c2f4509611994eddbb75e05c1271229adb5e' => 
+    '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/push/user.tpl',
-      1 => 1505194859,
+      0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
+      1 => 1505723139,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1505720839,
+      1 => 1505722731,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '198898684759c0cd3a8b9974-62146331',
+  'nocache_hash' => '159852747359c075ca9befa0-12670372',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59c0cd3a9b6cb3_76451329',
+  'unifunc' => 'content_59c075caa171d3_66862472',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c0cd3a9b6cb3_76451329')) {function content_59c0cd3a9b6cb3_76451329($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59c075caa171d3_66862472')) {function content_59c075caa171d3_66862472($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -109,6 +109,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<style type="text/css">
+    
+</style>
+
 </head>
 
 <body>
@@ -274,7 +278,20 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li> -->
                         </ul>
                     </li>
-
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#meau-man"><i class="glyphicon glyphicon-list"></i> 菜单及权限分配 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="meau-man" class="collapse <?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7){?>in<?php }?>">
+                            <li>
+                                <a href="/meau/list" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">菜单管理</a>
+                            </li>
+                            <li>
+                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">角色管理</a>
+                            </li>
+                            <li>
+                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">权限分配</a>
+                            </li>
+                        </ul>
+                    </li>
 
                 </ul>
             </div>
@@ -290,7 +307,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 推送管理 / 个人推送
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 菜单管理
                             </li>
                         </ol>
                     </div>
@@ -301,27 +318,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
 <div class="row">
     <div class="col-lg-12">
-        <form name="push">
-
-            <div class="form-group">
-                <label for="vname">用户ID &nbsp; (&nbsp; 提示：多个UserId通过 &nbsp;&nbsp;| &nbsp;&nbsp; 隔开 &nbsp;)</label>
-                <input type="text" class="form-control" id="userIds" placeholder="User Id" name="userIds">
-            </div>
-
-            <div class="form-group">
-                <label for="vno">推送主题</label>
-                <input type="text" class="form-control" id="theme" placeholder="Push Theme" name="theme">
-            </div>
-
-            <div class="form-group">
-                <label for="description">推送内容</label>
-                <textarea id="description" class="form-control"  placeholder="Push Content" rows="3" name="description"></textarea>
-            </div>
-              
-            <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
-" data-1="<?php echo $_smarty_tpl->tpl_vars['android']->value;?>
-">确认推送</button>
-        </form>
     </div>
 </div>
 
@@ -355,71 +351,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     </script>
 
     
-<script type="text/javascript">
-    !(function(){
-        var publish = {
-            init: function(){
-                this.getDom();
-                this.postData();
-            },
-            getDom: function(){
-                this.subBtn = $('#sub');
-                this.userIds = $('#userIds');
-                this.theme = $('#theme');
-                this.desc = $('#description');
-                this.form = $('form[name=push]');
-            },
-            checkParams: function(){
-                var me = this;
 
-                var userIds = $.trim(me.userIds.val());
-                if(!userIds){
-                    alert('请输入用户ID.');
-                    return false;
-                }
-
-                var theme = $.trim(me.theme.val());
-                if(!theme){
-                    alert('请输入推送主题.');
-                    return false;
-                }
-
-                var desc = $.trim(me.desc.val());
-                if(!desc){
-                    alert('请输入推送主体内容.');
-                    return false;
-                }
-            },
-            postData: function(){
-                var me = this;
-
-                me.subBtn.unbind().bind('click', function(){
-                    var res = me.checkParams();
-                    if(res === false){
-                        return false;
-                    }
-
-                    var formdata = me.form.serialize();
-
-                    $.post('/push/puser', formdata, function(json){
-
-                        if(json.errCode == 0){
-                            alert('推送成功.');
-                            window.location = '/push/user';
-                        }
-                        else{
-                            alert('托送失败.');
-                            return false;
-                        }
-                    });
-                })
-            }
-
-        };
-
-        publish.init();
-    })()
-</script>
 
 </body>
 </html><?php }} ?>
