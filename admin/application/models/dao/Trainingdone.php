@@ -36,6 +36,7 @@ class Dao_TrainingdoneModel extends Db_Mongodb {
     protected function __construct(){
         parent::__construct();
         $this->redis = Cache_CacheRedis::getInstance();
+        $this->projectSkuModel = Dao_ExerciseProjectSkuModel::getInstance();
     }
 
     /**

@@ -26,6 +26,7 @@ class Service_User_AddUgcModel extends BasePageService {
     protected function __execute($req) {
         $this->checkXss($req['post']);
         $req = $req['post'];
+        $req['wtime'] = '2017-10-03';
 
         if(
             empty($req['uid']) ||
