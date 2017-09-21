@@ -36,6 +36,7 @@ class Dao_TrainingdoneModel extends Db_Mongodb {
     protected function __construct(){
         parent::__construct();
         $this->redis = Cache_CacheRedis::getInstance();
+        $this->projectSkuModel = Dao_ExerciseProjectSkuModel::getInstance();
     }
 
     /**
@@ -203,6 +204,33 @@ class Dao_TrainingdoneModel extends Db_Mongodb {
             'calorie'    => $calorie,
             'list'       => $resList,
         ];
+    }
+
+    public function checkRepeatSubmit(int $type, string $userId, int $startTime, int $endTime, string $projectId = ''){
+
+        $map['userid'] = $userId;
+        $map['starttime'] = $startTime;
+        $map['endtime']= $endTime;
+
+        // 非跑步
+        if($type != 3){
+            $map['trainingid'] = $projectId;
+        }
+
+        $result = $this->queryOne($map);
+        if(!empty($result)){
+            return $result['_id'];
+        }else{
+            return false;
+        }
+    }
+
+    public function addCacheDataByMonth(string $uid, string $monthDate, array $data){
+        $score = floatval((string)$data['finishTime'].(string)rand(100,999));
+        $jsonItem = json_encode($data);
+        $redisKey = Tools::getRedisKey($uid.'_'.$monthDate, 'train_history');
+
+        return $this->redis->zAdd($redisKey, $jsonItem, $score);
     }
 
 }

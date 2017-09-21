@@ -26,6 +26,7 @@ class Service_User_AddUgcModel extends BasePageService {
     protected function __execute($req) {
         $this->checkXss($req['post']);
         $req = $req['post'];
+        $req['wtime'] = '2017-10-03';
 
         if(
             empty($req['uid']) ||
@@ -88,9 +89,8 @@ class Service_User_AddUgcModel extends BasePageService {
             throw new Exception("操作失败", -1);
         }
 
-        $redisKey = CommonFuc::getRedisKey($req['uid'].'_'.date('Y_m',$data['endtime']), 'train_history');
-
-        $this->redis->delete($redisKey);
+        $monthDate = date('Y_m', $data['endtime']);
+        $this->addCache($req['uid'], $monthDate, $res, $data, 3);
         return;
     }
 
@@ -108,6 +108,14 @@ class Service_User_AddUgcModel extends BasePageService {
             !preg_match("/^[1-9]\d{0,1}$/", $count)
         ){
             throw new Exception("作业信息错误.", -1);
+        }
+
+        $sTime = (int)strtotime($req['wtime'].' 19:00:00');
+        $eTime = intval(strtotime($req['wtime'].' 19:00:00')+$time);
+        $res = $this->trainModel->checkRepeatSubmit(
+            1, $req['uid'], $sTime, $eTime, $pid);
+        if($res !== false){
+            throw new Exception("当天作业已补交.", -1);
         }
 
         $data = [
@@ -136,9 +144,62 @@ class Service_User_AddUgcModel extends BasePageService {
             throw new Exception("操作失败", -1);
         }
 
-        $redisKey = CommonFuc::getRedisKey($req['uid'].'_'.date('Y_m',$data['endtime']), 'train_history');
-
-        $this->redis->delete($redisKey);
+        $monthDate = date('Y_m', $data['endtime']);
+        $this->addCache($req['uid'], $monthDate, $res, $data);
         return;
+    }
+
+    // 加入缓存 todo 要加入的月份（以endtime为准）如果没有缓存数据 需要当月所有数据放入缓存
+    protected function addCache($uId, $monthDate, $trainId, $data, $type = 1){
+        $cacheRes = $this->trainModel->getCacheDataByMonth($uId, $monthDate);
+        if(empty($cacheRes)){
+            $firstDay = strtotime(date('Y-m-01', $data['endtime']));
+            $lastDay = strtotime(date('Y-m-t', $data['endtime']) . ' 23:59:59');
+            $hMap = [
+                'userid' => $uId,
+                'htype' => ['$in' => [1,2,3]],
+                'endtime' => ['$gte' => $firstDay, '$lte' => $lastDay]
+            ];
+
+            // 锻炼历史
+            $options = [
+                'sort' => ['endtime' => -1],
+            ];
+            $fields = ['htype','trainingid','starttime','endtime','burncalories','originaltime','exciseimg','mapurl','imginfo','homeworkid'];
+            $resList = [];
+            $this->trainModel->getListByMonth($hMap, $fields, $options, $monthDate, $resList);
+        }
+        else{
+            if($type == 3){
+                $cacheData = [
+                    "trainId" => $trainId,
+                    "pName" => "跑步锻炼",
+                    "pInterval" => $data['projecttime'],
+                    "pId" => '',
+                    "trainingImg" => array_shift($data['exciseimg']),
+                    "calorie" => $data['burncalories'],
+                    "finishTime" => $data['endtime'],
+                    "hType" => 3,
+                    "hId" => '',
+                    "originalTime" => 0
+                ];
+            }
+            else{
+                $cacheData = [
+                    "trainId" => $trainId,
+                    "pName" => $data['htype'] == 1 ? '翻转课堂' : '身体素质作业',
+                    "pInterval" => $data['projecttime'],
+                    "pId" => $data['trainingid'],
+                    "trainingImg" => array_shift($data['exciseimg']),
+                    "calorie" => $data['burncalories'],
+                    "finishTime" => $data['endtime'],
+                    "hType" => $data['htype'],
+                    "hId" => $data['homeworkid'],
+                    "originalTime" => $data['originaltime']
+                ];
+            }
+            
+            $this->trainModel->addCacheDataByMonth($uId, $monthDate, $cacheData);
+        }
     }
 }
