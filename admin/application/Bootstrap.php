@@ -15,9 +15,9 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
         if ($this->config->application->debug)
         {
             define('DEBUG_MODE', true);
-			//error_reporting("E_ALL & ~E_NOTICE");
-            //ini_set('display_errors', 'On');
-            //error_reporting(E_PARSE | E_ERROR);
+			// error_reporting("E_ALL & ~E_NOTICE");
+            ini_set('display_errors', 'On');
+            error_reporting(E_PARSE | E_ERROR);
         }
         else
         {
