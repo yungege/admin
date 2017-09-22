@@ -1,41 +1,25 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-21 11:04:48
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-22 07:35:25
          compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:122040791859c32c50676f17-32206789%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-21 11:03:33
-         compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:130157030359c32c05b34536-32685604%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> f97ef2a67c42d816c7c66d542c778d61cbf8e4c1
+<?php /*%%SmartyHeaderCode:46259310959c44cbd902168-88458645%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '713206737d6eb09c8f72027c7313a6d885305480' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/login.tpl',
-      1 => 1505212517,
+      1 => 1505194859,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '122040791859c32c50676f17-32206789',
-=======
-  'nocache_hash' => '130157030359c32c05b34536-32685604',
->>>>>>> f97ef2a67c42d816c7c66d542c778d61cbf8e4c1
+  'nocache_hash' => '46259310959c44cbd902168-88458645',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59c32c5068d322_17631075',
+  'unifunc' => 'content_59c44cbd9039d8_53619850',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c32c5068d322_17631075')) {function content_59c32c5068d322_17631075($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59c32c05b46079_52383923',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c32c05b46079_52383923')) {function content_59c32c05b46079_52383923($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> f97ef2a67c42d816c7c66d542c778d61cbf8e4c1
+<?php if ($_valid && !is_callable('content_59c44cbd9039d8_53619850')) {function content_59c44cbd9039d8_53619850($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
