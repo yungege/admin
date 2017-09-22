@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-19 09:41:30
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-22 10:35:28
          compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:159852747359c075ca9befa0-12670372%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:77500387159c476f05529a7-31745063%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
-      1 => 1505723139,
+      1 => 1506047582,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1505722731,
+      1 => 1506046349,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '159852747359c075ca9befa0-12670372',
+  'nocache_hash' => '77500387159c476f05529a7-31745063',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59c075caa171d3_66862472',
+  'unifunc' => 'content_59c476f05aa051_65449080',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c075caa171d3_66862472')) {function content_59c075caa171d3_66862472($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59c476f05aa051_65449080')) {function content_59c476f05aa051_65449080($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -66,6 +66,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <![endif]-->
 
     <style type="text/css">
+        body{
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+        }
         .cy-child-active{
             background-color: black;
             color: white!important;
@@ -110,7 +113,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
-    
+    .table>tbody>tr>td,.table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+        vertical-align: middle;
+        height: 45px;
+    }
 </style>
 
 </head>
@@ -227,9 +233,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
-                            </li>
+                            </li> -->
 
 
                         </ul>
@@ -318,6 +324,49 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
 <div class="row">
     <div class="col-lg-12">
+        <table class="table table-striped table-bordered" style="color: #7a7676;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>排序</th>
+                    <th>菜单名称</th>
+                    <th>URL</th>
+                    <th>图标样式</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
+$_smarty_tpl->tpl_vars['row']->_loop = true;
+?>
+                <tr data-seria="<?php echo serialize($_smarty_tpl->tpl_vars['row']->value);?>
+">
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['sort'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_name'];?>
+</td>
+                    <td style="color: #65CEA7;"><?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+</td>
+                    <td style="color: #65CEA7;font-size: 20px;font-weight: 700;"><i class="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
+"></i></td>
+                    <td>
+                        <?php if ($_smarty_tpl->tpl_vars['row']->value['pid']==''){?>
+                           <a data-pid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" class="cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-plus'></span> 子类</a>&nbsp;
+                        <?php }?>
+                        <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+" data-sort="<?php echo $_smarty_tpl->tpl_vars['row']->value['sort'];?>
+" class="cate-edit btn btn-xs btn-primary" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
+                    </td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </div>
 </div>
 
