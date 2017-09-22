@@ -40,3 +40,14 @@ function xlsOutput($headKeys, $data, $separator = "\t")
         flush();
     }
 }
+
+function rootTree(array $items, $childName = 'sub', $key = true){
+    foreach ($items as $item) {
+        if ($key) {
+            $items[$item['pid']][$childName][$item['_id']] = &$items[$item['_id']];
+        } else {
+            $items[$item['pid']][$childName][] = &$items[$item['_id']];
+        }
+    }
+    return isset($items[''][$childName]) ? $items[''][$childName] : array();
+}
