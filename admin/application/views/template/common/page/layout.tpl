@@ -33,6 +33,9 @@
     <![endif]-->
 
     <style type="text/css">
+        body{
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+        }
         .cy-child-active{
             background-color: black;
             color: white!important;
