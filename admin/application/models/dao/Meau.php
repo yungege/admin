@@ -46,7 +46,5 @@ class Dao_MeauModel extends Db_Mongodb {
         ];
 
         return $this->query($where, $options);
-        // if(empty($list)) return [];
-        // return rootTree(array_column($list, null, '_id'), 'sub', false);
     }
 }
