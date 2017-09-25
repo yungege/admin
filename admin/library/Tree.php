@@ -75,6 +75,7 @@ class Tree {
             if($num == $total) $j = $this->icon[2];
             $spacer = $adds ? $adds . $j : '';
             $value['new_name'] = $spacer.' '.$value[$cateFieldName];
+            $value['new_sort'] = $spacer.' '.$value['sort'];
             $this->treeArr[$value[$pk]] = $value;
             $this->getGridTree($value[$pk], $pk, $pidFeldName, $cateFieldName, $adds.$k.$this->nbsp);
             $num++;
