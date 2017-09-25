@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-25 17:21:34
+         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:135165867059c8ca9e9c9dd7-40500872%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-22 16:05:33
+         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:210751512859c4c44db79319-19368678%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-22 11:08:33
          compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:86028831059c47eb15d1229-84253481%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -7,31 +17,37 @@
          compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:201709256159c4c4112d5ae2-11202467%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 >>>>>>> 7896fad5207363389773a5a65ccb0e1901958d3d
+>>>>>>> 8494c79797762c2e60fc431b78a5631b54fea538
+>>>>>>> 572cc31f68c20f99520009efa1c5f63edf86d16c
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
-<<<<<<< HEAD
-      1 => 1506049712,
-=======
-      1 => 1506047796,
->>>>>>> 7896fad5207363389773a5a65ccb0e1901958d3d
+      1 => 1506330711,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1506047796,
+      1 => 1506046349,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
+  'nocache_hash' => '135165867059c8ca9e9c9dd7-40500872',
+=======
+<<<<<<< HEAD
+  'nocache_hash' => '210751512859c4c44db79319-19368678',
+=======
 <<<<<<< HEAD
   'nocache_hash' => '86028831059c47eb15d1229-84253481',
 =======
   'nocache_hash' => '201709256159c4c4112d5ae2-11202467',
 >>>>>>> 7896fad5207363389773a5a65ccb0e1901958d3d
+>>>>>>> 8494c79797762c2e60fc431b78a5631b54fea538
+>>>>>>> 572cc31f68c20f99520009efa1c5f63edf86d16c
   'function' => 
   array (
   ),
@@ -44,6 +60,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
+  'unifunc' => 'content_59c8ca9ea20b69_60327798',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59c8ca9ea20b69_60327798')) {function content_59c8ca9ea20b69_60327798($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_59c4c44dcc8bc2_88231648',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59c4c44dcc8bc2_88231648')) {function content_59c4c44dcc8bc2_88231648($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
   'unifunc' => 'content_59c47eb1627648_26467561',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59c47eb1627648_26467561')) {function content_59c47eb1627648_26467561($_smarty_tpl) {?><!DOCTYPE html>
@@ -52,6 +78,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59c4c4114108d7_41978988')) {function content_59c4c4114108d7_41978988($_smarty_tpl) {?><!DOCTYPE html>
 >>>>>>> 7896fad5207363389773a5a65ccb0e1901958d3d
+>>>>>>> 8494c79797762c2e60fc431b78a5631b54fea538
+>>>>>>> 572cc31f68c20f99520009efa1c5f63edf86d16c
 <html lang="en">
 
 <head>
@@ -137,7 +165,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         vertical-align: middle;
         height: 45px;
     }
-    .add-f-cate-fix{
+    .add-f-cate-fix,.add-s-cate-fix,.edit-cate-fix{
         width: 100%;
         height: 100%;
         overflow-y: scroll;
@@ -146,6 +174,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         left: 0;
         background-color: rgba(0,0,0,.3);
         z-index: 9999;
+        display: none;
     }
     .inner-box{
         background-color: white;
@@ -385,7 +414,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 ">
                     <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['sort'];?>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_sort'];?>
 </td>
                     <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_name'];?>
 </td>
@@ -396,11 +425,14 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                     <td>
                         <?php if ($_smarty_tpl->tpl_vars['row']->value['pid']==''){?>
                            <a data-pid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-plus'></span> 子菜单</a>&nbsp;
+" data-pname="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+" class="add-s-cate cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-plus'></span> 子菜单</a>&nbsp;
                         <?php }?>
                         <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" data-sort="<?php echo $_smarty_tpl->tpl_vars['row']->value['sort'];?>
+" data-ssort="<?php echo $_smarty_tpl->tpl_vars['row']->value['sort'];?>
+" data-icon="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
+" data-url="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
 " class="cate-edit btn btn-xs btn-primary" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
                     </td>
                 </tr>
@@ -410,6 +442,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </div>
 </div>
 
+<!-- 一级菜单 -->
 <div class="add-f-cate-fix">
     <div class="inner-box">
         <h4>新增一级菜单</h4>
@@ -427,8 +460,61 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 <label>图标样式</label>
                 <input type="text" class="form-control" name="icon_style">
             </div>
-            <a class="btn btn-primary" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger" href="javascript:void(0)">取&emsp;消</a>
+            <a class="btn btn-primary subf" href="javascript:void(0)">提&emsp;交</a>
+            <a class="btn btn-danger canf" href="javascript:void(0)">取&emsp;消</a>
+        </form>
+    </div>
+</div>
+<!-- 二级菜单 -->
+<div class="add-s-cate-fix">
+    <div class="inner-box">
+        <h4>新增二级菜单&emsp;&emsp;<small id="first-cate-name" style="color: #65CEA7;"></small></h4>
+        <hr>
+        <form name="add-s-cate" class="form">
+            <div class="form-group">
+                <label>菜单名</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group">
+                <label>排序</label>
+                <input type="text" class="form-control" name="sort">
+            </div>
+            <div class="form-group">
+                <label>URL <small>[ /meau/list ]</small></label>
+                <input type="text" class="form-control" name="url">
+            </div>
+            <input type="hidden" name="pid" class="pid-s">
+            <a class="btn btn-primary subs" href="javascript:void(0)">提&emsp;交</a>
+            <a class="btn btn-danger cans" href="javascript:void(0)">取&emsp;消</a>
+        </form>
+    </div>
+</div>
+
+<!-- 编辑菜单 -->
+<div class="edit-cate-fix">
+    <div class="inner-box">
+        <h4>编辑菜单&emsp;&emsp;<small id="old-cate-name" style="color: #65CEA7;"></small></h4>
+        <hr>
+        <form name="edit-cate" class="form">
+            <div class="form-group">
+                <label>菜单名</label>
+                <input type="text" class="form-control name-e" name="name">
+            </div>
+            <div class="form-group">
+                <label>排序</label>
+                <input type="text" class="form-control sort-e" name="sort">
+            </div>
+            <div class="form-group">
+                <label>图标样式</label>
+                <input type="text" class="form-control icon-e" name="icon_style">
+            </div>
+            <div class="form-group">
+                <label>URL <small>[ /meau/list ]</small></label>
+                <input type="text" class="form-control url-e" name="url">
+            </div>
+            <input type="hidden" name="id" class="pid-e">
+            <a class="btn btn-primary sube" href="javascript:void(0)">提&emsp;交</a>
+            <a class="btn btn-danger cane" href="javascript:void(0)">取&emsp;消</a>
         </form>
     </div>
 </div>
@@ -463,7 +549,175 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
+<script>
+$(function(){
+    var meauFirst = {
+        init: function(){
+            this.getDom();
+            this.postMeau();
+            this.cancer();
+            this.showBox();
+        },
+        getDom: function(){
+            this.form = $('form[name=add-f-cate]');
+            this.subBtn = $('.subf');
+            this.canBtn = $('.canf');
+            this.fixBox = $('.add-f-cate-fix');
+            this.showBtn = $('#add-f-cate');
+        },
+        postMeau: function(){
+            var me = this;
+            me.subBtn.unbind().bind('click', function(){
+                var data = me.form.serialize();
+                $.post('/meau/addfirst', data, function(json){
+                    if(json.errCode == 0){
+                        window.location.reload();
+                    }
+                    else{
+                        alert(json.errMessage);
+                    }
+                });
+            });
+        },
+        cancer: function(){
+            var me = this;
+            me.canBtn.unbind().bind('click', function(){
+                me.fixBox.fadeOut(200);
+                me.form[0].reset();
+            })
+        },
+        showBox: function(){
+            var me = this;
+            me.showBtn.unbind().bind('click', function(){
+                me.fixBox.fadeIn(200);
+            })
+        },
+    };
 
+    // 二级菜单
+    var meauSecond = {
+        init: function(){
+            this.getDom();
+            this.postMeau();
+            this.cancer();
+            this.showBox();
+        },
+        getDom: function(){
+            this.form = $('form[name=add-s-cate]');
+            this.subBtn = $('.subs');
+            this.canBtn = $('.cans');
+            this.fixBox = $('.add-s-cate-fix');
+            this.showBtn = $('.add-s-cate');
+            this.pname = $('#first-cate-name');
+            this.pid = $('.pid-s');
+        },
+        postMeau: function(){
+            var me = this;
+            me.subBtn.unbind().bind('click', function(){
+                var data = me.form.serialize();
+                $.post('/meau/addfirst?type=2', data, function(json){
+                    if(json.errCode == 0){
+                        window.location.reload();
+                    }
+                    else{
+                        alert(json.errMessage);
+                    }
+                });
+            });
+        },
+        cancer: function(){
+            var me = this;
+            me.canBtn.unbind().bind('click', function(){
+                me.fixBox.fadeOut(200);
+                me.form[0].reset();
+            })
+        },
+        showBox: function(){
+            var me = this;
+            me.showBtn.unbind().bind('click', function(){
+                var pid = $(this).data('pid'),
+                    pname = $(this).data('pname');
+                me.pname.text('父级菜单：'+pname);
+                me.pid.val(pid);
+                me.fixBox.fadeIn(200);
+            })
+        },
+    };
+
+    // 编辑
+    var meauEdit = {
+        init: function(){
+            this.getDom();
+            this.postMeau();
+            this.cancer();
+            this.showBox();
+        },
+        getDom: function(){
+            this.form = $('form[name=edit-cate]');
+            this.subBtn = $('.sube');
+            this.canBtn = $('.cane');
+            this.fixBox = $('.edit-cate-fix');
+            this.showBtn = $('.cate-edit');
+            this.cname = $('#old-cate-name');
+            this.cid = $('.pid-e');
+            this.csort = $('.sort-e');
+            this.cicon = $('.icon-e');
+            this.curl = $('.url-e');
+            this.new_cname = $('.name-e');
+        },
+        postMeau: function(){
+            var me = this;
+            me.subBtn.unbind().bind('click', function(){
+                var data = me.form.serialize();
+                $.post('/meau/addfirst?type=3', data, function(json){
+                    if(json.errCode == 0){
+                        window.location.reload();
+                    }
+                    else{
+                        alert(json.errMessage);
+                    }
+                });
+            });
+        },
+        cancer: function(){
+            var me = this;
+            me.canBtn.unbind().bind('click', function(){
+                me.fixBox.fadeOut(200);
+                me.form[0].reset();
+                me.cicon.attr('disabled', false);
+                me.curl.attr('disabled', false);
+            })
+        },
+        showBox: function(){
+            var me = this;
+            me.showBtn.unbind().bind('click', function(){
+                var id = $(this).data('id'),
+                    name = $(this).data('name'),
+                    sort = $(this).data('ssort'),
+                    icon = $(this).data('icon'),
+                    url = $(this).data('url');
+                me.cname.text(name);
+                me.cid.val(id);
+                me.new_cname.val(name);
+                me.csort.val(sort);
+                me.curl.val(url);
+                me.cicon.val(icon);
+                if(icon.length == 0){
+                    me.cicon.attr('disabled', true);
+                }
+                if(url == '#'){
+                    me.curl.attr('disabled', true);
+                }
+                me.fixBox.fadeIn(200);
+            })
+        },
+    };
+
+    meauFirst.init();
+    meauSecond.init();
+    meauEdit.init();
+})
+</script>
 
 </body>
 </html><?php }} ?>
