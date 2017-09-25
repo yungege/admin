@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-25 17:28:31
          compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:147159725759c8cc3f67e5a8-17365022%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-25 17:29:29
+         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:168923099759c8cc79be0512-16704747%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> d8ef2e93ab30dd570baabe133854d614effc7c5a
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
+<<<<<<< HEAD
       1 => 1506331426,
+=======
+      1 => 1506331736,
+>>>>>>> d8ef2e93ab30dd570baabe133854d614effc7c5a
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +27,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '147159725759c8cc3f67e5a8-17365022',
+=======
+  'nocache_hash' => '168923099759c8cc79be0512-16704747',
+>>>>>>> d8ef2e93ab30dd570baabe133854d614effc7c5a
   'function' => 
   array (
   ),
@@ -29,9 +43,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59c8cc3f7c0555_67759669',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59c8cc3f7c0555_67759669')) {function content_59c8cc3f7c0555_67759669($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59c8cc79c3d3c3_98595363',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59c8cc79c3d3c3_98595363')) {function content_59c8cc79c3d3c3_98595363($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> d8ef2e93ab30dd570baabe133854d614effc7c5a
 <html lang="en">
 
 <head>
@@ -370,8 +390,9 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </td>
                     <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_name'];?>
 </td>
-                    <td style="color: #65CEA7;"><?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
-</td>
+                    <td><a href="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+" style="color: #65CEA7;"><?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+</a></td>
                     <td style="color: #65CEA7;font-size: 20px;font-weight: 700;"><i class="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
 "></i></td>
                     <td>

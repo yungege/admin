@@ -51,7 +51,7 @@
                     <td>{%$row._id%}</td>
                     <td>{%$row.new_sort%}</td>
                     <td>{%$row.new_name%}</td>
-                    <td style="color: #65CEA7;">{%$row.url%}</td>
+                    <td><a href="{%$row.url%}" style="color: #65CEA7;">{%$row.url%}</a></td>
                     <td style="color: #65CEA7;font-size: 20px;font-weight: 700;"><i class="{%$row.icon_style%}"></i></td>
                     <td>
                         {%if $row.pid eq ''%}
