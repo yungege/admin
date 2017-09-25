@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-21 11:03:18
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-23 12:38:35
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:126042686459c32bf637e426-15779120%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:66241883559c5e54be8e292-27838056%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-      1 => 1505473621,
+      1 => 1505473727,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1505961910,
+      1 => 1506047796,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '126042686459c32bf637e426-15779120',
+  'nocache_hash' => '66241883559c5e54be8e292-27838056',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59c32bf64713a2_99403314',
+  'unifunc' => 'content_59c5e54c10a359_29360752',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c32bf64713a2_99403314')) {function content_59c32bf64713a2_99403314($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59c5e54c10a359_29360752')) {function content_59c5e54c10a359_29360752($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -67,6 +67,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <![endif]-->
 
     <style type="text/css">
+        body{
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+        }
         .cy-child-active{
             background-color: black;
             color: white!important;
