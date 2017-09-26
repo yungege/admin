@@ -247,7 +247,7 @@
                                 <a href="/meau/list" class="{%if $tag.0 == 7 && $tag.1 == 1%}cy-child-active{%/if%}">菜单管理</a>
                             </li>
                             <li>
-                                <a href="" class="{%if $tag.0 == 7 && $tag.1 == 2%}cy-child-active{%/if%}">角色管理</a>
+                                <a href="/meau/role" class="{%if $tag.0 == 7 && $tag.1 == 2%}cy-child-active{%/if%}">角色管理</a>
                             </li>
                             <li>
                                 <a href="" class="{%if $tag.0 == 7 && $tag.1 == 3%}cy-child-active{%/if%}">权限分配</a>
