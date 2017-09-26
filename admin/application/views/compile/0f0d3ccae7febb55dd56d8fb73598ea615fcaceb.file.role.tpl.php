@@ -1,69 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-25 18:05:31
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:197470454759c8d4eba0e1c2-26592601%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-26 15:32:45
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:95717315859ca029dce87d9-24514175%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-25 17:28:31
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:147159725759c8cc3f67e5a8-17365022%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-25 17:29:29
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:168923099759c8cc79be0512-16704747%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> d8ef2e93ab30dd570baabe133854d614effc7c5a
->>>>>>> dcc6d2bc8c401ac2df68eb7c1e77dc09704a6f89
->>>>>>> 74400905262c4427ed6278c8c1358ec0b3e88d72
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-26 17:01:57
+         compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:67988688659ca1785993887-52667819%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
+    '0f0d3ccae7febb55dd56d8fb73598ea615fcaceb' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
-<<<<<<< HEAD
-      1 => 1506331814,
-=======
-<<<<<<< HEAD
-      1 => 1506391686,
-=======
-<<<<<<< HEAD
-      1 => 1506331426,
-=======
-      1 => 1506331736,
->>>>>>> d8ef2e93ab30dd570baabe133854d614effc7c5a
->>>>>>> dcc6d2bc8c401ac2df68eb7c1e77dc09704a6f89
->>>>>>> 74400905262c4427ed6278c8c1358ec0b3e88d72
+      0 => '/var/www/admin/admin/application/views/template/meau/role.tpl',
+      1 => 1506416115,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1506411164,
+      1 => 1506411387,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '95717315859ca029dce87d9-24514175',
-=======
-      1 => 1506047796,
-      2 => 'file',
-    ),
-  ),
-<<<<<<< HEAD
-  'nocache_hash' => '197470454759c8d4eba0e1c2-26592601',
-=======
-<<<<<<< HEAD
-  'nocache_hash' => '147159725759c8cc3f67e5a8-17365022',
-=======
-  'nocache_hash' => '168923099759c8cc79be0512-16704747',
->>>>>>> d8ef2e93ab30dd570baabe133854d614effc7c5a
->>>>>>> dcc6d2bc8c401ac2df68eb7c1e77dc09704a6f89
->>>>>>> 74400905262c4427ed6278c8c1358ec0b3e88d72
+  'nocache_hash' => '67988688659ca1785993887-52667819',
   'function' => 
   array (
   ),
@@ -75,27 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59c8d4ebb53892_41240408',
+  'unifunc' => 'content_59ca17859f29b5_61779689',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c8d4ebb53892_41240408')) {function content_59c8d4ebb53892_41240408($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_59ca029dd43e49_20908711',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ca029dd43e49_20908711')) {function content_59ca029dd43e49_20908711($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_59c8cc3f7c0555_67759669',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c8cc3f7c0555_67759669')) {function content_59c8cc3f7c0555_67759669($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59c8cc79c3d3c3_98595363',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c8cc79c3d3c3_98595363')) {function content_59c8cc79c3d3c3_98595363($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> d8ef2e93ab30dd570baabe133854d614effc7c5a
->>>>>>> dcc6d2bc8c401ac2df68eb7c1e77dc09704a6f89
->>>>>>> 74400905262c4427ed6278c8c1358ec0b3e88d72
+<?php if ($_valid && !is_callable('content_59ca17859f29b5_61779689')) {function content_59ca17859f29b5_61779689($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -177,11 +113,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
-    .table>tbody>tr>td,.table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
-        vertical-align: middle;
-        height: 45px;
-    }
-    .add-f-cate-fix,.add-s-cate-fix,.edit-cate-fix{
+    .add-role-fix,.edit-role-fix{
         width: 100%;
         height: 100%;
         overflow-y: scroll;
@@ -398,7 +330,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 菜单管理 <a class="btn btn-xs btn-primary" href="javascript:void(0)" id="add-f-cate">新建菜单</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 角色管理 <a class="btn btn-xs btn-primary" href="javascript:void(0)" id="add-role">新建角色</a>
                             </li>
                         </ol>
                     </div>
@@ -413,10 +345,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>排序</th>
-                    <th>菜单名称</th>
-                    <th>URL</th>
-                    <th>图标样式</th>
+                    <th>角色名称</th>
+                    <th>描述</th>
                     <th>操作</th>
                 </tr>
             </thead>
@@ -430,27 +360,18 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 ">
                     <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_sort'];?>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_name'];?>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
 </td>
-                    <td><a href="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
-" style="color: #65CEA7;"><?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
-</a></td>
-                    <td style="color: #65CEA7;font-size: 20px;font-weight: 700;"><i class="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
-"></i></td>
                     <td>
-                        <?php if ($_smarty_tpl->tpl_vars['row']->value['pid']==''){?>
-                           <a data-pid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+                        <a data-pid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-pname="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" class="add-s-cate cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-plus'></span> 子菜单</a>&nbsp;
-                        <?php }?>
-                        <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" class="add-s-cate cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-plus'></span> 分配权限</a>&nbsp;
+                        <a id="edit-role" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" data-ssort="<?php echo $_smarty_tpl->tpl_vars['row']->value['sort'];?>
-" data-icon="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
-" data-url="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
-" class="cate-edit btn btn-xs btn-primary" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
+" data-desc="<?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
+" class="btn btn-xs btn-primary" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
                     </td>
                 </tr>
                 <?php } ?>
@@ -459,79 +380,43 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </div>
 </div>
 
-<!-- 一级菜单 -->
-<div class="add-f-cate-fix">
+<!-- 新增角色 -->
+<div class="add-role-fix">
     <div class="inner-box">
-        <h4>新增一级菜单</h4>
+        <h4>新增角色</h4>
         <hr>
-        <form name="add-f-cate" class="form">
+        <form name="add-role" class="form">
             <div class="form-group">
-                <label>菜单名</label>
+                <label>角色名称</label>
                 <input type="text" class="form-control" name="name">
             </div>
             <div class="form-group">
-                <label>排序</label>
-                <input type="text" class="form-control" name="sort">
+                <label>描述</label>
+                <textarea class="form-control" name="desc" style="max-width: 100%;"></textarea>
             </div>
-            <div class="form-group">
-                <label>图标样式</label>
-                <input type="text" class="form-control" name="icon_style">
-            </div>
-            <a class="btn btn-primary subf" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger canf" href="javascript:void(0)">取&emsp;消</a>
-        </form>
-    </div>
-</div>
-<!-- 二级菜单 -->
-<div class="add-s-cate-fix">
-    <div class="inner-box">
-        <h4>新增二级菜单&emsp;&emsp;<small id="first-cate-name" style="color: #65CEA7;"></small></h4>
-        <hr>
-        <form name="add-s-cate" class="form">
-            <div class="form-group">
-                <label>菜单名</label>
-                <input type="text" class="form-control" name="name">
-            </div>
-            <div class="form-group">
-                <label>排序</label>
-                <input type="text" class="form-control" name="sort">
-            </div>
-            <div class="form-group">
-                <label>URL <small>[ /meau/list ]</small></label>
-                <input type="text" class="form-control" name="url">
-            </div>
-            <input type="hidden" name="pid" class="pid-s">
-            <a class="btn btn-primary subs" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger cans" href="javascript:void(0)">取&emsp;消</a>
+            <a class="btn btn-primary sub-r" href="javascript:void(0)">提&emsp;交</a>
+            <a class="btn btn-danger can-r" href="javascript:void(0)">取&emsp;消</a>
         </form>
     </div>
 </div>
 
-<!-- 编辑菜单 -->
-<div class="edit-cate-fix">
+<!-- 编辑 -->
+<div class="edit-role-fix">
     <div class="inner-box">
-        <h4>编辑菜单&emsp;&emsp;<small id="old-cate-name" style="color: #65CEA7;"></small></h4>
+        <h4>编辑角色</h4>
         <hr>
-        <form name="edit-cate" class="form">
+        <form name="edit-role" class="form">
             <div class="form-group">
-                <label>菜单名</label>
-                <input type="text" class="form-control name-e" name="name">
+                <label>角色名称</label>
+                <input type="text" class="form-control" name="name" id="uname">
             </div>
             <div class="form-group">
-                <label>排序</label>
-                <input type="text" class="form-control sort-e" name="sort">
+                <label>描述</label>
+                <textarea class="form-control" id="udesc" name="desc" style="max-width: 100%;"></textarea>
             </div>
-            <div class="form-group">
-                <label>图标样式</label>
-                <input type="text" class="form-control icon-e" name="icon_style">
-            </div>
-            <div class="form-group">
-                <label>URL <small>[ /meau/list ]</small></label>
-                <input type="text" class="form-control url-e" name="url">
-            </div>
-            <input type="hidden" name="id" class="pid-e">
-            <a class="btn btn-primary sube" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger cane" href="javascript:void(0)">取&emsp;消</a>
+            <input type="hidden" name="_id" id="rid">
+            <a class="btn btn-primary sub-e" href="javascript:void(0)">提&emsp;交</a>
+            <a class="btn btn-danger can-e" href="javascript:void(0)">取&emsp;消</a>
         </form>
     </div>
 </div>
@@ -568,171 +453,87 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     
 <script>
 $(function(){
-    var meauFirst = {
+    var role = {
         init: function(){
             this.getDom();
-            this.postMeau();
-            this.cancer();
-            this.showBox();
+            this.showRoleAddBox();
+            this.hideRoleAddBox();
+            this.postRole();
         },
         getDom: function(){
-            this.form = $('form[name=add-f-cate]');
-            this.subBtn = $('.subf');
-            this.canBtn = $('.canf');
-            this.fixBox = $('.add-f-cate-fix');
-            this.showBtn = $('#add-f-cate');
+            // 新增
+            this.addFixBox = $('.add-role-fix');
+            this.addForm = $('form[name=add-role]');
+            this.showAddBtn = $('#add-role');
+            this.hideAddBtn = $('.can-r');
+            this.subAddBtn = $('.sub-r');
+
+            // 编辑
+            this.editFixBox = $('.edit-role-fix');
+            this.editForm = $('form[name=edit-role]');
+            this.showEditBtn = $('#edit-role');
+            this.hideEditBtn = $('.can-e');
+            this.subEditBtn = $('.sub-e');
+            this.idInt = $('#rid');
+            this.nameInt = $('#uname');
+            this.descInt = $('#udesc');
         },
-        postMeau: function(){
+        showRoleAddBox: function(){
             var me = this;
-            me.subBtn.unbind().bind('click', function(){
-                var data = me.form.serialize();
-                $.post('/meau/addfirst', data, function(json){
+            me.showAddBtn.unbind().bind('click', function(){
+                me.addFixBox.fadeIn(200);
+            });
+
+            me.showEditBtn.unbind().bind('click', function(){
+                var data = $(this).data();
+                me.idInt.val(data.id);
+                me.nameInt.val(data.name);
+                me.descInt.val(data.desc);
+                me.editFixBox.fadeIn(200);
+            });
+        },
+        hideRoleAddBox: function(){
+            var me = this;
+            me.hideAddBtn.unbind().bind('click', function(){
+                me.addFixBox.fadeOut(200);
+                me.addForm[0].reset();
+            });
+
+            me.hideEditBtn.unbind().bind('click', function(){
+                me.editFixBox.fadeOut(200);
+                me.editForm[0].reset();
+            });
+        },
+        postRole: function(){
+            var me = this;
+            me.subAddBtn.unbind().bind('click', function(){
+                var data = me.addForm.serialize();
+                $.post('/meau/addrole', data, function(json){
                     if(json.errCode == 0){
                         window.location.reload();
                     }
                     else{
                         alert(json.errMessage);
+                        return false;
                     }
                 });
             });
-        },
-        cancer: function(){
-            var me = this;
-            me.canBtn.unbind().bind('click', function(){
-                me.fixBox.fadeOut(200);
-                me.form[0].reset();
-            })
-        },
-        showBox: function(){
-            var me = this;
-            me.showBtn.unbind().bind('click', function(){
-                me.fixBox.fadeIn(200);
-            })
-        },
-    };
 
-    // 二级菜单
-    var meauSecond = {
-        init: function(){
-            this.getDom();
-            this.postMeau();
-            this.cancer();
-            this.showBox();
-        },
-        getDom: function(){
-            this.form = $('form[name=add-s-cate]');
-            this.subBtn = $('.subs');
-            this.canBtn = $('.cans');
-            this.fixBox = $('.add-s-cate-fix');
-            this.showBtn = $('.add-s-cate');
-            this.pname = $('#first-cate-name');
-            this.pid = $('.pid-s');
-        },
-        postMeau: function(){
-            var me = this;
-            me.subBtn.unbind().bind('click', function(){
-                var data = me.form.serialize();
-                $.post('/meau/addfirst?type=2', data, function(json){
+            me.subEditBtn.unbind().bind('click', function(){
+                var data = me.editForm.serialize();
+                $.post('/meau/addrole?type=2', data, function(json){
                     if(json.errCode == 0){
                         window.location.reload();
                     }
                     else{
                         alert(json.errMessage);
+                        return false;
                     }
                 });
             });
         },
-        cancer: function(){
-            var me = this;
-            me.canBtn.unbind().bind('click', function(){
-                me.fixBox.fadeOut(200);
-                me.form[0].reset();
-            })
-        },
-        showBox: function(){
-            var me = this;
-            me.showBtn.unbind().bind('click', function(){
-                var pid = $(this).data('pid'),
-                    pname = $(this).data('pname');
-                me.pname.text('父级菜单：'+pname);
-                me.pid.val(pid);
-                me.fixBox.fadeIn(200);
-            })
-        },
-    };
-
-    // 编辑
-    var meauEdit = {
-        init: function(){
-            this.getDom();
-            this.postMeau();
-            this.cancer();
-            this.showBox();
-        },
-        getDom: function(){
-            this.form = $('form[name=edit-cate]');
-            this.subBtn = $('.sube');
-            this.canBtn = $('.cane');
-            this.fixBox = $('.edit-cate-fix');
-            this.showBtn = $('.cate-edit');
-            this.cname = $('#old-cate-name');
-            this.cid = $('.pid-e');
-            this.csort = $('.sort-e');
-            this.cicon = $('.icon-e');
-            this.curl = $('.url-e');
-            this.new_cname = $('.name-e');
-        },
-        postMeau: function(){
-            var me = this;
-            me.subBtn.unbind().bind('click', function(){
-                var data = me.form.serialize();
-                $.post('/meau/addfirst?type=3', data, function(json){
-                    if(json.errCode == 0){
-                        window.location.reload();
-                    }
-                    else{
-                        alert(json.errMessage);
-                    }
-                });
-            });
-        },
-        cancer: function(){
-            var me = this;
-            me.canBtn.unbind().bind('click', function(){
-                me.fixBox.fadeOut(200);
-                me.form[0].reset();
-                me.cicon.attr('disabled', false);
-                me.curl.attr('disabled', false);
-            })
-        },
-        showBox: function(){
-            var me = this;
-            me.showBtn.unbind().bind('click', function(){
-                var id = $(this).data('id'),
-                    name = $(this).data('name'),
-                    sort = $(this).data('ssort'),
-                    icon = $(this).data('icon'),
-                    url = $(this).data('url');
-                me.cname.text(name);
-                me.cid.val(id);
-                me.new_cname.val(name);
-                me.csort.val(sort);
-                me.curl.val(url);
-                me.cicon.val(icon);
-                if(icon.length == 0){
-                    me.cicon.attr('disabled', true);
-                }
-                if(url == '#'){
-                    me.curl.attr('disabled', true);
-                }
-                me.fixBox.fadeIn(200);
-            })
-        },
-    };
-
-    meauFirst.init();
-    meauSecond.init();
-    meauEdit.init();
+    }
+    role.init();
 })
 </script>
 
