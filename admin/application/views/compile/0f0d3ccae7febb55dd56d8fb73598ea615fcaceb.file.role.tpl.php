@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-26 17:08:58
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-27 14:48:43
          compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:203058429759ca192a715533-66827243%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-27 09:53:31
-         compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:85521613559cb049b7abf60-59020954%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 5086a0e0a1c5e1fcaf51b7b9119e6ef0d41e46be
+<?php /*%%SmartyHeaderCode:74405695659cb49cbe9ccf4-91275837%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f0d3ccae7febb55dd56d8fb73598ea615fcaceb' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/role.tpl',
-<<<<<<< HEAD
-      1 => 1506416672,
-=======
-      1 => 1506417825,
->>>>>>> 5086a0e0a1c5e1fcaf51b7b9119e6ef0d41e46be
+      1 => 1506494852,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1506416672,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '203058429759ca192a715533-66827243',
-=======
       1 => 1506418939,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '85521613559cb049b7abf60-59020954',
->>>>>>> 5086a0e0a1c5e1fcaf51b7b9119e6ef0d41e46be
+  'nocache_hash' => '74405695659cb49cbe9ccf4-91275837',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59ca192a855766_65828535',
+  'unifunc' => 'content_59cb49cbeee390_89657613',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ca192a855766_65828535')) {function content_59ca192a855766_65828535($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59cb049b7fa3d7_95960307',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59cb049b7fa3d7_95960307')) {function content_59cb049b7fa3d7_95960307($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 5086a0e0a1c5e1fcaf51b7b9119e6ef0d41e46be
+<?php if ($_valid && !is_callable('content_59cb49cbeee390_89657613')) {function content_59cb49cbeee390_89657613($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -394,7 +370,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                     <td>
                         <a data-pid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-pname="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" class="add-s-cate cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-plus'></span> 分配权限</a>&nbsp;
+" class="add-s-cate cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-user'></span> 分配权限</a>&nbsp;
                         <a id="edit-role" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
 " data-desc="<?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>

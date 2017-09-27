@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-26 17:22:08
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-27 14:55:41
          compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:86682023459ca1c40387b29-90546660%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:46811714859cb4b6dc00187-41223717%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
-      1 => 1506331814,
+      1 => 1506391686,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1506416672,
+      1 => 1506495341,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '86682023459ca1c40387b29-90546660',
+  'nocache_hash' => '46811714859cb4b6dc00187-41223717',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59ca1c404d07d0_04616055',
+  'unifunc' => 'content_59cb4b6dc57057_10566718',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ca1c404d07d0_04616055')) {function content_59ca1c404d07d0_04616055($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59cb4b6dc57057_10566718')) {function content_59cb4b6dc57057_10566718($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -154,7 +154,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">TTXS Admin</a>
+                <a class="navbar-brand" href="index.html">&emsp;TTXS Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -315,7 +315,10 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/meau/role" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">角色管理</a>
                             </li>
                             <li>
-                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">权限分配</a>
+                                <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">管理员</a>
+                            </li>
+                            <li>
+                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
                     </li>
