@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-26 17:08:58
-         compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:203058429759ca192a715533-66827243%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-27 09:53:31
-         compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:85521613559cb049b7abf60-59020954%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 5086a0e0a1c5e1fcaf51b7b9119e6ef0d41e46be
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-27 14:03:44
+         compiled from "/var/www/admin/admin/application/views/template/meau/admin.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:21681924759cb3f4030ee96-13168448%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '0f0d3ccae7febb55dd56d8fb73598ea615fcaceb' => 
+    'cf0af0db1a13694838bf6299f25c39bc9bfde9b9' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/meau/role.tpl',
-<<<<<<< HEAD
-      1 => 1506416672,
-=======
-      1 => 1506417825,
->>>>>>> 5086a0e0a1c5e1fcaf51b7b9119e6ef0d41e46be
+      0 => '/var/www/admin/admin/application/views/template/meau/admin.tpl',
+      1 => 1506477408,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1506416672,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '203058429759ca192a715533-66827243',
-=======
       1 => 1506418939,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '85521613559cb049b7abf60-59020954',
->>>>>>> 5086a0e0a1c5e1fcaf51b7b9119e6ef0d41e46be
+  'nocache_hash' => '21681924759cb3f4030ee96-13168448',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59ca192a855766_65828535',
+  'unifunc' => 'content_59cb3f4035f4c7_76565257',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ca192a855766_65828535')) {function content_59ca192a855766_65828535($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59cb049b7fa3d7_95960307',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59cb049b7fa3d7_95960307')) {function content_59cb049b7fa3d7_95960307($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 5086a0e0a1c5e1fcaf51b7b9119e6ef0d41e46be
+<?php if ($_valid && !is_callable('content_59cb3f4035f4c7_76565257')) {function content_59cb3f4035f4c7_76565257($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -137,27 +113,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
-    .add-role-fix,.edit-role-fix{
-        width: 100%;
-        height: 100%;
-        overflow-y: scroll;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: rgba(0,0,0,.3);
-        z-index: 9999;
-        display: none;
-    }
-    .inner-box{
-        background-color: white;
-        width: 500px;
-        /*height: 200px;*/
-        border: 1px solid #999;
-        border-radius: 3px;
-        margin: 10% auto 0;
-        box-shadow: 0 0 15px rgba(0,0,0,0.5);
-        padding: 15px;
-    }
+    
 </style>
 
 </head>
@@ -357,7 +313,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 角色管理 <a class="btn btn-xs btn-primary" href="javascript:void(0)" id="add-role">新建角色</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 管理员
                             </li>
                         </ol>
                     </div>
@@ -372,8 +328,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>角色名称</th>
-                    <th>描述</th>
+                    <th>管理员</th>
+                    <th>手机</th>
+                    <th>所属角色</th>
                     <th>操作</th>
                 </tr>
             </thead>
@@ -383,68 +340,23 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                <tr data-seria="<?php echo serialize($_smarty_tpl->tpl_vars['row']->value);?>
-">
+                <tr>
                     <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['mobile'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['role_info']['role_name'];?>
 </td>
                     <td>
-                        <a data-pid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" data-pname="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" class="add-s-cate cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-plus'></span> 分配权限</a>&nbsp;
-                        <a id="edit-role" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" data-desc="<?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
-" class="btn btn-xs btn-primary" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
+                        <a class="add-s-cate cate-add btn btn-xs btn-success" href="/meau/allotrole?_id=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+"><span class='fa fa-user'></span> 授权</a>
                     </td>
                 </tr>
                 <?php } ?>
             </tbody>
         </table>
-    </div>
-</div>
-
-<!-- 新增角色 -->
-<div class="add-role-fix">
-    <div class="inner-box">
-        <h4>新增角色</h4>
-        <hr>
-        <form name="add-role" class="form">
-            <div class="form-group">
-                <label>角色名称</label>
-                <input type="text" class="form-control" name="name">
-            </div>
-            <div class="form-group">
-                <label>描述</label>
-                <textarea class="form-control" name="desc" style="max-width: 100%;"></textarea>
-            </div>
-            <a class="btn btn-primary sub-r" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger can-r" href="javascript:void(0)">取&emsp;消</a>
-        </form>
-    </div>
-</div>
-
-<!-- 编辑 -->
-<div class="edit-role-fix">
-    <div class="inner-box">
-        <h4>编辑角色</h4>
-        <hr>
-        <form name="edit-role" class="form">
-            <div class="form-group">
-                <label>角色名称</label>
-                <input type="text" class="form-control" name="name" id="uname">
-            </div>
-            <div class="form-group">
-                <label>描述</label>
-                <textarea class="form-control" id="udesc" name="desc" style="max-width: 100%;"></textarea>
-            </div>
-            <input type="hidden" name="_id" id="rid">
-            <a class="btn btn-primary sub-e" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger can-e" href="javascript:void(0)">取&emsp;消</a>
-        </form>
     </div>
 </div>
 
@@ -480,87 +392,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     
 <script>
 $(function(){
-    var role = {
-        init: function(){
-            this.getDom();
-            this.showRoleAddBox();
-            this.hideRoleAddBox();
-            this.postRole();
-        },
-        getDom: function(){
-            // 新增
-            this.addFixBox = $('.add-role-fix');
-            this.addForm = $('form[name=add-role]');
-            this.showAddBtn = $('#add-role');
-            this.hideAddBtn = $('.can-r');
-            this.subAddBtn = $('.sub-r');
-
-            // 编辑
-            this.editFixBox = $('.edit-role-fix');
-            this.editForm = $('form[name=edit-role]');
-            this.showEditBtn = $('#edit-role');
-            this.hideEditBtn = $('.can-e');
-            this.subEditBtn = $('.sub-e');
-            this.idInt = $('#rid');
-            this.nameInt = $('#uname');
-            this.descInt = $('#udesc');
-        },
-        showRoleAddBox: function(){
-            var me = this;
-            me.showAddBtn.unbind().bind('click', function(){
-                me.addFixBox.fadeIn(200);
-            });
-
-            me.showEditBtn.unbind().bind('click', function(){
-                var data = $(this).data();
-                me.idInt.val(data.id);
-                me.nameInt.val(data.name);
-                me.descInt.val(data.desc);
-                me.editFixBox.fadeIn(200);
-            });
-        },
-        hideRoleAddBox: function(){
-            var me = this;
-            me.hideAddBtn.unbind().bind('click', function(){
-                me.addFixBox.fadeOut(200);
-                me.addForm[0].reset();
-            });
-
-            me.hideEditBtn.unbind().bind('click', function(){
-                me.editFixBox.fadeOut(200);
-                me.editForm[0].reset();
-            });
-        },
-        postRole: function(){
-            var me = this;
-            me.subAddBtn.unbind().bind('click', function(){
-                var data = me.addForm.serialize();
-                $.post('/meau/addrole', data, function(json){
-                    if(json.errCode == 0){
-                        window.location.reload();
-                    }
-                    else{
-                        alert(json.errMessage);
-                        return false;
-                    }
-                });
-            });
-
-            me.subEditBtn.unbind().bind('click', function(){
-                var data = me.editForm.serialize();
-                $.post('/meau/addrole?type=2', data, function(json){
-                    if(json.errCode == 0){
-                        window.location.reload();
-                    }
-                    else{
-                        alert(json.errMessage);
-                        return false;
-                    }
-                });
-            });
-        },
-    }
-    role.init();
+    
 })
 </script>
 
