@@ -1,13 +1,11 @@
 <?php
-class Dao_RoleModel extends Db_Mongodb {
+class Dao_RoleAssginModel extends Db_Mongodb {
     
-    protected $table = 'backend_role';
+    protected $table = 'backend_role_assgin';
 
     protected $fields = [
-        'name'      => '',
-        'desc'      => '',
-        'status'    => 1,
-        'ctime'     => 0,
+        'uid'      => '', // user id
+        'rid'      => '', // role id
     ];
 
     protected function __construct(){
@@ -38,6 +36,10 @@ class Dao_RoleModel extends Db_Mongodb {
         ];
 
         return $this->query($where, $options);
+    }
+
+    public function getRoleByUId(string $uid){
+        return $this->query(['uid' => $uid]);
     }
 
 }
