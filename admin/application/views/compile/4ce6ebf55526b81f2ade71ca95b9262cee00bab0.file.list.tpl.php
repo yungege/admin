@@ -1,23 +1,37 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-27 14:42:56
          compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:191710377659cb4870441d00-17030577%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-27 14:55:41
+         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:46811714859cb4b6dc00187-41223717%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> b20ee65a240ae26fef193bbcbbe04e29c6bf76d6
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
-      1 => 1506331814,
+      1 => 1506391686,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1506494481,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '191710377659cb4870441d00-17030577',
+=======
+      1 => 1506495341,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '46811714859cb4b6dc00187-41223717',
+>>>>>>> b20ee65a240ae26fef193bbcbbe04e29c6bf76d6
   'function' => 
   array (
   ),
@@ -29,9 +43,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59cb48705973b9_91279750',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59cb48705973b9_91279750')) {function content_59cb48705973b9_91279750($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59cb4b6dc57057_10566718',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59cb4b6dc57057_10566718')) {function content_59cb4b6dc57057_10566718($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> b20ee65a240ae26fef193bbcbbe04e29c6bf76d6
 <html lang="en">
 
 <head>
@@ -154,7 +174,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">TTXS Admin</a>
+                <a class="navbar-brand" href="index.html">&emsp;TTXS Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">

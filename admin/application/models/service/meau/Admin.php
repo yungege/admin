@@ -37,7 +37,7 @@ class Service_Meau_AdminModel extends BasePageService {
             $roleList = array_column($roleList, null, '_id');
 
             foreach ($assginList as &$al) {
-                $al['role_name'] = $roleList[$al['role_id']]['name'];
+                $al['role_name'] = $roleList[$al['rid']]['name'];
             }
         }
 
