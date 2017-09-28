@@ -1,37 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-27 18:02:29
-         compiled from "/var/www/admin/admin/application/views/template/meau/admin.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:123521949659cb77350f8181-83171121%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-28 16:34:22
-         compiled from "/var/www/admin/admin/application/views/template/meau/admin.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:74027307959ccb40ef32151-56313039%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 24b9bfedfb5744ac3007bc9a3e768649632ff31e
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-28 17:35:08
+         compiled from "/var/www/admin/admin/application/views/template/meau/assgin.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:31858356859ccc24cc2b995-35765376%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'cf0af0db1a13694838bf6299f25c39bc9bfde9b9' => 
+    'cbf3bc439b8ef2a10a46a5272aef770d71e16c64' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/meau/admin.tpl',
-      1 => 1506477408,
+      0 => '/var/www/admin/admin/application/views/template/meau/assgin.tpl',
+      1 => 1506591294,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1506495387,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '123521949659cb77350f8181-83171121',
-=======
       1 => 1506587535,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '74027307959ccb40ef32151-56313039',
->>>>>>> 24b9bfedfb5744ac3007bc9a3e768649632ff31e
+  'nocache_hash' => '31858356859ccc24cc2b995-35765376',
   'function' => 
   array (
   ),
@@ -43,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59cb7735227143_27444708',
+  'unifunc' => 'content_59ccc24cc7d0c6_63509551',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59cb7735227143_27444708')) {function content_59cb7735227143_27444708($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59ccb40f041627_03666176',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ccb40f041627_03666176')) {function content_59ccb40f041627_03666176($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 24b9bfedfb5744ac3007bc9a3e768649632ff31e
+<?php if ($_valid && !is_callable('content_59ccc24cc7d0c6_63509551')) {function content_59ccc24cc7d0c6_63509551($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -133,6 +113,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
+    .table>tbody>tr>td,.table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+        vertical-align: middle;
+        height: 45px;
+    }
     
 </style>
 
@@ -333,7 +317,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 管理员
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 权限分配
                             </li>
                         </ol>
                     </div>
@@ -347,36 +331,36 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
         <table class="table table-striped table-bordered" style="color: #7a7676;">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>管理员</th>
-                    <th>手机</th>
-                    <th>所属角色</th>
-                    <th>操作</th>
+                    <th></th>
+                    <th>菜单名称</th>
+                    <th>URL</th>
+                    <th>图标样式</th>
                 </tr>
             </thead>
             <tbody>
+                <form name="urls">
                 <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                <tr>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+                <tr">
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['checkbox'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_name'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['mobile'];?>
-</td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['role_info']['role_name'];?>
-</td>
-                    <td>
-                        <a class="add-s-cate cate-add btn btn-xs btn-success" href="/meau/allotrole?_id=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-"><span class='fa fa-user'></span> 授权</a>
-                    </td>
+                    <td><a href="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+" style="color: #65CEA7;"><?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+</a></td>
+                    <td style="color: #65CEA7;font-size: 20px;font-weight: 700;"><i class="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
+"></i></td>
                 </tr>
                 <?php } ?>
+                </form>
             </tbody>
         </table>
+
+        <a class="btn btn-md btn-primary" href="javascript:void(0)">保 存</a>
     </div>
 </div>
 
@@ -411,9 +395,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
     
 <script>
-$(function(){
-    
-})
+
 </script>
 
 </body>

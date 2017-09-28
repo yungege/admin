@@ -108,7 +108,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     {%if $userInfo.iconurl%}
-                    <img src="{%$userInfo.iconurl%}" alt="..." width="20" height="20" style="border-radius: 10px;">
+                    <img src="{%$userInfo.iconurl%}?imageView2/2/w/60/h/60/q/100" alt="..." width="20" height="20" style="border-radius: 10px;">
                     {%else%}
                     <i class="fa fa-user"></i>
                     {%/if%}
@@ -253,7 +253,7 @@
                                 <a href="/meau/admin" class="{%if $tag.0 == 7 && $tag.1 == 3%}cy-child-active{%/if%}">管理员</a>
                             </li>
                             <li>
-                                <a href="" class="{%if $tag.0 == 7 && $tag.1 == 4%}cy-child-active{%/if%}">权限分配</a>
+                                <a href="/meau/assgin" class="{%if $tag.0 == 7 && $tag.1 == 4%}cy-child-active{%/if%}">权限分配</a>
                             </li>
                         </ul>
                     </li>
