@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-27 14:49:46
+<?php /* Smarty version Smarty-3.1.13, created on 2017-09-27 19:28:40
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:51940679559cb4a0ab8f9d1-25218578%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:719706959cb8b683bb791-57287878%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1506494481,
+      1 => 1506495387,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '51940679559cb4a0ab8f9d1-25218578',
+  'nocache_hash' => '719706959cb8b683bb791-57287878',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59cb4a0ad33f29_78453012',
+  'unifunc' => 'content_59cb8b68573646_52340576',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59cb4a0ad33f29_78453012')) {function content_59cb4a0ad33f29_78453012($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59cb8b68573646_52340576')) {function content_59cb8b68573646_52340576($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -188,7 +188,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">TTXS Admin</a>
+                <a class="navbar-brand" href="index.html">&emsp;TTXS Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
