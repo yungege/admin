@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-12 10:57:34
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:81631638459deda1e7f25e2-17885686%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
 <?php /* Smarty version Smarty-3.1.13, created on 2017-09-30 13:19:39
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:194831011659cf296b5ea688-71786551%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 86a7c627bae6ae1e4545eac776fd333ecc4c9bd2
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +19,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
+      1 => 1506591426,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '81631638459deda1e7f25e2-17885686',
+=======
       1 => 1506591581,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '194831011659cf296b5ea688-71786551',
+>>>>>>> 86a7c627bae6ae1e4545eac776fd333ecc4c9bd2
   'function' => 
   array (
   ),
@@ -29,9 +43,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_59deda1e873623_65157416',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59deda1e873623_65157416')) {function content_59deda1e873623_65157416($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
   'unifunc' => 'content_59cf296b65e423_59800365',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59cf296b65e423_59800365')) {function content_59cf296b65e423_59800365($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 86a7c627bae6ae1e4545eac776fd333ecc4c9bd2
 ?><!DOCTYPE html>
 <html lang="en">
 
