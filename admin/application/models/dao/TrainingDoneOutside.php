@@ -127,7 +127,11 @@ class Dao_TrainingDoneOutsideModel extends Db_Mongodb {
         $jsonItem = json_encode($data);
         $redisKey = Tools::getRedisKey($uid.'_'.$monthDate, 'train_history');
 
-        return $this->redis->zAdd($redisKey, $jsonItem, $score);
+        $res = $this->redis->zAdd($redisKey, $jsonItem, $score);
+        if($res){
+            $this->redis->setExpire($redisKey, 30 * 86400);
+        }
+        return $res;
     }
 
 }
