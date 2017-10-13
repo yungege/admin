@@ -1,37 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-27 18:02:31
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-13 10:05:00
          compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:121121871659cb7737620cf2-98924180%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-28 16:23:58
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:53660705559ccb19e326f58-94292424%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 24b9bfedfb5744ac3007bc9a3e768649632ff31e
+<?php /*%%SmartyHeaderCode:38170424059e01f4c083045-25858240%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
-      1 => 1506331814,
+      1 => 1506331805,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1506495387,
+      1 => 1506591581,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '121121871659cb7737620cf2-98924180',
-=======
-      1 => 1506495341,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '53660705559ccb19e326f58-94292424',
->>>>>>> 24b9bfedfb5744ac3007bc9a3e768649632ff31e
+  'nocache_hash' => '38170424059e01f4c083045-25858240',
   'function' => 
   array (
   ),
@@ -43,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59cb773777e976_56317555',
+  'unifunc' => 'content_59e01f4c0e58e8_15730550',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59cb773777e976_56317555')) {function content_59cb773777e976_56317555($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59ccb19e377273_34624990',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ccb19e377273_34624990')) {function content_59ccb19e377273_34624990($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 24b9bfedfb5744ac3007bc9a3e768649632ff31e
+<?php if ($_valid && !is_callable('content_59e01f4c0e58e8_15730550')) {function content_59e01f4c0e58e8_15730550($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -190,7 +170,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <?php if ($_smarty_tpl->tpl_vars['userInfo']->value['iconurl']){?>
                     <img src="<?php echo $_smarty_tpl->tpl_vars['userInfo']->value['iconurl'];?>
-" alt="..." width="20" height="20" style="border-radius: 10px;">
+?imageView2/2/w/60/h/60/q/100" alt="..." width="20" height="20" style="border-radius: 10px;">
                     <?php }else{ ?>
                     <i class="fa fa-user"></i>
                     <?php }?>
@@ -338,7 +318,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">管理员</a>
                             </li>
                             <li>
-                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">权限分配</a>
+                                <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
                     </li>
