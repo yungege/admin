@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-27 14:42:58
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-13 14:24:56
          compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:200537561659cb4872701b26-53000010%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-27 14:48:43
-         compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:74405695659cb49cbe9ccf4-91275837%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> b20ee65a240ae26fef193bbcbbe04e29c6bf76d6
+<?php /*%%SmartyHeaderCode:153583087659e05c388d7034-60995476%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f0d3ccae7febb55dd56d8fb73598ea615fcaceb' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/role.tpl',
-<<<<<<< HEAD
-      1 => 1506416672,
-=======
       1 => 1506494852,
->>>>>>> b20ee65a240ae26fef193bbcbbe04e29c6bf76d6
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1506494481,
+      1 => 1506591426,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '200537561659cb4872701b26-53000010',
-=======
-      1 => 1506418939,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '74405695659cb49cbe9ccf4-91275837',
->>>>>>> b20ee65a240ae26fef193bbcbbe04e29c6bf76d6
+  'nocache_hash' => '153583087659e05c388d7034-60995476',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59cb487283a3f0_74293183',
+  'unifunc' => 'content_59e05c3892b813_77928683',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59cb487283a3f0_74293183')) {function content_59cb487283a3f0_74293183($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59cb49cbeee390_89657613',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59cb49cbeee390_89657613')) {function content_59cb49cbeee390_89657613($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> b20ee65a240ae26fef193bbcbbe04e29c6bf76d6
+<?php if ($_valid && !is_callable('content_59e05c3892b813_77928683')) {function content_59e05c3892b813_77928683($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -174,7 +150,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">TTXS Admin</a>
+                <a class="navbar-brand" href="index.html">&emsp;TTXS Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -190,7 +166,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <?php if ($_smarty_tpl->tpl_vars['userInfo']->value['iconurl']){?>
                     <img src="<?php echo $_smarty_tpl->tpl_vars['userInfo']->value['iconurl'];?>
-" alt="..." width="20" height="20" style="border-radius: 10px;">
+?imageView2/2/w/60/h/60/q/100" alt="..." width="20" height="20" style="border-radius: 10px;">
                     <?php }else{ ?>
                     <i class="fa fa-user"></i>
                     <?php }?>
@@ -338,7 +314,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">管理员</a>
                             </li>
                             <li>
-                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">权限分配</a>
+                                <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
                     </li>
