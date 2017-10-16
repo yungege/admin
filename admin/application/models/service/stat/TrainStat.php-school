@@ -55,7 +55,7 @@ class Service_Stat_TrainStatModel extends BasePageService {
                                      ->setCategory("Test result file");
 
         $objPHPExcel->setActiveSheetIndex(0)
-                        ->setCellValue('A1', '班级')
+                        ->setCellValue('A1', '学校')
                         ->setCellValue('B1', '总人数')
                         ->setCellValue('C1', '总锻炼次数')
                         ->setCellValue('D1', '总锻炼时间')
@@ -73,120 +73,96 @@ class Service_Stat_TrainStatModel extends BasePageService {
         $classWhere = [
             'schoolid' => $this->schoolId,
             'is_test' => ['$ne' => 1],
-            'grade' => ['$in' => $this->gradeNo],
+            'grade' => ['$in' => [12,13,14,15,16]],
             'branch_school' => null,
-            ];
-        $classOptions = [
-            'sort' => ['grade' => 1,'classno' => 1],
         ];
-        $classOptions = [
-            'projection' => ['name' => 1 ,'_id' => 1],
+        $classFields = ['name','_id'];
+        $classOptions['sort'] = ['grade' => 1,'classno' => 1];
+        $classInfos = $this->classModel->query($classWhere,$classFields,$classOptions['sort']);
+
+        $classInfos = array_column($classInfos,'_id');
+
+        $userWhere = [
+            'classinfo.classid' => ['$in' => $classInfos],
+            'type' => 1,
+        ];
+        $option['projection'] = ['username' => 1,'ssoid' => 1,'mobileno' => 1,'_id' => 1, 'schoolinfo' => 1];
+        $userInfos = $this->userModel->query($userWhere,$option);
+        $this->userIds = array_column($userInfos,'_id');
+        $userNo = count($this->userIds);
+
+        $where = [
+            'starttime' => [
+                '$gte' => $this->startTime,
+                '$lte' => $this->endTime,
+            ],
+            'htype' => [
+                '$in' => [1,2,3],
+            ],
+            'userid' => [
+                '$in' => $this->userIds,
+            ],
         ];
 
-        $classInfos = $this->classModel->query($classWhere,$classOptions);
-        // var_dump($classInfos);
-        // exit;
-        
-        $i = 2;
-        foreach($classInfos as $classInfo){
+        $fields = [
+            '$project' => [
+                'userid' => 1,
+                'burncalories' => 1,
+                'projecttime' => 1,
+                'htype' => 1,
+            ]
+        ];
 
-            $a = 'A' . $i;
-            $b = 'B' . $i;
-            $c = 'C' . $i;
-            $d = 'D' . $i;
-            $e = 'E' . $i;
-            $f = 'F' . $i;
-            $g = 'G' . $i;
+        $group = [
+            '$group' => [
+                '_id' => '$userid',
+                'burncalorie' => ['$sum' => '$burncalories'],
+                'projecttime' => ['$sum' => '$projecttime'],
+                'count' => ['$sum' => 1],
+                'htype' => ['$push' => '$htype'],
+            ]
+        ];
+        $aggregate = [
+            ['$match' => $where],
+            $fields,
+            $group
+        ];
 
-            $userWhere = [
-                'classinfo.classid' => $classInfo['_id'],
-                'type' => 1,
-            ];
-            $option['projection'] = ['username' => 1,'ssoid' => 1,'mobileno' => 1,'_id' => 1, 'schoolinfo' => 1,'grade' => 1];
-            $userInfos = $this->userModel->query($userWhere,$option);
-            $this->userIds = array_column($userInfos,'_id');
-            $userNo = count($this->userIds);
+        $list = $this->trainModel->aggregate($aggregate);
 
-            $where = [
-                'starttime' => [
-                    '$gte' => $this->startTime,
-                    '$lte' => $this->endTime,
-                ],
-                'htype' => [
-                    '$in' => [1,2,3],
-                ],
-                'userid' => [
-                    '$in' => $this->userIds,
-                ],
-            ];
+        unset($where['htype']);
+        $aggregate = [
+            ['$match' => $where],
+            $fields,
+            $group
+        ];
 
-            $fields = [
-                '$project' => [
-                    'userid' => 1,
-                    'burncalories' => 1,
-                    'projecttime' => 1,
-                    'htype' => 1,
-                ]
-            ];
+        $list2 = $this->trainOutsideModel->aggregate($aggregate);
 
-            $group = [
-                '$group' => [
-                    '_id' => '$userid',
-                    'burncalorie' => ['$sum' => '$burncalories'],
-                    'projecttime' => ['$sum' => '$projecttime'],
-                    'count' => ['$sum' => 1],
-                    // 'htype' => ['$push' => '$htype'],
-                ]
-            ];
-            $aggregate = [
-                ['$match' => $where],
-                $fields,
-                $group
-            ];
-
-            $list = $this->trainModel->aggregate($aggregate);
-
-            unset($where['htype']);
-            $aggregate = [
-                ['$match' => $where],
-                $fields,
-                $group
-            ];
-
-            $list2 = $this->trainOutsideModel->aggregate($aggregate);
-
-            $trainNo = 0;
-            $calories = 0;
-            $trainTime = 0;
-            if(!empty($list)){
-                foreach($list as $value){
-                    $trainNo += $value['count'];
-                    $calories += $value['burncalorie'];
-                    $trainTime += $value['projecttime'];
-                }
-            }
-            
-            $trainNo1 = $trainNo;
-            if(!empty($list2)){
-                foreach($list2 as $value){
-                    $trainNo += $value['count'];
-                    $calories += $value['burncalorie'];
-                    $trainTime += $value['projecttime'];
-                }
-            }
-
-            $avgNo = round($trainNo/$userNo,2);
-            $objPHPExcel->setActiveSheetIndex(0)
-                            ->setCellValue($a, $classInfo['name'])
-                            ->setCellValue($b, $userNo)
-                            ->setCellValue($c, $trainNo)
-                            ->setCellValue($d, round($trainTime/60,2))
-                            ->setCellValue($e, $calories)
-                            ->setCellValue($f, $avgNo)
-                            ->setCellValue($g, $trainNo - $trainNo1);
-            $i++;
+        $trainNo = 0;
+        $calories = 0;
+        $trainTime = 0;
+        foreach($list as $value){
+            $trainNo += $value['count'];
+            $calories += $value['burncalorie'];
+            $trainTime += $value['projecttime'];
         }
-        
+            $trainNo1 = $trainNo;
+        foreach($list2 as $value){
+            $trainNo += $value['count'];
+            $calories += $value['burncalorie'];
+            $trainTime += $value['projecttime'];
+        }
+
+        $avgNo = round($trainNo/$userNo,2);
+        $objPHPExcel->setActiveSheetIndex(0)
+                        ->setCellValue('A2', $schoolInfo['name'])
+                        ->setCellValue('B2', $userNo)
+                        ->setCellValue('C2', $trainNo)
+                        ->setCellValue('D2', round($trainTime/60,2))
+                        ->setCellValue('E2', $calories)
+                        ->setCellValue('F2', $avgNo)
+                        ->setCellValue('G2', $trainNo - $trainNo1);
         
 
         // Rename worksheet
