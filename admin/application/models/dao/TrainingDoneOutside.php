@@ -1,3 +1,4 @@
+
 <?php
 class Dao_TrainingDoneOutsideModel extends Db_Mongodb {
 

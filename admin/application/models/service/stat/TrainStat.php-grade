@@ -55,7 +55,7 @@ class Service_Stat_TrainStatModel extends BasePageService {
                                      ->setCategory("Test result file");
 
         $objPHPExcel->setActiveSheetIndex(0)
-                        ->setCellValue('A1', '班级')
+                        ->setCellValue('A1', '学校')
                         ->setCellValue('B1', '总人数')
                         ->setCellValue('C1', '总锻炼次数')
                         ->setCellValue('D1', '总锻炼时间')
@@ -69,26 +69,8 @@ class Service_Stat_TrainStatModel extends BasePageService {
         $this->schoolId = "587f31732a46800e0a8b4567";
         $schoolFields = ['name'];
         $schoolInfo = $this->schoolModel->getSchoolById($this->schoolId,$schoolFields);
-
-        $classWhere = [
-            'schoolid' => $this->schoolId,
-            'is_test' => ['$ne' => 1],
-            'grade' => ['$in' => $this->gradeNo],
-            'branch_school' => null,
-            ];
-        $classOptions = [
-            'sort' => ['grade' => 1,'classno' => 1],
-        ];
-        $classOptions = [
-            'projection' => ['name' => 1 ,'_id' => 1],
-        ];
-
-        $classInfos = $this->classModel->query($classWhere,$classOptions);
-        // var_dump($classInfos);
-        // exit;
-        
         $i = 2;
-        foreach($classInfos as $classInfo){
+        foreach($this->gradeNo as $grade){
 
             $a = 'A' . $i;
             $b = 'B' . $i;
@@ -97,9 +79,20 @@ class Service_Stat_TrainStatModel extends BasePageService {
             $e = 'E' . $i;
             $f = 'F' . $i;
             $g = 'G' . $i;
+            $classWhere = [
+            'schoolid' => $this->schoolId,
+            'is_test' => ['$ne' => 1],
+            'grade' => $grade,
+            'branch_school' => null,
+            ];
+            $classFields = ['name','_id'];
+            $classOptions['sort'] = ['grade' => 1,'classno' => 1];
+            $classInfos = $this->classModel->query($classWhere,$classFields,$classOptions['sort']);
+
+            $classInfos = array_column($classInfos,'_id');
 
             $userWhere = [
-                'classinfo.classid' => $classInfo['_id'],
+                'classinfo.classid' => ['$in' => $classInfos],
                 'type' => 1,
             ];
             $option['projection'] = ['username' => 1,'ssoid' => 1,'mobileno' => 1,'_id' => 1, 'schoolinfo' => 1,'grade' => 1];
@@ -146,6 +139,9 @@ class Service_Stat_TrainStatModel extends BasePageService {
 
             $list = $this->trainModel->aggregate($aggregate);
 
+            // var_dump($list);
+            // exit;
+
             unset($where['htype']);
             $aggregate = [
                 ['$match' => $where],
@@ -158,26 +154,21 @@ class Service_Stat_TrainStatModel extends BasePageService {
             $trainNo = 0;
             $calories = 0;
             $trainTime = 0;
-            if(!empty($list)){
-                foreach($list as $value){
-                    $trainNo += $value['count'];
-                    $calories += $value['burncalorie'];
-                    $trainTime += $value['projecttime'];
-                }
+            foreach($list as $value){
+                $trainNo += $value['count'];
+                $calories += $value['burncalorie'];
+                $trainTime += $value['projecttime'];
             }
-            
-            $trainNo1 = $trainNo;
-            if(!empty($list2)){
-                foreach($list2 as $value){
-                    $trainNo += $value['count'];
-                    $calories += $value['burncalorie'];
-                    $trainTime += $value['projecttime'];
-                }
+                $trainNo1 = $trainNo;
+            foreach($list2 as $value){
+                $trainNo += $value['count'];
+                $calories += $value['burncalorie'];
+                $trainTime += $value['projecttime'];
             }
 
             $avgNo = round($trainNo/$userNo,2);
             $objPHPExcel->setActiveSheetIndex(0)
-                            ->setCellValue($a, $classInfo['name'])
+                            ->setCellValue($a, $grade)
                             ->setCellValue($b, $userNo)
                             ->setCellValue($c, $trainNo)
                             ->setCellValue($d, round($trainTime/60,2))
