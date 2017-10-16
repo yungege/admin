@@ -16,7 +16,7 @@ class Db_Mongodb {
     protected $pk       = '_id'; // 主键
     
     protected static $instance   = []; // 实例对象数组
-    protected $connection = [];
+    protected static $connection = [];
     
     protected $manager = null;
 
@@ -47,11 +47,11 @@ class Db_Mongodb {
 
             self::parseConfig();
 
-            if(!isset($this->connection[$this->host][$this->port])){
+            if(!isset(self::$connection[$this->host][$this->port])){
                 self::connect();
             }
 
-            $this->manager = $this->connection[$this->host][$this->port];
+            $this->manager = self::$connection[$this->host][$this->port];
         } catch (Exception $e) {
             self::log($e->getMessage());
         }
@@ -96,8 +96,8 @@ class Db_Mongodb {
      */
     private function connect (){
         $uri = "mongodb://{$this->user}:{$this->pwd}@{$this->host}:{$this->port}/{$this->db}";
-        $options = ['connectTimeoutMS' => 50000, 'socketTimeoutMS' => 50000];
-        $this->connection[$this->host][$this->port] = new MongoDB\Driver\Manager($uri, $options);
+        // $options = ['connectTimeoutMS' => 50000, 'socketTimeoutMS' => 50000];
+        self::$connection[$this->host][$this->port] = new MongoDB\Driver\Manager($uri, $options);
     }
 
     /**
