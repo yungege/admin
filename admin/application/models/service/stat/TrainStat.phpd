@@ -4,6 +4,7 @@ class Service_Stat_TrainStatModel extends BasePageService {
     protected $schoolId;
 
     protected $schoolModel;
+    protected $classModel;
     protected $userModel;
     protected $trainModel;
     protected $proSkuModel;
@@ -15,6 +16,7 @@ class Service_Stat_TrainStatModel extends BasePageService {
         $this->userModel = Dao_UserModel::getInstance();
         $this->trainModel = Dao_TrainingdoneModel::getInstance();
         $this->proSkuModel = Dao_ExerciseProjectSkuModel::getInstance();
+        $this->classModel = Dao_ClassinfoModel::getInstance();
     }
 
     protected function __declare() {
@@ -49,19 +51,24 @@ class Service_Stat_TrainStatModel extends BasePageService {
 
 
 
-
-
-
         $this->schoolId = "587f31732a46800e0a8b4567";
-
         $schoolFields = ['name'];
-
         $schoolInfo = $this->schoolModel->getSchoolById($this->schoolId,$schoolFields);
 
+        $classWhere = [
+            'schoolid' => $this->schoolId,
+            'is_test' => ['$ne' => 1],
+            'grade' => ['$in' => [12,13,14,15,16]],
+            'branch_school' => null
+        ];
+        $options['projection'] = ['_id' => 1];
+        $classInfo = $this->classModel->query($classWhere,$options);
+        $classInfo = array_column($classInfo,'_id');
+        var_dump($classInfo);
+        exit;
+
         $userWhere = [
-            'schoolinfo.schoolid' => $this->schoolId,
-            'classinfo.classname' => ['$ne' => '测试班级'],
-            'type' => 1
+            'classinfo.classid' => ['$in' => $classInfo],
         ];
         $option['projection'] = ['username' => 1,'ssoid' => 1,'mobileno' => 1,'_id' => 1, 'schoolinfo' => 1];
         $userInfos = $this->userModel->query($userWhere,$option);
