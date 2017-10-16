@@ -1,30 +1,12 @@
 <<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-20 16:16:49
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-13 18:23:05
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:26185636359c223f1aabb62-80252180%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:209823329859e094093f75a1-95411745%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 =======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-20 18:04:46
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-13 14:23:48
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:122999871659c23d3ebd3e98-65347559%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-20 09:49:58
-         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:162407446459c1c946dd1c11-40873670%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-20 09:55:12
-         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:139282467659c1ca807cc631-87239518%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-18 21:50:44
-         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:96229504759bfcf3407a432-24815518%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> e545b91ee4d24514057f59b1ffb0aceee854ecf9
->>>>>>> b8f67139a7a358ad78aa65c57f04bf215bd118f1
->>>>>>> 772995ad049c537e3a9cab798371cab8a614f8c2
->>>>>>> f0a2d374468569626b471b73647579910e9d3fb5
+<?php /*%%SmartyHeaderCode:138664659159e05bf46f1c87-04554945%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> ef69a9f6dc9445e2fb2e9017109e1e2472c2caba
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -35,40 +17,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       1 => 1505473681,
 =======
       1 => 1505473621,
->>>>>>> f0a2d374468569626b471b73647579910e9d3fb5
+>>>>>>> ef69a9f6dc9445e2fb2e9017109e1e2472c2caba
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
 <<<<<<< HEAD
-      1 => 1505720828,
+      1 => 1506591581,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '26185636359c223f1aabb62-80252180',
+  'nocache_hash' => '209823329859e094093f75a1-95411745',
 =======
-      1 => 1505722731,
+      1 => 1506591426,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '122999871659c23d3ebd3e98-65347559',
-=======
-  'nocache_hash' => '139282467659c1ca807cc631-87239518',
-=======
-      1 => 1505720839,
-      2 => 'file',
-    ),
-  ),
-<<<<<<< HEAD
-  'nocache_hash' => '162407446459c1c946dd1c11-40873670',
-=======
-  'nocache_hash' => '96229504759bfcf3407a432-24815518',
->>>>>>> e545b91ee4d24514057f59b1ffb0aceee854ecf9
->>>>>>> b8f67139a7a358ad78aa65c57f04bf215bd118f1
->>>>>>> 772995ad049c537e3a9cab798371cab8a614f8c2
->>>>>>> f0a2d374468569626b471b73647579910e9d3fb5
+  'nocache_hash' => '138664659159e05bf46f1c87-04554945',
+>>>>>>> ef69a9f6dc9445e2fb2e9017109e1e2472c2caba
   'function' => 
   array (
   ),
@@ -81,32 +48,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
-  'unifunc' => 'content_59c223f1b2cb03_30536076',
+  'unifunc' => 'content_59e09409475345_00784005',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c223f1b2cb03_30536076')) {function content_59c223f1b2cb03_30536076($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59e09409475345_00784005')) {function content_59e09409475345_00784005($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 =======
-<<<<<<< HEAD
-  'unifunc' => 'content_59c23d3ecfeba4_44307270',
+  'unifunc' => 'content_59e05bf4778d85_55551681',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c23d3ecfeba4_44307270')) {function content_59c23d3ecfeba4_44307270($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_59c1c947016256_84395090',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c1c947016256_84395090')) {function content_59c1c947016256_84395090($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_59c1ca80891e39_02997074',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c1ca80891e39_02997074')) {function content_59c1ca80891e39_02997074($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-  'unifunc' => 'content_59bfcf342213e1_97693082',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59bfcf342213e1_97693082')) {function content_59bfcf342213e1_97693082($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> e545b91ee4d24514057f59b1ffb0aceee854ecf9
->>>>>>> b8f67139a7a358ad78aa65c57f04bf215bd118f1
->>>>>>> 772995ad049c537e3a9cab798371cab8a614f8c2
->>>>>>> f0a2d374468569626b471b73647579910e9d3fb5
+<?php if ($_valid && !is_callable('content_59e05bf4778d85_55551681')) {function content_59e05bf4778d85_55551681($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> ef69a9f6dc9445e2fb2e9017109e1e2472c2caba
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -142,6 +91,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <![endif]-->
 
     <style type="text/css">
+        body{
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+        }
         .cy-child-active{
             background-color: black;
             color: white!important;
@@ -262,7 +214,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">TTXS Admin</a>
+                <a class="navbar-brand" href="index.html">&emsp;TTXS Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -278,7 +230,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <?php if ($_smarty_tpl->tpl_vars['userInfo']->value['iconurl']){?>
                     <img src="<?php echo $_smarty_tpl->tpl_vars['userInfo']->value['iconurl'];?>
-" alt="..." width="20" height="20" style="border-radius: 10px;">
+?imageView2/2/w/60/h/60/q/100" alt="..." width="20" height="20" style="border-radius: 10px;">
                     <?php }else{ ?>
                     <i class="fa fa-user"></i>
                     <?php }?>
@@ -362,9 +314,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
-                            </li>
+                            </li> -->
 
 
                         </ul>
@@ -420,10 +372,13 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/meau/list" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">菜单管理</a>
                             </li>
                             <li>
-                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">角色管理</a>
+                                <a href="/meau/role" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">角色管理</a>
                             </li>
                             <li>
-                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">权限分配</a>
+                                <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">管理员</a>
+                            </li>
+                            <li>
+                                <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
                     </li>
