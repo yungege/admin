@@ -1,0 +1,219 @@
+<?php
+class Service_Stat_TrainStatModel extends BasePageService {
+
+    protected $schoolId;
+    protected $schoolModel;
+    protected $userModel;
+    protected $trainModel;
+    protected $statData = [];
+    protected $gradeNo = [12,13,14,15,16];
+    protected $classModel;
+    protected $trainOutsideModel;
+    protected $startTime;
+    protected $endTime;
+    protected $userIds;
+
+    public function __construct() {
+        
+        $this->schoolModel = Dao_SchoolinfoModel::getInstance();
+        $this->userModel = Dao_UserModel::getInstance();
+        $this->trainModel = Dao_TrainingdoneModel::getInstance();
+        $this->classModel = Dao_ClassinfoModel::getInstance();
+        $this->trainOutsideModel = Dao_TrainingDoneOutsideModel::getInstance();
+        $this->startTime = 1499961600;
+        $this->endTime = 1505663999;
+    }
+
+    protected function __declare() {
+
+    }
+
+    protected function __execute($req) {
+
+        error_reporting(E_ALL);
+        ini_set('display_errors', TRUE);
+        ini_set('display_startup_errors', TRUE);
+        date_default_timezone_set('Asia/Shanghai');
+
+        if (PHP_SAPI == 'cli'){
+            die('This example should only be run from a Web Browser');
+        }
+
+        /** Include PHPExcel */
+        // require_once dirname(__FILE__) . '/../Classes/PHPExcel.php';
+
+        // Create new PHPExcel object
+        $objPHPExcel = new PHPExcel();
+
+        // Set document properties
+        $objPHPExcel->getProperties()->setCreator("Maarten Balliauw")
+                                     ->setLastModifiedBy("Maarten Balliauw")
+                                     ->setTitle("Office 2007 XLSX Test Document")
+                                     ->setSubject("Office 2007 XLSX Test Document")
+                                     ->setDescription("Test document for Office 2007 XLSX, generated using PHP classes.")
+                                     ->setKeywords("office 2007 openxml php")
+                                     ->setCategory("Test result file");
+
+        $objPHPExcel->setActiveSheetIndex(0)
+                        ->setCellValue('A1', '次数')
+                        ->setCellValue('B1', '人数')
+                        ->setCellValue('C1', '人数比例')
+                        ->setCellValue('D1', '总次数');
+
+
+        $this->schoolId = "587f31732a46800e0a8b4567";
+        $schoolFields = ['name'];
+        $schoolInfo = $this->schoolModel->getSchoolById($this->schoolId,$schoolFields);
+
+        $classWhere = [
+            'schoolid' => $this->schoolId,
+            'is_test' => ['$ne' => 1],
+            'grade' => ['$in' => [12,13,14,15,16]],
+            'branch_school' => null,
+        ];
+        $classFields = ['name','_id'];
+        $classOptions['sort'] = ['grade' => 1,'classno' => 1];
+        $classInfos = $this->classModel->query($classWhere,$classFields,$classOptions['sort']);
+
+        $classInfos = array_column($classInfos,'_id');
+
+        $userWhere = [
+            'classinfo.classid' => ['$in' => $classInfos],
+            'type' => 1,
+        ];
+        $option['projection'] = ['username' => 1,'ssoid' => 1,'mobileno' => 1,'_id' => 1, 'schoolinfo' => 1];
+        $userInfos = $this->userModel->query($userWhere,$option);
+        $this->userIds = array_column($userInfos,'_id');
+
+        $where = [
+            'starttime' => [
+                '$gte' => $this->startTime,
+                '$lte' => $this->endTime,
+            ],
+            'htype' => [
+                '$in' => [1,2,3],
+            ],
+            'userid' => [
+                '$in' => $this->userIds,
+            ],
+        ];
+
+        $fields = [
+            '$project' => [
+                'userid' => 1,
+            ]
+        ];
+
+        $group = [
+            '$group' => [
+                '_id' => '$userid',
+                'count' => ['$sum' => 1],
+            ]
+        ];
+        $aggregate = [
+            ['$match' => $where],
+            $fields,
+            $group
+        ];
+
+        $list = $this->trainModel->aggregate($aggregate);
+        $list = array_column($list,null,'_id');
+
+        unset($where['htype']);
+        $aggregate = [
+            ['$match' => $where],
+            $fields,
+            $group
+        ];
+
+        $list2 = $this->trainOutsideModel->aggregate($aggregate);
+        $list2 = array_column($list2,null,'_id');
+        $doneUser = [];
+        if(!empty($list)){
+            foreach($list as $key => $value){
+                array_push($doneUser,$key);
+            }
+        }
+        $a = count($doneUser);
+        if(!empty($list2)){
+            foreach($list2 as $key => $value){
+                array_push($doneUser,$key);
+            }
+        }
+        $doneUser = array_unique($doneUser);
+        
+        $countInfo = [];
+        foreach($doneUser as $value){
+
+            if(isset($list[$value]) && isset($list2[$value])){
+                $count = (int)$list[$value]['count'] + (int)$list2[$value]['count'];
+            }elseif(isset($list[$value])){
+                $count = $list[$value]['count'];
+            }elseif(isset($list2[$value])){
+                $count = $list2[$value]['count'];
+            }else{
+                continue;
+            }
+            
+            if(!isset($countInfo[$count])){
+                $countInfo[$count]['value'] = 1;
+                $countInfo[$count]['key'] = $count;
+            }else{
+                $countInfo[$count]['value'] += 1;
+            }
+        }
+        ksort($countInfo);
+        $userNo = count($this->userIds);
+
+        $i = 3;
+        foreach($countInfo as $value){
+
+            $a = 'A' . $i;
+            $b = 'B' . $i;
+            $c = 'C' . $i;
+            $d = 'D' . $i;
+            $per = round( $value['value'] / $userNo * 100 , 4) . "%";
+            $objPHPExcel->setActiveSheetIndex(0)
+                        ->setCellValue($a, $value['key'])
+                        ->setCellValue($b, $value['value'])
+                        ->setCellValue($c, $per)
+                        ->setCellValue($d, $value['key'] * $value['value']);
+
+            $i++;
+        }
+        $per = round(($userNo - count($doneUser))/$userNo * 100,4) . "%";
+        $objPHPExcel->setActiveSheetIndex(0)
+                        ->setCellValue('A2', 0)
+                        ->setCellValue('B2', $userNo - count($doneUser))
+                        ->setCellValue('C2', $per)
+                        ->setCellValue('D2', 0);
+        
+        // Rename worksheet
+        $objPHPExcel->getActiveSheet()->setTitle('学校统计');
+
+
+        // Set active sheet index to the first sheet, so Excel opens this as the first sheet
+        $objPHPExcel->setActiveSheetIndex(0);
+
+        ob_end_clean();
+        // Redirect output to a client’s web browser (Excel5)
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="01simple.xls"');
+        header('Cache-Control: max-age=0');
+        // If you're serving to IE 9, then the following may be needed
+        header('Cache-Control: max-age=1');
+
+        // If you're serving to IE over SSL, then the following may be needed
+        header ('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
+        header ('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT'); // always modified
+        header ('Cache-Control: cache, must-revalidate'); // HTTP/1.1
+        header ('Pragma: public'); // HTTP/1.0
+
+        $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
+        $objWriter->save('php://output');
+        exit;
+
+        var_dump(2);exit;
+    }
+
+}
