@@ -186,13 +186,16 @@
                             <li>
                                 <a href="/feedback/index" class="{%if $tag.0 == 4 && $tag.1 == 5%}cy-child-active{%/if%}">反馈建议</a>
                             </li>
+                            
                             <li>
                                 <a href="/upload/index" class="{%if $tag.0 == 4 && $tag.1 == 6%}cy-child-active{%/if%}">上传学生数据</a>
                             </li>
-                            <!-- <li>
+                            <li>
+                                <a href="/upload/punch" class="{%if $tag.0 == 4 && $tag.1 == 7%}cy-child-active{%/if%}">课外作业替换</a>
+                            </li>
+                            <li>
                                 <a href="/upload/outSport" class="{%if $tag.0 == 4 && $tag.1 == 7%}cy-child-active{%/if%}">上传课外活动数据</a>
-                            </li> -->
-
+                            </li>
 
                         </ul>
                     </li>
