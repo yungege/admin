@@ -215,7 +215,6 @@ class Service_User_AddUgcModel extends BasePageService {
     }
 
     // 课外活动打卡
-
     protected function addPunch ($req){
 
         if(empty($req['school_name']) || empty($req['school_mobile']) || empty($req['train_name'])){
@@ -279,7 +278,7 @@ class Service_User_AddUgcModel extends BasePageService {
             if(empty($pInterval)) $pInterval = ($data['endtime'] - $data['starttime']);
             $cacheData = [
                 "trainId" => $trainId,
-                "pName" => $this->workData['train_name'],
+                "pName" => $data['train_name'],
                 "pInterval" => 3600,
                 "pId" => "",
                 "trainingImg" => array_shift($data['exciseimg']),
