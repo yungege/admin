@@ -9,7 +9,19 @@ $(function(){
 			this.getCity();
 			this.getDistrict();
 			this.getSchool();
+			this.initDate();
 		},
+
+		initDate: function(){
+            var me = this;
+            me.dateBtn.datetimepicker({
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                minView: 2,
+                endDate: new Date(),
+            })
+        },
 
 		getDom: function(){
 
@@ -19,7 +31,9 @@ $(function(){
 			this.city = $('#city');
 			this.district = $('#district');
 			this.school = $('#school');
+			this.time = $('.wtime');
 			this.file = $('#file');
+			this.dateBtn = $('.wtime');
 		},
 
 		checkParams: function(){
@@ -122,6 +136,7 @@ $(function(){
 		        }
 
 		        pic_data.append('school',me.school.val());
+		        pic_data.append('time',me.time.val());
 
 		        $.ajax(  
 		        {  
