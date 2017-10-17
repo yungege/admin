@@ -13,6 +13,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
     protected $workData;
     protected $userData;
     protected $workId;
+    protected $schoolId;
 
 	public function __construct(){
 
@@ -30,6 +31,10 @@ class Service_Upload_IOutSportModel extends BasePageService {
 	protected function __execute($req){
         set_time_limit(0);
 		$req = $req['post'];
+
+        // var_dump($req);
+        // exit;
+
         $_FILES = $_FILES[0];
         $ext = $this->getExt($_FILES['name']);
         if($ext != "xls" && $ext != "xlsx"){
@@ -37,10 +42,12 @@ class Service_Upload_IOutSportModel extends BasePageService {
             return false;
         }
  
-        if(empty($req['school']) && !preg_match('/\w+/',$req['school'])){
+        if(empty($req['time']) &&empty($req['school']) && !preg_match('/\w+/',$req['school'])){
             $this->errNo = REQUEST_PARAMS_ERROR;
             return false;
         }
+        $this->startTime = $req['time'];
+        $this->schoolId = $req['school'];
 
         $datas = $this->importExcel($_FILES['tmp_name'],$ext);
         unset($datas[1]);
@@ -54,7 +61,64 @@ class Service_Upload_IOutSportModel extends BasePageService {
         return strtolower(pathinfo($fileName,PATHINFO_EXTENSION));
     }
 
-    protected function load($datas) {
+
+    protected function load($datas){
+
+        foreach($datas as $data){
+
+            $userWhere = [
+                'username' => $data[0],
+                'classinfo.classname' => $data[1],
+                'schoolinfo.schoolid' => $this->schoolId,
+            ];
+
+            $options['projection'] = ['_id' => 1];
+            $this->userData = $this->userModel->queryOne($userWhere,$options);
+
+            if(empty($this->userData) || empty($data[2]) ||empty($data[5])){
+                $data[8] = "信息不全";
+                $err = file_put_contents('/tmp/upload.txt',$data ,FILE_APPEND);
+                $err = file_put_contents('/tmp/upload.txt',"\r\n" ,FILE_APPEND);
+                continue;
+            }
+
+            $workData['train_name'] = $data[2];
+            $workData['start_time'] = (int)strtotime($this->startTime . '00:00:00');
+            $workData['end_time'] = (int)strtotime($this->startTime . '23:59:59');
+            $workData['done_no'] = $data[4];
+            $workData['userid'] = (string)$this->userData['_id'];
+            $workId = $this->trainOutModel->insert($workData);
+
+            $trainSchool['homework_id'] = (string)$workId;
+            $trainSchool['school_name'] = $data[5];
+            $trainSchool['mobile'] = $data[7];
+            $this->trainSchoolModel->insert($trainSchool);
+            
+            $doneOutside['htype'] = 4;
+            $doneOutside['userid'] = (string)$this->userData['_id'];
+            $doneOutside['starttime'] = (int)strtotime($this->startTime . '08:00:00');
+            $doneOutside['endtime'] = (int)strtotime($this->startTime . '09:00:00');
+            $doneOutside['createtime'] = $doneOutside['endtime'];
+            $doneOutside['homeworkid'] = $workId;
+            $doneOutside['projecttime'] = $doneOutside['endtime'] - $doneOutside['starttime'];
+            $doneOutside['burncalories'] = mt_rand(90,110);
+            $doneOutside['exciseimg'] = ["https://oi7ro6pyq.qnssl.com/o_1bpq74tqm1vdj18dd118o1ko01mumd.jpg"];
+            $doneOutside['commenttext'] = '兴趣班';
+            $doneOutside['status'] = 0;
+            $doneOutside['train_name'] = $data[2];   
+            $result = $this->trainDoneOutsideModel->insert($doneOutside);
+
+            //写入缓存 后期加入消息队列
+            $monthDate = date('Y_m', $doneOutside['endtime']);
+            $this->AddCache((string)$this->userData['_id'], $monthDate, $result, $doneOutside);
+
+        }
+            return ;
+
+    }
+
+
+    protected function loadbackup($datas) {
 
     	foreach($datas as $data){
             $data[0] = (string)$data[0];

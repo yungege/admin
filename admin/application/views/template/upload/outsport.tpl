@@ -89,6 +89,11 @@
                 </div>
 
             <div class="form-group">
+                <label>活动时间</label>
+                <input readonly="true" data-type="time" name="wtime" type="text" class="form-control wtime date" data-date-format="yyyy-mm-dd" value="{%$today%}" />
+            </div>
+
+            <div class="form-group">
                 <label for="file"> Excel </label>
                 <input type="file" class="form-control" id="file" name="file">
             </div>
@@ -113,5 +118,7 @@
 {%/block%}
 
 {%block name="js"%}
+
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="/static/upload/js/outsport.js"></script>
 {%/block%}

@@ -47,7 +47,7 @@
     .glyphicon-remove:hover{
         color: red;
     }
-    .run-type,.normal{
+    .run-type,.normal,.punch-type{
         display: none;
     }
     .homework-inner{
@@ -200,7 +200,7 @@
                         <!-- <td></td> -->
                         <td>
                             <a href="/sport/ugc?uid={%$row._id%}" class="btn btn-default btn-xs">UGC</a>
-                            <a data-uname="{%$row.username%}" data-uid="{%$row._id%}" data-cid="{%$row.classinfo.classid%}" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补作业</a>
+                            <a data-uname="{%$row.username%}" data-uid="{%$row._id%}" data-cid="{%$row.classinfo.classid%}" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补作业及打卡</a>
                         </td>
                     </tr>
                     {%/foreach%}
@@ -231,6 +231,7 @@
                     <option value="1">翻转课堂</option>
                     <option value="2">身体素质</option>
                     <option value="3">跑步作业</option>
+                    <option value="4">课外活动打卡</option>
                 </select>
             </div>
 
@@ -250,6 +251,22 @@
                 <div class="form-group">
                     <label>跑步距离(km)</label>
                     <input class="form-control" type="text" name="distance">
+                </div>
+            </div>
+
+            <!-- 课外作业替换 -->
+            <div class="punch-type">
+                <div class="form-group">
+                    <label>教育机构</label>
+                    <input class="form-control" type="text" name="school_name">
+                </div>
+                <div class="form-group">
+                    <label>教育机构联系电话</label>
+                    <input class="form-control" type="text" name="school_mobile">
+                </div>
+                <div class="form-group">
+                    <label>课外活动项目</label>
+                    <input class="form-control" type="text" name="train_name">
                 </div>
             </div>
             
@@ -335,6 +352,7 @@
             this.uname = $('#uname');
             this.htype = $('.htype');
             this.runTypeDiv = $('.run-type');
+            this.punchTypeDiv = $('.punch-type');
             this.normalDiv = $('.normal');
             this.workarea = $('.homework-inner');
 
@@ -367,6 +385,7 @@
             me.form[0].reset();
             me.normalDiv.slideUp(200);
             me.runTypeDiv.slideUp(200);
+            me.punchTypeDiv.slideUp(100);
 
             me.reFixBox.fadeOut(200);
             me.hideUid.val('');
@@ -423,6 +442,7 @@
                 ];
 
             if(type == -1){
+                me.punchTypeDiv.slideUp(100);
                 me.normalDiv.slideUp(100);
                 me.runTypeDiv.slideUp(100);
                 me.workarea.html('');
@@ -430,13 +450,23 @@
             }
             else if(type == 3){
                 me.normalDiv.hide();
+                me.punchTypeDiv.hide();
                 me.runTypeDiv.slideDown(100);
+                me.workarea.html('');
+                me.subBtn.show();
+                return;
+            }
+            else if(type == 4){
+                me.runTypeDiv.hide();
+                me.normalDiv.hide();
+                me.punchTypeDiv.slideDown(100);
                 me.workarea.html('');
                 me.subBtn.show();
                 return;
             }
             else{
                 me.runTypeDiv.hide();
+                me.punchTypeDiv.hide();
 
                 if(!date || (type != 2 && type != 1)){
                     me.workarea.html('');
@@ -513,13 +543,14 @@
                 var uid = $.trim($(this).data('uid')),
                     cid = $.trim($(this).data('cid'));
 
+                var htype = me.htype.val();
+
                 if(!uid || !cid){
                     alert('参数错误.');
                     return false;
                 }
 
                 var data = me.form.serialize() + '&uid='+uid;
-                
 
                 aj = $.ajax({
                     type: 'POST',
@@ -528,7 +559,14 @@
                     data: data,
                     success: function(json){
                         if(json.errCode == 0){
-                            window.location = "/sport/ugc?uid=" + uid;
+
+                            if(htype == 4){
+                                alert('添加成功');
+                                window.location = "/user/student?uid=" + uid;
+                            }else{
+                                window.location = "/sport/ugc?uid=" + uid;
+                            }
+                            
                         }
                         else{
                             alert(json.errMessage);
@@ -536,6 +574,7 @@
                         }
                     },
                     beforeSend: function () {
+
                         if(aj != null) {
                             aj.abort();
                         }
