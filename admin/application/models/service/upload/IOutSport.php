@@ -65,6 +65,15 @@ class Service_Upload_IOutSportModel extends BasePageService {
     protected function load($datas){
 
         foreach($datas as $data){
+            
+            $data[0] = (string)$data[0];
+            $data[1] = (string)$data[1];
+            $data[2] = (string)$data[2];
+            $data[3] = (string)$data[3];
+            $data[4] = (string)$data[4];
+            $data[5] = (string)$data[5];
+            $data[6] = (string)$data[6];
+            $data[7] = (string)$data[7];
 
             $userWhere = [
                 'username' => $data[0],
