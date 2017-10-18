@@ -44,7 +44,6 @@ class Service_Upload_IOutSportModel extends BasePageService {
             return false;
         }
 
-
         $this->startTime = $req['time'];
         $this->schoolId = $req['school'];
 
@@ -59,7 +58,6 @@ class Service_Upload_IOutSportModel extends BasePageService {
 
         return strtolower(pathinfo($fileName,PATHINFO_EXTENSION));
     }
-
 
     protected function load($datas){
 
@@ -121,8 +119,6 @@ class Service_Upload_IOutSportModel extends BasePageService {
             //写入缓存 后期加入消息队列
             $monthDate = date('Y_m', $doneOutside['endtime']);
             $this->AddCache((string)$this->userData['_id'], $monthDate, $result, $doneOutside);
-            var_dump($monthDate);
-            exit;
 
         }
             return ;
