@@ -83,7 +83,8 @@ class Service_Upload_IOutSportModel extends BasePageService {
             $this->userData = $this->userModel->queryOne($userWhere,$options);
 
             if(empty($this->userData) || empty($data[2]) ||empty($data[5])){
-                $data[8] = "信息不全";
+                $data[9] = "信息不全";
+                $data[10] = date('Y-m-d',time());
                 $err = file_put_contents('/tmp/upload.txt',$data ,FILE_APPEND);
                 $err = file_put_contents('/tmp/upload.txt',"\r\n" ,FILE_APPEND);
                 continue;
