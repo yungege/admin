@@ -22,12 +22,14 @@ class Dao_MessageModel extends Db_Mongodb {
 
     protected $fields = [
         'platform'      => 1,       // 1个人 2班级 3学校 4所有用户
-        'type'          => 0,       // 消息类型 1:活动， 2:点赞， 3:锻炼提醒 5:点评
+        'type'          => 0,       // 消息类型 1:学校通知，2:点赞，3:锻炼提醒 5:点评
         'title'         => '',      // 标题
-        'from_id'       => '',      // 发送人
-        'to_id'         => '',      // 接收人
+        'from_id'       => '595604602173cc77db5a5248',      // 发送人
+        'to_id'         => '',      // 接收人 学校id 班级id 学生id 全部0
+        'share_id'      => '',      // 点赞类型时，存分享动态ID
         'sendtime'      => 0,       // 发送时间
         'url'           => '',      // 页面的URL
+        'desc'          => '',      // 简介
         'content'       => '',      // 内容
         'cover_img_url' => '',      // 封面图片URL
         'status'        => 1,       // 状态 1未读，2已读, -9删除

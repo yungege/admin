@@ -4,6 +4,7 @@ class Service_Ugc_MarkModel extends BasePageService {
     protected $trainingId;
     protected $toId;
     protected $fromId;
+    protected $title;
     protected $content;
     protected $messageModel;
     protected $userModel;
@@ -30,10 +31,27 @@ class Service_Ugc_MarkModel extends BasePageService {
        $this->toId = $req['toId'];
        $this->content = $req['description'];
        $this->fromId = $_SESSION['userInfo']['_id'];
+
+       $userQuery = [
+          '_id' => $this->fromId,
+       ];
+
+       $userOption['projection'] = [
+         'devicetoken' => 1,'username' =>1,
+       ];
+
+       $this->userInfo = $this->userModel->queryOne($userQuery,$userOption);
+
+       $this->title = $this->userInfo['username'] . "老师点评了你的锻炼";
+
+       if($result === false){
+
+          return $this->errNo = TRAINING_MASK_FAULT;
+       }
        
        $sendData = [
           'type'  => 5,
-          'title' => '有人对您的锻炼点评了',
+          'title' => $this->title,
           'from_id' => $this->fromId,
           'to_id' => $this->toId,
           'sendtime' => time(),
@@ -42,25 +60,12 @@ class Service_Ugc_MarkModel extends BasePageService {
           'traingdone_id' => $this->trainingId,
        ];
 
-       $result = $this->messageModel->insert($sendData);
-
-       $userQuery = [
-          '_id' => $this->toId,
-       ];
-
-       $userOption['projection'] = [
-         'devicetoken' => 1,
-       ];
-
-
-       $this->userInfo = $this->userModel->queryOne($userQuery,$userOption);
-
-       if($result === false){
-
-          return $this->errNo = TRAINING_MASK_FAULT;
+       if(empty($sendData['from_id'])){
+          unset($sendData['from_id']);
        }
 
-       
+       $result = $this->messageModel->insert($sendData);
+
       if($this->userInfo['clientsource'] == 'ios' && !empty($this->userInfo['devicetoken'])){
         $retIos = $this->uMPush->iosPushByListcast($sendData['title'],$sendData['content'],$this->deviceToken['ios']);
       }

@@ -1,23 +1,41 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-16 10:04:28
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-26 14:21:28
          compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:30575371259e413ac7709a4-31372622%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:142241691859f17ee8b493e7-23177799%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-26 18:14:10
+         compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:210788166459f1b572ca8f63-16068744%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> f2fa66e0f3e054400496fa57c88fee6efb38952b
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '85c2d86e360babdaef67aee860bd8a8a9236bd13' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/app.tpl',
-      1 => 1505722784,
+<<<<<<< HEAD
+      1 => 1508997888,
+=======
+      1 => 1508993864,
+>>>>>>> f2fa66e0f3e054400496fa57c88fee6efb38952b
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1508118865,
+<<<<<<< HEAD
+      1 => 1508997888,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '30575371259e413ac7709a4-31372622',
+  'nocache_hash' => '142241691859f17ee8b493e7-23177799',
+=======
+      1 => 1508997807,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '210788166459f1b572ca8f63-16068744',
+>>>>>>> f2fa66e0f3e054400496fa57c88fee6efb38952b
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59e413ac7f14f6_10640722',
+<<<<<<< HEAD
+  'unifunc' => 'content_59f17ee8c7fec6_53891061',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59e413ac7f14f6_10640722')) {function content_59e413ac7f14f6_10640722($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59f17ee8c7fec6_53891061')) {function content_59f17ee8c7fec6_53891061($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59f1b572d04385_35567519',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59f1b572d04385_35567519')) {function content_59f1b572d04385_35567519($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> f2fa66e0f3e054400496fa57c88fee6efb38952b
 <html lang="en">
 
 <head>
@@ -130,6 +154,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         border-radius: 5px;
         overflow: hidden;
         background-repeat: no-repeat;
+    }
+    .s-ul{
+        list-style: none;
+    }
+    .s-ul li{
+        float: left;
+        border: 1px solid #d9edf7;
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    .s-ul li:hover{
+        background: #d9edf7;
+    }
+    .glyphicon-remove{
+        cursor: pointer;
+        color: red;
+        vertical-align: middle;
+        margin-left: 5px;
+        padding: 2px;
+        margin-top: -4px;
     }
 </style>
 
@@ -251,10 +297,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/upload/punch" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">课外作业替换</a>
                             </li>
-                            <!-- <li>
+                            <li>
                                 <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
-                            </li> -->
-
+                            </li>
 
                         </ul>
                     </li>
@@ -289,7 +334,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
                             </li>
                             <li>
-                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台消息推送</a>
+                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台/学校通知推送</a>
                             </li>
                            <!--  <li>
                                 <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
@@ -346,6 +391,31 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     <div class="col-md-8" style="overflow: hidden;">
         <form class="form-horizontal" name="news" style="border: 1px solid #ddd;padding: 15px;border-radius: 5px;">
             <div class="form-group">
+                <label for="platform" class="col-sm-2 control-label">类型</label>
+                <div class="col-sm-10">
+                    <select id="platform" class="form-control" name="type">
+                        <option value="">选择类型</option>
+                        <option value="1">学校通知</option>
+                        <option value="2">平台消息</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row form-group sarea" style="display: none;">
+                <label class="col-sm-2 control-label">请选择学校</label>
+                <div class="col-sm-10">
+                    <div class="col-sm-4" style="padding: 0">
+                        <input type="text" class="form-control" id="school" placeholder="请输入学校名称" value="">
+                    </div>
+                    <div class="col-sm-4">
+                        <a class="btn btn-primary gets" href="javascript:void(0)">
+                            添 加
+                        </a>
+                    </div>
+                    <ul class="s-ul col-sm-12" style="padding:0;">
+                    </ul>
+                </div>
+            </div>
+            <div class="form-group">
                 <label for="title" class="col-sm-2 control-label">标题</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="title" name="title" placeholder="title" value="">
@@ -357,7 +427,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <textarea id="desc" name="desc" class="form-control" rows="3" placeholder="摘要"></textarea>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group img-div" style="display: none;">
                 <label for="cover" class="col-sm-2 control-label">封面图片</label>
                 <div class="col-sm-10">
                     <a class="btn btn-default btn-lg" id="pickfiles" href="#" style="position: relative; z-index: 1;">
@@ -419,9 +489,11 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 <script type="text/javascript" src="/static/qiniu/plupload.full.min.js"></script>
 <script type="text/javascript" src="/static/qiniu/zh_CN.js"></script>
 <script type="text/javascript" src="/static/qiniu/qiniu.min.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-typeahead.js"></script>
 <script>
 $(function(){
     var domain = 'https://oi7ro6pyq.qnssl.com/';
+    var schoolIds = [];
 
     var publish = {
         init: function(){
@@ -429,6 +501,9 @@ $(function(){
             this.initUe();
             this.uploadPic();
             this.sendXhr();
+            this.chooseType();
+            this.getSchool();
+            this.removeSchool();
         },
 
         getDom: function(){
@@ -436,6 +511,82 @@ $(function(){
             this.picshow = $('#pic-show');
             this.picUrl = $('input[name=cover_img]');
             this.subBtn = $('#sub');
+            this.img = $('.img-div');
+            this.selectBtn = $('select[name=type]');
+            this.schoolBtn = $('#school');
+            this.sUl = $('.s-ul');
+            this.getBtn = $('.gets');
+            this.schoolArea = $('.sarea');
+            this.removeBtn = $('.remove-school');
+            this.dialogDom = {};
+        },
+
+        getSchool: function(){
+            var me  =this;
+            me.schoolBtn.typeahead({
+                source: function (query, process) {
+                    return $.ajax({
+                        url: '/school/search?name=' + query,
+                        type: 'get',
+                        success: function (result) {
+                            if(!result.data.list || result.data.list.length == 0){
+                                return;
+                            }
+                            return process(result.data.list);
+                        },
+                    });
+                }
+            });
+
+            me.getBtn.bind('click', function(){
+                var inputVal = $.trim(me.schoolBtn.val());
+                var searchVal = $('.dropdown-menu > .active').data();
+                if(!inputVal || !searchVal || (searchVal.value.name != inputVal) || !searchVal.value._id){
+                    me.alertMsg('请选择学校', 'd1');
+                    return false;
+                }
+                if($.inArray(searchVal.value._id, schoolIds) != -1){
+                    me.schoolBtn.val('');
+                    return false;
+                }
+                var liHtml = '<li data-id="'+searchVal.value._id+'"><span>'+searchVal.value.name+'</span><span class="glyphicon glyphicon-remove remove-school"></span></li>';
+                me.sUl.append(liHtml);
+                me.schoolBtn.val('');
+                schoolIds.push(searchVal.value._id);
+            })
+        },
+
+        removeSchool: function(){
+            var me = this;
+            
+            $(document).on('click', '.remove-school', function(e){
+                var sid = $(this).parent().data('id');
+                for(var i=0; i<schoolIds.length; i++) {
+                    if(schoolIds[i] == sid) {
+                        schoolIds.splice(i, 1);
+                        break;
+                    }
+                }
+                $(this).parent().remove();
+                return false;
+            })
+        },
+
+        chooseType: function(){
+            var me = this;
+            me.selectBtn.bind('change', function(){
+                var type = $(this).val();
+                if(type == 1){
+                    me.img.hide();
+                    me.picshow.attr('style', '');
+                    me.picUrl.val('');
+                    me.schoolArea.show();
+                }
+                else{
+                    me.schoolArea.hide();
+                    me.img.show();
+                }
+            })
         },
 
         initUe: function(){
@@ -489,19 +640,34 @@ $(function(){
             var me = this,
                 xhr = null;
             me.subBtn.unbind().bind('click',function(){
+                var atype = me.selectBtn.val();
+                $('.append-int').remove();
+                if(!atype){
+                    me.alertMsg('请选择推送类型','d2');
+                    return false;
+                }
+                else if(atype == 1){
+                    if(schoolIds.length == 0){
+                        me.alertMsg('请选择学校','d2');
+                        return false;
+                    }
+                    for (var i in schoolIds) {
+                        var intHtml = "<input class='append-int' type='hidden' name='schools[]' value='"+schoolIds[i]+"'>";
+                        me.form.append(intHtml);
+                    }
+                }
                 var data = me.form.serialize();
                 xhr = $.ajax({
-                    url:'/push/appnotice', 
-                    data:data, 
+                    url: '/push/appnotice', 
+                    data: data, 
                     type: 'POST',
                     dataType: 'json',
                     success: function(json){
                         if(json.errCode == 0){
-                            alert('推送成功');
-                            window.location.reload();
+                            me.alertMsg('推送成功','d3');
                         }
                         else{
-                            alert(json.errMessage);
+                            me.alertMsg(json.errMessage,'d4');
                             return false;
                         }
                         
@@ -513,6 +679,33 @@ $(function(){
                     },
                 });
             })
+        },
+
+        alertMsg: function(text, name){
+            var me = this,
+                configs = {
+                    'title'   : '',
+                    'content' : text,
+                    'modal'   : true,
+                    'buttons' : {
+                        '明白了' : function(){
+                            me.dialogDom.name.close();
+                        },
+                    }
+                };
+
+            if(name == 'd3'){
+                configs.buttons = {
+                    '确 定' : function(){
+                        me.dialogDom.name.close();
+                        window.location.reload();
+                    },
+                };
+            }
+
+            me.dialogDom.name = jqueryAlert(configs);
+
+            return false;
         },
     }
 
