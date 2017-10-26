@@ -32,9 +32,6 @@ class Service_Upload_IOutSportModel extends BasePageService {
         set_time_limit(0);
 		$req = $req['post'];
 
-        // var_dump($req);
-        // exit;
-
         $_FILES = $_FILES[0];
         $ext = $this->getExt($_FILES['name']);
         if($ext != "xls" && $ext != "xlsx"){
@@ -46,13 +43,14 @@ class Service_Upload_IOutSportModel extends BasePageService {
             $this->errNo = REQUEST_PARAMS_ERROR;
             return false;
         }
+
         $this->startTime = $req['time'];
         $this->schoolId = $req['school'];
 
         $datas = $this->importExcel($_FILES['tmp_name'],$ext);
+
         unset($datas[1]);
 		$this->load($datas);
-
         return ;
 	}
 
@@ -61,10 +59,19 @@ class Service_Upload_IOutSportModel extends BasePageService {
         return strtolower(pathinfo($fileName,PATHINFO_EXTENSION));
     }
 
-
     protected function load($datas){
 
         foreach($datas as $data){
+
+            $data[0] = (string)$data[0];
+            $data[1] = (string)$data[1];
+            $data[2] = (string)$data[2];
+            $data[3] = (string)$data[3];
+            $data[4] = (string)$data[4];
+            $data[5] = (string)$data[5];
+            $data[6] = (string)$data[6];
+            $data[7] = (string)$data[7];
+            $data[8] = (string)$data[8];
 
             $userWhere = [
                 'username' => $data[0],
@@ -76,7 +83,8 @@ class Service_Upload_IOutSportModel extends BasePageService {
             $this->userData = $this->userModel->queryOne($userWhere,$options);
 
             if(empty($this->userData) || empty($data[2]) ||empty($data[5])){
-                $data[8] = "信息不全";
+                $data[9] = "信息不全";
+                $data[10] = date('Y-m-d',time());
                 $err = file_put_contents('/tmp/upload.txt',$data ,FILE_APPEND);
                 $err = file_put_contents('/tmp/upload.txt',"\r\n" ,FILE_APPEND);
                 continue;
@@ -92,8 +100,9 @@ class Service_Upload_IOutSportModel extends BasePageService {
             $trainSchool['homework_id'] = (string)$workId;
             $trainSchool['school_name'] = $data[5];
             $trainSchool['mobile'] = $data[7];
+            $trainSchool['link_man'] = $data[8];
             $this->trainSchoolModel->insert($trainSchool);
-            
+
             $doneOutside['htype'] = 4;
             $doneOutside['userid'] = (string)$this->userData['_id'];
             $doneOutside['starttime'] = (int)strtotime($this->startTime . '08:00:00');
@@ -228,7 +237,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
             $doneOutside['exciseimg'] = ["https://oi7ro6pyq.qnssl.com/o_1bpq74tqm1vdj18dd118o1ko01mumd.jpg"];
             $doneOutside['commenttext'] = '兴趣班';
             $doneOutside['status'] = 0;
-            $doneOutside['train_name'] = $this->workData['train_name'];    
+            $doneOutside['train_name'] = ['train_name'];    
             $result = $this->trainDoneOutsideModel->insert($doneOutside);
             // 写入缓存 后期加入消息队列
             $monthDate = date('Y_m', $doneOutside['endtime']);
@@ -336,16 +345,19 @@ class Service_Upload_IOutSportModel extends BasePageService {
             $options = [
                 'sort' => ['endtime' => -1],
             ];
-            $fields = ['htype','starttime','endtime','burncalories','originaltime','exciseimg','homeworkid','train_name'];
+            $fields = ['htype','starttime','endtime','burncalories','originaltime','exciseimg','homeworkid','train_name','projecttime'];
             $resList = [];
             $this->trainDoneOutsideModel->getListByMonth($hMap, $fields, $options, $monthDate, $resList);
         }
         else{
             $pInterval = 3600;
             if(empty($pInterval)) $pInterval = ($data['endtime'] - $data['starttime']);
+            if(empty($data['train_name'])){
+                $data['train_name'] = '课外活动';
+            }
             $cacheData = [
                 "trainId" => $trainId,
-                "pName" => $this->workData['train_name'],
+                "pName" => $data['train_name'],
                 "pInterval" => 3600,
                 "pId" => "",
                 "trainingImg" => array_shift($data['exciseimg']),
