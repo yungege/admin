@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-17 17:41:29
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-26 18:20:12
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:165792304659e5d049614422-52431967%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:131474490659f1b6dce29186-23021920%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-      1 => 1505473727,
+      1 => 1509011094,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1508204108,
+      1 => 1508199692,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '165792304659e5d049614422-52431967',
+  'nocache_hash' => '131474490659f1b6dce29186-23021920',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59e5d049805ed3_59434744',
+  'unifunc' => 'content_59f1b6dcee96f2_13249704',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59e5d049805ed3_59434744')) {function content_59e5d049805ed3_59434744($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59f1b6dcee96f2_13249704')) {function content_59f1b6dcee96f2_13249704($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -542,7 +542,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 " data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " class="btn btn-sm btn-info btn_share">查看</button><?php }?></td>     
                         <td>
-                        <?php if ($_smarty_tpl->tpl_vars['row']->value['mark']==null){?><button  data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+                        <?php if ($_smarty_tpl->tpl_vars['row']->value['mark']==null){?><button data-userid="<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
+" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-mark="<?php echo $_smarty_tpl->tpl_vars['row']->value['mark'];?>
 " class="btn btn-sm btn-info btn_mark">标记</button>
                         <?php }else{ ?> 
@@ -576,6 +577,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 <span class="add-on"><i class="icon-th"></i></span>
             </div>   
            <input type="hidden" name="trainId">
+           <input type="hidden" name="toId">
             <div class="inner-btn">
                 <button id="sub" type="button" class="btn btn-primary">确定</button>
                 <button id="can" type="button" class="btn btn-default">取消</button>

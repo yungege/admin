@@ -184,7 +184,7 @@
                         <td>{%if $row.exciseimg != 1%}<button data-id="{%$row._id%}" class="btn btn-sm btn-info btn_picture">查看</button>{%/if%}</td>
                         <td>{%if $row.htype != 3 and $row.share == 1%}<button data-userid="{%$row.userid%}" data-id="{%$row._id%}" class="btn btn-sm btn-info btn_share">查看</button>{%/if%}</td>     
                         <td>
-                        {%if $row.mark == null%}<button  data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">标记</button>
+                        {%if $row.mark == null%}<button data-userid="{%$row.userid%}" data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">标记</button>
                         {%else%} 
                             <button  data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">已标记</button></td>
                         {%/if%}
@@ -212,6 +212,7 @@
                 <span class="add-on"><i class="icon-th"></i></span>
             </div>   
            <input type="hidden" name="trainId">
+           <input type="hidden" name="toId">
             <div class="inner-btn">
                 <button id="sub" type="button" class="btn btn-primary">确定</button>
                 <button id="can" type="button" class="btn btn-default">取消</button>

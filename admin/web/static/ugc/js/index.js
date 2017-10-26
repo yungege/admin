@@ -27,6 +27,7 @@ $(function(){
             this.showPictureBox = $('.fix-box-picture');
             this.description = $('#description');
             this.trainId = $('input[name=trainId]');
+            this.toId = $('input[name=toId]');
             this.form = $('form[name=mark]');
             this.imgBoxInner = $('#imgBoxInner');
 
@@ -74,7 +75,9 @@ $(function(){
                 me.showBox.fadeIn(200);
                 var id = $(this).data('id');
                 var mark = $(this).data('mark');
+                var sendId = $(this).data('userid');
                 me.trainId.val(id); 
+                me.toId.val(sendId); 
                 me.description.val(mark);
             });
         },
@@ -149,6 +152,7 @@ $(function(){
                 }
 
                 var data = me.form.serialize();
+
                 $.post('/ugc/mark', data, function(json){
 
                     if(json.errCode != 0){

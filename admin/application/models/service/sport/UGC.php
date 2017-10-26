@@ -167,7 +167,7 @@ class Service_Sport_UGCModel extends BasePageService {
                 $row['pname'] = '';
             }
         }
-     
+    
         $this->resData['list'] = $trainList;
         $this->resData['page'] = $show;
         
