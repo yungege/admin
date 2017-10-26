@@ -1,23 +1,61 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-10-26 13:53:29
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:414040659f178599e8c68-75835990%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-19 11:08:48
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:113053616959e8174062b507-97391946%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-19 13:04:35
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:37946886359e83263970355-35886509%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-18 09:09:32
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:7869842559e6a9cc2503d9-87253145%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> cdb4552dfaf455254f5d1b2febf64c8292691fc2
+>>>>>>> 3bee447f9c47cc9c5765bf746816f186b67d1659
+>>>>>>> 0b8c3b00459d8e40b46d7bbed6d4fcc1233963a4
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
+<<<<<<< HEAD
       1 => 1505719537,
+=======
+      1 => 1508144122,
+>>>>>>> 0b8c3b00459d8e40b46d7bbed6d4fcc1233963a4
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1508914922,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '414040659f178599e8c68-75835990',
+=======
+      1 => 1508199692,
+      2 => 'file',
+    ),
+  ),
+<<<<<<< HEAD
+  'nocache_hash' => '113053616959e8174062b507-97391946',
+=======
+<<<<<<< HEAD
+  'nocache_hash' => '37946886359e83263970355-35886509',
+=======
+  'nocache_hash' => '7869842559e6a9cc2503d9-87253145',
+>>>>>>> cdb4552dfaf455254f5d1b2febf64c8292691fc2
+>>>>>>> 3bee447f9c47cc9c5765bf746816f186b67d1659
+>>>>>>> 0b8c3b00459d8e40b46d7bbed6d4fcc1233963a4
   'function' => 
   array (
   ),
@@ -29,9 +67,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59f17859a56cf7_68750505',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59f17859a56cf7_68750505')) {function content_59f17859a56cf7_68750505($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_59e817407ddb95_00163751',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59e817407ddb95_00163751')) {function content_59e817407ddb95_00163751($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_59e83263ab74d1_87659170',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59e83263ab74d1_87659170')) {function content_59e83263ab74d1_87659170($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_59e6a9cc3f71b0_19020389',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59e6a9cc3f71b0_19020389')) {function content_59e6a9cc3f71b0_19020389($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> cdb4552dfaf455254f5d1b2febf64c8292691fc2
+>>>>>>> 3bee447f9c47cc9c5765bf746816f186b67d1659
+>>>>>>> 0b8c3b00459d8e40b46d7bbed6d4fcc1233963a4
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -159,7 +215,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     .glyphicon-remove:hover{
         color: red;
     }
-    .run-type,.normal{
+    .run-type,.normal,.punch-type{
         display: none;
     }
     .homework-inner{
@@ -285,13 +341,16 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
+                            
                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
                             </li>
-                            <!-- <li>
+                            <li>
+                                <a href="/upload/punch" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">课外作业替换</a>
+                            </li>
+                            <li>
                                 <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
-                            </li> -->
-
+                            </li>
 
                         </ul>
                     </li>
@@ -558,7 +617,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                             <a data-uname="<?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
 " data-uid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-cid="<?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classid'];?>
-" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补作业</a>
+" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补作业及打卡</a>
                         </td>
                     </tr>
                     <?php } ?>
@@ -591,6 +650,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                     <option value="1">翻转课堂</option>
                     <option value="2">身体素质</option>
                     <option value="3">跑步作业</option>
+                    <option value="4">课外活动打卡</option>
                 </select>
             </div>
 
@@ -610,6 +670,22 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 <div class="form-group">
                     <label>跑步距离(km)</label>
                     <input class="form-control" type="text" name="distance">
+                </div>
+            </div>
+
+            <!-- 课外作业替换 -->
+            <div class="punch-type">
+                <div class="form-group">
+                    <label>教育机构</label>
+                    <input class="form-control" type="text" name="school_name">
+                </div>
+                <div class="form-group">
+                    <label>教育机构联系电话</label>
+                    <input class="form-control" type="text" name="school_mobile">
+                </div>
+                <div class="form-group">
+                    <label>课外活动项目</label>
+                    <input class="form-control" type="text" name="train_name">
                 </div>
             </div>
             
@@ -722,6 +798,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             this.uname = $('#uname');
             this.htype = $('.htype');
             this.runTypeDiv = $('.run-type');
+            this.punchTypeDiv = $('.punch-type');
             this.normalDiv = $('.normal');
             this.workarea = $('.homework-inner');
 
@@ -754,6 +831,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             me.form[0].reset();
             me.normalDiv.slideUp(200);
             me.runTypeDiv.slideUp(200);
+            me.punchTypeDiv.slideUp(100);
 
             me.reFixBox.fadeOut(200);
             me.hideUid.val('');
@@ -810,6 +888,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 ];
 
             if(type == -1){
+                me.punchTypeDiv.slideUp(100);
                 me.normalDiv.slideUp(100);
                 me.runTypeDiv.slideUp(100);
                 me.workarea.html('');
@@ -817,13 +896,23 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             }
             else if(type == 3){
                 me.normalDiv.hide();
+                me.punchTypeDiv.hide();
                 me.runTypeDiv.slideDown(100);
+                me.workarea.html('');
+                me.subBtn.show();
+                return;
+            }
+            else if(type == 4){
+                me.runTypeDiv.hide();
+                me.normalDiv.hide();
+                me.punchTypeDiv.slideDown(100);
                 me.workarea.html('');
                 me.subBtn.show();
                 return;
             }
             else{
                 me.runTypeDiv.hide();
+                me.punchTypeDiv.hide();
 
                 if(!date || (type != 2 && type != 1)){
                     me.workarea.html('');
@@ -900,13 +989,14 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 var uid = $.trim($(this).data('uid')),
                     cid = $.trim($(this).data('cid'));
 
+                var htype = me.htype.val();
+
                 if(!uid || !cid){
                     alert('参数错误.');
                     return false;
                 }
 
                 var data = me.form.serialize() + '&uid='+uid;
-                
 
                 aj = $.ajax({
                     type: 'POST',
@@ -915,7 +1005,14 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                     data: data,
                     success: function(json){
                         if(json.errCode == 0){
-                            window.location = "/sport/ugc?uid=" + uid;
+
+                            if(htype == 4){
+                                alert('添加成功');
+                                window.location = "/user/student?uid=" + uid;
+                            }else{
+                                window.location = "/sport/ugc?uid=" + uid;
+                            }
+                            
                         }
                         else{
                             alert(json.errMessage);
@@ -923,6 +1020,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         }
                     },
                     beforeSend: function () {
+
                         if(aj != null) {
                             aj.abort();
                         }

@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-10-26 13:20:43
          compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:190098536859f170ab421c20-62206271%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-16 10:04:28
+         compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:30575371259e413ac7709a4-31372622%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 0b8c3b00459d8e40b46d7bbed6d4fcc1233963a4
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '85c2d86e360babdaef67aee860bd8a8a9236bd13' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/app.tpl',
+<<<<<<< HEAD
       1 => 1508993864,
+=======
+      1 => 1505722784,
+>>>>>>> 0b8c3b00459d8e40b46d7bbed6d4fcc1233963a4
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1508914922,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '190098536859f170ab421c20-62206271',
+=======
+      1 => 1508118865,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '30575371259e413ac7709a4-31372622',
+>>>>>>> 0b8c3b00459d8e40b46d7bbed6d4fcc1233963a4
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59f170ab4995b6_71510745',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59f170ab4995b6_71510745')) {function content_59f170ab4995b6_71510745($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59e413ac7f14f6_10640722',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59e413ac7f14f6_10640722')) {function content_59e413ac7f14f6_10640722($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 0b8c3b00459d8e40b46d7bbed6d4fcc1233963a4
 <html lang="en">
 
 <head>
@@ -266,8 +290,12 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
+                            
                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
+                            </li>
+                            <li>
+                                <a href="/upload/punch" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">课外作业替换</a>
                             </li>
                             <!-- <li>
                                 <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
