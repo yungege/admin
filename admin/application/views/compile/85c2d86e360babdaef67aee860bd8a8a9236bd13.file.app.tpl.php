@@ -1,37 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-22 15:40:37
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-26 13:20:43
          compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3701763159c4be75dd4c00-48645726%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-21 14:17:44
-         compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10653244159c359888882a6-82513738%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 7896fad5207363389773a5a65ccb0e1901958d3d
+<?php /*%%SmartyHeaderCode:190098536859f170ab421c20-62206271%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '85c2d86e360babdaef67aee860bd8a8a9236bd13' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/app.tpl',
-      1 => 1505711115,
+      1 => 1508993864,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1506046349,
+      1 => 1508914922,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3701763159c4be75dd4c00-48645726',
-=======
-      1 => 1505915383,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '10653244159c359888882a6-82513738',
->>>>>>> 7896fad5207363389773a5a65ccb0e1901958d3d
+  'nocache_hash' => '190098536859f170ab421c20-62206271',
   'function' => 
   array (
   ),
@@ -43,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59c4be75e22005_60998561',
+  'unifunc' => 'content_59f170ab4995b6_71510745',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c4be75e22005_60998561')) {function content_59c4be75e22005_60998561($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59c359888ecba6_34451590',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c359888ecba6_34451590')) {function content_59c359888ecba6_34451590($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 7896fad5207363389773a5a65ccb0e1901958d3d
+<?php if ($_valid && !is_callable('content_59f170ab4995b6_71510745')) {function content_59f170ab4995b6_71510745($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -151,6 +131,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         overflow: hidden;
         background-repeat: no-repeat;
     }
+    .s-ul{
+        list-style: none;
+    }
+    .s-ul li{
+        float: left;
+        border: 1px solid #d9edf7;
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    .s-ul li:hover{
+        background: #d9edf7;
+    }
+    .glyphicon-remove{
+        cursor: pointer;
+        color: red;
+        vertical-align: middle;
+        margin-left: 5px;
+        padding: 2px;
+        margin-top: -4px;
+    }
 </style>
 
 </head>
@@ -167,7 +169,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">TTXS Admin</a>
+                <a class="navbar-brand" href="index.html">&emsp;TTXS Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -183,7 +185,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <?php if ($_smarty_tpl->tpl_vars['userInfo']->value['iconurl']){?>
                     <img src="<?php echo $_smarty_tpl->tpl_vars['userInfo']->value['iconurl'];?>
-" alt="..." width="20" height="20" style="border-radius: 10px;">
+?imageView2/2/w/60/h/60/q/100" alt="..." width="20" height="20" style="border-radius: 10px;">
                     <?php }else{ ?>
                     <i class="fa fa-user"></i>
                     <?php }?>
@@ -305,7 +307,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
                             </li>
                             <li>
-                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台消息推送</a>
+                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台/学校通知推送</a>
                             </li>
                            <!--  <li>
                                 <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
@@ -325,10 +327,13 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/meau/list" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">菜单管理</a>
                             </li>
                             <li>
-                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">角色管理</a>
+                                <a href="/meau/role" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">角色管理</a>
                             </li>
                             <li>
-                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">权限分配</a>
+                                <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">管理员</a>
+                            </li>
+                            <li>
+                                <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
                     </li>
@@ -359,6 +364,31 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     <div class="col-md-8" style="overflow: hidden;">
         <form class="form-horizontal" name="news" style="border: 1px solid #ddd;padding: 15px;border-radius: 5px;">
             <div class="form-group">
+                <label for="platform" class="col-sm-2 control-label">类型</label>
+                <div class="col-sm-10">
+                    <select id="platform" class="form-control" name="type">
+                        <option value="">选择类型</option>
+                        <option value="1">学校通知</option>
+                        <option value="2">平台消息</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row form-group sarea" style="display: none;">
+                <label class="col-sm-2 control-label">请选择学校</label>
+                <div class="col-sm-10">
+                    <div class="col-sm-4" style="padding: 0">
+                        <input type="text" class="form-control" id="school" placeholder="请输入学校名称" value="">
+                    </div>
+                    <div class="col-sm-4">
+                        <a class="btn btn-primary gets" href="javascript:void(0)">
+                            添 加
+                        </a>
+                    </div>
+                    <ul class="s-ul col-sm-12" style="padding:0;">
+                    </ul>
+                </div>
+            </div>
+            <div class="form-group">
                 <label for="title" class="col-sm-2 control-label">标题</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="title" name="title" placeholder="title" value="">
@@ -370,7 +400,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <textarea id="desc" name="desc" class="form-control" rows="3" placeholder="摘要"></textarea>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group img-div" style="display: none;">
                 <label for="cover" class="col-sm-2 control-label">封面图片</label>
                 <div class="col-sm-10">
                     <a class="btn btn-default btn-lg" id="pickfiles" href="#" style="position: relative; z-index: 1;">
@@ -432,9 +462,11 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 <script type="text/javascript" src="/static/qiniu/plupload.full.min.js"></script>
 <script type="text/javascript" src="/static/qiniu/zh_CN.js"></script>
 <script type="text/javascript" src="/static/qiniu/qiniu.min.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-typeahead.js"></script>
 <script>
 $(function(){
     var domain = 'https://oi7ro6pyq.qnssl.com/';
+    var schoolIds = [];
 
     var publish = {
         init: function(){
@@ -442,6 +474,9 @@ $(function(){
             this.initUe();
             this.uploadPic();
             this.sendXhr();
+            this.chooseType();
+            this.getSchool();
+            this.removeSchool();
         },
 
         getDom: function(){
@@ -449,6 +484,82 @@ $(function(){
             this.picshow = $('#pic-show');
             this.picUrl = $('input[name=cover_img]');
             this.subBtn = $('#sub');
+            this.img = $('.img-div');
+            this.selectBtn = $('select[name=type]');
+            this.schoolBtn = $('#school');
+            this.sUl = $('.s-ul');
+            this.getBtn = $('.gets');
+            this.schoolArea = $('.sarea');
+            this.removeBtn = $('.remove-school');
+            this.dialogDom = {};
+        },
+
+        getSchool: function(){
+            var me  =this;
+            me.schoolBtn.typeahead({
+                source: function (query, process) {
+                    return $.ajax({
+                        url: '/school/search?name=' + query,
+                        type: 'get',
+                        success: function (result) {
+                            if(!result.data.list || result.data.list.length == 0){
+                                return;
+                            }
+                            return process(result.data.list);
+                        },
+                    });
+                }
+            });
+
+            me.getBtn.bind('click', function(){
+                var inputVal = $.trim(me.schoolBtn.val());
+                var searchVal = $('.dropdown-menu > .active').data();
+                if(!inputVal || !searchVal || (searchVal.value.name != inputVal) || !searchVal.value._id){
+                    me.alertMsg('请选择学校', 'd1');
+                    return false;
+                }
+                if($.inArray(searchVal.value._id, schoolIds) != -1){
+                    me.schoolBtn.val('');
+                    return false;
+                }
+                var liHtml = '<li data-id="'+searchVal.value._id+'"><span>'+searchVal.value.name+'</span><span class="glyphicon glyphicon-remove remove-school"></span></li>';
+                me.sUl.append(liHtml);
+                me.schoolBtn.val('');
+                schoolIds.push(searchVal.value._id);
+            })
+        },
+
+        removeSchool: function(){
+            var me = this;
+            
+            $(document).on('click', '.remove-school', function(e){
+                var sid = $(this).parent().data('id');
+                for(var i=0; i<schoolIds.length; i++) {
+                    if(schoolIds[i] == sid) {
+                        schoolIds.splice(i, 1);
+                        break;
+                    }
+                }
+                $(this).parent().remove();
+                return false;
+            })
+        },
+
+        chooseType: function(){
+            var me = this;
+            me.selectBtn.bind('change', function(){
+                var type = $(this).val();
+                if(type == 1){
+                    me.img.hide();
+                    me.picshow.attr('style', '');
+                    me.picUrl.val('');
+                    me.schoolArea.show();
+                }
+                else{
+                    me.schoolArea.hide();
+                    me.img.show();
+                }
+            })
         },
 
         initUe: function(){
@@ -502,19 +613,34 @@ $(function(){
             var me = this,
                 xhr = null;
             me.subBtn.unbind().bind('click',function(){
+                var atype = me.selectBtn.val();
+                $('.append-int').remove();
+                if(!atype){
+                    me.alertMsg('请选择推送类型','d2');
+                    return false;
+                }
+                else if(atype == 1){
+                    if(schoolIds.length == 0){
+                        me.alertMsg('请选择学校','d2');
+                        return false;
+                    }
+                    for (var i in schoolIds) {
+                        var intHtml = "<input class='append-int' type='hidden' name='schools[]' value='"+schoolIds[i]+"'>";
+                        me.form.append(intHtml);
+                    }
+                }
                 var data = me.form.serialize();
                 xhr = $.ajax({
-                    url:'/push/appnotice', 
-                    data:data, 
+                    url: '/push/appnotice', 
+                    data: data, 
                     type: 'POST',
                     dataType: 'json',
                     success: function(json){
                         if(json.errCode == 0){
-                            alert('推送成功');
-                            window.location.reload();
+                            me.alertMsg('推送成功','d3');
                         }
                         else{
-                            alert(json.errMessage);
+                            me.alertMsg(json.errMessage,'d4');
                             return false;
                         }
                         
@@ -526,6 +652,33 @@ $(function(){
                     },
                 });
             })
+        },
+
+        alertMsg: function(text, name){
+            var me = this,
+                configs = {
+                    'title'   : '',
+                    'content' : text,
+                    'modal'   : true,
+                    'buttons' : {
+                        '明白了' : function(){
+                            me.dialogDom.name.close();
+                        },
+                    }
+                };
+
+            if(name == 'd3'){
+                configs.buttons = {
+                    '确 定' : function(){
+                        me.dialogDom.name.close();
+                        window.location.reload();
+                    },
+                };
+            }
+
+            me.dialogDom.name = jqueryAlert(configs);
+
+            return false;
         },
     }
 

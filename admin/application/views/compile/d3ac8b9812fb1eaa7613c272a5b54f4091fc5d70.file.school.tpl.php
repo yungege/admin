@@ -1,59 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-16 10:29:01
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-26 13:53:13
          compiled from "/var/www/admin/admin/application/views/template/user/school.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:85835766759e4196d1c8729-07955055%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-09-25 16:37:56
-         compiled from "/var/www/admin/admin/application/views/template/user/school.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:211563979859c8c064ed3c25-73045515%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-13 14:23:37
-         compiled from "/var/www/admin/admin/application/views/template/user/school.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:88559205459e05be9afc015-33484005%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 5909b739dca0cc64e4c936244c61ca3482a8214e
->>>>>>> a68f839ce0aa37e678077e38292112d6f842eeff
+<?php /*%%SmartyHeaderCode:98425633059f17849e75556-81904621%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd3ac8b9812fb1eaa7613c272a5b54f4091fc5d70' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/school.tpl',
-<<<<<<< HEAD
-      1 => 1505194859,
-=======
-<<<<<<< HEAD
-      1 => 1504258102,
-=======
       1 => 1505212517,
->>>>>>> 5909b739dca0cc64e4c936244c61ca3482a8214e
->>>>>>> a68f839ce0aa37e678077e38292112d6f842eeff
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1506591577,
+      1 => 1508914922,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '85835766759e4196d1c8729-07955055',
-=======
-<<<<<<< HEAD
-      1 => 1505915304,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '211563979859c8c064ed3c25-73045515',
-=======
-      1 => 1506591426,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '88559205459e05be9afc015-33484005',
->>>>>>> 5909b739dca0cc64e4c936244c61ca3482a8214e
->>>>>>> a68f839ce0aa37e678077e38292112d6f842eeff
+  'nocache_hash' => '98425633059f17849e75556-81904621',
   'function' => 
   array (
   ),
@@ -65,21 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59e4196d335474_10242364',
+  'unifunc' => 'content_59f17849ecab13_01944288',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59e4196d335474_10242364')) {function content_59e4196d335474_10242364($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_59c8c0651265e3_64543932',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59c8c0651265e3_64543932')) {function content_59c8c0651265e3_64543932($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59e05be9b6d606_18641696',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59e05be9b6d606_18641696')) {function content_59e05be9b6d606_18641696($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 5909b739dca0cc64e4c936244c61ca3482a8214e
->>>>>>> a68f839ce0aa37e678077e38292112d6f842eeff
+<?php if ($_valid && !is_callable('content_59f17849ecab13_01944288')) {function content_59f17849ecab13_01944288($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -316,7 +268,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
                             </li>
                             <li>
-                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台消息推送</a>
+                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台/学校通知推送</a>
                             </li>
                            <!--  <li>
                                 <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
@@ -336,12 +288,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/meau/list" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==1){?>cy-child-active<?php }?>">菜单管理</a>
                             </li>
                             <li>
-<<<<<<< HEAD
-                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">角色管理</a>
-                            </li>
-                            <li>
-                                <a href="" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">权限分配</a>
-=======
                                 <a href="/meau/role" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">角色管理</a>
                             </li>
                             <li>
@@ -349,7 +295,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                             <li>
                                 <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">权限分配</a>
->>>>>>> 5909b739dca0cc64e4c936244c61ca3482a8214e
                             </li>
                         </ul>
                     </li>

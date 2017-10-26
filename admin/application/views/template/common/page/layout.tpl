@@ -227,7 +227,7 @@
                                 <a href="/push/class" class="{%if $tag.0 == 6 && $tag.1 == 5%}cy-child-active{%/if%}">班级推送</a>
                             </li>
                             <li>
-                                <a href="/push/app" class="{%if $tag.0 == 6 && $tag.1 == 6%}cy-child-active{%/if%}">平台消息推送</a>
+                                <a href="/push/app" class="{%if $tag.0 == 6 && $tag.1 == 6%}cy-child-active{%/if%}">平台/学校通知推送</a>
                             </li>
                            <!--  <li>
                                 <a href="/push/province" class="{%if $tag.0 == 6 && $tag.1 == 6%}cy-child-active{%/if%}">省推送</a>
