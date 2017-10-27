@@ -12,6 +12,7 @@ class Service_Ugc_MarkModel extends BasePageService {
     protected $resData;
     protected $userInfo;
     protected $uMPush;
+    protected $sentUser;
 
     public function __construct() {
 
@@ -37,10 +38,12 @@ class Service_Ugc_MarkModel extends BasePageService {
        ];
 
        $userOption['projection'] = [
-         'devicetoken' => 1,'username' =>1,
+         'devicetoken' => 1,
+         'username' =>1,
+         'clientsource' =>1,
        ];
 
-       $this->userInfo = $this->userModel->queryOne($userQuery,$userOption);
+       $this->sentUser = $this->userModel->queryOne($userQuery,$userOption);
 
        $this->title = $this->userInfo['username'] . "老师点评了你的锻炼";
 
@@ -60,22 +63,38 @@ class Service_Ugc_MarkModel extends BasePageService {
           'traingdone_id' => $this->trainingId,
        ];
 
-        var_dump($sendData);
-        exit;
-
-
        if(empty($sendData['from_id'])){
           unset($sendData['from_id']);
        }
 
        $result = $this->messageModel->insert($sendData);
 
+       $userQuery = [
+          '_id' => $this->toId,
+       ];
+
+       $userOption['projection'] = [
+         'devicetoken' => 1,
+         'username' =>1,
+         'clientsource' =>1,
+       ];
+
+       $this->userInfo = $this->userModel->queryOne($userQuery,$userOption);
+
       if($this->userInfo['clientsource'] == 'ios' && !empty($this->userInfo['devicetoken'])){
+
         $retIos = $this->uMPush->iosPushByListcast($sendData['title'],$sendData['content'],$this->deviceToken['ios']);
+
+        $retIos = (string)$retIos;
+        $a = file_put_contents('/mnt/aa.txt',$retIos);
       }
 
       if($this->userInfo['clientsource'] == 'android' && !empty($this->userInfo['devicetoken']) ){
+
         $retAndroid = $this->uMPush->androidPushByListcast($sendData['title'],$sendData['content'],$this->deviceToken['android']);
+
+        $retAndroid = (string)$retAndroid;
+        $a = file_put_contents('/mnt/aa.txt',$retAndroid);
       }
 
       return ;
