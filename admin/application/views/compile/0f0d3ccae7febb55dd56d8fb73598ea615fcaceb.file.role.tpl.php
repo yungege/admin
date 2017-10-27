@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-13 10:04:56
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-27 16:20:58
          compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:150190170359e01f488c9c62-22143137%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-13 14:24:56
-         compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:153583087659e05c388d7034-60995476%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> ef69a9f6dc9445e2fb2e9017109e1e2472c2caba
+<?php /*%%SmartyHeaderCode:120506245359f2ec6adbb766-91181197%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f0d3ccae7febb55dd56d8fb73598ea615fcaceb' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/role.tpl',
-<<<<<<< HEAD
-      1 => 1506495381,
-=======
-      1 => 1506494852,
->>>>>>> ef69a9f6dc9445e2fb2e9017109e1e2472c2caba
+      1 => 1509092457,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1506591581,
+      1 => 1509080121,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '150190170359e01f488c9c62-22143137',
-=======
-      1 => 1506591426,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '153583087659e05c388d7034-60995476',
->>>>>>> ef69a9f6dc9445e2fb2e9017109e1e2472c2caba
+  'nocache_hash' => '120506245359f2ec6adbb766-91181197',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59e01f4892a037_14943387',
+  'unifunc' => 'content_59f2ec6ae0e615_39719391',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59e01f4892a037_14943387')) {function content_59e01f4892a037_14943387($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59e05c3892b813_77928683',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59e05c3892b813_77928683')) {function content_59e05c3892b813_77928683($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> ef69a9f6dc9445e2fb2e9017109e1e2472c2caba
+<?php if ($_valid && !is_callable('content_59f2ec6ae0e615_39719391')) {function content_59f2ec6ae0e615_39719391($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -271,13 +247,16 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
+                            
                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
                             </li>
-                            <!-- <li>
+                            <li>
+                                <a href="/upload/punch" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">课外作业替换</a>
+                            </li>
+                            <li>
                                 <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
-                            </li> -->
-
+                            </li>
 
                         </ul>
                     </li>
@@ -312,7 +291,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
                             </li>
                             <li>
-                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台消息推送</a>
+                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台/学校通知推送</a>
                             </li>
                            <!--  <li>
                                 <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
@@ -395,10 +374,10 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <a data-pid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-pname="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
 " class="add-s-cate cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-user'></span> 分配权限</a>&nbsp;
-                        <a id="edit-role" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+                        <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
 " data-desc="<?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
-" class="btn btn-xs btn-primary" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
+" class="btn btn-xs btn-primary edit-role" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
                     </td>
                 </tr>
                 <?php } ?>
@@ -498,7 +477,7 @@ $(function(){
             // 编辑
             this.editFixBox = $('.edit-role-fix');
             this.editForm = $('form[name=edit-role]');
-            this.showEditBtn = $('#edit-role');
+            this.showEditBtn = $('.edit-role');
             this.hideEditBtn = $('.can-e');
             this.subEditBtn = $('.sub-e');
             this.idInt = $('#rid');
