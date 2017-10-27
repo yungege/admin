@@ -155,9 +155,6 @@ $(function(){
 
                 $.post('/ugc/mark', data, function(json){
 
-                    alert(json);
-                    return false;
-
                     if(json.errCode != 0){
                         alert(json.errMessage ? json.errMessage : '点评失败！');
                         return false;

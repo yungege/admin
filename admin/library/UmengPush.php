@@ -26,6 +26,7 @@ class UmengPush {
 		$this->postData['ios']['payload']['aps']['sound'] = "bingbong.aiff";
 		$this->postData['ios']['payload']['businessname'] = 0;
 		$this->postData['ios']['production_mode'] = 'true';
+
 		$output = $this->sendPushByIos($this->postData['ios']);
 		
 		return $output;
