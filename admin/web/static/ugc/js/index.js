@@ -147,7 +147,7 @@ $(function(){
             me.sub.unbind().bind('click',function(){
 
                 if(me.description.val() == ""){
-                    alert('请填入标记内容。');
+                    alert('请填入点评内容。');
                     return false;
                 }
 
@@ -155,11 +155,14 @@ $(function(){
 
                 $.post('/ugc/mark', data, function(json){
 
+                    alert(json);
+                    return false;
+
                     if(json.errCode != 0){
-                        alert(json.errMessage ? json.errMessage : '提交失败！');
+                        alert(json.errMessage ? json.errMessage : '点评失败！');
                         return false;
                     }else{
-                        alert('标记成功.');
+                        alert('点评成功.');
                         window.location = '/sport/ugc';
                         
                     }

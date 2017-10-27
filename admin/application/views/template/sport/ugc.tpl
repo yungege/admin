@@ -184,9 +184,9 @@
                         <td>{%if $row.exciseimg != 1%}<button data-id="{%$row._id%}" class="btn btn-sm btn-info btn_picture">查看</button>{%/if%}</td>
                         <td>{%if $row.htype != 3 and $row.share == 1%}<button data-userid="{%$row.userid%}" data-id="{%$row._id%}" class="btn btn-sm btn-info btn_share">查看</button>{%/if%}</td>     
                         <td>
-                        {%if $row.mark == null%}<button data-userid="{%$row.userid%}" data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">标记</button>
+                        {%if $row.mark == null%}<button data-userid="{%$row.userid%}" data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">点评</button>
                         {%else%} 
-                            <button  data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">已标记</button></td>
+                            <button  data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">已点评</button></td>
                         {%/if%}
                     </tr>
                     {%/foreach%}
@@ -201,7 +201,7 @@
 
 <div class="fix-box">
     <div class="fix-box-inner">
-        <h4>标记作业</h4>
+        <h4>点评锻炼</h4>
         <form class="form" name="mark">
             <div>
             
