@@ -8,5 +8,6 @@ class MeauController extends Yaf_Controller_Abstract{
         'admin'     => 'actions/meau/Admin.php',
         'allotrole' => 'actions/meau/AllotRole.php',
         'assgin'    => 'actions/meau/Assgin.php',
+        'url'       => 'actions/meau/Url.php',
         );
 }

@@ -46,8 +46,8 @@
                     <td>{%$row.name%}</td>
                     <td>{%$row.desc%}</td>
                     <td>
-                        <a data-pid="{%$row._id%}" data-pname="{%$row.name%}" class="add-s-cate cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-user'></span> 分配权限</a>&nbsp;
-                        <a id="edit-role" data-id="{%$row._id%}" data-name="{%$row.name%}" data-desc="{%$row.desc%}" class="btn btn-xs btn-primary" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
+                        <a data-pid="{%$row._id%}" data-pname="{%$row.name%}" class="add-s-cate cate-add btn btn-xs btn-success" href="/meau/assgin?rid={%$row._id%}"><span class='fa fa-user'></span> 分配权限</a>&nbsp;
+                        <a data-id="{%$row._id%}" data-name="{%$row.name%}" data-desc="{%$row.desc%}" class="btn btn-xs btn-primary edit-role" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
                     </td>
                 </tr>
                 {%/foreach%}
@@ -120,7 +120,7 @@ $(function(){
             // 编辑
             this.editFixBox = $('.edit-role-fix');
             this.editForm = $('form[name=edit-role]');
-            this.showEditBtn = $('#edit-role');
+            this.showEditBtn = $('.edit-role');
             this.hideEditBtn = $('.can-e');
             this.subEditBtn = $('.sub-e');
             this.idInt = $('#rid');
