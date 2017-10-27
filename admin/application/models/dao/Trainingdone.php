@@ -8,6 +8,7 @@ class Dao_TrainingdoneModel extends Db_Mongodb {
         'htype'             => 0,    // 1-翻转课堂,2-身体素质作业,3-跑步,4-兴趣班,5-普通锻炼项目...
         'trainingtype'      => 0,    // 所属锻炼项目类型类型编号：1-普通运动，2-跑步运动，3-高抬腿运动(编号内容会再调整)
         'trainingid'        => '',   // 锻炼项目的id号
+        'trainingname'      => '',   // 锻炼项目的id号
         'part'              => 0,    // 锻炼项目中的节次信息,比如完成了"增肌训练第二节"
         'userid'            => '',   // 用户(学生)id号
         'originaltime'      => 0,    // 作业原始时间
