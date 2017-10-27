@@ -121,6 +121,11 @@ class Service_User_AddUgcModel extends BasePageService {
             throw new Exception("作业信息错误.", -1);
         }
 
+        $projectInfo = $this->projectSkuModel->getInfoById($pid, ['project_id']);
+        if(empty($projectInfo)) throw new Exception("作业信息错误.", -1);
+        $projectInfo = $this->projectModel->getInfoById($projectInfo['project_id'], ['name']);
+        if(empty($projectInfo)) throw new Exception("作业信息错误.", -1);
+
         $sTime = (int)strtotime($req['wtime'].' 19:00:00');
         $eTime = intval(strtotime($req['wtime'].' 19:00:00')+$time);
         $res = $this->trainModel->checkRepeatSubmit(
@@ -144,6 +149,7 @@ class Service_User_AddUgcModel extends BasePageService {
             "trainingtype"  => 2,
             "userid"        => $req['uid'],
             "trainingid"    => $pid,
+            "trainingname"  => $projectInfo['name'],
             "homeworkid"    => $hid,
             "status"        => 0,
             "htype"         => (int)$req['htype'],
