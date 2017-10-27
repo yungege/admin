@@ -60,6 +60,10 @@ class Service_Ugc_MarkModel extends BasePageService {
           'traingdone_id' => $this->trainingId,
        ];
 
+        var_dump($sendData);
+        exit;
+
+
        if(empty($sendData['from_id'])){
           unset($sendData['from_id']);
        }

@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-26 18:32:02
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-27 08:45:57
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:147441405559f1b9a277b150-69460666%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:109515764859f281c518ade1-96359285%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-      1 => 1509011094,
+      1 => 1509064584,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '147441405559f1b9a277b150-69460666',
+  'nocache_hash' => '109515764859f281c518ade1-96359285',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59f1b9a2884104_43541550',
+  'unifunc' => 'content_59f281c52795e0_17506253',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f1b9a2884104_43541550')) {function content_59f1b9a2884104_43541550($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59f281c52795e0_17506253')) {function content_59f281c52795e0_17506253($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -545,11 +545,11 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <?php if ($_smarty_tpl->tpl_vars['row']->value['mark']==null){?><button data-userid="<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
 " data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-mark="<?php echo $_smarty_tpl->tpl_vars['row']->value['mark'];?>
-" class="btn btn-sm btn-info btn_mark">标记</button>
+" class="btn btn-sm btn-info btn_mark">点评</button>
                         <?php }else{ ?> 
                             <button  data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-mark="<?php echo $_smarty_tpl->tpl_vars['row']->value['mark'];?>
-" class="btn btn-sm btn-info btn_mark">已标记</button></td>
+" class="btn btn-sm btn-info btn_mark">已点评</button></td>
                         <?php }?>
                     </tr>
                     <?php } ?>
@@ -565,7 +565,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
 <div class="fix-box">
     <div class="fix-box-inner">
-        <h4>标记作业</h4>
+        <h4>点评锻炼</h4>
         <form class="form" name="mark">
             <div>
             
