@@ -4,12 +4,14 @@ class Service_Meau_AddFirstModel extends BasePageService {
     protected $meauModel;
     protected $userModel;
     protected $treeModel;
+    protected $urlModel;
 
     protected $reqData;
     protected $resData;
 
     public function __construct() {
         $this->meauModel = Dao_MeauModel::getInstance();
+        $this->urlModel = Dao_UrlModel::getInstance();
     }
 
     protected function __declare() {
@@ -94,9 +96,23 @@ class Service_Meau_AddFirstModel extends BasePageService {
             if(isset($req['url'])){
                 $updateData['url'] = $req['url'];
             }
-            $res = $this->meauModel->updateById($req['id'], $updateData);
+            $oldUrlInfo = $this->meauModel->getInfoById($req['id'], ['url']);
+            try{
+                $res = $this->meauModel->updateById($req['id'], $updateData);
+            }
+            catch(Exception $e){
+                $res = false;
+            }
+            
             if(false === $res){
                 throw new Exception("操作失败", -1);
+            }
+
+            if(isset($req['url']) && ($oldUrlInfo['url'] != $updateData['url'])){
+                $this->urlModel->update(
+                    ['url' => $oldUrlInfo['url']],
+                    ['url' => $req['url'],'remark' => $req['name']]
+                );
             }
         }
         else{
@@ -104,6 +120,14 @@ class Service_Meau_AddFirstModel extends BasePageService {
             if(false === $res){
                 throw new Exception("操作失败", -1);
             }
+
+            if($type == 2){
+                $this->urlModel->insert([
+                    'url' => $insertData['url'],
+                    'remark' => $req['name']
+                ]);
+            }
+            
         }
         
         return;
