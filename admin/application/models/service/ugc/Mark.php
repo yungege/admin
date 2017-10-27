@@ -84,17 +84,11 @@ class Service_Ugc_MarkModel extends BasePageService {
       if($this->userInfo['clientsource'] == 'ios' && !empty($this->userInfo['devicetoken'])){
 
         $retIos = $this->uMPush->iosPushByListcast($sendData['title'],$sendData['content'],$this->userInfo['devicetoken']);
-
-        $retIos = (string)$retIos;
-        $a = file_put_contents('/mnt/aa.txt',$retIos);
       }
 
       if($this->userInfo['clientsource'] == 'android' && !empty($this->userInfo['devicetoken']) ){
 
         $retAndroid = $this->uMPush->androidPushByListcast($sendData['title'],$sendData['content'],$this->userInfo['devicetoken']);
-
-        $retAndroid = (string)$retAndroid;
-        $a = file_put_contents('/mnt/aa.txt',$retAndroid);
       }
 
       return ;
