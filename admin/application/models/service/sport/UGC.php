@@ -11,6 +11,7 @@ class Service_Sport_UGCModel extends BasePageService {
 
     protected $programModel;
     protected $homeworkModel;
+    protected $messageModel;
 
     public static $delay = [
         '1' => 2,
@@ -28,6 +29,7 @@ class Service_Sport_UGCModel extends BasePageService {
         $this->trainModel  = Dao_TrainingdoneModel::getInstance();
         $this->userModel  = Dao_UserModel::getInstance();
         $this->shareModel = Dao_ShareModel::getInstance();
+        $this->messageModel = Dao_MessageModel::getInstance();
 
         $this->programModel = Dao_ExerciseprogramModel::getInstance();
         $this->homeworkModel = Dao_ExerciseHomeworkModel::getInstance();
@@ -166,6 +168,22 @@ class Service_Sport_UGCModel extends BasePageService {
                 $row['hname'] = '跑步';
                 $row['pname'] = '';
             }
+        }
+
+        $trainList = array_column($trainList,null,'_id'); 
+        $trainingIds = array_column($trainList,'_id');
+
+        $messageQuery = [
+            'traingdone_id' => ['$in' => $trainingIds],
+        ];
+
+        $messageOptions['projection'] = [
+            'traingdone_id' => 1,
+        ];
+       
+        $messages = $this->messageModel->query($messageQuery,$messageOptions);
+        foreach($messages as $message){
+            $trainList[$message['traingdone_id']]['mark'] = 1;
         }
     
         $this->resData['list'] = $trainList;

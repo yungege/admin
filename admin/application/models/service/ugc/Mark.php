@@ -32,6 +32,7 @@ class Service_Ugc_MarkModel extends BasePageService {
        $this->toId = $req['toId'];
        $this->content = $req['description'];
        $this->fromId = $_SESSION['userInfo']['_id'];
+       $this->content = str_replace("\r\n","",$this->content);
 
        $userQuery = [
           '_id' => $this->fromId,

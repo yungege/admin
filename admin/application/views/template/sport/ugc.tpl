@@ -186,7 +186,7 @@
                         <td>
                         {%if $row.mark == null%}<button data-userid="{%$row.userid%}" data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">点评</button>
                         {%else%} 
-                            <button  data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">已点评</button></td>
+                            <button  data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark" disabled>已点评</button></td>
                         {%/if%}
                     </tr>
                     {%/foreach%}
