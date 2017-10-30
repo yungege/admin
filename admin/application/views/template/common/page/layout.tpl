@@ -251,10 +251,14 @@
                                 <a href="/meau/role" class="{%if $tag.0 == 7 && $tag.1 == 2%}cy-child-active{%/if%}">角色管理</a>
                             </li>
                             <li>
-                                <a href="/meau/admin" class="{%if $tag.0 == 7 && $tag.1 == 3%}cy-child-active{%/if%}">管理员</a>
+                                <a href="/meau/url" class="{%if $tag.0 == 7 && $tag.1 == 3%}cy-child-active{%/if%}">URL管理</a>
                             </li>
                             <li>
-                                <a href="/meau/assgin" class="{%if $tag.0 == 7 && $tag.1 == 4%}cy-child-active{%/if%}">权限分配</a>
+                                <a href="/meau/admin" class="{%if $tag.0 == 7 && $tag.1 == 4%}cy-child-active{%/if%}">管理员</a>
+                            </li>
+                            
+                            <li>
+                                <a href="/meau/assgin" class="{%if $tag.0 == 7 && $tag.1 == 5%}cy-child-active{%/if%}">权限分配</a>
                             </li>
                         </ul>
                     </li>

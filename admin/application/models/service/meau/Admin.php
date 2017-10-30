@@ -7,7 +7,7 @@ class Service_Meau_AdminModel extends BasePageService {
 
     protected $reqData;
     protected $resData = [
-        'pageTag' => '7-3',
+        'pageTag' => '7-4',
         'list' => [],
     ];
 

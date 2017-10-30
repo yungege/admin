@@ -9,6 +9,7 @@
     }
     
 </style>
+<link href="/static/widget/icheck/square/green.css" rel="stylesheet">
 {%/block%}
 {%block name="content"%}
 
@@ -18,19 +19,17 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th>菜单名称</th>
                     <th>URL</th>
-                    <th>图标样式</th>
+                    <th>备注信息</th>
                 </tr>
             </thead>
             <tbody>
                 <form name="urls">
                 {%foreach from=$list item=row%}
                 <tr">
-                    <td>{%$row.checkbox%}</td>
-                    <td>{%$row.new_name%}</td>
-                    <td><a href="{%$row.url%}" style="color: #65CEA7;">{%$row.url%}</a></td>
-                    <td style="color: #65CEA7;font-size: 20px;font-weight: 700;"><i class="{%$row.icon_style%}"></i></td>
+                    <td class="text-center"><input class="cy-icheck" type="checkbox" name="urls[]" value="{%$row.url%}"/></td>
+                    <td><a href="javascript:viod(0)" style="color: #65CEA7;">{%$row.url%}</a></td>
+                    <td>{%$row.remark%}</td>
                 </tr>
                 {%/foreach%}
                 </form>
@@ -44,7 +43,14 @@
 {%/block%}
 
 {%block name="js"%}
+<script src="/static/widget/icheck/icheck.min.js"></script>
 <script>
-
+$(function(){
+    $('.cy-icheck').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        radioClass: 'iradio_square-green',
+        increaseArea: '20%' // optional
+    });
+})
 </script>
 {%/block%}

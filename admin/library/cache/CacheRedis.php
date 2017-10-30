@@ -24,39 +24,9 @@ class Cache_CacheRedis{
     private function __getConfig()
     {
         $servers = array();
-        // $serverList = Yaf_Application::app()->getConfig()->cache->redis;
-        // $servers['master'] = $serverList->master->toArray(); // master
-        // $slaves = $serverList->slaves; // slaves
         
         $servers['master'] = NRedisConfig::getAllMasterServers(); // master
         $servers['slave'] = NRedisConfig::getAllSlaveServers(); // slaves
-
-        // if (!empty($slaves)){
-        //     $slaves = array();
-
-        //     $slave_hosts        = explode('|', $slaves->hosts);
-        //     $slave_ports        = explode('|', $slaves->ports);
-        //     $slave_timeouts     = explode('|', $slaves->timeouts);
-        //     $slave_passwords    = explode('|', $slaves->passwords);
-        //     $slave_persistents  = explode('|', $slaves->persistents);
-
-        //     foreach ($slave_hosts as $key => $slave_host){
-        //         if (
-        //             isset($slave_ports[$key]) &&
-        //             isset($slave_timeouts[$key]) && 
-        //             isset($slave_passwords[$key]) && 
-        //             isset($slave_persistents[$key])
-        //         ){
-        //             $servers['slave'][] = array(
-        //                 'host' => $slave_host,
-        //                 'port' => $slave_ports[$key],
-        //                 'persistent' => $slave_persistents[$key],
-        //                 'timeout' => $slave_timeouts[$key],
-        //                 'password' => $slave_passwords[$key],
-        //                 );
-        //         }
-        //     }
-        // }
 
         $this->conf = $servers;
     }
@@ -214,7 +184,7 @@ class Cache_CacheRedis{
      * @param  $key        
      * @param  $exp    过期时间
      */
-    public function setExpire($key,$exp)
+    public function setExpire($key, $exp)
     {
         $redis = $this->getRedis($key);
         $redis->expire($key,$exp);
