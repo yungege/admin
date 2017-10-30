@@ -101,15 +101,19 @@ $(function(){
             me.pictureBtn.unbind().bind('click',function(){
 
                 var id = $(this).data('id');
-                var data = 'trainingId=' + id;
+                var htype = $(this).data('htype');
+                var data = 'trainingId=' + id + '&htype=' + htype;
 
                 $.post('/ugc/picture', data, function(json){
+
+                    // alert(json);
+                    // return false;
 
                     if(json.errCode != 0){
                         return false;
 
                     }else{
-                        
+           
                         var img = "";
                         var pictures = json.data.exciseimg;
                         $.each(pictures,function(index,value){
@@ -132,7 +136,6 @@ $(function(){
         directShare: function(){
             var me = this;
             
-
             me.shareBtn.unbind().bind('click',function(){
                 var id = $(this).data('id');
                 var userId = $(this).data('userid');

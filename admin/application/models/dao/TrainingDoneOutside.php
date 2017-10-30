@@ -135,4 +135,18 @@ class Dao_TrainingDoneOutsideModel extends Db_Mongodb {
         return $res;
     }
 
+    public function getTrainById(string $id, array $fields){
+
+        $where = [
+            '_id' => $id,
+        ];
+
+        $fields = $this->filterFields($fields);
+        if(!empty($fields)){
+            $options['protection'] = $fields;
+        }
+         
+        return $this->queryOne($where,$options);
+    }
+
 }
