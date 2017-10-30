@@ -8,7 +8,7 @@ class Service_Ugc_PictureModel extends BasePageService {
 
     public function __construct() {
 
-       $this->trainModel = Dao_TrainingdoneModel::getInstance();  
+         
     }
 
     protected function __declare() {
@@ -18,8 +18,17 @@ class Service_Ugc_PictureModel extends BasePageService {
     protected function __execute($req) {
 
        $req = $req['post'];
+       if($req['htype'] == 4){
+
+          $this->trainModel = Dao_TrainingDoneOutsideModel::getInstance();
+       }else{
+
+          $this->trainModel = Dao_TrainingdoneModel::getInstance();
+       }
+
        $this->trainingId = $req['trainingId'];
        $trainFields = ['exciseimg'];
+
        $this->trainData = $this->trainModel->getTrainById($this->trainingId,$trainFields);
       
        if($this->trainData === false){

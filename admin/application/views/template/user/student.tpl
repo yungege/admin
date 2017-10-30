@@ -562,7 +562,7 @@
 
                             if(htype == 4){
                                 alert('添加成功');
-                                window.location = "/user/student?uid=" + uid;
+                                window.location = "/sport/ugc?uid=" + uid + '&type=4';
                             }else{
                                 window.location = "/sport/ugc?uid=" + uid;
                             }

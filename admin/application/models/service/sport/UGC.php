@@ -12,6 +12,7 @@ class Service_Sport_UGCModel extends BasePageService {
     protected $programModel;
     protected $homeworkModel;
     protected $messageModel;
+    protected $trainOutModel;
 
     public static $delay = [
         '1' => 2,
@@ -26,13 +27,14 @@ class Service_Sport_UGCModel extends BasePageService {
     public function __construct() {
         $this->projectModel     = Dao_ExerciseProjectModel::getInstance();
         $this->projectSkuModel  = Dao_ExerciseProjectSkuModel::getInstance();
-        $this->trainModel  = Dao_TrainingdoneModel::getInstance();
+        // $this->trainModel  = Dao_TrainingdoneModel::getInstance();
         $this->userModel  = Dao_UserModel::getInstance();
         $this->shareModel = Dao_ShareModel::getInstance();
         $this->messageModel = Dao_MessageModel::getInstance();
 
         $this->programModel = Dao_ExerciseprogramModel::getInstance();
         $this->homeworkModel = Dao_ExerciseHomeworkModel::getInstance();
+        // $this->trainOutModel = Dao_TrainingDoneOutsideModel::getInstance();
     }
 
     protected function __declare() {
@@ -92,6 +94,13 @@ class Service_Sport_UGCModel extends BasePageService {
             'exciseimg'
         ];
 
+        if((int)$req['type'] == 4){
+            $fields[] = 'train_name';
+            $this->trainModel = Dao_TrainingDoneOutsideModel::getInstance();
+        }else{
+            $this->trainModel  = Dao_TrainingdoneModel::getInstance();
+        }
+
         $offset = ($req['pn'] - 1) * self::PAGESIZE;
         $sort = ['createtime' => -1];
         $options = [
@@ -108,6 +117,10 @@ class Service_Sport_UGCModel extends BasePageService {
         if($count > 0){
             $trainList = $this->trainModel->getListByPage($where, $fields, $options);
         }
+
+        // var_dump($count);
+        // var_dump($trainList);
+        // exit;
 
         if(!empty($trainList)){
             // user
@@ -146,7 +159,7 @@ class Service_Sport_UGCModel extends BasePageService {
                 $row['distance'] = sprintf('%.2f', $row['distance']/1000);
 
             // 检验是否旧数据 做兼容处理
-            if($row['htype'] != 3){
+            if($row['htype'] == 1 || $row['htype'] == 2){
                 $oldWorkData = $this->programModel->getInfoById($row['homeworkid'], ['_id','name']);
                 $oldProData = $this->programModel->getInfoById($row['trainingid'], ['_id','name']);
                 if(!empty($oldWorkData) && !empty($oldProData)){
@@ -164,11 +177,17 @@ class Service_Sport_UGCModel extends BasePageService {
                     $row['pid'] = ($row['htype'] != 3 && !empty($proInfo[$row['trainingid']]['name'])) ? $proInfo[$row['trainingid']]['pid'] : '';
                 }
             }
-            else{
+            elseif($row['htype'] == 3){
                 $row['hname'] = '跑步';
                 $row['pname'] = '';
+            }else{
+                $row['hname'] = '校外锻炼';
+                $row['pname'] = $row['train_name'];
             }
         }
+
+        // var_dump($trainList);
+        // exit;
 
         $trainList = array_column($trainList,null,'_id'); 
         $trainingIds = array_column($trainList,'_id');
