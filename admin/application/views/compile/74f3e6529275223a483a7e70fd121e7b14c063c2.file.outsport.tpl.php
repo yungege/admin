@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-30 09:40:23
-         compiled from "/var/www/admin/admin/application/views/template/upload/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8995865459f68307a1d364-39292768%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-30 10:23:52
+         compiled from "/var/www/admin/admin/application/views/template/sport/outsport.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:183098565559f68d38c770b5-38397750%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '374505dc5445d0715a37d707d5f6caac26361c9c' => 
+    '74f3e6529275223a483a7e70fd121e7b14c063c2' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/upload/index.tpl',
-      1 => 1505222262,
+      0 => '/var/www/admin/admin/application/views/template/sport/outsport.tpl',
+      1 => 1509330187,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509327587,
+      1 => 1509328172,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '8995865459f68307a1d364-39292768',
+  'nocache_hash' => '183098565559f68d38c770b5-38397750',
   'function' => 
   array (
   ),
@@ -29,9 +29,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59f68307b64b26_37965348',
+  'unifunc' => 'content_59f68d38d74d04_85812240',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f68307b64b26_37965348')) {function content_59f68307b64b26_37965348($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59f68d38d74d04_85812240')) {function content_59f68d38d74d04_85812240($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -112,52 +113,67 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="/static/ugc/css/jPicture.min.css">
+
 <style type="text/css">
-    .fix-per{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        background: rgba(0,0,0,0.4);
-        z-index: 9999;
-        display: none;
-    }
-    .fix-per .fix-cont{
-        width: 400px;
-        height: 200px;
-        line-height: 200px;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -200px;
-        margin-top: -100px;
-        font-size: 100px;
-        color: orange;
-    }
-    .form-wrap{
-        border: 1px solid #ccc;
-        padding: 8px 15px 15px 15px;
-        border-radius: 5px;
-    }
-    #grade_apply,#grade_apply_select,.fx-btn{
-        height: 254px;
-    }
-    #grade_apply_select{
-        color: black;
-    }
-    
-    .fx-btn{
-        border: 1px solid #ccc;
-        margin-top: 25px;
-    }
-    .fx-btn > a{
-        display: block;
-        width: 60%;
-        margin: 0 auto 10px auto;
-    }
+.date_start,.date_end{
+    float: left!important;
+}
+.datetimepicker{
+    margin-top: 50px!important;
+}
+.fix-box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.fix-box-inner{
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    padding: 15px;
+    border: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -200px;
+}
+.fix-box-picture{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.fix-box-inner-picture{
+    width: 530px;
+    height: 430px;
+    background-color: white;
+    padding: 15px;
+    border: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -200px;
+}
+#imgBox{
+    width:500px;
+    height:300px;
+}
+
+
+}
 </style>
 
 </head>
@@ -283,9 +299,8 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
 
                             <li>
-                                <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==8){?>cy-child-active<?php }?>">课外锻炼替换列表</a>
+                                <a href="/sport/outsport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==8){?>cy-child-active<?php }?>">课外锻炼替换列表</a>
                             </li>
-
 
                         </ul>
                     </li>
@@ -365,7 +380,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运营管理 / 上传学生数据
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运营管理 / 校外锻炼替换列表
                             </li>
                         </ol>
                     </div>
@@ -373,71 +388,189 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 <!-- 用户数据 -->
                 
-
 <div class="row">
     <div class="col-lg-12">
-        <form name="upload" enctype="multipart/form-data" action="user" method="post">
+        <form method="get" >
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="form-horizontal row">
 
-            <div class="form-group">
-                    <label for="province">所属省份</label>
-                    <select id="province" class="form-control" name="province">
-                        <option value="-1" selected>请选择学校所在省份</option>
-                        <?php  $_smarty_tpl->tpl_vars['provinceName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['provinceName']->_loop = false;
- $_smarty_tpl->tpl_vars['provinceId'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['provinceList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['provinceName']->key => $_smarty_tpl->tpl_vars['provinceName']->value){
-$_smarty_tpl->tpl_vars['provinceName']->_loop = true;
- $_smarty_tpl->tpl_vars['provinceId']->value = $_smarty_tpl->tpl_vars['provinceName']->key;
-?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['provinceId']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['provinceName']->value;?>
-</option>
-                        <?php } ?>          
-                    </select>
+                        <div class="col-md-2">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">学生ID：</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="uid" class="input-sm form-control" value="<?php echo $_GET['uid'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">
+                            <div class="row">
+                                <label class="col-md-3 paddZero control-label">起止日期：</label>
+                                <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-sm-5 input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
+                                            <input readonly type="text" class="form-control" id="start" name="start" value="<?php echo $_GET['start'];?>
+" >
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                        </div>
+                                        <div class="col-sm-1"></div>
+                                        <div class="col-sm-5 input-group date date_end" data-date="" data-date-format="yyyy-mm-dd">
+                                            <input readonly type="text" class="form-control" id="end" name="end" value="<?php echo $_GET['end'];?>
+">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="col-md-3">
+                            <div class="col-md-2 col-md-offset-1">
+                                <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
+                            </div>
+                        </div>
+
+                    </div>
+                   
                 </div>
-
-                <div class="form-group">
-                    <label for="city">所在城市</label>
-                    <select id="city" class="form-control" name="city">
-                        <option value="-1" selected>请选择学校所在城市</option>
-                       
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="district">所在区</label>
-                    <select id="district" class="form-control" name="district">
-                        <option value="-1" selected>请选择学校所在区</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="school">所在学校</label>
-                    <select id="school" class="form-control" name="school">
-                        <option value="-1" selected>请选择学生所在学校</option>
-                    </select>
-                </div>
-
-            <div class="form-group">
-                <label for="file"> Excel </label>
-                <input type="file" class="form-control" id="file" name="file">
             </div>
-
-            <div class="form-group">
-           <!--  <input type="submit" name="submit" value="Submit" /> -->
-            <button id="sub" type="button" class="btn btn-primary">确认提交</button>
-            </div>
-            
         </form>
     </div>
 </div>
 
-<!-- modal-add -->
-<div class="fix-per">
-    <div class="fix-cont">
-        <!-- 100% -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <!-- <th class="text-center">ID</th> -->
+                        <th>学生</th>
+                        <th>头像</th>
+                        <th>作业类型</th>
+                        <th>锻炼项目</th>
+                        <th>能量/千卡</th>
+                        <th>跑步路程/km</th>
+                        <th>开始时间</th>
+                        <th>结束时间</th>
+                        <th>提交时间</th>
+                        <th>原始时间</th>
+                        <th>是否补交</th>
+                        <th>作业图片</th>
+                        <th>是否分享</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
+$_smarty_tpl->tpl_vars['row']->_loop = true;
+?>
+                    <tr data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-userId="<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
+">
+                        <td>姓名：<a href="/user/student?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
+"><?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
+</a><br/>昵称：<a href="/user/student?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
+"><?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
+</a></td>
+                        <td><a href="/user/student?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
+"><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['iconurl'];?>
+?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></a></td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['hname'];?>
+</td>
+                        <td><a href="<?php if ($_smarty_tpl->tpl_vars['row']->value['is_old']==1){?>javascript:void(0)<?php }else{ ?>/sport/p/<?php echo $_smarty_tpl->tpl_vars['row']->value['pid'];?>
+.html<?php }?>"><?php echo $_smarty_tpl->tpl_vars['row']->value['pname'];?>
+</a></td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['burncalories'];?>
+</td>
+                        <td>
+                            <?php echo $_smarty_tpl->tpl_vars['row']->value['distance'];?>
+<br/>
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['avgSpeed']){?>均速：<?php echo $_smarty_tpl->tpl_vars['row']->value['avgSpeed'];?>
+ km/h<?php }?>
+                        </td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['starttime'],"%Y-%m-%d");?>
+<br><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['starttime'],"%H:%M:%S");?>
+</td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['endtime'],"%Y-%m-%d");?>
+<br><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['endtime'],"%H:%M:%S");?>
+</td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%Y-%m-%d");?>
+<br><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%H:%M:%S");?>
+</td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['originaltime'],"%Y-%m-%d");?>
+</td>
+                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['isdelay']==2){?><span class="label label-danger">是</span><?php }else{ ?><span class="label label-default">否</span><?php }?></td>
+                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['exciseimg']!=1){?><button data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" class="btn btn-sm btn-info btn_picture">查看</button><?php }?></td>
+                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['htype']!=3&&$_smarty_tpl->tpl_vars['row']->value['share']==1){?><button data-userid="<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
+" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" class="btn btn-sm btn-info btn_share">查看</button><?php }?></td>     
+                        <td>
+                        <?php if ($_smarty_tpl->tpl_vars['row']->value['mark']==null){?><button data-userid="<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
+" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-mark="<?php echo $_smarty_tpl->tpl_vars['row']->value['mark'];?>
+" class="btn btn-sm btn-info btn_mark">点评</button>
+                        <?php }else{ ?> 
+                            <button  data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-mark="<?php echo $_smarty_tpl->tpl_vars['row']->value['mark'];?>
+" class="btn btn-sm btn-info btn_mark" disabled>已点评</button></td>
+                        <?php }?>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center tt-page">
+            <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+
+        </div>
     </div>
-    
+</div>
+
+<div class="fix-box">
+    <div class="fix-box-inner">
+        <h4>点评锻炼</h4>
+        <form class="form" name="mark">
+            <div>
+            
+                <div class="form-group">
+                    <textarea id="description" class="form-control" rows="8"  name="description" ><?php echo $_smarty_tpl->tpl_vars['mark']->value;?>
+</textarea>
+                </div>
+                <span class="add-on"><i class="icon-remove"></i></span>
+                <span class="add-on"><i class="icon-th"></i></span>
+            </div>   
+           <input type="hidden" name="trainId">
+           <input type="hidden" name="toId">
+            <div class="inner-btn">
+                <button id="sub" type="button" class="btn btn-primary">确定</button>
+                <button id="can" type="button" class="btn btn-default">取消</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="fix-box-picture">
+    <div class="fix-box-inner-picture">
+        <h4>锻炼图片</h4>
+            <div>  
+                <div id="imgBox">
+                    <div id="imgBoxInner">
+
+                    </div>
+                </div>               
+            </div>   
+            <br>           
+            <div class="inner-btn-picture">
+                <button id="subReturn" type="button" class="btn btn-primary">返回</button>
+            </div>
+        
+    </div>
 </div>
 
 
@@ -470,7 +603,10 @@ $_smarty_tpl->tpl_vars['provinceName']->_loop = true;
     </script>
 
     
-<script type="text/javascript" src="/static/upload/js/index.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/static/outsport/js/index.js"></script>
+<!-- <script type="text/javascript" src="/static/ugc/js/jPicture.min.js"></script> -->
+
 
 </body>
 </html><?php }} ?>
