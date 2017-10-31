@@ -1,37 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-24 18:00:37
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 14:13:37
          compiled from "/var/www/admin/admin/application/views/template/push/grade.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:111312582159ef0f4529e783-24632735%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-25 15:02:45
-         compiled from "/var/www/admin/admin/application/views/template/push/grade.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:130432856959f037156247c2-44950732%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 5eced5a90c3f7d2e68e18f52f44c5e3b955b52c2
+<?php /*%%SmartyHeaderCode:72409498759f814917f1c27-64119898%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8d2000e20c4522c32adedf0eae0eab7a54854af3' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/grade.tpl',
-      1 => 1503654498,
+      1 => 1509430020,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1508203941,
+      1 => 1509413885,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '111312582159ef0f4529e783-24632735',
-=======
-      1 => 1508914922,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '130432856959f037156247c2-44950732',
->>>>>>> 5eced5a90c3f7d2e68e18f52f44c5e3b955b52c2
+  'nocache_hash' => '72409498759f814917f1c27-64119898',
   'function' => 
   array (
   ),
@@ -43,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59ef0f452ff6d1_12909965',
+  'unifunc' => 'content_59f81491898342_78355665',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ef0f452ff6d1_12909965')) {function content_59ef0f452ff6d1_12909965($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59f03715693519_30526549',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f03715693519_30526549')) {function content_59f03715693519_30526549($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 5eced5a90c3f7d2e68e18f52f44c5e3b955b52c2
+<?php if ($_valid && !is_callable('content_59f81491898342_78355665')) {function content_59f81491898342_78355665($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -291,26 +271,14 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/feedback/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">反馈建议</a>
                             </li>
-<<<<<<< HEAD
                             
                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
                             </li>
-                            <li>
-                                <a href="/upload/punch" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">课外作业替换</a>
-                            </li>
+                        
                             <li>
                                 <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
                             </li>
-=======
-                            <li>
-                                <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
-                            </li>
-                            <!-- <li>
-                                <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
-                            </li> -->
-
->>>>>>> 5eced5a90c3f7d2e68e18f52f44c5e3b955b52c2
 
                         </ul>
                     </li>
@@ -335,9 +303,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/push/user" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">个人推送</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="/push/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校推送</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="/push/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">年级推送</a>
                             </li>
@@ -345,11 +313,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
                             </li>
                             <li>
-<<<<<<< HEAD
-                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台消息推送</a>
-=======
                                 <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台/学校通知推送</a>
->>>>>>> 5eced5a90c3f7d2e68e18f52f44c5e3b955b52c2
                             </li>
                            <!--  <li>
                                 <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
@@ -372,10 +336,14 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/meau/role" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">角色管理</a>
                             </li>
                             <li>
-                                <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">管理员</a>
+                                <a href="/meau/url" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">URL管理</a>
                             </li>
                             <li>
-                                <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">权限分配</a>
+                                <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">管理员</a>
+                            </li>
+                            
+                            <li>
+                                <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
                     </li>
@@ -406,10 +374,21 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 <div class="row">
     <div class="col-lg-12">
         <form name="push">
+
+            <div class="form-group">
+                <label for="platform" >类型</label>
+                <div >
+                    <select id="platform" class="form-control" name="type">
+                        <option value="">选择类型</option>
+                        <option value="1">学校通知</option>
+                        <option value="3">锻炼提醒</option>
+                    </select>
+                </div>
+            </div>
             
             <div class="form-group">
                 <label for="name">学校ID &nbsp;( 提示 ：多个学校ID通过 &nbsp; | &nbsp; 隔开 )</label>
-                <input type="text" class="form-control" id="schoolIds" name="schoolIds">
+                <input type="text" class="form-control" id="schoolIds" name="schoolIds" placeholder="学校ID">
             </div>
 
             <div class="row">
@@ -448,13 +427,18 @@ $_smarty_tpl->tpl_vars['gl']->_loop = true;
             </div>
 
             <div class="form-group">
-                <label for="name">推送主题</label>
-                <input type="text" class="form-control" id="theme" name="theme">
+                <label for="name">标题</label>
+                <input type="text" class="form-control" id="theme" name="theme" placeholder="标题">
             </div>
 
             <div class="form-group">
-                <label for="desc">推送内容</label>
-                <textarea id="desc" class="form-control" rows="3" name="desc"></textarea>
+                <label for="desc">内容摘要</label>
+                <textarea id="desc" class="form-control" rows="3" name="desc" placeholder="摘要"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="editor">详细内容</label>
+                <div id="editor" name="content"></div>
             </div>
 
             <button id="sub" type="button" class="btn btn-primary">确认推送</button>
@@ -500,6 +484,8 @@ $_smarty_tpl->tpl_vars['gl']->_loop = true;
     </script>
 
     
+<script src="/static/widget/ueditor/ueditor.config.js"></script>
+<script src="/static/widget/ueditor/ueditor.all.min.js"></script>
 <script type="text/javascript" src="/static/push/js/gradePush.js"></script>
 
 </body>

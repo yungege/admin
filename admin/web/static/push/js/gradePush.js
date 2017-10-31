@@ -8,6 +8,7 @@ $(function(){
             this.postData();
             this.addGrade();
             this.delGrade();
+            this.initUe();
         },
 
         getDom: function(){
@@ -22,7 +23,12 @@ $(function(){
             this.school = $('#schoolIds');
             this.theme = $('#theme');
             this.desc = $('#desc');
+            this.type = $('#platform');
         },
+
+        initUe: function(){
+                this.ue = UE.getEditor('editor');
+            },
        
         postData: function(){
             var me = this;
@@ -53,13 +59,18 @@ $(function(){
         checkParams:function(){
             var me = this;
 
-            if(me.getSelectedGrade() == ""){
-                alert('请选择年级');
+            if(me.type.val() == ""){
+                alert('请选择类型');
                 return false;
             }
 
             if(me.school.val() == ""){
                 alert('请输入学校ID');
+                return false;
+            }
+
+            if(me.getSelectedGrade() == ""){
+                alert('请选择年级');
                 return false;
             }
 

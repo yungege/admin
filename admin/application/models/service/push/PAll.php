@@ -5,6 +5,8 @@ class Service_Push_PAllModel extends BasePageService {
 	protected $message = [];
 	protected $theme;
 	protected $content;
+	protected $desc;
+	protected $type;
 
 	public function __construct(){
 		
@@ -18,10 +20,14 @@ class Service_Push_PAllModel extends BasePageService {
 	protected function __execute($req){
 
 		$req = $req['post'];
+		$this->type = (int)$req['type'];
 		$this->theme = trim($req['theme']);
-		$this->content = trim($req['description']);
+		$this->content = trim($req['content']);
+		$this->desc = trim($req['description']);
+		$this->desc = str_replace("\r\n","",$this->desc);
+		$this->content = str_replace("\r\n","",$this->content);
 
-		if(empty($this->theme) || empty($this->content)){
+		if(empty($this->theme) || empty($this->desc) || empty($this->content) || empty($this->type)){
 			$this->errNo = REQUEST_PARAMS_ERROR;
 			return false;
 		}
@@ -31,6 +37,7 @@ class Service_Push_PAllModel extends BasePageService {
 		$this->message['title'] = $this->theme;
 		$this->message['to_id'] = 0;
 		$this->message['sendtime'] = time();
+		$this->message['desc'] = $this->desc;
 		$this->message['content'] = $this->content;
 		$this->message['status'] = 1;
 		$this->message['ctime'] = time();
@@ -42,8 +49,8 @@ class Service_Push_PAllModel extends BasePageService {
 		}
 
 		$uMPush = new UmengPush();
-		$retIos = $uMPush->iosPushByBroadcast($this->theme,$this->content);
-		$retAndroid = $uMPush->androidPushByBroadcast($this->theme,$this->content);
+		$retIos = $uMPush->iosPushByBroadcast($this->theme,$this->desc);
+		$retAndroid = $uMPush->androidPushByBroadcast($this->theme,$this->desc);
 
 		return ;
 
