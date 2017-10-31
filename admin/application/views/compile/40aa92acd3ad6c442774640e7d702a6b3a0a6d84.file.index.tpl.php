@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 09:39:35
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 17:39:32
          compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:121828209859f7d457e3dcf3-68339692%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 09:35:21
-         compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:74235294459f7d3591881f5-11769555%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+<?php /*%%SmartyHeaderCode:99467561559f844d4089f34-80955244%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '40aa92acd3ad6c442774640e7d702a6b3a0a6d84' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/index/index.tpl',
-<<<<<<< HEAD
-      1 => 1504258102,
-=======
       1 => 1505194859,
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1509413885,
+      1 => 1509430537,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '121828209859f7d457e3dcf3-68339692',
-=======
-      1 => 1509341646,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '74235294459f7d3591881f5-11769555',
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+  'nocache_hash' => '99467561559f844d4089f34-80955244',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59f7d45803ecb0_39900149',
+  'unifunc' => 'content_59f844d41a7491_59464210',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f7d45803ecb0_39900149')) {function content_59f7d45803ecb0_39900149($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59f7d3592bad71_19685900',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f7d3592bad71_19685900')) {function content_59f7d3592bad71_19685900($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+<?php if ($_valid && !is_callable('content_59f844d41a7491_59464210')) {function content_59f844d41a7491_59464210($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -316,10 +292,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                             <li>
                                 <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">管理员</a>
-                            </li>
-                            
-                            <li>
-                                <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
                     </li>

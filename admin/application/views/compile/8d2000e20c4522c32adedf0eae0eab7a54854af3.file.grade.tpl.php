@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 14:13:37
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 17:40:47
          compiled from "/var/www/admin/admin/application/views/template/push/grade.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:72409498759f814917f1c27-64119898%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 09:35:37
-         compiled from "/var/www/admin/admin/application/views/template/push/grade.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:209160441059f7d369969852-77702412%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+<?php /*%%SmartyHeaderCode:96296165459f8451f3874d2-94147547%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8d2000e20c4522c32adedf0eae0eab7a54854af3' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/grade.tpl',
-<<<<<<< HEAD
-      1 => 1509430020,
-=======
-      1 => 1505194859,
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+      1 => 1509430537,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1509413885,
+      1 => 1509430537,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '72409498759f814917f1c27-64119898',
-=======
-      1 => 1509341646,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '209160441059f7d369969852-77702412',
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+  'nocache_hash' => '96296165459f8451f3874d2-94147547',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59f81491898342_78355665',
+  'unifunc' => 'content_59f8451f4b6d23_59193186',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f81491898342_78355665')) {function content_59f81491898342_78355665($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59f7d369b30d42_18028042',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f7d369b30d42_18028042')) {function content_59f7d369b30d42_18028042($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+<?php if ($_valid && !is_callable('content_59f8451f4b6d23_59193186')) {function content_59f8451f4b6d23_59193186($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -361,23 +337,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                             <li>
                                 <a href="/meau/url" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">URL管理</a>
-<<<<<<< HEAD
-=======
                             </li>
                             <li>
                                 <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">管理员</a>
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
-                            </li>
-                            
-                            <li>
-<<<<<<< HEAD
-                                <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">管理员</a>
-                            </li>
-                            
-                            <li>
-=======
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
-                                <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
                     </li>
