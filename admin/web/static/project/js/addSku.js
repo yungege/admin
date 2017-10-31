@@ -271,7 +271,7 @@ $(function(){
                 'modal'   : true,
                 'buttons' : {
                     '明白了' : function(){
-                        me.dialogDom.name.close();
+                        me.dialogDom.name.destroy();
                     },
                 }
             });

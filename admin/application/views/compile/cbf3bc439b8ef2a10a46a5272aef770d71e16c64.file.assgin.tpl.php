@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-27 18:29:26
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 14:07:31
          compiled from "/var/www/admin/admin/application/views/template/meau/assgin.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:190723399359f30a86165624-71657208%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:212053367359f813233ef663-89773520%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'cbf3bc439b8ef2a10a46a5272aef770d71e16c64' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/assgin.tpl',
-      1 => 1509100164,
+      1 => 1509429986,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '190723399359f30a86165624-71657208',
+  'nocache_hash' => '212053367359f813233ef663-89773520',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59f30a861d5cb1_77978484',
+  'unifunc' => 'content_59f81323440f34_96482433',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f30a861d5cb1_77978484')) {function content_59f30a861d5cb1_77978484($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59f81323440f34_96482433')) {function content_59f81323440f34_96482433($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -117,7 +117,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         vertical-align: middle;
         height: 45px;
     }
-    
+    .all-checked-label{
+        cursor: pointer;
+        line-height: 1;
+    }
+    #cy-all-checked{
+        vertical-align: top;
+    }
 </style>
 <link href="/static/widget/icheck/square/green.css" rel="stylesheet">
 
@@ -336,35 +342,39 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
 <div class="row">
     <div class="col-lg-12">
-        <table class="table table-striped table-bordered" style="color: #7a7676;">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>URL</th>
-                    <th>备注信息</th>
-                </tr>
-            </thead>
-            <tbody>
-                <form name="urls">
-                <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+        <form name="url">
+            <table class="table table-striped table-bordered" style="color: #7a7676;">
+                <thead>
+                    <tr>
+                        <th class="text-center" style="width: 100px;">
+                            <label for="cy-all-checked" class="all-checked-label">全选</label>
+                            <input id="cy-all-checked" type="checkbox"/>
+                        </th>
+                        <th>URL</th>
+                        <th>备注信息</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                <tr">
-                    <td class="text-center"><input class="cy-icheck" type="checkbox" name="urls[]" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
-"/></td>
-                    <td><a href="javascript:viod(0)" style="color: #65CEA7;"><?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+                    <tr>
+                        <td class="text-center"><input class="cy-icheck" type="checkbox" name="urls[]" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+" <?php if (in_array($_smarty_tpl->tpl_vars['row']->value['url'],$_smarty_tpl->tpl_vars['myList']->value['url'])){?>checked<?php }?>/></td>
+                        <td><a href="javascript:viod(0)" style="color: #65CEA7;"><?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
 </a></td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['remark'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['remark'];?>
 </td>
-                </tr>
-                <?php } ?>
-                </form>
-            </tbody>
-        </table>
-
-        <a class="btn btn-md btn-primary" href="javascript:void(0)">保 存</a>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+            <input type="hidden" name="rid" value="<?php echo $_GET['rid'];?>
+">
+        </form>
+        <a id="sub" class="btn btn-md btn-primary" href="javascript:void(0)">保 存</a>
     </div>
 </div>
 
@@ -403,9 +413,90 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 $(function(){
     $('.cy-icheck').iCheck({
         checkboxClass: 'icheckbox_square-green',
-        radioClass: 'iradio_square-green',
         increaseArea: '20%' // optional
     });
+
+    var assgin = {
+        init: function(){
+            this.getDom();
+            this.checkAll();
+            this.checkAllStatus();
+            this.postData();
+        },
+
+        getDom: function(){
+            this.checkBtn = $('#cy-all-checked');
+            this.urlChecks = $('.cy-icheck');
+            this.subBtn = $('#sub');
+            this.form = $('form[name=url]');
+            this.dialogDom = {};
+        },
+
+        checkAll: function(){
+            var me = this;
+            me.checkBtn.change(function(){
+                var checkStatus = $(this).prop('checked');
+                var newStatus = checkStatus == true ? 'check' : 'uncheck';
+                me.urlChecks.iCheck(newStatus);
+            });
+        },
+
+        checkAllStatus: function(){
+            var me = this;
+            me.urlChecks.bind('ifChanged', function(){
+                var sta = $(this).prop('checked');
+                if(sta === false){
+                    me.checkBtn.prop('checked', false);
+                }
+            })
+        },
+
+        postData: function(){
+            var me = this;
+            me.subBtn.bind('click', function(){
+                var data = me.form.serialize();
+                $.post('/meau/assginurl', data, function(res){
+                    if(res.errCode == 0){
+                        me.alertMsg('保存成功', 'succ');
+                    }
+                    else{
+                        me.alertMsg(res.errMessage, 'fail');
+                        return false;
+                    }
+                })
+            })
+        },
+
+        alertMsg: function(text, name){
+            var me = this;
+
+            if(name == 'fail'){
+                var buttons = {
+                    '确定' : function(){
+                        me.dialogDom.name.destroy();
+                    },
+                };
+            }
+            else{
+                var buttons = {
+                    '确定' : function(){
+                        window.location.reload();
+                    },
+                };
+            }
+
+            me.dialogDom.name = jqueryAlert({
+                'title'   : '',
+                'content' : text,
+                'modal'   : true,
+                'buttons' : buttons
+            });
+
+            return false;
+        },
+    };
+
+    assgin.init()
 })
 </script>
 
