@@ -1,51 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 14:08:08
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 14:18:29
          compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:21725006459f813488aae32-27148559%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-30 09:29:27
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:134733227759f68077a3ac73-68116154%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-27 17:45:28
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:204232477459f30038566171-19786797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 45bc262c1a07f41d9190b31ad0be7ea10406b1d8
->>>>>>> f2d5c20c9b00bc8cf85cabb0302a3734004d3abb
+<?php /*%%SmartyHeaderCode:68615076859f815b59ebd46-24601263%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
-<<<<<<< HEAD
       1 => 1508118540,
-=======
-      1 => 1509080121,
->>>>>>> 45bc262c1a07f41d9190b31ad0be7ea10406b1d8
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1509086521,
+      1 => 1509430470,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '134733227759f68077a3ac73-68116154',
-=======
-      1 => 1509096174,
-      2 => 'file',
-    ),
-  ),
-<<<<<<< HEAD
-  'nocache_hash' => '21725006459f813488aae32-27148559',
-=======
-  'nocache_hash' => '204232477459f30038566171-19786797',
->>>>>>> 45bc262c1a07f41d9190b31ad0be7ea10406b1d8
->>>>>>> f2d5c20c9b00bc8cf85cabb0302a3734004d3abb
+  'nocache_hash' => '68615076859f815b59ebd46-24601263',
   'function' => 
   array (
   ),
@@ -57,21 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59f8134890ed51_79387693',
+  'unifunc' => 'content_59f815b5aa1d77_94872411',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f8134890ed51_79387693')) {function content_59f8134890ed51_79387693($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_59f68077ba53c7_75684851',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f68077ba53c7_75684851')) {function content_59f68077ba53c7_75684851($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59f300385c9d46_38606201',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f300385c9d46_38606201')) {function content_59f300385c9d46_38606201($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 45bc262c1a07f41d9190b31ad0be7ea10406b1d8
->>>>>>> f2d5c20c9b00bc8cf85cabb0302a3734004d3abb
+<?php if ($_valid && !is_callable('content_59f815b5aa1d77_94872411')) {function content_59f815b5aa1d77_94872411($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -295,9 +255,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
                             </li>
-                            <li>
-                                <a href="/upload/punch" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">课外作业替换</a>
-                            </li>
+                        
                             <li>
                                 <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
                             </li>
@@ -325,9 +283,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/push/user" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">个人推送</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="/push/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校推送</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="/push/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">年级推送</a>
                             </li>
@@ -362,10 +320,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                             <li>
                                 <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">管理员</a>
-                            </li>
-                            
-                            <li>
-                                <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
                     </li>

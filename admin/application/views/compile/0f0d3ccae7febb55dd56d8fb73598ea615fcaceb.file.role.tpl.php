@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 14:08:09
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 14:18:43
          compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:62154307659f813496c9978-17590719%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:89481218259f815c32ef055-62898912%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f0d3ccae7febb55dd56d8fb73598ea615fcaceb' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/role.tpl',
-      1 => 1509092651,
+      1 => 1509341573,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509096174,
+      1 => 1509430470,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '62154307659f813496c9978-17590719',
+  'nocache_hash' => '89481218259f815c32ef055-62898912',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59f81349719982_93092375',
+  'unifunc' => 'content_59f815c3377029_13255128',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f81349719982_93092375')) {function content_59f81349719982_93092375($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59f815c3377029_13255128')) {function content_59f815c3377029_13255128($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -251,9 +251,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
                             </li>
-                            <li>
-                                <a href="/upload/punch" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">课外作业替换</a>
-                            </li>
+                        
                             <li>
                                 <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
                             </li>
@@ -281,9 +279,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/push/user" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">个人推送</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="/push/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校推送</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="/push/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">年级推送</a>
                             </li>
@@ -318,10 +316,6 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                             <li>
                                 <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">管理员</a>
-                            </li>
-                            
-                            <li>
-                                <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
                     </li>
