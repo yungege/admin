@@ -256,10 +256,6 @@
                             <li>
                                 <a href="/meau/admin" class="{%if $tag.0 == 7 && $tag.1 == 4%}cy-child-active{%/if%}">管理员</a>
                             </li>
-                            
-                            <li>
-                                <a href="/meau/assgin" class="{%if $tag.0 == 7 && $tag.1 == 5%}cy-child-active{%/if%}">权限分配</a>
-                            </li>
                         </ul>
                     </li>
 

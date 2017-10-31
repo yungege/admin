@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 14:13:53
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:182874276559f814a15d1264-28112847%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 13:58:10
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:78515576559f810f27890c0-68420930%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
+<<<<<<< HEAD
       1 => 1509340334,
+=======
+      1 => 1509341646,
+>>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1509413885,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '182874276559f814a15d1264-28112847',
+=======
+      1 => 1509341646,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '78515576559f810f27890c0-68420930',
+>>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59f814a169bd48_66023407',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59f814a169bd48_66023407')) {function content_59f814a169bd48_66023407($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_59f810f2967af5_07799608',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59f810f2967af5_07799608')) {function content_59f810f2967af5_07799608($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -353,12 +377,22 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                             <li>
                                 <a href="/meau/url" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">URL管理</a>
+<<<<<<< HEAD
+=======
                             </li>
                             <li>
+                                <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">管理员</a>
+>>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+                            </li>
+                            
+                            <li>
+<<<<<<< HEAD
                                 <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">管理员</a>
                             </li>
                             
                             <li>
+=======
+>>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
                                 <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
