@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 14:13:39
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 14:19:14
          compiled from "/var/www/admin/admin/application/views/template/push/all.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:113838552559f81493ec6c42-90603565%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 09:35:32
-         compiled from "/var/www/admin/admin/application/views/template/push/all.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:108575614959f7d364928725-09018848%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+<?php /*%%SmartyHeaderCode:15204670759f815e233f7e9-95463798%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9adcb3f7e4b4407cb55bec55ae09a94821d1f7c6' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/all.tpl',
-<<<<<<< HEAD
       1 => 1509430100,
-=======
-      1 => 1505194859,
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1509413885,
+      1 => 1509430470,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '113838552559f81493ec6c42-90603565',
-=======
-      1 => 1509341646,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '108575614959f7d364928725-09018848',
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+  'nocache_hash' => '15204670759f815e233f7e9-95463798',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59f814940102b6_17987568',
+  'unifunc' => 'content_59f815e23caa04_59853376',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f814940102b6_17987568')) {function content_59f814940102b6_17987568($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59f7d364a50c21_89444295',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f7d364a50c21_89444295')) {function content_59f7d364a50c21_89444295($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+<?php if ($_valid && !is_callable('content_59f815e23caa04_59853376')) {function content_59f815e23caa04_59853376($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -313,23 +289,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                             <li>
                                 <a href="/meau/url" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">URL管理</a>
-<<<<<<< HEAD
-=======
                             </li>
                             <li>
                                 <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">管理员</a>
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
-                            </li>
-                            
-                            <li>
-<<<<<<< HEAD
-                                <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">管理员</a>
-                            </li>
-                            
-                            <li>
-=======
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
-                                <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
                     </li>
