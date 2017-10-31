@@ -1,18 +1,12 @@
 <<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-26 13:58:35
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-30 09:49:52
          compiled from "/var/www/admin/admin/application/views/template/upload/outsport.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:129159593659f1798b3ebe98-72966715%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:177834174259f68540c43825-30810485%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 =======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-17 09:32:43
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-27 16:39:55
          compiled from "/var/www/admin/admin/application/views/template/upload/outsport.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:151318792159e55dbb69e631-96355480%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-19 13:09:09
-         compiled from "/var/www/admin/admin/application/views/template/upload/outsport.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:33935694159e83375b8da94-71913519%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 5eced5a90c3f7d2e68e18f52f44c5e3b955b52c2
->>>>>>> baf91c886e00cc4827a5b184e5a5ec34e5245446
+<?php /*%%SmartyHeaderCode:172308273359f2f0db186139-93646360%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 45bc262c1a07f41d9190b31ad0be7ea10406b1d8
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -20,32 +14,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     array (
       0 => '/var/www/admin/admin/application/views/template/upload/outsport.tpl',
 <<<<<<< HEAD
-      1 => 1508203941,
+      1 => 1509086521,
 =======
-      1 => 1508204108,
->>>>>>> 5eced5a90c3f7d2e68e18f52f44c5e3b955b52c2
+      1 => 1509081747,
+>>>>>>> 45bc262c1a07f41d9190b31ad0be7ea10406b1d8
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
 <<<<<<< HEAD
-      1 => 1508203941,
+      1 => 1509328172,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '151318792159e55dbb69e631-96355480',
+  'nocache_hash' => '177834174259f68540c43825-30810485',
 =======
-      1 => 1508204108,
+      1 => 1509081747,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '129159593659f1798b3ebe98-72966715',
-=======
-  'nocache_hash' => '33935694159e83375b8da94-71913519',
->>>>>>> 5eced5a90c3f7d2e68e18f52f44c5e3b955b52c2
->>>>>>> baf91c886e00cc4827a5b184e5a5ec34e5245446
+  'nocache_hash' => '172308273359f2f0db186139-93646360',
+>>>>>>> 45bc262c1a07f41d9190b31ad0be7ea10406b1d8
   'function' => 
   array (
   ),
@@ -58,20 +48,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
-  'unifunc' => 'content_59f1798b5285a9_38831949',
+  'unifunc' => 'content_59f68540cf84f2_15285353',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f1798b5285a9_38831949')) {function content_59f1798b5285a9_38831949($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59f68540cf84f2_15285353')) {function content_59f68540cf84f2_15285353($_smarty_tpl) {?><!DOCTYPE html>
 =======
-<<<<<<< HEAD
-  'unifunc' => 'content_59e55dbb6fb7b4_12506249',
+  'unifunc' => 'content_59f2f0db2b8857_77551346',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59e55dbb6fb7b4_12506249')) {function content_59e55dbb6fb7b4_12506249($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59e83375ccd846_64621809',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59e83375ccd846_64621809')) {function content_59e83375ccd846_64621809($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 5eced5a90c3f7d2e68e18f52f44c5e3b955b52c2
->>>>>>> baf91c886e00cc4827a5b184e5a5ec34e5245446
+<?php if ($_valid && !is_callable('content_59f2f0db2b8857_77551346')) {function content_59f2f0db2b8857_77551346($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 45bc262c1a07f41d9190b31ad0be7ea10406b1d8
 <html lang="en">
 
 <head>
@@ -316,11 +300,15 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/upload/index" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">上传学生数据</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="/upload/punch" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">课外作业替换</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="/upload/outSport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==7){?>cy-child-active<?php }?>">上传课外活动数据</a>
+                            </li>
+
+                            <li>
+                                <a href="/sport/outsport" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==4&&$_smarty_tpl->tpl_vars['tag']->value[1]==8){?>cy-child-active<?php }?>">课外锻炼替换列表</a>
                             </li>
 
                         </ul>
@@ -356,7 +344,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                                 <a href="/push/class" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">班级推送</a>
                             </li>
                             <li>
-                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台消息推送</a>
+                                <a href="/push/app" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">平台/学校通知推送</a>
                             </li>
                            <!--  <li>
                                 <a href="/push/province" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==6){?>cy-child-active<?php }?>">省推送</a>
