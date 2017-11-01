@@ -80,16 +80,16 @@ class BaseAction extends Yaf_Action_Abstract{
     protected function __authUrl(){
         if($this->declareAuthUrl){
             $rbac = new Rbac_Rbac;
-            if(false === $rbac->authUrl()){
-                header(self::RENDER_INTERFACE_HEAD);
-                header('HTTP/1.1 403 Forbidden');
-                $this->res = [
-                    'errCode' => USER_ACCESS_ERROR,
-                    'errMessage' => 'Auth Access Failed. Please Mail To 422909231@qq.com.',
-                    'data' => null,
-                ];
-                exit(json_encode($this->res));
-            }
+            // if(false === $rbac->authUrl()){
+            //     header(self::RENDER_INTERFACE_HEAD);
+            //     header('HTTP/1.1 403 Forbidden');
+            //     $this->res = [
+            //         'errCode' => USER_ACCESS_ERROR,
+            //         'errMessage' => 'Auth Access Failed. Please Mail To 422909231@qq.com.',
+            //         'data' => null,
+            //     ];
+            //     exit(json_encode($this->res));
+            // }
         }
 
         if(!empty($_SESSION['userInfo'])){
