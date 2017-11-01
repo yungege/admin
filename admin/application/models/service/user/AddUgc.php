@@ -161,7 +161,7 @@ class Service_User_AddUgcModel extends BasePageService {
             throw new Exception("操作失败", -1);
         }
 
-        $monthDate = date('Y_m', $data['endtime']);
+        $monthDate = date('Y_m', $data['originaltime']);
         $this->addCache($req['uid'], $monthDate, $res, $data);
         return;
     }
@@ -170,19 +170,19 @@ class Service_User_AddUgcModel extends BasePageService {
     protected function addCache($uId, $monthDate, $trainId, $data, $type = 1){
         $cacheRes = $this->trainModel->getCacheDataByMonth($uId, $monthDate);
         if(empty($cacheRes)){
-            $firstDay = strtotime(date('Y-m-01', $data['endtime']));
-            $lastDay = strtotime(date('Y-m-t', $data['endtime']) . ' 23:59:59');
+            $firstDay = strtotime(date('Y-m-01', $data['originaltime']));
+            $lastDay = strtotime(date('Y-m-t', $data['originaltime']) . ' 23:59:59');
             $hMap = [
                 'userid' => $uId,
                 'htype' => ['$in' => [1,2,3]],
-                'endtime' => ['$gte' => $firstDay, '$lte' => $lastDay]
+                'originaltime' => ['$gte' => $firstDay, '$lte' => $lastDay]
             ];
 
             // 锻炼历史
             $options = [
                 'sort' => ['endtime' => -1],
             ];
-            $fields = ['htype','trainingid','starttime','endtime','burncalories','originaltime','exciseimg','mapurl','imginfo','homeworkid'];
+            $fields = ['htype','trainingid','starttime','endtime','burncalories','originaltime','exciseimg','mapurl','imginfo','homeworkid','distance'];
             $resList = [];
             $this->trainModel->getListByMonth($hMap, $fields, $options, $monthDate, $resList);
         }
@@ -198,7 +198,8 @@ class Service_User_AddUgcModel extends BasePageService {
                     "finishTime" => $data['endtime'],
                     "hType" => 3,
                     "hId" => '',
-                    "originalTime" => 0
+                    "originalTime" => 0,
+                    "distance" => $data['distance'],
                 ];
             }
             else{
@@ -212,7 +213,8 @@ class Service_User_AddUgcModel extends BasePageService {
                     "finishTime" => $data['endtime'],
                     "hType" => $data['htype'],
                     "hId" => $data['homeworkid'],
-                    "originalTime" => $data['originaltime']
+                    "originalTime" => $data['originaltime'],
+                    "distance" => 0.00,
                 ];
             }
             
@@ -293,6 +295,7 @@ class Service_User_AddUgcModel extends BasePageService {
                 "hType" => $data['htype'],
                 "hId" => $data['homeworkid'],
                 "originalTime" => strtotime(date('Y-m-d',$data['starttime'])),
+                'distance' => 0.00,
             ];
             $this->trainDoneOutsideModel->addCacheDataByMonth($uId, $monthDate, $cacheData);
         }
