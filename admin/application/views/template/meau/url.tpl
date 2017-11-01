@@ -28,6 +28,12 @@
         color: #65CEA7;
         display: inline-block;
     }
+    .alert-modal{
+        z-index: 10000!important;
+    }
+    .alert-container{
+        z-index: 10001!important;
+    }
 </style>
 {%/block%}
 {%block name="content"%}
