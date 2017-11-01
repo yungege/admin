@@ -99,7 +99,8 @@ $(function(){
             this.showBtn = $('#add-url');
             this.hideBtn = $('.can-r');
             this.subBtn = $('.sub-r');
-            this.form = $('form[name=add-uri]')
+            this.form = $('form[name=add-uri]');
+            this.dialogDom = {};
         },
         showBox: function(){
             var me = this;

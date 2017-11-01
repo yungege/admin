@@ -1,6 +1,6 @@
 <?php
 class UserController extends Yaf_Controller_Abstract{
-	public $actions = array(
+    public $actions = array(
         'login'     => 'actions/user/Login.php',
         'dologin'   => 'actions/user/Dologin.php',
         'register'  => 'actions/user/Register.php',
@@ -15,5 +15,5 @@ class UserController extends Yaf_Controller_Abstract{
         'addschool' => 'actions/user/AddSchool.php',
         'index'     => 'actions/user/Index.php',  
         'addrelation' => 'actions/user/AddRelation.php',
-        );
+    );
 }
