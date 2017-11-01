@@ -18,6 +18,7 @@ class BasePageService {
     protected $declarelog;
     protected $declareHidePgcPop;
     protected $declareCheckXss;
+    // protected $declareAuthUrl = true;
 
     protected $req;
     protected $res;
@@ -65,6 +66,7 @@ class BasePageService {
             $res = $this->__execute($req);
             if(!isset($res['userInfo']) && !empty($_SESSION['userInfo']))
                 $res['userInfo'] = $_SESSION['userInfo'];
+            
 			$this->res['errCode'] = $this->errNo;
 			$this->res['errMessage'] = $this->errMsg ? : setError($this->errNo);
             $this->res['data'] = $res ? (array)$res : array();

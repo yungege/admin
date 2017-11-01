@@ -7,6 +7,7 @@ class LoginAction extends BaseAction {
             exit;
         }
         
+        $this->declareAuthUrl = false;
         $this->declareParams = false;
         $this->declareRender = [
             'tpl' => [

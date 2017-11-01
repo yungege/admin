@@ -37,7 +37,9 @@ class BaseAction extends Yaf_Action_Abstract{
     protected $declareRender;
     protected $declareTplType;
     protected $declareRequestType = true;
+    protected $declareAuthUrl = true;
     protected $allowRequestType = ['get','post','put','delete','options','head'];
+    protected $meauInfo = [];
 
     protected $req;
     protected $res;
@@ -56,8 +58,9 @@ class BaseAction extends Yaf_Action_Abstract{
 
             $this->__params();
 
-            $this->__pageService(); 
+            $this->__authUrl();
 
+            $this->__pageService(); 
         }catch(Exception $e){
 
         }
@@ -67,11 +70,32 @@ class BaseAction extends Yaf_Action_Abstract{
         $this->__render();
 
         $this->__headerAfter();
-
     }
 
     protected function __declare(){
 
+    }
+    
+    // authUrl
+    protected function __authUrl(){
+        $rbac = new Rbac_Rbac;
+
+        if($this->declareAuthUrl){
+            if(false === $rbac->authUrl()){
+                header(self::RENDER_INTERFACE_HEAD);
+                header('HTTP/1.1 403 Forbidden');
+                $this->res = [
+                    'errCode' => USER_ACCESS_ERROR,
+                    'errMessage' => 'Auth Access Failed. Please Mail To 422909231@qq.com.',
+                    'data' => null,
+                ];
+                exit(json_encode($this->res));
+            }
+        }
+
+        $this->meauInfo['currentId'] = $rbac->getCurrentMeauPid();
+        $this->meauInfo['currentUrl'] = $rbac->uri;
+        $this->meauInfo['myMeau'] = $_SESSION['myMeau'];
     }
 
     protected function __filterRequestType(){
@@ -135,6 +159,8 @@ class BaseAction extends Yaf_Action_Abstract{
                 $this->res = $pageService->execute($this->req);
             }
         }
+
+        $this->res['data'] = array_merge($this->meauInfo, $this->res['data']);
     }
 
     //响应头

@@ -10,5 +10,6 @@ class MeauController extends Yaf_Controller_Abstract{
         'assgin'    => 'actions/meau/Assgin.php',
         'url'       => 'actions/meau/Url.php',
         'assginurl' => 'actions/meau/AssginUrl.php',
+        'adduri'    => 'actions/meau/AddUri.php',
         );
 }
