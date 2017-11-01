@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 14:13:38
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 17:42:55
          compiled from "/var/www/admin/admin/application/views/template/push/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:125562309259f81492a14558-22195227%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 09:36:36
-         compiled from "/var/www/admin/admin/application/views/template/push/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:71837100459f7d3a47a0497-90436548%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+<?php /*%%SmartyHeaderCode:185259730059f8459f716054-04131156%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8bc1a8083f849f61058809b2e70d8717f6d7cdf2' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/class.tpl',
-<<<<<<< HEAD
-      1 => 1509430398,
-=======
-      1 => 1505194859,
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+      1 => 1509430507,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1509413885,
+      1 => 1509430507,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '125562309259f81492a14558-22195227',
-=======
-      1 => 1509341646,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '71837100459f7d3a47a0497-90436548',
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+  'nocache_hash' => '185259730059f8459f716054-04131156',
   'function' => 
   array (
   ),
@@ -47,15 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59f81492aa4274_15220204',
+  'unifunc' => 'content_59f8459f7748d7_46471869',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f81492aa4274_15220204')) {function content_59f81492aa4274_15220204($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59f7d3a4971483_54256087',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f7d3a4971483_54256087')) {function content_59f7d3a4971483_54256087($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
+<?php if ($_valid && !is_callable('content_59f8459f7748d7_46471869')) {function content_59f8459f7748d7_46471869($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -313,23 +289,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             </li>
                             <li>
                                 <a href="/meau/url" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">URL管理</a>
-<<<<<<< HEAD
                             </li>
                             <li>
                                 <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">管理员</a>
-=======
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
-                            </li>
-                            
-                            <li>
-<<<<<<< HEAD
-=======
-                                <a href="/meau/admin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">管理员</a>
-                            </li>
-                            
-                            <li>
->>>>>>> aefaa16b9bdc27a338d02f65c92795aeb9052bcf
-                                <a href="/meau/assgin" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==7&&$_smarty_tpl->tpl_vars['tag']->value[1]==5){?>cy-child-active<?php }?>">权限分配</a>
                             </li>
                         </ul>
                     </li>
