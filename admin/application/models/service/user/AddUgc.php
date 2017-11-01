@@ -71,6 +71,7 @@ class Service_User_AddUgcModel extends BasePageService {
         }
 
         $data = [
+            "originaltime"  => (int)strtotime($req['wtime'].' 00:00:00'),
             'starttime' => (int)strtotime($req['wtime'].' 19:00:00'),
             'endtime'   => intval(strtotime($req['wtime'].' 19:00:00') + $req['time_cost']),
             'type'      => 3,
