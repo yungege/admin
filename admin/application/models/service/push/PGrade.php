@@ -3,6 +3,8 @@ class Service_Push_PGradeModel extends BasePageService {
 
 	protected $theme;
 	protected $content;
+	protected $desc;
+	protected $type;
 	protected $deviceToken = [];
 	protected $userInfos;
 	protected $schoolIds;
@@ -18,7 +20,7 @@ class Service_Push_PGradeModel extends BasePageService {
 	public function __construct(){
 
 		$this->userModel = Dao_UserModel::getInstance();
-		$this->classModel = Dao_Classinfo::getInstance();
+		$this->classModel = Dao_ClassinfoModel::getInstance();
 		$this->messageModel = Dao_MessageModel::getInstance();
 		$this->uMPush = new UmengPush();
 	}
@@ -30,15 +32,19 @@ class Service_Push_PGradeModel extends BasePageService {
 	protected function __execute($req){
 
 		$req = $req['post'];
-		if(empty($req['theme']) || empty($req['desc']) || empty($req['schoolIds']) || empty($req['grade'])){
+		if(empty($req['theme']) || empty($req['desc']) || empty($req['schoolIds']) || empty($req['grade']) || empty($req['content']) || empty($req['type'])){
 			
 			$this->errNo = REQUEST_PARAMS_ERROR;
 			return false;
 		}
 
 		$this->schoolIds = explode('|', $req['schoolIds']);
+		$this->type = (int)$req['type'];
 		$this->theme = trim($req['theme']);
-		$this->content = trim($req['desc']);
+		$this->desc = trim($req['desc']);
+		$this->content = trim($req['content']);
+		$this->desc = str_replace("\r\n","",$this->desc);
+		$this->content = str_replace("\r\r","",$this->content);
 		$this->selectedGrade = explode('|' , $req['grade']);
 		array_walk($this->schoolIds,array($this,'trimValue'));
 		array_walk($this->selectedGrade,array($this,'gradeToInt'));
@@ -68,14 +74,15 @@ class Service_Push_PGradeModel extends BasePageService {
 		];
 
 		$this->classInfos = $this->classModel->query($classWhere,$classOptions);
-		$this->classIds = array($this->classInfos,'_id');
+		$this->classIds = array_column($this->classInfos,'_id');
 
 		foreach($this->classIds as $classId){
 			$this->message['platform'] = 2;
-			$this->message['type'] = 3;
+			$this->message['type'] = $this->type;
 			$this->message['title'] = $this->theme;
 			$this->message['to_id'] = $classId;
 			$this->message['sendtime'] = time();
+			$this->message['desc'] = $this->desc;
 			$this->message['content'] = $this->content;
 			$this->message['status'] = 1;
 			$this->message['ctime'] = time();
@@ -119,14 +126,14 @@ class Service_Push_PGradeModel extends BasePageService {
 	protected function pushByIos($deviceToken){
 
 		$deviceToken = implode("," , $deviceToken);
-		$this->uMPush->iosPushByListcast($this->theme,$this->content,$deviceToken);
+		$this->uMPush->iosPushByListcast($this->theme,$this->desc,$deviceToken);
 		return true;
 	}
 
 	protected function pushByAndroid($deviceToken){
 
 		$deviceToken = implode("," , $deviceToken);
-		$this->uMPush->androidPushByListcast($this->theme,$this->content,$deviceToken);
+		$this->uMPush->androidPushByListcast($this->theme,$this->desc,$deviceToken);
 		return true;
 	}
 

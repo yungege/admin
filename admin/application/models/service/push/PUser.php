@@ -8,6 +8,7 @@ class Service_Push_PUserModel extends BasePageService {
 	protected $deviceToken = [];
 	protected $theme;
 	protected $content;
+	protected $desc;
 	protected $userInfos;
 	protected $userIds;
 
@@ -25,7 +26,7 @@ class Service_Push_PUserModel extends BasePageService {
 	protected function __execute($req){
 
 		$req = $req['post'];
-		if(empty($req['theme']) || empty($req['description']) || empty($req['userIds'])){
+		if(empty($req['theme']) || empty($req['description']) || empty($req['userIds']) || empty($req['content']) || empty($req['type'])){
 
 			$this->errNo = REQUEST_PARAMS_ERROR;
 			return false;
@@ -48,15 +49,19 @@ class Service_Push_PUserModel extends BasePageService {
 		$this->deviceToken['ios'] = [];
 		$this->deviceToken['android'] = [];
 		$this->theme = trim($req['theme']);
-		$this->content = trim($req['description']);
+		$this->content = trim($req['content']);
+		$this->desc = trim($req['description']);
 		$this->userInfos = $this->userModel->query($whereUser,$option);
+		$this->desc = str_replace("\r\n","",$this->desc);
+		$this->content = str_replace("\r\n","",$this->content);
 
 		foreach($this->userInfos as $userInfo){
 			$this->message['platform'] = 1;
-			$this->message['type'] = 3;
+			$this->message['type'] = (int)$req['type'];
 			$this->message['title'] = $this->theme;
 			$this->message['to_id'] = $userInfo['_id'];
 			$this->message['sendtime'] = time();
+			$this->message['desc'] = $this->desc;
 			$this->message['content'] = $this->content;
 			$this->message['status'] = 1;
 			$this->message['ctime'] = time();
@@ -78,12 +83,12 @@ class Service_Push_PUserModel extends BasePageService {
 
 		if(!empty($this->deviceToken['ios'])){
 
-			$retIos = $this->uMPush->iosPushByListcast($this->theme,$this->content,$this->deviceToken['ios']);
+			$retIos = $this->uMPush->iosPushByListcast($this->theme,$this->desc,$this->deviceToken['ios']);
 		}
 	
 		if(!empty($this->deviceToken['android'])){
 
-			$retAndroid = $this->uMPush->androidPushByListcast($this->theme,$this->content,$this->deviceToken['android']);
+			$retAndroid = $this->uMPush->androidPushByListcast($this->theme,$this->desc,$this->deviceToken['android']);
 		}
 
 		return ;

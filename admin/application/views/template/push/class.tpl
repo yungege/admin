@@ -7,19 +7,35 @@
     <div class="col-lg-12">
         <form name="push">
 
+             <div class="form-group">
+                <label for="platform" >类型</label>
+                <div >
+                    <select id="platform" class="form-control" name="type">
+                        <option value="">选择类型</option>
+                        <option value="1">学校通知</option>
+                        <option value="3">锻炼提醒</option>
+                    </select>
+                </div>
+            </div>
+
             <div class="form-group">
                 <label for="vname">班级ID &nbsp; (&nbsp; 提示：多个ClassId通过 &nbsp;&nbsp;| &nbsp;&nbsp; 隔开 &nbsp;)</label>
-                <input type="text" class="form-control" id="classIds" placeholder="Class Id" name="classIds">
+                <input type="text" class="form-control" id="classIds" placeholder="班级ID" name="classIds">
             </div>
 
             <div class="form-group">
                 <label for="vno">推送主题</label>
-                <input type="text" class="form-control" id="theme" placeholder="Push Theme" name="theme">
+                <input type="text" class="form-control" id="theme" placeholder="标题" name="theme">
             </div>
 
             <div class="form-group">
-                <label for="description">推送内容</label>
-                <textarea id="description" class="form-control"  placeholder="Push Content" rows="3" name="description"></textarea>
+                <label for="description">内容简介</label>
+                <textarea id="description" class="form-control"  placeholder="摘要" rows="3" name="description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="editor">详细内容</label>
+                <div id="editor" name="content"></div>
             </div>
               
             <button id="sub" type="button" class="btn btn-primary" data-0="{%$ios%}" data-1="{%$android%}">确认推送</button>
@@ -30,12 +46,15 @@
 {%/block%}
 
 {%block name="js"%}
+<script src="/static/widget/ueditor/ueditor.config.js"></script>
+<script src="/static/widget/ueditor/ueditor.all.min.js"></script>
 <script type="text/javascript">
     !(function(){
         var publish = {
             init: function(){
                 this.getDom();
                 this.postData();
+                this.initUe();
             },
             getDom: function(){
                 this.subBtn = $('#sub');
@@ -43,9 +62,19 @@
                 this.theme = $('#theme');
                 this.desc = $('#description');
                 this.form = $('form[name=push]');
+                this.type = $('#platform');
+            },
+             initUe: function(){
+                this.ue = UE.getEditor('editor');
             },
             checkParams: function(){
                 var me = this;
+
+                var type = $.trim(me.type.val());
+                if(!type){
+                    alert('请选择类型');
+                    return false;
+                }
 
                 var classIds = $.trim(me.classIds.val());
                 if(!classIds){
@@ -61,7 +90,7 @@
 
                 var desc = $.trim(me.desc.val());
                 if(!desc){
-                    alert('请输入推送主体内容.');
+                    alert('请输入推送摘要.');
                     return false;
                 }
             },

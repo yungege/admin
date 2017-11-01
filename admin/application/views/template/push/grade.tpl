@@ -55,10 +55,21 @@
 <div class="row">
     <div class="col-lg-12">
         <form name="push">
+
+            <div class="form-group">
+                <label for="platform" >类型</label>
+                <div >
+                    <select id="platform" class="form-control" name="type">
+                        <option value="">选择类型</option>
+                        <option value="1">学校通知</option>
+                        <option value="3">锻炼提醒</option>
+                    </select>
+                </div>
+            </div>
             
             <div class="form-group">
                 <label for="name">学校ID &nbsp;( 提示 ：多个学校ID通过 &nbsp; | &nbsp; 隔开 )</label>
-                <input type="text" class="form-control" id="schoolIds" name="schoolIds">
+                <input type="text" class="form-control" id="schoolIds" name="schoolIds" placeholder="学校ID">
             </div>
 
             <div class="row">
@@ -89,13 +100,18 @@
             </div>
 
             <div class="form-group">
-                <label for="name">推送主题</label>
-                <input type="text" class="form-control" id="theme" name="theme">
+                <label for="name">标题</label>
+                <input type="text" class="form-control" id="theme" name="theme" placeholder="标题">
             </div>
 
             <div class="form-group">
-                <label for="desc">推送内容</label>
-                <textarea id="desc" class="form-control" rows="3" name="desc"></textarea>
+                <label for="desc">内容摘要</label>
+                <textarea id="desc" class="form-control" rows="3" name="desc" placeholder="摘要"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="editor">详细内容</label>
+                <div id="editor" name="content"></div>
             </div>
 
             <button id="sub" type="button" class="btn btn-primary">确认推送</button>
@@ -114,5 +130,7 @@
 {%/block%}
 
 {%block name="js"%}
+<script src="/static/widget/ueditor/ueditor.config.js"></script>
+<script src="/static/widget/ueditor/ueditor.all.min.js"></script>
 <script type="text/javascript" src="/static/push/js/gradePush.js"></script>
 {%/block%}

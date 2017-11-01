@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 16:28:29
          compiled from "/var/www/admin/admin/application/views/template/push/class.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:23495944759f8342dda6915-40546666%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-10-31 17:44:28
+         compiled from "/var/www/admin/admin/application/views/template/push/class.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:155946304159f845fc4dd720-98367248%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> baaa26601b8e7079dcec2a3ee71f1d7cc0f672b6
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8bc1a8083f849f61058809b2e70d8717f6d7cdf2' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/class.tpl',
+<<<<<<< HEAD
       1 => 1509080121,
+=======
+      1 => 1509430537,
+>>>>>>> baaa26601b8e7079dcec2a3ee71f1d7cc0f672b6
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1509430618,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '23495944759f8342dda6915-40546666',
+=======
+      1 => 1509430537,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '155946304159f845fc4dd720-98367248',
+>>>>>>> baaa26601b8e7079dcec2a3ee71f1d7cc0f672b6
   'function' => 
   array (
   ),
@@ -29,9 +47,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59f8342de09be0_51266269',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59f8342de09be0_51266269')) {function content_59f8342de09be0_51266269($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59f845fc60dbb5_78843002',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59f845fc60dbb5_78843002')) {function content_59f845fc60dbb5_78843002($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> baaa26601b8e7079dcec2a3ee71f1d7cc0f672b6
 <html lang="en">
 
 <head>
@@ -255,9 +279,9 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                             <li>
                                 <a href="/push/user" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==2){?>cy-child-active<?php }?>">个人推送</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="/push/school" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==3){?>cy-child-active<?php }?>">学校推送</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="/push/grade" class="<?php if ($_smarty_tpl->tpl_vars['tag']->value[0]==6&&$_smarty_tpl->tpl_vars['tag']->value[1]==4){?>cy-child-active<?php }?>">年级推送</a>
                             </li>
@@ -323,19 +347,35 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     <div class="col-lg-12">
         <form name="push">
 
+             <div class="form-group">
+                <label for="platform" >类型</label>
+                <div >
+                    <select id="platform" class="form-control" name="type">
+                        <option value="">选择类型</option>
+                        <option value="1">学校通知</option>
+                        <option value="3">锻炼提醒</option>
+                    </select>
+                </div>
+            </div>
+
             <div class="form-group">
                 <label for="vname">班级ID &nbsp; (&nbsp; 提示：多个ClassId通过 &nbsp;&nbsp;| &nbsp;&nbsp; 隔开 &nbsp;)</label>
-                <input type="text" class="form-control" id="classIds" placeholder="Class Id" name="classIds">
+                <input type="text" class="form-control" id="classIds" placeholder="班级ID" name="classIds">
             </div>
 
             <div class="form-group">
                 <label for="vno">推送主题</label>
-                <input type="text" class="form-control" id="theme" placeholder="Push Theme" name="theme">
+                <input type="text" class="form-control" id="theme" placeholder="标题" name="theme">
             </div>
 
             <div class="form-group">
-                <label for="description">推送内容</label>
-                <textarea id="description" class="form-control"  placeholder="Push Content" rows="3" name="description"></textarea>
+                <label for="description">内容简介</label>
+                <textarea id="description" class="form-control"  placeholder="摘要" rows="3" name="description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="editor">详细内容</label>
+                <div id="editor" name="content"></div>
             </div>
               
             <button id="sub" type="button" class="btn btn-primary" data-0="<?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
@@ -375,12 +415,15 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
     </script>
 
     
+<script src="/static/widget/ueditor/ueditor.config.js"></script>
+<script src="/static/widget/ueditor/ueditor.all.min.js"></script>
 <script type="text/javascript">
     !(function(){
         var publish = {
             init: function(){
                 this.getDom();
                 this.postData();
+                this.initUe();
             },
             getDom: function(){
                 this.subBtn = $('#sub');
@@ -388,9 +431,19 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
                 this.theme = $('#theme');
                 this.desc = $('#description');
                 this.form = $('form[name=push]');
+                this.type = $('#platform');
+            },
+             initUe: function(){
+                this.ue = UE.getEditor('editor');
             },
             checkParams: function(){
                 var me = this;
+
+                var type = $.trim(me.type.val());
+                if(!type){
+                    alert('请选择类型');
+                    return false;
+                }
 
                 var classIds = $.trim(me.classIds.val());
                 if(!classIds){
@@ -406,7 +459,7 @@ $_smarty_tpl->tpl_vars['tag']->value = (explode('-',$_smarty_tpl->tpl_vars['page
 
                 var desc = $.trim(me.desc.val());
                 if(!desc){
-                    alert('请输入推送主体内容.');
+                    alert('请输入推送摘要.');
                     return false;
                 }
             },

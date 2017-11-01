@@ -227,9 +227,9 @@
                             <li>
                                 <a href="/push/user" class="{%if $tag.0 == 6 && $tag.1 == 2%}cy-child-active{%/if%}">个人推送</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="/push/school" class="{%if $tag.0 == 6 && $tag.1 == 3%}cy-child-active{%/if%}">学校推送</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="/push/grade" class="{%if $tag.0 == 6 && $tag.1 == 4%}cy-child-active{%/if%}">年级推送</a>
                             </li>
