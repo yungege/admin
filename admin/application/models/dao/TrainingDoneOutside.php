@@ -64,6 +64,7 @@ class Dao_TrainingDoneOutsideModel extends Db_Mongodb {
                 $trainData['trainingImg'] = $hData['imginfo'][0]['gifUrl'];
             }
             $trainData['calorie'] = $hData['burncalories'];
+            $trainData['distance'] = 0.00;
             $trainData['finishTime'] = $hData['endtime'];
             $trainData['hType'] = $hData['htype'];
             $trainData['hId'] = (string)$hData['homeworkid'];
