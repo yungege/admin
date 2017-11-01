@@ -109,10 +109,13 @@ class Service_Meau_AddFirstModel extends BasePageService {
             }
 
             if(isset($req['url']) && ($oldUrlInfo['url'] != $updateData['url'])){
-                $this->urlModel->update(
-                    ['url' => $oldUrlInfo['url']],
-                    ['url' => $req['url'],'remark' => $req['name']]
-                );
+                $hasExists = $this->urlModel->checkUrlExists($updateData['url']);
+                if(false === $hasExists){
+                    $this->urlModel->update(
+                        ['url' => $oldUrlInfo['url']],
+                        ['url' => $req['url'],'remark' => $req['name']]
+                    );
+                }
             }
         }
         else{
@@ -122,10 +125,13 @@ class Service_Meau_AddFirstModel extends BasePageService {
             }
 
             if($type == 2){
-                $this->urlModel->insert([
-                    'url' => $insertData['url'],
-                    'remark' => $req['name']
-                ]);
+                $hasExists = $this->urlModel->checkUrlExists($updateData['url']);
+                if(false === $hasExists){
+                    $this->urlModel->insert([
+                        'url' => $insertData['url'],
+                        'remark' => $req['name']
+                    ]);
+                }
             }
             
         }
