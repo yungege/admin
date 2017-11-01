@@ -15,6 +15,7 @@ class Service_Index_IndexModel extends BasePageService {
     }
 
     protected function __execute($req) {
+        
         return [
             'pageTag' => '1-1',
         ];

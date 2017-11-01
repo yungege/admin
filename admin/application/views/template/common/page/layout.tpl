@@ -127,11 +127,23 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    {%$tag=('-'|explode:$pageTag)%}
-                    <li {%if $tag.0 == 1%} class="active" {%/if%}>
-                        <a href="/index.html"><i class="fa fa-fw fa-dashboard"></i> HOME PAGE</a>
+                    <!-- {%$tag=('-'|explode:$pageTag)%} -->
+                    <li {%if $currentUrl eq '/' or $currentUrl eq '/index.html' %} class="active" {%/if%}>
+                        <a href="/"><i class="fa fa-fw fa-dashboard"></i> HOME PAGE</a>
                     </li>
+                    {%foreach from=$myMeau item=meauItem key=idx%}
                     <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#m-{%$idx%}"><i class="{%$meauItem.icon_style%}"></i> {%$meauItem.name%} <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+                        <ul id="m-{%$idx%}" class="collapse {%if $currentId eq $meauItem._id%}in{%/if%}">
+                            {%foreach from=$meauItem._child item=childItem%}
+                            <li>
+                                <a href="{%$childItem.url%}" class="{%if $childItem.url eq $currentUrl%}cy-child-active{%/if%}">{%$childItem.name%}</a>
+                            </li>
+                            {%/foreach%}
+                        </ul>
+                    </li>
+                    {%/foreach%}
+                    <!-- <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#m-user"><i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-caret-down pull-right"></i></a>
                         <ul id="m-user" class="collapse {%if $tag.0 == 2%}in{%/if%}">
                             <li>
@@ -159,9 +171,6 @@
                             <li>
                                 <a href="/sport/action" class="{%if $tag.0 == 3 && $tag.1 == 3%}cy-child-active{%/if%}">动作</a>
                             </li>
-                            <!-- <li>
-                                <a href="/train/list" class="{%if $tag.0 == 3 && $tag.1 == 4%}cy-child-active{%/if%}">锻炼内容</a>
-                            </li> -->
                         </ul>
                     </li>
                     <li>
@@ -218,9 +227,9 @@
                             <li>
                                 <a href="/push/user" class="{%if $tag.0 == 6 && $tag.1 == 2%}cy-child-active{%/if%}">个人推送</a>
                             </li>
-                            <!-- <li>
+                            <li>
                                 <a href="/push/school" class="{%if $tag.0 == 6 && $tag.1 == 3%}cy-child-active{%/if%}">学校推送</a>
-                            </li> -->
+                            </li>
                             <li>
                                 <a href="/push/grade" class="{%if $tag.0 == 6 && $tag.1 == 4%}cy-child-active{%/if%}">年级推送</a>
                             </li>
@@ -230,15 +239,6 @@
                             <li>
                                 <a href="/push/app" class="{%if $tag.0 == 6 && $tag.1 == 6%}cy-child-active{%/if%}">平台/学校通知推送</a>
                             </li>
-                           <!--  <li>
-                                <a href="/push/province" class="{%if $tag.0 == 6 && $tag.1 == 6%}cy-child-active{%/if%}">省推送</a>
-                            </li>
-                             <li>
-                                <a href="/push/city" class="{%if $tag.0 == 6 && $tag.1 == 7%}cy-child-active{%/if%}">市推送</a>
-                            </li>
-                             <li>
-                                <a href="/push/district" class="{%if $tag.0 == 6 && $tag.1 == 8%}cy-child-active{%/if%}">区推送</a>
-                            </li> -->
                         </ul>
                     </li>
                     <li>
@@ -257,7 +257,7 @@
                                 <a href="/meau/admin" class="{%if $tag.0 == 7 && $tag.1 == 4%}cy-child-active{%/if%}">管理员</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
 
                 </ul>
             </div>

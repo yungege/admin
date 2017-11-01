@@ -40,5 +40,4 @@ class Dao_RoleModel extends Db_Mongodb {
         return $this->query($where, $options);
     }
 
-
 }

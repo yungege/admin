@@ -39,11 +39,17 @@ class Service_User_LoginModel extends BasePageService {
             $this->errNo = -2;
             return false;
         }
+
         $_SESSION['userInfo'] = $res;
         $host = $_SERVER['SERVER_NAME'];
         if($host == 'localhost'){
             $host = $_SERVER['SERVER_ADDR'];
         }
+
+        // 获取权限信息
+        $rbac = new Rbac_Rbac();
+        $rbac->getMyMeau();
+
         setcookie(session_name(), session_id(), time() + 30*86400, '/', $host);
         setcookie('ttxs', serialize($res), time() + 30*86400, '/', $host);
         return $res;
@@ -60,7 +66,7 @@ class Service_User_LoginModel extends BasePageService {
         //     return false;
         // }
 
-        if(!in_array($req['mob'],self::$admin)){
+        if(!in_array($req['mob'], self::$admin)){
             return false;
         }
 
@@ -81,7 +87,6 @@ class Service_User_LoginModel extends BasePageService {
         if($req['pwd'] != $userInfo['password']){
             return false;
         }
-
 
         $newUserInfo = [
             '_id' => $userInfo['_id'],

@@ -26,7 +26,7 @@ define('MATCHING_FAULT',18);                    //匹配失败
 define('UNALLOW_MOBILE_LOGIN',19);              //该号码无权限
 define('SSO_ID_HAS_BIND',20);                   //该ssoid已经绑定
 define('MOBILE_ERROR',21);                      //手机号格式错误
-define('MOBILE_HAS_BIND',22);                      //手机号已经被绑定
+define('MOBILE_HAS_BIND',22);                   //手机号已经被绑定
 
 
 // public50~99
@@ -86,6 +86,7 @@ define('USER_NICKNAME_ERROR', 421);             //昵称非法
 define('RELATION_ERROR', 422);                  //关联关系错误
 define('USER_PLATFORM_ERROR', 423);             //platform错误
 define('USER_REGISTER_ERROR', 424);             //注册失败
+define('USER_ACCESS_ERROR', 425);               //鉴权失败
 
 
 // 素材信息 600~649
@@ -395,6 +396,9 @@ function setError($errorCode, $errorMsg=''){
             break;
         case USER_REGISTER_ERROR:
             $msg = '注册失败';
+            break;
+        case USER_ACCESS_ERROR:
+            $msg = '鉴权失败';
             break;
 
         //素材信息

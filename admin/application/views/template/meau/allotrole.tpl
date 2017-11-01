@@ -54,7 +54,7 @@ $(function(){
         };
 
         $.post('/meau/allotrole', data, function(json){
-            window.location.reload();
+            window.location.href = '/meau/admin';
         });
     })
     

@@ -7,7 +7,7 @@ class Service_Meau_AllotRoleModel extends BasePageService {
 
     protected $reqData;
     protected $resData = [
-        'pageTag' => '7-3',
+        'pageTag' => '7-4',
         'list' => [],
         'myRole' => '',
     ];
