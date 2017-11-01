@@ -1,23 +1,37 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-01 13:16:20
          compiled from "/var/www/admin/admin/application/views/template/meau/url.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:171415756359f958a42cfb15-76598700%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-01 14:21:33
+         compiled from "/var/www/admin/admin/application/views/template/meau/url.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:108891156059f967ed8745d6-19922490%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> bb6881c482b01f706298e762aef78ee5fa8d1077
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5040954de9437f19cdfc8354ae08673738db6d4b' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/url.tpl',
+<<<<<<< HEAD
       1 => 1509512564,
+=======
+      1 => 1509517293,
+>>>>>>> bb6881c482b01f706298e762aef78ee5fa8d1077
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509502905,
+      1 => 1509502673,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '171415756359f958a42cfb15-76598700',
+=======
+  'nocache_hash' => '108891156059f967ed8745d6-19922490',
+>>>>>>> bb6881c482b01f706298e762aef78ee5fa8d1077
   'function' => 
   array (
   ),
@@ -35,9 +49,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59f958a441a728_20255312',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59f958a441a728_20255312')) {function content_59f958a441a728_20255312($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59f967ed8c70a7_57596920',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59f967ed8c70a7_57596920')) {function content_59f967ed8c70a7_57596920($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> bb6881c482b01f706298e762aef78ee5fa8d1077
 <html lang="en">
 
 <head>
@@ -143,6 +163,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     .url-a{
         color: #65CEA7;
         display: inline-block;
+    }
+    .alert-modal{
+        z-index: 10000!important;
+    }
+    .alert-container{
+        z-index: 10001!important;
     }
 </style>
 
