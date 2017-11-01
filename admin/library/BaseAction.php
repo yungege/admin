@@ -78,9 +78,8 @@ class BaseAction extends Yaf_Action_Abstract{
     
     // authUrl
     protected function __authUrl(){
-        $rbac = new Rbac_Rbac;
-
         if($this->declareAuthUrl){
+            $rbac = new Rbac_Rbac;
             if(false === $rbac->authUrl()){
                 header(self::RENDER_INTERFACE_HEAD);
                 header('HTTP/1.1 403 Forbidden');
@@ -93,9 +92,12 @@ class BaseAction extends Yaf_Action_Abstract{
             }
         }
 
-        $this->meauInfo['currentId'] = $rbac->getCurrentMeauPid();
-        $this->meauInfo['currentUrl'] = $rbac->uri;
-        $this->meauInfo['myMeau'] = $_SESSION['myMeau'];
+        if(!empty($_SESSION['userInfo'])){
+            $rbac = new Rbac_Rbac;
+            $this->meauInfo['currentId'] = $rbac->getCurrentMeauPid();
+            $this->meauInfo['currentUrl'] = $rbac->uri;
+            $this->meauInfo['myMeau'] = $_SESSION['myMeau'];
+        }
     }
 
     protected function __filterRequestType(){
