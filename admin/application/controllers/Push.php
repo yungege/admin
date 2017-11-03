@@ -4,6 +4,8 @@ class PushController extends Yaf_Controller_Abstract {
 		'user'		=> 'actions/push/User.php',
 		'puser'     => 'actions/push/PUser.php',
 		'app'		=> 'actions/push/App.php',
+		'train'     => 'actions/push/Train.php',
+		'ptrain'     => 'actions/push/PTrain.php',
 		'appnotice'	=> 'actions/push/AppNotice.php',
 		'all'       => 'actions/push/All.php',
 		'pall'      => 'actions/push/PAll.php',

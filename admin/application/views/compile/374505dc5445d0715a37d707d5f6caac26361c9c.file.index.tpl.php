@@ -1,23 +1,33 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-03 09:47:15
          compiled from "/var/www/admin/admin/application/views/template/upload/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11065256959fbcaa3aa3705-64461999%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-03 15:56:32
+         compiled from "/var/www/admin/admin/application/views/template/upload/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:38093969959fc21307e6b15-57400785%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> de8966574036dcd3f647d6400fe71b9831811323
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '374505dc5445d0715a37d707d5f6caac26361c9c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/upload/index.tpl',
-      1 => 1509502905,
+      1 => 1509691557,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509502905,
+      1 => 1509691557,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '11065256959fbcaa3aa3705-64461999',
+=======
+  'nocache_hash' => '38093969959fc21307e6b15-57400785',
+>>>>>>> de8966574036dcd3f647d6400fe71b9831811323
   'function' => 
   array (
   ),
@@ -35,9 +45,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_59fbcaa3bd9e49_90959027',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59fbcaa3bd9e49_90959027')) {function content_59fbcaa3bd9e49_90959027($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_59fc21308d7ae7_96293234',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59fc21308d7ae7_96293234')) {function content_59fc21308d7ae7_96293234($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> de8966574036dcd3f647d6400fe71b9831811323
 <html lang="en">
 
 <head>
