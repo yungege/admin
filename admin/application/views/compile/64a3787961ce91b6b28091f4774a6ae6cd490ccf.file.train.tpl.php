@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-03 15:56:36
-         compiled from "/var/www/admin/admin/application/views/template/upload/outsport.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:28224103359fc2134693688-20504703%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-04 00:08:36
+         compiled from "/var/www/admin/admin/application/views/template/push/train.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:137733689159fc9484da3568-42140310%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '224468b56f7e2163bdd0ed47cbe330534c273483' => 
+    '64a3787961ce91b6b28091f4774a6ae6cd490ccf' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/upload/outsport.tpl',
-      1 => 1509691557,
+      0 => '/var/www/admin/admin/application/views/template/push/train.tpl',
+      1 => 1509723666,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '28224103359fc2134693688-20504703',
+  'nocache_hash' => '137733689159fc9484da3568-42140310',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59fc21347e9725_72572754',
+  'unifunc' => 'content_59fc9485016a31_31684129',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59fc21347e9725_72572754')) {function content_59fc21347e9725_72572754($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59fc9485016a31_31684129')) {function content_59fc9485016a31_31684129($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -164,7 +164,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         width: 60%;
         margin: 0 auto 10px auto;
     }
-    
 </style>
 
 </head>
@@ -381,7 +380,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运营管理 / 上传课外锻炼作业数据
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 推送管理 / 锻炼提醒
                             </li>
                         </ol>
                     </div>
@@ -392,63 +391,85 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
 
 <div class="row">
     <div class="col-lg-12">
-        <form name="upload" enctype="multipart/form-data" action="user" method="post">
+        <form name="push">
 
             <div class="form-group">
-                    <label for="province">所属省份</label>
-                    <select id="province" class="form-control" name="province">
-                        <option value="-1" selected>请选择学校所在省份</option>
-                        <?php  $_smarty_tpl->tpl_vars['provinceName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['provinceName']->_loop = false;
- $_smarty_tpl->tpl_vars['provinceId'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['provinceList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['provinceName']->key => $_smarty_tpl->tpl_vars['provinceName']->value){
-$_smarty_tpl->tpl_vars['provinceName']->_loop = true;
- $_smarty_tpl->tpl_vars['provinceId']->value = $_smarty_tpl->tpl_vars['provinceName']->key;
+                <label for="platform" >推送类型</label>
+                <div >
+                    <select id="type" class="form-control" name="platform">
+                        <option value="">选择类型</option>
+                        <option value="1">个人锻炼提醒</option>
+                        <option value="2">班级锻炼提醒</option>
+                        <option value="3">年级锻炼提醒</option>
+                    </select>
+                </div>
+            </div>
+            <input class="form-control" id="platform" name="type" value="3" type="hidden">
+            <div class="form-group school" style="display: none;">
+                <label for="name">学校ID &nbsp;( 提示 ：多个学校ID通过 &nbsp; | &nbsp; 隔开 )</label>
+                <input type="text" class="form-control" id="schoolIds" name="schoolIds" placeholder="学校ID">
+            </div>
+
+            <div class="row grade" style="display: none">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="grade_apply">适用年级</label>
+                        <select multiple id="grade_apply" class="form-control">
+                            <?php  $_smarty_tpl->tpl_vars['gl'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['gl']->_loop = false;
+ $_smarty_tpl->tpl_vars['idx'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['grade']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['gl']->key => $_smarty_tpl->tpl_vars['gl']->value){
+$_smarty_tpl->tpl_vars['gl']->_loop = true;
+ $_smarty_tpl->tpl_vars['idx']->value = $_smarty_tpl->tpl_vars['gl']->key;
 ?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['provinceId']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['provinceName']->value;?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['idx']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['gl']->value;?>
 </option>
-                        <?php } ?>          
-                    </select>
+                            <?php } ?>
+                        </select>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="city">所在城市</label>
-                    <select id="city" class="form-control" name="city">
-                        <option value="-1" selected>请选择学校所在城市</option>
-                    </select>
+                <div class="col-md-4">
+                    <div class="text-center fx-btn" >
+                        <a id="t-r" href="javascript:void(0)" class="btn btn-sm btn-default" style="margin-top:87px;">添加</a>
+                        <a id="t-l" href="javascript:void(0)" class="btn btn-sm btn-default">删除</a>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="district">所在区</label>
-                    <select id="district" class="form-control" name="district">
-                        <option value="-1" selected>请选择学校所在区</option>
-                    </select>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="grade_apply_select">已选年级</label>
+                        <select multiple class="form-control" id="grade_apply_select">
+                        </select>
+                    </div>
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <label for="school">所在学校</label>
-                    <select id="school" class="form-control" name="school">
-                        <option value="-1" selected>请选择学生所在学校</option>
-                    </select>
-                </div>
+            <div class="form-group class" style="display: none">
+                <label for="vname">班级ID &nbsp; (&nbsp; 提示：多个ClassId通过 &nbsp;&nbsp;| &nbsp;&nbsp; 隔开 &nbsp;)</label>
+                <input type="text" class="form-control" id="classIds" placeholder="班级ID" name="classIds">
+            </div>
 
-            <div class="form-group">
-                <label>活动时间</label>
-                <input readonly="true" data-type="time" name="wtime" type="text" class="form-control wtime date" data-date-format="yyyy-mm-dd" value="<?php echo $_smarty_tpl->tpl_vars['today']->value;?>
-" />
+            <div class="form-group user" style="display: none">
+                <label for="vname">用户ID &nbsp; (&nbsp; 提示：多个UserId通过 &nbsp;&nbsp;| &nbsp;&nbsp; 隔开 &nbsp;)</label>
+                <input type="text" class="form-control" id="userIds" placeholder="用户ID" name="userIds">
             </div>
 
             <div class="form-group">
-                <label for="file"> Excel </label>
-                <input type="file" class="form-control" id="file" name="file">
+                <label for="name">标题</label>
+                <input type="text" class="form-control" id="theme" name="theme" placeholder="标题">
             </div>
 
             <div class="form-group">
-           <!--  <input type="submit" name="submit" value="Submit" /> -->
-            <button id="sub" type="button" class="btn btn-primary">确认提交</button>
+                <label for="desc">内容摘要</label>
+                <textarea id="desc" class="form-control" rows="3" name="desc" placeholder="摘要"></textarea>
             </div>
-            
+
+            <div class="form-group">
+                <label for="editor">详细内容</label>
+                <div id="editor" name="content"></div>
+            </div>
+
+            <button id="sub" type="button" class="btn btn-primary">确认推送</button>
         </form>
     </div>
 </div>
@@ -491,9 +512,9 @@ $_smarty_tpl->tpl_vars['provinceName']->_loop = true;
     </script>
 
     
-
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/static/upload/js/outsport.js"></script>
+<script src="/static/widget/ueditor/ueditor.config.js"></script>
+<script src="/static/widget/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" src="/static/push/js/trainPush.js"></script>
 
 </body>
 </html><?php }} ?>
