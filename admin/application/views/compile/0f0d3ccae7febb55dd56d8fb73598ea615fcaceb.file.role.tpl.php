@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-06 00:00:10
+         compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:179615341859ff358a7f4ed8-70051027%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-06 00:18:28
          compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:112454742759ff39d4077cc7-84229148%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -25,12 +30,16 @@
 >>>>>>> de8966574036dcd3f647d6400fe71b9831811323
 >>>>>>> f05879ea0f3ccd846baf22c42268cc5b20b2449d
 >>>>>>> 7bb838b73c6a1873c623eafd65043ed2bf0b5ab7
+>>>>>>> 5df0f609fadb1c36df8642e5dbe54c133aa6b816
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f0d3ccae7febb55dd56d8fb73598ea615fcaceb' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/role.tpl',
+<<<<<<< HEAD
+      1 => 1509502905,
+=======
 <<<<<<< HEAD
       1 => 1509100237,
 =======
@@ -44,6 +53,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> 6e950577209baaf8381d1fe0a2aa83281a109ead
 >>>>>>> de8966574036dcd3f647d6400fe71b9831811323
 >>>>>>> 7bb838b73c6a1873c623eafd65043ed2bf0b5ab7
+>>>>>>> 5df0f609fadb1c36df8642e5dbe54c133aa6b816
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -52,10 +62,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 5df0f609fadb1c36df8642e5dbe54c133aa6b816
       1 => 1509502905,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
+  'nocache_hash' => '179615341859ff358a7f4ed8-70051027',
+=======
   'nocache_hash' => '36970808059fa82a5a6d028-70952644',
 =======
 <<<<<<< HEAD
@@ -81,6 +97,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> de8966574036dcd3f647d6400fe71b9831811323
 >>>>>>> f05879ea0f3ccd846baf22c42268cc5b20b2449d
 >>>>>>> 7bb838b73c6a1873c623eafd65043ed2bf0b5ab7
+>>>>>>> 5df0f609fadb1c36df8642e5dbe54c133aa6b816
   'function' => 
   array (
   ),
@@ -98,6 +115,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_59ff358a96d630_00784844',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59ff358a96d630_00784844')) {function content_59ff358a96d630_00784844($_smarty_tpl) {?><!DOCTYPE html>
+=======
 <<<<<<< HEAD
   'unifunc' => 'content_59ff39d40efa42_93449001',
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -125,6 +147,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> de8966574036dcd3f647d6400fe71b9831811323
 >>>>>>> f05879ea0f3ccd846baf22c42268cc5b20b2449d
 >>>>>>> 7bb838b73c6a1873c623eafd65043ed2bf0b5ab7
+>>>>>>> 5df0f609fadb1c36df8642e5dbe54c133aa6b816
 <html lang="en">
 
 <head>

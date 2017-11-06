@@ -230,6 +230,16 @@ class Service_User_AddUgcModel extends BasePageService {
             throw new Exception("参数有误", -1);
         }
 
+        $where = [
+            'starttime' => (int)strtotime($req['wtime'].' 08:00:00'),
+            'train_name' => $req['train_name'],
+            'userid' => $req['uid'],
+        ];
+        $query = $this->trainDoneOutsideModel->query($where);
+        if(!empty($query)){
+            return;
+        }
+
         $workData['train_name'] = $req['train_name'];
         $workData['start_time'] = (int)strtotime($req['wtime'] . '00:00:00');
         $workData['end_time'] = (int)strtotime($req['wtime'].' 23:59:59');

@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-03 09:47:14
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-06 10:05:48
          compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:191246097959fbcaa2580641-76647084%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-03 15:56:35
-         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1979076559fc2133b45726-46539009%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> de8966574036dcd3f647d6400fe71b9831811323
+<?php /*%%SmartyHeaderCode:75203397759ffc37c863d17-62284117%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -23,11 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '191246097959fbcaa2580641-76647084',
-=======
-  'nocache_hash' => '1979076559fc2133b45726-46539009',
->>>>>>> de8966574036dcd3f647d6400fe71b9831811323
+  'nocache_hash' => '75203397759ffc37c863d17-62284117',
   'function' => 
   array (
   ),
@@ -45,15 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59fbcaa26dae80_84231765',
+  'unifunc' => 'content_59ffc37c94f527_26273564',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59fbcaa26dae80_84231765')) {function content_59fbcaa26dae80_84231765($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_59fc2133c00205_75101962',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59fc2133c00205_75101962')) {function content_59fc2133c00205_75101962($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> de8966574036dcd3f647d6400fe71b9831811323
+<?php if ($_valid && !is_callable('content_59ffc37c94f527_26273564')) {function content_59ffc37c94f527_26273564($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
