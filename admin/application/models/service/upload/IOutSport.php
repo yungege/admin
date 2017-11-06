@@ -90,6 +90,17 @@ class Service_Upload_IOutSportModel extends BasePageService {
                 continue;
             }
 
+            $where = [
+                'starttime' => (int)strtotime($this->startTime . '08:00:00'),
+                'train_name' => $data[2],
+                'userid' => (string)$this->userData['_id'],
+            ];
+
+            $query = $this->trainDoneOutsideModel->query($where);
+            if(!empty($query)){
+                continue;
+            }
+
             $workData['train_name'] = $data[2];
             $workData['start_time'] = (int)strtotime($this->startTime . '00:00:00');
             $workData['end_time'] = (int)strtotime($this->startTime . '23:59:59');
