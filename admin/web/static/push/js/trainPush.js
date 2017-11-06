@@ -101,7 +101,7 @@ $(function(){
                         }
                         else{
                             alert('推送成功.');
-                            window.location = '/push/grade';
+                            window.location = '/push/train';
                         }
                 });
             });
