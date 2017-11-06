@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-04 00:08:36
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-06 01:05:11
          compiled from "/var/www/admin/admin/application/views/template/push/train.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:137733689159fc9484da3568-42140310%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11286819059ff44c71232b7-80598992%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '64a3787961ce91b6b28091f4774a6ae6cd490ccf' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/train.tpl',
-      1 => 1509723666,
+      1 => 1509899515,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '137733689159fc9484da3568-42140310',
+  'nocache_hash' => '11286819059ff44c71232b7-80598992',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59fc9485016a31_31684129',
+  'unifunc' => 'content_59ff44c71f3239_16616287',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59fc9485016a31_31684129')) {function content_59fc9485016a31_31684129($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59ff44c71f3239_16616287')) {function content_59ff44c71f3239_16616287($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -461,7 +461,7 @@ $_smarty_tpl->tpl_vars['gl']->_loop = true;
 
             <div class="form-group">
                 <label for="desc">内容摘要</label>
-                <textarea id="desc" class="form-control" rows="3" name="desc" placeholder="摘要"></textarea>
+                <textarea id="desc" class="form-control" rows="3" name="description" placeholder="摘要"></textarea>
             </div>
 
             <div class="form-group">

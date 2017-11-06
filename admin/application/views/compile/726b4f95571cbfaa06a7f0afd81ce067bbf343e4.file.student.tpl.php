@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-03 15:33:52
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-06 01:25:47
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:145112218659fc1be041e1a6-25129381%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:102810294859ff499b04ac73-78357685%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-      1 => 1509691557,
+      1 => 1509902662,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '145112218659fc1be041e1a6-25129381',
+  'nocache_hash' => '102810294859ff499b04ac73-78357685',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59fc1be0514f84_71022316',
+  'unifunc' => 'content_59ff499b229677_57168722',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59fc1be0514f84_71022316')) {function content_59fc1be0514f84_71022316($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_59ff499b229677_57168722')) {function content_59ff499b229677_57168722($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -950,6 +950,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             var me = this,
                 aj = null;
             me.subBtn.unbind().bind('click', function(){
+                me.subBtn.attr('disabled','disabled');
                 var uid = $.trim($(this).data('uid')),
                     cid = $.trim($(this).data('cid'));
 
