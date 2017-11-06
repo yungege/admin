@@ -53,21 +53,30 @@ $(function(){
                     me.gradeDiv.show();
                     me.userDiv.hide();
                     me.classDiv.hide();
+                    me.user.val("");
+                    me.class.val("");
                 }else if(type == 2){
                     me.classDiv.show();
                     me.schoolDiv.hide();
                     me.gradeDiv.hide();
                     me.userDiv.hide();
+                    me.user.val("");
+                    me.school.val("");
                 }else if(type == 1){
                     me.userDiv.show();
                     me.schoolDiv.hide();
                     me.gradeDiv.hide();
                     me.classDiv.hide();
+                    me.class.val("");
+                    me.school.val("");
                 }else{
                     me.schoolDiv.hide();
                     me.gradeDiv.hide();
                     me.classDiv.hide();
                     me.userDiv.hide();
+                    me.class.val("");
+                    me.school.val("");
+                    me.user.val("");
                 }
             });
         },
@@ -86,16 +95,13 @@ $(function(){
                     '/push/ptrain', data + '&grade=' + gids, 
                     function(json){
 
-                        alert(json);
-                        return false;
-
                         if(json.errCode != 0){
                             alert(json.errMessage ? json.errMessage : '推送失败！');
                             return false;
                         }
                         else{
                             alert('推送成功.');
-                            window.location = '/push/grade';
+                            window.location = '/push/train';
                         }
                 });
             });

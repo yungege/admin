@@ -116,7 +116,7 @@
 
             <div class="form-group">
                 <label for="desc">内容摘要</label>
-                <textarea id="desc" class="form-control" rows="3" name="desc" placeholder="摘要"></textarea>
+                <textarea id="desc" class="form-control" rows="3" name="description" placeholder="摘要"></textarea>
             </div>
 
             <div class="form-group">

@@ -31,22 +31,25 @@ class Service_Push_PTrainModel extends BasePageService {
 
 	protected function __execute($req){
 
-		$req = $req['post'];
-		if($req['platform'] == 1){
-			$this->userPush($req['post']);
-		}elseif($req['platform'] == 2){
-			$this->classPush($req['post']);
-		}elseif($req['platform'] == 3){
-			$this->radePush($req['post']);
+		$post = $req['post'];
+
+		if($post['platform'] == 1){
+			$this->userPush($req);
+		}elseif($post['platform'] == 2){
+			$this->classPush($req);
+		}elseif($post['platform'] == 3){
+			$this->gradePush($req);
 		}else{
+			
 			$this->errNo = REQUEST_PARAMS_ERROR;
 			return false;
 		}
 	}
 
 	protected function gradePush($req){
+
 		$req = $req['post'];
-		if(empty($req['theme']) || empty($req['desc']) || empty($req['schoolIds']) || empty($req['grade']) || empty($req['content']) || empty($req['type'])){
+		if(empty($req['theme']) || empty($req['description']) || empty($req['schoolIds']) || empty($req['grade']) || empty($req['content']) || empty($req['type'])){
 			
 			$this->errNo = REQUEST_PARAMS_ERROR;
 			return false;
@@ -55,7 +58,7 @@ class Service_Push_PTrainModel extends BasePageService {
 		$this->schoolIds = explode('|', $req['schoolIds']);
 		$this->type = (int)$req['type'];
 		$this->theme = trim($req['theme']);
-		$this->desc = trim($req['desc']);
+		$this->desc = trim($req['description']);
 		$this->content = trim($req['content']);
 		$this->desc = str_replace("\r\n","",$this->desc);
 		$this->content = str_replace("\r\r","",$this->content);
@@ -206,6 +209,7 @@ class Service_Push_PTrainModel extends BasePageService {
 	}
 
 	protected function userPush($req){
+
 		$req = $req['post'];
 		if(empty($req['theme']) || empty($req['description']) || empty($req['userIds']) || empty($req['content']) || empty($req['type'])){
 
