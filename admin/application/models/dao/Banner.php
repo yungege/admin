@@ -7,6 +7,7 @@ class Dao_BannerModel extends Db_Mongodb {
     protected $table = 'banner';
 
     protected $fields = [
+        'type'  => 1,             // 1锻炼首页 2运动圈
         'title' => '',            // 标题
         'creator' => '',          // 创建者
         'createtime' => 0,        // 创建时间
