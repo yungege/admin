@@ -384,7 +384,7 @@ class Service_Stat_ContristModel extends BasePageService {
 
         $where = [
             'htype' => [
-                '$in' => [1,2,3],
+                '$in' => [1,2,3,4],
             ],
             'originaltime' => [
                 '$gte' => $this->map['time']['start'],
