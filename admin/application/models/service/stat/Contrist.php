@@ -291,8 +291,6 @@ class Service_Stat_ContristModel extends BasePageService {
         ];
 
         $list = $this->trainModel->aggregate($aggregate);
-        $list1 = json_encode($list);
-        file_put_contents('/data/aa.txt',json_encode($where));
         $this->resData['trainCount'] = 0;
         $this->resData['trainTime'] = 0;
         $this->resData['trainCal'] = 0;
