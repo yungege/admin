@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-06 09:49:16
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 13:18:04
          compiled from "/var/www/admin/admin/application/views/template/user/school.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:144268903159ffbf9c2e7f24-27684631%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:12750452385a03e50c9cbef4-56556085%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509502905,
+      1 => 1510105563,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '144268903159ffbf9c2e7f24-27684631',
+  'nocache_hash' => '12750452385a03e50c9cbef4-56556085',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59ffbf9c431334_64910906',
+  'unifunc' => 'content_5a03e50cb30de0_34072001',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ffbf9c431334_64910906')) {function content_59ffbf9c431334_64910906($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a03e50cb30de0_34072001')) {function content_5a03e50cb30de0_34072001($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -458,7 +458,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
                 <!-- footer -->
                 <footer class="text-center">
-                    ©2017 北京天天向尚信息科技发展有限公司 All Rights Resrverd
+                    ©2017 北京天天向尚信息科技有限公司 All Rights Resrverd
                 </footer>
             </div>
         </div>
