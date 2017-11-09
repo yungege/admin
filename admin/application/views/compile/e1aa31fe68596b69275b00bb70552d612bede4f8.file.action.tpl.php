@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 09:13:24
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 14:11:46
          compiled from "/var/www/admin/admin/application/views/template/sport/action.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2898437905a03abb4a53148-89273201%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16924391355a03f1a224bf24-42837859%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e1aa31fe68596b69275b00bb70552d612bede4f8' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/action.tpl',
-      1 => 1509691557,
+      1 => 1509502905,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509691557,
+      1 => 1510105563,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2898437905a03abb4a53148-89273201',
+  'nocache_hash' => '16924391355a03f1a224bf24-42837859',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a03abb4b113b7_62309916',
+  'unifunc' => 'content_5a03f1a23c9f97_98033967',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a03abb4b113b7_62309916')) {function content_5a03abb4b113b7_62309916($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a03f1a23c9f97_98033967')) {function content_5a03f1a23c9f97_98033967($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -471,7 +471,7 @@ $_smarty_tpl->tpl_vars['fid']->_loop = true;
 
                 <!-- footer -->
                 <footer class="text-center">
-                    ©2017 北京天天向尚信息科技发展有限公司 All Rights Resrverd
+                    ©2017 北京天天向尚信息科技有限公司 All Rights Resrverd
                 </footer>
             </div>
         </div>
