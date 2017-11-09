@@ -305,7 +305,7 @@ class Service_Stat_ContristModel extends BasePageService {
                 $this->resData['trainCal'] += (float)sprintf('%.2f', $row['burncalorie']);
                 $thisUserDoneNum = 0;
                 foreach ($row['htype'] as $htype) {
-                    if($htype == 2){
+                    if($htype == 2 || $htype == 4){
                         $thisUserDoneNum += 1;
                     }
                 }
