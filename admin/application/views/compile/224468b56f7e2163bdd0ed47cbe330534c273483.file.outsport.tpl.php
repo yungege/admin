@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-08 17:01:58
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 13:22:54
          compiled from "/var/www/admin/admin/application/views/template/upload/outsport.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1563838475a02c8069f3c39-14410689%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-08 09:18:01
-         compiled from "/var/www/admin/admin/application/views/template/upload/outsport.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3928104415a025b49d1e3c0-25298194%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 5663f01ce1a28bad14a9ccf48703dc5114927cb5
+<?php /*%%SmartyHeaderCode:2995890995a03e62ed26218-64193507%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -19,15 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509502905,
+      1 => 1510105563,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '1563838475a02c8069f3c39-14410689',
-=======
-  'nocache_hash' => '3928104415a025b49d1e3c0-25298194',
->>>>>>> 5663f01ce1a28bad14a9ccf48703dc5114927cb5
+  'nocache_hash' => '2995890995a03e62ed26218-64193507',
   'function' => 
   array (
   ),
@@ -45,15 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a02c806a9b173_99065516',
+  'unifunc' => 'content_5a03e62ee6b880_65966349',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a02c806a9b173_99065516')) {function content_5a02c806a9b173_99065516($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5a025b49e651c0_06875973',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a025b49e651c0_06875973')) {function content_5a025b49e651c0_06875973($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 5663f01ce1a28bad14a9ccf48703dc5114927cb5
+<?php if ($_valid && !is_callable('content_5a03e62ee6b880_65966349')) {function content_5a03e62ee6b880_65966349($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -481,7 +465,7 @@ $_smarty_tpl->tpl_vars['provinceName']->_loop = true;
 
                 <!-- footer -->
                 <footer class="text-center">
-                    ©2017 北京天天向尚信息科技发展有限公司 All Rights Resrverd
+                    ©2017 北京天天向尚信息科技有限公司 All Rights Resrverd
                 </footer>
             </div>
         </div>

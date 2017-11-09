@@ -1,33 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-06 13:05:32
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 13:24:57
          compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:184218539659ffed9caa7772-39430028%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-08 09:43:43
-         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:4254251115a02614f69c7c5-80742154%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 5663f01ce1a28bad14a9ccf48703dc5114927cb5
+<?php /*%%SmartyHeaderCode:11410954535a03e6a9b3e620-31472577%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '92c948c733c4e7edc2354b1f8aeea4204980b0e2' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/banner.tpl',
-      1 => 1509080121,
+      1 => 1509502905,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509502673,
+      1 => 1510105563,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '184218539659ffed9caa7772-39430028',
-=======
-  'nocache_hash' => '4254251115a02614f69c7c5-80742154',
->>>>>>> 5663f01ce1a28bad14a9ccf48703dc5114927cb5
+  'nocache_hash' => '11410954535a03e6a9b3e620-31472577',
   'function' => 
   array (
   ),
@@ -45,15 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_59ffed9cba86a8_67690238',
+  'unifunc' => 'content_5a03e6a9c98461_39595044',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ffed9cba86a8_67690238')) {function content_59ffed9cba86a8_67690238($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5a02614f788ae0_94063808',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a02614f788ae0_94063808')) {function content_5a02614f788ae0_94063808($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 5663f01ce1a28bad14a9ccf48703dc5114927cb5
+<?php if ($_valid && !is_callable('content_5a03e6a9c98461_39595044')) {function content_5a03e6a9c98461_39595044($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -564,7 +548,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
                 <!-- footer -->
                 <footer class="text-center">
-                    ©2017 北京天天向尚信息科技发展有限公司 All Rights Resrverd
+                    ©2017 北京天天向尚信息科技有限公司 All Rights Resrverd
                 </footer>
             </div>
         </div>
