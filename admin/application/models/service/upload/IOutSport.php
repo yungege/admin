@@ -110,7 +110,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
 
             $trainSchool['homework_id'] = (string)$workId;
             $trainSchool['school_name'] = $data[5];
-            $trainSchool['mobile'] = $data[7];
+            $trainSchool['mobile'] = (int)$data[7];
             $trainSchool['link_man'] = $data[8];
             $this->trainSchoolModel->insert($trainSchool);
 
