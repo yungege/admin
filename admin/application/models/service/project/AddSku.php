@@ -10,9 +10,10 @@ class Service_Project_AddSkuModel extends BasePageService {
         
     ];
     public static $difficultyArr = [
-        0 => '低',
-        1 => '中',
-        2 => '高',
+        '-1' => '无难度',
+        '0'  => '低',
+        '1'  => '中',
+        '2'  => '高',
     ];
     protected $pid;
     protected $projectInfo;
@@ -48,7 +49,7 @@ class Service_Project_AddSkuModel extends BasePageService {
             throw new Exception('', REQUEST_PARAMS_ERROR);
         }
 
-        $proInfo = $this->projectModel->getInfoById($req['project_id'], ['_id']);
+        $proInfo = $this->projectModel->getInfoById($req['project_id'], ['_id','name','type']);
         if(empty($proInfo)){
             throw new Exception('', RESOURCE_NOT_EXISTS);
         }
@@ -105,6 +106,8 @@ class Service_Project_AddSkuModel extends BasePageService {
         $req['calorie_cost'] = (float)$calorie;
         $req['action_count'] = (int)$actionCount;
         $req['difficulty'] = (int)$req['difficulty'];
+        $req['project_name'] = $proInfo['name'];
+        $req['type'] = (int)$proInfo['type'];
 
         unset($req['actionList']);
     }

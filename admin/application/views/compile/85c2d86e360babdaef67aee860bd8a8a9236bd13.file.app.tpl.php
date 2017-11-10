@@ -1,23 +1,37 @@
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-08 09:50:22
+         compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:12524292085a0262dea94412-28193411%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 14:10:51
          compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2732617325a03f16ba76fd2-69732123%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '85c2d86e360babdaef67aee860bd8a8a9236bd13' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/app.tpl',
-      1 => 1509502905,
+      1 => 1509080121,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
+      1 => 1510105483,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '12524292085a0262dea94412-28193411',
+=======
       1 => 1510105563,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '2732617325a03f16ba76fd2-69732123',
+>>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
   'function' => 
   array (
   ),
@@ -35,9 +49,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_5a0262debcaa73_56822815',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a0262debcaa73_56822815')) {function content_5a0262debcaa73_56822815($_smarty_tpl) {?><!DOCTYPE html>
+=======
   'unifunc' => 'content_5a03f16bbafd27_23358310',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a03f16bbafd27_23358310')) {function content_5a03f16bbafd27_23358310($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
 <html lang="en">
 
 <head>

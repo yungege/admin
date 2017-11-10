@@ -60,13 +60,16 @@
                     <label for="ftype">检测项目</label>
                     <select id="ftype" class="form-control" name="physicalquality">
                         <option value="-1">无</option>
-                        <option value="0">耐力素质</option>
+                        {%foreach from=$category item=row%}
+                            <option value="{%$row._id%}">{%$row.category_name%}</option>
+                        {%/foreach%}
+                        <!-- <option value="0">耐力素质</option>
                         <option value="1">上肢力量</option>
                         <option value="2">腹肌耐力</option>
                         <option value="3">柔韧素质</option>
                         <option value="4">速度素质</option>
                         <option value="5">下肢力量</option>
-                        <option value="6">综合素质</option>
+                        <option value="6">综合素质</option> -->
                     </select>
                 </div>
 

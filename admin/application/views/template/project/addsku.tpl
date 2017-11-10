@@ -160,7 +160,7 @@
                     {%if $project.has_level eq -1%}
                     <option value="-1">无难度级别</option>
                     {%else%}
-                        <option value="-1">请选择难度级别</option>
+                        <option value="-2">请选择难度级别</option>
                         {%foreach from=$project.difficultyVal item=darr%}
                             <option value="{%$darr%}">{%$project.difficultyArr.$darr%}</option>
                         {%/foreach%}

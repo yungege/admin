@@ -217,8 +217,8 @@ $(function(){
                     var actionId = $(this).val(),
                         actionType = $(this).attr('actiontype'),
                         actionCount = $(this).attr('groupno');
-                    if(actionType == 0 && actionCount <= 0){
-                        return false;
+                    if(actionType != 4 && actionCount == 0){
+                        return true;
                     }
                     else{
                         actionItem = {
@@ -238,7 +238,7 @@ $(function(){
                 var difficulty = $('select[name=difficulty]').val(),
                     projectId = $('input[name=project_id]').val();
 
-                if(difficulty == -1){
+                if(difficulty == -2){
                     me.alertMsg('请选择难度级别.', 'dialog5');
                     return false;
                 }
@@ -252,7 +252,8 @@ $(function(){
                         window.location = '/sport/p/'+projectId+'.html';
                     }
                     else{
-
+                        me.alertMsg(json.errMessage);
+                        return false;
                     }
                 });
                 
