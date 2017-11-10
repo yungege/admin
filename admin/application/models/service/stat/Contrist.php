@@ -6,6 +6,7 @@ class Service_Stat_ContristModel extends BasePageService {
     protected $userModel;
     protected $trainModel;
     protected $tcModel;
+    protected $type;
 
     protected $resData;
     public $map = [];
@@ -35,7 +36,7 @@ class Service_Stat_ContristModel extends BasePageService {
         $this->school       = Dao_SchoolinfoModel::getInstance();
         $this->class        = Dao_ClassinfoModel::getInstance();
         $this->userModel    = Dao_UserModel::getInstance();
-        $this->trainModel   = Dao_TrainingdoneModel::getInstance();
+        //$this->trainModel   = Dao_TrainingdoneModel::getInstance();
         $this->tcModel      = Dao_PhysicalfitnesstestModel::getInstance();
     }
 
@@ -72,6 +73,14 @@ class Service_Stat_ContristModel extends BasePageService {
         // [source] => 1 2 3
 
         $req = $req['get'];
+
+        if($req['type'] == 1){
+            $this->trainModel   = Dao_TrainingdoneModel::getInstance();
+            $this->type = 1;
+        }else{
+            $this->trainModel   = Dao_TrainingDoneOutsideModel::getInstance();
+            $this->type = 2;
+        }
 
         // 学校
         if(isset($req['province']) && $req['province'] != -1 && preg_match("/\w+/", $req['province'])){
@@ -242,12 +251,20 @@ class Service_Stat_ContristModel extends BasePageService {
                 '$lte' => $this->map['time']['end'],
             ],
             'htype' => [
-                '$in' => [1,2,3],
+                '$in' => [1,2,3,4],
             ],
             'userid' => [
                 '$in' => $this->userlist,
             ],
         ];
+
+        if($this->type == 2){
+            unset($where['originaltime']);
+            $where['starttime'] = [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ];
+        }
 
         $fields = [
             '$project' => [
@@ -288,7 +305,7 @@ class Service_Stat_ContristModel extends BasePageService {
                 $this->resData['trainCal'] += (float)sprintf('%.2f', $row['burncalorie']);
                 $thisUserDoneNum = 0;
                 foreach ($row['htype'] as $htype) {
-                    if($htype == 2){
+                    if($htype == 2 || $htype == 4){
                         $thisUserDoneNum += 1;
                     }
                 }
@@ -365,7 +382,7 @@ class Service_Stat_ContristModel extends BasePageService {
 
         $where = [
             'htype' => [
-                '$in' => [1,2,3],
+                '$in' => [1,2,3,4],
             ],
             'originaltime' => [
                 '$gte' => $this->map['time']['start'],
@@ -375,6 +392,14 @@ class Service_Stat_ContristModel extends BasePageService {
                 '$in' => $this->userlist,
             ],
         ];
+
+        if($this->type == 2){
+            unset($where['originaltime']);
+            $where['starttime'] = [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ];
+        }
 
         $fields = [
             '$project' => [
@@ -681,13 +706,21 @@ class Service_Stat_ContristModel extends BasePageService {
     protected function getTrainData(&$format){
         $where = [
             'htype' => [
-                '$in' => [1,2,3],
+                '$in' => [1,2,3,4],
             ],
             'originaltime' => [
                 '$gte' => $this->map['time']['start'],
                 '$lte' => $this->map['time']['end'],
             ],
         ];
+
+        if($this->type == 2){
+            unset($where['originaltime']);
+            $where['starttime'] = [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ];
+        }
 
         $fields = [
             '$project' => [

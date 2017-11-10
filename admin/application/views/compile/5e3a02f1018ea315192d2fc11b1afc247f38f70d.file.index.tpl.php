@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-01 12:46:28
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 14:11:05
          compiled from "/var/www/admin/admin/application/views/template/version/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:162448950459f951a4a81a92-49550560%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:18271225405a03f17903a377-33245321%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509502905,
+      1 => 1510105563,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '162448950459f951a4a81a92-49550560',
+  'nocache_hash' => '18271225405a03f17903a377-33245321',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59f951a4bd8303_93872395',
+  'unifunc' => 'content_5a03f17919d656_65802959',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f951a4bd8303_93872395')) {function content_59f951a4bd8303_93872395($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a03f17919d656_65802959')) {function content_5a03f17919d656_65802959($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -426,7 +426,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
                 <!-- footer -->
                 <footer class="text-center">
-                    ©2017 北京天天向尚信息科技发展有限公司 All Rights Resrverd
+                    ©2017 北京天天向尚信息科技有限公司 All Rights Resrverd
                 </footer>
             </div>
         </div>
