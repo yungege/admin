@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-02 10:27:28
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-08 09:49:44
          compiled from "/var/www/admin/admin/application/views/template/meau/allotrole.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:157238775559fa8290387547-86623267%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:14096408005a0262b8899ff2-99035928%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3311c0c2786c889da25c3b328a8b44e29a54f2ff' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/allotrole.tpl',
-      1 => 1509502905,
+      1 => 1509437319,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509502905,
+      1 => 1510105483,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '157238775559fa8290387547-86623267',
+  'nocache_hash' => '14096408005a0262b8899ff2-99035928',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59fa82904cc1d9_07182233',
+  'unifunc' => 'content_5a0262b89fa596_87259723',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59fa82904cc1d9_07182233')) {function content_59fa82904cc1d9_07182233($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a0262b89fa596_87259723')) {function content_5a0262b89fa596_87259723($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -387,7 +387,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
                 <!-- footer -->
                 <footer class="text-center">
-                    ©2017 北京天天向尚信息科技发展有限公司 All Rights Resrverd
+                    ©2017 北京天天向尚信息科技有限公司 All Rights Resrverd
                 </footer>
             </div>
         </div>

@@ -50,7 +50,8 @@ class Service_Action_InsertModel extends BasePageService {
             (!is_numeric($req['singletime']) || $req['singletime'] < 0) ||
             (!is_numeric($req['calorie']) || $req['calorie'] < 0) ||
             (!preg_match($urlPreg, $req['coverimg'])) || 
-            (!preg_match($urlPreg, $req['video']))
+            (!preg_match($urlPreg, $req['video'])) ||
+            (!preg_match("/[0-9a-z]{24}/", $req['physicalquality']))
         ){
             $this->errNo = REQUEST_PARAMS_ERROR;
             return false;
@@ -72,15 +73,19 @@ class Service_Action_InsertModel extends BasePageService {
             $req['vfilesize'] = number_format(($req['vfilesize']/1024/1024), 2, '.', '');
         }
 
-        if(
-            isset($req['physicalquality']) && 
-            isset(Dao_ExerciseactionModel::$physicalquality[$req['physicalquality']])
-        ){
-            $req['physicalquality'] = (int)$req['physicalquality'];
+        if(!preg_match("/[0-9a-z]{24}/", subject)){
+
         }
-        else{
-            $req['physicalquality'] = null;
-        }
+
+        // if(
+        //     isset($req['physicalquality']) && 
+        //     isset(Dao_ExerciseactionModel::$physicalquality[$req['physicalquality']])
+        // ){
+        //     $req['physicalquality'] = (int)$req['physicalquality'];
+        // }
+        // else{
+        //     $req['physicalquality'] = null;
+        // }
 
         $req = [
             'name'       => $req['name'],
@@ -92,7 +97,8 @@ class Service_Action_InsertModel extends BasePageService {
             'coverimg'   => $req['coverimg'],
             'video'      => $req['video'],
             'vfilesize'  => (float)$req['vfilesize'],
-            'physicalquality' => $req['physicalquality'],
+            // 'physicalquality' => $req['physicalquality'],
+            'category_id'   => (string)$req['physicalquality'],
             'createtime'  => time(),
         ];
     }
