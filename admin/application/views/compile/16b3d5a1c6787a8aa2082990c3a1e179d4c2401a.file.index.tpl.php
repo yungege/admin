@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-07 14:03:25
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-08 09:51:05
          compiled from "/var/www/admin/admin/application/views/template/feedback/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9701521355a014cad77e700-04074456%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3187915195a026309aad4f9-33843568%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '16b3d5a1c6787a8aa2082990c3a1e179d4c2401a' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/feedback/index.tpl',
-      1 => 1509502905,
+      1 => 1509080121,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509502905,
+      1 => 1510105483,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9701521355a014cad77e700-04074456',
+  'nocache_hash' => '3187915195a026309aad4f9-33843568',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a014cad8d53f9_97323624',
+  'unifunc' => 'content_5a026309b0a7f1_51650631',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a014cad8d53f9_97323624')) {function content_5a014cad8d53f9_97323624($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a026309b0a7f1_51650631')) {function content_5a026309b0a7f1_51650631($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -408,7 +408,7 @@ $_smarty_tpl->tpl_vars['par']->_loop = true;
 
                 <!-- footer -->
                 <footer class="text-center">
-                    ©2017 北京天天向尚信息科技发展有限公司 All Rights Resrverd
+                    ©2017 北京天天向尚信息科技有限公司 All Rights Resrverd
                 </footer>
             </div>
         </div>

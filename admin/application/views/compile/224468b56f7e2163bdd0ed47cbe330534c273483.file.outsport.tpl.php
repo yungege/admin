@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-08 09:18:01
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-08 09:51:07
          compiled from "/var/www/admin/admin/application/views/template/upload/outsport.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3928104415a025b49d1e3c0-25298194%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16752274745a02630b8ff766-33587016%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '224468b56f7e2163bdd0ed47cbe330534c273483' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/upload/outsport.tpl',
-      1 => 1509502905,
+      1 => 1509080121,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509502905,
+      1 => 1510105483,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3928104415a025b49d1e3c0-25298194',
+  'nocache_hash' => '16752274745a02630b8ff766-33587016',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a025b49e651c0_06875973',
+  'unifunc' => 'content_5a02630b94bd46_27647179',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a025b49e651c0_06875973')) {function content_5a025b49e651c0_06875973($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a02630b94bd46_27647179')) {function content_5a02630b94bd46_27647179($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -465,7 +465,7 @@ $_smarty_tpl->tpl_vars['provinceName']->_loop = true;
 
                 <!-- footer -->
                 <footer class="text-center">
-                    ©2017 北京天天向尚信息科技发展有限公司 All Rights Resrverd
+                    ©2017 北京天天向尚信息科技有限公司 All Rights Resrverd
                 </footer>
             </div>
         </div>

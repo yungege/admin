@@ -60,7 +60,7 @@ class BaseAction extends Yaf_Action_Abstract{
 
             $this->__authUrl();
 
-            $this->__pageService(); 
+            $this->__pageService();
         }catch(Exception $e){
 
         }
@@ -82,13 +82,13 @@ class BaseAction extends Yaf_Action_Abstract{
             $rbac = new Rbac_Rbac;
             if(false === $rbac->authUrl()){
                 header(self::RENDER_INTERFACE_HEAD);
-                header('HTTP/1.1 403 Forbidden');
+                // header('HTTP/1.1 403 Forbidden');
                 $this->res = [
                     'errCode' => USER_ACCESS_ERROR,
                     'errMessage' => 'Auth Access Failed. Please Mail To 422909231@qq.com.',
                     'data' => null,
                 ];
-                exit(json_encode($this->res));
+                die(json_encode($this->res));
             }
         }
 

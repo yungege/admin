@@ -14,6 +14,7 @@ class Dao_ExerciseProjectModel extends Db_Mongodb {
         'grade_apply'       => [], // 适用年级
         'status'            => 1,  // 1-正常 -9-删除
         'has_level'         => 1,  // 是否区分难度：1-有 -1-无
+        'type'              => 0,  // 1室内 2户外
     ];
 
     protected function __construct(){

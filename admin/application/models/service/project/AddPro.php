@@ -8,6 +8,16 @@ class Service_Project_AddProModel extends BasePageService {
         'jpg','png','jpeg',
     ];
 
+    public static $type = [
+        1 => '室内',
+        2 => '户外',
+    ];
+
+    public static $level = [
+        '1'     => '有难度区分',
+        '-1'    => '无难度区分',
+    ];
+
     protected $resData = [
         
     ];
@@ -43,7 +53,8 @@ class Service_Project_AddProModel extends BasePageService {
             (empty($req['name']) || mb_strlen($req['name']) > 16) ||
             (!isset(Dao_ExerciseactionModel::$sex[$req['gender']])) ||
             (!preg_match($urlPreg, $req['coverimg'])) ||
-            (!in_array($req['has_level'], [1,-1]))
+            (!isset(self::$level[$req['has_level']])) ||
+            (!isset(self::$type[$req['pro-type']]))
         ){
             $this->errNo = REQUEST_PARAMS_ERROR;
             return false;
@@ -79,6 +90,7 @@ class Service_Project_AddProModel extends BasePageService {
             'has_level'   => (int)$req['has_level'],
             'grade_apply' => $req['grade_apply'],
             'ctime'       => time(),
+            'type'        => (int)$req['pro-type'],
         ];
     }
     
