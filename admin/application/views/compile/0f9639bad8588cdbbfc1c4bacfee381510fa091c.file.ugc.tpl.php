@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-13 14:43:43
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:10408370045a093f1fb73149-67740295%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-10 14:18:36
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18469776105a0544bc334901-72927756%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -25,12 +30,16 @@
 >>>>>>> 04e91c14135f75e1885684934b07b9f36bd1415d
 >>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
 >>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
+>>>>>>> 794724e41293b9d274f620dcd55624b1de2491b7
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
+<<<<<<< HEAD
+      1 => 1510555342,
+=======
 <<<<<<< HEAD
       1 => 1509502905,
 =======
@@ -40,6 +49,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       1 => 1509691557,
 >>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
 >>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
+>>>>>>> 794724e41293b9d274f620dcd55624b1de2491b7
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -64,6 +74,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ),
   ),
 <<<<<<< HEAD
+  'nocache_hash' => '10408370045a093f1fb73149-67740295',
+=======
+<<<<<<< HEAD
   'nocache_hash' => '4554040515a03f17bc16849-61370791',
 =======
 <<<<<<< HEAD
@@ -74,6 +87,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> 04e91c14135f75e1885684934b07b9f36bd1415d
 >>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
 >>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
+>>>>>>> 794724e41293b9d274f620dcd55624b1de2491b7
   'function' => 
   array (
   ),
@@ -91,6 +105,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_5a093f1fc69fe9_62223294',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a093f1fc69fe9_62223294')) {function content_5a093f1fc69fe9_62223294($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
 <<<<<<< HEAD
   'unifunc' => 'content_5a0544bc518141_28028400',
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -118,6 +137,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> 04e91c14135f75e1885684934b07b9f36bd1415d
 >>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
 >>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
+>>>>>>> 794724e41293b9d274f620dcd55624b1de2491b7
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -257,7 +277,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     width:500px;
     height:300px;
 }
-
+.item{
+    width: 500px;
+}
+.carousel-inner{
+    height:300px;
+    width:500px;
+}
 
 }
 </style>
@@ -695,10 +721,24 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 <div id="imgBox">
                     <div id="imgBoxInner">
 
+                        <div id="myCarousel" class="carousel slide">
+                            <!-- 轮播（Carousel）指标 -->
+                            <ol class="carousel-indicators">
+                              
+                            </ol>  
+                            <!-- 轮播（Carousel）项目 -->
+                            <div class="carousel-inner">
+                                
+                            </div>
+                            
+                        </div>
+
                     </div>
                 </div>               
             </div>   
-            <br>           
+                  
+            <br>
+
             <div class="inner-btn-picture">
                 <button id="subReturn" type="button" class="btn btn-primary">返回</button>
             </div>
