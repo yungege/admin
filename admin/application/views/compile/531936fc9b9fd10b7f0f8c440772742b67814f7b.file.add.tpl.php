@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-01 11:42:21
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 15:37:25
          compiled from "/var/www/admin/admin/application/views/template/action/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:114550887059f9429d7e6e56-41560738%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1618128455a0405b5c4ea24-50013626%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '531936fc9b9fd10b7f0f8c440772742b67814f7b' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/action/add.tpl',
-      1 => 1509502905,
+      1 => 1510211807,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509502905,
+      1 => 1510105483,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '114550887059f9429d7e6e56-41560738',
+  'nocache_hash' => '1618128455a0405b5c4ea24-50013626',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59f9429d923c66_10219873',
+  'unifunc' => 'content_5a0405b5cb2172_75212462',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f9429d923c66_10219873')) {function content_59f9429d923c66_10219873($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a0405b5cb2172_75212462')) {function content_5a0405b5cb2172_75212462($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -397,13 +397,22 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     <label for="ftype">检测项目</label>
                     <select id="ftype" class="form-control" name="physicalquality">
                         <option value="-1">无</option>
-                        <option value="0">耐力素质</option>
+                        <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['category']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
+$_smarty_tpl->tpl_vars['row']->_loop = true;
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['row']->value['category_name'];?>
+</option>
+                        <?php } ?>
+                        <!-- <option value="0">耐力素质</option>
                         <option value="1">上肢力量</option>
                         <option value="2">腹肌耐力</option>
                         <option value="3">柔韧素质</option>
                         <option value="4">速度素质</option>
                         <option value="5">下肢力量</option>
-                        <option value="6">综合素质</option>
+                        <option value="6">综合素质</option> -->
                     </select>
                 </div>
 
@@ -485,7 +494,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
 
                 <!-- footer -->
                 <footer class="text-center">
-                    ©2017 北京天天向尚信息科技发展有限公司 All Rights Resrverd
+                    ©2017 北京天天向尚信息科技有限公司 All Rights Resrverd
                 </footer>
             </div>
         </div>

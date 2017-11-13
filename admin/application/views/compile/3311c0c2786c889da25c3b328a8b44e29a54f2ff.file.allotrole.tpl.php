@@ -1,23 +1,37 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-02 10:27:28
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 14:59:38
          compiled from "/var/www/admin/admin/application/views/template/meau/allotrole.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:157238775559fa8290387547-86623267%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2878127105a03fcda7fba74-13945108%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-08 09:49:44
+         compiled from "/var/www/admin/admin/application/views/template/meau/allotrole.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:14096408005a0262b8899ff2-99035928%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3311c0c2786c889da25c3b328a8b44e29a54f2ff' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/allotrole.tpl',
-      1 => 1509502905,
+      1 => 1509437319,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1509502905,
+<<<<<<< HEAD
+      1 => 1510105563,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '157238775559fa8290387547-86623267',
+  'nocache_hash' => '2878127105a03fcda7fba74-13945108',
+=======
+      1 => 1510105483,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '14096408005a0262b8899ff2-99035928',
+>>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
   'function' => 
   array (
   ),
@@ -35,9 +49,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_59fa82904cc1d9_07182233',
+<<<<<<< HEAD
+  'unifunc' => 'content_5a03fcda93dba0_22395875',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59fa82904cc1d9_07182233')) {function content_59fa82904cc1d9_07182233($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a03fcda93dba0_22395875')) {function content_5a03fcda93dba0_22395875($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a0262b89fa596_87259723',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a0262b89fa596_87259723')) {function content_5a0262b89fa596_87259723($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
 <html lang="en">
 
 <head>
@@ -387,7 +407,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
                 <!-- footer -->
                 <footer class="text-center">
-                    ©2017 北京天天向尚信息科技发展有限公司 All Rights Resrverd
+                    ©2017 北京天天向尚信息科技有限公司 All Rights Resrverd
                 </footer>
             </div>
         </div>

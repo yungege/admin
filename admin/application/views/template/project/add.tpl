@@ -100,6 +100,15 @@
             </div>
 
             <div class="form-group">
+                <label for="pro-type">项目类型</label>
+                <select id="pro-type" class="form-control" name="pro-type">
+                    <option value="0">项目类型</option>
+                    <option value="1">室内锻炼</option>
+                    <option value="2">户外锻炼</option>
+                </select>
+            </div>
+
+            <div class="form-group">
                 <label for="name">项目名称</label>
                 <input type="text" class="form-control" id="name" name="name">
             </div>

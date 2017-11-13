@@ -9,7 +9,6 @@ class ProjectAction extends BaseAction {
                 'tplName' => 'sport/project.tpl',
             ],
         ];
-                
-        
+
     }
 }
