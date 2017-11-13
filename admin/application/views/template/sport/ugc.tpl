@@ -59,7 +59,13 @@
     width:500px;
     height:300px;
 }
-
+.item{
+    width: 500px;
+}
+.carousel-inner{
+    height:300px;
+    width:500px;
+}
 
 }
 </style>
@@ -228,10 +234,24 @@
                 <div id="imgBox">
                     <div id="imgBoxInner">
 
+                        <div id="myCarousel" class="carousel slide">
+                            <!-- 轮播（Carousel）指标 -->
+                            <ol class="carousel-indicators">
+                              
+                            </ol>  
+                            <!-- 轮播（Carousel）项目 -->
+                            <div class="carousel-inner">
+                                
+                            </div>
+                            
+                        </div>
+
                     </div>
                 </div>               
             </div>   
-            <br>           
+                  
+            <br>
+
             <div class="inner-btn-picture">
                 <button id="subReturn" type="button" class="btn btn-primary">返回</button>
             </div>

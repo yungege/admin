@@ -1,19 +1,13 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 14:10:03
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-13 14:43:43
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3295225235a03f13b104a27-45380288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 13:24:56
-         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11718496755a03e6a85d5899-18540749%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 62ecb0c882012f5f28f9968d459b6ea2189edb5e
+<?php /*%%SmartyHeaderCode:10408370045a093f1fb73149-67740295%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-      1 => 1509691557,
+      1 => 1510555342,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -23,11 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '3295225235a03f13b104a27-45380288',
-=======
-  'nocache_hash' => '11718496755a03e6a85d5899-18540749',
->>>>>>> 62ecb0c882012f5f28f9968d459b6ea2189edb5e
+  'nocache_hash' => '10408370045a093f1fb73149-67740295',
   'function' => 
   array (
   ),
@@ -45,15 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a03f13b277430_37148826',
+  'unifunc' => 'content_5a093f1fc69fe9_62223294',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a03f13b277430_37148826')) {function content_5a03f13b277430_37148826($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-  'unifunc' => 'content_5a03e6a87b3692_93906547',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a03e6a87b3692_93906547')) {function content_5a03e6a87b3692_93906547($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> 62ecb0c882012f5f28f9968d459b6ea2189edb5e
+<?php if ($_valid && !is_callable('content_5a093f1fc69fe9_62223294')) {function content_5a093f1fc69fe9_62223294($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -193,7 +177,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     width:500px;
     height:300px;
 }
-
+.item{
+    width: 500px;
+}
+.carousel-inner{
+    height:300px;
+    width:500px;
+}
 
 }
 </style>
@@ -631,10 +621,24 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 <div id="imgBox">
                     <div id="imgBoxInner">
 
+                        <div id="myCarousel" class="carousel slide">
+                            <!-- 轮播（Carousel）指标 -->
+                            <ol class="carousel-indicators">
+                              
+                            </ol>  
+                            <!-- 轮播（Carousel）项目 -->
+                            <div class="carousel-inner">
+                                
+                            </div>
+                            
+                        </div>
+
                     </div>
                 </div>               
             </div>   
-            <br>           
+                  
+            <br>
+
             <div class="inner-btn-picture">
                 <button id="subReturn" type="button" class="btn btn-primary">返回</button>
             </div>

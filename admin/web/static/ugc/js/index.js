@@ -10,7 +10,7 @@ $(function(){
             this.postData();
             this.pictureBox();
             this.directShare();
-            // this.pictureInit();
+            this.pictureInit();
         },
 
         getDom: function(){
@@ -30,17 +30,18 @@ $(function(){
             this.toId = $('input[name=toId]');
             this.form = $('form[name=mark]');
             this.imgBoxInner = $('#imgBoxInner');
-
+            this.carouselIndicators = $('.carousel-indicators');
+            this.carouselInner = $('.carousel-inner');
         },
 
         pictureInit: function(){
 
-            $(document).ready(function(){
-        　　　　jPicture("#imgBox", {
-                    type: "slide",
-                    autoplay: 5000
-                });
-        　　});
+            $(".start-slide").click(function(){
+                $("#myCarousel").carousel('cycle');
+            });
+            $('#myCarousel').carousel({
+                interval: 5000
+            });
         },
 
         initDate: function(){
@@ -99,6 +100,9 @@ $(function(){
             var me = this;
             
             me.pictureBtn.unbind().bind('click',function(){
+                // me.imgBoxInner.remove();
+
+                // me.pictureInit();
 
                 var id = $(this).data('id');
                 var htype = $(this).data('htype');
@@ -106,26 +110,29 @@ $(function(){
 
                 $.post('/ugc/picture', data, function(json){
 
-                    // alert(json);
-                    // return false;
-
                     if(json.errCode != 0){
                         return false;
 
                     }else{
            
                         var img = "";
+                        var no = "";
                         var pictures = json.data.exciseimg;
                         $.each(pictures,function(index,value){
-                            img = img + '<div><img src="' + value +'" width=' + '"100px"></div>';         
-                        });
-                        me.imgBoxInner[0].innerHTML = img;
-                       
-                        jPicture("#imgBox", {
-                            type: "slide",
-                            autoplay: 5000
-                        }); 
+
+                            // img = img + '<div><img src="' + value +'" width=' + '"100px"></div>';
+                            if(index == 0){
+                                img = img + '<div class="item active"><img src="' + value + '" width="500" height="150"></div>';
+                                no = no + '<li data-target="#myCarousel" data-slide-to="' + index + '" class="active"></li>';
+                            }else{
+                                img = img + '<div class="item"><img src="' + value + '" width="500"></div>';
+                                no = no + '<li data-target="#myCarousel" data-slide-to="' + index + '"></li>';
+                            }
                         
+                        });
+
+                        me.carouselInner[0].innerHTML = img;
+                        me.carouselIndicators[0].innerHTML = no;
                         me.showPictureBox.fadeIn(300);        
                     }
                 }); 
