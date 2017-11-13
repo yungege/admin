@@ -10,7 +10,6 @@ $(function(){
             this.postData();
             this.pictureBox();
             this.directShare();
-            this.pictureInit();
         },
 
         getDom: function(){
@@ -32,16 +31,6 @@ $(function(){
             this.imgBoxInner = $('#imgBoxInner');
             this.carouselIndicators = $('.carousel-indicators');
             this.carouselInner = $('.carousel-inner');
-        },
-
-        pictureInit: function(){
-
-            $(".start-slide").click(function(){
-                $("#myCarousel").carousel('cycle');
-            });
-            $('#myCarousel').carousel({
-                interval: 5000
-            });
         },
 
         initDate: function(){
@@ -133,7 +122,13 @@ $(function(){
 
                         me.carouselInner[0].innerHTML = img;
                         me.carouselIndicators[0].innerHTML = no;
-                        me.showPictureBox.fadeIn(300);        
+                        me.showPictureBox.fadeIn(300); 
+                        $(".start-slide").click(function(){
+                            $("#myCarousel").carousel('cycle');
+                        });
+                        $('#myCarousel').carousel({
+                            interval: 5000
+                        });       
                     }
                 }); 
             });
