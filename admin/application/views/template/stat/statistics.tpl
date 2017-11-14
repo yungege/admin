@@ -44,8 +44,8 @@
                         <p><strong>查询时间单位：</strong></p>
                         <select class="form-control" id="timeStype" name="timeStype" style="margin-bottom:15px;width: 110px;float: left;">
                             <!-- <option value="-1">全部</option> -->
-                            <option value="1">每日</option>
-                            <option value="2" selected="selected">每周</option>
+                            <option value="1" selected="selected">每日</option>
+                            <option value="2">每周</option>
                         </select>
                     </div>
                     <div class="col-md-4">
