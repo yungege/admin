@@ -53,7 +53,9 @@ class Service_Stat_ContristModel extends BasePageService {
         switch ($req['get']['source']) {
             case 1:
                 $this->getAllData();
+                $this->unitStat();
                 break;
+
             case 2:
                 $this->getDoneRate();
                 break;
@@ -67,6 +69,155 @@ class Service_Stat_ContristModel extends BasePageService {
         }
 
         return $this->resData;
+    }
+
+    protected function unitStat(){
+
+        if($this->map['timeStype'] == 2){
+            $this->map['time']['interval'] = Tools::getWeek($this->map['time']['start'], $this->map['time']['end']);
+        }
+
+        if($this->map['timeStype'] == 1){
+            $this->map['time']['interval'] = Tools::getDay($this->map['time']['start'],$this->map['time']['end']);
+        }
+
+        $this->getIntervalData();
+        $this->intervalFormatData();
+    }
+
+    protected function getIntervalData(){
+
+        $this->resData['units']['trainCount']['yAxis'] = [
+            'type' => 'value',
+            'name' => '锻炼次数',
+            'axisLabel' => [
+                'formatter' => '{value}',
+            ],
+        ];
+
+        $this->resData['units']['trainTime']['yAxis'] = [
+            'type' => 'value',
+            'name' => '锻炼时长',
+            'axisLabel' => [
+                'formatter' => '{value}',
+            ],
+        ];
+
+        $this->resData['units']['doneRate']['yAxis'] = [
+            'type' => 'value',
+            'name' => '完成率',
+            'axisLabel' => [
+                'formatter' => '{value}',
+            ],
+        ];
+
+        $this->resData['units']['trainCal']['yAxis'] = [
+            'type' => 'value',
+            'name' => '消耗卡路里',
+            'axisLabel' => [
+                'formatter' => '{value}',
+            ],
+        ];
+
+        $this->resData['units']['trainCount']['yvals'] = [
+            'name'      => '锻炼人数',
+            'type'      => 'bar',
+        ];
+
+        $this->resData['units']['trainTime']['yvals'] = [
+            'name'      => '锻炼时长',
+            'type'      => 'bar',
+        ];
+
+        $this->resData['units']['trainCal']['yvals'] = [
+            'name'      => '消耗卡路里',
+            'type'      => 'bar',
+        ];
+
+        $this->resData['units']['doneRate']['yvals'] = [
+            'name'      => '完成率',
+            'type'      => 'bar',
+        ];
+
+        foreach($this->map['time']['interval'] as $key => $value){
+
+            $where = [
+                'originaltime' => [
+                    '$gte' => $key,
+                    '$lte' => $value,
+                ],
+                'htype' => [
+                    '$in' => [1,2,3,4],
+                ],
+                'userid' => [
+                    '$in' => $this->userlist,
+                ],
+            ];
+
+            if($this->type == 2){
+                unset($where['originaltime']);
+                $where['starttime'] = [
+                    '$gte' => $this->$key,
+                    '$lte' => $this->$value,
+                ];
+            }
+
+            $fields = [
+                '$project' => [
+                    'userid' => 1,
+                    'burncalories' => 1,
+                    'projecttime' => 1,
+                    'htype' => 1,
+                ]
+            ];
+
+            $group = [
+                '$group' => [
+                    '_id' => '$userid',
+                    'burncalorie' => ['$sum' => '$burncalories'],
+                    'projecttime' => ['$sum' => '$projecttime'],
+                    'count' => ['$sum' => 1],
+                    'htype' => ['$push' => '$htype'],
+                ]
+            ];
+            $aggregate = [
+                ['$match' => $where],
+                $fields,
+                $group
+            ];
+
+            $list = $this->trainModel->aggregate($aggregate);
+            $trainCount = 0;
+            $trainTime = 0;
+            $trainCal = 0;
+            $doneRate = 0;
+
+            $userDoneNum = 0;
+
+            if(!empty($list)){
+                foreach ($list as $row) {
+                    $trainCount += (int)$row['count'];
+                    $trainTime += (int)$row['projecttime'];
+                    $trainCal += (float)sprintf('%.2f', $row['burncalorie']);
+                    $thisUserDoneNum = 0;
+                    foreach ($row['htype'] as $htype) {
+                        if($htype == 2 || $htype == 4){
+                            $thisUserDoneNum += 1;
+                        }
+                    }
+                    if($thisUserDoneNum >= ($this->passNum)){
+                        $userDoneNum += 1;
+                    }
+                }
+            }
+
+            $this->resData['unit'][$key]['trainCal'] = $trainCal;
+            $this->resData['unit'][$key]['trainCount'] = $trainCount;
+            $this->resData['unit'][$key]['trainTime'] = !empty($list) ? ((float)sprintf('%.2f',$trainTime/60)) : 0;
+            $this->resData['unit'][$key]['trainAvg'] = !empty($list) ? ((float)sprintf('%.2f',$trainCount/$this->resData['userCount'])) : 0;
+            $this->resData['unit'][$key]['doneRate'] = !empty($list) ? ((float)sprintf('%.4f',$userDoneNum / count($list)) * 100) : 0;
+        }
+
     }
 
     protected function getWhere($req){
@@ -131,6 +282,10 @@ class Service_Stat_ContristModel extends BasePageService {
 
         if(isset($req['down'])){
             $this->map['down'] = $req['down'];
+        }
+
+        if(isset($req['timeStype'])){
+            $this->map['timeStype'] = (int)$req['timeStype'];
         }
 
         $numPerDay = sprintf('%.2f', 4/7);
@@ -327,6 +482,30 @@ class Service_Stat_ContristModel extends BasePageService {
         }
     }
 
+    protected function intervalFormatData(){
+        foreach ($this->resData['unit'] as $k => $v) {
+            foreach ($v as $key => $value){
+                if($this->map['timeStype'] == 1){
+                    $this->resData['units'][$key]['xkeys'][] = date('Y-m-d',$k);
+                }
+
+                if($this->map['timeStype'] == 2){
+                    $this->resData['units'][$key]['xkeys'][] = date('Y-m-d',$k) . '到' . date('Y-m-d',$k + 604799);
+                }
+               
+                $this->resData['units'][$key]['yvals']['data'][] = $value;
+                $this->resData['units'][$key]['chartsDom'] = $key;
+                $this->resData['units'][$key]['legend'] = ['1'];
+            }
+        }
+
+        $this->resData['unit'] = $this->resData['units'];
+
+        // var_dump($this->resData);
+        // exit;
+
+    }
+
     /**
      * 完成次数比例
      * @Author    422909231@qq.com
@@ -335,6 +514,7 @@ class Service_Stat_ContristModel extends BasePageService {
      */
     protected function getDoneRate(){
         $this->getUserCount();
+        $this->resData['chartsDom'] = 'charts';
         $this->resData['xkeys'] = ['0次'];
         $this->resData['yvals'] = [
             [
@@ -585,6 +765,7 @@ class Service_Stat_ContristModel extends BasePageService {
         // 获取学生锻炼数据
         $this->getTrainData($format);
 
+        $this->resData['chartsDom'] = 'charts';
         $this->resData['xkeys'] = array_keys($format);
         $this->resData['yvals'] = [
             [
