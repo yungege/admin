@@ -234,7 +234,8 @@ $(function(){
                     me.trainCount.css('display','none');
                     me.trainTime.css('display','none');    
                     me.trainCal.css('display','none');
-                     me.doneRate.css('display','none');
+                    me.doneRate.css('display','none');
+                    me.charts.css('display','block');
                 }
 
                 if(startTime > endTime){
