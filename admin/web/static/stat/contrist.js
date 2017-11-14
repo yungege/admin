@@ -231,10 +231,6 @@ $(function(){
                 }
 
                 if(source == 2 || source == 3){
-                    me.trainCount.css('display','none');
-                    me.trainTime.css('display','none');    
-                    me.trainCal.css('display','none');
-                    me.doneRate.css('display','none');
                     me.charts.css('display','block');
                 }
 
@@ -261,6 +257,10 @@ $(function(){
                         }
                         else if(source == 2 || source == 3){
                             me.makeMixCharts(json.data);
+                            me.trainCount.css('display','none');
+                            me.trainTime.css('display','none');    
+                            me.trainCal.css('display','none');
+                            me.doneRate.css('display','none');
                         }
                         
                     },
