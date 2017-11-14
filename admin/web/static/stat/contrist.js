@@ -253,6 +253,7 @@ $(function(){
 
                         if(source== 1){
                             me.makeCharts(json.data);
+                            me.charts.css('display','none');
                             $.each(json.data.unit,function(index,value){
                                 me.makeMixCharts(value);
                             });
