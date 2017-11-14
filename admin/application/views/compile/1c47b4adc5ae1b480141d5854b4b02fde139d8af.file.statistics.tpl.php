@@ -1,23 +1,43 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-14 16:39:22
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19421173215a0aabbae112e5-97367793%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-14 17:33:51
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:14881123645a0ab87f4db4d7-02704378%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-14 09:55:02
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:20937783235a0a4cf6cdf4a0-73475174%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 179cd09c7ac736b440dafaf2d5646c22c6d02f4f
+>>>>>>> aea6763cdf2b616daa999191dbf43c5e33963170
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1510203609,
+      1 => 1510648688,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+      1 => 1510202574,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '19421173215a0aabbae112e5-97367793',
+=======
+<<<<<<< HEAD
+  'nocache_hash' => '14881123645a0ab87f4db4d7-02704378',
+=======
+  'nocache_hash' => '20937783235a0a4cf6cdf4a0-73475174',
+>>>>>>> 179cd09c7ac736b440dafaf2d5646c22c6d02f4f
+>>>>>>> aea6763cdf2b616daa999191dbf43c5e33963170
   'function' => 
   array (
   ),
@@ -35,9 +55,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a0aabbb003200_67174194',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a0aabbb003200_67174194')) {function content_5a0aabbb003200_67174194($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a0ab87f5750a2_98971035',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a0ab87f5750a2_98971035')) {function content_5a0ab87f5750a2_98971035($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a0a4cf6e13a80_57228162',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a0a4cf6e13a80_57228162')) {function content_5a0a4cf6e13a80_57228162($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 179cd09c7ac736b440dafaf2d5646c22c6d02f4f
+>>>>>>> aea6763cdf2b616daa999191dbf43c5e33963170
 <html lang="en">
 
 <head>
@@ -132,6 +164,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     margin-left: 5px;
     text-decoration: underline;
 }
+#ty + div{
+    margin:0px;
+    border:0px;
+    padding:0px;
+}
+
 </style>
 
 </head>
@@ -360,14 +398,40 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
      <div class="col-md-12">
         <form name ="form">
         <ul class="list-unstyled" style="border:1px solid #ddd;overflow:hidden;padding:20px;border-radius: 5px;">
+
             <li id="ty" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
-                <p><strong>类型：</strong></p>
-                <select class="form-control" id="type" name="type" style="margin-bottom:15px;width: 110px;float: left;">
-                    <!-- <option value="-1">全部</option> -->
-                    <option value="1" selected="selected">正常锻炼</option>
-                    <option value="2">校外替换</option>
-                </select>
+                <div class="row">
+                    <div class="col-md-2"> 
+                        <p><strong>锻炼类型：</strong></p>
+                        <select class="form-control" id="type" name="type" style="margin-bottom:15px;width: 110px;float: left;">
+                            <option value="-1">全部</option>
+                            <option value="1" selected="selected">正常锻炼</option>
+                            <option value="2">校外打卡</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <p><strong>查询时间单位：</strong></p>
+                        <select class="form-control" id="timeStype" name="timeStype" style="margin-bottom:15px;width: 110px;float: left;">
+                            <!-- <option value="-1">全部</option> -->
+                            <option value="1">每日</option>
+                            <option value="2" selected="selected">每周</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
+                            <p><strong>时间维度：</strong></p>
+                            <div class="input-group">
+                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initStart'];?>
+" data-type="time" id="date_start" name="start" type="text" class="form-control date_start date" data-date-format="yyyy-mm-dd"/>
+                                <div class="input-group-addon" style="border-left: 0;border-right: 0;"> 至 </div>
+                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initEnd'];?>
+" data-type="time" id="date_end" name="end" type="text" class="form-control date_end date" data-date-format="yyyy-mm-dd"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </li>
+                
             <li id="kj" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
                 <p><strong>空间维度：</strong></p>
                 <select class="form-control" id="province" name="province" style="margin-bottom:15px;width: 110px;float: left;">
@@ -382,22 +446,6 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </option>
                     <?php } ?>
                 </select>
-            </li>
-            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label class="control-label">时间维度：</label>
-                            <div class="input-group">
-                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initStart'];?>
-" data-type="time" id="date_start" name="start" type="text" class="form-control date_start date" data-date-format="yyyy-mm-dd"/>
-                                <div class="input-group-addon" style="border-left: 0;border-right: 0;"> 至 </div>
-                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initEnd'];?>
-" data-type="time" id="date_end" name="end" type="text" class="form-control date_end date" data-date-format="yyyy-mm-dd"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </li>
 
             <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
@@ -436,6 +484,21 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 
                 </table>
             </div>
+
+            <div id="trainCount" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
+
+            </div>
+            <div id="trainTime" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
+
+            </div>
+            <div id="trainCal" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
+
+            </div>
+            <div id="doneRate" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
+
+            </div>
+
+
         </div>
     </div>
 </div>
