@@ -1784,6 +1784,26 @@ class Tools {
     }
 
     /**
+    * 获取一段时间内各天的起始时间和截止时间
+    * @Datetime 2017-11-14
+    * @param      int             $startTime [description]
+    * @param      int             $endTime   [description]
+    * @param      array           $dates     [description]
+    * @param      [type]                     [description]
+    */
+    public static function getDay(int $startTime, int $endTime, $dates = []){
+        $timeStart = strtotime(date('Y-m-d',$startTime));
+        $timeEnd = strtotime(date('Y-m-d',$endTime)) + 86399;
+        $end = $timeStart + 86399;
+        while($end <= $timeEnd){
+            $dates[$timeStart] = $end;
+            $timeStart += 86400;
+            $end += 86400;
+        }
+        return $dates;
+    }
+
+    /**
      * 获取redis缓存键
      * @Author    422909231@qq.com
      * @DateTime  2017-07-05

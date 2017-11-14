@@ -32,6 +32,13 @@ $(function(){
             this.table          = $('#charts-table');
 
             this.source         = $('input[name=source]');
+
+            // chartsDom声明
+            // this.trainCount     = $('#trainCount');
+            // this.trainTime      = $('#trainTime');
+            // this.trainAvg       = $('#trainAvg');
+            // this.doneRate       = $('#doneRate');
+
         },
 
         getCity: function(){
@@ -224,10 +231,17 @@ $(function(){
                     url:'/stat/contrist', 
                     data:data, 
                     type: 'GET',
-                    dataType: 'json',
+                    // dataType: 'json',
                     success: function(json){
+
+// alert(json);
+// return false;
+
                         if(source== 1){
                             me.makeCharts(json.data);
+                            $.each(json.data.unit,function(index,value){
+                                me.makeMixCharts(value);
+                            });
                         }
                         else if(source == 2 || source == 3){
                             me.makeMixCharts(json.data);
@@ -403,7 +417,7 @@ $(function(){
                 ],
             };
 
-            var chartArea = document.getElementById('charts');
+            var chartArea = document.getElementById(data.chartsDom);
             var myChart = echarts.init(chartArea);
             myChart.clear();
             myChart.setOption(option);
@@ -411,7 +425,7 @@ $(function(){
                 myChart.resize();
             }
 
-            me.makeMixTable(data);
+            // me.makeMixTable(data);
         },
 
         makeMixTable: function(data){
