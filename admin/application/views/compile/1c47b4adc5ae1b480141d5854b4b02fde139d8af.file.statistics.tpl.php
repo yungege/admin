@@ -1,33 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-14 18:14:30
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-14 18:33:22
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5180100005a0ac206448219-01906115%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-14 17:38:32
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9092833855a0ab998e329f5-80468557%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> faf43ef459db05da7912417c96afadf33b6baa12
+<?php /*%%SmartyHeaderCode:6073466535a0ac672131b13-82977371%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1510652275,
+      1 => 1510654810,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+      1 => 1510202574,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '5180100005a0ac206448219-01906115',
-=======
-  'nocache_hash' => '9092833855a0ab998e329f5-80468557',
->>>>>>> faf43ef459db05da7912417c96afadf33b6baa12
+  'nocache_hash' => '6073466535a0ac672131b13-82977371',
   'function' => 
   array (
   ),
@@ -45,15 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a0ac2064d7f68_61345009',
+  'unifunc' => 'content_5a0ac6721e73c2_83753927',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0ac2064d7f68_61345009')) {function content_5a0ac2064d7f68_61345009($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5a0ab999036107_84453825',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0ab999036107_84453825')) {function content_5a0ab999036107_84453825($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> faf43ef459db05da7912417c96afadf33b6baa12
+<?php if ($_valid && !is_callable('content_5a0ac6721e73c2_83753927')) {function content_5a0ac6721e73c2_83753927($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -397,8 +381,8 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                         <p><strong>查询时间单位：</strong></p>
                         <select class="form-control" id="timeStype" name="timeStype" style="margin-bottom:15px;width: 110px;float: left;">
                             <!-- <option value="-1">全部</option> -->
-                            <option value="1">每日</option>
-                            <option value="2" selected="selected">每周</option>
+                            <option value="1" selected="selected">每日</option>
+                            <option value="2">每周</option>
                         </select>
                     </div>
                     <div class="col-md-4">

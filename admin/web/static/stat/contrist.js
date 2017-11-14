@@ -34,10 +34,10 @@ $(function(){
             this.source         = $('input[name=source]');
 
             // chartsDom声明
-            // this.trainCount     = $('#trainCount');
-            // this.trainTime      = $('#trainTime');
-            // this.trainAvg       = $('#trainAvg');
-            // this.doneRate       = $('#doneRate');
+            this.trainCount     = $('#trainCount');
+            this.trainTime      = $('#trainTime');
+            this.trainCal       = $('#trainCal');
+            this.doneRate       = $('#doneRate');
 
         },
 
@@ -222,6 +222,20 @@ $(function(){
                     startTime = Date.parse(new Date(me.startBtn.val()+' 00:00:00'))/1000,
                     endTime = Date.parse(new Date(me.endBtn.val()+' 00:00:00'))/1000,
                     source = $('input[type=\'radio\']:checked').val();
+
+                if(source == 1){
+                    me.trainCount.css('display','block');
+                    me.trainTime.css('display','block');    
+                    me.trainCal.css('display','block');
+                    me.doneRate.css('display','block');
+                }
+
+                if(source == 2 || source == 3){
+                    me.trainCount.css('display','none');
+                    me.trainTime.css('display','none');    
+                    me.trainCal.css('display','none');
+                     me.doneRate.css('display','none');
+                }
 
                 if(startTime > endTime){
                     alert('起始时间不能大于结束时间');
@@ -425,7 +439,7 @@ $(function(){
                 myChart.resize();
             }
 
-            // me.makeMixTable(data);
+            me.makeMixTable(data);
         },
 
         makeMixTable: function(data){
