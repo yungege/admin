@@ -89,7 +89,7 @@ class Service_Stat_ContristModel extends BasePageService {
 
         $this->resData['units']['trainCount']['yAxis'] = [
             'type' => 'value',
-            'name' => '锻炼次数',
+            'name' => '锻炼次数(次)',
             'axisLabel' => [
                 'formatter' => '{value}',
             ],
@@ -97,7 +97,7 @@ class Service_Stat_ContristModel extends BasePageService {
 
         $this->resData['units']['trainTime']['yAxis'] = [
             'type' => 'value',
-            'name' => '锻炼时长',
+            'name' => '锻炼时长(min)',
             'axisLabel' => [
                 'formatter' => '{value}',
             ],
@@ -113,30 +113,46 @@ class Service_Stat_ContristModel extends BasePageService {
 
         $this->resData['units']['trainCal']['yAxis'] = [
             'type' => 'value',
-            'name' => '消耗卡路里',
+            'name' => '能量(千卡)',
             'axisLabel' => [
                 'formatter' => '{value}',
             ],
         ];
 
         $this->resData['units']['trainCount']['yvals'] = [
-            'name'      => '锻炼人数',
+            'name'      => '锻炼次数(次)',
             'type'      => 'bar',
         ];
 
         $this->resData['units']['trainTime']['yvals'] = [
-            'name'      => '锻炼时长',
+            'name'      => '锻炼时长(min)',
             'type'      => 'bar',
         ];
 
         $this->resData['units']['trainCal']['yvals'] = [
-            'name'      => '消耗卡路里',
+            'name'      => '能量(千卡)',
             'type'      => 'bar',
         ];
 
         $this->resData['units']['doneRate']['yvals'] = [
             'name'      => '完成率',
             'type'      => 'bar',
+        ];
+
+        $this->resData['units']['trainCount']['legend'] = [
+            '锻炼次数(次)',
+        ];
+
+        $this->resData['units']['trainTime']['legend'] = [
+            '锻炼时长(min)',
+        ];
+
+        $this->resData['units']['trainCal']['legend'] = [
+            '能量(千卡)',
+        ];
+
+        $this->resData['units']['doneRate']['legend'] = [
+           '完成率',
         ];
 
         foreach($this->map['time']['interval'] as $key => $value){
@@ -495,7 +511,7 @@ class Service_Stat_ContristModel extends BasePageService {
                
                 $this->resData['units'][$key]['yvals']['data'][] = $value;
                 $this->resData['units'][$key]['chartsDom'] = $key;
-                $this->resData['units'][$key]['legend'] = ['1'];
+                // $this->resData['units'][$key]['legend'] = ['1'];
             }
         }
 
