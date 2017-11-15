@@ -38,7 +38,7 @@ $(function(){
             this.trainTime      = $('#trainTime');
             this.trainCal       = $('#trainCal');
             this.doneRate       = $('#doneRate');
-            this.chartsDoms     = [];
+            this.chartsDoms     = ['charts'];
 
         },
 
@@ -255,6 +255,7 @@ $(function(){
                             });
                         }
                         else if(source == 2 || source == 3){
+                            me.chartsDoms.push(json.data.chartsDom);
                             me.makeMixCharts(json.data);
                             me.trainCount.css('display','none');
                             me.trainTime.css('display','none');    
@@ -440,16 +441,19 @@ $(function(){
             var myChart = echarts.init(chartArea);
             myChart.clear();
             myChart.setOption(option);
-            window.onresize = function (){
+            // window.onresize = function (){
                 $.each(me.chartsDoms,function(index,value){
+                   
                     var chartArea = document.getElementById(value);
+
+
                     if(chartArea == null){
                         return false;
                     }
                     var myChart = echarts.init(chartArea);
                     myChart.resize();
                 });
-            }
+            // }
 
             me.makeMixTable(data);
         },
