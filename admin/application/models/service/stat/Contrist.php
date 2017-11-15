@@ -408,16 +408,26 @@ class Service_Stat_ContristModel extends BasePageService {
                 $this->resData['trainTime'] += (int)$row['projecttime'];
                 $this->resData['trainCal'] += (float)sprintf('%.2f', $row['burncalorie']);
                 $thisUserDoneNum = 0;
-                foreach ($row['htype'] as $htype) {
-                    if($htype == 2 || $htype == 4){
-                        $thisUserDoneNum += 1;
-                    }
-                }
-                if($thisUserDoneNum >= ($this->passNum)){
+                // foreach ($row['htype'] as $htype) {
+                //     if($htype == 2 || $htype == 4){
+                //         $thisUserDoneNum += 1;
+                //     }
+                // }
+                // if($thisUserDoneNum >= ($this->passNum)){
+                //     $userDoneNum += 1;
+                // }
+
+                if($row['count'] >= $this->passNum){
                     $userDoneNum += 1;
                 }
             }
         }
+
+// var_dump($list);
+// exit;
+// var_dump($this->passNum);
+// exit;
+
 
         $this->resData['trainTime'] = !empty($list) ? ((float)sprintf('%.2f',$this->resData['trainTime']/60)) : 0;
         $this->resData['trainAvg'] = !empty($list) ? ((float)sprintf('%.2f',$this->resData['trainCount']/$this->resData['userCount'])) : 0;
