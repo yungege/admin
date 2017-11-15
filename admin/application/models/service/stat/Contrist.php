@@ -5,6 +5,7 @@ class Service_Stat_ContristModel extends BasePageService {
     protected $class;
     protected $userModel;
     protected $trainModel;
+    protected $trainOutsideModel;
     protected $tcModel;
     protected $type;
 
@@ -36,7 +37,8 @@ class Service_Stat_ContristModel extends BasePageService {
         $this->school       = Dao_SchoolinfoModel::getInstance();
         $this->class        = Dao_ClassinfoModel::getInstance();
         $this->userModel    = Dao_UserModel::getInstance();
-        //$this->trainModel   = Dao_TrainingdoneModel::getInstance();
+        $this->trainModel   = Dao_TrainingdoneModel::getInstance();
+        $this->trainOutsideModel = Dao_TrainingDoneOutsideModel::getInstance();
         $this->tcModel      = Dao_PhysicalfitnesstestModel::getInstance();
     }
 
@@ -90,10 +92,6 @@ class Service_Stat_ContristModel extends BasePageService {
         foreach($this->map['time']['interval'] as $key => $value){
 
             $where = [
-                'originaltime' => [
-                    '$gte' => $key,
-                    '$lte' => $value,
-                ],
                 'htype' => [
                     '$in' => [1,2,3,4],
                 ],
@@ -101,14 +99,6 @@ class Service_Stat_ContristModel extends BasePageService {
                     '$in' => $this->userlist,
                 ],
             ];
-
-            if($this->type == 2){
-                unset($where['originaltime']);
-                $where['starttime'] = [
-                    '$gte' => $key,
-                    '$lte' => $value,
-                ];
-            }
 
             $fields = [
                 '$project' => [
@@ -128,13 +118,68 @@ class Service_Stat_ContristModel extends BasePageService {
                     'htype' => ['$push' => '$htype'],
                 ]
             ];
-            $aggregate = [
-                ['$match' => $where],
-                $fields,
-                $group
-            ];
 
-            $list = $this->trainModel->aggregate($aggregate);
+            if($this->type == 2){
+                $where['starttime'] = [
+                    '$gte' => $key,
+                    '$lte' => $value,
+                ];
+                $aggregate = [
+                    ['$match' => $where],
+                    $fields,
+                    $group
+                ];
+                $list = $this->trainOutsideModel->aggregate($aggregate);
+            }
+
+            if($this->type == 1){
+                $where['originaltime'] = [
+                    '$gte' => $key,
+                    '$lte' => $value,
+                ];
+                $aggregate = [
+                    ['$match' => $where],
+                    $fields,
+                    $group
+                ];
+                $list = $this->trainModel->aggregate($aggregate);
+            }
+
+            if($this->type == -1){
+                $where['starttime'] = [
+                    '$gte' => $key,
+                    '$lte' => $value,
+                ];
+                $aggregate = [
+                    ['$match' => $where],
+                    $fields,
+                    $group
+                ];
+                $list = $this->trainOutsideModel->aggregate($aggregate);
+
+                unset($where['starttime']);
+                $where['originaltime'] = [
+                    '$gte' => $key,
+                    '$lte' => $value,
+                ];
+                $aggregate = [
+                    ['$match' => $where],
+                    $fields,
+                    $group
+                ];
+                $list2 = $this->trainModel->aggregate($aggregate);
+
+                foreach($list2 as $k => $v){
+                    if(isset($list[$k])){
+                        $list[$k]['burncalorie'] += $v['burncalorie'];
+                        $list[$k]['projecttime'] += $v['projecttime'];
+                        $list[$k]['count'] += $v['count'];
+                    }else{
+                        $list[$k] = $v;
+                    }
+                }
+            }
+
             $trainCount = 0;
             $trainTime = 0;
             $trainCal = 0;
@@ -143,31 +188,16 @@ class Service_Stat_ContristModel extends BasePageService {
             $numPerDay = sprintf('%.2f', 4/7);
             $passNum = ceil($numPerDay * sprintf('%.2f', ($value - $key)/86400));
 
-            // var_dump('haha');
-            // var_dump($aggregate);
-            // exit;
-
-
             if(!empty($list)){
                 foreach ($list as $row) {
                     $trainCount += (int)$row['count'];
                     $trainTime += (int)$row['projecttime'];
                     $trainCal += (float)sprintf('%.2f', $row['burncalorie']);
-                    // $thisUserDoneNum = 0;
                     if($row['count'] >= $passNum){
                         $userDoneNum += 1;
                     }
                 }
-
-                // var_dump('haha');
-                // exit;
             }
-
-            // var_dump($trainCal);
-            // exit;
-
-            // var_dump(0);
-            // exit;
 
             $this->resData['unit'][$key]['trainCal'] = $trainCal;
             $this->resData['unit'][$key]['trainCount'] = $trainCount;
@@ -183,13 +213,8 @@ class Service_Stat_ContristModel extends BasePageService {
 
         $req = $req['get'];
 
-        if($req['type'] == 1){
-            $this->trainModel   = Dao_TrainingdoneModel::getInstance();
-            $this->type = 1;
-        }else{
-            $this->trainModel   = Dao_TrainingDoneOutsideModel::getInstance();
-            $this->type = 2;
-        }
+        // 查询数据类型
+        $this->type = (int)$req['type'];
 
         // 学校
         if(isset($req['province']) && $req['province'] != -1 && preg_match("/\w+/", $req['province'])){
@@ -358,11 +383,8 @@ class Service_Stat_ContristModel extends BasePageService {
 
     // 总锻炼次数 时长 卡路里 人均次数
     protected function getTrainCount(){
+
         $where = [
-            'originaltime' => [
-                '$gte' => $this->map['time']['start'],
-                '$lte' => $this->map['time']['end'],
-            ],
             'htype' => [
                 '$in' => [1,2,3,4],
             ],
@@ -370,14 +392,6 @@ class Service_Stat_ContristModel extends BasePageService {
                 '$in' => $this->userlist,
             ],
         ];
-
-        if($this->type == 2){
-            unset($where['originaltime']);
-            $where['starttime'] = [
-                '$gte' => $this->map['time']['start'],
-                '$lte' => $this->map['time']['end'],
-            ];
-        }
 
         $fields = [
             '$project' => [
@@ -397,18 +411,74 @@ class Service_Stat_ContristModel extends BasePageService {
                 'htype' => ['$push' => '$htype'],
             ]
         ];
-        $aggregate = [
-            ['$match' => $where],
-            $fields,
-            $group
-        ];
 
-        $list = $this->trainModel->aggregate($aggregate);
+        if($this->type == 2){
+            $where['starttime'] = [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ];
+            $aggregate = [
+                ['$match' => $where],
+                $fields,
+                $group
+            ];
+            $list = $this->trainOutsideModel->aggregate($aggregate);
+        }
+
+        if($this->type == 1){
+            $where['originaltime'] = [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ];
+            $aggregate = [
+                ['$match' => $where],
+                $fields,
+                $group
+            ];
+            $list = $this->trainModel->aggregate($aggregate);
+        }
+
+        if($this->type == -1){
+            $where['starttime'] = [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ];
+            $aggregate = [
+                ['$match' => $where],
+                $fields,
+                $group
+            ];
+            $list = $this->trainOutsideModel->aggregate($aggregate);
+            $list = array_column($list,null,'_id');
+            unset($where['starttime']);
+
+            $where['originaltime'] = [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ];
+            $aggregate = [
+                ['$match' => $where],
+                $fields,
+                $group
+            ];
+            $list2 = $this->trainModel->aggregate($aggregate);
+            $list2 = array_column($list2,null,'_id');
+
+            foreach($list2 as $k => $v){
+                if(isset($list[$k])){
+                    $list[$k]['burncalorie'] += $v['burncalorie'];
+                    $list[$k]['projecttime'] += $v['projecttime'];
+                    $list[$k]['count'] += $v['count'];
+                }else{
+                    $list[$k] = $v;
+                }
+            }
+        }
+
         $this->resData['trainCount'] = 0;
         $this->resData['trainTime'] = 0;
         $this->resData['trainCal'] = 0;
         $this->resData['doneRate'] = 0;
-
         $userDoneNum = 0;
 
         if(!empty($list)){
@@ -417,26 +487,11 @@ class Service_Stat_ContristModel extends BasePageService {
                 $this->resData['trainTime'] += (int)$row['projecttime'];
                 $this->resData['trainCal'] += (float)sprintf('%.2f', $row['burncalorie']);
                 $thisUserDoneNum = 0;
-                // foreach ($row['htype'] as $htype) {
-                //     if($htype == 2 || $htype == 4){
-                //         $thisUserDoneNum += 1;
-                //     }
-                // }
-                // if($thisUserDoneNum >= ($this->passNum)){
-                //     $userDoneNum += 1;
-                // }
-
                 if($row['count'] >= $this->passNum){
                     $userDoneNum += 1;
                 }
             }
         }
-
-// var_dump($list);
-// exit;
-// var_dump($this->resData['userCount']);
-// exit;
-
 
         $this->resData['trainTime'] = !empty($list) ? ((float)sprintf('%.2f',$this->resData['trainTime']/60)) : 0;
         $this->resData['trainAvg'] = !empty($list) ? ((float)sprintf('%.2f',$this->resData['trainCount']/$this->resData['userCount'])) : 0;
@@ -544,6 +599,7 @@ class Service_Stat_ContristModel extends BasePageService {
      * @version   1.0
      */
     protected function getDoneRate(){
+
         $this->getUserCount();
         $this->resData['chartsDom'] = 'charts';
         $this->resData['xkeys'] = ['0次'];
@@ -595,22 +651,10 @@ class Service_Stat_ContristModel extends BasePageService {
             'htype' => [
                 '$in' => [1,2,3,4],
             ],
-            'originaltime' => [
-                '$gte' => $this->map['time']['start'],
-                '$lte' => $this->map['time']['end'],
-            ],
             'userid' => [
                 '$in' => $this->userlist,
             ],
         ];
-
-        if($this->type == 2){
-            unset($where['originaltime']);
-            $where['starttime'] = [
-                '$gte' => $this->map['time']['start'],
-                '$lte' => $this->map['time']['end'],
-            ];
-        }
 
         $fields = [
             '$project' => [
@@ -639,15 +683,84 @@ class Service_Stat_ContristModel extends BasePageService {
             $sgroup['$group']['user'] = ['$addToSet' => '$_id'];
         }
 
-        $aggregate = [
-            ['$match' => $where],
-            $fields,
-            $group,
-            $sgroup,
-            ['$sort' => ['_id' => -1]],
-        ];
+        if($this->type == 2){
+            $where['starttime'] = [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ];
+            $aggregate = [
+                ['$match' => $where],
+                $fields,
+                $group,
+                $sgroup,
+                ['$sort' => ['_id' => -1]],
+            ];
+            $list = $this->trainOutsideModel->aggregate($aggregate);
+        }
 
-        $list = $this->trainModel->aggregate($aggregate);
+        if($this->type == 1){
+            $where['originaltime'] = [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ];
+            $aggregate = [
+                ['$match' => $where],
+                $fields,
+                $group,
+                $sgroup,
+                ['$sort' => ['_id' => -1]],
+            ];
+            $list = $this->trainModel->aggregate($aggregate);
+        }
+
+        if($this->type == -1){
+            $where['starttime'] = [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ];
+            $aggregate = [
+                ['$match' => $where],
+                $fields,
+                $group,
+            ];
+            $list = $this->trainOutsideModel->aggregate($aggregate);
+            $list = array_column($list,null,'_id');        
+
+            unset($where['starttime']);
+            $where['originaltime'] = [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ];
+            $aggregate = [
+                ['$match' => $where],
+                $fields,
+                $group,
+            ];
+            $list2 = $this->trainModel->aggregate($aggregate);
+            $list2 = array_column($list2,null,'_id');
+
+            foreach($list2 as $k => $v){
+                if(isset($list[$k])){
+                    $list[$k]['count'] += $v['count'];
+                }else{
+                    $list[$k] = $v;
+                }
+            }
+
+            $lists = [];
+            foreach($list as $k => $v){
+                if(!isset($lists[$v['count']])){
+                    $lists[$v['count']]['count'] = 1;
+                    $lists[$v['count']]['sum'] = $v['count'];
+                    $lists[$v['count']]['_id'] = $v['count'];
+                }else{
+                    $lists[$v['count']]['count'] += 1;
+                }
+            }
+            $list = array_column($lists,null,'sum'); 
+            krsort($list);
+        }
+
         $this->undoneUserCount = $this->resData['userCount'];
         if(!empty($list)){
             $this->resData['xkeys'] = array_map(function($v){
@@ -920,19 +1033,19 @@ class Service_Stat_ContristModel extends BasePageService {
             'htype' => [
                 '$in' => [1,2,3,4],
             ],
-            'originaltime' => [
-                '$gte' => $this->map['time']['start'],
-                '$lte' => $this->map['time']['end'],
-            ],
+            // 'originaltime' => [
+            //     '$gte' => $this->map['time']['start'],
+            //     '$lte' => $this->map['time']['end'],
+            // ],
         ];
 
-        if($this->type == 2){
-            unset($where['originaltime']);
-            $where['starttime'] = [
-                '$gte' => $this->map['time']['start'],
-                '$lte' => $this->map['time']['end'],
-            ];
-        }
+        // if($this->type == 2){
+        //     unset($where['originaltime']);
+        //     $where['starttime'] = [
+        //         '$gte' => $this->map['time']['start'],
+        //         '$lte' => $this->map['time']['end'],
+        //     ];
+        // }
 
         $fields = [
             '$project' => [
@@ -953,14 +1066,83 @@ class Service_Stat_ContristModel extends BasePageService {
                     '$in' => $sval['userlist'],
                 ];
 
-                $aggregate = [
-                    ['$match' => $where],
-                    $fields,
-                    $group,
-                    ['$sort' => ['_id' => -1]],
-                ];
+                // $list = $this->trainModel->aggregate($aggregate);
 
-                $list = $this->trainModel->aggregate($aggregate);
+                if($this->type == 2){
+                    $where['starttime'] = [
+                        '$gte' => $this->map['time']['start'],
+                        '$lte' => $this->map['time']['end'],
+                    ];
+                    $aggregate = [
+                        ['$match' => $where],
+                        $fields,
+                        $group,
+                        ['$sort' => ['_id' => -1]],
+                    ];
+                    $list = $this->trainOutsideModel->aggregate($aggregate);
+
+                    var_dump($list);
+                    exit;
+                }
+
+                if($this->type == 1){
+                    $where['originaltime'] = [
+                        '$gte' => $this->map['time']['start'],
+                        '$lte' => $this->map['time']['end'],
+                    ];
+                    $aggregate = [
+                        ['$match' => $where],
+                        $fields,
+                        $group,
+                        ['$sort' => ['_id' => -1]],
+                    ];
+                    $list = $this->trainModel->aggregate($aggregate);
+
+                }
+
+                if($this->type == -1){
+                    $where['starttime'] = [
+                        '$gte' => $this->map['time']['start'],
+                        '$lte' => $this->map['time']['end'],
+                    ];
+                    $aggregate = [
+                        ['$match' => $where],
+                        $fields,
+                        $group,
+                        ['$sort' => ['_id' => -1]],
+                    ];
+                    $list = $this->trainOutsideModel->aggregate($aggregate);
+                    $list = array_column($list,null,'_id');    
+
+                    unset($where['starttime']);
+                    $where['originaltime'] = [
+                        '$gte' => $this->map['time']['start'],
+                        '$lte' => $this->map['time']['end'],
+                    ];
+                    $aggregate = [
+                        ['$match' => $where],
+                        $fields,
+                        $group,
+                        ['$sort' => ['_id' => -1]],
+                    ];
+                    $list2 = $this->trainModel->aggregate($aggregate);
+
+                    foreach($list2 as $k => $v){
+                        if(isset($list[$v['_id']])){
+                            $list[$v['_id']]['count'] += $v['count'];
+                        }else{
+                            $list[$v['_id']] = $v;
+                        }
+                    }
+                    
+                    // var_dump($list);
+                    // exit;
+                    
+                    // var_dump($list);
+                    // exit;
+                }
+
+
                 if(!empty($list)){
                     foreach ($list as $lval) {
                         $sval['trainCount'] += $lval['count'];
@@ -975,7 +1157,6 @@ class Service_Stat_ContristModel extends BasePageService {
 
                 $sval['avgTrainCount'] = (float)sprintf('%.2f', $sval['trainCount']/$sval['userCount']);
                 $sval['doneRate'] = (float)sprintf('%.4f', $sval['doneRate']/$sval['userCount']) * 100;
-
                 unset($sval['userlist']);
             }
         }
