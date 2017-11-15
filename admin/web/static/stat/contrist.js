@@ -243,14 +243,8 @@ $(function(){
                     url:'/stat/contrist', 
                     data:data, 
                     type: 'GET',
-                    // dataType: 'json',
+                    dataType: 'json',
                     success: function(json){
-
-
-// alert(json);
-// return false;
-
-
 
                         if(source== 1){
                             me.makeCharts(json.data);

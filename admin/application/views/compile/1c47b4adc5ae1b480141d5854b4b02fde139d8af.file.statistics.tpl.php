@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-15 17:04:38
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14917300485a0c0326a3a404-63108955%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-15 17:14:25
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:14315451405a0c0571c5fc11-25533572%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 6bc8a89e116dbff9801802e89b98eb1fe0c9a14e
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
+<<<<<<< HEAD
       1 => 1510710258,
+=======
+      1 => 1510737263,
+>>>>>>> 6bc8a89e116dbff9801802e89b98eb1fe0c9a14e
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1510105563,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '14917300485a0c0326a3a404-63108955',
+=======
+      1 => 1510202574,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '14315451405a0c0571c5fc11-25533572',
+>>>>>>> 6bc8a89e116dbff9801802e89b98eb1fe0c9a14e
   'function' => 
   array (
   ),
@@ -35,9 +53,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a0c0326b739e7_42928290',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a0c0326b739e7_42928290')) {function content_5a0c0326b739e7_42928290($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a0c0571cda962_39534490',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a0c0571cda962_39534490')) {function content_5a0c0571cda962_39534490($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 6bc8a89e116dbff9801802e89b98eb1fe0c9a14e
 <html lang="en">
 
 <head>
@@ -372,8 +396,8 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     <div class="col-md-2"> 
                         <p><strong>锻炼类型：</strong></p>
                         <select class="form-control" id="type" name="type" style="margin-bottom:15px;width: 110px;float: left;">
-                            <option value="-1">全部</option>
-                            <option value="1" selected="selected">正常锻炼</option>
+                            <option value="-1" selected="selected">全部</option>
+                            <option value="1">正常锻炼</option>
                             <option value="2">校外打卡</option>
                         </select>
                     </div>
