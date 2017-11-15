@@ -143,6 +143,11 @@ class Service_Stat_ContristModel extends BasePageService {
             $numPerDay = sprintf('%.2f', 4/7);
             $passNum = ceil($numPerDay * sprintf('%.2f', ($value - $key)/86400));
 
+            // var_dump('haha');
+            // var_dump($aggregate);
+            // exit;
+
+
             if(!empty($list)){
                 foreach ($list as $row) {
                     $trainCount += (int)$row['count'];
@@ -150,10 +155,19 @@ class Service_Stat_ContristModel extends BasePageService {
                     $trainCal += (float)sprintf('%.2f', $row['burncalorie']);
                     $thisUserDoneNum = 0;
                     if($row['count'] >= $passNum){
-                        $thisUserDoneNum++;
+                        $thisUserDoneNum += 1;
                     }
                 }
+
+                // var_dump('haha');
+                // exit;
             }
+
+            // var_dump($trainCal);
+            // exit;
+
+            // var_dump(0);
+            // exit;
 
             $this->resData['unit'][$key]['trainCal'] = $trainCal;
             $this->resData['unit'][$key]['trainCount'] = $trainCount;
