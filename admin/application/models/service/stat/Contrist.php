@@ -754,11 +754,13 @@ class Service_Stat_ContristModel extends BasePageService {
                     $lists[$v['count']]['sum'] = $v['count'];
                     $lists[$v['count']]['_id'] = $v['count'];
                 }else{
-                    $lists[$v['count']]['count'] += 1;
+                    $lists[$v['count']]['count'] += $v['count'];
                 }
             }
             $list = array_column($lists,null,'sum'); 
             krsort($list);
+            $list = array_values($list);
+
         }
 
         $this->undoneUserCount = $this->resData['userCount'];
@@ -1033,19 +1035,15 @@ class Service_Stat_ContristModel extends BasePageService {
             'htype' => [
                 '$in' => [1,2,3,4],
             ],
-            // 'originaltime' => [
-            //     '$gte' => $this->map['time']['start'],
-            //     '$lte' => $this->map['time']['end'],
-            // ],
+            'originaltime' => [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ],
+            'starttime' => [
+                '$gte' => $this->map['time']['start'],
+                '$lte' => $this->map['time']['end'],
+            ],
         ];
-
-        // if($this->type == 2){
-        //     unset($where['originaltime']);
-        //     $where['starttime'] = [
-        //         '$gte' => $this->map['time']['start'],
-        //         '$lte' => $this->map['time']['end'],
-        //     ];
-        // }
 
         $fields = [
             '$project' => [
@@ -1066,13 +1064,8 @@ class Service_Stat_ContristModel extends BasePageService {
                     '$in' => $sval['userlist'],
                 ];
 
-                // $list = $this->trainModel->aggregate($aggregate);
-
                 if($this->type == 2){
-                    $where['starttime'] = [
-                        '$gte' => $this->map['time']['start'],
-                        '$lte' => $this->map['time']['end'],
-                    ];
+                    unset($where['originaltime']);
                     $aggregate = [
                         ['$match' => $where],
                         $fields,
@@ -1081,15 +1074,10 @@ class Service_Stat_ContristModel extends BasePageService {
                     ];
                     $list = $this->trainOutsideModel->aggregate($aggregate);
 
-                    var_dump($list);
-                    exit;
                 }
 
-                if($this->type == 1){
-                    $where['originaltime'] = [
-                        '$gte' => $this->map['time']['start'],
-                        '$lte' => $this->map['time']['end'],
-                    ];
+                if($this->type == 1){ 
+                    unset($where['starttime']);     
                     $aggregate = [
                         ['$match' => $where],
                         $fields,
@@ -1101,6 +1089,7 @@ class Service_Stat_ContristModel extends BasePageService {
                 }
 
                 if($this->type == -1){
+                    unset($where['originaltime']);
                     $where['starttime'] = [
                         '$gte' => $this->map['time']['start'],
                         '$lte' => $this->map['time']['end'],
@@ -1111,9 +1100,9 @@ class Service_Stat_ContristModel extends BasePageService {
                         $group,
                         ['$sort' => ['_id' => -1]],
                     ];
-                    $list = $this->trainOutsideModel->aggregate($aggregate);
-                    $list = array_column($list,null,'_id');    
 
+                    $list = $this->trainOutsideModel->aggregate($aggregate);
+                    $list = array_column($list,null,'_id');  
                     unset($where['starttime']);
                     $where['originaltime'] = [
                         '$gte' => $this->map['time']['start'],
@@ -1134,14 +1123,7 @@ class Service_Stat_ContristModel extends BasePageService {
                             $list[$v['_id']] = $v;
                         }
                     }
-                    
-                    // var_dump($list);
-                    // exit;
-                    
-                    // var_dump($list);
-                    // exit;
                 }
-
 
                 if(!empty($list)){
                     foreach ($list as $lval) {
