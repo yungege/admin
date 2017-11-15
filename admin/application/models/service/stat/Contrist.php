@@ -149,13 +149,8 @@ class Service_Stat_ContristModel extends BasePageService {
                     $trainTime += (int)$row['projecttime'];
                     $trainCal += (float)sprintf('%.2f', $row['burncalorie']);
                     $thisUserDoneNum = 0;
-                    foreach ($row['htype'] as $htype) {
-                        if($htype == 2 || $htype == 4){
-                            $thisUserDoneNum += 1;
-                        }
-                    }
-                    if($thisUserDoneNum >= $passNum){
-                        $userDoneNum += 1;
+                    if($row['count'] >= $passNum){
+                        $thisUserDoneNum++;
                     }
                 }
             }
@@ -164,7 +159,7 @@ class Service_Stat_ContristModel extends BasePageService {
             $this->resData['unit'][$key]['trainCount'] = $trainCount;
             $this->resData['unit'][$key]['trainTime'] = !empty($list) ? ((float)sprintf('%.2f',$trainTime/60)) : 0;
             $this->resData['unit'][$key]['trainAvg'] = !empty($list) ? ((float)sprintf('%.2f',$trainCount/$this->resData['userCount'])) : 0;
-            $this->resData['unit'][$key]['doneRate'] = !empty($list) ? ((float)sprintf('%.4f',$userDoneNum / count($list)) * 100) : 0;
+            $this->resData['unit'][$key]['doneRate'] = !empty($list) ? ((float)sprintf('%.4f',$userDoneNum / $this->resData['userCount']) * 100) : 0;
         }
 
     }
