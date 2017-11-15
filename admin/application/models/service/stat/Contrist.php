@@ -153,9 +153,9 @@ class Service_Stat_ContristModel extends BasePageService {
                     $trainCount += (int)$row['count'];
                     $trainTime += (int)$row['projecttime'];
                     $trainCal += (float)sprintf('%.2f', $row['burncalorie']);
-                    $thisUserDoneNum = 0;
+                    // $thisUserDoneNum = 0;
                     if($row['count'] >= $passNum){
-                        $thisUserDoneNum += 1;
+                        $userDoneNum += 1;
                     }
                 }
 
