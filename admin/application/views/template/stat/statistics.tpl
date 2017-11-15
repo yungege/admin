@@ -49,7 +49,7 @@
                         </select>
                     </div>
                     <div class="col-md-4">
-                        <div class="form-group" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
+                        <div class="form-group" style="border-bottom:1px ;overflow:hidden;margin-bottom:10px;">
                             <p><strong>时间维度：</strong></p>
                             <div class="input-group">
                                 <input readonly="true" value="{%$data.initStart%}" data-type="time" id="date_start" name="start" type="text" class="form-control date_start date" data-date-format="yyyy-mm-dd"/>

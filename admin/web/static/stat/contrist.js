@@ -38,6 +38,7 @@ $(function(){
             this.trainTime      = $('#trainTime');
             this.trainCal       = $('#trainCal');
             this.doneRate       = $('#doneRate');
+            this.chartsDoms     = [];
 
         },
 
@@ -242,17 +243,15 @@ $(function(){
                     url:'/stat/contrist', 
                     data:data, 
                     type: 'GET',
-                    // dataType: 'json',
+                    dataType: 'json',
                     success: function(json){
-
-// alert(json);
-// return false;
 
                         if(source== 1){
                             me.makeCharts(json.data);
                             me.charts.css('display','none');
-                            $.each(json.data.unit,function(index,value){
+                            $.each(json.data.unit,function(i,value){
                                 me.makeMixCharts(value);
+                                me.chartsDoms.push(value.chartsDom);
                             });
                         }
                         else if(source == 2 || source == 3){
@@ -262,7 +261,6 @@ $(function(){
                             me.trainCal.css('display','none');
                             me.doneRate.css('display','none');
                         }
-                        
                     },
                     beforeSend: function () {
                         if(ax != null) {
@@ -391,6 +389,7 @@ $(function(){
         },
 
         makeMixCharts: function(data){
+
             var me = this;
             var option = {
                 tooltip: {
@@ -434,11 +433,22 @@ $(function(){
             };
 
             var chartArea = document.getElementById(data.chartsDom);
+            if(chartArea == null){
+                return false;
+            }
+
             var myChart = echarts.init(chartArea);
             myChart.clear();
             myChart.setOption(option);
             window.onresize = function (){
-                myChart.resize();
+                $.each(me.chartsDoms,function(index,value){
+                    var chartArea = document.getElementById(value);
+                    if(chartArea == null){
+                        return false;
+                    }
+                    var myChart = echarts.init(chartArea);
+                    myChart.resize();
+                });
             }
 
             me.makeMixTable(data);
