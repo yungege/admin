@@ -35,8 +35,8 @@
                     <div class="col-md-2"> 
                         <p><strong>锻炼类型：</strong></p>
                         <select class="form-control" id="type" name="type" style="margin-bottom:15px;width: 110px;float: left;">
-                            <option value="-1">全部</option>
-                            <option value="1" selected="selected">正常锻炼</option>
+                            <option value="-1" selected="selected">全部</option>
+                            <option value="1">正常锻炼</option>
                             <option value="2">校外打卡</option>
                         </select>
                     </div>

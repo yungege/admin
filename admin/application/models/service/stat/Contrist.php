@@ -746,8 +746,6 @@ class Service_Stat_ContristModel extends BasePageService {
                     $list[$k] = $v;
                 }
             }
-// var_dump($list);
-// exit;
 
             $lists = [];
             foreach($list as $k => $v){
@@ -757,9 +755,13 @@ class Service_Stat_ContristModel extends BasePageService {
                     $lists[$v['count']]['_id'] = $v['count'];
                 }else{
                     $lists[$v['count']]['count'] += 1;
+                    $lists[$v['count']]['sum'] += $v['count'];
                 }
             }
-            $list = array_column($lists,null,'sum'); 
+
+
+
+            $list = array_column($lists,null,'_id'); 
             krsort($list);
             $list = array_values($list);
 
