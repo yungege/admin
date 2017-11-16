@@ -51,6 +51,13 @@ class Service_Sport_ActionModel extends BasePageService {
         $sort = ['createtime' => -1];
         
         $where = ['status' => ['$ne' => -9]];
+        if(!empty(trim($req['aname']))){
+            $where['$or'] = [
+                ['name' => ['$regex' => addslashes(trim($req['aname'])), '$options' => 'i']],
+                ['name' => ['$regex' => addslashes(trim($req['aname'])), '$options' => 'i']],
+            ];
+        }
+
         $options = [
             'limit' => self::PAGESIZE,
             'offset' => $offset,

@@ -20,9 +20,9 @@ class Dao_ExerciseactionModel extends Db_Mongodb {
     ];
 
     public static $type = [
-        1 => '计时锻炼',
-        2 => '计组数锻炼',
-        3 => '节拍锻炼',
+        1 => '计时',
+        2 => '计组',
+        3 => '节拍',
         4 => '休息',
     ];
 
