@@ -32,6 +32,14 @@ $(function(){
             this.table          = $('#charts-table');
 
             this.source         = $('input[name=source]');
+
+            // chartsDom声明
+            this.trainCount     = $('#trainCount');
+            this.trainTime      = $('#trainTime');
+            this.trainCal       = $('#trainCal');
+            this.doneRate       = $('#doneRate');
+            this.chartsDoms     = ['charts'];
+
         },
 
         getCity: function(){
@@ -160,7 +168,7 @@ $(function(){
                         else{
                             that.nextAll().remove();
                         }
-                    })
+                    });
                 }
                 else{
                     that.nextAll().remove();
@@ -216,6 +224,17 @@ $(function(){
                     endTime = Date.parse(new Date(me.endBtn.val()+' 00:00:00'))/1000,
                     source = $('input[type=\'radio\']:checked').val();
 
+                if(source == 1){
+                    me.trainCount.css('display','block');
+                    me.trainTime.css('display','block');    
+                    me.trainCal.css('display','block');
+                    me.doneRate.css('display','block');
+                }
+
+                if(source == 2 || source == 3){
+                    me.charts.css('display','block');
+                }
+
                 if(startTime > endTime){
                     alert('起始时间不能大于结束时间');
                 }
@@ -226,13 +245,38 @@ $(function(){
                     type: 'GET',
                     dataType: 'json',
                     success: function(json){
+
                         if(source== 1){
                             me.makeCharts(json.data);
+                            me.charts.css('display','none');
+                            $.each(json.data.unit,function(i,value){
+                                me.makeMixCharts(value);
+                                me.chartsDoms.push(value.chartsDom);
+                            });
+                            $.each(me.chartsDoms,function(index,value){ 
+                                var chartArea = document.getElementById(value);
+                                if(chartArea == null){
+                                    return false;
+                                }
+                                var myChart = echarts.init(chartArea);
+                                myChart.resize();
+                            });
                         }
                         else if(source == 2 || source == 3){
+                            var chartArea = document.getElementById('charts');
+                            if(chartArea == null){
+                                return false;
+                            }
+                            var myChart = echarts.init(chartArea);
+                            myChart.resize();
+
+                            me.chartsDoms.push(json.data.chartsDom);
                             me.makeMixCharts(json.data);
+                            me.trainCount.css('display','none');
+                            me.trainTime.css('display','none');    
+                            me.trainCal.css('display','none');
+                            me.doneRate.css('display','none');
                         }
-                        
                     },
                     beforeSend: function () {
                         if(ax != null) {
@@ -361,6 +405,7 @@ $(function(){
         },
 
         makeMixCharts: function(data){
+
             var me = this;
             var option = {
                 tooltip: {
@@ -403,12 +448,23 @@ $(function(){
                 ],
             };
 
-            var chartArea = document.getElementById('charts');
+            var chartArea = document.getElementById(data.chartsDom);
+            if(chartArea == null){
+                return false;
+            }
+
             var myChart = echarts.init(chartArea);
             myChart.clear();
             myChart.setOption(option);
             window.onresize = function (){
-                myChart.resize();
+                $.each(me.chartsDoms,function(index,value){ 
+                    var chartArea = document.getElementById(value);
+                    if(chartArea == null){
+                        return false;
+                    }
+                    var myChart = echarts.init(chartArea);
+                    myChart.resize();
+                });
             }
 
             me.makeMixTable(data);

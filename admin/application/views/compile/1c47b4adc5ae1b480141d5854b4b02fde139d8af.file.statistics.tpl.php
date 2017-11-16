@@ -1,60 +1,12 @@
 <<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-10 14:37:48
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-16 10:17:42
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20431824205a05493c1fb408-90787100%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:5753930815a0cf546d48c02-87877064%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 =======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 15:36:10
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-16 10:45:05
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:16445579425a04056acd14d4-36564035%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-08 09:51:04
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3039713165a0263083646e3-75013811%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 14:40:20
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13542580395a03f8540f4715-36112602%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 14:34:50
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19902074625a03f70a999bc0-10958126%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 14:42:07
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2483195075a03f8bfada315-74584662%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 13:28:26
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:14122877375a03e77a8a82b3-91268268%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 13:28:56
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20076093155a03e79803a6b0-43122710%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 13:32:16
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8238029295a03e860429315-24907336%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 13:00:35
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3433153755a03e0f3ac7cd8-98503902%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 477de49e81745627da6b97f4b9d5a6919ef9f356
->>>>>>> 4b2f9535513b1fadff357780114b8698dd5e2cbc
->>>>>>> 97019833356a499af94d76893b3b14d31a1923de
->>>>>>> 62ecb0c882012f5f28f9968d459b6ea2189edb5e
->>>>>>> 7dc6bc82b5998f16d147f42acb10effd309bbfba
->>>>>>> 04e91c14135f75e1885684934b07b9f36bd1415d
->>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
->>>>>>> 2c9bccad9630198ac05413d1a19f8f392c569908
->>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
+<?php /*%%SmartyHeaderCode:13060412985a0cfbb134d165-74537507%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> fc0e1fb27c4c66686eab7326fd65a219531670cc
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -62,98 +14,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
 <<<<<<< HEAD
-      1 => 1510203609,
+      1 => 1510737541,
 =======
-<<<<<<< HEAD
-      1 => 1510203530,
-=======
-<<<<<<< HEAD
-      1 => 1509080121,
-=======
-<<<<<<< HEAD
-      1 => 1510203609,
-=======
-<<<<<<< HEAD
-      1 => 1510203530,
-=======
-<<<<<<< HEAD
-      1 => 1510132738,
-=======
-<<<<<<< HEAD
-      1 => 1510203530,
-=======
-<<<<<<< HEAD
-      1 => 1510132738,
-=======
-      1 => 1510203609,
->>>>>>> 477de49e81745627da6b97f4b9d5a6919ef9f356
->>>>>>> 97019833356a499af94d76893b3b14d31a1923de
->>>>>>> 62ecb0c882012f5f28f9968d459b6ea2189edb5e
->>>>>>> 7dc6bc82b5998f16d147f42acb10effd309bbfba
->>>>>>> 04e91c14135f75e1885684934b07b9f36bd1415d
->>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
->>>>>>> 2c9bccad9630198ac05413d1a19f8f392c569908
->>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
+      1 => 1510737263,
+>>>>>>> fc0e1fb27c4c66686eab7326fd65a219531670cc
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      1 => 1510105483,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '3039713165a0263083646e3-75013811',
-=======
-<<<<<<< HEAD
->>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
       1 => 1510105563,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '20431824205a05493c1fb408-90787100',
-=======
-  'nocache_hash' => '13542580395a03f8540f4715-36112602',
-=======
-      1 => 1510105524,
-      2 => 'file',
-    ),
-  ),
-<<<<<<< HEAD
-  'nocache_hash' => '16445579425a04056acd14d4-36564035',
-=======
-<<<<<<< HEAD
-  'nocache_hash' => '19902074625a03f70a999bc0-10958126',
-=======
-  'nocache_hash' => '14122877375a03e77a8a82b3-91268268',
+  'nocache_hash' => '5753930815a0cf546d48c02-87877064',
 =======
       1 => 1510202574,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '2483195075a03f8bfada315-74584662',
-=======
-<<<<<<< HEAD
-  'nocache_hash' => '20076093155a03e79803a6b0-43122710',
-=======
-<<<<<<< HEAD
-  'nocache_hash' => '8238029295a03e860429315-24907336',
-=======
-  'nocache_hash' => '3433153755a03e0f3ac7cd8-98503902',
->>>>>>> 477de49e81745627da6b97f4b9d5a6919ef9f356
->>>>>>> 4b2f9535513b1fadff357780114b8698dd5e2cbc
->>>>>>> 97019833356a499af94d76893b3b14d31a1923de
->>>>>>> 62ecb0c882012f5f28f9968d459b6ea2189edb5e
->>>>>>> 7dc6bc82b5998f16d147f42acb10effd309bbfba
->>>>>>> 04e91c14135f75e1885684934b07b9f36bd1415d
->>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
->>>>>>> 2c9bccad9630198ac05413d1a19f8f392c569908
->>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
+  'nocache_hash' => '13060412985a0cfbb134d165-74537507',
+>>>>>>> fc0e1fb27c4c66686eab7326fd65a219531670cc
   'function' => 
   array (
   ),
@@ -172,62 +54,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
-  'unifunc' => 'content_5a05493c3eb339_03147680',
+  'unifunc' => 'content_5a0cf546e7f860_04499180',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a05493c3eb339_03147680')) {function content_5a05493c3eb339_03147680($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a0cf546e7f860_04499180')) {function content_5a0cf546e7f860_04499180($_smarty_tpl) {?><!DOCTYPE html>
 =======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a04056ad2e8d8_98852977',
+  'unifunc' => 'content_5a0cfbb13ea6b2_54586688',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a04056ad2e8d8_98852977')) {function content_5a04056ad2e8d8_98852977($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a0263083b3648_22854141',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0263083b3648_22854141')) {function content_5a0263083b3648_22854141($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a03f85422b870_50085712',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a03f85422b870_50085712')) {function content_5a03f85422b870_50085712($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a03f70a9f5f94_56826898',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a03f70a9f5f94_56826898')) {function content_5a03f70a9f5f94_56826898($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a03f8bfb5e793_09504512',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a03f8bfb5e793_09504512')) {function content_5a03f8bfb5e793_09504512($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a03e77a905206_24427199',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a03e77a905206_24427199')) {function content_5a03e77a905206_24427199($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a03e7981b7f08_70822456',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a03e7981b7f08_70822456')) {function content_5a03e7981b7f08_70822456($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a03e8604e1cf4_03718991',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a03e8604e1cf4_03718991')) {function content_5a03e8604e1cf4_03718991($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5a03e0f3c0d4a6_75808052',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a03e0f3c0d4a6_75808052')) {function content_5a03e0f3c0d4a6_75808052($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 477de49e81745627da6b97f4b9d5a6919ef9f356
->>>>>>> 4b2f9535513b1fadff357780114b8698dd5e2cbc
->>>>>>> 97019833356a499af94d76893b3b14d31a1923de
->>>>>>> 62ecb0c882012f5f28f9968d459b6ea2189edb5e
->>>>>>> 7dc6bc82b5998f16d147f42acb10effd309bbfba
->>>>>>> 04e91c14135f75e1885684934b07b9f36bd1415d
->>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
->>>>>>> 2c9bccad9630198ac05413d1a19f8f392c569908
->>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
+<?php if ($_valid && !is_callable('content_5a0cfbb13ea6b2_54586688')) {function content_5a0cfbb13ea6b2_54586688($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> fc0e1fb27c4c66686eab7326fd65a219531670cc
 <html lang="en">
 
 <head>
@@ -322,6 +156,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     margin-left: 5px;
     text-decoration: underline;
 }
+#ty + div{
+    margin:0px;
+    border:0px;
+    padding:0px;
+}
+
 </style>
 
 </head>
@@ -550,14 +390,40 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
      <div class="col-md-12">
         <form name ="form">
         <ul class="list-unstyled" style="border:1px solid #ddd;overflow:hidden;padding:20px;border-radius: 5px;">
+
             <li id="ty" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
-                <p><strong>类型：</strong></p>
-                <select class="form-control" id="type" name="type" style="margin-bottom:15px;width: 110px;float: left;">
-                    <!-- <option value="-1">全部</option> -->
-                    <option value="1" selected="selected">正常锻炼</option>
-                    <option value="2">校外替换</option>
-                </select>
+                <div class="row">
+                    <div class="col-md-2"> 
+                        <p><strong>锻炼类型：</strong></p>
+                        <select class="form-control" id="type" name="type" style="margin-bottom:15px;width: 110px;float: left;">
+                            <option value="-1" selected="selected">全部</option>
+                            <option value="1">正常锻炼</option>
+                            <option value="2">校外打卡</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <p><strong>查询时间单位：</strong></p>
+                        <select class="form-control" id="timeStype" name="timeStype" style="margin-bottom:15px;width: 110px;float: left;">
+                            <!-- <option value="-1">全部</option> -->
+                            <option value="1" selected="selected">每日</option>
+                            <option value="2">每周</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group" style="border-bottom:1px ;overflow:hidden;margin-bottom:10px;">
+                            <p><strong>时间维度：</strong></p>
+                            <div class="input-group">
+                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initStart'];?>
+" data-type="time" id="date_start" name="start" type="text" class="form-control date_start date" data-date-format="yyyy-mm-dd"/>
+                                <div class="input-group-addon" style="border-left: 0;border-right: 0;"> 至 </div>
+                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initEnd'];?>
+" data-type="time" id="date_end" name="end" type="text" class="form-control date_end date" data-date-format="yyyy-mm-dd"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </li>
+                
             <li id="kj" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
                 <p><strong>空间维度：</strong></p>
                 <select class="form-control" id="province" name="province" style="margin-bottom:15px;width: 110px;float: left;">
@@ -572,22 +438,6 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </option>
                     <?php } ?>
                 </select>
-            </li>
-            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label class="control-label">时间维度：</label>
-                            <div class="input-group">
-                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initStart'];?>
-" data-type="time" id="date_start" name="start" type="text" class="form-control date_start date" data-date-format="yyyy-mm-dd"/>
-                                <div class="input-group-addon" style="border-left: 0;border-right: 0;"> 至 </div>
-                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initEnd'];?>
-" data-type="time" id="date_end" name="end" type="text" class="form-control date_end date" data-date-format="yyyy-mm-dd"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </li>
 
             <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
@@ -626,6 +476,21 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 
                 </table>
             </div>
+
+            <div id="trainCount" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
+
+            </div>
+            <div id="trainTime" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
+
+            </div>
+            <div id="trainCal" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
+
+            </div>
+            <div id="doneRate" style="height:450px;width:100%;border:1px solid #ddd;margin-bottom:15px;line-height: 450px;text-align: center;">
+
+            </div>
+
+
         </div>
     </div>
 </div>
