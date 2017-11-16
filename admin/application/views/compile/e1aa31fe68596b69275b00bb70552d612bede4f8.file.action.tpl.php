@@ -1,51 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-10 11:14:42
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-16 10:53:21
          compiled from "/var/www/admin/admin/application/views/template/sport/action.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6864871825a0519a2b9f937-53236975%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-10 11:08:37
-         compiled from "/var/www/admin/admin/application/views/template/sport/action.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15274831835a051835dfb760-31777484%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-09 14:11:46
-         compiled from "/var/www/admin/admin/application/views/template/sport/action.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:16924391355a03f1a224bf24-42837859%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
->>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
+<?php /*%%SmartyHeaderCode:11881869675a0cfda129e6d8-22103649%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e1aa31fe68596b69275b00bb70552d612bede4f8' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/action.tpl',
-<<<<<<< HEAD
-      1 => 1509080121,
-=======
-      1 => 1509502905,
->>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
+      1 => 1510800799,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
       1 => 1510105483,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '15274831835a051835dfb760-31777484',
-=======
-      1 => 1510105563,
-      2 => 'file',
-    ),
-  ),
-<<<<<<< HEAD
-  'nocache_hash' => '6864871825a0519a2b9f937-53236975',
-=======
-  'nocache_hash' => '16924391355a03f1a224bf24-42837859',
->>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
->>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
+  'nocache_hash' => '11881869675a0cfda129e6d8-22103649',
   'function' => 
   array (
   ),
@@ -63,21 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a0519a2d0d1b7_15601624',
+  'unifunc' => 'content_5a0cfda133f8c5_43247243',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0519a2d0d1b7_15601624')) {function content_5a0519a2d0d1b7_15601624($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a051835e567d2_90257022',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a051835e567d2_90257022')) {function content_5a051835e567d2_90257022($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-  'unifunc' => 'content_5a03f1a23c9f97_98033967',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a03f1a23c9f97_98033967')) {function content_5a03f1a23c9f97_98033967($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> de5bb599fc71291f5f33cae2fcbde249f7d971f3
->>>>>>> f305acd31a2fc5b45559ee3228d1aed20b284e42
+<?php if ($_valid && !is_callable('content_5a0cfda133f8c5_43247243')) {function content_5a0cfda133f8c5_43247243($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -404,6 +364,31 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                 
 <div class="row">
     <div class="col-lg-12">
+        <form method="get" >
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="form-horizontal row">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <label class="col-md-4 control-label" style="text-align: left;">动作名称：</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="aname" class="input-sm form-control" value="<?php echo $_GET['aname'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
+                            <button class="btn btn-warning btn-sm reset-btn" type="button">清除条件</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped text-center">
                 <thead>
@@ -415,8 +400,8 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                         <th class="text-center">文件大小</th>
                         <th class="text-center">耗时（单次）</th>
                         <th class="text-center">能量（单次）</th>
-                        <th class="text-center">年级难度</th>
-                        <th class="text-center">检测项目</th>
+                        <!-- <th class="text-center">年级难度</th> -->
+                        <!-- <th class="text-center">检测项目</th> -->
                         <th class="text-center" style="width:300px;">描述</th>
                         <th class="text-center">创建人</th>
                         <th class="text-center">创建时间</th>
@@ -448,7 +433,7 @@ MB</td>
 秒</td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['calorie'];?>
 千卡</td>
-                        <td>
+                        <!-- <td>
                             <?php if ($_smarty_tpl->tpl_vars['row']->value['gradedifficulty']){?>
                                 <ul>
                                 <?php  $_smarty_tpl->tpl_vars['fid'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['fid']->_loop = false;
@@ -464,9 +449,9 @@ $_smarty_tpl->tpl_vars['fid']->_loop = true;
                                 <?php } ?>
                                 </ul>
                             <?php }?>
-                        </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['physicalquality'];?>
-</td>
+                        </td> -->
+                        <!-- <td><?php echo $_smarty_tpl->tpl_vars['row']->value['physicalquality'];?>
+</td> -->
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['describe'];?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['createor'];?>
@@ -496,10 +481,6 @@ $_smarty_tpl->tpl_vars['fid']->_loop = true;
 <div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
     <div class="modal-dialog" role="document" style="margin-top:7%;">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabel">动作视频</h4>
-            </div>
             <div class="modal-body" id="display-body">
                 
             </div>
@@ -538,21 +519,21 @@ $_smarty_tpl->tpl_vars['fid']->_loop = true;
 
     
 <script type="text/javascript">
-    function del(el){
-        if(!confirm('确定要删除该动作？')) return false;
+    // function del(el){
+    //     if(!confirm('确定要删除该动作？')) return false;
 
-        var id = $(el).data('id');
-        if(!id) return false;
+    //     var id = $(el).data('id');
+    //     if(!id) return false;
 
-        $.post('/sport/actionDel',{'id':id},function(json){
-            if(json.errCode == 0){
-                window.location.reload();
-            }
-            else{
-                alert('删除失败.');
-            }
-        });
-    }
+    //     $.post('/sport/actionDel',{'id':id},function(json){
+    //         if(json.errCode == 0){
+    //             window.location.reload();
+    //         }
+    //         else{
+    //             alert(json.errMessage ? : '删除失败.');
+    //         }
+    //     });
+    // }
 
     var video = {
         init: function () {
@@ -564,6 +545,7 @@ $_smarty_tpl->tpl_vars['fid']->_loop = true;
             this.disBtn = $('.video');
             this.videoTitle = $('#modalLabel');
             this.videoUri = $('#display-body');
+            this.showVoiceBoxBtn = $('.add-voice');
         },
 
         display: function () {
