@@ -253,6 +253,14 @@ $(function(){
                                 me.makeMixCharts(value);
                                 me.chartsDoms.push(value.chartsDom);
                             });
+                            $.each(me.chartsDoms,function(index,value){ 
+                                var chartArea = document.getElementById(value);
+                                if(chartArea == null){
+                                    return false;
+                                }
+                                var myChart = echarts.init(chartArea);
+                                myChart.resize();
+                            });
                         }
                         else if(source == 2 || source == 3){
                             var chartArea = document.getElementById('charts');

@@ -166,6 +166,7 @@
                         <th>原始时间</th>
                         <th>是否补交</th>
                         <th>作业图片</th>
+                        <!-- <th>运动感想</th> -->
                         <th>是否分享</th>
                         <th>操作</th>
                     </tr>
@@ -188,6 +189,9 @@
                         <td>{%$row.originaltime|date_format:"%Y-%m-%d"%}</td>
                         <td>{%if $row.isdelay == 2%}<span class="label label-danger">是</span>{%else%}<span class="label label-default">否</span>{%/if%}</td>
                         <td>{%if $row.exciseimg != 1%}<button data-id="{%$row._id%}" data-htype="{%$row.htype%}" class="btn btn-sm btn-info btn_picture">查看</button>{%/if%}</td>
+
+                        <!-- <td>感想查看</td> -->
+
                         <td>{%if $row.htype != 3 and $row.share == 1%}<button data-userid="{%$row.userid%}" data-id="{%$row._id%}" class="btn btn-sm btn-info btn_share">查看</button>{%/if%}</td>     
                         <td>
                         {%if $row.mark == null%}<button data-userid="{%$row.userid%}" data-id="{%$row._id%}" data-mark="{%$row.mark%}" class="btn btn-sm btn-info btn_mark">点评</button>
