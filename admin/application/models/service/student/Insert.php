@@ -34,15 +34,6 @@ class Service_Student_InsertModel extends BasePageService {
 			empty($req['username']) ||
 			empty($req['birthday']) ||
 			!strtotime($req['birthday']) ||
-<<<<<<< HEAD
-	//		empty($req['sex']) ||
-=======
-<<<<<<< HEAD
-	//		empty($req['sex']) ||
-=======
-			// empty($req['sex']) ||
->>>>>>> 6a458b29c95397511f5674c2a53df40fdef08b8e
->>>>>>> 56c9bb418d48cd9f4e8c75630650715e9f0bdfd3
 			!preg_match('/^[0-1]$/',$req['sex'])
 			){
 			$this->errNo = REQUEST_PARAMS_ERROR;
