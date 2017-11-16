@@ -26,6 +26,30 @@
 {%block name="content"%}
 <div class="row">
     <div class="col-lg-12">
+        <form method="get" >
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="form-horizontal row">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <label class="col-md-4 control-label" style="text-align: left;">动作名称：</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="aname" class="input-sm form-control" value="{%$smarty.get.aname%}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
+                            <button class="btn btn-warning btn-sm reset-btn" type="button">清除条件</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped text-center">
                 <thead>
@@ -37,8 +61,8 @@
                         <th class="text-center">文件大小</th>
                         <th class="text-center">耗时（单次）</th>
                         <th class="text-center">能量（单次）</th>
-                        <th class="text-center">年级难度</th>
-                        <th class="text-center">检测项目</th>
+                        <!-- <th class="text-center">年级难度</th> -->
+                        <!-- <th class="text-center">检测项目</th> -->
                         <th class="text-center" style="width:300px;">描述</th>
                         <th class="text-center">创建人</th>
                         <th class="text-center">创建时间</th>
@@ -58,7 +82,7 @@
                         <td>{%$row.vfilesize%}MB</td>
                         <td>{%$row.singletime%}秒</td>
                         <td>{%$row.calorie%}千卡</td>
-                        <td>
+                        <!-- <td>
                             {%if $row.gradedifficulty%}
                                 <ul>
                                 {%foreach from=$row.gradedifficulty key=grade item=fid%}
@@ -66,8 +90,8 @@
                                 {%/foreach%}
                                 </ul>
                             {%/if%}
-                        </td>
-                        <td>{%$row.physicalquality%}</td>
+                        </td> -->
+                        <!-- <td>{%$row.physicalquality%}</td> -->
                         <td>{%$row.describe%}</td>
                         <td>{%$row.createor%}</td>
                         <td>{%$row.createtime|date_format:"%Y-%m-%d"%}<br/>{%$row.createtime|date_format:"%H:%M:%S"%}</td>
@@ -91,10 +115,6 @@
 <div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
     <div class="modal-dialog" role="document" style="margin-top:7%;">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabel">动作视频</h4>
-            </div>
             <div class="modal-body" id="display-body">
                 
             </div>
@@ -106,21 +126,21 @@
 
 {%block name="js"%}
 <script type="text/javascript">
-    function del(el){
-        if(!confirm('确定要删除该动作？')) return false;
+    // function del(el){
+    //     if(!confirm('确定要删除该动作？')) return false;
 
-        var id = $(el).data('id');
-        if(!id) return false;
+    //     var id = $(el).data('id');
+    //     if(!id) return false;
 
-        $.post('/sport/actionDel',{'id':id},function(json){
-            if(json.errCode == 0){
-                window.location.reload();
-            }
-            else{
-                alert('删除失败.');
-            }
-        });
-    }
+    //     $.post('/sport/actionDel',{'id':id},function(json){
+    //         if(json.errCode == 0){
+    //             window.location.reload();
+    //         }
+    //         else{
+    //             alert(json.errMessage ? : '删除失败.');
+    //         }
+    //     });
+    // }
 
     var video = {
         init: function () {
@@ -132,6 +152,7 @@
             this.disBtn = $('.video');
             this.videoTitle = $('#modalLabel');
             this.videoUri = $('#display-body');
+            this.showVoiceBoxBtn = $('.add-voice');
         },
 
         display: function () {

@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-15 11:28:14
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-15 18:21:50
          compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:14858778535a0bb44e8d5556-91946231%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:13777675665a0c153e051783-94200890%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14858778535a0bb44e8d5556-91946231',
+  'nocache_hash' => '13777675665a0c153e051783-94200890',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a0bb44ea30e49_52321281',
+  'unifunc' => 'content_5a0c153e1b77d2_08924517',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0bb44ea30e49_52321281')) {function content_5a0bb44ea30e49_52321281($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a0c153e1b77d2_08924517')) {function content_5a0c153e1b77d2_08924517($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
