@@ -6,6 +6,7 @@ class Dao_ExerciseProjectSkuModel extends Db_Mongodb {
     protected $fields = [
         'project_name'  => '',      // 名称
         'project_id'    => '',      // 所属项目
+        'project_desc'  => '',      // 介绍
         'recommend'     => 0,       // 是否推荐
         'vfilesize'     => 0.00,    // 项目文件大小
         'time_cost'     => 0,       // 项目所需时间（s）
@@ -14,6 +15,7 @@ class Dao_ExerciseProjectSkuModel extends Db_Mongodb {
         'difficulty'    => 0,       // 难度 -1无难度，0低，1中，2高
         'action_info'   => [],      // 项目动作组合 ["action_id","action_time","action_groupno","calorie"]
         'type'          => 0,       // 1室内 2户外
+        'up_num'        => 0,       // 点赞数
     ];
 
     protected $actionModel;

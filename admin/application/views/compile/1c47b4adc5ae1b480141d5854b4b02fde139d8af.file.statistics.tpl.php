@@ -1,23 +1,37 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-17 13:27:01
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11477938275a0e73256477b5-53055800%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-16 17:47:30
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:11063357415a0d5eb2798ba4-15842441%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 7fae2b103dbff98612a1f9c937df54c1f8bd948f
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1510737541,
+      1 => 1510737528,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1510105563,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '11477938275a0e73256477b5-53055800',
+=======
+      1 => 1510105524,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '11063357415a0d5eb2798ba4-15842441',
+>>>>>>> 7fae2b103dbff98612a1f9c937df54c1f8bd948f
   'function' => 
   array (
   ),
@@ -35,9 +49,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a0e732577e2f1_07271300',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a0e732577e2f1_07271300')) {function content_5a0e732577e2f1_07271300($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a0d5eb28085e1_85673651',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a0d5eb28085e1_85673651')) {function content_5a0d5eb28085e1_85673651($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 7fae2b103dbff98612a1f9c937df54c1f8bd948f
 <html lang="en">
 
 <head>
