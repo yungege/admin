@@ -11,5 +11,8 @@ class MeauController extends Yaf_Controller_Abstract{
         'url'       => 'actions/meau/Url.php',
         'assginurl' => 'actions/meau/AssginUrl.php',
         'adduri'    => 'actions/meau/AddUri.php',
+        'showrole'  => 'actions/meau/ShowRole.php',
+        'addadmin'  => 'actions/meau/AddAdmin.php',
+        'deladmin'  => 'actions/meau/DelAdmin.php',
         );
 }

@@ -1,9 +1,10 @@
-<?php
+l<?php
 class Service_Meau_AdminModel extends BasePageService {
 
     protected $roleModel;
     protected $userModel;
     protected $assginModel;
+    protected $adminModel;
 
     protected $reqData;
     protected $resData = [
@@ -15,6 +16,7 @@ class Service_Meau_AdminModel extends BasePageService {
         $this->roleModel = Dao_RoleModel::getInstance();
         $this->userModel = Dao_UserModel::getInstance();
         $this->assginModel = Dao_RoleAssginModel::getInstance();
+        $this->adminModel = Dao_BackendAdminModel::getInstance();
     }
 
     protected function __declare() {
@@ -22,7 +24,9 @@ class Service_Meau_AdminModel extends BasePageService {
     }
 
     protected function __execute($req) {
-        $adminList = BackendAdmin::listAdmin();
+        // $adminList = BackendAdmin::listAdmin();
+        $adminList = $this->adminModel->query([],['limit'=>0]);
+        $adminList = array_column($adminList,'mobileno','userid');
         if(empty($adminList)) return $this->resData;
 
         $userList = $this->userModel->batchGetUserInfoByUserids(
