@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-16 14:48:27
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-17 14:40:59
          compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:16087260065a0d34bb74cce3-12026214%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:5133644235a0e847bc8dc02-24802256%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1d8e04a89d68bf3e9905973d00de2e54d91741e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/project/addsku.tpl',
-      1 => 1510286907,
+      1 => 1510899453,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16087260065a0d34bb74cce3-12026214',
+  'nocache_hash' => '5133644235a0e847bc8dc02-24802256',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a0d34bb7cc297_54953653',
+  'unifunc' => 'content_5a0e847bcf0d07_09890400',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0d34bb7cc297_54953653')) {function content_5a0d34bb7cc297_54953653($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a0e847bcf0d07_09890400')) {function content_5a0e847bcf0d07_09890400($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -512,6 +512,15 @@ $_smarty_tpl->tpl_vars['re']->_loop = true;
 </div>
 
 <div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="desc">方案简介：</label><br/>
+            <textarea id="desc" class="form-control" rows="3" name="desc"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
     <div class="col-lg-12">
         <form class="form-inline" name="sku">
             <div class="form-group">
@@ -534,7 +543,7 @@ $_smarty_tpl->tpl_vars['darr']->_loop = true;
                 </select>
             </div>
             <input type="hidden" name="project_id" value="<?php echo $_smarty_tpl->tpl_vars['project']->value['_id'];?>
-">
+">&emsp;
             <button type="button" id="addSkuBtn" class="btn btn-md btn-primary">确认提交</button>
         </form>
     </div>

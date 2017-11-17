@@ -152,6 +152,15 @@
 </div>
 
 <div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="desc">方案简介：</label><br/>
+            <textarea id="desc" class="form-control" rows="3" name="desc"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
     <div class="col-lg-12">
         <form class="form-inline" name="sku">
             <div class="form-group">
@@ -167,7 +176,7 @@
                     {%/if%}
                 </select>
             </div>
-            <input type="hidden" name="project_id" value="{%$project._id%}">
+            <input type="hidden" name="project_id" value="{%$project._id%}">&emsp;
             <button type="button" id="addSkuBtn" class="btn btn-md btn-primary">确认提交</button>
         </form>
     </div>

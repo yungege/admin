@@ -32,6 +32,8 @@ $(function(){
             this.fixIntWrmp         = $('.fix-int-wrmp');
             this.actionNameSpan     = $('#actionNameSpan');
 
+            this.descArea           = $('#desc');
+
             this.dialogDom          = {};
         },
         searchAction: function(){
@@ -235,6 +237,12 @@ $(function(){
                     return false;
                 }
 
+                var descInfo = $.trim(me.descArea.val());
+                if(!descInfo){
+                    me.alertMsg('请输入方案简介.', 'dialog6');
+                    return false;
+                }
+
                 var difficulty = $('select[name=difficulty]').val(),
                     projectId = $('input[name=project_id]').val();
 
@@ -247,6 +255,7 @@ $(function(){
                     'actionList' : selectedActions,
                     'project_id' : projectId,
                     'difficulty' : difficulty,
+                    'project_desc': descInfo,
                 }, function(json){
                     if(json.errCode == 0){
                         window.location = '/sport/p/'+projectId+'.html';
