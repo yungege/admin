@@ -30,6 +30,7 @@ class Service_Project_AddSkuModel extends BasePageService {
 
     protected function __execute($req) {
         $req = $req['post'];
+        $this->checkXss($req);
 
         $this->checkParams($req);
 
@@ -44,7 +45,8 @@ class Service_Project_AddSkuModel extends BasePageService {
         if(
             !preg_match("/\w+/", $req['project_id']) ||
             !isset(self::$difficultyArr[$req['difficulty']]) ||
-            empty($req['actionList'])
+            empty($req['actionList']) ||
+            empty($req['project_desc'])
         ){
             throw new Exception('', REQUEST_PARAMS_ERROR);
         }
@@ -108,6 +110,7 @@ class Service_Project_AddSkuModel extends BasePageService {
         $req['difficulty'] = (int)$req['difficulty'];
         $req['project_name'] = $proInfo['name'];
         $req['type'] = (int)$proInfo['type'];
+        $req['project_desc'] = str_replace(PHP_EOL, '', $req['project_desc']);
 
         unset($req['actionList']);
     }

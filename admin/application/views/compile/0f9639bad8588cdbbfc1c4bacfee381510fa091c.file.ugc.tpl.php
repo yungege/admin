@@ -1,23 +1,33 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-16 10:50:14
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-17 14:07:24
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13356010725a0cfce6882f65-13240771%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:4371241655a0e7c9c72de04-01864104%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-17 11:35:27
+         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:11841854535a0e58ff9e67b6-98257434%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 7fae2b103dbff98612a1f9c937df54c1f8bd948f
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-      1 => 1510800422,
+      1 => 1510800819,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+      1 => 1510105483,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13356010725a0cfce6882f65-13240771',
+<<<<<<< HEAD
+  'nocache_hash' => '4371241655a0e7c9c72de04-01864104',
+=======
+  'nocache_hash' => '11841854535a0e58ff9e67b6-98257434',
+>>>>>>> 7fae2b103dbff98612a1f9c937df54c1f8bd948f
   'function' => 
   array (
   ),
@@ -35,9 +45,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a0cfce6a64ce4_81154312',
+<<<<<<< HEAD
+  'unifunc' => 'content_5a0e7c9c9f4ea3_64187100',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0cfce6a64ce4_81154312')) {function content_5a0cfce6a64ce4_81154312($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a0e7c9c9f4ea3_64187100')) {function content_5a0e7c9c9f4ea3_64187100($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_5a0e58ffacf008_16508193',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a0e58ffacf008_16508193')) {function content_5a0e58ffacf008_16508193($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 7fae2b103dbff98612a1f9c937df54c1f8bd948f
 ?><!DOCTYPE html>
 <html lang="en">
 
