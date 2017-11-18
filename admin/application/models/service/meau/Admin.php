@@ -25,7 +25,7 @@ class Service_Meau_AdminModel extends BasePageService {
 
     protected function __execute($req) {
         // $adminList = BackendAdmin::listAdmin();
-        $adminList = $this->adminModel->query([],['limit'=>0]);
+        $adminList = $this->adminModel->query(['name' => ['$ne' => 'superadmin']],['limit'=>0]);
         $adminList = array_column($adminList,'mobileno','userid');
         if(empty($adminList)) return $this->resData;
 
