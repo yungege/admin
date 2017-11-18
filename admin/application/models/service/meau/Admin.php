@@ -34,6 +34,7 @@ class Service_Meau_AdminModel extends BasePageService {
         );
 
         $assginList = $this->assginModel->query([],['limit'=>0]);
+
         if(!empty($assginList)){
             $assginList = array_column($assginList, null, 'uid');
 
