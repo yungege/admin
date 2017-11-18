@@ -36,7 +36,9 @@ class Service_Meau_AllotRoleModel extends BasePageService {
         }
 
         $list = $this->roleModel->query(
-            ['status' => 1],
+            [   'status' => 1,
+                'name' => ['$ne' => 'superadmin'],
+            ],
             [
                 'sort' => [
                     'ctime' => 1

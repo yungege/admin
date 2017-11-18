@@ -19,6 +19,13 @@ class Service_Meau_DelAdminModel extends BasePageService {
     	$req = $req['post'];
     	$userid = $req['userid'];
 
+    	$result = $this->roleAssginModel->queryOne(['uid' =>$userid]);
+
+    	if($result['rid'] == "5a0e835f2e75db228f0c5571"){
+    		$this->errNo = -1;
+    		return ;
+    	}
+
     	if(empty($userid) || !preg_match("/\w+/",$userid)){
     		$this->errNo = -1;
     		return ;

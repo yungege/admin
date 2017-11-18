@@ -149,9 +149,11 @@ $(function(){
                 var data = 'userid=' + userid;
                 $.post('/meau/deladmin',data,function(json){
 
-                    if(json.errCode == -1){
+                    if(json.errCode != 0){
                         alert("删除失败");
-                    }else{
+                    }
+
+                    if(json.errCode == 0){
                         alert("删除成功");
                         window.location.href = "/meau/admin";
                     }
@@ -207,7 +209,7 @@ $(function(){
                 me.checkParams();
                 $.post('/meau/addadmin',data,function(json){
 
-                    if(json.errCode == -1){
+                    if(json.errCode == 0){
                         alert('添加成功');
                         window.location.href = "/meau/admin";
                     }else{

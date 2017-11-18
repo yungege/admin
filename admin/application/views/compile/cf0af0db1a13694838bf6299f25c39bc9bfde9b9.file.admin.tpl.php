@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-18 09:50:18
          compiled from "/var/www/admin/admin/application/views/template/meau/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17644035685a0f91dae9b2c8-57647706%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-18 13:48:37
+         compiled from "/var/www/admin/admin/application/views/template/meau/admin.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2041543425a0fc9b54cfd18-17558334%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 0af7315cc7817d6704f4aa3133eb360cdea30280
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'cf0af0db1a13694838bf6299f25c39bc9bfde9b9' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/meau/admin.tpl',
+<<<<<<< HEAD
       1 => 1510901898,
+=======
+      1 => 1510902593,
+>>>>>>> 0af7315cc7817d6704f4aa3133eb360cdea30280
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +27,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '17644035685a0f91dae9b2c8-57647706',
+=======
+  'nocache_hash' => '2041543425a0fc9b54cfd18-17558334',
+>>>>>>> 0af7315cc7817d6704f4aa3133eb360cdea30280
   'function' => 
   array (
   ),
@@ -35,9 +49,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a0f91daef8571_57636913',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a0f91daef8571_57636913')) {function content_5a0f91daef8571_57636913($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a0fc9b5577658_41138792',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a0fc9b5577658_41138792')) {function content_5a0fc9b5577658_41138792($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 0af7315cc7817d6704f4aa3133eb360cdea30280
 <html lang="en">
 
 <head>
@@ -523,9 +543,11 @@ $(function(){
                 var data = 'userid=' + userid;
                 $.post('/meau/deladmin',data,function(json){
 
-                    if(json.errCode == -1){
+                    if(json.errCode != 0){
                         alert("删除失败");
-                    }else{
+                    }
+
+                    if(json.errCode == 0){
                         alert("删除成功");
                         window.location.href = "/meau/admin";
                     }
@@ -581,7 +603,7 @@ $(function(){
                 me.checkParams();
                 $.post('/meau/addadmin',data,function(json){
 
-                    if(json.errCode == -1){
+                    if(json.errCode == 0){
                         alert('添加成功');
                         window.location.href = "/meau/admin";
                     }else{
