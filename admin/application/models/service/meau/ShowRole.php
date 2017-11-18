@@ -15,7 +15,10 @@ class Service_Meau_ShowRoleModel extends BasePageService {
 
     protected function __execute($req) {
         $list = $this->roleModel->query(
-            ['status' => 1],
+            [   'status' => 1,
+                'name' => ['$ne' => 'superadmin'],
+
+            ],
             [
                 'sort' => [
                     'ctime' => 1
