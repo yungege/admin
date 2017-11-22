@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-22 11:13:51
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:18982656205a14eb6fb5cbe0-56097236%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-22 10:53:54
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:16104025225a14e6c2e8e8f7-77969811%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-20 11:00:55
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13418501135a1245671f00b2-49566239%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -13,12 +23,20 @@
 <?php /*%%SmartyHeaderCode:3062867205a0fe848527bf7-75592830%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 >>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
 >>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+>>>>>>> 5c439634a14069b67ca364436214e4982cabc073
+>>>>>>> 635a1c7e14ae20ee73a1852dea9475703b0d60d9
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
+<<<<<<< HEAD
+      1 => 1510737528,
+=======
+<<<<<<< HEAD
+      1 => 1510737541,
+=======
 <<<<<<< HEAD
       1 => 1511087732,
 =======
@@ -28,16 +46,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       1 => 1510737263,
 >>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
 >>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+>>>>>>> 5c439634a14069b67ca364436214e4982cabc073
+>>>>>>> 635a1c7e14ae20ee73a1852dea9475703b0d60d9
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
 <<<<<<< HEAD
+      1 => 1510105524,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '18982656205a14eb6fb5cbe0-56097236',
+=======
       1 => 1510105563,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
+  'nocache_hash' => '16104025225a14e6c2e8e8f7-77969811',
+=======
   'nocache_hash' => '9164197875a13f25d353e68-67098100',
 =======
       1 => 1510202574,
@@ -50,6 +79,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '3062867205a0fe848527bf7-75592830',
 >>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
 >>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+>>>>>>> 5c439634a14069b67ca364436214e4982cabc073
+>>>>>>> 635a1c7e14ae20ee73a1852dea9475703b0d60d9
   'function' => 
   array (
   ),
@@ -68,6 +99,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
+  'unifunc' => 'content_5a14eb6fbbc772_70107163',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a14eb6fbbc772_70107163')) {function content_5a14eb6fbbc772_70107163($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a14e6c308fb20_26696520',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a14e6c308fb20_26696520')) {function content_5a14e6c308fb20_26696520($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
   'unifunc' => 'content_5a1245672acd82_45343032',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a1245672acd82_45343032')) {function content_5a1245672acd82_45343032($_smarty_tpl) {?><!DOCTYPE html>
@@ -82,6 +123,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_5a0fe8485c6e91_25869797')) {function content_5a0fe8485c6e91_25869797($_smarty_tpl) {?><!DOCTYPE html>
 >>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
 >>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+>>>>>>> 5c439634a14069b67ca364436214e4982cabc073
+>>>>>>> 635a1c7e14ae20ee73a1852dea9475703b0d60d9
 <html lang="en">
 
 <head>

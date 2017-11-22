@@ -1,27 +1,17 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-21 16:49:14
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-22 10:00:07
          compiled from "/var/www/admin/admin/application/views/template/user/register.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:14319619335a13e88a3b1045-25450054%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-18 16:07:56
-         compiled from "/var/www/admin/admin/application/views/template/user/register.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9136427705a0fea5cd3f857-02454146%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
+<?php /*%%SmartyHeaderCode:6239839465a14da27ac2a09-95677675%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '964f3af26c7a3e8387f937d6d4ca8a26b2834a4d' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/register.tpl',
-      1 => 1502419197,
+      1 => 1509502905,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '14319619335a13e88a3b1045-25450054',
-=======
-  'nocache_hash' => '9136427705a0fea5cd3f857-02454146',
->>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
+  'nocache_hash' => '6239839465a14da27ac2a09-95677675',
   'function' => 
   array (
   ),
@@ -31,15 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a13e88a3b52a0_49449602',
+  'unifunc' => 'content_5a14da27ac6d02_36024364',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a13e88a3b52a0_49449602')) {function content_5a13e88a3b52a0_49449602($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5a0fea5cd55d97_71561571',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0fea5cd55d97_71561571')) {function content_5a0fea5cd55d97_71561571($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
+<?php if ($_valid && !is_callable('content_5a14da27ac6d02_36024364')) {function content_5a14da27ac6d02_36024364($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
