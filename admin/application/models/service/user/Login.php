@@ -2,10 +2,12 @@
 class Service_User_LoginModel extends BasePageService {
 
 	protected $userModel;
+    protected $adminModel;
 
 	protected $reqData;
 	protected $resData;
 
+<<<<<<< HEAD
     private static $admin = [
         13522213145,
         13161486949,
@@ -17,9 +19,13 @@ class Service_User_LoginModel extends BasePageService {
         18010488953,
         18511693841,
     ];
+=======
+    private static $admin = [];
+>>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
 
     public function __construct() {
 		$this->userModel = Dao_UserModel::getInstance();
+        $this->adminModel = Dao_BackendAdminModel::getInstance();
     }
 
     protected function __declare() {
@@ -29,6 +35,10 @@ class Service_User_LoginModel extends BasePageService {
 
     protected function __execute($req) {
         $req = $req['post'];
+        $adminOptions['projection'] = ['mobileno' => 1];
+        $adminOptions['limit'] = 0;
+        $adminList = $this->adminModel->query([],$adminOptions);
+        self::$admin = array_column($adminList,'mobileno');
 
         $res = $this->doLogin($req);
         if(false === $res){
@@ -40,6 +50,8 @@ class Service_User_LoginModel extends BasePageService {
             $this->errNo = -2;
             return false;
         }
+
+       
 
         $_SESSION['userInfo'] = $res;
         $host = $_SERVER['SERVER_NAME'];
@@ -74,8 +86,8 @@ class Service_User_LoginModel extends BasePageService {
         $req['pwd'] = md5(substr($req['mob'], 1,8) . $req['pwd']);
 
         $userInfo = $this->userModel->queryOne([
-            'mobileno' => (int)$req['mob'],
-            ]);
+        'mobileno' => (int)$req['mob'],
+        ]);
 
         if(empty($userInfo)){
             return false;

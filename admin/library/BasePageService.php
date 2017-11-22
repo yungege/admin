@@ -247,6 +247,15 @@ class BasePageService {
 
         if(empty($_SESSION['userInfo']))
             return false;
+
+        $uid = $_SESSION['userInfo']['_id'];
+        $admin = Dao_BackendAdminModel::getInstance();
+        $user = $admin->queryOne(['userid' => $uid]);
+        if(empty($user)){
+            session_destroy();
+            return false;
+        }
+
         return true;
     }
 
