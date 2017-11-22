@@ -92,6 +92,7 @@ class Service_User_LoginModel extends BasePageService {
             'username' => $userInfo['username'],
             'profile' => $userInfo['profile'],
             'iconurl' => $userInfo['iconurl'],
+            'type' => $userInfo['type'],
         ];
 
         return $newUserInfo;

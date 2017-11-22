@@ -118,7 +118,7 @@ $(function(){
                     that = $(this);
         
                 if(schoolId != -1){
-                    $.get('/class/index?type=grade&schoolId='+schoolId, function(json){
+                    $.get('/class/index?type=grade&schoolId='+schoolId+'&stype=2', function(json){
                         if(json.data.gradeList.length != 0){
                             me.createSel(json.data.gradeList, 'grade');
                         }
@@ -140,7 +140,8 @@ $(function(){
                     that = $(this),
                     schoolId = $('#school').val();
                 if(grade != -1){
-                    $.get('/class/index?schoolId='+schoolId+'&grade='+grade, function(json){
+                    $.get('/class/index?schoolId='+schoolId+'&grade='+grade+'&stype=2', function(json){
+
                         if(json.data.classList.length != 0){
                             me.createSel(json.data.classList, 'class');
                         }

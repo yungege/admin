@@ -63,12 +63,28 @@
                 
             <li id="kj" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
                 <p><strong>空间维度：</strong></p>
+
+                {%if $data.type eq 1%}
                 <select class="form-control" id="province" name="province" style="margin-bottom:15px;width: 110px;float: left;">
                     <option value="-1">全部</option>
                     {%foreach from=$data.province item=row%}
                     <option value="{%$row._id%}">{%$row.name%}</option>
                     {%/foreach%}
                 </select>
+                {%else%}
+                <input id="school" name="school" type="hidden" value="{%$data.schoolid%}">
+                <select class="form-control" id="grade" name="grade" style="margin-bottom:15px;width: 110px;float: left;">
+                    <option value="-1">全部</option>
+                    {%foreach from=$data.grade item=row%}
+                    <option value="{%$row._id%}">{%$row.name%}</option>
+                    {%/foreach%}
+
+
+                    <!-- <option value="{%$data.schoolid%}"> {%$data.schoolname%} </option> -->
+                </select>
+                {%/if%}
+
+
             </li>
 
             <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
