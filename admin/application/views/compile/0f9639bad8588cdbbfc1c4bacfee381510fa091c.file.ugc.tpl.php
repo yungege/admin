@@ -1,51 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-19 15:32:31
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-22 11:00:59
          compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:4169207145a11338f41dd83-17171500%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-22 09:39:47
-         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19200875895a14d56304ac89-82123851%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-18 15:39:45
-         compiled from "/var/www/admin/admin/application/views/template/sport/ugc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12435625155a0fe3c12b4ad5-75152750%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
->>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+<?php /*%%SmartyHeaderCode:17241079975a14e86b417581-26283220%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f9639bad8588cdbbfc1c4bacfee381510fa091c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/ugc.tpl',
-<<<<<<< HEAD
-      1 => 1510800422,
-=======
-      1 => 1510739810,
->>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
+      1 => 1511319645,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1510105563,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '19200875895a14d56304ac89-82123851',
-=======
       1 => 1510202574,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '4169207145a11338f41dd83-17171500',
-=======
-  'nocache_hash' => '12435625155a0fe3c12b4ad5-75152750',
->>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
->>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+  'nocache_hash' => '17241079975a14e86b417581-26283220',
   'function' => 
   array (
   ),
@@ -63,21 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a11338f524e22_57862190',
+  'unifunc' => 'content_5a14e86b509405_18481077',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a11338f524e22_57862190')) {function content_5a11338f524e22_57862190($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a14d56322b999_96494047',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a14d56322b999_96494047')) {function content_5a14d56322b999_96494047($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-  'unifunc' => 'content_5a0fe3c1394ef2_66382666',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0fe3c1394ef2_66382666')) {function content_5a0fe3c1394ef2_66382666($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
->>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+<?php if ($_valid && !is_callable('content_5a14e86b509405_18481077')) {function content_5a14e86b509405_18481077($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -554,6 +514,7 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                         <th>结束时间</th>
                         <th>提交时间</th>
                         <th>原始时间</th>
+                        <th>锻炼感想</th>
                         <th>是否补交</th>
                         <th>作业图片</th>
                         <!-- <th>运动感想</th> -->
@@ -603,6 +564,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['originaltime'],"%Y-%m-%d");?>
 </td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['commenttext'];?>
+</td>
                         <td><?php if ($_smarty_tpl->tpl_vars['row']->value['isdelay']==2){?><span class="label label-danger">是</span><?php }else{ ?><span class="label label-default">否</span><?php }?></td>
                         <td><?php if ($_smarty_tpl->tpl_vars['row']->value['exciseimg']!=1){?><button data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-htype="<?php echo $_smarty_tpl->tpl_vars['row']->value['htype'];?>
@@ -612,7 +575,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 
                         <td><?php if ($_smarty_tpl->tpl_vars['row']->value['htype']!=3&&$_smarty_tpl->tpl_vars['row']->value['share']==1){?><button data-userid="<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
 " data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-sm btn-info btn_share">查看</button><?php }?></td>     
+" class="btn btn-sm btn-info btn_share">查看</button><?php }?></td> 
                         <td>
                         <?php if ($_smarty_tpl->tpl_vars['row']->value['mark']==null){?><button data-userid="<?php echo $_smarty_tpl->tpl_vars['row']->value['userid'];?>
 " data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>

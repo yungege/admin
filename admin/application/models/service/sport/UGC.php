@@ -87,6 +87,7 @@ class Service_Sport_UGCModel extends BasePageService {
             'endtime',
             'createtime',
             'burncalories',
+            'commenttext',
             'distance',
             'isdelay',
             'homeworkid',
@@ -117,10 +118,6 @@ class Service_Sport_UGCModel extends BasePageService {
         if($count > 0){
             $trainList = $this->trainModel->getListByPage($where, $fields, $options);
         }
-
-        // var_dump($count);
-        // var_dump($trainList);
-        // exit;
 
         if(!empty($trainList)){
             // user

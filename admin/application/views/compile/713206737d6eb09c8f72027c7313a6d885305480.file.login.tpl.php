@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-20 08:28:36
          compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19410336405a1221b4519042-26240468%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -7,6 +8,11 @@
          compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21382923555a14d628804d09-84667733%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 >>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-22 09:46:14
+         compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:20506575905a14d6e6b4b767-52261602%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 7e70dc98213120d984f6c2f98f91401ed30a3d4e
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -24,13 +30,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '21382923555a14d628804d09-84667733',
 >>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+=======
+  'nocache_hash' => '20506575905a14d6e6b4b767-52261602',
+>>>>>>> 7e70dc98213120d984f6c2f98f91401ed30a3d4e
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
 <<<<<<< HEAD
   'unifunc' => 'content_5a1221b45336d3_57533752',
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -40,6 +51,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a14d628806855_36383324')) {function content_5a14d628806855_36383324($_smarty_tpl) {?><!DOCTYPE html>
 >>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+=======
+  'unifunc' => 'content_5a14d6e6b4ced6_81720289',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a14d6e6b4ced6_81720289')) {function content_5a14d6e6b4ced6_81720289($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 7e70dc98213120d984f6c2f98f91401ed30a3d4e
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
