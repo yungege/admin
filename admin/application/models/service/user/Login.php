@@ -6,22 +6,7 @@ class Service_User_LoginModel extends BasePageService {
 
 	protected $reqData;
 	protected $resData;
-
-<<<<<<< HEAD
-    private static $admin = [
-        13522213145,
-        13161486949,
-        18513886256,
-        17701306902,
-        18600024371,
-        18210085688,
-        15101141025,
-        18010488953,
-        18511693841,
-    ];
-=======
     private static $admin = [];
->>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
 
     public function __construct() {
 		$this->userModel = Dao_UserModel::getInstance();
