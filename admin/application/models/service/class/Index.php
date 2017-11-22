@@ -2,11 +2,13 @@
 class Service_Class_IndexModel extends BasePageService {
 
     protected $classModel;
+    protected $userModel;
 
     protected $resData = [];
 
     public function __construct(){
         $this->classModel = Dao_ClassinfoModel::getInstance();
+        $this->userModel = Dao_UserModel::getInstance();
     }
 
     protected function __declare(){
@@ -41,6 +43,17 @@ class Service_Class_IndexModel extends BasePageService {
 
         if(isset(Dao_UserModel::$grade[(int)$req['grade']])){
             $where['grade'] = (int)$req['grade'];
+        }
+
+        if($req['stype'] == 2){
+            if($_SESSION['userInfo']['type'] == 2){
+                $teacher = $this->userModel->queryOne(['_id' => $_SESSION['userInfo']['_id']],['protection' => ['manageclassinfo' => 1]]);
+                $classIds = array_column($teacher['manageclassinfo'],'classid');
+                $where['_id'] = ['$in' =>  $classIds];
+            }
+
+            // var_dump($teacher);
+            // exit;
         }
 
         $options = [

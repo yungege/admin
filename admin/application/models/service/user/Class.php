@@ -4,6 +4,8 @@ class Service_User_ClassModel extends BasePageService {
 	const PAGESIZE = 15;
 
 	protected $classModel;
+    protected $userModel;
+
 	protected $resData = [
         'list' => [],
         'pageTag' => '2-2'
@@ -12,6 +14,7 @@ class Service_User_ClassModel extends BasePageService {
     public function __construct() {
 
         $this->classModel = Dao_ClassinfoModel::getInstance();
+        $this->userModel = Dao_UserModel::getInstance();
     }
 
     protected function __declare() {
@@ -51,6 +54,18 @@ class Service_User_ClassModel extends BasePageService {
         }
         if(!empty($req['classname'])){
             $match['name'] = ['$regex' => addslashes($req['classname']), '$options' => 'i'];
+        }
+
+        if($_SESSION['userInfo']['type'] == 2){
+            $teacher = $this->userModel->queryOne(['_id' => $_SESSION['userInfo']['_id']],['protection' => ['manageclassinfo' => 1]]);
+            $classIds = array_column($teacher['manageclassinfo'],'classid');
+            if(empty($req['classid'])){
+                $match['_id'] = ['$in' => $classIds];
+            }else{
+                if(!in_array($req['classid'],$classIds)){
+                    return ;
+                }
+            }
         }
 
     	$fields = [

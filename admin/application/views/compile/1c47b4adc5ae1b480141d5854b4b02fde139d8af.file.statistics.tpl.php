@@ -1,13 +1,43 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-22 10:53:54
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16104025225a14e6c2e8e8f7-77969811%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-20 11:00:55
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:13418501135a1245671f00b2-49566239%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-21 17:31:09
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:9164197875a13f25d353e68-67098100%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-18 15:59:04
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:3062867205a0fe848527bf7-75592830%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
+>>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+>>>>>>> 5c439634a14069b67ca364436214e4982cabc073
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
+<<<<<<< HEAD
       1 => 1510737541,
+=======
+<<<<<<< HEAD
+      1 => 1511087732,
+=======
+<<<<<<< HEAD
+      1 => 1510737541,
+=======
+      1 => 1510737263,
+>>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
+>>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+>>>>>>> 5c439634a14069b67ca364436214e4982cabc073
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +47,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '16104025225a14e6c2e8e8f7-77969811',
+=======
+  'nocache_hash' => '9164197875a13f25d353e68-67098100',
+=======
+      1 => 1510202574,
+      2 => 'file',
+    ),
+  ),
+<<<<<<< HEAD
+  'nocache_hash' => '13418501135a1245671f00b2-49566239',
+=======
+  'nocache_hash' => '3062867205a0fe848527bf7-75592830',
+>>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
+>>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+>>>>>>> 5c439634a14069b67ca364436214e4982cabc073
   'function' => 
   array (
   ),
@@ -35,9 +80,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a14e6c308fb20_26696520',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a14e6c308fb20_26696520')) {function content_5a14e6c308fb20_26696520($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a1245672acd82_45343032',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a1245672acd82_45343032')) {function content_5a1245672acd82_45343032($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a13f25d48b592_30821310',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a13f25d48b592_30821310')) {function content_5a13f25d48b592_30821310($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a0fe8485c6e91_25869797',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a0fe8485c6e91_25869797')) {function content_5a0fe8485c6e91_25869797($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 8d99a26ff7c24382b881393a3122bff1ad09c341
+>>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
+>>>>>>> 5c439634a14069b67ca364436214e4982cabc073
 <html lang="en">
 
 <head>
@@ -402,6 +465,8 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                 
             <li id="kj" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
                 <p><strong>空间维度：</strong></p>
+
+                <?php if ($_smarty_tpl->tpl_vars['data']->value['type']==1){?>
                 <select class="form-control" id="province" name="province" style="margin-bottom:15px;width: 110px;float: left;">
                     <option value="-1">全部</option>
                     <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
@@ -414,6 +479,29 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </option>
                     <?php } ?>
                 </select>
+                <?php }else{ ?>
+                <input id="school" name="school" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['schoolid'];?>
+">
+                <select class="form-control" id="grade" name="grade" style="margin-bottom:15px;width: 110px;float: left;">
+                    <option value="-1">全部</option>
+                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['data']->value['grade']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
+$_smarty_tpl->tpl_vars['row']->_loop = true;
+?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+</option>
+                    <?php } ?>
+
+
+                    <!-- <option value="<?php echo $_smarty_tpl->tpl_vars['data']->value['schoolid'];?>
+"> <?php echo $_smarty_tpl->tpl_vars['data']->value['schoolname'];?>
+ </option> -->
+                </select>
+                <?php }?>
+
+
             </li>
 
             <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
