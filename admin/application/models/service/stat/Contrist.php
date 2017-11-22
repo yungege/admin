@@ -233,6 +233,13 @@ class Service_Stat_ContristModel extends BasePageService {
             $this->map['school']['_id'] = $req['school'];
         }
 
+        // 设置老师权限
+        if($_SESSION['userInfo']['type'] == 2){
+            $teacher = $this->userModel->queryOne(['_id' => $_SESSION['userInfo']['_id']],['protection' => ['schoolinfo' => 1,'manageclassinfo' => 1]]);
+            $this->map['school']['_id'] =  $teacher['schoolinfo']['schoolid'];
+            $this->map['teacher']['classids'] = array_column($teacher['manageclassinfo'],'classid');
+        }
+
         // 班级
         if(isset($req['grade']) && $req['grade'] != -1 && preg_match("/\d{2}/", $req['grade'])){
             $this->map['class']['grade'] = (int)$req['grade'];
@@ -347,6 +354,10 @@ class Service_Stat_ContristModel extends BasePageService {
             ]
         ];
 
+        if(!empty($this->map['class']['grade'])){
+            $userCountMap['grade'] = (int)$this->map['class']['grade'];
+        }
+
         if(!empty($this->map['school'])){
             $userCountMap['schoolinfo.schoolid'] = [
                 '$in' => $this->schoolList,
@@ -366,6 +377,10 @@ class Service_Stat_ContristModel extends BasePageService {
                     unset($userCountMap['classinfo.classid']);
                 }
             }
+        }
+
+        if(empty($this->map['class']['_id']) && !empty($this->map['teacher']['classids'])){
+            $userCountMap['classinfo.classid'] = ['$in' => $this->map['teacher']['classids']];
         }
         
         $this->userlist = $this->userModel->query(
