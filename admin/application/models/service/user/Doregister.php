@@ -15,6 +15,7 @@ class Service_User_DoregisterModel extends BasePageService {
         18210085688,
         15101141025,
         18010488953,
+        18511693841
     ];
 
     public function __construct() {

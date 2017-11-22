@@ -6,7 +6,6 @@ class Service_User_LoginModel extends BasePageService {
 
 	protected $reqData;
 	protected $resData;
-
     private static $admin = [];
 
     public function __construct() {
