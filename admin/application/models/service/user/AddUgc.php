@@ -240,18 +240,27 @@ class Service_User_AddUgcModel extends BasePageService {
             return;
         }
 
-        $workData['train_name'] = $req['train_name'];
-        $workData['start_time'] = (int)strtotime($req['wtime'] . '00:00:00');
-        $workData['end_time'] = (int)strtotime($req['wtime'].' 23:59:59');
-        $workData['done_no'] = '';
-        $workData['userid'] = $req['uid'];
-        $workId = $this->trainOutModel->insert($workData);
+        // $workData['train_name'] = $req['train_name'];
+        // $workData['start_time'] = (int)strtotime($req['wtime'] . '00:00:00');
+        // $workData['end_time'] = (int)strtotime($req['wtime'].' 23:59:59');
+        // $workData['done_no'] = '';
+        // $workData['userid'] = $req['uid'];
+        // $workId = $this->trainOutModel->insert($workData);
+        // $trainSchool['homework_id'] = (string)$workId;
 
-        $trainSchool['homework_id'] = (string)$workId;
         $trainSchool['school_name'] = $req['school_name'];
-        $trainSchool['mobile'] = $req['school_mobile'];
-        $this->trainSchoolModel->insert($trainSchool);
-        
+        $trainSchool['mobile'] = (int)$req['school_mobile'];
+        $trainSchool['user_id'] = $req['uid'];
+        $trainSchool['ctime'] = time();
+        $trainWhere = [
+            'school_name' => $req['school_name'],
+            'user_id' => $req['uid'],
+        ];
+        $result = $this->trainSchoolModel->queryOne($trainWhere);
+        if(empty($result)){
+            $this->trainSchoolModel->insert($trainSchool);
+        }
+
         $doneOutside['htype'] = 4;
         $doneOutside['userid'] = $req['uid'];
         $doneOutside['starttime'] = (int)strtotime($req['wtime'].' 08:00:00');
