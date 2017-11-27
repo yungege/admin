@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-22 14:49:36
+         compiled from "/var/www/admin/admin/application/views/template/user/class.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:18981554425a151e0057fd70-47320667%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-22 11:13:42
          compiled from "/var/www/admin/admin/application/views/template/user/class.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6015263505a14eb66038856-69072608%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -25,6 +30,7 @@
 >>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
 >>>>>>> 5c439634a14069b67ca364436214e4982cabc073
 >>>>>>> 635a1c7e14ae20ee73a1852dea9475703b0d60d9
+>>>>>>> aa5cc9a349aba84ecf88e1420fa1938bee143848
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -53,6 +59,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ),
   ),
 <<<<<<< HEAD
+  'nocache_hash' => '18981554425a151e0057fd70-47320667',
+=======
+<<<<<<< HEAD
   'nocache_hash' => '13177336195a14e1919fdab5-97647919',
 =======
   'nocache_hash' => '16167440405a13e9ac21ddf3-05948876',
@@ -69,6 +78,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
 >>>>>>> 5c439634a14069b67ca364436214e4982cabc073
 >>>>>>> 635a1c7e14ae20ee73a1852dea9475703b0d60d9
+>>>>>>> aa5cc9a349aba84ecf88e1420fa1938bee143848
   'function' => 
   array (
   ),
@@ -86,6 +96,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_5a151e006d7d44_43810963',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a151e006d7d44_43810963')) {function content_5a151e006d7d44_43810963($_smarty_tpl) {?><!DOCTYPE html>
+=======
 <<<<<<< HEAD
   'unifunc' => 'content_5a14eb6609c964_65876586',
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -113,6 +128,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
 >>>>>>> 5c439634a14069b67ca364436214e4982cabc073
 >>>>>>> 635a1c7e14ae20ee73a1852dea9475703b0d60d9
+>>>>>>> aa5cc9a349aba84ecf88e1420fa1938bee143848
 <html lang="en">
 
 <head>

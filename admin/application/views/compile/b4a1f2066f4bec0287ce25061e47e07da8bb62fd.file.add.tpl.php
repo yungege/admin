@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-22 12:57:47
+         compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:9080728945a1503cb5afae3-04675123%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-22 09:31:34
          compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3525073455a14d3766a6f92-47506083%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -25,6 +30,7 @@
 >>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
 >>>>>>> 5c439634a14069b67ca364436214e4982cabc073
 >>>>>>> 635a1c7e14ae20ee73a1852dea9475703b0d60d9
+>>>>>>> aa5cc9a349aba84ecf88e1420fa1938bee143848
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -53,6 +59,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ),
   ),
 <<<<<<< HEAD
+  'nocache_hash' => '9080728945a1503cb5afae3-04675123',
+=======
+<<<<<<< HEAD
   'nocache_hash' => '2814391555a14e1efb99937-62372607',
 =======
 <<<<<<< HEAD
@@ -66,6 +75,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
 >>>>>>> 5c439634a14069b67ca364436214e4982cabc073
 >>>>>>> 635a1c7e14ae20ee73a1852dea9475703b0d60d9
+>>>>>>> aa5cc9a349aba84ecf88e1420fa1938bee143848
   'function' => 
   array (
   ),
@@ -83,6 +93,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_5a1503cb6e9408_63285053',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a1503cb6e9408_63285053')) {function content_5a1503cb6e9408_63285053($_smarty_tpl) {?><!DOCTYPE html>
+=======
 <<<<<<< HEAD
   'unifunc' => 'content_5a14d376750db4_38434928',
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -110,6 +125,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> 6c7fdbf0d5c7990ca9caf06c5bb1d51437a09eec
 >>>>>>> 5c439634a14069b67ca364436214e4982cabc073
 >>>>>>> 635a1c7e14ae20ee73a1852dea9475703b0d60d9
+>>>>>>> aa5cc9a349aba84ecf88e1420fa1938bee143848
 <html lang="en">
 
 <head>

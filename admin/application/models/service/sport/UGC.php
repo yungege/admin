@@ -178,7 +178,7 @@ class Service_Sport_UGCModel extends BasePageService {
                 $row['hname'] = '跑步';
                 $row['pname'] = '';
             }else{
-                $row['hname'] = '校外锻炼';
+                $row['hname'] = '校外打卡';
                 $row['pname'] = $row['train_name'];
             }
         }
