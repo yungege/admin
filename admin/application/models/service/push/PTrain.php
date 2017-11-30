@@ -287,14 +287,14 @@ class Service_Push_PTrainModel extends BasePageService {
 	protected function pushByIos($deviceToken){
 
 		$deviceToken = implode("," , $deviceToken);
-		$this->uMPush->iosPushByListcast($this->theme,$this->desc,$deviceToken);
+		$this->uMPush->iosPushByListcast($this->theme,$this->desc,$deviceToken, ['businessname' => 3]);
 		return true;
 	}
 
 	protected function pushByAndroid($deviceToken){
 
 		$deviceToken = implode("," , $deviceToken);
-		$this->uMPush->androidPushByListcast($this->theme,$this->desc,$deviceToken);
+		$this->uMPush->androidPushByListcast($this->theme,$this->desc,$deviceToken,['businessname' => 3]);
 		return true;
 	}
 

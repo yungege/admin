@@ -14,42 +14,6 @@ class UmengPush {
 
 	protected $postData = [];
 
-	public function iosPushByListcast($title,$content,$deviceToken){
-
-		$this->postData['ios']['appkey'] = self::iosAppKey;
-		$this->postData['ios']['timestamp'] = time();
-		$this->postData['ios']['type'] = 'listcast';
-		$this->postData['ios']['device_tokens'] = $deviceToken;
-		$this->postData['ios']['payload']['aps']['alert']['title'] = $title;
-		$this->postData['ios']['payload']['aps']['alert']['body'] = $content;
-		$this->postData['ios']['payload']['aps']['badge'] = 1;
-		$this->postData['ios']['payload']['aps']['sound'] = "bingbong.aiff";
-		$this->postData['ios']['payload']['businessname'] = 0;
-		$this->postData['ios']['production_mode'] = 'true';
-
-		$output = $this->sendPushByIos($this->postData['ios']);
-		
-		return $output;
-	}
-
-	public function androidPushByListcast($title,$content,$deviceToken){
-
-		$this->postData['android']['appkey'] = self::androidAppKey;
-		$this->postData['android']['timestamp'] = time();
-		$this->postData['android']['type'] = 'listcast';
-		$this->postData['android']['device_tokens'] = $deviceToken;
-		$this->postData['android']['payload']['display_type'] = "notification";
-		$this->postData['android']['payload']['body']['ticker'] = $title;
-		$this->postData['android']['payload']['body']['title'] = $title;
-		$this->postData['android']['payload']['body']['text'] = $content ;
-		$this->postData['android']['payload']['businessname'] = 0;
-		$this->postData['android']['production_model'] = "true";
-
-		$output = $this->sendPushByAndroid($this->postData['android']);
-		
-		return $output;
-	}
-
 	public function sendPushByIos($data){
 
 		$post_body = json_encode($data);
@@ -109,7 +73,46 @@ class UmengPush {
 	    return $output;
 	}
 
-	public function iosPushByBroadcast($title,$content){
+	// Listcast
+	public function iosPushByListcast($title, $content, $deviceToken, array $extFields=[]){
+
+		$this->postData['ios']['appkey'] = self::iosAppKey;
+		$this->postData['ios']['timestamp'] = time();
+		$this->postData['ios']['type'] = 'listcast';
+		$this->postData['ios']['device_tokens'] = $deviceToken;
+		$this->postData['ios']['payload']['aps']['alert']['title'] = $title;
+		$this->postData['ios']['payload']['aps']['alert']['body'] = $content;
+		$this->postData['ios']['payload']['aps']['badge'] = 1;
+		$this->postData['ios']['payload']['aps']['sound'] = "bingbong.aiff";
+		$this->postData['ios']['payload'] = array_merge($this->postData['ios']['payload'], $extFields);
+		$this->postData['ios']['production_mode'] = 'true';
+
+		$output = $this->sendPushByIos($this->postData['ios']);
+		
+		return $output;
+	}
+
+	// Listcast
+	public function androidPushByListcast($title, $content, $deviceToken, array $extFields=[]){
+
+		$this->postData['android']['appkey'] = self::androidAppKey;
+		$this->postData['android']['timestamp'] = time();
+		$this->postData['android']['type'] = 'listcast';
+		$this->postData['android']['device_tokens'] = $deviceToken;
+		$this->postData['android']['payload']['display_type'] = "notification";
+		$this->postData['android']['payload']['body']['ticker'] = $title;
+		$this->postData['android']['payload']['body']['title'] = $title;
+		$this->postData['android']['payload']['body']['text'] = $content ;
+		$this->postData['android']['payload'] = array_merge($this->postData['android']['payload'], $extFields);
+		$this->postData['android']['production_model'] = "true";
+
+		$output = $this->sendPushByAndroid($this->postData['android']);
+		
+		return $output;
+	}
+
+	// Broadcast
+	public function iosPushByBroadcast($title, $content, array $extFields=[]){
 
 		$this->postData['ios']['appkey'] = self::iosAppKey;
 		$this->postData['ios']['timestamp'] = time();
@@ -118,14 +121,15 @@ class UmengPush {
 		$this->postData['ios']['payload']['aps']['alert']['body'] = $content;
 		$this->postData['ios']['payload']['aps']['badge'] = 1;
 		$this->postData['ios']['payload']['aps']['sound'] = "bingbong.aiff";
-		$this->postData['ios']['payload']['businessname'] = 0;
+		$this->postData['ios']['payload'] = array_merge($this->postData['ios']['payload'], $extFields);
 		$this->postData['ios']['production_mode'] = 'true';
 
 		$output = $this->sendPushByIos($this->postData['ios']);
 		return $output;
 	}
 
-	public function androidPushByBroadcast($title,$content){
+	// Broadcast
+	public function androidPushByBroadcast($title, $content, array $extFields=[]){
 
 		$this->postData['android']['appkey'] = self::androidAppKey;
 		$this->postData['android']['timestamp'] = time();
@@ -134,10 +138,10 @@ class UmengPush {
 		$this->postData['android']['payload']['body']['ticker'] = $title;
 		$this->postData['android']['payload']['body']['title'] = $title;
 		$this->postData['android']['payload']['body']['text'] = $content ;
-		$this->postData['android']['payload']['businessname'] = 0;
+		$this->postData['android']['payload'] = array_merge($this->postData['android']['payload'], $extFields);
 		$this->postData['android']['production_model'] = "true";
 
-		$output = $this->sendPushByIos($this->postData['android']);
+		$output = $this->sendPushByAndroid($this->postData['android']);
 		return $output;
 	}
     

@@ -87,8 +87,8 @@ class Service_Push_AppNoticeModel extends BasePageService {
         $uMPush = new UmengPush();
         if($req['type'] == 2){
             // 平台
-            $uMPush->iosPushByBroadcast($req['title'], $req['desc']);
-            $uMPush->androidPushByBroadcast($req['title'], $req['desc']);
+            $uMPush->iosPushByBroadcast($req['title'], $req['desc'], ['businessname' => 4]);
+            $uMPush->androidPushByBroadcast($req['title'], $req['desc'], ['businessname' => 4]);
         }
         else if($req['type'] == 1){
             // 学校
@@ -132,16 +132,18 @@ class Service_Push_AppNoticeModel extends BasePageService {
                     $res = $uMPush->iosPushByListcast(
                         $req['title'], 
                         $req['desc'], 
-                        $iosDeviceToken
+                        $iosDeviceToken,
+                        ['businessname' => 1]
                     );
                 }
 
                 if(!empty($appList['android'])){
                     $androidDeviceToken = implode(',', $deviceToken);
-                    $uMPush->iosPushByListcast(
+                    $uMPush->androidPushByListcast(
                         $req['title'], 
                         $req['desc'],
-                        $androidDeviceToken
+                        $androidDeviceToken,
+                        ['businessname' => 1]
                     );
                 }
 
