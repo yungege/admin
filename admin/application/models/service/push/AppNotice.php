@@ -77,7 +77,7 @@ class Service_Push_AppNoticeModel extends BasePageService {
                 ];
             }
             
-            $result = true;//$this->msgModel->batchInsert($insertData);
+            $result = $this->msgModel->batchInsert($insertData);
         }
         
         if($result === false){
@@ -87,9 +87,8 @@ class Service_Push_AppNoticeModel extends BasePageService {
         $uMPush = new UmengPush();
         if($req['type'] == 2){
             // 平台
-            //$res1 = $uMPush->iosPushByBroadcast($req['title'], $req['desc']);
-            $res2 = $uMPush->androidPushByBroadcast($req['title'], $req['desc']);
-            print_r($res2);exit;
+            $uMPush->iosPushByBroadcast($req['title'], $req['desc']);
+            $uMPush->androidPushByBroadcast($req['title'], $req['desc']);
         }
         else if($req['type'] == 1){
             // 学校
