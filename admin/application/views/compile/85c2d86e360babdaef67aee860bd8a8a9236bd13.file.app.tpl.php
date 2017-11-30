@@ -1,23 +1,33 @@
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-30 17:07:33
+         compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:8996733275a1fca551c6005-27885141%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
 <?php /* Smarty version Smarty-3.1.13, created on 2017-11-24 10:40:40
          compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1964705015a1786a8874da9-99055520%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 449e6cb9e081247a1e59449f12831f56feabae9a
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '85c2d86e360babdaef67aee860bd8a8a9236bd13' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/app.tpl',
-      1 => 1509502905,
+      1 => 1509080121,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+      1 => 1510105483,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
+  'nocache_hash' => '8996733275a1fca551c6005-27885141',
+=======
   'nocache_hash' => '1964705015a1786a8874da9-99055520',
+>>>>>>> 449e6cb9e081247a1e59449f12831f56feabae9a
   'function' => 
   array (
   ),
@@ -35,9 +45,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_5a1fca552331b2_58740366',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a1fca552331b2_58740366')) {function content_5a1fca552331b2_58740366($_smarty_tpl) {?><!DOCTYPE html>
+=======
   'unifunc' => 'content_5a1786a899b198_42888394',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a1786a899b198_42888394')) {function content_5a1786a899b198_42888394($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 449e6cb9e081247a1e59449f12831f56feabae9a
 <html lang="en">
 
 <head>
