@@ -137,7 +137,7 @@ class UmengPush {
 		$this->postData['android']['payload']['businessname'] = 0;
 		$this->postData['android']['production_model'] = "true";
 
-		$output = $this->sendPushByIos($this->postData['android']);
+		$output = $this->sendPushByAndroid($this->postData['android']);
 		return $output;
 	}
     
