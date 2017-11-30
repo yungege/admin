@@ -133,7 +133,7 @@ class Service_Push_AppNoticeModel extends BasePageService {
                         $req['title'], 
                         $req['desc'], 
                         $iosDeviceToken,
-                        ['businessname' => 1],
+                        ['businessname' => 1]
                     );
                 }
 
@@ -143,7 +143,7 @@ class Service_Push_AppNoticeModel extends BasePageService {
                         $req['title'], 
                         $req['desc'],
                         $androidDeviceToken,
-                        ['businessname' => 1],
+                        ['businessname' => 1]
                     );
                 }
 
