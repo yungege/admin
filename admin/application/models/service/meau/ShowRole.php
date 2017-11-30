@@ -1,14 +1,9 @@
 <?php
-class Service_Meau_RoleModel extends BasePageService {
+class Service_Meau_ShowRoleModel extends BasePageService {
 
     protected $roleModel;
-    protected $userModel;
-    protected $treeModel;
 
     protected $reqData;
-    protected $resData = [
-        'pageTag' => '7-2',
-    ];
 
     public function __construct() {
         $this->roleModel = Dao_RoleModel::getInstance();
@@ -20,17 +15,23 @@ class Service_Meau_RoleModel extends BasePageService {
 
     protected function __execute($req) {
         $list = $this->roleModel->query(
-            ['status' => 1,
-            'name' => ['$ne' => 'superadmin'],
+            [   'status' => 1,
+                'name' => ['$ne' => 'superadmin'],
+
             ],
             [
                 'sort' => [
                     'ctime' => 1
                 ],
                 'limit' => 0,
+                'projection' => ['name' => 1, 'desc' => 1],
             ]
         );
         $this->resData['list'] = &$list;
+
+        // var_dump($this->resData['list']);
+        // exit;
+
         return $this->resData;
     }
 

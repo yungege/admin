@@ -98,6 +98,12 @@ class Service_User_StudentModel extends BasePageService {
         if(!empty($match['_id'])){
             $match['_id'] = $req['uid'];
         }
+
+        if($_SESSION['userInfo']['type'] == 2){
+            $teacher = $this->userModel->queryOne(['_id' => $_SESSION['userInfo']['_id']],['protection' => ['manageclassinfo' => 1]]);
+            $classIds = array_column($teacher['manageclassinfo'],'classid');
+            $match['classinfo.classid'] = ['$in' => $classIds];
+        }
         $list = $this->userModel->getListByPage($match, $fields, $options);
 
         if(empty($list))

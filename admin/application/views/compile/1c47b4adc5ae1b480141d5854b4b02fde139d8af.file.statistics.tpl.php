@@ -1,37 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-17 13:27:01
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-27 10:23:51
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11477938275a0e73256477b5-53055800%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-11-16 17:47:30
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11063357415a0d5eb2798ba4-15842441%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 7fae2b103dbff98612a1f9c937df54c1f8bd948f
+<?php /*%%SmartyHeaderCode:18622748775a1b7737372f33-24621303%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1510737528,
+      1 => 1511319708,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
       1 => 1510105563,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '11477938275a0e73256477b5-53055800',
-=======
-      1 => 1510105524,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '11063357415a0d5eb2798ba4-15842441',
->>>>>>> 7fae2b103dbff98612a1f9c937df54c1f8bd948f
+  'nocache_hash' => '18622748775a1b7737372f33-24621303',
   'function' => 
   array (
   ),
@@ -49,15 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a0e732577e2f1_07271300',
+  'unifunc' => 'content_5a1b77374bf2f0_12288507',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0e732577e2f1_07271300')) {function content_5a0e732577e2f1_07271300($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5a0d5eb28085e1_85673651',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a0d5eb28085e1_85673651')) {function content_5a0d5eb28085e1_85673651($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 7fae2b103dbff98612a1f9c937df54c1f8bd948f
+<?php if ($_valid && !is_callable('content_5a1b77374bf2f0_12288507')) {function content_5a1b77374bf2f0_12288507($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -422,6 +402,8 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                 
             <li id="kj" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
                 <p><strong>空间维度：</strong></p>
+
+                <?php if ($_smarty_tpl->tpl_vars['data']->value['type']==1){?>
                 <select class="form-control" id="province" name="province" style="margin-bottom:15px;width: 110px;float: left;">
                     <option value="-1">全部</option>
                     <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
@@ -434,6 +416,29 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 </option>
                     <?php } ?>
                 </select>
+                <?php }else{ ?>
+                <input id="school" name="school" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['schoolid'];?>
+">
+                <select class="form-control" id="grade" name="grade" style="margin-bottom:15px;width: 110px;float: left;">
+                    <option value="-1">全部</option>
+                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['data']->value['grade']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
+$_smarty_tpl->tpl_vars['row']->_loop = true;
+?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+</option>
+                    <?php } ?>
+
+
+                    <!-- <option value="<?php echo $_smarty_tpl->tpl_vars['data']->value['schoolid'];?>
+"> <?php echo $_smarty_tpl->tpl_vars['data']->value['schoolname'];?>
+ </option> -->
+                </select>
+                <?php }?>
+
+
             </li>
 
             <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
