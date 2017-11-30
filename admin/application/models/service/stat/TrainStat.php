@@ -6,7 +6,7 @@ class Service_Stat_TrainStatModel extends BasePageService {
     protected $userModel;
     protected $trainModel;
     protected $statData = [];
-    protected $gradeNo = [12,13,14,15,16];
+    protected $gradeNo = [14,15,16];
     protected $classModel;
     protected $trainOutsideModel;
     protected $startTime;
@@ -14,14 +14,14 @@ class Service_Stat_TrainStatModel extends BasePageService {
     protected $userIds;
 
     public function __construct() {
-        
+        ob_start();
         $this->schoolModel = Dao_SchoolinfoModel::getInstance();
         $this->userModel = Dao_UserModel::getInstance();
         $this->trainModel = Dao_TrainingdoneModel::getInstance();
         $this->classModel = Dao_ClassinfoModel::getInstance();
         $this->trainOutsideModel = Dao_TrainingDoneOutsideModel::getInstance();
-        $this->startTime = 1499961600;
-        $this->endTime = 1505663999;
+        $this->startTime = 1511107200;
+        $this->endTime = 1511711999;
     }
 
     protected function __declare() {
@@ -55,16 +55,13 @@ class Service_Stat_TrainStatModel extends BasePageService {
                                      ->setCategory("Test result file");
 
         $objPHPExcel->setActiveSheetIndex(0)
-                        ->setCellValue('A1', '班级')
-                        ->setCellValue('B1', '总人数')
-                        ->setCellValue('C1', '总锻炼次数')
-                        ->setCellValue('D1', '总锻炼时间')
-                        ->setCellValue('E1', '总消耗卡路里')
-                        ->setCellValue('F1', '人均锻炼次数')
-                        ->setCellValue('G1', '总替换次数');
-
-
-
+                        ->setCellValue('A1', '锻炼次数')
+                        ->setCellValue('B1', '学生名单')
+                        ->setCellValue('C1', '班级');
+                        // ->setCellValue('D1', '总锻炼时间')
+                        // ->setCellValue('E1', '总消耗卡路里')
+                        // ->setCellValue('F1', '人均锻炼次数')
+                        // ->setCellValue('G1', '总替换次数');
 
         $this->schoolId = "587f31732a46800e0a8b4567";
         $schoolFields = ['name'];
@@ -75,37 +72,58 @@ class Service_Stat_TrainStatModel extends BasePageService {
             'is_test' => ['$ne' => 1],
             'grade' => ['$in' => $this->gradeNo],
             'branch_school' => null,
+            // 'name' => '1年级4班'
             ];
         $classOptions = [
-            'sort' => ['grade' => 1,'classno' => 1],
+            'sort' => ['classno' => 1],
         ];
         $classOptions = [
             'projection' => ['name' => 1 ,'_id' => 1],
+            // 'limit' => 6,
+            // 'skip' => 7
         ];
 
         $classInfos = $this->classModel->query($classWhere,$classOptions);
+//         foreach($classInfos as $k => $v){
+//             // var_dump($v);
+//             // var_dump($k);
+//             // exit;
+//             preg_match_all("/年级(\d*)班/",$v['name'],$class);
+//             // var_dump($class);
+//             // exit;
+//             $classNo = (int)$class[1];
+//             var_dump($classNo);
+
+//             $classs[$classNo] = $v;
+//         }
+//         // $classInfos = $classs;
+//         // var_dump($classInfos);
+
+// var_dump(11);
+//         exit;
+
+        $classInfos = array_column($classInfos,null,'name');
+        // $classInfos = array_column($classInfos,null,'name');
+        sort($classInfos);
         // var_dump($classInfos);
         // exit;
         
         $i = 2;
         foreach($classInfos as $classInfo){
 
-            $a = 'A' . $i;
-            $b = 'B' . $i;
-            $c = 'C' . $i;
-            $d = 'D' . $i;
-            $e = 'E' . $i;
-            $f = 'F' . $i;
-            $g = 'G' . $i;
-
             $userWhere = [
                 'classinfo.classid' => $classInfo['_id'],
                 'type' => 1,
             ];
-            $option['projection'] = ['username' => 1,'ssoid' => 1,'mobileno' => 1,'_id' => 1, 'schoolinfo' => 1,'grade' => 1];
+            $option['projection'] = ['username' => 1,'ssoid' => 1,'mobileno' => 1,'_id' => 1, 'schoolinfo' => 1,'grade' => 1,'classinfo'=>1];
             $userInfos = $this->userModel->query($userWhere,$option);
+            // var_dump();
+            $className = $userInfos[0]['classinfo']['classname'];
+
+            // var_dump($userInfos);
+            // exit;
             $this->userIds = array_column($userInfos,'_id');
-            $userNo = count($this->userIds);
+            $userCount = count($this->userIds);
 
             $where = [
                 'starttime' => [
@@ -113,7 +131,7 @@ class Service_Stat_TrainStatModel extends BasePageService {
                     '$lte' => $this->endTime,
                 ],
                 'htype' => [
-                    '$in' => [1,2,3],
+                    '$in' => [1,2,3,4],
                 ],
                 'userid' => [
                     '$in' => $this->userIds,
@@ -135,7 +153,7 @@ class Service_Stat_TrainStatModel extends BasePageService {
                     'burncalorie' => ['$sum' => '$burncalories'],
                     'projecttime' => ['$sum' => '$projecttime'],
                     'count' => ['$sum' => 1],
-                    // 'htype' => ['$push' => '$htype'],
+                    'htype' => ['$push' => '$htype'],
                 ]
             ];
             $aggregate = [
@@ -146,48 +164,120 @@ class Service_Stat_TrainStatModel extends BasePageService {
 
             $list = $this->trainModel->aggregate($aggregate);
 
-            unset($where['htype']);
-            $aggregate = [
-                ['$match' => $where],
-                $fields,
-                $group
-            ];
+            if(!empty($list)){
+                $list = array_column($list,'count','_id');
+            }else{
+                $list = [];
+            }
 
             $list2 = $this->trainOutsideModel->aggregate($aggregate);
-
-            $trainNo = 0;
-            $calories = 0;
-            $trainTime = 0;
-            if(!empty($list)){
-                foreach($list as $value){
-                    $trainNo += $value['count'];
-                    $calories += $value['burncalorie'];
-                    $trainTime += $value['projecttime'];
-                }
-            }
-            
-            $trainNo1 = $trainNo;
             if(!empty($list2)){
-                foreach($list2 as $value){
-                    $trainNo += $value['count'];
-                    $calories += $value['burncalorie'];
-                    $trainTime += $value['projecttime'];
+                $list2 = array_column($list2,'count','_id');
+                foreach($list2 as $key => $value){
+                    if(empty($list[$key])){
+                        $list[$key] = $value;
+                    }else{
+                        $list[$key] += $value;
+                    }
                 }
             }
 
-            $avgNo = round($trainNo/$userNo,2);
+            $lists = [];
+            foreach($list as $key => $value){
+               
+                if(empty($lists[$value])){
+                    $lists[$value] = [$key];
+                }else{
+                    // var_dump($lists[$value]);
+                    // $lists[$value] = array_push($lists[$value],$key);
+                    $lists[$value][] = $key;
+                    // var_dump($lists[$value]);
+                    // exit;
+                }
+            }
+
+            $count = 0;
+            foreach($lists as $key => $value){
+                if($key >= 4){
+                    $count++;
+                }
+            }
+
+            $a = 'A' . $i;
+            $b = 'B' . $i;
+            $c = 'C' . $i;
+            $d = 'D' . $i;
+            $e = 'E' . $i;
+            $f = 'F' . $i;
+            $g = 'G' . $i;
+
+            $doneRate = sprintf("%.2f",$count/$userCount * 100) . "%";
+
             $objPHPExcel->setActiveSheetIndex(0)
-                            ->setCellValue($a, $classInfo['name'])
-                            ->setCellValue($b, $userNo)
-                            ->setCellValue($c, $trainNo)
-                            ->setCellValue($d, round($trainTime/60,2))
-                            ->setCellValue($e, $calories)
-                            ->setCellValue($f, $avgNo)
-                            ->setCellValue($g, $trainNo - $trainNo1);
+                            ->setCellValue($a, $className)
+                            ->setCellValue($b, $doneRate)
+                            ->setCellValue($c, $count);
+                            
+                            // ->setCellValue($d, round($trainTime/60,2))
+                            // ->setCellValue($e, $calories)
+                            // ->setCellValue($f, $avgNo)
+                            // ->setCellValue($g, $trainNo - $trainNo1);
             $i++;
+
+
+//             $doneUser = array_keys($list);
+//             $noUser = array_diff($this->userIds,$doneUser);
+//             $lists[0] = $noUser;
+//             ksort($lists);
+
+// // var_dump($lists);
+// // exit;
+
+//             $ranking = [];
+//             $userInfos = array_column($userInfos,'username','_id');
+//             foreach($lists as $key => $value){
+//                 $ranking[$key] = [];
+//                 foreach($value as $v){
+//                     array_push($ranking[$key],$userInfos[$v]);
+//                 }
+//             }
+
+// var_dump($ranking);
+// exit;
+
+//             foreach($ranking as $k => $v){
+//                 $a = 'A' . $i;
+//                 $b = 'B' . $i;
+//                 $c = 'C' . $i;
+//                 $d = 'D' . $i;
+//                 $e = 'E' . $i;
+//                 $f = 'F' . $i;
+//                 $g = 'G' . $i;
+
+//                 $v = implode(',',$v);
+//                 // if(empty($v)){
+//                 //     break;
+//                 // }
+//                 $objPHPExcel->setActiveSheetIndex(0)
+//                             ->setCellValue($a, $className)
+//                             ->setCellValue($b, $k)
+//                             ->setCellValue($c, $v);
+                            
+//                             // ->setCellValue($d, round($trainTime/60,2))
+//                             // ->setCellValue($e, $calories)
+//                             // ->setCellValue($f, $avgNo)
+//                             // ->setCellValue($g, $trainNo - $trainNo1);
+//                 $i++;
+//             }
+            
+            // var_dump($i);
+            // exit;
+            // break;
+           
         }
-        
-        
+
+
+        // exit;
 
         // Rename worksheet
         $objPHPExcel->getActiveSheet()->setTitle('学校统计');
@@ -212,6 +302,8 @@ class Service_Stat_TrainStatModel extends BasePageService {
 
         $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
         $objWriter->save('php://output');
+
+
         exit;
 
         var_dump(2);exit;
