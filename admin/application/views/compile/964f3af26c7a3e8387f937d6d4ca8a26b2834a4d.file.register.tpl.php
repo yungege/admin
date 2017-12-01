@@ -1,17 +1,27 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-12-01 09:33:40
          compiled from "/var/www/admin/admin/application/views/template/user/register.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12718908175a20b174e890b9-04075305%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-30 19:55:29
+         compiled from "/var/www/admin/admin/application/views/template/user/register.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:19709706705a1ff1b135e430-48335318%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> ed3d9f27364b38e8a8767bb321ae10de64e4a8d9
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '964f3af26c7a3e8387f937d6d4ca8a26b2834a4d' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/register.tpl',
-      1 => 1502419197,
+      1 => 1512042923,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '12718908175a20b174e890b9-04075305',
+=======
+  'nocache_hash' => '19709706705a1ff1b135e430-48335318',
+>>>>>>> ed3d9f27364b38e8a8767bb321ae10de64e4a8d9
   'function' => 
   array (
   ),
@@ -21,9 +31,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a20b174e9ef44_76025638',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a20b174e9ef44_76025638')) {function content_5a20b174e9ef44_76025638($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a1ff1b1391209_59595215',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a1ff1b1391209_59595215')) {function content_5a1ff1b1391209_59595215($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> ed3d9f27364b38e8a8767bb321ae10de64e4a8d9
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -59,11 +75,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       </div>
       <div class="form-group has-feedback">
         <input type="password" class="form-control" placeholder="Password" name="pwd">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <span class="glyphicon glyphicon-eye-open   form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
         <input type="password" class="form-control" placeholder="Confirm Password" name="pwd2">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-8">

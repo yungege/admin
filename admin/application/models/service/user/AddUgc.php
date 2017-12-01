@@ -175,7 +175,7 @@ class Service_User_AddUgcModel extends BasePageService {
             $lastDay = strtotime(date('Y-m-t', $data['originaltime']) . ' 23:59:59');
             $hMap = [
                 'userid' => $uId,
-                'htype' => ['$in' => [1,2,3]],
+                'htype' => ['$in' => [1,2,3,4,5,6,7]],
                 'originaltime' => ['$gte' => $firstDay, '$lte' => $lastDay]
             ];
 
