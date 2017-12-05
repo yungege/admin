@@ -33,11 +33,11 @@
       </div>
       <div class="form-group has-feedback">
         <input type="password" class="form-control" placeholder="Password" name="pwd">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <span class="glyphicon glyphicon-eye-open   form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
         <input type="password" class="form-control" placeholder="Confirm Password" name="pwd2">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-8">
