@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-05 18:25:26
+         compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:15332539745a267416244447-60124849%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-11-30 19:00:19
+         compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:5440172505a1fe4c3997b44-53581458%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-12-04 15:12:52
          compiled from "/var/www/admin/admin/application/views/template/push/app.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16631716565a24f5741d8bb8-64437149%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -13,12 +23,17 @@
 <?php /*%%SmartyHeaderCode:6529062255a1fe471bb14b5-40441416%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 >>>>>>> ed3d9f27364b38e8a8767bb321ae10de64e4a8d9
 >>>>>>> 8df1e50abd845f9127a833153f3b96c313f150c5
+>>>>>>> 1f421f88597ceb88f740218cc7790c602d454825
+>>>>>>> 765326ec8f4d7c2095441cf76f48ad1be0da15e5
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '85c2d86e360babdaef67aee860bd8a8a9236bd13' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/push/app.tpl',
+<<<<<<< HEAD
+      1 => 1508997849,
+=======
 <<<<<<< HEAD
       1 => 1509502905,
 =======
@@ -28,11 +43,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       1 => 1509080121,
 >>>>>>> ed3d9f27364b38e8a8767bb321ae10de64e4a8d9
 >>>>>>> 8df1e50abd845f9127a833153f3b96c313f150c5
+>>>>>>> 765326ec8f4d7c2095441cf76f48ad1be0da15e5
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       1 => 1510105563,
       2 => 'file',
@@ -41,19 +59,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '16631716565a24f5741d8bb8-64437149',
 =======
 <<<<<<< HEAD
+>>>>>>> 765326ec8f4d7c2095441cf76f48ad1be0da15e5
       1 => 1510105524,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
+  'nocache_hash' => '15332539745a267416244447-60124849',
+=======
   'nocache_hash' => '9995793745a1fd746628374-97538768',
 =======
       1 => 1510105483,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
+  'nocache_hash' => '5440172505a1fe4c3997b44-53581458',
+=======
   'nocache_hash' => '6529062255a1fe471bb14b5-40441416',
 >>>>>>> ed3d9f27364b38e8a8767bb321ae10de64e4a8d9
 >>>>>>> 8df1e50abd845f9127a833153f3b96c313f150c5
+>>>>>>> 1f421f88597ceb88f740218cc7790c602d454825
+>>>>>>> 765326ec8f4d7c2095441cf76f48ad1be0da15e5
   'function' => 
   array (
   ),
@@ -72,6 +99,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
+  'unifunc' => 'content_5a26741629f570_33076159',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a26741629f570_33076159')) {function content_5a26741629f570_33076159($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a1fe4c39ef3b2_52610610',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a1fe4c39ef3b2_52610610')) {function content_5a1fe4c39ef3b2_52610610($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
   'unifunc' => 'content_5a24f5742fd454_85205942',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a24f5742fd454_85205942')) {function content_5a24f5742fd454_85205942($_smarty_tpl) {?><!DOCTYPE html>
@@ -86,6 +123,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_5a1fe471e71680_01406408')) {function content_5a1fe471e71680_01406408($_smarty_tpl) {?><!DOCTYPE html>
 >>>>>>> ed3d9f27364b38e8a8767bb321ae10de64e4a8d9
 >>>>>>> 8df1e50abd845f9127a833153f3b96c313f150c5
+>>>>>>> 1f421f88597ceb88f740218cc7790c602d454825
+>>>>>>> 765326ec8f4d7c2095441cf76f48ad1be0da15e5
 <html lang="en">
 
 <head>

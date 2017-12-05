@@ -102,9 +102,9 @@ class UmengPush {
 		$this->postData['android']['payload']['display_type'] = "notification";
 		$this->postData['android']['payload']['body']['ticker'] = $title;
 		$this->postData['android']['payload']['body']['title'] = $title;
-		$this->postData['android']['payload']['body']['text'] = $content ;
-		$this->postData['android']['payload'] = array_merge($this->postData['android']['payload'], $extFields);
-		$this->postData['android']['production_model'] = "true";
+		$this->postData['android']['payload']['body']['text'] = $content;
+		$this->postData['android']['payload']['extra'] = $extFields;
+		// $this->postData['android']['production_model'] = "true";
 
 		$output = $this->sendPushByAndroid($this->postData['android']);
 
@@ -140,9 +140,9 @@ class UmengPush {
 		$this->postData['android']['payload']['display_type'] = "notification";
 		$this->postData['android']['payload']['body']['ticker'] = $title;
 		$this->postData['android']['payload']['body']['title'] = $title;
-		$this->postData['android']['payload']['body']['text'] = $content ;
-		$this->postData['android']['payload'] = array_merge($this->postData['android']['payload'], $extFields);
-		$this->postData['android']['production_model'] = "true";
+		$this->postData['android']['payload']['body']['text'] = $content;
+		$this->postData['android']['payload']['extra'] = $extFields;
+		// $this->postData['android']['production_model'] = "true";
 
 		$output = $this->sendPushByAndroid($this->postData['android']);
 		return $output;
