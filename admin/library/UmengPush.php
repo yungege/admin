@@ -107,6 +107,9 @@ class UmengPush {
 		$this->postData['android']['production_model'] = "true";
 
 		$output = $this->sendPushByAndroid($this->postData['android']);
+
+		var_dump($output);
+		exit;
 		
 		return $output;
 	}

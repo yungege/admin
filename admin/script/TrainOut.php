@@ -6,85 +6,72 @@ $app->execute(['TrainOut','init']);
 
 class TrainOut {
 
+    // 同年级班级调换
     public static function init(){
 
-    	// $userModel = Dao_UserModel::getInstance();
-     //    $classModel = Dao_ClassinfoModel::getInstance();
-     //    $ustatModel = Dao_ExerciseuserstatModel::getInstance();
+    	$userModel = Dao_UserModel::getInstance();
+        // $classModel = Dao_ClassinfoModel::getInstance();
+        // $ustatModel = Dao_ExerciseuserstatModel::getInstance();
 
-     //    $file = '/mnt/file/' . 'student.xlsx';
-     //    $ext = self::getExt($file);
-     //    $datas = self::importExcel($file,$ext);
-     //    unset($datas[1]);
-     //    foreach($datas as $data){
-     //        $userName = (string)$data[0];
-     //        $birth = (string)$data[4];
-     //        $birth = strtotime($birth);
-     //        $className = (string)$data[2] . (string)$data[3];
+        $file = '/mnt/file/' . 'a.xlsx';
+        $ext = self::getExt($file);
+        $datas = self::importExcel($file,$ext);
+        unset($datas[1]);
+        foreach($datas as $data){
 
-     //        // echo $className;
-     //        // exit;
+            $data[0] = (string)$data[0];
+            $data[1] = (string)$data[1];
+            $data[2] = intval(($data[2] - 25569) * 3600 * 24) - 8 * 3600;
+            // $data[2] = (string)$data[2];
+            // $data[2] = strtotime($data[2]);
 
-     //        $where = [
-     //            'username' => $userName,
-     //            'birthday' => $birth,
-     //            'grade' => 14,
-     //        ];
+            // echo $data[0];
+            // echo $data[1];
+            // echo $data[2];
 
-     //        $userInfo = $userModel->queryOne($where);
+            // exit;
 
-     //        if(empty($userInfo) || $userInfo['classinfo']['classname'] == $className){
-     //            // echo $userName;
-     //            continue;
-     //        }
 
-     //        $classWhere = [
-     //            'schoolname' => '府学胡同小学',
-     //            'name' => $className
-     //        ];
+            if(empty($data[1]) || empty($data[2]) || empty($data[0])){
+                echo 1;
+                echo (string)$data[0];
+                continue;
+            }
 
-     //        $count = $classModel->count($classWhere);
-     //        $classInfo = $classModel->queryOne($classWhere);
-     //        if(empty($classInfo)){
-     //            echo $userName;
-     //            continue;
-     //        }
+            if($data[2] < 120654720){
+                echo (string)$data[0];
+                continue;
+            }
 
-     //        $userUpdate['classinfo'] = [
-     //            'classid' => (string)$classInfo['_id'],
-     //            'classname' => $classInfo['name'],
-     //        ];
+            $user['username'] = (string)$data[0];
+            $user['birthday'] = $data[2];
+            $user['profile'] = "好好学习，天天向上！";
+            $user['type'] = 1;
+            $user['nation'] = 1;
+            $user['createtime'] = time();
+            if($data[1] == '男'){
+                $user['sex'] = 0;
+            }else{
+                $user['sex'] = 1;
+            }
+            
+            $user['grade'] = 14;
+            $user['schoolinfo'] = [
+                'schoolid' => "5a2607b0c9609c142d177934",
+                'schoolname' => "北锣鼓巷小学",
+            ];
+            $user['classinfo'] = [
+                'classid' => "5a2607efc9609c0e1e5ed413",
+                'classname' => "4年级6班",
+            ];
 
-     //        $userUpdate = [
-     //            'classinfo' =>[
-     //                'classid' => (string)$classInfo['_id'],
-     //                'classname' => $classInfo['name'],
-     //            ]
-     //        ];
+            $a = $userModel->insert($user);
+            if($a == false){
+                echo (string)$data[0];
+            }
+            
+        }
 
-     //        $result = $userModel->update(['_id'=>$userInfo['_id']],$userUpdate);
-     //        if($result === false){
-     //            echo $userName;
-     //            continue;
-     //        }
-
-     //        $statWhere = [
-     //            'starttime' => ['$gte' => 1504195200],
-     //            'userid' => $userInfo['_id'],
-     //        ];
-     //        $statOption['projection'] = ['_id' =>1];
-
-     //        $ustatData = $ustatModel->query($statWhere,$statOption);
-
-     //        $ustatIds = array_column($ustatData,'_id');
-
-     //        foreach($ustatIds as $ustatId){
-
-     //            $statUpdate = ['class_id' => $classInfo['_id']];
-     //            $ustatModel->update(['_id'=>$ustatId],$statUpdate);
-     //        }   
-
-     //    }
 
 echo "结束";
 exit;

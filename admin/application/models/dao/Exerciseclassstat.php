@@ -21,6 +21,7 @@ class Dao_ExerciseclassstatModel extends Db_Mongodb {
         'undoneuserid' => [],             //未按时完成学生id号数组
         'needdoneno' => '',               //该运动作业还需要锻炼多少次
         'studentsdonecount' => [],        // 学生锻炼次数统计(userid-学生id,gender-学生性别,donecount-本周之前学生锻炼次数,exercisedonecount-该作业学生有效锻炼次数,weekendtime-本周之前的周截止日期)
+        'is_test' => 0,
 	];
 
     protected function __construct(){
