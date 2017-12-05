@@ -138,13 +138,14 @@ class Service_Push_AppNoticeModel extends BasePageService {
                 }
 
                 if(!empty($appList['android'])){
-                    $androidDeviceToken = implode(',', $deviceToken);
-                    $uMPush->androidPushByListcast(
+                    $androidDeviceToken = implode(',', $appList['android']);
+                    $res = $uMPush->androidPushByListcast(
                         $req['title'], 
                         $req['desc'],
                         $androidDeviceToken,
                         ['businessname' => 1]
                     );
+
                 }
 
                 $index += 1;
