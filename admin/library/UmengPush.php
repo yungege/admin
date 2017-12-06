@@ -6,10 +6,12 @@
 class UmengPush {
 
 	const iosAppKey = "582ed0a0677baa081c000ab2";
-	const androidAppKey = "57e4e7fde0f55aa8a60008ef";
-	const uMengUrl =  "http://msg.umeng.com/api/send";
 	const iosAppMasterSecret = "lsnn5qf9pjggson7uxuvfyhnkaagxlmv";
+
+	const androidAppKey = "57e4e7fde0f55aa8a60008ef";
 	const androidAppMasterSecret = "1qpeclzvoca6ufo0m62hanejhqrfl2ca";
+
+	const uMengUrl =  "http://msg.umeng.com/api/send";
 	const httpMethod = 'POST';
 
 	protected $postData = [];
@@ -102,14 +104,12 @@ class UmengPush {
 		$this->postData['android']['payload']['display_type'] = "notification";
 		$this->postData['android']['payload']['body']['ticker'] = $title;
 		$this->postData['android']['payload']['body']['title'] = $title;
-		$this->postData['android']['payload']['body']['text'] = $content ;
-		$this->postData['android']['payload'] = array_merge($this->postData['android']['payload'], $extFields);
-		$this->postData['android']['production_model'] = "true";
+		$this->postData['android']['payload']['body']['text'] = $content;
+		$this->postData['android']['payload']['body']['after_open'] = 'go_custom';
+		$this->postData['android']['payload']['extra'] = $extFields;
+		// $this->postData['android']['production_model'] = "true";
 
 		$output = $this->sendPushByAndroid($this->postData['android']);
-
-		var_dump($output);
-		exit;
 		
 		return $output;
 	}
@@ -140,9 +140,10 @@ class UmengPush {
 		$this->postData['android']['payload']['display_type'] = "notification";
 		$this->postData['android']['payload']['body']['ticker'] = $title;
 		$this->postData['android']['payload']['body']['title'] = $title;
-		$this->postData['android']['payload']['body']['text'] = $content ;
-		$this->postData['android']['payload'] = array_merge($this->postData['android']['payload'], $extFields);
-		$this->postData['android']['production_model'] = "true";
+		$this->postData['android']['payload']['body']['text'] = $content;
+		$this->postData['android']['payload']['body']['after_open'] = 'go_custom';
+		$this->postData['android']['payload']['extra'] = $extFields;
+		// $this->postData['android']['production_model'] = "true";
 
 		$output = $this->sendPushByAndroid($this->postData['android']);
 		return $output;
