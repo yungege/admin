@@ -60,8 +60,7 @@ class Service_Push_PTrainModel extends BasePageService {
 		$this->theme = trim($req['theme']);
 		$this->desc = trim($req['description']);
 		$this->content = trim($req['content']);
-		$this->desc = str_replace("\r\n","",$this->desc);
-		$this->content = str_replace("\r\r","",$this->content);
+		$this->desc = str_replace(PHP_EOL,"",$this->desc);
 		$this->selectedGrade = explode('|' , $req['grade']);
 		array_walk($this->schoolIds,array($this,'trimValue'));
 		array_walk($this->selectedGrade,array($this,'gradeToInt'));
@@ -148,8 +147,7 @@ class Service_Push_PTrainModel extends BasePageService {
 		$this->theme = trim($req['theme']);
 		$this->content = trim($req['content']);
 		$this->desc = trim($req['description']);
-		$this->desc = str_replace("\r\n","",$this->desc);
-		$this->content = str_replace("\r\n","",$this->content);
+		$this->desc = str_replace(PHP_EOL,"",$this->desc);
 		array_walk($this->classIds,array($this,'trimValue'));
 
 		$whereUser = [
@@ -237,8 +235,7 @@ class Service_Push_PTrainModel extends BasePageService {
 		$this->content = trim($req['content']);
 		$this->desc = trim($req['description']);
 		$this->userInfos = $this->userModel->query($whereUser,$option);
-		$this->desc = str_replace("\r\n","",$this->desc);
-		$this->content = str_replace("\r\n","",$this->content);
+		$this->desc = str_replace(PHP_EOL,"",$this->desc);
 
 		foreach($this->userInfos as $userInfo){
 			$this->message['platform'] = 1;
@@ -268,15 +265,15 @@ class Service_Push_PTrainModel extends BasePageService {
 
 		if(!empty($this->deviceToken['ios'])){
 
-			$retIos = $this->uMPush->iosPushByListcast($this->theme,$this->desc,$this->deviceToken['ios']);
+			$retIos = $this->uMPush->iosPushByListcast($this->theme,$this->desc,$this->deviceToken['ios'],['businessname' => 3]);
 		}
 	
 		if(!empty($this->deviceToken['android'])){
 
-			$retAndroid = $this->uMPush->androidPushByListcast($this->theme,$this->desc,$this->deviceToken['android']);
+			$retAndroid = $this->uMPush->androidPushByListcast($this->theme,$this->desc,$this->deviceToken['android'],['businessname' => 3]);
 		}
 
-		return ;
+		return;
 	}
 
 	protected function trimValue(&$value,$key){

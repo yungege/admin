@@ -36,6 +36,7 @@ class Service_Push_AppNoticeModel extends BasePageService {
             throw new Exception("标题长度必须小于36", -1);
         }
 
+        $req['desc'] = str_replace(PHP_EOL, '', $req['desc']);
         if(empty(trim($req['desc'])) || mb_strlen($req['desc']) > 128){
             throw new Exception("摘要长度必须小于128", -1);
         }
@@ -145,7 +146,6 @@ class Service_Push_AppNoticeModel extends BasePageService {
                         $androidDeviceToken,
                         ['businessname' => 1]
                     );
-
                 }
 
                 $index += 1;
