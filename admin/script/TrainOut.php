@@ -21,9 +21,9 @@ class TrainOut {
 
             $data[0] = (string)$data[0];
             $data[1] = (string)$data[1];
-            $data[2] = intval(($data[2] - 25569) * 3600 * 24) - 8 * 3600;
-            // $data[2] = (string)$data[2];
-            // $data[2] = strtotime($data[2]);
+            // $data[2] = intval(($data[2] - 25569) * 3600 * 24) - 8 * 3600;
+            $data[2] = (string)$data[2];
+            $data[2] = strtotime($data[2]);
 
             // echo $data[0];
             // echo $data[1];
@@ -57,11 +57,11 @@ class TrainOut {
             
             $user['grade'] = 14;
             $user['schoolinfo'] = [
-                'schoolid' => "5a2607b0c9609c142d177934",
-                'schoolname' => "北锣鼓巷小学",
+                'schoolid' => "5a0d180fc9609c0e1c2e0dc2",
+                'schoolname' => "东交民巷小学",
             ];
             $user['classinfo'] = [
-                'classid' => "5a2607efc9609c0e1e5ed413",
+                'classid' => "  5a26702bc9609c0e1b427978",
                 'classname' => "4年级6班",
             ];
 
