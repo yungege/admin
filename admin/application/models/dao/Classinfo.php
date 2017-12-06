@@ -21,6 +21,7 @@ class Dao_ClassinfoModel extends Db_Mongodb {
         'exerciseproject' => [],        // 锻炼项目信息:[{type(锻炼类型),exerciseid(锻炼项目id),createtime(锻炼项目创建时间),endtime(项目截止时间),weekdoneno(周计划锻炼次数)}......]
         'branch_school' => null,
         'createtime' => 0,
+        'is_test' => 0,
 	];
 
     protected function __construct(){

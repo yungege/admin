@@ -102,6 +102,7 @@ class Service_Class_InsertModel extends BasePageService {
 		$data['grade'] = (int)$req['grade'];
 		$data['admissiontime'] = strtotime($req['startTime']);
 		$data['classno'] = (int)$req['classNo'];
+		$data['is_test'] = 0;
 
 		$res = $this->classModel->insert($data);
 		

@@ -106,7 +106,10 @@ class UmengPush {
 		$this->postData['android']['payload']['body']['title'] = $title;
 		$this->postData['android']['payload']['body']['text'] = $content;
 		$this->postData['android']['payload']['body']['after_open'] = 'go_custom';
-		$this->postData['android']['payload']['extra'] = $extFields;
+		if(!empty($extFields)){
+			$this->postData['android']['payload']['extra'] = $extFields;
+		}
+		
 		// $this->postData['android']['production_model'] = "true";
 
 		$output = $this->sendPushByAndroid($this->postData['android']);
@@ -142,7 +145,9 @@ class UmengPush {
 		$this->postData['android']['payload']['body']['title'] = $title;
 		$this->postData['android']['payload']['body']['text'] = $content;
 		$this->postData['android']['payload']['body']['after_open'] = 'go_custom';
-		$this->postData['android']['payload']['extra'] = $extFields;
+		if(!empty($extFields)){
+			$this->postData['android']['payload']['extra'] = $extFields;
+		}
 		// $this->postData['android']['production_model'] = "true";
 
 		$output = $this->sendPushByAndroid($this->postData['android']);
