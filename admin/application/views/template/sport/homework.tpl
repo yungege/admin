@@ -84,7 +84,7 @@
                             {%$row.deadline_time|date_format:"%Y-%m-%d"%}
                         </td>
                         <td>{%$row.create_time|date_format:"%Y-%m-%d"%}</td>
-                        <td>{%if $row.status == 1%}<span class="label label-success">锻炼中</span>{%elseif $row.status == -1%}<span class="label label-danger">已过期</span>{%else%}<span class="label label-defult">未生效</span>{%/if%}</td>
+                        <td>{%if $row.status == 1%}<span class="label label-success">锻炼中</span>{%elseif $row.status == -1%}<span class="label label-danger">已过期</span>{%else%}<span class="label label-defalt">未生效</span>{%/if%}</td>
                         <td>
                             <!-- <button type="button" data-id="{%$row._id%}" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
                             {%if $row.status == 1%}
