@@ -84,7 +84,7 @@ class Service_Project_AddSkuModel extends BasePageService {
                 $actionCount += 1;
 
                 if(!isset($fileSizeArr[$aval['id']])){
-                    $fileSizeArr[$aval['id'] = $actionInfo['vfilesize'];
+                    $fileSizeArr[$aval['id']] = $actionInfo['vfilesize'];
                     $filesize += $actionInfo['vfilesize'];
                 }
 
