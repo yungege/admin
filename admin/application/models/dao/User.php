@@ -106,7 +106,7 @@ class Dao_UserModel extends Db_Mongodb{
         'exerciseinfo' => [],         // 锻炼项目信息:[{type(锻炼类型),exerciseid(锻炼项目id),createtime(锻炼项目创建时间),totalexertime(已经锻炼总次数),exertime(周锻炼时间:["1","2","5"],分别表示周一\周三\周五),part(锻炼的节次信息),weekdoneno(周锻炼次数)}......]
         // 'exercisealam' => [],         // 家庭作业定时提醒时间:[{type(锻炼类型),exerciseprogramid(锻炼项目id号),alarmtime(提醒时间)}......]
         // 'teacherno' => '',            // 教师工号
-        // 'manageclassinfo' => [],      // 教师管理班级id信息(默认是全校班级):[{classid(班级id号),classname(班级名称)}......]
+        'manageclassinfo' => [],      // 教师管理班级id信息(默认是全校班级):[{classid(班级id号),classname(班级名称)}......]
         // 'receivemessage' => [],       // 接收到的通知消息:[{sendtime(发送时间),type(类型,0-教师催促信息,1-平台通知...),delete(是否被删除,0-没有被删除,1-已经被删除),senderid(发送者id),content(内容),sendericonurl(发布者的头像),sendername(发布者的名字)}......]
         'lastsubmittime' => 0,       // 最后一次提交作业时间
         'parentinfo' => [],
@@ -118,6 +118,7 @@ class Dao_UserModel extends Db_Mongodb{
         ],
         'upgrade_year' => 0, // 升级年级信息(升级年-月) 脚本专用
         'create_time' => 0 , //创建时间
+        'my_teacher' => '',
     ];
     
     protected function __construct(){

@@ -9,114 +9,74 @@ class TrainOut {
     // 同年级班级调换
     public static function init(){
 
-    	$userModel = Dao_UserModel::getInstance();
-        // $classModel = Dao_ClassinfoModel::getInstance();
-        // $ustatModel = Dao_ExerciseuserstatModel::getInstance();
+        $userModel = Dao_UserModel::getInstance();
 
-        $file = '/mnt/file/' . 'a.xlsx';
-        $ext = self::getExt($file);
-        $datas = self::importExcel($file,$ext);
-        unset($datas[1]);
-        foreach($datas as $data){
+        $skip = 0;
+        $limit = 1;
+        while(1){
 
-            $data[0] = (string)$data[0];
-            $data[1] = (string)$data[1];
-            // $data[2] = intval(($data[2] - 25569) * 3600 * 24) - 8 * 3600;
-            $data[2] = (string)$data[2];
-            $data[2] = strtotime($data[2]);
+            $where = [
+                'type' => 1,
+            ];
+            $options = [
+                'skip' => $skip,
+                'limit' => $limit,    
+            ];
 
-            // echo $data[0];
-            // echo $data[1];
-            // echo $data[2];
+            $user = $userModel->queryOne($where,$options);
+            if(empty($user)){
+                break;
+            }
 
-            // exit;
-
-
-            if(empty($data[1]) || empty($data[2]) || empty($data[0])){
-                echo 1;
-                echo (string)$data[0];
+            $userId = (string)$user['_id'];
+            $classId = $user['classinfo']['classid'];
+            if(empty($userId) || empty($classId)){
                 continue;
             }
 
-            if($data[2] < 120654720){
-                echo (string)$data[0];
-                continue;
-            }
+// echo $classId;
 
-            $user['username'] = (string)$data[0];
-            $user['birthday'] = $data[2];
-            $user['profile'] = "好好学习，天天向上！";
-            $user['type'] = 1;
-            $user['nation'] = 1;
-            $user['createtime'] = time();
-            if($data[1] == '男'){
-                $user['sex'] = 0;
+            // $tWhere = [
+            //     "type" => 2,
+            //     "manageclassinfo" => ["classid" => $classId]
+            // ];
+
+
+            // echo $classId;
+            // continue;
+
+            $tWhere["manageclassinfo"]["classid"] = $classId;
+
+            $teacher = $userModel->queryOne($tWhere);
+
+            if(empty($teacher)){
+                echo '空';
             }else{
-                $user['sex'] = 1;
+                echo $teacher['username'];
             }
-            
-            $user['grade'] = 14;
-            $user['schoolinfo'] = [
-                'schoolid' => "5a0d180fc9609c0e1c2e0dc2",
-                'schoolname' => "东交民巷小学",
-            ];
-            $user['classinfo'] = [
-                'classid' => "  5a26702bc9609c0e1b427978",
-                'classname' => "4年级6班",
-            ];
+            // echo $userId;
+            // echo $classId;
+            // echo $user['username'];
+            $skip++;
 
-            $a = $userModel->insert($user);
-            if($a == false){
-                echo (string)$data[0];
+            if(!empty($teacher)){
+                echo $teacher['username'];
+                break;
+            }else{
+                echo $kip;
             }
-            
+
+            // if($skip == 5){
+            //     exit;
+            // }
+
         }
 
 
-echo "结束";
-exit;
-
-
+        echo "11";
 
     }
 
-    private static function getExt($fileName) {
-
-        return strtolower(pathinfo($fileName,PATHINFO_EXTENSION));
-    }
-
-    private static function importExcel($file,$ext) {
-        // 判断文件是什么格式
-        ini_set('max_execution_time', '0');
-        if($ext == 'xlsx'){
-            $type = 'Excel2007';
-        }
-
-        if($ext == 'xls'){
-            $type = 'Excel5';
-        }
-        // 判断使用哪种格式
-        $objReader = \PHPExcel_IOFactory::createReader($type);
-        $objPHPExcel = $objReader->load($file); 
-        $sheet = $objPHPExcel->getSheet(0); 
-        // 取得总行数 
-        $highestRow = $sheet->getHighestRow();  
-        // 取得总列数      
-        $highestColumn = $sheet->getHighestColumn(); 
-        //循环读取excel文件,读取一条,插入一条
-        $data=array();
-        //从第一行开始读取数据
-        for($j=1;$j<=$highestRow;$j++){
-
-            //从A列读取数据
-            for($k='A';$k!=$highestColumn;$k++){
-                // 读取单元格
-                $data[$j][]=$objPHPExcel->getActiveSheet()->getCell("$k$j")->getValue();
-            } 
-            $data[$j][]=$objPHPExcel->getActiveSheet()->getCell("$k$j")->getValue();
-        }
-
-        return $data;
-    }
+    
 
 }

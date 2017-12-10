@@ -13,9 +13,11 @@ class Dao_ExerciseProjectSkuModel extends Db_Mongodb {
         'calorie_cost'  => 0.00,    // 项目所需卡路里
         'action_count'  => 0,       // 动作数
         'difficulty'    => 0,       // 难度 -1无难度，0低，1中，2高
-        'action_info'   => [],      // 项目动作组合 ["action_id","action_time","action_groupno","calorie"]
+        'difficulty_new'=> 0,       // 难度 -1无难度，0低，1中，2高
+        'action_info'   => [],      // 项目动作组合 ["action_id","action_time","action_groupno","calorie","section"]
         'type'          => 0,       // 1室内 2户外
         'up_num'        => 0,       // 点赞数
+        'sections'      => [],      // 节拍信息
     ];
 
     protected $actionModel;
