@@ -1,23 +1,51 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-12-09 14:52:38
          compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7516155415a2b8836562318-81938612%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-09 14:50:54
+         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:16597937135a2b87ce934622-79008189%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-08 12:53:36
+         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2544975815a2a1ad04d6de3-81682266%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 1a7c66949d82756077eed1428a5158630ce2f046
+>>>>>>> 20ebf975e59fdf8b9fb83b9ffe9514158d85afe2
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '92c948c733c4e7edc2354b1f8aeea4204980b0e2' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/banner.tpl',
-      1 => 1509502905,
+<<<<<<< HEAD
+      1 => 1501062598,
+=======
+      1 => 1509080121,
+>>>>>>> 1a7c66949d82756077eed1428a5158630ce2f046
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+<<<<<<< HEAD
+      1 => 1510105524,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '7516155415a2b8836562318-81938612',
+=======
+  'nocache_hash' => '16597937135a2b87ce934622-79008189',
+=======
+      1 => 1510105483,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2544975815a2a1ad04d6de3-81682266',
+>>>>>>> 1a7c66949d82756077eed1428a5158630ce2f046
+>>>>>>> 20ebf975e59fdf8b9fb83b9ffe9514158d85afe2
   'function' => 
   array (
   ),
@@ -35,9 +63,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a2b88366c55b8_51831444',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a2b88366c55b8_51831444')) {function content_5a2b88366c55b8_51831444($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a2b87ce99ad71_99871554',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a2b87ce99ad71_99871554')) {function content_5a2b87ce99ad71_99871554($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a2a1ad05e5339_57597111',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a2a1ad05e5339_57597111')) {function content_5a2a1ad05e5339_57597111($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 1a7c66949d82756077eed1428a5158630ce2f046
+>>>>>>> 20ebf975e59fdf8b9fb83b9ffe9514158d85afe2
 <html lang="en">
 
 <head>
