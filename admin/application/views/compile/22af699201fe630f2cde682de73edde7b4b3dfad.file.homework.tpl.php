@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-10 13:06:09
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-10 13:08:29
          compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5313704215a2cc0c142ef10-77978079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:4904007525a2cc14dd23875-85185654%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '22af699201fe630f2cde682de73edde7b4b3dfad' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/homework.tpl',
-      1 => 1509502905,
+      1 => 1512882485,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '5313704215a2cc0c142ef10-77978079',
+  'nocache_hash' => '4904007525a2cc14dd23875-85185654',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a2cc0c15bb6a1_93239381',
+  'unifunc' => 'content_5a2cc14deacfb2_04444700',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a2cc0c15bb6a1_93239381')) {function content_5a2cc0c15bb6a1_93239381($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
+<?php if ($_valid && !is_callable('content_5a2cc14deacfb2_04444700')) {function content_5a2cc14deacfb2_04444700($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
 if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
@@ -445,7 +445,7 @@ $_smarty_tpl->tpl_vars['pro']->_loop = true;
                         </td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['create_time'],"%Y-%m-%d");?>
 </td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['status']==1){?><span class="label label-success">锻炼中</span><?php }elseif($_smarty_tpl->tpl_vars['row']->value['status']==-1){?><span class="label label-danger">已过期</span><?php }else{ ?><span class="label label-defult">未生效</span><?php }?></td>
+                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['status']==1){?><span class="label label-success">锻炼中</span><?php }elseif($_smarty_tpl->tpl_vars['row']->value['status']==-1){?><span class="label label-danger">已过期</span><?php }else{ ?><span class="label label-defalt">未生效</span><?php }?></td>
                         <td>
                             <!-- <button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
