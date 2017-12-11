@@ -67,7 +67,7 @@ class Dao_UrlModel extends Db_Mongodb {
 
     public function checkUrlExists(string $url){
         $where = [
-            'url' => $url,
+            'url' => addslashes($url),
         ];
 
         return (bool)$this->queryOne($where);
