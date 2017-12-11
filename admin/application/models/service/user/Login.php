@@ -71,7 +71,7 @@ class Service_User_LoginModel extends BasePageService {
         $req['pwd'] = md5(substr($req['mob'], 1,8) . $req['pwd']);
 
         $userInfo = $this->userModel->queryOne([
-        'mobileno' => (int)$req['mob'],
+            'mobileno' => (int)$req['mob'],
         ]);
 
         if(empty($userInfo)){

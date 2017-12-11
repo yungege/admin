@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-11 16:53:53
-         compiled from "/var/www/admin/admin/application/views/template/meau/assgin.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18767428605a2e47a1317f60-42109364%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-11 16:48:37
+         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:18286568075a2e4665ac3061-55958184%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'cbf3bc439b8ef2a10a46a5272aef770d71e16c64' => 
+    '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/meau/assgin.tpl',
-      1 => 1509429986,
+      0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
+      1 => 1509080121,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18767428605a2e47a1317f60-42109364',
+  'nocache_hash' => '18286568075a2e4665ac3061-55958184',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a2e47a136b3b6_87781447',
+  'unifunc' => 'content_5a2e4665b18542_59939357',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a2e47a136b3b6_87781447')) {function content_5a2e47a136b3b6_87781447($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a2e4665b18542_59939357')) {function content_5a2e4665b18542_59939357($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -123,15 +123,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         vertical-align: middle;
         height: 45px;
     }
-    .all-checked-label{
-        cursor: pointer;
-        line-height: 1;
+    .add-f-cate-fix,.add-s-cate-fix,.edit-cate-fix{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,.3);
+        z-index: 9999;
+        display: none;
     }
-    #cy-all-checked{
-        vertical-align: top;
+    .inner-box{
+        background-color: white;
+        width: 500px;
+        /*height: 200px;*/
+        border: 1px solid #999;
+        border-radius: 3px;
+        margin: 10% auto 0;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        padding: 15px;
     }
 </style>
-<link href="/static/widget/icheck/square/green.css" rel="stylesheet">
 
 </head>
 
@@ -347,7 +360,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 权限分配
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 菜单管理 <a class="btn btn-xs btn-primary" href="javascript:void(0)" id="add-f-cate">新建菜单</a>
                             </li>
                         </ol>
                     </div>
@@ -358,39 +371,130 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
 
 <div class="row">
     <div class="col-lg-12">
-        <form name="url">
-            <table class="table table-striped table-bordered" style="color: #7a7676;">
-                <thead>
-                    <tr>
-                        <th class="text-center" style="width: 100px;">
-                            <label for="cy-all-checked" class="all-checked-label">全选</label>
-                            <input id="cy-all-checked" type="checkbox"/>
-                        </th>
-                        <th>URL</th>
-                        <th>备注信息</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+        <table class="table table-striped table-bordered" style="color: #7a7676;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>排序</th>
+                    <th>菜单名称</th>
+                    <th>URL</th>
+                    <th>图标样式</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                    <tr>
-                        <td class="text-center"><input class="cy-icheck" type="checkbox" name="urls[]" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
-" <?php if (in_array($_smarty_tpl->tpl_vars['row']->value['url'],$_smarty_tpl->tpl_vars['myList']->value['url'])){?>checked<?php }?>/></td>
-                        <td><a href="javascript:viod(0)" style="color: #65CEA7;"><?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
-</a></td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['remark'];?>
-</td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
-            <input type="hidden" name="rid" value="<?php echo $_GET['rid'];?>
+                <tr data-seria="<?php echo serialize($_smarty_tpl->tpl_vars['row']->value);?>
 ">
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_sort'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_name'];?>
+</td>
+                    <td><a href="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+" style="color: #65CEA7;"><?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+</a></td>
+                    <td style="color: #65CEA7;font-size: 20px;font-weight: 700;"><i class="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
+"></i></td>
+                    <td>
+                        <?php if ($_smarty_tpl->tpl_vars['row']->value['pid']==''){?>
+                           <a data-pid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-pname="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+" class="add-s-cate cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-plus'></span> 子菜单</a>&nbsp;
+                        <?php }?>
+                        <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+" data-ssort="<?php echo $_smarty_tpl->tpl_vars['row']->value['sort'];?>
+" data-icon="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
+" data-url="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+" class="cate-edit btn btn-xs btn-primary" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
+                    </td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- 一级菜单 -->
+<div class="add-f-cate-fix">
+    <div class="inner-box">
+        <h4>新增一级菜单</h4>
+        <hr>
+        <form name="add-f-cate" class="form">
+            <div class="form-group">
+                <label>菜单名</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group">
+                <label>排序</label>
+                <input type="text" class="form-control" name="sort">
+            </div>
+            <div class="form-group">
+                <label>图标样式</label>
+                <input type="text" class="form-control" name="icon_style">
+            </div>
+            <a class="btn btn-primary subf" href="javascript:void(0)">提&emsp;交</a>
+            <a class="btn btn-danger canf" href="javascript:void(0)">取&emsp;消</a>
         </form>
-        <a id="sub" class="btn btn-md btn-primary" href="javascript:void(0)">保 存</a>
+    </div>
+</div>
+<!-- 二级菜单 -->
+<div class="add-s-cate-fix">
+    <div class="inner-box">
+        <h4>新增二级菜单&emsp;&emsp;<small id="first-cate-name" style="color: #65CEA7;"></small></h4>
+        <hr>
+        <form name="add-s-cate" class="form">
+            <div class="form-group">
+                <label>菜单名</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group">
+                <label>排序</label>
+                <input type="text" class="form-control" name="sort">
+            </div>
+            <div class="form-group">
+                <label>URL <small>[ /meau/list ]</small></label>
+                <input type="text" class="form-control" name="url">
+            </div>
+            <input type="hidden" name="pid" class="pid-s">
+            <a class="btn btn-primary subs" href="javascript:void(0)">提&emsp;交</a>
+            <a class="btn btn-danger cans" href="javascript:void(0)">取&emsp;消</a>
+        </form>
+    </div>
+</div>
+
+<!-- 编辑菜单 -->
+<div class="edit-cate-fix">
+    <div class="inner-box">
+        <h4>编辑菜单&emsp;&emsp;<small id="old-cate-name" style="color: #65CEA7;"></small></h4>
+        <hr>
+        <form name="edit-cate" class="form">
+            <div class="form-group">
+                <label>菜单名</label>
+                <input type="text" class="form-control name-e" name="name">
+            </div>
+            <div class="form-group">
+                <label>排序</label>
+                <input type="text" class="form-control sort-e" name="sort">
+            </div>
+            <div class="form-group">
+                <label>图标样式</label>
+                <input type="text" class="form-control icon-e" name="icon_style">
+            </div>
+            <div class="form-group">
+                <label>URL <small>[ /meau/list ]</small></label>
+                <input type="text" class="form-control url-e" name="url">
+            </div>
+            <input type="hidden" name="id" class="pid-e">
+            <a class="btn btn-primary sube" href="javascript:void(0)">提&emsp;交</a>
+            <a class="btn btn-danger cane" href="javascript:void(0)">取&emsp;消</a>
+        </form>
     </div>
 </div>
 
@@ -424,95 +528,173 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
-<script src="/static/widget/icheck/icheck.min.js"></script>
 <script>
 $(function(){
-    $('.cy-icheck').iCheck({
-        checkboxClass: 'icheckbox_square-green',
-        increaseArea: '20%' // optional
-    });
-
-    var assgin = {
+    var meauFirst = {
         init: function(){
             this.getDom();
-            this.checkAll();
-            this.checkAllStatus();
-            this.postData();
+            this.postMeau();
+            this.cancer();
+            this.showBox();
         },
-
         getDom: function(){
-            this.checkBtn = $('#cy-all-checked');
-            this.urlChecks = $('.cy-icheck');
-            this.subBtn = $('#sub');
-            this.form = $('form[name=url]');
-            this.dialogDom = {};
+            this.form = $('form[name=add-f-cate]');
+            this.subBtn = $('.subf');
+            this.canBtn = $('.canf');
+            this.fixBox = $('.add-f-cate-fix');
+            this.showBtn = $('#add-f-cate');
         },
-
-        checkAll: function(){
+        postMeau: function(){
             var me = this;
-            me.checkBtn.change(function(){
-                var checkStatus = $(this).prop('checked');
-                var newStatus = checkStatus == true ? 'check' : 'uncheck';
-                me.urlChecks.iCheck(newStatus);
-            });
-        },
-
-        checkAllStatus: function(){
-            var me = this;
-            me.urlChecks.bind('ifChanged', function(){
-                var sta = $(this).prop('checked');
-                if(sta === false){
-                    me.checkBtn.prop('checked', false);
-                }
-            })
-        },
-
-        postData: function(){
-            var me = this;
-            me.subBtn.bind('click', function(){
+            me.subBtn.unbind().bind('click', function(){
                 var data = me.form.serialize();
-                $.post('/meau/assginurl', data, function(res){
-                    if(res.errCode == 0){
-                        me.alertMsg('保存成功', 'succ');
+                $.post('/meau/addfirst', data, function(json){
+                    if(json.errCode == 0){
+                        window.location.reload();
                     }
                     else{
-                        me.alertMsg(res.errMessage, 'fail');
-                        return false;
+                        alert(json.errMessage);
                     }
-                })
+                });
+            });
+        },
+        cancer: function(){
+            var me = this;
+            me.canBtn.unbind().bind('click', function(){
+                me.fixBox.fadeOut(200);
+                me.form[0].reset();
             })
         },
-
-        alertMsg: function(text, name){
+        showBox: function(){
             var me = this;
-
-            if(name == 'fail'){
-                var buttons = {
-                    '确定' : function(){
-                        me.dialogDom.name.destroy();
-                    },
-                };
-            }
-            else{
-                var buttons = {
-                    '确定' : function(){
-                        window.location.reload();
-                    },
-                };
-            }
-
-            me.dialogDom.name = jqueryAlert({
-                'title'   : '',
-                'content' : text,
-                'modal'   : true,
-                'buttons' : buttons
-            });
-
-            return false;
+            me.showBtn.unbind().bind('click', function(){
+                me.fixBox.fadeIn(200);
+            })
         },
     };
 
-    assgin.init()
+    // 二级菜单
+    var meauSecond = {
+        init: function(){
+            this.getDom();
+            this.postMeau();
+            this.cancer();
+            this.showBox();
+        },
+        getDom: function(){
+            this.form = $('form[name=add-s-cate]');
+            this.subBtn = $('.subs');
+            this.canBtn = $('.cans');
+            this.fixBox = $('.add-s-cate-fix');
+            this.showBtn = $('.add-s-cate');
+            this.pname = $('#first-cate-name');
+            this.pid = $('.pid-s');
+        },
+        postMeau: function(){
+            var me = this;
+            me.subBtn.unbind().bind('click', function(){
+                var data = me.form.serialize();
+                $.post('/meau/addfirst?type=2', data, function(json){
+                    if(json.errCode == 0){
+                        window.location.reload();
+                    }
+                    else{
+                        alert(json.errMessage);
+                    }
+                });
+            });
+        },
+        cancer: function(){
+            var me = this;
+            me.canBtn.unbind().bind('click', function(){
+                me.fixBox.fadeOut(200);
+                me.form[0].reset();
+            })
+        },
+        showBox: function(){
+            var me = this;
+            me.showBtn.unbind().bind('click', function(){
+                var pid = $(this).data('pid'),
+                    pname = $(this).data('pname');
+                me.pname.text('父级菜单：'+pname);
+                me.pid.val(pid);
+                me.fixBox.fadeIn(200);
+            })
+        },
+    };
+
+    // 编辑
+    var meauEdit = {
+        init: function(){
+            this.getDom();
+            this.postMeau();
+            this.cancer();
+            this.showBox();
+        },
+        getDom: function(){
+            this.form = $('form[name=edit-cate]');
+            this.subBtn = $('.sube');
+            this.canBtn = $('.cane');
+            this.fixBox = $('.edit-cate-fix');
+            this.showBtn = $('.cate-edit');
+            this.cname = $('#old-cate-name');
+            this.cid = $('.pid-e');
+            this.csort = $('.sort-e');
+            this.cicon = $('.icon-e');
+            this.curl = $('.url-e');
+            this.new_cname = $('.name-e');
+        },
+        postMeau: function(){
+            var me = this;
+            me.subBtn.unbind().bind('click', function(){
+                var data = me.form.serialize();
+                $.post('/meau/addfirst?type=3', data, function(json){
+                    if(json.errCode == 0){
+                        window.location.reload();
+                    }
+                    else{
+                        alert(json.errMessage);
+                    }
+                });
+            });
+        },
+        cancer: function(){
+            var me = this;
+            me.canBtn.unbind().bind('click', function(){
+                me.fixBox.fadeOut(200);
+                me.form[0].reset();
+                me.cicon.attr('disabled', false);
+                me.curl.attr('disabled', false);
+            })
+        },
+        showBox: function(){
+            var me = this;
+            me.showBtn.unbind().bind('click', function(){
+                var id = $(this).data('id'),
+                    name = $(this).data('name'),
+                    sort = $(this).data('ssort'),
+                    icon = $(this).data('icon'),
+                    url = $(this).data('url');
+                me.cname.text(name);
+                me.cid.val(id);
+                me.new_cname.val(name);
+                me.csort.val(sort);
+                me.curl.val(url);
+                me.cicon.val(icon);
+                if(icon.length == 0){
+                    me.cicon.attr('disabled', true);
+                }
+                if(url == '#'){
+                    me.curl.attr('disabled', true);
+                }
+                me.fixBox.fadeIn(200);
+            })
+        },
+    };
+
+    meauFirst.init();
+    meauSecond.init();
+    meauEdit.init();
 })
 </script>
 
