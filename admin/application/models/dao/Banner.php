@@ -7,7 +7,7 @@ class Dao_BannerModel extends Db_Mongodb {
     protected $table = 'banner';
 
     protected $fields = [
-        'type'  => 1,             // 1锻炼首页 2运动圈
+        'type'  => 1,             // 1锻炼首页 2运动圈 3启动页广告
         'title' => '',            // 标题
         'creator' => '',          // 创建者
         'createtime' => 0,        // 创建时间
@@ -17,7 +17,7 @@ class Dao_BannerModel extends Db_Mongodb {
         'starttime' => 0,         // 开始时间
         'endtime' => 0,           // 结束时间
         'access' => [],           // 可访问范围控制(以学校为单位)
-        'aspectRatio' => 0,       // 图片比例
+        'aspectRatio' => 2.5,       // 图片比例
 	];
 
     protected function __construct(){

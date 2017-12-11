@@ -34,7 +34,7 @@ class Service_Sport_EditBannerModel extends BasePageService {
             }
         }
 
-        if(!is_numeric($req['aspectRatio'])){
+        if(!is_numeric($req['aspectRatio']) || empty($req['aspectRatio'])){
             return $this->errNo = -1;
         }
         else{

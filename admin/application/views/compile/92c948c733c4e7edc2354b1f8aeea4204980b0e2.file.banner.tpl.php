@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-11 16:56:02
+         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:94006905a2e4822b311d0-25298405%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-12-11 15:36:49
          compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5585281135a2e3591225c43-47233788%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -7,6 +12,7 @@
          compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13214040825a2e362f743577-67535096%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 >>>>>>> 89debcaba6dd1f757153e324e4c657b29e05c10a
+>>>>>>> c994f9369fbaaa6d5ad8fa3c6893564fdf668ba4
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -34,8 +40,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
+  'nocache_hash' => '94006905a2e4822b311d0-25298405',
+=======
   'nocache_hash' => '13214040825a2e362f743577-67535096',
 >>>>>>> 89debcaba6dd1f757153e324e4c657b29e05c10a
+>>>>>>> c994f9369fbaaa6d5ad8fa3c6893564fdf668ba4
   'function' => 
   array (
   ),
@@ -54,6 +64,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
+  'unifunc' => 'content_5a2e4822b8d743_61077370',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a2e4822b8d743_61077370')) {function content_5a2e4822b8d743_61077370($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
   'unifunc' => 'content_5a2e359137e104_12105334',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a2e359137e104_12105334')) {function content_5a2e359137e104_12105334($_smarty_tpl) {?><!DOCTYPE html>
@@ -62,6 +77,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a2e362f8ceea9_92666030')) {function content_5a2e362f8ceea9_92666030($_smarty_tpl) {?><!DOCTYPE html>
 >>>>>>> 89debcaba6dd1f757153e324e4c657b29e05c10a
+>>>>>>> c994f9369fbaaa6d5ad8fa3c6893564fdf668ba4
 <html lang="en">
 
 <head>
