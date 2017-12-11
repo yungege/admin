@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-11 09:57:22
-         compiled from "/var/www/admin/admin/application/views/template/sport/action.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1396722615a2de602bd9d62-22494980%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-11 09:57:13
+         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:15379429945a2de5f994a2f4-16971501%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'e1aa31fe68596b69275b00bb70552d612bede4f8' => 
+    '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/sport/action.tpl',
-      1 => 1510800863,
+      0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
+      1 => 1509502905,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1396722615a2de602bd9d62-22494980',
+  'nocache_hash' => '15379429945a2de5f994a2f4-16971501',
   'function' => 
   array (
   ),
@@ -35,10 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a2de602d831c0_15640426',
+  'unifunc' => 'content_5a2de5f9aa0c75_35552476',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a2de602d831c0_15640426')) {function content_5a2de602d831c0_15640426($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a2de5f9aa0c75_35552476')) {function content_5a2de5f9aa0c75_35552476($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -120,24 +119,31 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
-.video{
-    cursor: pointer;
-    border: 1px solid #ccc;
-    padding: 5px 15px 5px 15px;
-    border-radius: 3px;
-    display: inline-block;
-    width: 60px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-.video:hover{
-    border-color: #0c9;
-    background-color: #0c9;
-    color: white;
-}
+    .table>tbody>tr>td,.table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+        vertical-align: middle;
+        height: 45px;
+    }
+    .add-f-cate-fix,.add-s-cate-fix,.edit-cate-fix{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,.3);
+        z-index: 9999;
+        display: none;
+    }
+    .inner-box{
+        background-color: white;
+        width: 500px;
+        /*height: 200px;*/
+        border: 1px solid #999;
+        border-radius: 3px;
+        margin: 10% auto 0;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        padding: 15px;
+    }
 </style>
 
 </head>
@@ -354,7 +360,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / 动作管理 <a href="/action/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">上传新动作</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 菜单管理 <a class="btn btn-xs btn-primary" href="javascript:void(0)" id="add-f-cate">新建菜单</a>
                             </li>
                         </ol>
                     </div>
@@ -362,129 +368,133 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
 
                 <!-- 用户数据 -->
                 
+
 <div class="row">
     <div class="col-lg-12">
-        <form method="get" >
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <div class="form-horizontal row">
-                        <div class="col-md-3">
-                            <div class="row">
-                                <label class="col-md-4 control-label" style="text-align: left;">动作名称：</label>
-                                <div class="col-md-8">
-                                    <input type="text" name="aname" class="input-sm form-control" value="<?php echo $_GET['aname'];?>
-">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
-                            <button class="btn btn-warning btn-sm reset-btn" type="button">清除条件</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-12">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped text-center">
-                <thead>
-                    <tr>
-                        <th class="text-center">动作名称</th>
-                        <th class="text-center">动作类型</th>
-                        <th class="text-center">封面图片</th>
-                        <th class="text-center">视频文件</th>
-                        <th class="text-center">文件大小</th>
-                        <th class="text-center">耗时（单次）</th>
-                        <th class="text-center">能量（单次）</th>
-                        <!-- <th class="text-center">年级难度</th> -->
-                        <!-- <th class="text-center">检测项目</th> -->
-                        <th class="text-center" style="width:300px;">描述</th>
-                        <th class="text-center">创建人</th>
-                        <th class="text-center">创建时间</th>
-                        <th class="text-center">操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+        <table class="table table-striped table-bordered" style="color: #7a7676;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>排序</th>
+                    <th>菜单名称</th>
+                    <th>URL</th>
+                    <th>图标样式</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                    <tr>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+                <tr data-seria="<?php echo serialize($_smarty_tpl->tpl_vars['row']->value);?>
+">
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['typeno'];?>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_sort'];?>
 </td>
-                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['coverimg'];?>
-"></td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['video']){?>
-                            <!-- <img src="/static/imgs/video.png" alt="..." width="40" height="40" style="cursor: pointer;"> -->
-                            <span data-toggle="modal" data-target="#video" class="video" data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" data-uri="<?php echo $_smarty_tpl->tpl_vars['row']->value['video'];?>
-">播放</span><?php }?>
-                        </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['vfilesize'];?>
-MB</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['singletime'];?>
-秒</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['calorie'];?>
-千卡</td>
-                        <!-- <td>
-                            <?php if ($_smarty_tpl->tpl_vars['row']->value['gradedifficulty']){?>
-                                <ul>
-                                <?php  $_smarty_tpl->tpl_vars['fid'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['fid']->_loop = false;
- $_smarty_tpl->tpl_vars['grade'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['row']->value['gradedifficulty']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['fid']->key => $_smarty_tpl->tpl_vars['fid']->value){
-$_smarty_tpl->tpl_vars['fid']->_loop = true;
- $_smarty_tpl->tpl_vars['grade']->value = $_smarty_tpl->tpl_vars['fid']->key;
-?>
-                                    <li><?php echo $_smarty_tpl->tpl_vars['grade']->value;?>
- -- <?php echo $_smarty_tpl->tpl_vars['fid']->value;?>
-</li>
-                                <?php } ?>
-                                </ul>
-                            <?php }?>
-                        </td> -->
-                        <!-- <td><?php echo $_smarty_tpl->tpl_vars['row']->value['physicalquality'];?>
-</td> -->
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['describe'];?>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_name'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['createor'];?>
-</td>
-                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%Y-%m-%d");?>
-<br/><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%H:%M:%S");?>
-</td>
-                        <td>
-                            <!-- <button type="button" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button> -->
-                        </td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="text-center tt-page">
-            <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
-
-        </div>
-
+                    <td><a href="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+" style="color: #65CEA7;"><?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+</a></td>
+                    <td style="color: #65CEA7;font-size: 20px;font-weight: 700;"><i class="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
+"></i></td>
+                    <td>
+                        <?php if ($_smarty_tpl->tpl_vars['row']->value['pid']==''){?>
+                           <a data-pid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-pname="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+" class="add-s-cate cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-plus'></span> 子菜单</a>&nbsp;
+                        <?php }?>
+                        <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+" data-ssort="<?php echo $_smarty_tpl->tpl_vars['row']->value['sort'];?>
+" data-icon="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
+" data-url="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+" class="cate-edit btn btn-xs btn-primary" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
+                    </td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </div>
 </div>
 
-<!-- modal -->
-<div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
-    <div class="modal-dialog" role="document" style="margin-top:7%;">
-        <div class="modal-content">
-            <div class="modal-body" id="display-body">
-                
+<!-- 一级菜单 -->
+<div class="add-f-cate-fix">
+    <div class="inner-box">
+        <h4>新增一级菜单</h4>
+        <hr>
+        <form name="add-f-cate" class="form">
+            <div class="form-group">
+                <label>菜单名</label>
+                <input type="text" class="form-control" name="name">
             </div>
-        </div>
+            <div class="form-group">
+                <label>排序</label>
+                <input type="text" class="form-control" name="sort">
+            </div>
+            <div class="form-group">
+                <label>图标样式</label>
+                <input type="text" class="form-control" name="icon_style">
+            </div>
+            <a class="btn btn-primary subf" href="javascript:void(0)">提&emsp;交</a>
+            <a class="btn btn-danger canf" href="javascript:void(0)">取&emsp;消</a>
+        </form>
+    </div>
+</div>
+<!-- 二级菜单 -->
+<div class="add-s-cate-fix">
+    <div class="inner-box">
+        <h4>新增二级菜单&emsp;&emsp;<small id="first-cate-name" style="color: #65CEA7;"></small></h4>
+        <hr>
+        <form name="add-s-cate" class="form">
+            <div class="form-group">
+                <label>菜单名</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group">
+                <label>排序</label>
+                <input type="text" class="form-control" name="sort">
+            </div>
+            <div class="form-group">
+                <label>URL <small>[ /meau/list ]</small></label>
+                <input type="text" class="form-control" name="url">
+            </div>
+            <input type="hidden" name="pid" class="pid-s">
+            <a class="btn btn-primary subs" href="javascript:void(0)">提&emsp;交</a>
+            <a class="btn btn-danger cans" href="javascript:void(0)">取&emsp;消</a>
+        </form>
+    </div>
+</div>
+
+<!-- 编辑菜单 -->
+<div class="edit-cate-fix">
+    <div class="inner-box">
+        <h4>编辑菜单&emsp;&emsp;<small id="old-cate-name" style="color: #65CEA7;"></small></h4>
+        <hr>
+        <form name="edit-cate" class="form">
+            <div class="form-group">
+                <label>菜单名</label>
+                <input type="text" class="form-control name-e" name="name">
+            </div>
+            <div class="form-group">
+                <label>排序</label>
+                <input type="text" class="form-control sort-e" name="sort">
+            </div>
+            <div class="form-group">
+                <label>图标样式</label>
+                <input type="text" class="form-control icon-e" name="icon_style">
+            </div>
+            <div class="form-group">
+                <label>URL <small>[ /meau/list ]</small></label>
+                <input type="text" class="form-control url-e" name="url">
+            </div>
+            <input type="hidden" name="id" class="pid-e">
+            <a class="btn btn-primary sube" href="javascript:void(0)">提&emsp;交</a>
+            <a class="btn btn-danger cane" href="javascript:void(0)">取&emsp;消</a>
+        </form>
     </div>
 </div>
 
@@ -518,51 +528,174 @@ $_smarty_tpl->tpl_vars['fid']->_loop = true;
     </script>
 
     
-<script type="text/javascript">
-    // function del(el){
-    //     if(!confirm('确定要删除该动作？')) return false;
-
-    //     var id = $(el).data('id');
-    //     if(!id) return false;
-
-    //     $.post('/sport/actionDel',{'id':id},function(json){
-    //         if(json.errCode == 0){
-    //             window.location.reload();
-    //         }
-    //         else{
-    //             alert(json.errMessage ? : '删除失败.');
-    //         }
-    //     });
-    // }
-
-    var video = {
-        init: function () {
+<script>
+$(function(){
+    var meauFirst = {
+        init: function(){
             this.getDom();
-            this.display();
+            this.postMeau();
+            this.cancer();
+            this.showBox();
         },
-
-        getDom: function () {
-            this.disBtn = $('.video');
-            this.videoTitle = $('#modalLabel');
-            this.videoUri = $('#display-body');
-            this.showVoiceBoxBtn = $('.add-voice');
+        getDom: function(){
+            this.form = $('form[name=add-f-cate]');
+            this.subBtn = $('.subf');
+            this.canBtn = $('.canf');
+            this.fixBox = $('.add-f-cate-fix');
+            this.showBtn = $('#add-f-cate');
         },
-
-        display: function () {
+        postMeau: function(){
             var me = this;
-            me.disBtn.unbind().bind('click', function(){
-                var uri = $(this).data('uri');
-                var name = $(this).data('name');
-                me.videoTitle.text(name);
-                var html = "<video style=\"width:100%;\" controls autobuffer autoplay>" +
-                                "<source src='" + uri + "' type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'></source>" +
-                            "</video>";
-                me.videoUri.html(html);
+            me.subBtn.unbind().bind('click', function(){
+                var data = me.form.serialize();
+                $.post('/meau/addfirst', data, function(json){
+                    if(json.errCode == 0){
+                        window.location.reload();
+                    }
+                    else{
+                        alert(json.errMessage);
+                    }
+                });
+            });
+        },
+        cancer: function(){
+            var me = this;
+            me.canBtn.unbind().bind('click', function(){
+                me.fixBox.fadeOut(200);
+                me.form[0].reset();
             })
-        }
+        },
+        showBox: function(){
+            var me = this;
+            me.showBtn.unbind().bind('click', function(){
+                me.fixBox.fadeIn(200);
+            })
+        },
     };
 
-    video.init();
+    // 二级菜单
+    var meauSecond = {
+        init: function(){
+            this.getDom();
+            this.postMeau();
+            this.cancer();
+            this.showBox();
+        },
+        getDom: function(){
+            this.form = $('form[name=add-s-cate]');
+            this.subBtn = $('.subs');
+            this.canBtn = $('.cans');
+            this.fixBox = $('.add-s-cate-fix');
+            this.showBtn = $('.add-s-cate');
+            this.pname = $('#first-cate-name');
+            this.pid = $('.pid-s');
+        },
+        postMeau: function(){
+            var me = this;
+            me.subBtn.unbind().bind('click', function(){
+                var data = me.form.serialize();
+                $.post('/meau/addfirst?type=2', data, function(json){
+                    if(json.errCode == 0){
+                        window.location.reload();
+                    }
+                    else{
+                        alert(json.errMessage);
+                    }
+                });
+            });
+        },
+        cancer: function(){
+            var me = this;
+            me.canBtn.unbind().bind('click', function(){
+                me.fixBox.fadeOut(200);
+                me.form[0].reset();
+            })
+        },
+        showBox: function(){
+            var me = this;
+            me.showBtn.unbind().bind('click', function(){
+                var pid = $(this).data('pid'),
+                    pname = $(this).data('pname');
+                me.pname.text('父级菜单：'+pname);
+                me.pid.val(pid);
+                me.fixBox.fadeIn(200);
+            })
+        },
+    };
+
+    // 编辑
+    var meauEdit = {
+        init: function(){
+            this.getDom();
+            this.postMeau();
+            this.cancer();
+            this.showBox();
+        },
+        getDom: function(){
+            this.form = $('form[name=edit-cate]');
+            this.subBtn = $('.sube');
+            this.canBtn = $('.cane');
+            this.fixBox = $('.edit-cate-fix');
+            this.showBtn = $('.cate-edit');
+            this.cname = $('#old-cate-name');
+            this.cid = $('.pid-e');
+            this.csort = $('.sort-e');
+            this.cicon = $('.icon-e');
+            this.curl = $('.url-e');
+            this.new_cname = $('.name-e');
+        },
+        postMeau: function(){
+            var me = this;
+            me.subBtn.unbind().bind('click', function(){
+                var data = me.form.serialize();
+                $.post('/meau/addfirst?type=3', data, function(json){
+                    if(json.errCode == 0){
+                        window.location.reload();
+                    }
+                    else{
+                        alert(json.errMessage);
+                    }
+                });
+            });
+        },
+        cancer: function(){
+            var me = this;
+            me.canBtn.unbind().bind('click', function(){
+                me.fixBox.fadeOut(200);
+                me.form[0].reset();
+                me.cicon.attr('disabled', false);
+                me.curl.attr('disabled', false);
+            })
+        },
+        showBox: function(){
+            var me = this;
+            me.showBtn.unbind().bind('click', function(){
+                var id = $(this).data('id'),
+                    name = $(this).data('name'),
+                    sort = $(this).data('ssort'),
+                    icon = $(this).data('icon'),
+                    url = $(this).data('url');
+                me.cname.text(name);
+                me.cid.val(id);
+                me.new_cname.val(name);
+                me.csort.val(sort);
+                me.curl.val(url);
+                me.cicon.val(icon);
+                if(icon.length == 0){
+                    me.cicon.attr('disabled', true);
+                }
+                if(url == '#'){
+                    me.curl.attr('disabled', true);
+                }
+                me.fixBox.fadeIn(200);
+            })
+        },
+    };
+
+    meauFirst.init();
+    meauSecond.init();
+    meauEdit.init();
+})
 </script>
 
 </body>
