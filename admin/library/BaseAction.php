@@ -79,7 +79,7 @@ class BaseAction extends Yaf_Action_Abstract{
     // authUrl
     protected function __authUrl(){
         if($this->declareAuthUrl){
-            if($_SESSION['myRole'] != 'superadmin'){
+            if($_SESSION['myRole']['name'] != 'superadmin'){
                 $rbac = new Rbac_Rbac;
                 if(false === $rbac->authUrl()){
                     header(self::RENDER_INTERFACE_HEAD);
