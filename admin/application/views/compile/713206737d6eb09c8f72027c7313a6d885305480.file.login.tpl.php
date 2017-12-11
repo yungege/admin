@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-10 15:14:13
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-10 19:14:19
          compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:4959173745a2cdec51a4825-43783053%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-10 13:44:46
-         compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13118406095a2cc9ce294d37-55145455%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 097f15f823a97225299b02dcd46f97de7b5f613b
+<?php /*%%SmartyHeaderCode:17200115905a2d170b6e5c06-26620930%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -17,25 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '4959173745a2cdec51a4825-43783053',
-=======
-  'nocache_hash' => '13118406095a2cc9ce294d37-55145455',
->>>>>>> 097f15f823a97225299b02dcd46f97de7b5f613b
+  'nocache_hash' => '17200115905a2d170b6e5c06-26620930',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a2cdec51a6057_23185167',
+  'unifunc' => 'content_5a2d170b6fb698_36261587',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a2cdec51a6057_23185167')) {function content_5a2cdec51a6057_23185167($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5a2cc9ce2a95d6_54941328',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a2cc9ce2a95d6_54941328')) {function content_5a2cc9ce2a95d6_54941328($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 097f15f823a97225299b02dcd46f97de7b5f613b
+<?php if ($_valid && !is_callable('content_5a2d170b6fb698_36261587')) {function content_5a2d170b6fb698_36261587($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
