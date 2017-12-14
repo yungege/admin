@@ -116,7 +116,8 @@ class Service_Project_AddSkuModel extends BasePageService {
         $req['project_name'] = $proInfo['name'];
         $req['type'] = (int)$proInfo['type'];
         $req['project_desc'] = str_replace(PHP_EOL, '', $req['project_desc']);
-
+        $req['ctime'] = time();
+        
         unset($req['actionList']);
     }
 }

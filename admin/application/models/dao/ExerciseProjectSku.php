@@ -4,20 +4,30 @@ class Dao_ExerciseProjectSkuModel extends Db_Mongodb {
     protected $table = 'exercise_project_sku';
 
     protected $fields = [
+        'exer_type'     => 0,       // 1翻转课堂 2身体素质
         'project_name'  => '',      // 名称
         'project_id'    => '',      // 所属项目
         'project_desc'  => '',      // 介绍
+        'coverimg'      => '',
         'recommend'     => 0,       // 是否推荐
         'vfilesize'     => 0.00,    // 项目文件大小
         'time_cost'     => 0,       // 项目所需时间（s）
         'calorie_cost'  => 0.00,    // 项目所需卡路里
         'action_count'  => 0,       // 动作数
         'difficulty'    => 0,       // 难度 -1无难度，0低，1中，2高
-        'difficulty_new'=> 0,       // 难度 -1无难度，0低，1中，2高
-        'action_info'   => [],      // 项目动作组合 ["action_id","action_time","action_groupno","calorie","section"]
+        'difficulty_new' => '',     // T1-低 T2-中 T3-高
+        'action_info'   => [],      // 项目动作组合 ["action_id","action_time","action_groupno","calorie"]
         'type'          => 0,       // 1室内 2户外
         'up_num'        => 0,       // 点赞数
-        'sections'      => [],      // 节拍信息
+        "sections"      => [],
+        'course_type'   => '',
+        'users'         => '',
+        'taboo_crowd'   => '',
+        'prepare'       => '',
+        'physical_reaction' => '',
+        'course_advice' => '',
+        'ctime'         => 0,
+        //'creator_info'  => [],      // ['creatorid'=>,'creatorname'=>'']
     ];
 
     protected $actionModel;
