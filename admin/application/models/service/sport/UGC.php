@@ -55,6 +55,9 @@ class Service_Sport_UGCModel extends BasePageService {
 
         if(isset(Dao_ExerciseHomeworkModel::$type[$req['type']])){
             $where['htype'] = (int)$req['type'];
+            if($where['htype'] == 2){
+                $where['htype'] = ['$in' => [2,6]];
+            }
         }
         else{
             $where['htype'] = [
@@ -156,7 +159,7 @@ class Service_Sport_UGCModel extends BasePageService {
                 $row['distance'] = sprintf('%.2f', $row['distance']/1000);
 
             // 检验是否旧数据 做兼容处理
-            if($row['htype'] == 1 || $row['htype'] == 2){
+            if($row['htype'] == 1 || $row['htype'] == 2 || $row['htype'] == 6){
                 $oldWorkData = $this->programModel->getInfoById($row['homeworkid'], ['_id','name']);
                 $oldProData = $this->programModel->getInfoById($row['trainingid'], ['_id','name']);
                 if(!empty($oldWorkData) && !empty($oldProData)){
