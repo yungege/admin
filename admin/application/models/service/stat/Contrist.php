@@ -93,7 +93,7 @@ class Service_Stat_ContristModel extends BasePageService {
 
             $where = [
                 'htype' => [
-                    '$in' => [1,2,3,4],
+                    '$in' => [1,2,3,4,5,6,7],
                 ],
                 'userid' => [
                     '$in' => $this->userlist,
@@ -401,7 +401,7 @@ class Service_Stat_ContristModel extends BasePageService {
 
         $where = [
             'htype' => [
-                '$in' => [1,2,3,4],
+                '$in' => [1,2,3,4,5,6,7],
             ],
             'userid' => [
                 '$in' => $this->userlist,
@@ -664,7 +664,7 @@ class Service_Stat_ContristModel extends BasePageService {
 
         $where = [
             'htype' => [
-                '$in' => [1,2,3,4],
+                '$in' => [1,2,3,4,5,6,7],
             ],
             'userid' => [
                 '$in' => $this->userlist,
