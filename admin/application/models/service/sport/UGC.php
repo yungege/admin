@@ -48,7 +48,12 @@ class Service_Sport_UGCModel extends BasePageService {
         $req = $req['get'];
         $where = [];
 
-        $this->resData['worktype'] = Dao_ExerciseHomeworkModel::$type;
+        $this->resData['worktype'] = [
+            1 => '翻转课堂',
+            2 => '常规作业',
+            3 => '跑步',
+            4 => '校外打卡',
+        ];
 
         if(!isset($req['pn']) || !is_numeric($req['pn']))
             $req['pn'] = 1;
