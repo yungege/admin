@@ -1,85 +1,25 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 17:15:58
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 17:32:09
          compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13132593325a4364ce6ee573-73251973%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-14 17:27:13
-         compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8362682785a3243f15a6d16-87781731%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-14 12:08:45
-         compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20754959265a31f94d204ef3-59229554%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-14 12:00:08
-         compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10458567955a31f748c206b7-78473112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> c95220a18a708d40b08c5bbc31db90ef657f9b08
->>>>>>> 47b55cc6578b72b4b55dfe3c2e15d5342f72de34
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
+<?php /*%%SmartyHeaderCode:5653664575a4368992376e7-90292555%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '713206737d6eb09c8f72027c7313a6d885305480' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/login.tpl',
-<<<<<<< HEAD
-      1 => 1512353715,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '13132593325a4364ce6ee573-73251973',
-=======
-<<<<<<< HEAD
-      1 => 1509502905,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '8362682785a3243f15a6d16-87781731',
-=======
-<<<<<<< HEAD
       1 => 1504857674,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '20754959265a31f94d204ef3-59229554',
-=======
-      1 => 1509080121,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '10458567955a31f748c206b7-78473112',
->>>>>>> c95220a18a708d40b08c5bbc31db90ef657f9b08
->>>>>>> 47b55cc6578b72b4b55dfe3c2e15d5342f72de34
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
+  'nocache_hash' => '5653664575a4368992376e7-90292555',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a4364ce72ae75_55788273',
+  'unifunc' => 'content_5a43689924bb62_00794899',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a4364ce72ae75_55788273')) {function content_5a4364ce72ae75_55788273($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a3243f15a84f2_60209798',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a3243f15a84f2_60209798')) {function content_5a3243f15a84f2_60209798($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a31f94d21aca9_71836183',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a31f94d21aca9_71836183')) {function content_5a31f94d21aca9_71836183($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5a31f748c59dd3_58692454',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a31f748c59dd3_58692454')) {function content_5a31f748c59dd3_58692454($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> c95220a18a708d40b08c5bbc31db90ef657f9b08
->>>>>>> 47b55cc6578b72b4b55dfe3c2e15d5342f72de34
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
+<?php if ($_valid && !is_callable('content_5a43689924bb62_00794899')) {function content_5a43689924bb62_00794899($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
