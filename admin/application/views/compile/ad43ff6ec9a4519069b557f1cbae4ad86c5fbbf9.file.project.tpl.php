@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 16:41:06
          compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14999283055a435ca2cffc47-68671674%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-14 17:26:58
+         compiled from "/var/www/admin/admin/application/views/template/sport/project.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:19410858385a3243e27fa2b4-65601237%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -17,7 +23,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '14999283055a435ca2cffc47-68671674',
+=======
+  'nocache_hash' => '19410858385a3243e27fa2b4-65601237',
+>>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
   'function' => 
   array (
   ),
@@ -35,9 +45,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a435ca2d9b018_94479917',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a435ca2d9b018_94479917')) {function content_5a435ca2d9b018_94479917($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_5a3243e297dee9_24049354',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a3243e297dee9_24049354')) {function content_5a3243e297dee9_24049354($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
 ?><!DOCTYPE html>
 <html lang="en">
 

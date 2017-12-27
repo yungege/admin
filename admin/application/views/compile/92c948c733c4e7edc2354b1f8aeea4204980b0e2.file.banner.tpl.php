@@ -1,69 +1,41 @@
 <<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 17:15:43
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1299436915a4364bfaf5293-83882998%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-14 09:39:59
+         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1318958385a31d66f8c9c37-28975169%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 =======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-11 16:04:24
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5968903365a2e3c083e0b84-76659954%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-11 16:48:37
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18286568075a2e4665ac3061-55958184%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-11 09:57:13
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15379429945a2de5f994a2f4-16971501%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> c994f9369fbaaa6d5ad8fa3c6893564fdf668ba4
->>>>>>> 0977caa588a946bc8502a197881667bbf9eac2e1
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-14 17:21:18
+         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:11124051495a32428e750089-59883641%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 47b55cc6578b72b4b55dfe3c2e15d5342f72de34
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
+    '92c948c733c4e7edc2354b1f8aeea4204980b0e2' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
+      0 => '/var/www/admin/admin/application/views/template/sport/banner.tpl',
 <<<<<<< HEAD
-      1 => 1512353715,
-=======
-<<<<<<< HEAD
-      1 => 1509080121,
-=======
       1 => 1509502905,
->>>>>>> c994f9369fbaaa6d5ad8fa3c6893564fdf668ba4
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
+=======
+      1 => 1509080121,
+>>>>>>> 47b55cc6578b72b4b55dfe3c2e15d5342f72de34
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
 <<<<<<< HEAD
-      1 => 1512353715,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '1299436915a4364bfaf5293-83882998',
-=======
-<<<<<<< HEAD
-      1 => 1510105483,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '18286568075a2e4665ac3061-55958184',
-=======
       1 => 1510105563,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '5968903365a2e3c083e0b84-76659954',
+  'nocache_hash' => '1318958385a31d66f8c9c37-28975169',
 =======
-  'nocache_hash' => '15379429945a2de5f994a2f4-16971501',
->>>>>>> c994f9369fbaaa6d5ad8fa3c6893564fdf668ba4
->>>>>>> 0977caa588a946bc8502a197881667bbf9eac2e1
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
+      1 => 1510105483,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '11124051495a32428e750089-59883641',
+>>>>>>> 47b55cc6578b72b4b55dfe3c2e15d5342f72de34
   'function' => 
   array (
   ),
@@ -82,26 +54,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
-  'unifunc' => 'content_5a4364bfb82c19_83121360',
+  'unifunc' => 'content_5a31d66fa1cd81_11191675',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a4364bfb82c19_83121360')) {function content_5a4364bfb82c19_83121360($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a31d66fa1cd81_11191675')) {function content_5a31d66fa1cd81_11191675($_smarty_tpl) {?><!DOCTYPE html>
 =======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a2e3c08536267_69128610',
+  'unifunc' => 'content_5a32428e935157_96167821',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a2e3c08536267_69128610')) {function content_5a2e3c08536267_69128610($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a2e4665b18542_59939357',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a2e4665b18542_59939357')) {function content_5a2e4665b18542_59939357($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5a2de5f9aa0c75_35552476',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a2de5f9aa0c75_35552476')) {function content_5a2de5f9aa0c75_35552476($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> c994f9369fbaaa6d5ad8fa3c6893564fdf668ba4
->>>>>>> 0977caa588a946bc8502a197881667bbf9eac2e1
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
+<?php if ($_valid && !is_callable('content_5a32428e935157_96167821')) {function content_5a32428e935157_96167821($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 47b55cc6578b72b4b55dfe3c2e15d5342f72de34
 <html lang="en">
 
 <head>
@@ -182,31 +142,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
-    .table>tbody>tr>td,.table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
-        vertical-align: middle;
-        height: 45px;
+    .datetimepicker{
+        margin-top: 50px;
     }
-    .add-f-cate-fix,.add-s-cate-fix,.edit-cate-fix{
-        width: 100%;
-        height: 100%;
-        overflow-y: scroll;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: rgba(0,0,0,.3);
-        z-index: 9999;
-        display: none;
+    .glyphicon-calendar{
+        color: red;
+        cursor: pointer;
     }
-    .inner-box{
-        background-color: white;
-        width: 500px;
-        /*height: 200px;*/
-        border: 1px solid #999;
-        border-radius: 3px;
-        margin: 10% auto 0;
-        box-shadow: 0 0 15px rgba(0,0,0,0.5);
-        padding: 15px;
+    .thumbnail > img{
+        height: 100px;
+        overflow: hidden;
     }
 </style>
 
@@ -424,7 +371,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 菜单管理 <a class="btn btn-xs btn-primary" href="javascript:void(0)" id="add-f-cate">新建菜单</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运动圈 / banner <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#add-form">添加Banner</a>
                             </li>
                         </ol>
                     </div>
@@ -432,133 +379,192 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
 
                 <!-- 用户数据 -->
                 
-
 <div class="row">
     <div class="col-lg-12">
-        <table class="table table-striped table-bordered" style="color: #7a7676;">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>排序</th>
-                    <th>菜单名称</th>
-                    <th>URL</th>
-                    <th>图标样式</th>
-                    <th>操作</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped text-center">
+                <thead>
+                    <tr>
+                        <th class="text-center">标题</th>
+                        <th class="text-center">上传者</th>
+                        <th style="max-width: 160px;" class="text-center">描述</th>
+                        <th class="text-center">图片</th>
+                        <th class="text-center">长宽比</th>
+                        <th class="text-center">有效期</th>
+                        <th class="text-center">Access</th>
+                        <th class="text-center">创建时间</th>
+                        <th class="text-center">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                <tr data-seria="<?php echo serialize($_smarty_tpl->tpl_vars['row']->value);?>
+                    <tr data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 ">
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['title'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_sort'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['creator'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_name'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['h5content'];?>
 </td>
-                    <td><a href="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
-" style="color: #65CEA7;"><?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
-</a></td>
-                    <td style="color: #65CEA7;font-size: 20px;font-weight: 700;"><i class="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
-"></i></td>
-                    <td>
-                        <?php if ($_smarty_tpl->tpl_vars['row']->value['pid']==''){?>
-                           <a data-pid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" data-pname="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" class="add-s-cate cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-plus'></span> 子菜单</a>&nbsp;
-                        <?php }?>
-                        <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" data-ssort="<?php echo $_smarty_tpl->tpl_vars['row']->value['sort'];?>
-" data-icon="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
-" data-url="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
-" class="cate-edit btn btn-xs btn-primary" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
-                    </td>
-                </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['coverimgurl'];?>
+" height="80" /></td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['aspectRatio'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['starttime'];?>
+ <br/>至<br/> <?php echo $_smarty_tpl->tpl_vars['row']->value['endtime'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['Access'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['createtime'];?>
+</td>
+                        <td style="width: 160px;">
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edit-form" onclick="edit(this)" data-row='<?php echo json_encode($_smarty_tpl->tpl_vars['row']->value);?>
+' class="edit-btn">编 辑</button>
+                            <button type="button" class="btn btn-sm btn-danger" onclick="del(this)">删 除</button>
+                        </td>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+        <?php if ($_smarty_tpl->tpl_vars['pageCount']->value>1){?>
+        <div class="text-center">
+            <ul id="page" style="margin: 0;" data-url-pn="<?php echo $_GET['pn'];?>
+"></ul>
+        </div>
+        <?php }?>
     </div>
 </div>
 
-<!-- 一级菜单 -->
-<div class="add-f-cate-fix">
-    <div class="inner-box">
-        <h4>新增一级菜单</h4>
-        <hr>
-        <form name="add-f-cate" class="form">
-            <div class="form-group">
-                <label>菜单名</label>
-                <input type="text" class="form-control" name="name">
+<!-- modal-edit -->
+<div class="modal fade" id="edit-form" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document" style="margin-top:7%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Banner Edit</h4>
             </div>
-            <div class="form-group">
-                <label>排序</label>
-                <input type="text" class="form-control" name="sort">
+            <div class="modal-body">
+                <form name="banner">
+                    <div class="form-group">
+                        <label for="b-title" class="control-label">标题:</label>
+                        <input type="text" class="form-control" id="b-title" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="b-desc" class="control-label">描述:</label>
+                        <textarea class="form-control" id="b-desc" name="h5content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-stime" class="control-label">开始时间:</label>
+                        <div class="input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
+                            <input readonly type="text" class="form-control" id="b-stime" name="starttime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-etime" class="control-label">结束时间:</label>
+                        <div class="input-group date date_end" data-date="" data-date-format="yyyy-mm-dd">
+                            <input readonly type="text" class="form-control" id="b-etime" name="endtime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="b-url" class="control-label">URL:</label>
+                        <input type="text" class="form-control" id="b-url" name="h5url">
+                    </div>
+                    <div class="form-group">
+                        <label for="img-size" class="control-label">图片比例:</label>
+                        <input type="input" class="form-control" id="img-size" name="aspectRatio">
+                    </div>
+                    <input type="hidden" name="uptoken" id="uptoken" value="<?php echo $_smarty_tpl->tpl_vars['uptoken']->value;?>
+">
+                    <input type="hidden" name="coverimgurl" value="">
+                </form>
+
+                <label class="control-label">IMG:</label>
+                <div class="thumbnail">
+                    <img src="" alt="..." id="coverimgurl">
+                </div>
+
+                <a class="btn btn-default btn-lg" id="pickfiles" href="#" style="position: relative; z-index: 1;">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>选择文件</span>
+                </a>
+
             </div>
-            <div class="form-group">
-                <label>图标样式</label>
-                <input type="text" class="form-control" name="icon_style">
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="reset()">Close</button>
+                <button type="button" class="btn btn-primary" onclick="commit(this)" data-id="" id="sub-btn">Summit</button>
             </div>
-            <a class="btn btn-primary subf" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger canf" href="javascript:void(0)">取&emsp;消</a>
-        </form>
-    </div>
-</div>
-<!-- 二级菜单 -->
-<div class="add-s-cate-fix">
-    <div class="inner-box">
-        <h4>新增二级菜单&emsp;&emsp;<small id="first-cate-name" style="color: #65CEA7;"></small></h4>
-        <hr>
-        <form name="add-s-cate" class="form">
-            <div class="form-group">
-                <label>菜单名</label>
-                <input type="text" class="form-control" name="name">
-            </div>
-            <div class="form-group">
-                <label>排序</label>
-                <input type="text" class="form-control" name="sort">
-            </div>
-            <div class="form-group">
-                <label>URL <small>[ /meau/list ]</small></label>
-                <input type="text" class="form-control" name="url">
-            </div>
-            <input type="hidden" name="pid" class="pid-s">
-            <a class="btn btn-primary subs" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger cans" href="javascript:void(0)">取&emsp;消</a>
-        </form>
+        </div>
     </div>
 </div>
 
-<!-- 编辑菜单 -->
-<div class="edit-cate-fix">
-    <div class="inner-box">
-        <h4>编辑菜单&emsp;&emsp;<small id="old-cate-name" style="color: #65CEA7;"></small></h4>
-        <hr>
-        <form name="edit-cate" class="form">
-            <div class="form-group">
-                <label>菜单名</label>
-                <input type="text" class="form-control name-e" name="name">
+<!-- modal-add -->
+<div class="modal fade" id="add-form" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document" style="margin-top:7%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Banner Add</h4>
             </div>
-            <div class="form-group">
-                <label>排序</label>
-                <input type="text" class="form-control sort-e" name="sort">
+            <div class="modal-body">
+                <form name="banner-add">
+                    <div class="form-group">
+                        <label for="b-title-add" class="control-label">标题:</label>
+                        <input type="text" class="form-control" id="b-title-add" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="b-desc-add" class="control-label">描述:</label>
+                        <textarea class="form-control" id="b-desc-add" name="h5content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-stime-add" class="control-label">开始时间:</label>
+                        <div class="input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
+                            <input readonly type="text" class="form-control" id="b-stime-add" name="starttime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-etime-add" class="control-label">结束时间:</label>
+                        <div class="input-group date date_end" data-date="" data-date-format="yyyy-mm-dd">
+                            <input readonly type="text" class="form-control" id="b-etime-add" name="endtime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="b-url-add" class="control-label">URL:</label>
+                        <input type="input" class="form-control" id="b-url-add" name="h5url">
+                    </div>
+                    <div class="form-group">
+                        <label for="b-img-size" class="control-label">图片比例:</label>
+                        <input type="input" class="form-control" id="b-img-size" name="aspectRatio">
+                    </div>
+                    <input type="hidden" name="coverimgurl-add" value="">
+                </form>
+
+                <label class="control-label">IMG:</label>
+                <div class="thumbnail">
+                    <img src="" id="coverimgurl-add">
+                </div>
+
+                <a class="btn btn-default btn-lg" id="pickfiles-add" href="#" style="position: relative; z-index: 1;">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>选择文件</span>
+                </a>
+
             </div>
-            <div class="form-group">
-                <label>图标样式</label>
-                <input type="text" class="form-control icon-e" name="icon_style">
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addBanner()" data-id="" id="sub-btn">Summit</button>
             </div>
-            <div class="form-group">
-                <label>URL <small>[ /meau/list ]</small></label>
-                <input type="text" class="form-control url-e" name="url">
-            </div>
-            <input type="hidden" name="id" class="pid-e">
-            <a class="btn btn-primary sube" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger cane" href="javascript:void(0)">取&emsp;消</a>
-        </form>
+        </div>
     </div>
 </div>
 
@@ -592,174 +598,39 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
-<script>
-$(function(){
-    var meauFirst = {
-        init: function(){
-            this.getDom();
-            this.postMeau();
-            this.cancer();
-            this.showBox();
-        },
-        getDom: function(){
-            this.form = $('form[name=add-f-cate]');
-            this.subBtn = $('.subf');
-            this.canBtn = $('.canf');
-            this.fixBox = $('.add-f-cate-fix');
-            this.showBtn = $('#add-f-cate');
-        },
-        postMeau: function(){
-            var me = this;
-            me.subBtn.unbind().bind('click', function(){
-                var data = me.form.serialize();
-                $.post('/meau/addfirst', data, function(json){
-                    if(json.errCode == 0){
-                        window.location.reload();
-                    }
-                    else{
-                        alert(json.errMessage);
-                    }
-                });
-            });
-        },
-        cancer: function(){
-            var me = this;
-            me.canBtn.unbind().bind('click', function(){
-                me.fixBox.fadeOut(200);
-                me.form[0].reset();
-            })
-        },
-        showBox: function(){
-            var me = this;
-            me.showBtn.unbind().bind('click', function(){
-                me.fixBox.fadeIn(200);
-            })
-        },
-    };
+<script type="text/javascript" src="/static/qiniu/moxie.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/plupload.full.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/zh_CN.js"></script>
+<script type="text/javascript" src="/static/qiniu/qiniu.min.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/static/sport/js/banner.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-paginator.js"></script>
+<script type="text/javascript">
+    var currentPage = <?php echo $_smarty_tpl->tpl_vars['pn']->value;?>
+;
+    var pageCount = <?php echo $_smarty_tpl->tpl_vars['pageCount']->value;?>
+;
+    var urlPage = parseInt($("#page").data('url-pn'));
+    if(isNaN(urlPage)){
+        urlPage = 0;
+    }
 
-    // 二级菜单
-    var meauSecond = {
-        init: function(){
-            this.getDom();
-            this.postMeau();
-            this.cancer();
-            this.showBox();
-        },
-        getDom: function(){
-            this.form = $('form[name=add-s-cate]');
-            this.subBtn = $('.subs');
-            this.canBtn = $('.cans');
-            this.fixBox = $('.add-s-cate-fix');
-            this.showBtn = $('.add-s-cate');
-            this.pname = $('#first-cate-name');
-            this.pid = $('.pid-s');
-        },
-        postMeau: function(){
-            var me = this;
-            me.subBtn.unbind().bind('click', function(){
-                var data = me.form.serialize();
-                $.post('/meau/addfirst?type=2', data, function(json){
-                    if(json.errCode == 0){
-                        window.location.reload();
-                    }
-                    else{
-                        alert(json.errMessage);
-                    }
-                });
-            });
-        },
-        cancer: function(){
-            var me = this;
-            me.canBtn.unbind().bind('click', function(){
-                me.fixBox.fadeOut(200);
-                me.form[0].reset();
-            })
-        },
-        showBox: function(){
-            var me = this;
-            me.showBtn.unbind().bind('click', function(){
-                var pid = $(this).data('pid'),
-                    pname = $(this).data('pname');
-                me.pname.text('父级菜单：'+pname);
-                me.pid.val(pid);
-                me.fixBox.fadeIn(200);
-            })
-        },
-    };
+    $('#page').twbsPagination({
+        totalPages: pageCount,
+        visiblePages: 7,
+        version: '1.1',
+        first: '首页',
+        prev: '上一页',
+        next: '下一页',
+        last: '尾页',
+        startPage: currentPage,
+        onPageClick: function (event, page) {
+            if(urlPage == page)
+                return;
 
-    // 编辑
-    var meauEdit = {
-        init: function(){
-            this.getDom();
-            this.postMeau();
-            this.cancer();
-            this.showBox();
-        },
-        getDom: function(){
-            this.form = $('form[name=edit-cate]');
-            this.subBtn = $('.sube');
-            this.canBtn = $('.cane');
-            this.fixBox = $('.edit-cate-fix');
-            this.showBtn = $('.cate-edit');
-            this.cname = $('#old-cate-name');
-            this.cid = $('.pid-e');
-            this.csort = $('.sort-e');
-            this.cicon = $('.icon-e');
-            this.curl = $('.url-e');
-            this.new_cname = $('.name-e');
-        },
-        postMeau: function(){
-            var me = this;
-            me.subBtn.unbind().bind('click', function(){
-                var data = me.form.serialize();
-                $.post('/meau/addfirst?type=3', data, function(json){
-                    if(json.errCode == 0){
-                        window.location.reload();
-                    }
-                    else{
-                        alert(json.errMessage);
-                    }
-                });
-            });
-        },
-        cancer: function(){
-            var me = this;
-            me.canBtn.unbind().bind('click', function(){
-                me.fixBox.fadeOut(200);
-                me.form[0].reset();
-                me.cicon.attr('disabled', false);
-                me.curl.attr('disabled', false);
-            })
-        },
-        showBox: function(){
-            var me = this;
-            me.showBtn.unbind().bind('click', function(){
-                var id = $(this).data('id'),
-                    name = $(this).data('name'),
-                    sort = $(this).data('ssort'),
-                    icon = $(this).data('icon'),
-                    url = $(this).data('url');
-                me.cname.text(name);
-                me.cid.val(id);
-                me.new_cname.val(name);
-                me.csort.val(sort);
-                me.curl.val(url);
-                me.cicon.val(icon);
-                if(icon.length == 0){
-                    me.cicon.attr('disabled', true);
-                }
-                if(url == '#'){
-                    me.curl.attr('disabled', true);
-                }
-                me.fixBox.fadeIn(200);
-            })
-        },
-    };
-
-    meauFirst.init();
-    meauSecond.init();
-    meauEdit.init();
-})
+            window.location = "?pn=" + page;
+        }
+    });
 </script>
 
 </body>

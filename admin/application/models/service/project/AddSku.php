@@ -64,6 +64,7 @@ class Service_Project_AddSkuModel extends BasePageService {
 
         $actionCount = $filesize = $time = $calorie = 0;
         $actions = [];
+        $fileSizeArr = [];
 
         foreach ($req['actionList'] as &$aval) {
             // 费休息动作
@@ -81,7 +82,11 @@ class Service_Project_AddSkuModel extends BasePageService {
 
             if($aval['type'] != 4){
                 $actionCount += 1;
-                $filesize += $actionInfo['vfilesize'];
+
+                if(!isset($fileSizeArr[$aval['id']])){
+                    $fileSizeArr[$aval['id']] = $actionInfo['vfilesize'];
+                    $filesize += $actionInfo['vfilesize'];
+                }
 
                 if($actionInfo['singletime'] == 0){
                     $time += $aval['count'];
@@ -111,7 +116,8 @@ class Service_Project_AddSkuModel extends BasePageService {
         $req['project_name'] = $proInfo['name'];
         $req['type'] = (int)$proInfo['type'];
         $req['project_desc'] = str_replace(PHP_EOL, '', $req['project_desc']);
-
+        $req['ctime'] = time();
+        
         unset($req['actionList']);
     }
 }

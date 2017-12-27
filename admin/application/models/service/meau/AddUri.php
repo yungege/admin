@@ -24,7 +24,7 @@ class Service_Meau_AddUriModel extends BasePageService {
         $hasExists = $this->urlModel->checkUrlExists($req['url']);
         if(false === $hasExists){
             $data = [
-                'url' => $req['url'],
+                'url' => addslashes($req['url']),
                 'remark' => mb_substr($req['remark'], 0, 20),
             ];
 
