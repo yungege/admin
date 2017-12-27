@@ -1,23 +1,33 @@
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 17:51:09
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2854005875a436d0d7fc779-97845719%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
 <?php /* Smarty version Smarty-3.1.13, created on 2017-12-23 09:17:32
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8380810695a3daeaccb5366-55687805%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 9312cd1e57615db71db0d3ea7b5c12c6dccae9ca
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1512033859,
+      1 => 1512353715,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+      1 => 1512353715,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
+  'nocache_hash' => '2854005875a436d0d7fc779-97845719',
+=======
   'nocache_hash' => '8380810695a3daeaccb5366-55687805',
+>>>>>>> 9312cd1e57615db71db0d3ea7b5c12c6dccae9ca
   'function' => 
   array (
   ),
@@ -35,9 +45,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_5a436d0d891245_61419229',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a436d0d891245_61419229')) {function content_5a436d0d891245_61419229($_smarty_tpl) {?><!DOCTYPE html>
+=======
   'unifunc' => 'content_5a3daeace02888_17977145',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a3daeace02888_17977145')) {function content_5a3daeace02888_17977145($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 9312cd1e57615db71db0d3ea7b5c12c6dccae9ca
 <html lang="en">
 
 <head>
