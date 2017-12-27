@@ -30,6 +30,7 @@ class Dao_ExerciseHomeworkModel extends Db_Mongodb {
         2 => '常规作业',
         3 => '跑步',
         4 => '校外打卡',
+        6 => '常规锻炼',
     ];
 
     protected function __construct(){
