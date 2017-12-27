@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 12:19:54
-         compiled from "/var/www/admin/admin/application/views/template/student/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8611459415a431f6a459da0-98696128%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 17:15:45
+         compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:7646812595a4364c1a3cf29-74527548%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '41b3e8cc63602603705c3e0cb4b05619206b1a14' => 
+    '0f0d3ccae7febb55dd56d8fb73598ea615fcaceb' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/student/add.tpl',
-      1 => 1512353715,
+      0 => '/var/www/admin/admin/application/views/template/meau/role.tpl',
+      1 => 1512523019,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '8611459415a431f6a459da0-98696128',
+  'nocache_hash' => '7646812595a4364c1a3cf29-74527548',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a431f6a5202e1_48253768',
+  'unifunc' => 'content_5a4364c1ad6f32_71953581',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a431f6a5202e1_48253768')) {function content_5a431f6a5202e1_48253768($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a4364c1ad6f32_71953581')) {function content_5a4364c1ad6f32_71953581($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -119,34 +119,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
-    .fix-per{
+    .add-role-fix,.edit-role-fix{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        background: rgba(0,0,0,0.4);
+        background-color: rgba(0,0,0,.3);
         z-index: 9999;
         display: none;
     }
-    .fix-per .fix-cont{
-        width: 400px;
-        height: 200px;
-        line-height: 200px;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -200px;
-        margin-top: -100px;
-        font-size: 100px;
-        color: orange;
-    }
-    .form-wrap{
-        border: 1px solid #ccc;
-        padding: 8px 15px 15px 15px;
-        border-radius: 5px;
+    .inner-box{
+        background-color: white;
+        width: 500px;
+        /*height: 200px;*/
+        border: 1px solid #999;
+        border-radius: 3px;
+        margin: 10% auto 0;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        padding: 15px;
     }
 </style>
 
@@ -364,7 +356,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 学校信息管理 / 添加学生
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 角色管理 <a class="btn btn-xs btn-primary" href="javascript:void(0)" id="add-role">新建角色</a>
                             </li>
                         </ol>
                     </div>
@@ -372,122 +364,88 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
 
                 <!-- 用户数据 -->
                 
+
 <div class="row">
-    <div class="col-lg-8">
-        <div class="form-wrap">
-            
-            <form name="school">
-
-                <div class="form-group">
-                    <label for="province">所属省份</label>
-                    <select id="province" class="form-control" name="province">
-                        <option value="-1" selected>请选择学校所在省份</option>
-                        <?php  $_smarty_tpl->tpl_vars['provinceName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['provinceName']->_loop = false;
- $_smarty_tpl->tpl_vars['provinceId'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['provinceList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['provinceName']->key => $_smarty_tpl->tpl_vars['provinceName']->value){
-$_smarty_tpl->tpl_vars['provinceName']->_loop = true;
- $_smarty_tpl->tpl_vars['provinceId']->value = $_smarty_tpl->tpl_vars['provinceName']->key;
+    <div class="col-lg-12">
+        <table class="table table-striped table-bordered" style="color: #7a7676;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>角色名称</th>
+                    <th>描述</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
+$_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['provinceId']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['provinceName']->value;?>
-</option>
-                        <?php } ?>          
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="city">所在城市</label>
-                    <select id="city" class="form-control" name="city">
-                        <option value="-1" selected>请选择学校所在城市</option>
-                       
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="district">所在区</label>
-                    <select id="district" class="form-control" name="district">
-                        <option value="-1" selected>请选择学校所在区</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="school">所在学校</label>
-                    <select id="school" class="form-control" name="school">
-                        <option value="-1" selected>请选择学生所在学校</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="grade">所在年级</label>
-                    <select id="grade" class="form-control" name="grade">
-                        <option value="-1" selected>请选择学生所在年级</option>
-                        <?php  $_smarty_tpl->tpl_vars['gradeName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['gradeName']->_loop = false;
- $_smarty_tpl->tpl_vars['gradeNo'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['gradeList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['gradeName']->key => $_smarty_tpl->tpl_vars['gradeName']->value){
-$_smarty_tpl->tpl_vars['gradeName']->_loop = true;
- $_smarty_tpl->tpl_vars['gradeNo']->value = $_smarty_tpl->tpl_vars['gradeName']->key;
-?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['gradeNo']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['gradeName']->value;?>
-</option>
-                        <?php } ?>  
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="class">所在班级</label>
-                    <select id="class" class="form-control" name="class">
-                        <option value="-1" selected>请选择学生所在班级</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="username">姓名</label>
-                    <input type="text" class="form-control" id="username" placeholder="Username" name="username">
-                </div>
-
-                <div class="form-group">
-                    <label for="sex">性别</label>
-                    <select id="sex" class="form-control" name="sex">
-                        <option value="-1" selected>请选择学生性别</option>
-                        <?php  $_smarty_tpl->tpl_vars['sexName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['sexName']->_loop = false;
- $_smarty_tpl->tpl_vars['sexNo'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['sex']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['sexName']->key => $_smarty_tpl->tpl_vars['sexName']->value){
-$_smarty_tpl->tpl_vars['sexName']->_loop = true;
- $_smarty_tpl->tpl_vars['sexNo']->value = $_smarty_tpl->tpl_vars['sexName']->key;
-?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['sexNo']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['sexName']->value;?>
-</option>
-                        <?php } ?>  
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="birthday">生日</label></label>
-                    <div class="col-sm-5 input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
-                        <input readonly type="text" class="form-control" id="birthday" name="birthday" value="<?php echo $_GET['start'];?>
-" >
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                    </div>
-                </div>
-                            
-                <button id="sub" type="button" class="btn btn-primary">确认提交</button>
-               <!--  <button id="button" type="button" class="btn btn-danger" >取&emsp;消</button> -->
-            </form>
-        </div>
+                <tr data-seria="<?php echo serialize($_smarty_tpl->tpl_vars['row']->value);?>
+">
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
+</td>
+                    <td>
+                        <a data-pid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-pname="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+" class="add-s-cate cate-add btn btn-xs btn-success" href="/meau/assgin?rid=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+"><span class='fa fa-user'></span> 分配权限</a>&nbsp;
+                        <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+" data-desc="<?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
+" class="btn btn-xs btn-primary edit-role" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
+                    </td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </div>
 </div>
 
-<!-- modal-add -->
-<div class="fix-per">
-    <div class="fix-cont">
-        <!-- 100% -->
+<!-- 新增角色 -->
+<div class="add-role-fix">
+    <div class="inner-box">
+        <h4>新增角色</h4>
+        <hr>
+        <form name="add-role" class="form">
+            <div class="form-group">
+                <label>角色名称</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group">
+                <label>描述</label>
+                <textarea class="form-control" name="desc" style="max-width: 100%;"></textarea>
+            </div>
+            <a class="btn btn-primary sub-r" href="javascript:void(0)">提&emsp;交</a>
+            <a class="btn btn-danger can-r" href="javascript:void(0)">取&emsp;消</a>
+        </form>
     </div>
-    
+</div>
+
+<!-- 编辑 -->
+<div class="edit-role-fix">
+    <div class="inner-box">
+        <h4>编辑角色</h4>
+        <hr>
+        <form name="edit-role" class="form">
+            <div class="form-group">
+                <label>角色名称</label>
+                <input type="text" class="form-control" name="name" id="uname">
+            </div>
+            <div class="form-group">
+                <label>描述</label>
+                <textarea class="form-control" id="udesc" name="desc" style="max-width: 100%;"></textarea>
+            </div>
+            <input type="hidden" name="_id" id="rid">
+            <a class="btn btn-primary sub-e" href="javascript:void(0)">提&emsp;交</a>
+            <a class="btn btn-danger can-e" href="javascript:void(0)">取&emsp;消</a>
+        </form>
+    </div>
 </div>
 
 
@@ -520,11 +478,91 @@ $_smarty_tpl->tpl_vars['sexName']->_loop = true;
     </script>
 
     
+<script>
+$(function(){
+    var role = {
+        init: function(){
+            this.getDom();
+            this.showRoleAddBox();
+            this.hideRoleAddBox();
+            this.postRole();
+        },
+        getDom: function(){
+            // 新增
+            this.addFixBox = $('.add-role-fix');
+            this.addForm = $('form[name=add-role]');
+            this.showAddBtn = $('#add-role');
+            this.hideAddBtn = $('.can-r');
+            this.subAddBtn = $('.sub-r');
 
-<script type="text/javascript" src="/static/student/js/add.js"></script>
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<!-- <script type="text/javascript" src="/static/ugc/index.js"></script> -->
+            // 编辑
+            this.editFixBox = $('.edit-role-fix');
+            this.editForm = $('form[name=edit-role]');
+            this.showEditBtn = $('.edit-role');
+            this.hideEditBtn = $('.can-e');
+            this.subEditBtn = $('.sub-e');
+            this.idInt = $('#rid');
+            this.nameInt = $('#uname');
+            this.descInt = $('#udesc');
+        },
+        showRoleAddBox: function(){
+            var me = this;
+            me.showAddBtn.unbind().bind('click', function(){
+                me.addFixBox.fadeIn(200);
+            });
 
+            me.showEditBtn.unbind().bind('click', function(){
+                var data = $(this).data();
+                me.idInt.val(data.id);
+                me.nameInt.val(data.name);
+                me.descInt.val(data.desc);
+                me.editFixBox.fadeIn(200);
+            });
+        },
+        hideRoleAddBox: function(){
+            var me = this;
+            me.hideAddBtn.unbind().bind('click', function(){
+                me.addFixBox.fadeOut(200);
+                me.addForm[0].reset();
+            });
+
+            me.hideEditBtn.unbind().bind('click', function(){
+                me.editFixBox.fadeOut(200);
+                me.editForm[0].reset();
+            });
+        },
+        postRole: function(){
+            var me = this;
+            me.subAddBtn.unbind().bind('click', function(){
+                var data = me.addForm.serialize();
+                $.post('/meau/addrole', data, function(json){
+                    if(json.errCode == 0){
+                        window.location.reload();
+                    }
+                    else{
+                        alert(json.errMessage);
+                        return false;
+                    }
+                });
+            });
+
+            me.subEditBtn.unbind().bind('click', function(){
+                var data = me.editForm.serialize();
+                $.post('/meau/addrole?type=2', data, function(json){
+                    if(json.errCode == 0){
+                        window.location.reload();
+                    }
+                    else{
+                        alert(json.errMessage);
+                        return false;
+                    }
+                });
+            });
+        },
+    }
+    role.init();
+})
+</script>
 
 </body>
 </html><?php }} ?>

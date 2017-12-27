@@ -1,12 +1,12 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 12:19:54
-         compiled from "/var/www/admin/admin/application/views/template/student/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8611459415a431f6a459da0-98696128%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 17:15:52
+         compiled from "/var/www/admin/admin/application/views/template/meau/assgin.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1306634235a4364c8bdabf4-42011033%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '41b3e8cc63602603705c3e0cb4b05619206b1a14' => 
+    'cbf3bc439b8ef2a10a46a5272aef770d71e16c64' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/student/add.tpl',
+      0 => '/var/www/admin/admin/application/views/template/meau/assgin.tpl',
       1 => 1512353715,
       2 => 'file',
     ),
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '8611459415a431f6a459da0-98696128',
+  'nocache_hash' => '1306634235a4364c8bdabf4-42011033',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a431f6a5202e1_48253768',
+  'unifunc' => 'content_5a4364c8c7d8f7_13261397',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a431f6a5202e1_48253768')) {function content_5a431f6a5202e1_48253768($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a4364c8c7d8f7_13261397')) {function content_5a4364c8c7d8f7_13261397($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -119,36 +119,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
-    .fix-per{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        background: rgba(0,0,0,0.4);
-        z-index: 9999;
-        display: none;
+    .table>tbody>tr>td,.table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+        vertical-align: middle;
+        height: 45px;
     }
-    .fix-per .fix-cont{
-        width: 400px;
-        height: 200px;
-        line-height: 200px;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -200px;
-        margin-top: -100px;
-        font-size: 100px;
-        color: orange;
+    .all-checked-label{
+        cursor: pointer;
+        line-height: 1;
     }
-    .form-wrap{
-        border: 1px solid #ccc;
-        padding: 8px 15px 15px 15px;
-        border-radius: 5px;
+    #cy-all-checked{
+        vertical-align: top;
     }
 </style>
+<link href="/static/widget/icheck/square/green.css" rel="stylesheet">
 
 </head>
 
@@ -364,7 +347,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 学校信息管理 / 添加学生
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 权限分配
                             </li>
                         </ol>
                     </div>
@@ -372,122 +355,43 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
 
                 <!-- 用户数据 -->
                 
+
 <div class="row">
-    <div class="col-lg-8">
-        <div class="form-wrap">
-            
-            <form name="school">
-
-                <div class="form-group">
-                    <label for="province">所属省份</label>
-                    <select id="province" class="form-control" name="province">
-                        <option value="-1" selected>请选择学校所在省份</option>
-                        <?php  $_smarty_tpl->tpl_vars['provinceName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['provinceName']->_loop = false;
- $_smarty_tpl->tpl_vars['provinceId'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['provinceList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['provinceName']->key => $_smarty_tpl->tpl_vars['provinceName']->value){
-$_smarty_tpl->tpl_vars['provinceName']->_loop = true;
- $_smarty_tpl->tpl_vars['provinceId']->value = $_smarty_tpl->tpl_vars['provinceName']->key;
+    <div class="col-lg-12">
+        <form name="url">
+            <table class="table table-striped table-bordered" style="color: #7a7676;">
+                <thead>
+                    <tr>
+                        <th class="text-center" style="width: 100px;">
+                            <label for="cy-all-checked" class="all-checked-label">全选</label>
+                            <input id="cy-all-checked" type="checkbox"/>
+                        </th>
+                        <th>URL</th>
+                        <th>备注信息</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
+$_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['provinceId']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['provinceName']->value;?>
-</option>
-                        <?php } ?>          
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="city">所在城市</label>
-                    <select id="city" class="form-control" name="city">
-                        <option value="-1" selected>请选择学校所在城市</option>
-                       
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="district">所在区</label>
-                    <select id="district" class="form-control" name="district">
-                        <option value="-1" selected>请选择学校所在区</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="school">所在学校</label>
-                    <select id="school" class="form-control" name="school">
-                        <option value="-1" selected>请选择学生所在学校</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="grade">所在年级</label>
-                    <select id="grade" class="form-control" name="grade">
-                        <option value="-1" selected>请选择学生所在年级</option>
-                        <?php  $_smarty_tpl->tpl_vars['gradeName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['gradeName']->_loop = false;
- $_smarty_tpl->tpl_vars['gradeNo'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['gradeList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['gradeName']->key => $_smarty_tpl->tpl_vars['gradeName']->value){
-$_smarty_tpl->tpl_vars['gradeName']->_loop = true;
- $_smarty_tpl->tpl_vars['gradeNo']->value = $_smarty_tpl->tpl_vars['gradeName']->key;
-?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['gradeNo']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['gradeName']->value;?>
-</option>
-                        <?php } ?>  
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="class">所在班级</label>
-                    <select id="class" class="form-control" name="class">
-                        <option value="-1" selected>请选择学生所在班级</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="username">姓名</label>
-                    <input type="text" class="form-control" id="username" placeholder="Username" name="username">
-                </div>
-
-                <div class="form-group">
-                    <label for="sex">性别</label>
-                    <select id="sex" class="form-control" name="sex">
-                        <option value="-1" selected>请选择学生性别</option>
-                        <?php  $_smarty_tpl->tpl_vars['sexName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['sexName']->_loop = false;
- $_smarty_tpl->tpl_vars['sexNo'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['sex']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['sexName']->key => $_smarty_tpl->tpl_vars['sexName']->value){
-$_smarty_tpl->tpl_vars['sexName']->_loop = true;
- $_smarty_tpl->tpl_vars['sexNo']->value = $_smarty_tpl->tpl_vars['sexName']->key;
-?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['sexNo']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['sexName']->value;?>
-</option>
-                        <?php } ?>  
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="birthday">生日</label></label>
-                    <div class="col-sm-5 input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
-                        <input readonly type="text" class="form-control" id="birthday" name="birthday" value="<?php echo $_GET['start'];?>
-" >
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                    </div>
-                </div>
-                            
-                <button id="sub" type="button" class="btn btn-primary">确认提交</button>
-               <!--  <button id="button" type="button" class="btn btn-danger" >取&emsp;消</button> -->
-            </form>
-        </div>
+                    <tr>
+                        <td class="text-center"><input class="cy-icheck" type="checkbox" name="urls[]" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+" <?php if (in_array($_smarty_tpl->tpl_vars['row']->value['url'],$_smarty_tpl->tpl_vars['myList']->value['url'])){?>checked<?php }?>/></td>
+                        <td><a href="javascript:viod(0)" style="color: #65CEA7;"><?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+</a></td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['remark'];?>
+</td>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+            <input type="hidden" name="rid" value="<?php echo $_GET['rid'];?>
+">
+        </form>
+        <a id="sub" class="btn btn-md btn-primary" href="javascript:void(0)">保 存</a>
     </div>
-</div>
-
-<!-- modal-add -->
-<div class="fix-per">
-    <div class="fix-cont">
-        <!-- 100% -->
-    </div>
-    
 </div>
 
 
@@ -520,11 +424,97 @@ $_smarty_tpl->tpl_vars['sexName']->_loop = true;
     </script>
 
     
+<script src="/static/widget/icheck/icheck.min.js"></script>
+<script>
+$(function(){
+    $('.cy-icheck').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        increaseArea: '20%' // optional
+    });
 
-<script type="text/javascript" src="/static/student/js/add.js"></script>
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<!-- <script type="text/javascript" src="/static/ugc/index.js"></script> -->
+    var assgin = {
+        init: function(){
+            this.getDom();
+            this.checkAll();
+            this.checkAllStatus();
+            this.postData();
+        },
 
+        getDom: function(){
+            this.checkBtn = $('#cy-all-checked');
+            this.urlChecks = $('.cy-icheck');
+            this.subBtn = $('#sub');
+            this.form = $('form[name=url]');
+            this.dialogDom = {};
+        },
+
+        checkAll: function(){
+            var me = this;
+            me.checkBtn.change(function(){
+                var checkStatus = $(this).prop('checked');
+                var newStatus = checkStatus == true ? 'check' : 'uncheck';
+                me.urlChecks.iCheck(newStatus);
+            });
+        },
+
+        checkAllStatus: function(){
+            var me = this;
+            me.urlChecks.bind('ifChanged', function(){
+                var sta = $(this).prop('checked');
+                if(sta === false){
+                    me.checkBtn.prop('checked', false);
+                }
+            })
+        },
+
+        postData: function(){
+            var me = this;
+            me.subBtn.bind('click', function(){
+                var data = me.form.serialize();
+                $.post('/meau/assginurl', data, function(res){
+                    if(res.errCode == 0){
+                        me.alertMsg('保存成功', 'succ');
+                    }
+                    else{
+                        me.alertMsg(res.errMessage, 'fail');
+                        return false;
+                    }
+                })
+            })
+        },
+
+        alertMsg: function(text, name){
+            var me = this;
+
+            if(name == 'fail'){
+                var buttons = {
+                    '确定' : function(){
+                        me.dialogDom.name.destroy();
+                    },
+                };
+            }
+            else{
+                var buttons = {
+                    '确定' : function(){
+                        window.location.reload();
+                    },
+                };
+            }
+
+            me.dialogDom.name = jqueryAlert({
+                'title'   : '',
+                'content' : text,
+                'modal'   : true,
+                'buttons' : buttons
+            });
+
+            return false;
+        },
+    };
+
+    assgin.init()
+})
+</script>
 
 </body>
 </html><?php }} ?>

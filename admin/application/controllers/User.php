@@ -15,5 +15,7 @@ class UserController extends Yaf_Controller_Abstract{
         'addschool' => 'actions/user/AddSchool.php',
         'index'     => 'actions/user/Index.php',  
         'addrelation' => 'actions/user/AddRelation.php',
+        'teacher' => 'actions/user/Teacher.php',
+        'addclass' => 'actions/user/AddClass.php',
     );
 }

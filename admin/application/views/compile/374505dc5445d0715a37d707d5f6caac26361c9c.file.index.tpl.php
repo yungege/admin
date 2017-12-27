@@ -1,12 +1,12 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 12:19:54
-         compiled from "/var/www/admin/admin/application/views/template/student/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8611459415a431f6a459da0-98696128%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 09:30:43
+         compiled from "/var/www/admin/admin/application/views/template/upload/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:9565417245a42f7c3785af0-92159454%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '41b3e8cc63602603705c3e0cb4b05619206b1a14' => 
+    '374505dc5445d0715a37d707d5f6caac26361c9c' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/student/add.tpl',
+      0 => '/var/www/admin/admin/application/views/template/upload/index.tpl',
       1 => 1512353715,
       2 => 'file',
     ),
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '8611459415a431f6a459da0-98696128',
+  'nocache_hash' => '9565417245a42f7c3785af0-92159454',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a431f6a5202e1_48253768',
+  'unifunc' => 'content_5a42f7c3a13a27_74842618',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a431f6a5202e1_48253768')) {function content_5a431f6a5202e1_48253768($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a42f7c3a13a27_74842618')) {function content_5a42f7c3a13a27_74842618($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -147,6 +147,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         border: 1px solid #ccc;
         padding: 8px 15px 15px 15px;
         border-radius: 5px;
+    }
+    #grade_apply,#grade_apply_select,.fx-btn{
+        height: 254px;
+    }
+    #grade_apply_select{
+        color: black;
+    }
+    
+    .fx-btn{
+        border: 1px solid #ccc;
+        margin-top: 25px;
+    }
+    .fx-btn > a{
+        display: block;
+        width: 60%;
+        margin: 0 auto 10px auto;
     }
 </style>
 
@@ -364,7 +380,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 学校信息管理 / 添加学生
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运营管理 / 上传学生数据
                             </li>
                         </ol>
                     </div>
@@ -372,13 +388,12 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
 
                 <!-- 用户数据 -->
                 
-<div class="row">
-    <div class="col-lg-8">
-        <div class="form-wrap">
-            
-            <form name="school">
 
-                <div class="form-group">
+<div class="row">
+    <div class="col-lg-12">
+        <form name="upload" enctype="multipart/form-data" action="user" method="post">
+
+            <div class="form-group">
                     <label for="province">所属省份</label>
                     <select id="province" class="form-control" name="province">
                         <option value="-1" selected>请选择学校所在省份</option>
@@ -418,67 +433,17 @@ $_smarty_tpl->tpl_vars['provinceName']->_loop = true;
                     </select>
                 </div>
 
-                <div class="form-group">
-                    <label for="grade">所在年级</label>
-                    <select id="grade" class="form-control" name="grade">
-                        <option value="-1" selected>请选择学生所在年级</option>
-                        <?php  $_smarty_tpl->tpl_vars['gradeName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['gradeName']->_loop = false;
- $_smarty_tpl->tpl_vars['gradeNo'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['gradeList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['gradeName']->key => $_smarty_tpl->tpl_vars['gradeName']->value){
-$_smarty_tpl->tpl_vars['gradeName']->_loop = true;
- $_smarty_tpl->tpl_vars['gradeNo']->value = $_smarty_tpl->tpl_vars['gradeName']->key;
-?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['gradeNo']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['gradeName']->value;?>
-</option>
-                        <?php } ?>  
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="file"> Excel </label>
+                <input type="file" class="form-control" id="file" name="file">
+            </div>
 
-                <div class="form-group">
-                    <label for="class">所在班级</label>
-                    <select id="class" class="form-control" name="class">
-                        <option value="-1" selected>请选择学生所在班级</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="username">姓名</label>
-                    <input type="text" class="form-control" id="username" placeholder="Username" name="username">
-                </div>
-
-                <div class="form-group">
-                    <label for="sex">性别</label>
-                    <select id="sex" class="form-control" name="sex">
-                        <option value="-1" selected>请选择学生性别</option>
-                        <?php  $_smarty_tpl->tpl_vars['sexName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['sexName']->_loop = false;
- $_smarty_tpl->tpl_vars['sexNo'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['sex']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['sexName']->key => $_smarty_tpl->tpl_vars['sexName']->value){
-$_smarty_tpl->tpl_vars['sexName']->_loop = true;
- $_smarty_tpl->tpl_vars['sexNo']->value = $_smarty_tpl->tpl_vars['sexName']->key;
-?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['sexNo']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['sexName']->value;?>
-</option>
-                        <?php } ?>  
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="birthday">生日</label></label>
-                    <div class="col-sm-5 input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
-                        <input readonly type="text" class="form-control" id="birthday" name="birthday" value="<?php echo $_GET['start'];?>
-" >
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                    </div>
-                </div>
-                            
-                <button id="sub" type="button" class="btn btn-primary">确认提交</button>
-               <!--  <button id="button" type="button" class="btn btn-danger" >取&emsp;消</button> -->
-            </form>
-        </div>
+            <div class="form-group">
+           <!--  <input type="submit" name="submit" value="Submit" /> -->
+            <button id="sub" type="button" class="btn btn-primary">确认提交</button>
+            </div>
+            
+        </form>
     </div>
 </div>
 
@@ -520,11 +485,7 @@ $_smarty_tpl->tpl_vars['sexName']->_loop = true;
     </script>
 
     
-
-<script type="text/javascript" src="/static/student/js/add.js"></script>
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<!-- <script type="text/javascript" src="/static/ugc/index.js"></script> -->
-
+<script type="text/javascript" src="/static/upload/js/index.js"></script>
 
 </body>
 </html><?php }} ?>

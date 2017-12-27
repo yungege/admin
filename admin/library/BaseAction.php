@@ -154,6 +154,7 @@ class BaseAction extends Yaf_Action_Abstract{
 
     //执行逻辑
     protected function __pageService(){
+
         if ($this->declarePageService) {
             if(class_exists($this->declarePageService)){
                 $pageServiceName = $this->declarePageService;
