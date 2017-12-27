@@ -100,6 +100,17 @@ class Db_Mongodb {
         self::$connection[$this->host][$this->port] = new MongoDB\Driver\Manager($uri);
     }
 
+    public function distinct(string $field, array $map = []){
+        $cmd = [
+            'distinct' => $this->table,
+            'key' => $field,
+            'query' => $map
+        ];
+
+        $cursor = $this->execute($cmd);
+        return current($cursor->toArray());
+    }
+
     /**
      * 查询数据
      * @param  array  $filter  条件 $filter = ['x' => ['$gt' => 1]];

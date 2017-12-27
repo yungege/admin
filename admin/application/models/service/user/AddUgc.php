@@ -143,7 +143,7 @@ class Service_User_AddUgcModel extends BasePageService {
             "burncalories"  => (float)$cal,
             "commenttext"   => "系统补交",
             "exciseimg"     => [ 
-                "https://oi7ro6pyq.qnssl.com/o_1bpq74tqm1vdj18dd118o1ko01mumd.jpg"
+                "https://oi7ro6pyq.qnssl.com/o_1c2b1dv9f1u2itc3mh61ecq6uid.jpg"
             ],
             "createtime"    => time(),
             "type"          => 5,

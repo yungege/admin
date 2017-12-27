@@ -1,69 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 17:15:43
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1299436915a4364bfaf5293-83882998%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-11 16:04:24
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5968903365a2e3c083e0b84-76659954%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-11 16:48:37
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18286568075a2e4665ac3061-55958184%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-11 09:57:13
-         compiled from "/var/www/admin/admin/application/views/template/meau/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15379429945a2de5f994a2f4-16971501%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> c994f9369fbaaa6d5ad8fa3c6893564fdf668ba4
->>>>>>> 0977caa588a946bc8502a197881667bbf9eac2e1
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 17:32:21
+         compiled from "/var/www/admin/admin/application/views/template/user/teacher.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:17346796015a4368a59ec2e5-81082218%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '4ce6ebf55526b81f2ade71ca95b9262cee00bab0' => 
+    '3dafb6df47d64f120f744c08c1fcccb287c44647' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/meau/list.tpl',
-<<<<<<< HEAD
-      1 => 1512353715,
-=======
-<<<<<<< HEAD
-      1 => 1509080121,
-=======
-      1 => 1509502905,
->>>>>>> c994f9369fbaaa6d5ad8fa3c6893564fdf668ba4
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
+      0 => '/var/www/admin/admin/application/views/template/user/teacher.tpl',
+      1 => 1514367034,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1512353715,
+      1 => 1510105524,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1299436915a4364bfaf5293-83882998',
-=======
-<<<<<<< HEAD
-      1 => 1510105483,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '18286568075a2e4665ac3061-55958184',
-=======
-      1 => 1510105563,
-      2 => 'file',
-    ),
-  ),
-<<<<<<< HEAD
-  'nocache_hash' => '5968903365a2e3c083e0b84-76659954',
-=======
-  'nocache_hash' => '15379429945a2de5f994a2f4-16971501',
->>>>>>> c994f9369fbaaa6d5ad8fa3c6893564fdf668ba4
->>>>>>> 0977caa588a946bc8502a197881667bbf9eac2e1
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
+  'nocache_hash' => '17346796015a4368a59ec2e5-81082218',
   'function' => 
   array (
   ),
@@ -81,27 +35,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a4364bfb82c19_83121360',
+  'unifunc' => 'content_5a4368a5a5b241_12338605',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a4364bfb82c19_83121360')) {function content_5a4364bfb82c19_83121360($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a2e3c08536267_69128610',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a2e3c08536267_69128610')) {function content_5a2e3c08536267_69128610($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a2e4665b18542_59939357',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a2e4665b18542_59939357')) {function content_5a2e4665b18542_59939357($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5a2de5f9aa0c75_35552476',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a2de5f9aa0c75_35552476')) {function content_5a2de5f9aa0c75_35552476($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> c994f9369fbaaa6d5ad8fa3c6893564fdf668ba4
->>>>>>> 0977caa588a946bc8502a197881667bbf9eac2e1
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
+<?php if ($_valid && !is_callable('content_5a4368a5a5b241_12338605')) {function content_5a4368a5a5b241_12338605($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -182,31 +119,68 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
-    .table>tbody>tr>td,.table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
-        vertical-align: middle;
-        height: 45px;
+    .datetimepicker{
+        margin-top: 50px;
     }
-    .add-f-cate-fix,.add-s-cate-fix,.edit-cate-fix{
+    .add-ugc-fix,.add-mobile-fix,.add-class-fix{
         width: 100%;
         height: 100%;
-        overflow-y: scroll;
         position: fixed;
         top: 0;
         left: 0;
-        background-color: rgba(0,0,0,.3);
+        background-color: rgba(0,0,0,0.4);
         z-index: 9999;
         display: none;
     }
-    .inner-box{
-        background-color: white;
+    .add-ugc-inner{
         width: 500px;
-        /*height: 200px;*/
-        border: 1px solid #999;
-        border-radius: 3px;
-        margin: 10% auto 0;
-        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        height: auto;
+        border: 1px solid white;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -15%;
+        margin-left: -250px;
+        border-radius: 4px;
         padding: 15px;
+    }
+    .add-mobile-inner{
+        height: 200px;
+        margin-top: -170px;
+    }
+    .add-class-inner{
+        height: 200px;
+        margin-top: -170px;
+    }
+    /*.add-ugc-inner > h4{
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 5px;
+    }*/
+    .glyphicon-remove{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .glyphicon-remove:hover{
+        color: red;
+    }
+    .run-type,.normal,.punch-type{
+        display: none;
+    }
+    .homework-inner{
+        border: 1px solid #31b0d5;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    .checkbox-inline+.checkbox-inline, .radio-inline+.radio-inline,.radio-inline{
+        margin-left: 0;
+        margin-right: 10px;
     }
 </style>
 
@@ -424,7 +398,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 菜单管理 <a class="btn btn-xs btn-primary" href="javascript:void(0)" id="add-f-cate">新建菜单</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 用户管理 / 老师管理<a href="/student/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加老师</a>
                             </li>
                         </ol>
                     </div>
@@ -432,135 +406,204 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
 
                 <!-- 用户数据 -->
                 
+<div class="row">
+    <div class="col-lg-12">
+        <form method="get" >
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="form-horizontal row">
+
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">班级ID：</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="cid" class="input-sm form-control" value="<?php echo $_GET['cid'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">所在学校ID：</label>
+                                <div class="col-md-8">
+                                   <input type="text" name="sid" class="input-sm form-control" value="<?php echo $_GET['sid'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">
+                            <div class="row">
+                                <label class="col-md-6 paddZero control-label">老师姓名/昵称：</label>
+                                <div class="col-md-6">
+                                    <input type="text" name="username" class="input-sm form-control" value="<?php echo $_GET['username'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+                    </div><br/>
+                    <div class="form-horizontal row">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">老师ID：</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="uid" class="input-sm form-control" value="<?php echo $_GET['uid'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <label class="col-md-4 paddZero control-label">学校名：</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="sname" class="input-sm form-control" value="<?php echo $_GET['sname'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <label class="col-md-6 paddZero control-label">老师手机：</label>
+                                <div class="col-md-6">
+                                    <input type="text" name="mobile" class="input-sm form-control" value="<?php echo $_GET['mobile'];?>
+">
+                                </div>
+                            </div>
+                        </div>
+                    </div><br/>
+                    <div class="form-horizontal row">
+                        <div class="col-md-4 col-md-offset-1">
+                            <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
+                            <button class="btn btn-warning btn-sm reset-btn" type="button">清除条件</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-lg-12">
-        <table class="table table-striped table-bordered" style="color: #7a7676;">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>排序</th>
-                    <th>菜单名称</th>
-                    <th>URL</th>
-                    <th>图标样式</th>
-                    <th>操作</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <!-- <th class="text-center">ID</th> -->
+                        <th>头像</th>
+                        <th>姓名/昵称</th>
+                        <th>用户ID</th>
+                        <th>学校</th>
+                        <th>班级</th>
+                        <th>平台（版本号）</th>
+                        <th>绑定手机</th>
+                        <!-- <th>生日</th> -->
+                        <th>性别</th>
+                        <th>注册日期</th>
+                        <th>上次登录</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                <tr data-seria="<?php echo serialize($_smarty_tpl->tpl_vars['row']->value);?>
+                    <tr data-uid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 ">
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['iconurl'];?>
+?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></td>
+                        <td>姓名：<?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
+<br/>昵称：<?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_sort'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['new_name'];?>
-</td>
-                    <td><a href="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
-" style="color: #65CEA7;"><?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
+                        <td><a href="/user/school?schoolid=<?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolid'];?>
+"><?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolname'];?>
 </a></td>
-                    <td style="color: #65CEA7;font-size: 20px;font-weight: 700;"><i class="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
-"></i></td>
-                    <td>
-                        <?php if ($_smarty_tpl->tpl_vars['row']->value['pid']==''){?>
-                           <a data-pid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" data-pname="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" class="add-s-cate cate-add btn btn-xs btn-success" href="javascript:void(0)"><span class='fa fa-plus'></span> 子菜单</a>&nbsp;
-                        <?php }?>
-                        <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" data-ssort="<?php echo $_smarty_tpl->tpl_vars['row']->value['sort'];?>
-" data-icon="<?php echo $_smarty_tpl->tpl_vars['row']->value['icon_style'];?>
-" data-url="<?php echo $_smarty_tpl->tpl_vars['row']->value['url'];?>
-" class="cate-edit btn btn-xs btn-primary" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
-                    </td>
-                </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+                        <td>
+                            <?php  $_smarty_tpl->tpl_vars['teacher'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['teacher']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['row']->value['manageclassinfo']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['teacher']->key => $_smarty_tpl->tpl_vars['teacher']->value){
+$_smarty_tpl->tpl_vars['teacher']->_loop = true;
+?>
+                            <a href="/user/class?classid=<?php echo $_smarty_tpl->tpl_vars['teacher']->value['classid'];?>
+"><?php echo $_smarty_tpl->tpl_vars['teacher']->value['classname'];?>
+</a><br/>
+                            <?php } ?>
+                            <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" class="btn btn-xs btn-primary add-class" href="javascript:void(0)">添加班级？</a>
+                        </td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['clientsource'];?>
+<br/><?php echo $_smarty_tpl->tpl_vars['row']->value['versions'];?>
+</td>
+                        <td>
+                            <?php echo $_smarty_tpl->tpl_vars['row']->value['mobileno'];?>
+<br/>
+                            <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" class="btn btn-xs btn-primary add-mobile" href="javascript:void(0)">添加手机？</a>
+                        </td>
+                        <!-- <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['birthday'],"%Y-%m-%d");?>
+</td> -->
+                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['sex']==1){?>女<?php }else{ ?>男<?php }?></td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%Y-%m-%d");?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['lastlogin'];?>
+</td>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="text-center tt-page">
+            <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+
+        </div>
+        
     </div>
 </div>
 
-<!-- 一级菜单 -->
-<div class="add-f-cate-fix">
-    <div class="inner-box">
-        <h4>新增一级菜单</h4>
-        <hr>
-        <form name="add-f-cate" class="form">
+<div class="add-mobile-fix">
+    <div class="add-ugc-inner add-mobile-inner">
+        <h4>新增绑定关系</h4>
+        <i class="glyphicon glyphicon-remove"></i>
+        <form name="relation">
             <div class="form-group">
-                <label>菜单名</label>
-                <input type="text" class="form-control" name="name">
+                <label for="re-mobile">手机号码</label>
+                <input type="text" class="form-control" id="re-mobile" name="re-mobile">
             </div>
             <div class="form-group">
-                <label>排序</label>
-                <input type="text" class="form-control" name="sort">
+              <!--   <label for="re-name">绑定人</label> -->
+                <input type="hidden" class="form-control" id="re-name" name="re-name" value="自己">
             </div>
             <div class="form-group">
-                <label>图标样式</label>
-                <input type="text" class="form-control" name="icon_style">
+                <!-- <label for="re-name">绑定关系</label> -->
+                <input type="hidden" class="form-control" id="re-sel" name="re-sel" value="7">
             </div>
-            <a class="btn btn-primary subf" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger canf" href="javascript:void(0)">取&emsp;消</a>
-        </form>
-    </div>
-</div>
-<!-- 二级菜单 -->
-<div class="add-s-cate-fix">
-    <div class="inner-box">
-        <h4>新增二级菜单&emsp;&emsp;<small id="first-cate-name" style="color: #65CEA7;"></small></h4>
-        <hr>
-        <form name="add-s-cate" class="form">
-            <div class="form-group">
-                <label>菜单名</label>
-                <input type="text" class="form-control" name="name">
-            </div>
-            <div class="form-group">
-                <label>排序</label>
-                <input type="text" class="form-control" name="sort">
-            </div>
-            <div class="form-group">
-                <label>URL <small>[ /meau/list ]</small></label>
-                <input type="text" class="form-control" name="url">
-            </div>
-            <input type="hidden" name="pid" class="pid-s">
-            <a class="btn btn-primary subs" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger cans" href="javascript:void(0)">取&emsp;消</a>
+            <input type="hidden" name="uid" id="hide-uid">
+            <button id="re-sub" type="button" class="btn btn-primary pull-right">Submit</button>
         </form>
     </div>
 </div>
 
-<!-- 编辑菜单 -->
-<div class="edit-cate-fix">
-    <div class="inner-box">
-        <h4>编辑菜单&emsp;&emsp;<small id="old-cate-name" style="color: #65CEA7;"></small></h4>
-        <hr>
-        <form name="edit-cate" class="form">
+<div class="add-class-fix">
+    <div class="add-ugc-inner add-class-inner">
+        <h4>添加班级</h4>
+        <i class="glyphicon glyphicon-remove"></i>
+        <form name="class">
             <div class="form-group">
-                <label>菜单名</label>
-                <input type="text" class="form-control name-e" name="name">
+                <label for="classid">班级ID</label>
+                <input type="text" class="form-control" id="classid" name="classid">
             </div>
-            <div class="form-group">
-                <label>排序</label>
-                <input type="text" class="form-control sort-e" name="sort">
-            </div>
-            <div class="form-group">
-                <label>图标样式</label>
-                <input type="text" class="form-control icon-e" name="icon_style">
-            </div>
-            <div class="form-group">
-                <label>URL <small>[ /meau/list ]</small></label>
-                <input type="text" class="form-control url-e" name="url">
-            </div>
-            <input type="hidden" name="id" class="pid-e">
-            <a class="btn btn-primary sube" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger cane" href="javascript:void(0)">取&emsp;消</a>
+            <input type="hidden" name="uid" id="hide-uid-class">
+            <input type="hidden" name="type" id="type-class" value="1">
+            <button id="re-sub-class" type="button" class="btn btn-primary pull-right">Submit</button>
         </form>
     </div>
 </div>
+
 
 
 
@@ -592,175 +635,169 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
-<script>
-$(function(){
-    var meauFirst = {
-        init: function(){
+<script src="/static/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript">
+
+!(function(){
+    var student = {
+
+        init: function (){
             this.getDom();
-            this.postMeau();
-            this.cancer();
-            this.showBox();
+            this.clickCloseFix();
+            this.initDate();
+            this.resetForm();
+            this.addRelation();
+            this.postRelationData();
+            this.addClass();
+            this.postClassData();
         },
-        getDom: function(){
-            this.form = $('form[name=add-f-cate]');
-            this.subBtn = $('.subf');
-            this.canBtn = $('.canf');
-            this.fixBox = $('.add-f-cate-fix');
-            this.showBtn = $('#add-f-cate');
-        },
-        postMeau: function(){
+
+        initDate: function(){
             var me = this;
-            me.subBtn.unbind().bind('click', function(){
-                var data = me.form.serialize();
-                $.post('/meau/addfirst', data, function(json){
-                    if(json.errCode == 0){
-                        window.location.reload();
-                    }
-                    else{
-                        alert(json.errMessage);
-                    }
+            me.dateBtn.datetimepicker({
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                minView: 2,
+                endDate: new Date(),
+            })
+        },
+
+        getDom: function(){
+            this.ugcBtn = $('.addUgc');
+            this.form = $('form[name=ugc]');
+            this.fixBox = $('.add-ugc-fix');
+            this.closeFixBoxBtn = $('.glyphicon-remove');
+            this.subBtn = $('#sub');
+            this.resetBtn = $('.reset-btn');
+            this.dateBtn = $('.wtime');
+            this.uname = $('#uname');
+            this.htype = $('.htype');
+            this.runTypeDiv = $('.run-type');
+            this.punchTypeDiv = $('.punch-type');
+            this.normalDiv = $('.normal');
+            this.workarea = $('.homework-inner');
+
+            this.reBtn = $('.add-mobile');
+            this.reFixBox = $('.add-mobile-fix');
+            this.reBtnClass = $('.add-class');
+            this.reFixBoxClass = $('.add-class-fix');
+            this.reSubBtn = $('#re-sub');
+            this.reSubBtnClass = $('#re-sub-class');
+            this.hideUid = $('#hide-uid');
+            this.hideUidClass = $('#hide-uid-class');
+            this.reMobile = $('#re-mobile');
+            this.reName = $('#re-name');
+            this.reSel = $('#re-sel');
+            this.reForm = $('form[name=relation]');
+            this.reFormClass = $('form[name=class]');
+        },
+
+        // 清楚查询条件
+        resetForm: function(){
+            var me = this;
+            me.resetBtn.unbind().bind('click', function(){
+                me.form.submit();
+            });
+        },
+
+        hideDialog: function(){
+
+            var me = this;
+            me.fixBox.fadeOut(200);
+            me.subBtn.attr('data-uid', '');
+            me.subBtn.attr('data-cid', '');
+            me.uname.text('');
+            me.reFixBox.fadeOut(200);
+            me.reFixBoxClass.fadeOut(200);
+            me.hideUid.val('');
+            me.reForm[0].reset();
+        },
+
+        clickCloseFix: function(){
+            var me = this;
+            me.closeFixBoxBtn.click(function(){
+                me.hideDialog();
+            });
+        },
+
+        addClass: function(){
+            var me = this;
+            me.reBtnClass.unbind().bind('click', function(){
+                var uid = $.trim($(this).data('id'));
+                me.hideUidClass.val(uid);
+                me.reFixBoxClass.fadeIn(200);
+            });
+        },
+
+        postClassData: function(){
+            var me = this;
+            me.reSubBtnClass.unbind().bind('click',function(){
+
+                var data = me.reFormClass.serialize();
+
+                 $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: '/user/addclass', data,
+                    success: function(json){
+
+                        if(json.errCode == 0){
+                            window.location.reload();
+                        }
+                        else{
+                            alert(json.errMessage);
+                            return false;
+                        }
+                    },
                 });
             });
         },
-        cancer: function(){
-            var me = this;
-            me.canBtn.unbind().bind('click', function(){
-                me.fixBox.fadeOut(200);
-                me.form[0].reset();
-            })
-        },
-        showBox: function(){
-            var me = this;
-            me.showBtn.unbind().bind('click', function(){
-                me.fixBox.fadeIn(200);
-            })
-        },
-    };
 
-    // 二级菜单
-    var meauSecond = {
-        init: function(){
-            this.getDom();
-            this.postMeau();
-            this.cancer();
-            this.showBox();
-        },
-        getDom: function(){
-            this.form = $('form[name=add-s-cate]');
-            this.subBtn = $('.subs');
-            this.canBtn = $('.cans');
-            this.fixBox = $('.add-s-cate-fix');
-            this.showBtn = $('.add-s-cate');
-            this.pname = $('#first-cate-name');
-            this.pid = $('.pid-s');
-        },
-        postMeau: function(){
+        addRelation: function(){
             var me = this;
-            me.subBtn.unbind().bind('click', function(){
-                var data = me.form.serialize();
-                $.post('/meau/addfirst?type=2', data, function(json){
-                    if(json.errCode == 0){
-                        window.location.reload();
-                    }
-                    else{
-                        alert(json.errMessage);
-                    }
+            me.reBtn.unbind().bind('click', function(){
+                var uid = $.trim($(this).data('id'));
+                me.hideUid.val(uid);
+                me.reFixBox.fadeIn(200);
+            });
+        },
+
+        postRelationData: function(){
+            var me = this,
+                aj = null;
+            me.reSubBtn.unbind().bind('click', function(){
+                var data = me.reForm.serialize();
+
+                aj = $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: '/user/addrelation', data,
+                    success: function(json){
+                       
+                        if(json.errCode == 0){
+                            window.location.reload();
+                        }
+                        else{
+                            alert(json.errMessage);
+                            return false;
+                        }
+                    },
+                    beforeSend: function () {
+                        if(aj != null) {
+                            aj.abort();
+                        }
+                    },
                 });
             });
         },
-        cancer: function(){
-            var me = this;
-            me.canBtn.unbind().bind('click', function(){
-                me.fixBox.fadeOut(200);
-                me.form[0].reset();
-            })
-        },
-        showBox: function(){
-            var me = this;
-            me.showBtn.unbind().bind('click', function(){
-                var pid = $(this).data('pid'),
-                    pname = $(this).data('pname');
-                me.pname.text('父级菜单：'+pname);
-                me.pid.val(pid);
-                me.fixBox.fadeIn(200);
-            })
-        },
+
     };
 
-    // 编辑
-    var meauEdit = {
-        init: function(){
-            this.getDom();
-            this.postMeau();
-            this.cancer();
-            this.showBox();
-        },
-        getDom: function(){
-            this.form = $('form[name=edit-cate]');
-            this.subBtn = $('.sube');
-            this.canBtn = $('.cane');
-            this.fixBox = $('.edit-cate-fix');
-            this.showBtn = $('.cate-edit');
-            this.cname = $('#old-cate-name');
-            this.cid = $('.pid-e');
-            this.csort = $('.sort-e');
-            this.cicon = $('.icon-e');
-            this.curl = $('.url-e');
-            this.new_cname = $('.name-e');
-        },
-        postMeau: function(){
-            var me = this;
-            me.subBtn.unbind().bind('click', function(){
-                var data = me.form.serialize();
-                $.post('/meau/addfirst?type=3', data, function(json){
-                    if(json.errCode == 0){
-                        window.location.reload();
-                    }
-                    else{
-                        alert(json.errMessage);
-                    }
-                });
-            });
-        },
-        cancer: function(){
-            var me = this;
-            me.canBtn.unbind().bind('click', function(){
-                me.fixBox.fadeOut(200);
-                me.form[0].reset();
-                me.cicon.attr('disabled', false);
-                me.curl.attr('disabled', false);
-            })
-        },
-        showBox: function(){
-            var me = this;
-            me.showBtn.unbind().bind('click', function(){
-                var id = $(this).data('id'),
-                    name = $(this).data('name'),
-                    sort = $(this).data('ssort'),
-                    icon = $(this).data('icon'),
-                    url = $(this).data('url');
-                me.cname.text(name);
-                me.cid.val(id);
-                me.new_cname.val(name);
-                me.csort.val(sort);
-                me.curl.val(url);
-                me.cicon.val(icon);
-                if(icon.length == 0){
-                    me.cicon.attr('disabled', true);
-                }
-                if(url == '#'){
-                    me.curl.attr('disabled', true);
-                }
-                me.fixBox.fadeIn(200);
-            })
-        },
-    };
-
-    meauFirst.init();
-    meauSecond.init();
-    meauEdit.init();
-})
+    student.init();
+})()
 </script>
+
 
 </body>
 </html><?php }} ?>
