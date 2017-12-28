@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-28 12:47:24
-         compiled from "/var/www/admin/admin/application/views/template/user/teacher.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:4920613005a44775cd56056-09114747%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-28 14:57:17
-         compiled from "/var/www/admin/admin/application/views/template/user/teacher.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5005142505a4495cd4001a3-18076975%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 2be40ffb805f8ce3f98f59add8e8d62fe1892708
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-28 14:56:43
+         compiled from "/var/www/admin/admin/application/views/template/teacher/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:4456464395a4495ab1609d3-74556091%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '3dafb6df47d64f120f744c08c1fcccb287c44647' => 
+    '0c26285ebce1f4024b5a42acac12e43e2dad98db' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/user/teacher.tpl',
-<<<<<<< HEAD
-      1 => 1514368250,
-=======
+      0 => '/var/www/admin/admin/application/views/template/teacher/add.tpl',
       1 => 1514444111,
->>>>>>> 2be40ffb805f8ce3f98f59add8e8d62fe1892708
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1510105563,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '4920613005a44775cd56056-09114747',
-=======
       1 => 1510105524,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '5005142505a4495cd4001a3-18076975',
->>>>>>> 2be40ffb805f8ce3f98f59add8e8d62fe1892708
+  'nocache_hash' => '4456464395a4495ab1609d3-74556091',
   'function' => 
   array (
   ),
@@ -53,16 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a44775ced3939_75542850',
+  'unifunc' => 'content_5a4495ab1c1983_26113047',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a44775ced3939_75542850')) {function content_5a44775ced3939_75542850($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-  'unifunc' => 'content_5a4495cd476732_50907940',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a4495cd476732_50907940')) {function content_5a4495cd476732_50907940($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> 2be40ffb805f8ce3f98f59add8e8d62fe1892708
-?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a4495ab1c1983_26113047')) {function content_5a4495ab1c1983_26113047($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -143,69 +118,42 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
-<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
-    .datetimepicker{
-        margin-top: 50px;
-    }
-    .add-ugc-fix,.add-mobile-fix,.add-class-fix{
-        width: 100%;
-        height: 100%;
+    .fix-per{
         position: fixed;
         top: 0;
         left: 0;
-        background-color: rgba(0,0,0,0.4);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgba(0,0,0,0.4);
         z-index: 9999;
         display: none;
     }
-    .add-ugc-inner{
-        width: 500px;
-        height: auto;
-        border: 1px solid white;
-        background-color: white;
+    .fix-per .fix-cont{
+        width: 400px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top: -15%;
-        margin-left: -250px;
-        border-radius: 4px;
-        padding: 15px;
+        margin-left: -200px;
+        margin-top: -100px;
+        font-size: 100px;
+        color: orange;
     }
-    .add-mobile-inner{
-        height: 200px;
-        margin-top: -170px;
-    }
-    .add-class-inner{
-        height: 200px;
-        margin-top: -170px;
-    }
-    /*.add-ugc-inner > h4{
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 5px;
-    }*/
-    .glyphicon-remove{
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        cursor: pointer;
-        padding: 10px;
-    }
-    .glyphicon-remove:hover{
-        color: red;
-    }
-    .run-type,.normal,.punch-type{
-        display: none;
-    }
-    .homework-inner{
-        border: 1px solid #31b0d5;
+    .form-wrap{
+        border: 1px solid #ccc;
+        padding: 8px 15px 15px 15px;
         border-radius: 5px;
-        padding: 10px;
-        margin-bottom: 15px;
     }
-    .checkbox-inline+.checkbox-inline, .radio-inline+.radio-inline,.radio-inline{
-        margin-left: 0;
-        margin-right: 10px;
+
+    .fix-grade , .fix-class{
+        display:none;
     }
+
+
 </style>
 
 </head>
@@ -422,7 +370,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 用户管理 / 老师管理<a href="/teacher/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加老师</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 学校信息管理 / 添加老师
                             </li>
                         </ol>
                     </div>
@@ -431,203 +379,103 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                 <!-- 用户数据 -->
                 
 <div class="row">
-    <div class="col-lg-12">
-        <form method="get" >
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <div class="form-horizontal row">
+    <div class="col-lg-8">
+        <div class="form-wrap">
+            
+            <form name="school">
 
-                        <div class="col-md-4">
-                            <div class="row">
-                                <label class="col-md-4 paddZero control-label">班级ID：</label>
-                                <div class="col-md-8">
-                                    <input type="text" name="cid" class="input-sm form-control" value="<?php echo $_GET['cid'];?>
-">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="row">
-                                <label class="col-md-4 paddZero control-label">所在学校ID：</label>
-                                <div class="col-md-8">
-                                   <input type="text" name="sid" class="input-sm form-control" value="<?php echo $_GET['sid'];?>
-">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-5">
-                            <div class="row">
-                                <label class="col-md-6 paddZero control-label">老师姓名/昵称：</label>
-                                <div class="col-md-6">
-                                    <input type="text" name="username" class="input-sm form-control" value="<?php echo $_GET['username'];?>
-">
-                                </div>
-                            </div>
-                        </div>
-                    </div><br/>
-                    <div class="form-horizontal row">
-                        <div class="col-md-4">
-                            <div class="row">
-                                <label class="col-md-4 paddZero control-label">老师ID：</label>
-                                <div class="col-md-8">
-                                    <input type="text" name="uid" class="input-sm form-control" value="<?php echo $_GET['uid'];?>
-">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="row">
-                                <label class="col-md-4 paddZero control-label">学校名：</label>
-                                <div class="col-md-8">
-                                    <input type="text" name="sname" class="input-sm form-control" value="<?php echo $_GET['sname'];?>
-">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="row">
-                                <label class="col-md-6 paddZero control-label">老师手机：</label>
-                                <div class="col-md-6">
-                                    <input type="text" name="mobile" class="input-sm form-control" value="<?php echo $_GET['mobile'];?>
-">
-                                </div>
-                            </div>
-                        </div>
-                    </div><br/>
-                    <div class="form-horizontal row">
-                        <div class="col-md-4 col-md-offset-1">
-                            <button class="btn btn-info btn-sm" type="submit">查&emsp;询</button>
-                            <button class="btn btn-warning btn-sm reset-btn" type="button">清除条件</button>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="province">所属省份</label>
+                    <select id="province" class="form-control" name="province">
+                        <option value="-1" selected>请选择学校所在省份</option>
+                        <?php  $_smarty_tpl->tpl_vars['provinceName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['provinceName']->_loop = false;
+ $_smarty_tpl->tpl_vars['provinceId'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['provinceList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['provinceName']->key => $_smarty_tpl->tpl_vars['provinceName']->value){
+$_smarty_tpl->tpl_vars['provinceName']->_loop = true;
+ $_smarty_tpl->tpl_vars['provinceId']->value = $_smarty_tpl->tpl_vars['provinceName']->key;
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['provinceId']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['provinceName']->value;?>
+</option>
+                        <?php } ?>          
+                    </select>
                 </div>
-            </div>
-        </form>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col-lg-12">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped">
-                <thead>
-                    <tr>
-                        <!-- <th class="text-center">ID</th> -->
-                        <th>头像</th>
-                        <th>姓名/昵称</th>
-                        <th>用户ID</th>
-                        <th>学校</th>
-                        <th>班级</th>
-                        <th>平台（版本号）</th>
-                        <th>绑定手机</th>
-                        <!-- <th>生日</th> -->
-                        <th>性别</th>
-                        <th>注册日期</th>
-                        <th>上次登录</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
-$_smarty_tpl->tpl_vars['row']->_loop = true;
+                <div class="form-group">
+                    <label for="city">所在城市</label>
+                    <select id="city" class="form-control" name="city">
+                        <option value="-1" selected>请选择学校所在城市</option>
+                       
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="district">所在区</label>
+                    <select id="district" class="form-control" name="district">
+                        <option value="-1" selected>请选择学校所在区</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="school">所在学校</label>
+                    <select id="school" class="form-control" name="school">
+                        <option value="-1" selected>请选择学生所在学校</option>
+                    </select>
+                </div>
+
+                <div class="form-group class-add">
+                    <label for="add-class">添加管理班级</label>
+                    <select id="add-class" class="form-control" name="type">
+                        <option value="-1" selected>请选择添加方式</option>
+                        <option value="1" >添加整个学校的班级</option>
+                        <option value="2" >添加整个年级的班级</option>
+                        <option value="3" >添加部分班级</option>
+                    </select>
+                </div>
+
+                <div class="form-group fix-grade">
+                    <label for="grade">所管年级</label>
+                    <select id="grade" class="form-control" name="grade">
+                        <option value="-1" selected>请选择学生所在年级</option>
+                        <?php  $_smarty_tpl->tpl_vars['gradeName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['gradeName']->_loop = false;
+ $_smarty_tpl->tpl_vars['gradeNo'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['gradeList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['gradeName']->key => $_smarty_tpl->tpl_vars['gradeName']->value){
+$_smarty_tpl->tpl_vars['gradeName']->_loop = true;
+ $_smarty_tpl->tpl_vars['gradeNo']->value = $_smarty_tpl->tpl_vars['gradeName']->key;
 ?>
-                    <tr data-uid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-">
-                        <td><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['iconurl'];?>
-?imageView2/2/w/100/h/60/q/100" width="50" height="50" style="border-radius: 25px;"></td>
-                        <td>姓名：<?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
-<br/>昵称：<?php echo $_smarty_tpl->tpl_vars['row']->value['nickname'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-</td>
-                        <td><a href="/user/school?schoolid=<?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolid'];?>
-"><?php echo $_smarty_tpl->tpl_vars['row']->value['schoolinfo']['schoolname'];?>
-</a></td>
-                        <td>
-                            <?php  $_smarty_tpl->tpl_vars['teacher'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['teacher']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['row']->value['manageclassinfo']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['teacher']->key => $_smarty_tpl->tpl_vars['teacher']->value){
-$_smarty_tpl->tpl_vars['teacher']->_loop = true;
-?>
-                            <a href="/user/class?classid=<?php echo $_smarty_tpl->tpl_vars['teacher']->value['classid'];?>
-"><?php echo $_smarty_tpl->tpl_vars['teacher']->value['classname'];?>
-</a><br/>
-                            <?php } ?>
-                            <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-xs btn-primary add-class" href="javascript:void(0)">添加班级？</a>
-                        </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['clientsource'];?>
-<br/><?php echo $_smarty_tpl->tpl_vars['row']->value['versions'];?>
-</td>
-                        <td>
-                            <?php echo $_smarty_tpl->tpl_vars['row']->value['mobileno'];?>
-<br/>
-                            <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-xs btn-primary add-mobile" href="javascript:void(0)">添加手机？</a>
-                        </td>
-                        <!-- <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['birthday'],"%Y-%m-%d");?>
-</td> -->
-                        <td><?php if ($_smarty_tpl->tpl_vars['row']->value['sex']==1){?>女<?php }else{ ?>男<?php }?></td>
-                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['createtime'],"%Y-%m-%d");?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['lastlogin'];?>
-</td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['gradeNo']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['gradeName']->value;?>
+</option>
+                        <?php } ?>  
+                    </select>
+                </div>
+
+                <div class="form-group fix-class">
+                    <label for="class">所管班级ID(多个班级ID用  |  隔开)</label>
+                    <input type="text" name="class" class="form-control" placeholder="ClassId">
+                </div>
+
+                <div class="form-group">
+                    <label for="username">姓名</label>
+                    <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+                </div>
+                            
+                <button id="sub" type="button" class="btn btn-primary">确认提交</button>
+               <!--  <button id="button" type="button" class="btn btn-danger" >取&emsp;消</button> -->
+            </form>
         </div>
-        
-        <div class="text-center tt-page">
-            <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
-
-        </div>
-        
     </div>
 </div>
 
-<div class="add-mobile-fix">
-    <div class="add-ugc-inner add-mobile-inner">
-        <h4>新增绑定关系</h4>
-        <i class="glyphicon glyphicon-remove"></i>
-        <form name="relation">
-            <div class="form-group">
-                <label for="re-mobile">手机号码</label>
-                <input type="text" class="form-control" id="re-mobile" name="re-mobile">
-            </div>
-            <div class="form-group">
-              <!--   <label for="re-name">绑定人</label> -->
-                <input type="hidden" class="form-control" id="re-name" name="re-name" value="自己">
-            </div>
-            <div class="form-group">
-                <!-- <label for="re-name">绑定关系</label> -->
-                <input type="hidden" class="form-control" id="re-sel" name="re-sel" value="7">
-            </div>
-            <input type="hidden" name="uid" id="hide-uid">
-            <button id="re-sub" type="button" class="btn btn-primary pull-right">Submit</button>
-        </form>
+<!-- modal-add -->
+<div class="fix-per">
+    <div class="fix-cont">
+        <!-- 100% -->
     </div>
+    
 </div>
-
-<div class="add-class-fix">
-    <div class="add-ugc-inner add-class-inner">
-        <h4>添加班级</h4>
-        <i class="glyphicon glyphicon-remove"></i>
-        <form name="class">
-            <div class="form-group">
-                <label for="classid">班级ID</label>
-                <input type="text" class="form-control" id="classid" name="classid">
-            </div>
-            <input type="hidden" name="uid" id="hide-uid-class">
-            <input type="hidden" name="type" id="type-class" value="1">
-            <button id="re-sub-class" type="button" class="btn btn-primary pull-right">Submit</button>
-        </form>
-    </div>
-</div>
-
 
 
 
@@ -659,168 +507,9 @@ $_smarty_tpl->tpl_vars['teacher']->_loop = true;
     </script>
 
     
-<script src="/static/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
-<script type="text/javascript">
 
-!(function(){
-    var student = {
-
-        init: function (){
-            this.getDom();
-            this.clickCloseFix();
-            this.initDate();
-            this.resetForm();
-            this.addRelation();
-            this.postRelationData();
-            this.addClass();
-            this.postClassData();
-        },
-
-        initDate: function(){
-            var me = this;
-            me.dateBtn.datetimepicker({
-                todayBtn:  1,
-                autoclose: 1,
-                todayHighlight: 1,
-                minView: 2,
-                endDate: new Date(),
-            })
-        },
-
-        getDom: function(){
-            this.ugcBtn = $('.addUgc');
-            this.form = $('form[name=ugc]');
-            this.fixBox = $('.add-ugc-fix');
-            this.closeFixBoxBtn = $('.glyphicon-remove');
-            this.subBtn = $('#sub');
-            this.resetBtn = $('.reset-btn');
-            this.dateBtn = $('.wtime');
-            this.uname = $('#uname');
-            this.htype = $('.htype');
-            this.runTypeDiv = $('.run-type');
-            this.punchTypeDiv = $('.punch-type');
-            this.normalDiv = $('.normal');
-            this.workarea = $('.homework-inner');
-
-            this.reBtn = $('.add-mobile');
-            this.reFixBox = $('.add-mobile-fix');
-            this.reBtnClass = $('.add-class');
-            this.reFixBoxClass = $('.add-class-fix');
-            this.reSubBtn = $('#re-sub');
-            this.reSubBtnClass = $('#re-sub-class');
-            this.hideUid = $('#hide-uid');
-            this.hideUidClass = $('#hide-uid-class');
-            this.reMobile = $('#re-mobile');
-            this.reName = $('#re-name');
-            this.reSel = $('#re-sel');
-            this.reForm = $('form[name=relation]');
-            this.reFormClass = $('form[name=class]');
-        },
-
-        // 清楚查询条件
-        resetForm: function(){
-            var me = this;
-            me.resetBtn.unbind().bind('click', function(){
-                me.form.submit();
-            });
-        },
-
-        hideDialog: function(){
-
-            var me = this;
-            me.fixBox.fadeOut(200);
-            me.subBtn.attr('data-uid', '');
-            me.subBtn.attr('data-cid', '');
-            me.uname.text('');
-            me.reFixBox.fadeOut(200);
-            me.reFixBoxClass.fadeOut(200);
-            me.hideUid.val('');
-            me.reForm[0].reset();
-        },
-
-        clickCloseFix: function(){
-            var me = this;
-            me.closeFixBoxBtn.click(function(){
-                me.hideDialog();
-            });
-        },
-
-        addClass: function(){
-            var me = this;
-            me.reBtnClass.unbind().bind('click', function(){
-                var uid = $.trim($(this).data('id'));
-                me.hideUidClass.val(uid);
-                me.reFixBoxClass.fadeIn(200);
-            });
-        },
-
-        postClassData: function(){
-            var me = this;
-            me.reSubBtnClass.unbind().bind('click',function(){
-
-                var data = me.reFormClass.serialize();
-
-                 $.ajax({
-                    type: 'POST',
-                    dataType: 'json',
-                    url: '/user/addclass', data,
-                    success: function(json){
-
-                        if(json.errCode == 0){
-                            window.location.reload();
-                        }
-                        else{
-                            alert(json.errMessage);
-                            return false;
-                        }
-                    },
-                });
-            });
-        },
-
-        addRelation: function(){
-            var me = this;
-            me.reBtn.unbind().bind('click', function(){
-                var uid = $.trim($(this).data('id'));
-                me.hideUid.val(uid);
-                me.reFixBox.fadeIn(200);
-            });
-        },
-
-        postRelationData: function(){
-            var me = this,
-                aj = null;
-            me.reSubBtn.unbind().bind('click', function(){
-                var data = me.reForm.serialize();
-
-                aj = $.ajax({
-                    type: 'POST',
-                    dataType: 'json',
-                    url: '/user/addrelation', data,
-                    success: function(json){
-                       
-                        if(json.errCode == 0){
-                            window.location.reload();
-                        }
-                        else{
-                            alert(json.errMessage);
-                            return false;
-                        }
-                    },
-                    beforeSend: function () {
-                        if(aj != null) {
-                            aj.abort();
-                        }
-                    },
-                });
-            });
-        },
-
-    };
-
-    student.init();
-})()
-</script>
+<script type="text/javascript" src="/static/teacher/js/add.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 
 
 </body>
