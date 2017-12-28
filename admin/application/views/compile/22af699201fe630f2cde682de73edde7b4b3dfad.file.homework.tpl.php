@@ -1,47 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-18 16:33:29
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-28 11:56:11
          compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12549872155a377d5917ff01-23436140%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-18 14:35:34
-         compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1689072805a3761b64dead4-78222343%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-14 17:09:28
-         compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10384108065a323fc89a6d99-78732519%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
->>>>>>> 31d8d0e3c2bf8122290129234370f7b98c0fda37
+<?php /*%%SmartyHeaderCode:12111842315a446b5b43bcd9-34856476%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '22af699201fe630f2cde682de73edde7b4b3dfad' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/homework.tpl',
-<<<<<<< HEAD
-      1 => 1512353715,
-=======
       1 => 1512882564,
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1512353715,
+      1 => 1510105563,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '12549872155a377d5917ff01-23436140',
-=======
-<<<<<<< HEAD
-  'nocache_hash' => '1689072805a3761b64dead4-78222343',
-=======
-  'nocache_hash' => '10384108065a323fc89a6d99-78732519',
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
->>>>>>> 31d8d0e3c2bf8122290129234370f7b98c0fda37
+  'nocache_hash' => '12111842315a446b5b43bcd9-34856476',
   'function' => 
   array (
   ),
@@ -59,21 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a377d59303948_45243321',
+  'unifunc' => 'content_5a446b5b5d7c73_98999497',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a377d59303948_45243321')) {function content_5a377d59303948_45243321($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a3761b65f7cb8_66875913',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a3761b65f7cb8_66875913')) {function content_5a3761b65f7cb8_66875913($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
-=======
-  'unifunc' => 'content_5a323fc8b41300_75172553',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a323fc8b41300_75172553')) {function content_5a323fc8b41300_75172553($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
->>>>>>> 7bb41cd23732f53853bb2f27fe7f9bafa0739b89
->>>>>>> 31d8d0e3c2bf8122290129234370f7b98c0fda37
+<?php if ($_valid && !is_callable('content_5a446b5b5d7c73_98999497')) {function content_5a446b5b5d7c73_98999497($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
 if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
