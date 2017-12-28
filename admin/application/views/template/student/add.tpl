@@ -133,7 +133,7 @@
 {%block name="js"%}
 
 <script type="text/javascript" src="/static/student/js/add.js"></script>
-<!-- <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script> -->
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 <!-- <script type="text/javascript" src="/static/ugc/index.js"></script> -->
 
 {%/block%}

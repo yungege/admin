@@ -161,6 +161,60 @@
 </div>
 
 <div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="course_type">课程类型：</label><br/>
+            <textarea id="course_type" class="form-control" rows="1" name="course_type"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="users">适用人群：</label><br/>
+            <textarea id="users" class="form-control" rows="1" name="users"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="taboo_crowd">禁忌人群：</label><br/>
+            <textarea id="taboo_crowd" class="form-control" rows="2" name="taboo_crowd"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="prepare">练前准备：</label><br/>
+            <textarea id="prepare" class="form-control" rows="2" name="prepare"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="physical_reaction">身体反应：</label><br/>
+            <textarea id="physical_reaction" class="form-control" rows="2" name="physical_reaction"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="course_advice">课程建议：</label><br/>
+            <textarea id="course_advice" class="form-control" rows="2" name="course_advice"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
     <div class="col-lg-12">
         <form class="form-inline" name="sku">
             <div class="form-group">

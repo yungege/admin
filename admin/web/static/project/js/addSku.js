@@ -251,11 +251,29 @@ $(function(){
                     return false;
                 }
 
+                var course_type = $('textarea[name=course_type]').val();
+
+                var users = $('textarea[name=users]').val();
+
+                var taboo_crowd = $('textarea[name=taboo_crowd]').val();
+
+                var prepare = $('textarea[name=prepare]').val();
+
+                var physical_reaction = $('textarea[name=physical_reaction]').val();
+
+                var course_advice = $('textarea[name=course_advice]').val();
+
                 $.post('/project/addsku', {
                     'actionList' : selectedActions,
                     'project_id' : projectId,
                     'difficulty' : difficulty,
                     'project_desc': descInfo,
+                    'course_type': course_type,
+                    'users': users,
+                    'taboo_crowd': taboo_crowd,
+                    'prepare': prepare,
+                    'physical_reaction': physical_reaction,
+                    'course_advice': course_advice,
                 }, function(json){
                     if(json.errCode == 0){
                         window.location = '/sport/p/'+projectId+'.html';

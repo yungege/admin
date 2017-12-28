@@ -30,6 +30,10 @@ class Service_Project_AddSkuModel extends BasePageService {
 
     protected function __execute($req) {
         $req = $req['post'];
+
+// var_dump($req);
+// exit;
+
         $this->checkXss($req);
 
         $this->checkParams($req);
@@ -89,14 +93,21 @@ class Service_Project_AddSkuModel extends BasePageService {
                 }
 
                 if($actionInfo['singletime'] == 0){
-                    $time += $aval['count'];
+                    // $time += $aval['count'];
                     $calorie += ($aval['count'] * $actionInfo['calorie']);
                 }
                 else{
-                    $time += ($aval['count'] * $actionInfo['singletime']);
+                    // $time += ($aval['count'] * $actionInfo['singletime']);
                     $calorie += ($aval['count'] * $actionInfo['calorie'] * $actionInfo['singletime']);
                 }
                 
+            }
+
+            if($actionInfo['singletime'] == 0){
+                $time += $aval['count'];
+            }
+            else{
+                $time += ($aval['count'] * $actionInfo['singletime']);
             }
 
             $actions[] = [
@@ -113,11 +124,23 @@ class Service_Project_AddSkuModel extends BasePageService {
         $req['calorie_cost'] = (float)$calorie;
         $req['action_count'] = (int)$actionCount;
         $req['difficulty'] = (int)$req['difficulty'];
-        $req['project_name'] = $proInfo['name'];
         $req['type'] = (int)$proInfo['type'];
         $req['project_desc'] = str_replace(PHP_EOL, '', $req['project_desc']);
         $req['ctime'] = time();
         
+        if($req['difficulty'] === 0){
+            $req['difficulty_new'] = "T1";
+            $req['project_name'] = $proInfo['name'] . '初级';
+        }elseif($req['difficulty'] === 1){
+            $req['difficulty_new'] = "T2";
+            $req['project_name'] = $proInfo['name'] . '中级';
+        }elseif($req['difficulty'] === 2){
+            $req['difficulty_new'] = "T3";
+            $req['project_name'] = $proInfo['name'] . '高级';
+        }else{
+            $req['project_name'] = $proInfo['name'];
+        }
+
         unset($req['actionList']);
     }
 }
