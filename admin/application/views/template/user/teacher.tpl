@@ -66,7 +66,7 @@
     }
 </style>
 {%/block%}
-{%block name="bread"%}用户管理 / 老师管理<a href="/student/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加老师</a>{%/block%}
+{%block name="bread"%}用户管理 / 老师管理<a href="/teacher/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加老师</a>{%/block%}
 {%block name="content"%}
 <div class="row">
     <div class="col-lg-12">
