@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 18:12:22
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-28 16:11:55
          compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17203502365a4372061e3004-21186062%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1953104545a44a74ba402d0-76878202%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1d8e04a89d68bf3e9905973d00de2e54d91741e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/project/addsku.tpl',
-      1 => 1510901415,
+      1 => 1514448706,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105524,
+      1 => 1512353715,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17203502365a4372061e3004-21186062',
+  'nocache_hash' => '1953104545a44a74ba402d0-76878202',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a437206251f88_83172177',
+  'unifunc' => 'content_5a44a74bae59e5_30319245',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a437206251f88_83172177')) {function content_5a437206251f88_83172177($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a44a74bae59e5_30319245')) {function content_5a44a74bae59e5_30319245($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -516,6 +516,60 @@ $_smarty_tpl->tpl_vars['re']->_loop = true;
         <div class="form-group">
             <label for="desc">方案简介：</label><br/>
             <textarea id="desc" class="form-control" rows="3" name="desc"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="course_type">课程类型：</label><br/>
+            <textarea id="course_type" class="form-control" rows="1" name="course_type"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="users">适用人群：</label><br/>
+            <textarea id="users" class="form-control" rows="1" name="users"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="taboo_crowd">禁忌人群：</label><br/>
+            <textarea id="taboo_crowd" class="form-control" rows="2" name="taboo_crowd"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="prepare">练前准备：</label><br/>
+            <textarea id="prepare" class="form-control" rows="2" name="prepare"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="physical_reaction">身体反应：</label><br/>
+            <textarea id="physical_reaction" class="form-control" rows="2" name="physical_reaction"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="course_advice">课程建议：</label><br/>
+            <textarea id="course_advice" class="form-control" rows="2" name="course_advice"></textarea>
         </div>
     </div>
 </div>
