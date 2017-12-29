@@ -145,7 +145,7 @@
     <div class="col-lg-2" style="border: 1px solid #ccc;padding: 15px;">
         <select multiple class="form-control" id="action-list-rest">
             {%foreach from=$restList item=re%}
-            <option value="{%$re._id%}" type-no="4">{%$re.name%}【{%$re.singletime%} s】</option>
+            <option value="{%$re._id%}" type-no="{%$re.typeno%}">{%$re.name%}【{%$re.singletime%} s】</option>
             {%/foreach%}
         </select>
     </div>
@@ -215,6 +215,22 @@
 </div>
 
 <div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+           <a class="btn btn-default btn-lg" id="coverimg" href="#" style="position: relative; z-index: 1;">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>上传封面图片</span>
+            </a>
+            <input type="hidden" name="coverimg" id="coverimg-val">
+        </div>
+
+        <div id="picshow"></div>
+        <input type="hidden" name="uptoken" id="uptoken" value="{%$uptoken%}">
+
+    </div>
+</div>
+
+<div class="row">
     <div class="col-lg-12">
         <form class="form-inline" name="sku">
             <div class="form-group">
@@ -246,8 +262,19 @@
     </div>
 </div>  
 
+<div class="fix-per">
+    <div class="fix-cont">
+        <!-- 100% -->
+    </div>
+    
+</div>
+
 {%/block%}
 
 {%block name="js"%}
+<script type="text/javascript" src="/static/qiniu/moxie.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/plupload.full.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/zh_CN.js"></script>
+<script type="text/javascript" src="/static/qiniu/qiniu.min.js"></script>
 <script type="text/javascript" src="/static/project/js/addSku.js"></script>
 {%/block%}
