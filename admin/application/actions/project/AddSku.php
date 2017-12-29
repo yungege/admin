@@ -6,6 +6,7 @@ class AddskuAction extends BaseAction {
         $this->declarePageService = 'Service_Project_AddSkuModel';
         $this->declareRender = [
             'interface' => [
+                
             ],
         ];
     }

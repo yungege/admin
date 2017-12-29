@@ -1,5 +1,8 @@
 $(function(){
+    var domain = 'https://oi7ro6pyq.qnssl.com/';
+    var water = '?imageView2/2/w/200';
     var addSku = {
+
         init: function(){
             this.getDom();
             this.searchAction();
@@ -10,11 +13,19 @@ $(function(){
             this.doEditActionNum();
             this.cancerAdd();
             this.addSkuInfo();
+            this.initUploader();
         },
         getDom: function(){
             this.searchBtn  = $('#search');
             this.form       = $('form[name=action]');
             this.actionList = $('#action-list');
+
+            this.picBtn = $('#coverimg');
+            this.picShow = $('#picshow');
+            this.picVal = $('#coverimg-val');
+
+            this.fixCont = $('.fix-cont');
+            this.fixWrmp = $('.fix-per');
 
             this.actionListSelect   = $('#action-list-select');
             this.actionListRest     = $('#action-list-rest');
@@ -36,6 +47,71 @@ $(function(){
 
             this.dialogDom          = {};
         },
+
+        initUploader: function(){
+            var me = this;
+
+            me.qiniuUploader('coverimg');
+        },
+
+        qiniuUploader: function(obj){
+            var me = this;
+            var uploader = Qiniu.uploader({
+                runtimes: 'html5,flash,html4',
+                browse_button: obj,
+                max_file_size: '2mb',
+                flash_swf_url: '/static/qiniu/Moxie.swf',
+                dragdrop: false,
+                uptoken: $('#uptoken').val(),
+                domain: domain,
+                get_new_uptoken: false,
+                unique_names: true,
+                max_retries: 3,
+                auto_start: true,
+                multi_selection: false,
+                filters: {
+                    mime_types : [
+                        { title : "Image files", extensions : "jpg,png,jpeg" }
+                    ]
+                },
+
+                init: {
+                    UploadProgress: function(up, file) {
+                        me.fixCont.text(file.percent+'%');
+                        me.fixWrmp.fadeIn(200);
+                    },
+                    FileUploaded: function(up, file, info) {
+                        if(info.status == 200){
+                            var url = domain + eval('('+info.response+')')['key'];
+                            me.picVal.val(url);
+                            url += water;
+                            me.makeImgDom(url);
+                        }
+                        me.hideFixDiv();
+                    },
+                    Error: function(up, err, errTip) {
+                        alert(errTip);
+                        me.hideFixDiv();
+                        return false;
+                    }
+                }
+            });
+        },
+
+        makeImgDom: function(img){
+            var me = this;
+
+            var htmlCont = '<div style="margin-bottom:15px;">'+
+                                '<img src="'+img+'" />'+
+                            '</div>';
+            me.picShow.html(htmlCont);
+        },
+
+        hideFixDiv: function(){
+            var me = this;
+            me.fixWrmp.fadeOut(100);
+        },
+
         searchAction: function(){
             var me =this;
 
@@ -219,7 +295,7 @@ $(function(){
                     var actionId = $(this).val(),
                         actionType = $(this).attr('actiontype'),
                         actionCount = $(this).attr('groupno');
-                    if(actionType != 4 && actionCount == 0){
+                    if(actionType != 4 && actionCount == 0 && actionType != 6){
                         return true;
                     }
                     else{
@@ -263,6 +339,8 @@ $(function(){
 
                 var course_advice = $('textarea[name=course_advice]').val();
 
+                var coverimg = $('#coverimg-val').val();
+
                 $.post('/project/addsku', {
                     'actionList' : selectedActions,
                     'project_id' : projectId,
@@ -274,6 +352,7 @@ $(function(){
                     'prepare': prepare,
                     'physical_reaction': physical_reaction,
                     'course_advice': course_advice,
+                    'coverimg': coverimg,
                 }, function(json){
                     if(json.errCode == 0){
                         window.location = '/sport/p/'+projectId+'.html';

@@ -70,7 +70,14 @@ class Service_Project_AddSkuModel extends BasePageService {
         $actions = [];
         $fileSizeArr = [];
 
+        $section = 1;
         foreach ($req['actionList'] as &$aval) {
+
+            // 如果动作type 为6进入下一节
+            if($aval['type'] == 6){
+                $section++;
+                continue;
+            }
             // 费休息动作
             if($aval['type'] == 0 && $aval['count'] == 0){
                 throw new Exception("{$actionInfo['name']} 已被删除", -1);
@@ -84,7 +91,7 @@ class Service_Project_AddSkuModel extends BasePageService {
                 throw new Exception("{$actionInfo['name']} 已被删除", -1);
             }
 
-            if($aval['type'] != 4){
+            if($aval['type'] != 4 && $aval['type'] != 6){
                 $actionCount += 1;
 
                 if(!isset($fileSizeArr[$aval['id']])){
@@ -115,6 +122,7 @@ class Service_Project_AddSkuModel extends BasePageService {
                 'action_time' => ($actionInfo['singletime'] != 0 ? (int)($aval['count'] * $actionInfo['singletime']) : (int)$aval['count']),
                 'action_groupno' => (int)$aval['count'],
                 'calorie' => ($aval['type'] == 4 ? 0 : ($actionInfo['singletime'] != 0 ? (float)($aval['count'] * $actionInfo['calorie'] * $actionInfo['singletime']) : (float)($aval['count'] * $actionInfo['calorie']))),
+                'section' => $section,
             ];
         }
 
@@ -127,6 +135,7 @@ class Service_Project_AddSkuModel extends BasePageService {
         $req['type'] = (int)$proInfo['type'];
         $req['project_desc'] = str_replace(PHP_EOL, '', $req['project_desc']);
         $req['ctime'] = time();
+        $req['sections'] = ["第一节","第二节","第三节","第四节","第五节","第六节","第七节","第八节","第九节","第十节"];
         
         if($req['difficulty'] === 0){
             $req['difficulty_new'] = "T1";
