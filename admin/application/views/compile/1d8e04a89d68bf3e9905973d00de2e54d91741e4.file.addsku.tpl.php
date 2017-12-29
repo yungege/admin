@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-28 16:11:55
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-29 16:18:16
          compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1953104545a44a74ba402d0-76878202%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9732489465a45fa48c60e19-11704649%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1d8e04a89d68bf3e9905973d00de2e54d91741e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/project/addsku.tpl',
-      1 => 1514448706,
+      1 => 1514534980,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1953104545a44a74ba402d0-76878202',
+  'nocache_hash' => '9732489465a45fa48c60e19-11704649',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a44a74bae59e5_30319245',
+  'unifunc' => 'content_5a45fa48d2c1c6_28749054',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a44a74bae59e5_30319245')) {function content_5a44a74bae59e5_30319245($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a45fa48d2c1c6_28749054')) {function content_5a45fa48d2c1c6_28749054($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -503,7 +503,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['re']->key => $_smarty_tpl->tpl_vars['
 $_smarty_tpl->tpl_vars['re']->_loop = true;
 ?>
             <option value="<?php echo $_smarty_tpl->tpl_vars['re']->value['_id'];?>
-" type-no="4"><?php echo $_smarty_tpl->tpl_vars['re']->value['name'];?>
+" type-no="<?php echo $_smarty_tpl->tpl_vars['re']->value['typeno'];?>
+"><?php echo $_smarty_tpl->tpl_vars['re']->value['name'];?>
 【<?php echo $_smarty_tpl->tpl_vars['re']->value['singletime'];?>
  s】</option>
             <?php } ?>
@@ -575,6 +576,23 @@ $_smarty_tpl->tpl_vars['re']->_loop = true;
 </div>
 
 <div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+           <a class="btn btn-default btn-lg" id="coverimg" href="#" style="position: relative; z-index: 1;">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>上传封面图片</span>
+            </a>
+            <input type="hidden" name="coverimg" id="coverimg-val">
+        </div>
+
+        <div id="picshow"></div>
+        <input type="hidden" name="uptoken" id="uptoken" value="<?php echo $_smarty_tpl->tpl_vars['uptoken']->value;?>
+">
+
+    </div>
+</div>
+
+<div class="row">
     <div class="col-lg-12">
         <form class="form-inline" name="sku">
             <div class="form-group">
@@ -613,6 +631,13 @@ $_smarty_tpl->tpl_vars['darr']->_loop = true;
     </div>
 </div>  
 
+<div class="fix-per">
+    <div class="fix-cont">
+        <!-- 100% -->
+    </div>
+    
+</div>
+
 
 
                 <!-- footer -->
@@ -643,6 +668,10 @@ $_smarty_tpl->tpl_vars['darr']->_loop = true;
     </script>
 
     
+<script type="text/javascript" src="/static/qiniu/moxie.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/plupload.full.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/zh_CN.js"></script>
+<script type="text/javascript" src="/static/qiniu/qiniu.min.js"></script>
 <script type="text/javascript" src="/static/project/js/addSku.js"></script>
 
 </body>
