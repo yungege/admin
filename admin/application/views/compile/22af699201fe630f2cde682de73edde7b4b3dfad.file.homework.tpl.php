@@ -1,6 +1,24 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-12-29 15:51:08
          compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7893708875a45f3ecc300f4-44209490%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-28 15:04:38
+         compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:21088231465a449786aab486-05071343%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-28 11:56:11
+         compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:12111842315a446b5b43bcd9-34856476%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 18:13:34
+         compiled from "/var/www/admin/admin/application/views/template/sport/homework.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:6611548435a43724e1220d8-52031676%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 2be40ffb805f8ce3f98f59add8e8d62fe1892708
+>>>>>>> 8f8f95aefc6bb820431c7998ef72a0e8e6bf102d
+>>>>>>> 2eb03bb267267f25dba5dcbd761687bfe048ecf1
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -17,7 +35,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '7893708875a45f3ecc300f4-44209490',
+=======
+  'nocache_hash' => '12111842315a446b5b43bcd9-34856476',
+=======
+      1 => 1510105524,
+      2 => 'file',
+    ),
+  ),
+<<<<<<< HEAD
+  'nocache_hash' => '21088231465a449786aab486-05071343',
+=======
+  'nocache_hash' => '6611548435a43724e1220d8-52031676',
+>>>>>>> 2be40ffb805f8ce3f98f59add8e8d62fe1892708
+>>>>>>> 8f8f95aefc6bb820431c7998ef72a0e8e6bf102d
+>>>>>>> 2eb03bb267267f25dba5dcbd761687bfe048ecf1
   'function' => 
   array (
   ),
@@ -35,9 +68,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a45f3ecd6d476_81189963',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a45f3ecd6d476_81189963')) {function content_5a45f3ecd6d476_81189963($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a449786b1e710_37250270',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a449786b1e710_37250270')) {function content_5a449786b1e710_37250270($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a446b5b5d7c73_98999497',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a446b5b5d7c73_98999497')) {function content_5a446b5b5d7c73_98999497($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
+=======
+  'unifunc' => 'content_5a43724e1958c6_95633346',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a43724e1958c6_95633346')) {function content_5a43724e1958c6_95633346($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_ttxs_parse_stamp')) include '/var/www/admin/admin/library/smarty/plugins/modifier.ttxs_parse_stamp.php';
+>>>>>>> 2be40ffb805f8ce3f98f59add8e8d62fe1892708
+>>>>>>> 8f8f95aefc6bb820431c7998ef72a0e8e6bf102d
+>>>>>>> 2eb03bb267267f25dba5dcbd761687bfe048ecf1
 if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
