@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-27 19:19:19
+         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:17921180825a4381b7068ee9-89215862%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-29 10:02:41
+         compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:16389127385a45a24165bdd1-15693072%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-12-29 12:32:28
          compiled from "/var/www/admin/admin/application/views/template/sport/banner.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2134468015a45c55c1659a0-80884558%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -43,12 +53,20 @@
 >>>>>>> e971c66c02698ae4f2911e5313a558034e00d5e9
 >>>>>>> 2eb03bb267267f25dba5dcbd761687bfe048ecf1
 >>>>>>> b29e13faf88d5ac72313b7bdc85c8eac31ae3bfb
+>>>>>>> 4cdc9739e4913bd5994c6f152bb240ad3d69ff0e
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '92c948c733c4e7edc2354b1f8aeea4204980b0e2' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/sport/banner.tpl',
+<<<<<<< HEAD
+      1 => 1509080121,
+=======
+<<<<<<< HEAD
+      1 => 1509502905,
+=======
 <<<<<<< HEAD
       1 => 1501062598,
 =======
@@ -78,11 +96,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> e971c66c02698ae4f2911e5313a558034e00d5e9
 >>>>>>> 2eb03bb267267f25dba5dcbd761687bfe048ecf1
 >>>>>>> b29e13faf88d5ac72313b7bdc85c8eac31ae3bfb
+>>>>>>> 4cdc9739e4913bd5994c6f152bb240ad3d69ff0e
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
+      1 => 1510105483,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '17921180825a4381b7068ee9-89215862',
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -95,10 +124,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 =======
 <<<<<<< HEAD
 >>>>>>> e971c66c02698ae4f2911e5313a558034e00d5e9
+>>>>>>> 4cdc9739e4913bd5994c6f152bb240ad3d69ff0e
       1 => 1510105563,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
+  'nocache_hash' => '16389127385a45a24165bdd1-15693072',
+=======
 <<<<<<< HEAD
   'nocache_hash' => '9225759605a44a70f9f6518-25954181',
 =======
@@ -139,6 +172,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> e971c66c02698ae4f2911e5313a558034e00d5e9
 >>>>>>> 2eb03bb267267f25dba5dcbd761687bfe048ecf1
 >>>>>>> b29e13faf88d5ac72313b7bdc85c8eac31ae3bfb
+>>>>>>> 4cdc9739e4913bd5994c6f152bb240ad3d69ff0e
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
   'function' => 
   array (
   ),
@@ -156,6 +191,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_5a4381b70d64f2_17331647',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a4381b70d64f2_17331647')) {function content_5a4381b70d64f2_17331647($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a45a2417b84b1_46048696',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a45a2417b84b1_46048696')) {function content_5a45a2417b84b1_46048696($_smarty_tpl) {?><!DOCTYPE html>
+=======
 <<<<<<< HEAD
   'unifunc' => 'content_5a45c55c213b27_83752279',
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -201,6 +246,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> e971c66c02698ae4f2911e5313a558034e00d5e9
 >>>>>>> 2eb03bb267267f25dba5dcbd761687bfe048ecf1
 >>>>>>> b29e13faf88d5ac72313b7bdc85c8eac31ae3bfb
+>>>>>>> 4cdc9739e4913bd5994c6f152bb240ad3d69ff0e
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
 <html lang="en">
 
 <head>

@@ -30,6 +30,10 @@ class Service_Version_IndexModel extends BasePageService {
             $where['type'] = (int)($req['type'] - 1);
         }
 
+        if(is_numeric($req['cate']) && in_array($req['cate'], [1,2])){
+            $where['cate'] = (int)$req['cate'];
+        }
+
         // pageno
         if(!isset($req['pn']) || !is_numeric($req['pn']))
             $req['pn'] = 1;
