@@ -1,23 +1,59 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2018-01-02 10:39:49
          compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14721768535a4af0f526fbe5-10931054%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2018-01-02 10:57:07
+         compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:12554805925a4af503373526-20262896%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-28 15:05:02
+         compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:11605455235a44979e9f5645-51925535%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
+>>>>>>> 56c04d4068e7286ee2fe2789b82a9052d5451fd4
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b4a1f2066f4bec0287ce25061e47e07da8bb62fd' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/version/add.tpl',
+<<<<<<< HEAD
       1 => 1509502905,
+=======
+<<<<<<< HEAD
+      1 => 1514861613,
+=======
+      1 => 1502085660,
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
+>>>>>>> 56c04d4068e7286ee2fe2789b82a9052d5451fd4
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1510105563,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '14721768535a4af0f526fbe5-10931054',
+=======
+<<<<<<< HEAD
+      1 => 1510105483,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '12554805925a4af503373526-20262896',
+=======
+      1 => 1510105524,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '11605455235a44979e9f5645-51925535',
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
+>>>>>>> 56c04d4068e7286ee2fe2789b82a9052d5451fd4
   'function' => 
   array (
   ),
@@ -35,9 +71,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a4af0f539e477_18579415',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a4af0f539e477_18579415')) {function content_5a4af0f539e477_18579415($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a4af5033c5f16_20304236',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a4af5033c5f16_20304236')) {function content_5a4af5033c5f16_20304236($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a44979ea6b234_86961038',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a44979ea6b234_86961038')) {function content_5a44979ea6b234_86961038($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
+>>>>>>> 56c04d4068e7286ee2fe2789b82a9052d5451fd4
 <html lang="en">
 
 <head>
@@ -344,14 +392,22 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
 <div class="row">
     <div class="col-lg-12">
         <form name="version">
+
+            <div class="form-group">
+                <label for="cate">应用类型</label>
+                <select id="cate" class="form-control" name="cate">
+                    <option value="0">选择应用类型</option>
+                    <option value="1">学生端</option>
+                    <option value="2">教师端</option>
+                </select>
+            </div>
+
             <div class="form-group">
                 <label for="platform">发布平台</label>
                 <select id="platform" class="form-control" name="type">
                     <option value="-1">选择发布平台</option>
-                    <option value="0" >iOS【当前最新版本 <?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
-】</option>
-                    <option value="1">Android【当前最新版本 <?php echo $_smarty_tpl->tpl_vars['android']->value;?>
-】</option>
+                    <option value="0" >iOS</option>
+                    <option value="1">Android</option>
                 </select>
             </div>
 
@@ -421,6 +477,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
             },
             getDom: function(){
                 this.subBtn = $('#sub');
+                this.cate = $('#cate');
                 this.pt = $('#platform');
                 this.vname = $('#vname');
                 this.no = $('#vno');
@@ -431,8 +488,13 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
             checkParams: function(){
                 var me = this;
 
-                var pt = me.pt.val();
+                var cate = me.cate.val();
+                if(cate != 1 && cate != 2){
+                    alert('请选择应用类型.');
+                    return false;
+                }
 
+                var pt = me.pt.val();
                 if(pt != 0 && pt != 1){
                     alert('请选择发布平台.');
                     return false;
@@ -471,11 +533,11 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                         return false;
                     }
 
-                    var curentNo = $(this).attr('data-'+me.pt.val());
-                    if(curentNo >= $.trim(me.no.val())){
-                        alert('请检查您输入的版本号是否低于当前版本号.');
-                        return false;
-                    }
+                    // var curentNo = $(this).attr('data-'+me.pt.val());
+                    // if(curentNo >= $.trim(me.no.val())){
+                    //     alert('请检查您输入的版本号是否低于当前版本号.');
+                    //     return false;
+                    // }
 
                     var formdata = me.form.serialize();
                     $.post('/version/publish', formdata, function(json){
@@ -483,7 +545,12 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                             window.location = '/version/index';
                         }
                         else{
-                            alert('发布失败.');
+                            if(json.msg){
+                                alert(json.msg);
+                            }
+                            else{
+                                alert('发布失败.');
+                            }
                             return false;
                         }
                     });

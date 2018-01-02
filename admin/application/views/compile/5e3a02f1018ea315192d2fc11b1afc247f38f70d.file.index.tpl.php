@@ -1,23 +1,43 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2018-01-02 10:38:52
          compiled from "/var/www/admin/admin/application/views/template/version/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15736456585a4af0bcd2a4b9-09751924%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2018-01-02 10:58:34
+         compiled from "/var/www/admin/admin/application/views/template/version/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2443884625a4af55a1f6271-20845785%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-29 10:02:29
+         compiled from "/var/www/admin/admin/application/views/template/version/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:18814692775a45a2354991c1-76008024%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
+>>>>>>> 56c04d4068e7286ee2fe2789b82a9052d5451fd4
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5e3a02f1018ea315192d2fc11b1afc247f38f70d' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/version/index.tpl',
-      1 => 1509502905,
+      1 => 1514861003,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+      1 => 1510105483,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '15736456585a4af0bcd2a4b9-09751924',
+=======
+<<<<<<< HEAD
+  'nocache_hash' => '2443884625a4af55a1f6271-20845785',
+=======
+  'nocache_hash' => '18814692775a45a2354991c1-76008024',
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
+>>>>>>> 56c04d4068e7286ee2fe2789b82a9052d5451fd4
   'function' => 
   array (
   ),
@@ -35,9 +55,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a4af0bce99274_99973845',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a4af0bce99274_99973845')) {function content_5a4af0bce99274_99973845($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a4af55a257fb0_64806088',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a4af55a257fb0_64806088')) {function content_5a4af55a257fb0_64806088($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_5a45a23569bae6_66770755',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a45a23569bae6_66770755')) {function content_5a45a23569bae6_66770755($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
+>>>>>>> 56c04d4068e7286ee2fe2789b82a9052d5451fd4
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -353,6 +385,14 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
     <div class="col-lg-12">
         <form name="version" class="version-form">
             <div class="form-group">
+                <label for="cate">应用类型</label>
+                <select id="cate" class="form-control" name="cate">
+                    <option value="0">选择应用类型</option>
+                    <option value="1" <?php if ($_GET['cate']==1){?> selected="true" <?php }?>>学生端</option>
+                    <option value="2" <?php if ($_GET['cate']==2){?> selected="true" <?php }?>>教师端</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="platform">发布平台</label>
                 <select id="platform" class="form-control" name="type">
                     <option value="0">选择发布平台</option>
@@ -372,6 +412,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
             <table class="table table-bordered table-hover table-striped text-center">
                 <thead>
                     <tr>
+                        <th class="text-center">应用类型</th>
                         <th class="text-center">平台类型</th>
                         <th class="text-center">版本号名称</th>
                         <th class="text-center">版本号</th>
@@ -387,6 +428,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars[
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
                     <tr>
+                        <td>
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['cate']==1){?>
+                                学生端
+                            <?php }else{ ?>
+                                教师端
+                            <?php }?>
+                        </td>
                         <td>
                             <?php if ($_smarty_tpl->tpl_vars['row']->value['type']==1){?>
                                 Android

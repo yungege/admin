@@ -6,12 +6,22 @@
 <div class="row">
     <div class="col-lg-12">
         <form name="version">
+
+            <div class="form-group">
+                <label for="cate">应用类型</label>
+                <select id="cate" class="form-control" name="cate">
+                    <option value="0">选择应用类型</option>
+                    <option value="1">学生端</option>
+                    <option value="2">教师端</option>
+                </select>
+            </div>
+
             <div class="form-group">
                 <label for="platform">发布平台</label>
                 <select id="platform" class="form-control" name="type">
                     <option value="-1">选择发布平台</option>
-                    <option value="0" >iOS【当前最新版本 {%$ios%}】</option>
-                    <option value="1">Android【当前最新版本 {%$android%}】</option>
+                    <option value="0" >iOS</option>
+                    <option value="1">Android</option>
                 </select>
             </div>
 
@@ -52,6 +62,7 @@
             },
             getDom: function(){
                 this.subBtn = $('#sub');
+                this.cate = $('#cate');
                 this.pt = $('#platform');
                 this.vname = $('#vname');
                 this.no = $('#vno');
@@ -62,8 +73,13 @@
             checkParams: function(){
                 var me = this;
 
-                var pt = me.pt.val();
+                var cate = me.cate.val();
+                if(cate != 1 && cate != 2){
+                    alert('请选择应用类型.');
+                    return false;
+                }
 
+                var pt = me.pt.val();
                 if(pt != 0 && pt != 1){
                     alert('请选择发布平台.');
                     return false;
@@ -102,11 +118,11 @@
                         return false;
                     }
 
-                    var curentNo = $(this).attr('data-'+me.pt.val());
-                    if(curentNo >= $.trim(me.no.val())){
-                        alert('请检查您输入的版本号是否低于当前版本号.');
-                        return false;
-                    }
+                    // var curentNo = $(this).attr('data-'+me.pt.val());
+                    // if(curentNo >= $.trim(me.no.val())){
+                    //     alert('请检查您输入的版本号是否低于当前版本号.');
+                    //     return false;
+                    // }
 
                     var formdata = me.form.serialize();
                     $.post('/version/publish', formdata, function(json){
@@ -114,7 +130,12 @@
                             window.location = '/version/index';
                         }
                         else{
-                            alert('发布失败.');
+                            if(json.msg){
+                                alert(json.msg);
+                            }
+                            else{
+                                alert('发布失败.');
+                            }
                             return false;
                         }
                     });
