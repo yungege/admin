@@ -6,77 +6,60 @@ $app->execute(['TrainOut','init']);
 
 class TrainOut {
 
-    // 同年级班级调换
     public static function init(){
 
+        $schoolOutModel = Dao_SchoolInfoTrainingModel::getInstance();
         $userModel = Dao_UserModel::getInstance();
+        $homeworkModel = Dao_TrainingHomeworkModel::getInstance();     
+        $trainOutsideModel = Dao_TrainingDoneOutsideModel::getInstance();
+        $classModel = Dao_ClassinfoModel::getInstance();
 
-        $skip = 0;
-        $limit = 1;
+        $limit = 10;
+        $skip =0;
+
         while(1){
 
             $where = [
-                'type' => 1,
+                'type' => 2,
             ];
             $options = [
+                'projection' => ['manageclassinfo' => 1],
+                'limit' => $limit,
                 'skip' => $skip,
-                'limit' => $limit,    
             ];
+            $teacherInfos = $userModel->query($where,$options);
 
-            $user = $userModel->queryOne($where,$options);
-            if(empty($user)){
+            if(empty($teacherInfos)){
                 break;
             }
 
-            $userId = (string)$user['_id'];
-            $classId = $user['classinfo']['classid'];
-            if(empty($userId) || empty($classId)){
-                continue;
+            foreach($teacherInfos as $teacherInfo){
+
+                $classIds = array_column($teacherInfo['manageclassinfo'],'classid');
+
+                if(!empty($classIds)){
+                    $classWhere = [
+                        '_id' => ['$in' => $classIds],
+                    ];
+
+                    $classOptions = [
+                        'projection' => ['name' => 1],
+                    ];
+
+                    $classInfos = $classModel->query($classWhere,$classOptions);
+                    $classes['manageclassinfo'] = [];
+                    foreach($classInfos as $classInfo){
+                        $class['classid'] = $classInfo['_id'];
+                        $class['classname'] = $classInfo['name'];
+                        $classes['manageclassinfo'][] = $class;
+                    }
+                    $result = $userModel->updateUserInfoByUserid($teacherInfo['_id'],$classes);
+                }
+                
             }
-
-// echo $classId;
-
-            // $tWhere = [
-            //     "type" => 2,
-            //     "manageclassinfo" => ["classid" => $classId]
-            // ];
-
-
-            // echo $classId;
-            // continue;
-
-            $tWhere["manageclassinfo"]["classid"] = $classId;
-
-            $teacher = $userModel->queryOne($tWhere);
-
-            if(empty($teacher)){
-                echo '空';
-            }else{
-                echo $teacher['username'];
-            }
-            // echo $userId;
-            // echo $classId;
-            // echo $user['username'];
-            $skip++;
-
-            if(!empty($teacher)){
-                echo $teacher['username'];
-                break;
-            }else{
-                echo $kip;
-            }
-
-            // if($skip == 5){
-            //     exit;
-            // }
-
+            $skip = $skip + 10;
         }
-
-
-        echo "11";
-
     }
 
-    
 
 }

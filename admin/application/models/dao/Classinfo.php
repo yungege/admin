@@ -172,5 +172,23 @@ class Dao_ClassinfoModel extends Db_Mongodb {
 
         return $classId;
     }
+
+    public function getClassBySchool(string $schoolId,array $fields = [],array $options){
+        $newOptions = [];
+        $where = [
+            'schoolid' => $schoolId,
+            'is_test' => 0,
+        ];
+
+        $fields = $this->filterFields($fields);
+        if(!empty($fields)){
+            $newOptions['projection'] = $fields;
+        }
+
+        if(!empty($options['sort']))
+            $newOptions['sort'] = $options['sort'];
+
+        return $this->query($where, $newOptions);
+    }
     
 }

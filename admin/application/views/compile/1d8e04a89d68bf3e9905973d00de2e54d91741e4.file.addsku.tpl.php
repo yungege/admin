@@ -1,23 +1,93 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2017-12-18 16:05:59
          compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9503855415a3776e70fa6a8-86908978%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-29 10:05:12
+         compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:213455815a45a2d8e60298-76546792%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-29 14:52:18
+         compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:17705278425a45e622929e98-75929187%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-29 16:18:16
+         compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:9732489465a45fa48c60e19-11704649%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-28 15:16:39
+         compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:4071545195a449a57134cb2-60298650%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-28 16:11:55
+         compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1953104545a44a74ba402d0-76878202%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 8f8f95aefc6bb820431c7998ef72a0e8e6bf102d
+>>>>>>> 2eb03bb267267f25dba5dcbd761687bfe048ecf1
+>>>>>>> b29e13faf88d5ac72313b7bdc85c8eac31ae3bfb
+>>>>>>> 4cdc9739e4913bd5994c6f152bb240ad3d69ff0e
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1d8e04a89d68bf3e9905973d00de2e54d91741e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/project/addsku.tpl',
+<<<<<<< HEAD
       1 => 1510899453,
+=======
+<<<<<<< HEAD
+      1 => 1514452294,
+=======
+<<<<<<< HEAD
+      1 => 1514452257,
+=======
+      1 => 1514534980,
+>>>>>>> b29e13faf88d5ac72313b7bdc85c8eac31ae3bfb
+>>>>>>> 4cdc9739e4913bd5994c6f152bb240ad3d69ff0e
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1510105483,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '9503855415a3776e70fa6a8-86908978',
+=======
+<<<<<<< HEAD
+      1 => 1510105563,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '213455815a45a2d8e60298-76546792',
+=======
+      1 => 1510105524,
+      2 => 'file',
+    ),
+  ),
+<<<<<<< HEAD
+  'nocache_hash' => '17705278425a45e622929e98-75929187',
+=======
+<<<<<<< HEAD
+  'nocache_hash' => '9732489465a45fa48c60e19-11704649',
+=======
+<<<<<<< HEAD
+  'nocache_hash' => '4071545195a449a57134cb2-60298650',
+=======
+  'nocache_hash' => '1953104545a44a74ba402d0-76878202',
+>>>>>>> 8f8f95aefc6bb820431c7998ef72a0e8e6bf102d
+>>>>>>> 2eb03bb267267f25dba5dcbd761687bfe048ecf1
+>>>>>>> b29e13faf88d5ac72313b7bdc85c8eac31ae3bfb
+>>>>>>> 4cdc9739e4913bd5994c6f152bb240ad3d69ff0e
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
   'function' => 
   array (
   ),
@@ -35,9 +105,39 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a3776e71e2721_45796944',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a3776e71e2721_45796944')) {function content_5a3776e71e2721_45796944($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a45a2d9098f64_23812873',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a45a2d9098f64_23812873')) {function content_5a45a2d9098f64_23812873($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a45e622990792_97566724',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a45e622990792_97566724')) {function content_5a45e622990792_97566724($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a45fa48d2c1c6_28749054',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a45fa48d2c1c6_28749054')) {function content_5a45fa48d2c1c6_28749054($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a449a571a4514_06071038',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a449a571a4514_06071038')) {function content_5a449a571a4514_06071038($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a44a74bae59e5_30319245',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a44a74bae59e5_30319245')) {function content_5a44a74bae59e5_30319245($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 8f8f95aefc6bb820431c7998ef72a0e8e6bf102d
+>>>>>>> 2eb03bb267267f25dba5dcbd761687bfe048ecf1
+>>>>>>> b29e13faf88d5ac72313b7bdc85c8eac31ae3bfb
+>>>>>>> 4cdc9739e4913bd5994c6f152bb240ad3d69ff0e
+>>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
 <html lang="en">
 
 <head>
@@ -503,7 +603,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['re']->key => $_smarty_tpl->tpl_vars['
 $_smarty_tpl->tpl_vars['re']->_loop = true;
 ?>
             <option value="<?php echo $_smarty_tpl->tpl_vars['re']->value['_id'];?>
-" type-no="4"><?php echo $_smarty_tpl->tpl_vars['re']->value['name'];?>
+" type-no="<?php echo $_smarty_tpl->tpl_vars['re']->value['typeno'];?>
+"><?php echo $_smarty_tpl->tpl_vars['re']->value['name'];?>
 【<?php echo $_smarty_tpl->tpl_vars['re']->value['singletime'];?>
  s】</option>
             <?php } ?>
@@ -517,6 +618,77 @@ $_smarty_tpl->tpl_vars['re']->_loop = true;
             <label for="desc">方案简介：</label><br/>
             <textarea id="desc" class="form-control" rows="3" name="desc"></textarea>
         </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="course_type">课程类型：</label><br/>
+            <textarea id="course_type" class="form-control" rows="1" name="course_type"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="users">适用人群：</label><br/>
+            <textarea id="users" class="form-control" rows="1" name="users"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="taboo_crowd">禁忌人群：</label><br/>
+            <textarea id="taboo_crowd" class="form-control" rows="2" name="taboo_crowd"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="prepare">练前准备：</label><br/>
+            <textarea id="prepare" class="form-control" rows="2" name="prepare"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="physical_reaction">身体反应：</label><br/>
+            <textarea id="physical_reaction" class="form-control" rows="2" name="physical_reaction"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="course_advice">课程建议：</label><br/>
+            <textarea id="course_advice" class="form-control" rows="2" name="course_advice"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+           <a class="btn btn-default btn-lg" id="coverimg" href="#" style="position: relative; z-index: 1;">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>上传封面图片</span>
+            </a>
+            <input type="hidden" name="coverimg" id="coverimg-val">
+        </div>
+
+        <div id="picshow"></div>
+        <input type="hidden" name="uptoken" id="uptoken" value="<?php echo $_smarty_tpl->tpl_vars['uptoken']->value;?>
+">
+
     </div>
 </div>
 
@@ -559,6 +731,13 @@ $_smarty_tpl->tpl_vars['darr']->_loop = true;
     </div>
 </div>  
 
+<div class="fix-per">
+    <div class="fix-cont">
+        <!-- 100% -->
+    </div>
+    
+</div>
+
 
 
                 <!-- footer -->
@@ -589,6 +768,10 @@ $_smarty_tpl->tpl_vars['darr']->_loop = true;
     </script>
 
     
+<script type="text/javascript" src="/static/qiniu/moxie.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/plupload.full.min.js"></script>
+<script type="text/javascript" src="/static/qiniu/zh_CN.js"></script>
+<script type="text/javascript" src="/static/qiniu/qiniu.min.js"></script>
 <script type="text/javascript" src="/static/project/js/addSku.js"></script>
 
 </body>

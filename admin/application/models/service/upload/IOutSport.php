@@ -132,7 +132,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
             $doneOutside['homeworkid'] = $workId;
             $doneOutside['projecttime'] = $doneOutside['endtime'] - $doneOutside['starttime'];
             $doneOutside['burncalories'] = mt_rand(90,110);
-            $doneOutside['exciseimg'] = ["https://oi7ro6pyq.qnssl.com/o_1bpq74tqm1vdj18dd118o1ko01mumd.jpg"];
+            $doneOutside['exciseimg'] = ["https://oi7ro6pyq.qnssl.com/o_1c2b1dv9f1u2itc3mh61ecq6uid.jpg"];
             $doneOutside['commenttext'] = '兴趣班';
             $doneOutside['status'] = 0;
             $doneOutside['train_name'] = $data[2];   

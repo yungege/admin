@@ -36,6 +36,8 @@ class Service_Project_SkuModel extends BasePageService {
     }
 
     protected function __execute($req) {
+
+        $this->resData['uptoken'] = getUploadToken();
         if(empty($this->pid))
             throw new Exception("PAGE NOT FOUNT", 404);
 
@@ -110,7 +112,7 @@ class Service_Project_SkuModel extends BasePageService {
 
     protected function getRestList(){
         $where = [
-            'typeno' => 4,
+            'typeno' => ['$in' => [4,6]],
             'status' => [
                 '$ne' => -9
             ],
