@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2017-12-11 09:58:18
+<?php /* Smarty version Smarty-3.1.13, created on 2018-01-02 10:57:07
          compiled from "/var/www/admin/admin/application/views/template/version/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15999767525a2de63a6c6b62-67716548%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:12554805925a4af503373526-20262896%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b4a1f2066f4bec0287ce25061e47e07da8bb62fd' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/version/add.tpl',
-      1 => 1509502905,
+      1 => 1514861613,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+      1 => 1510105483,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '15999767525a2de63a6c6b62-67716548',
+  'nocache_hash' => '12554805925a4af503373526-20262896',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a2de63a7fab84_73256260',
+  'unifunc' => 'content_5a4af5033c5f16_20304236',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a2de63a7fab84_73256260')) {function content_5a2de63a7fab84_73256260($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a4af5033c5f16_20304236')) {function content_5a4af5033c5f16_20304236($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -344,14 +344,22 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
 <div class="row">
     <div class="col-lg-12">
         <form name="version">
+
+            <div class="form-group">
+                <label for="cate">应用类型</label>
+                <select id="cate" class="form-control" name="cate">
+                    <option value="0">选择应用类型</option>
+                    <option value="1">学生端</option>
+                    <option value="2">教师端</option>
+                </select>
+            </div>
+
             <div class="form-group">
                 <label for="platform">发布平台</label>
                 <select id="platform" class="form-control" name="type">
                     <option value="-1">选择发布平台</option>
-                    <option value="0" >iOS【当前最新版本 <?php echo $_smarty_tpl->tpl_vars['ios']->value;?>
-】</option>
-                    <option value="1">Android【当前最新版本 <?php echo $_smarty_tpl->tpl_vars['android']->value;?>
-】</option>
+                    <option value="0" >iOS</option>
+                    <option value="1">Android</option>
                 </select>
             </div>
 
@@ -421,6 +429,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
             },
             getDom: function(){
                 this.subBtn = $('#sub');
+                this.cate = $('#cate');
                 this.pt = $('#platform');
                 this.vname = $('#vname');
                 this.no = $('#vno');
@@ -431,8 +440,13 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
             checkParams: function(){
                 var me = this;
 
-                var pt = me.pt.val();
+                var cate = me.cate.val();
+                if(cate != 1 && cate != 2){
+                    alert('请选择应用类型.');
+                    return false;
+                }
 
+                var pt = me.pt.val();
                 if(pt != 0 && pt != 1){
                     alert('请选择发布平台.');
                     return false;
@@ -471,11 +485,11 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                         return false;
                     }
 
-                    var curentNo = $(this).attr('data-'+me.pt.val());
-                    if(curentNo >= $.trim(me.no.val())){
-                        alert('请检查您输入的版本号是否低于当前版本号.');
-                        return false;
-                    }
+                    // var curentNo = $(this).attr('data-'+me.pt.val());
+                    // if(curentNo >= $.trim(me.no.val())){
+                    //     alert('请检查您输入的版本号是否低于当前版本号.');
+                    //     return false;
+                    // }
 
                     var formdata = me.form.serialize();
                     $.post('/version/publish', formdata, function(json){
@@ -483,7 +497,12 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                             window.location = '/version/index';
                         }
                         else{
-                            alert('发布失败.');
+                            if(json.msg){
+                                alert(json.msg);
+                            }
+                            else{
+                                alert('发布失败.');
+                            }
                             return false;
                         }
                     });
