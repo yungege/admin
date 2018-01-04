@@ -1,23 +1,51 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2018-01-03 17:19:56
          compiled from "/var/www/admin/admin/application/views/template/upload/outsport.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20276185085a4ca03c530079-04181994%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2018-01-04 10:01:23
+         compiled from "/var/www/admin/admin/application/views/template/upload/outsport.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:16704968925a4d8af3b205b5-06321465%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-29 17:39:11
+         compiled from "/var/www/admin/admin/application/views/template/upload/outsport.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:20464418495a460d3f5fa843-19434414%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> ac8f4dc0329542062f5705a0a92420220c632510
+>>>>>>> 8604ba29b3f55dbda2273f4cf5e64cb05717b1b9
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '224468b56f7e2163bdd0ed47cbe330534c273483' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/upload/outsport.tpl',
+<<<<<<< HEAD
+      1 => 1512353715,
+=======
       1 => 1509502905,
+>>>>>>> ac8f4dc0329542062f5705a0a92420220c632510
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
+      1 => 1512353715,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '16704968925a4d8af3b205b5-06321465',
+=======
       1 => 1510105563,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '20276185085a4ca03c530079-04181994',
+=======
+  'nocache_hash' => '20464418495a460d3f5fa843-19434414',
+>>>>>>> ac8f4dc0329542062f5705a0a92420220c632510
+>>>>>>> 8604ba29b3f55dbda2273f4cf5e64cb05717b1b9
   'function' => 
   array (
   ),
@@ -35,9 +63,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a4ca03c6a5071_58568877',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a4ca03c6a5071_58568877')) {function content_5a4ca03c6a5071_58568877($_smarty_tpl) {?><!DOCTYPE html>
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_5a4d8af3ba3c23_04215510',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a4d8af3ba3c23_04215510')) {function content_5a4d8af3ba3c23_04215510($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a460d3f72b672_19308911',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a460d3f72b672_19308911')) {function content_5a460d3f72b672_19308911($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> ac8f4dc0329542062f5705a0a92420220c632510
+>>>>>>> 8604ba29b3f55dbda2273f4cf5e64cb05717b1b9
 <html lang="en">
 
 <head>
