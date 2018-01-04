@@ -15,6 +15,14 @@
     <div class="col-lg-12">
         <form name="version" class="version-form">
             <div class="form-group">
+                <label for="cate">应用类型</label>
+                <select id="cate" class="form-control" name="cate">
+                    <option value="0">选择应用类型</option>
+                    <option value="1" {%if $smarty.get.cate eq 1 %} selected="true" {%/if%}>学生端</option>
+                    <option value="2" {%if $smarty.get.cate eq 2 %} selected="true" {%/if%}>教师端</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="platform">发布平台</label>
                 <select id="platform" class="form-control" name="type">
                     <option value="0">选择发布平台</option>
@@ -34,6 +42,7 @@
             <table class="table table-bordered table-hover table-striped text-center">
                 <thead>
                     <tr>
+                        <th class="text-center">应用类型</th>
                         <th class="text-center">平台类型</th>
                         <th class="text-center">版本号名称</th>
                         <th class="text-center">版本号</th>
@@ -45,6 +54,13 @@
                 <tbody>
                     {%foreach from=$list item=row%}
                     <tr>
+                        <td>
+                            {%if $row.cate eq 1 %}
+                                学生端
+                            {%else%}
+                                教师端
+                            {%/if%}
+                        </td>
                         <td>
                             {%if $row.type eq 1 %}
                                 Android

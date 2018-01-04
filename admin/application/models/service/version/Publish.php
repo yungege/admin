@@ -16,6 +16,7 @@ class Service_Version_PublishModel extends BasePageService {
         $urlPreg = "/(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/";
 
         if(
+            ($req['cate'] != 1 && $req['cate'] != 2) || 
             ($req['type'] != 0 && $req['type'] != 1) || 
             empty($req['versionno']) || 
             empty($req['version']) || 
@@ -34,12 +35,13 @@ class Service_Version_PublishModel extends BasePageService {
             ],
         ];
 
-        $ver = $this->versionModel->queryOne(['type' => (int)$type], $option)['versionno'];
+        $ver = $this->versionModel->queryOne(['cate' => (int)$req['cate'],'type' => (int)$req['type']], $option)['versionno'];
         if($ver >= $req['versionno']){
             return $this->errNo = -1;
         }
 
         $insert = [
+            'cate' => (int)$req['cate'],
             'type' => (int)$req['type'],
             'version' => (string)$req['version'],
             'versionno' => (string)$req['versionno'],
