@@ -8,7 +8,7 @@ define('APPLICATION_PATH', dirname(dirname(__FILE__)));
 define('APP_PATH', APPLICATION_PATH.'/application');
 define('VIEW_PATH', APP_PATH.'/views');
 define('LOG_DIR', '/var/log/admin/php');
-define('CONFIG_PATH', '/var/www/ttxs_conf');
+define('CONFIG_PATH', '/var/www/test_conf');
 define('VERDOR_PATH', APPLICATION_PATH.'/vendor');
 
 ini_set('yaf.use_spl_autoload', 1);

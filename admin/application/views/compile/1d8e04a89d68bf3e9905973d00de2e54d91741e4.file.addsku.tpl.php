@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2017-12-29 16:22:39
+         compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1989092865a45fb4f0f1b70-06710943%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2018-01-02 10:39:12
          compiled from "/var/www/admin/admin/application/views/template/project/addsku.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18608506075a4af0d093fbc7-36510379%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -37,6 +42,7 @@
 >>>>>>> 4cdc9739e4913bd5994c6f152bb240ad3d69ff0e
 >>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
 >>>>>>> 56c04d4068e7286ee2fe2789b82a9052d5451fd4
+>>>>>>> ac8f4dc0329542062f5705a0a92420220c632510
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -90,6 +96,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ),
   ),
 <<<<<<< HEAD
+  'nocache_hash' => '1989092865a45fb4f0f1b70-06710943',
+=======
+<<<<<<< HEAD
   'nocache_hash' => '17705278425a45e622929e98-75929187',
 =======
 <<<<<<< HEAD
@@ -105,6 +114,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> 4cdc9739e4913bd5994c6f152bb240ad3d69ff0e
 >>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
 >>>>>>> 56c04d4068e7286ee2fe2789b82a9052d5451fd4
+>>>>>>> ac8f4dc0329542062f5705a0a92420220c632510
   'function' => 
   array (
   ),
@@ -122,6 +132,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_5a45fb4f1bea20_95999670',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a45fb4f1bea20_95999670')) {function content_5a45fb4f1bea20_95999670($_smarty_tpl) {?><!DOCTYPE html>
+=======
 <<<<<<< HEAD
   'unifunc' => 'content_5a4af0d0aa9354_14359314',
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -161,6 +176,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >>>>>>> 4cdc9739e4913bd5994c6f152bb240ad3d69ff0e
 >>>>>>> 25e501ae1e03f20a953b147c8d633a183375b8d8
 >>>>>>> 56c04d4068e7286ee2fe2789b82a9052d5451fd4
+>>>>>>> ac8f4dc0329542062f5705a0a92420220c632510
 <html lang="en">
 
 <head>

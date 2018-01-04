@@ -226,6 +226,9 @@ class Service_User_AddUgcModel extends BasePageService {
     // 课外活动打卡
     protected function addPunch ($req){
 
+        $req['train_name'] = trim($req['train_name']);
+        $req['school_name'] = trim($req['school_name']);
+        $req['school_mobile'] = trim($req['school_mobile']);
         if(empty($req['school_name']) || empty($req['school_mobile']) || empty($req['train_name'])){
             throw new Exception("参数有误", -1);
         }
@@ -240,25 +243,19 @@ class Service_User_AddUgcModel extends BasePageService {
             return;
         }
 
-        // $workData['train_name'] = $req['train_name'];
-        // $workData['start_time'] = (int)strtotime($req['wtime'] . '00:00:00');
-        // $workData['end_time'] = (int)strtotime($req['wtime'].' 23:59:59');
-        // $workData['done_no'] = '';
-        // $workData['userid'] = $req['uid'];
-        // $workId = $this->trainOutModel->insert($workData);
-        // $trainSchool['homework_id'] = (string)$workId;
-
         $trainSchool['school_name'] = $req['school_name'];
         $trainSchool['mobile'] = (int)$req['school_mobile'];
-        $trainSchool['user_id'] = $req['uid'];
         $trainSchool['ctime'] = time();
         $trainWhere = [
             'school_name' => $req['school_name'],
-            'user_id' => $req['uid'],
         ];
         $result = $this->trainSchoolModel->queryOne($trainWhere);
         if(empty($result)){
-            $this->trainSchoolModel->insert($trainSchool);
+            $result = $this->trainSchoolModel->insert($trainSchool);
+            $school['_id'] = $result;
+            $school['school_name'] = $req['school_name'];
+        }else{
+            $school = $result;
         }
 
         $doneOutside['htype'] = 4;
@@ -266,13 +263,21 @@ class Service_User_AddUgcModel extends BasePageService {
         $doneOutside['starttime'] = (int)strtotime($req['wtime'].' 08:00:00');
         $doneOutside['endtime'] = (int)strtotime($req['wtime'].' 09:00:00');
         $doneOutside['createtime'] = $doneOutside['endtime'];
-        $doneOutside['homeworkid'] = $workId;
+        $doneOutside['homeworkid'] = "";
         $doneOutside['projecttime'] = $doneOutside['endtime'] - $doneOutside['starttime'];
         $doneOutside['burncalories'] = mt_rand(90,110);
         $doneOutside['exciseimg'] = ["https://oi7ro6pyq.qnssl.com/o_1bpq74tqm1vdj18dd118o1ko01mumd.jpg"];
         $doneOutside['commenttext'] = '兴趣班';
         $doneOutside['status'] = 0;
-        $doneOutside['train_name'] = $req['train_name'];    
+        $doneOutside['train_name'] = $req['train_name'];  
+        if(empty($school['school_name'])){
+            $doneOutside['train_school_id'] = "5a4b5796e384ca457cbeb924";
+            $doneOutside['train_school_name'] = "打卡活动";
+        }else{
+            $doneOutside['train_school_id'] = $school['_id'];
+            $doneOutside['train_school_name'] = $school['school_name'];
+        }
+
         $result = $this->trainDoneOutsideModel->insert($doneOutside);
 
         // 写入缓存 后期加入消息队列

@@ -17,6 +17,8 @@ class Dao_TrainingDoneOutsideModel extends Db_Mongodb {
             'commenttext'       => '',   // 锻炼感想/评论文本内容
             'status'            => 0,    // 1-已统计 0-未统计
             'train_name'        => '',   // 锻炼名字
+            'train_school_id'         => '',   // 学校ID
+            'train_school_name'       => '',   // 学校名字
         ];
 
         protected function __construct(){

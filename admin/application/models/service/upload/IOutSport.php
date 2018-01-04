@@ -63,15 +63,15 @@ class Service_Upload_IOutSportModel extends BasePageService {
 
         foreach($datas as $data){
 
-            $data[0] = (string)$data[0];
-            $data[1] = (string)$data[1];
-            $data[2] = (string)$data[2];
-            $data[3] = (string)$data[3];
-            $data[4] = (string)$data[4];
-            $data[5] = (string)$data[5];
-            $data[6] = (string)$data[6];
-            $data[7] = (string)$data[7];
-            $data[8] = (string)$data[8];
+            $data[0] = trim((string)$data[0]);
+            $data[1] = trim((string)$data[1]);
+            $data[2] = trim((string)$data[2]);
+            $data[3] = trim((string)$data[3]);
+            $data[4] = trim((string)$data[4]);
+            $data[5] = trim((string)$data[5]);
+            $data[6] = trim((string)$data[6]);
+            $data[7] = trim((string)$data[7]);
+            $data[8] = trim((string)$data[8]);
 
             $userWhere = [
                 'username' => $data[0],
@@ -101,27 +101,21 @@ class Service_Upload_IOutSportModel extends BasePageService {
                 continue;
             }
 
-            $workData['train_name'] = $data[2];
-            $workData['start_time'] = (int)strtotime($this->startTime . '00:00:00');
-            $workData['end_time'] = (int)strtotime($this->startTime . '23:59:59');
-            $workData['done_no'] = $data[4];
-            $workData['userid'] = (string)$this->userData['_id'];
-            $workId = $this->trainOutModel->insert($workData);
-
             $trainWhere = [
                 'school_name' => $data[5],
-                'user_id' => (string)$this->userData['_id'],
             ];
             $result = $this->trainSchoolModel->queryOne($trainWhere);
 
             if(empty($result)){
-                $trainSchool['homework_id'] = (string)$workId;
                 $trainSchool['school_name'] = $data[5];
                 $trainSchool['mobile'] = (int)$data[7];
                 $trainSchool['contact'] = $data[8];
-                $trainSchool['user_id'] = (string)$this->userData['_id'];
+                // $trainSchool['user_id'] = (string)$this->userData['_id'];
                 $trainSchool['ctime'] = time();
-                $this->trainSchoolModel->insert($trainSchool);
+                $school['_id'] = $this->trainSchoolModel->insert($trainSchool);
+                $school['school_name'] = $trainSchool['school_name'];
+            }else{
+                $school = $result;
             }
 
             $doneOutside['htype'] = 4;
@@ -135,9 +129,16 @@ class Service_Upload_IOutSportModel extends BasePageService {
             $doneOutside['exciseimg'] = ["https://oi7ro6pyq.qnssl.com/o_1c2b1dv9f1u2itc3mh61ecq6uid.jpg"];
             $doneOutside['commenttext'] = '兴趣班';
             $doneOutside['status'] = 0;
-            $doneOutside['train_name'] = $data[2];   
+            $doneOutside['train_name'] = $data[2];
+            if(!empty($school['school_name'])){
+                $doneOutside['train_school_id'] = $school['_id'];   
+                $doneOutside['train_school_name'] = $school['school_name']; 
+            }else{
+                $doneOutside['train_school_id'] = "5a4b5796e384ca457cbeb924";   
+                $doneOutside['train_school_name'] = "打卡活动"; 
+            }  
+              
             $result = $this->trainDoneOutsideModel->insert($doneOutside);
-
             //写入缓存 后期加入消息队列
             $monthDate = date('Y_m', $doneOutside['endtime']);
             $this->AddCache((string)$this->userData['_id'], $monthDate, $result, $doneOutside);
