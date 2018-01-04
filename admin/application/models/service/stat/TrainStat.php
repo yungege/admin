@@ -23,8 +23,8 @@ class Service_Stat_TrainStatModel extends BasePageService {
         $this->classModel = Dao_ClassinfoModel::getInstance();
         $this->trainOutsideModel = Dao_TrainingDoneOutsideModel::getInstance();
         $this->punchModel = Dao_PunchModel::getInstance();
-        $this->startTime = 1513526400;
-        $this->endTime = 1514131199;
+        $this->startTime = 1514131200;
+        $this->endTime = 1514735999;
     }
 
     protected function __declare() {
@@ -41,6 +41,9 @@ class Service_Stat_TrainStatModel extends BasePageService {
         if (PHP_SAPI == 'cli'){
             die('This example should only be run from a Web Browser');
         }
+
+        /** Include PHPExcel */
+        // require_once dirname(__FILE__) . '/../Classes/PHPExcel.php';
 
         // Create new PHPExcel object
         $objPHPExcel = new PHPExcel();
@@ -60,7 +63,7 @@ class Service_Stat_TrainStatModel extends BasePageService {
                         ->setCellValue('C1', '学生名单')
                         ->setCellValue('D1', '完成人数');
 
-        $this->schoolId = "587f31732a46800e0a8b4567";
+        $this->schoolId = "5967ab1c7f8b9a3f078b47bb";
         $schoolFields = ['name'];
         $schoolInfo = $this->schoolModel->getSchoolById($this->schoolId,$schoolFields);
 
@@ -82,7 +85,8 @@ class Service_Stat_TrainStatModel extends BasePageService {
         $classInfos = array_column($classInfos,null,'name');
         $classInfos = array_column($classInfos,null,'name');
         sort($classInfos);
-        
+        // var_dump($classInfos);
+        // exit;
         $i = 2;
         foreach($classInfos as $classInfo){
 
@@ -116,6 +120,8 @@ class Service_Stat_TrainStatModel extends BasePageService {
             $fields = [
                 '$project' => [
                     'userid' => 1,
+                    // 'burncalories' => 1,
+                    // 'projecttime' => 1,
                     'htype' => 1,
                 ]
             ];
@@ -123,6 +129,8 @@ class Service_Stat_TrainStatModel extends BasePageService {
             $group = [
                 '$group' => [
                     '_id' => '$userid',
+                    // 'burncalorie' => ['$sum' => '$burncalories'],
+                    // 'projecttime' => ['$sum' => '$projecttime'],
                     'count' => ['$sum' => 1],
                     'htype' => ['$push' => '$htype'],
                 ]
@@ -241,8 +249,7 @@ class Service_Stat_TrainStatModel extends BasePageService {
            
         }
 
-// var_dump(11);
-// exit;
+
         // exit;
 
         // Rename worksheet
