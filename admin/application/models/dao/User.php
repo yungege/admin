@@ -150,6 +150,16 @@ class Dao_UserModel extends Db_Mongodb{
     public function getUserInfoByMobile(int $mobile){
         $where = [
             'mobileno' => $mobile,
+            'type' => 1,
+        ];
+
+        return $this->query($where);
+    }
+
+    public function getTeacherInfoByMobile(int $mobile){
+        $where = [
+            'mobileno' => $mobile,
+            'type' => 2
         ];
 
         return $this->query($where);

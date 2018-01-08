@@ -74,8 +74,6 @@ class TrainOut {
                 break;
             }
     		$result = $trainOutsideModel->updateById($tData['_id'],$set);
-    		
-
     		$skip++;
     		// if($skip == 100){
     		// 	break;
