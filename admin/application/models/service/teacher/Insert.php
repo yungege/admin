@@ -44,6 +44,7 @@ class Service_Teacher_InsertModel extends BasePageService {
 			$where = [
 				'schoolid' => $req['school'],
 				'grade' => (int)$req['grade'],
+				'is_test' => 0,
 			];
 			$classInfos = $this->classModel->getList($where,['_id','name'],[]);
 		}
