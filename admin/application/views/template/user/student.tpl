@@ -289,6 +289,9 @@
                 <input type="text" class="form-control" id="re-name" name="re-name">
             </div>
             <div class="form-group">
+                <input type="hidden" class="form-control" id="user-type" name="user-type" value="1">
+            </div>
+            <div class="form-group">
                 <label for="re-sel">绑定关系</label>
                 <select class="form-control" id="re-sel" name="re-sel">
                     <option value="-1">请选择绑定关系</option>

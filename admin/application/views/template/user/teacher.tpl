@@ -205,6 +205,9 @@
                 <input type="text" class="form-control" id="re-mobile" name="re-mobile">
             </div>
             <div class="form-group">
+                <input type="hidden" class="form-control" id="user-type" name="user-type" value="2">
+            </div>
+            <div class="form-group">
               <!--   <label for="re-name">绑定人</label> -->
                 <input type="hidden" class="form-control" id="re-name" name="re-name" value="自己">
             </div>

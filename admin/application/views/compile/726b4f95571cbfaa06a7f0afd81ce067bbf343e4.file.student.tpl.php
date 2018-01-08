@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2018-01-08 10:33:07
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3498797545a52d863732239-75186562%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2018-01-08 10:56:34
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:20619540385a52dde23d77c8-67000982%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> b0a98ff8e13ac8d8310efa6f762a44d3595fb855
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
+<<<<<<< HEAD
       1 => 1510105563,
+=======
+      1 => 1515379989,
+>>>>>>> b0a98ff8e13ac8d8310efa6f762a44d3595fb855
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1510105563,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '3498797545a52d863732239-75186562',
+=======
+      1 => 1512353715,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '20619540385a52dde23d77c8-67000982',
+>>>>>>> b0a98ff8e13ac8d8310efa6f762a44d3595fb855
   'function' => 
   array (
   ),
@@ -35,9 +53,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a52d8638deb37_03839077',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a52d8638deb37_03839077')) {function content_5a52d8638deb37_03839077($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_5a52dde2625c85_11858237',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a52dde2625c85_11858237')) {function content_5a52dde2625c85_11858237($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> b0a98ff8e13ac8d8310efa6f762a44d3595fb855
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -670,6 +694,9 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             <div class="form-group">
                 <label for="re-name">家长姓名</label>
                 <input type="text" class="form-control" id="re-name" name="re-name">
+            </div>
+            <div class="form-group">
+                <input type="hidden" class="form-control" id="user-type" name="user-type" value="1">
             </div>
             <div class="form-group">
                 <label for="re-sel">绑定关系</label>

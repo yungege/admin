@@ -14,8 +14,9 @@ class Service_User_AddRelationModel extends BasePageService {
     protected function __execute($req) {
         $postData = $req['post'];
         $uId = $postData['uid'];
+        $type = (int)$postData['user-type'];
 
-        if(empty($uId) || !preg_match("/\w+/", $uId)){
+        if(empty($uId) || !preg_match("/\w+/", $uId) || empty($type)){
             $this->errNo = REQUEST_PARAMS_ERROR;
             return false;
         }
@@ -35,7 +36,12 @@ class Service_User_AddRelationModel extends BasePageService {
         }
 
         // 一个手机号只能绑定一个账号 2017.7.21 修改
-        $hasBind = $this->userModel->getUserInfoByMobile($phone, ['_id']);
+        if($type == 1){
+            $hasBind = $this->userModel->getUserInfoByMobile($phone, ['_id']);
+        }else{
+            $hasBind = $this->userModel->getTeacherInfoByMobile($phone, ['_id']);
+        }
+
         if(!empty($hasBind)){
             $this->errNo = MOBILE_HAS_BIND;
             return false;
