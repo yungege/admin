@@ -64,6 +64,11 @@
         margin-left: 0;
         margin-right: 10px;
     }
+    .class-del{
+        float:right;
+    }
+
+
 </style>
 {%/block%}
 {%block name="bread"%}用户管理 / 老师管理<a href="/teacher/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加老师</a>{%/block%}
@@ -169,7 +174,7 @@
                         <td><a href="/user/school?schoolid={%$row.schoolinfo.schoolid%}">{%$row.schoolinfo.schoolname%}</a></td>
                         <td>
                             {%foreach from=$row.manageclassinfo item=teacher%}
-                            <a href="/user/class?classid={%$teacher.classid%}">{%$teacher.classname%}</a><br/>
+                            <p><a href="/user/class?classid={%$teacher.classid%}">{%$teacher.classname%}</a> <a class="class-del btn btn-xs btn-primary" data-classid="{%$teacher.classid%}" data-uid="{%$row._id%}"> X </a> </p>
                             {%/foreach%}
                             <a data-id="{%$row._id%}" class="btn btn-xs btn-primary add-class" href="javascript:void(0)">添加班级？</a>
                         </td>
@@ -256,6 +261,7 @@
             this.postRelationData();
             this.addClass();
             this.postClassData();
+            this.delClass();
         },
 
         initDate: function(){
@@ -297,6 +303,7 @@
             this.reSel = $('#re-sel');
             this.reForm = $('form[name=relation]');
             this.reFormClass = $('form[name=class]');
+            this.delClassBtn = $('.class-del');
         },
 
         // 清楚查询条件
@@ -336,13 +343,44 @@
             });
         },
 
+        delClass: function(){
+            var me = this;
+            me.delClassBtn.unbind().bind('click', function(){
+                
+                var classid = $.trim($(this).data('classid'));
+                var uid = $.trim($(this).data('uid'));
+                var postData = "";
+                var parent = $(this).parent();
+                postData += "classid=" + classid + "&uid=" + uid;
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: '/user/delclass', 
+                    data: postData,
+                    success: function(json){
+
+                        if(json.errCode == 0){
+                            parent.remove();
+                        }
+                        else{
+
+                            alert(json.errMessage);
+                            return false;
+                        }
+                    },
+                });
+
+            });
+        },
+
         postClassData: function(){
             var me = this;
             me.reSubBtnClass.unbind().bind('click',function(){
 
                 var data = me.reFormClass.serialize();
 
-                 $.ajax({
+                $.ajax({
                     type: 'POST',
                     dataType: 'json',
                     url: '/user/addclass', data,
