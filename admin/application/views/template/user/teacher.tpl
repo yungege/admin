@@ -174,7 +174,7 @@
                         <td><a href="/user/school?schoolid={%$row.schoolinfo.schoolid%}">{%$row.schoolinfo.schoolname%}</a></td>
                         <td>
                             {%foreach from=$row.manageclassinfo item=teacher%}
-                            <p><a href="/user/class?classid={%$teacher.classid%}">{%$teacher.classname%}</a> <a class="class-del btn btn-xs btn-primary" data-classid="{%$teacher.classid%}" data-uid="{%$row._id%}"> X </a> </p>
+                            <p><a href="/user/class?classid={%$teacher.classid%}">{%$teacher.classname%}</a> <a class="class-del btn btn-xs btn-danger" data-classid="{%$teacher.classid%}" data-uid="{%$row._id%}"> X </a> </p>
                             {%/foreach%}
                             <a data-id="{%$row._id%}" class="btn btn-xs btn-primary add-class" href="javascript:void(0)">添加班级？</a>
                         </td>
