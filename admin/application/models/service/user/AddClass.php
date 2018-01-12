@@ -73,7 +73,9 @@ class Service_User_AddClassModel extends BasePageService {
         $result = $this->userModel->updateUserInfoByUserid($this->uId,$userInfo);
 
         if($result === false){
-            var_dump('失败');
+            $this->errNo = -1;
+            $this->errMsg = '添加失败';
+            return false;
         }else{
             return true;
         }

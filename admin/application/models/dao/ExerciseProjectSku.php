@@ -27,6 +27,8 @@ class Dao_ExerciseProjectSkuModel extends Db_Mongodb {
         'physical_reaction' => '',
         'course_advice' => '',
         'ctime'         => 0,
+        'is_public'     => 0,      // 1-公共项目 0-非公共项目
+        'school_id'     => '',     // 项目所属学校
         //'creator_info'  => [],      // ['creatorid'=>,'creatorname'=>'']
     ];
 
