@@ -33,12 +33,6 @@ class Service_Stat_TrainStatModel extends BasePageService {
 
     protected function __execute($req) {
 
-
-
-        var_dump(234);
-        exit;
-
-
         error_reporting(E_ALL);
         ini_set('display_errors', TRUE);
         ini_set('display_startup_errors', TRUE);
@@ -69,7 +63,7 @@ class Service_Stat_TrainStatModel extends BasePageService {
                         ->setCellValue('C1', '学生名单')
                         ->setCellValue('D1', '完成人数');
 
-        $this->schoolId = "587f31732a46800e0a8b4567";
+        $this->schoolId = "5a2e185dc9609c0e1e5ed7b9";
         $schoolFields = ['name'];
         $schoolInfo = $this->schoolModel->getSchoolById($this->schoolId,$schoolFields);
 
