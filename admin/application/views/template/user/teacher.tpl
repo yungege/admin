@@ -351,6 +351,7 @@
                 var uid = $.trim($(this).data('uid'));
                 var postData = "";
                 var parent = $(this).parent();
+                $(this).attr("disabled","disabled");
                 postData += "classid=" + classid + "&uid=" + uid;
 
                 $.ajax({
