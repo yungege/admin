@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2018-01-11 18:57:31
+<?php /* Smarty version Smarty-3.1.13, created on 2018-01-18 13:11:06
          compiled from "/var/www/admin/admin/application/views/template/teacher/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7942435465a57431b5d4dd4-03528494%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2018-01-12 10:59:02
-         compiled from "/var/www/admin/admin/application/views/template/teacher/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11553705405a5824766e2679-22369175%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2018-01-11 14:12:27
-         compiled from "/var/www/admin/admin/application/views/template/teacher/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:4736622945a57004be52465-54296719%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 96fdd6b1eacf3275bc4ae70c5d1c925c3e20716c
->>>>>>> d18ff3ff55d81273ab688d7358b6b10dc7629801
+<?php /*%%SmartyHeaderCode:6017818805a602c6a79a876-51168253%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0c26285ebce1f4024b5a42acac12e43e2dad98db' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/teacher/add.tpl',
-      1 => 1514440708,
+      1 => 1516251790,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -29,15 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '7942435465a57431b5d4dd4-03528494',
-=======
-<<<<<<< HEAD
-  'nocache_hash' => '11553705405a5824766e2679-22369175',
-=======
-  'nocache_hash' => '4736622945a57004be52465-54296719',
->>>>>>> 96fdd6b1eacf3275bc4ae70c5d1c925c3e20716c
->>>>>>> d18ff3ff55d81273ab688d7358b6b10dc7629801
+  'nocache_hash' => '6017818805a602c6a79a876-51168253',
   'function' => 
   array (
   ),
@@ -55,21 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a57431b7dd7f8_16011710',
+  'unifunc' => 'content_5a602c6a804c53_38145233',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a57431b7dd7f8_16011710')) {function content_5a57431b7dd7f8_16011710($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<<<<<<< HEAD
-  'unifunc' => 'content_5a582476766034_48555390',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a582476766034_48555390')) {function content_5a582476766034_48555390($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5a57004c08fbf4_97880390',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a57004c08fbf4_97880390')) {function content_5a57004c08fbf4_97880390($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 96fdd6b1eacf3275bc4ae70c5d1c925c3e20716c
->>>>>>> d18ff3ff55d81273ab688d7358b6b10dc7629801
+<?php if ($_valid && !is_callable('content_5a602c6a804c53_38145233')) {function content_5a602c6a804c53_38145233($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -493,7 +461,15 @@ $_smarty_tpl->tpl_vars['gradeName']->_loop = true;
                     <label for="username">姓名</label>
                     <input type="text" class="form-control" id="username" placeholder="Username" name="username">
                 </div>
-                            
+                     
+                <div class="form-group">
+                    <label for="isTest">是否是体验老师</label>
+                    <select id="isTest" class="form-control" name="isTest">
+                        <option value="0" selected>不是</option>
+                        <option value="1" >是</option>
+                    </select>  
+                </div>       
+                 
                 <button id="sub" type="button" class="btn btn-primary">确认提交</button>
                <!--  <button id="button" type="button" class="btn btn-danger" >取&emsp;消</button> -->
             </form>
