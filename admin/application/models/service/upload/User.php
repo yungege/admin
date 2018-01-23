@@ -91,27 +91,30 @@ class Service_Upload_UserModel extends BasePageService {
         $this->userInfo['schoolinfo']['schoolname'] = $this->schoolInfo['name'];
 
         foreach($datas as $data){
-            $this->userInfo['username'] = trim($data[2]);
-            $this->userInfo['nickname'] = trim($data[2]);
-            $this->userInfo['classinfo']['classname'] = trim($data[0]) . trim($data[1]);
+
+
+            $this->userInfo['username'] = trim($data[0]);
+            $this->userInfo['nickname'] = trim($data[0]);
+            $this->userInfo['classinfo']['classname'] = trim($data[3]);
             if(empty($this->classInfos[$this->userInfo['classinfo']['classname']])){
                 $this->addClass($this->userInfo['classinfo']['classname']);
             }
             $this->userInfo['classinfo']['classid'] = $this->classInfos[$this->userInfo['classinfo']['classname']]['classid'];
             $this->userInfo['grade'] = $this->classInfos[$this->userInfo['classinfo']['classname']]['grade'];
-            $this->userInfo['birthday'] = strtotime(trim($data[4]));
+            $this->userInfo['birthday'] = strtotime(trim($data[1]));
             $this->userInfo['create_time'] = time();
 
 
             // var_dump($this->userInfo);
             // exit;
 
-            if($data[3] == '男'){
+            if(trim($data[2]) == '男'){
                 $this->userInfo['sex'] = 0;
             }else{
                 $this->userInfo['sex'] = 1;
             }
             $this->userModel->insert($this->userInfo);
+            // break;
 
         }
        

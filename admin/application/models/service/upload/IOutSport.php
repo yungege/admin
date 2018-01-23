@@ -103,6 +103,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
 
             $trainWhere = [
                 'school_name' => $data[5],
+                'user_id' => (string)$this->userData['_id'],
             ];
             $result = $this->trainSchoolModel->queryOne($trainWhere);
 
@@ -110,7 +111,7 @@ class Service_Upload_IOutSportModel extends BasePageService {
                 $trainSchool['school_name'] = $data[5];
                 $trainSchool['mobile'] = (int)$data[7];
                 $trainSchool['contact'] = $data[8];
-                // $trainSchool['user_id'] = (string)$this->userData['_id'];
+                $trainSchool['user_id'] = (string)$this->userData['_id'];
                 $trainSchool['ctime'] = time();
                 $school['_id'] = $this->trainSchoolModel->insert($trainSchool);
                 $school['school_name'] = $trainSchool['school_name'];

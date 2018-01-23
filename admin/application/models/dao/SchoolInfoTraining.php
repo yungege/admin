@@ -21,6 +21,7 @@ class Dao_SchoolInfoTrainingModel extends Db_Mongodb {
         'mobile'        => '',  //联系电话
         'desc'          => '',  //简介
         'ctime'         => 0,   //注册时间
+        'is_delete'     => 0,   // 是否删除
 	];
 
     protected function __construct(){
