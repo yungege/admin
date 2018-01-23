@@ -16,7 +16,7 @@ class TrainOut {
 
         $limit = 10;
         $skip =0;
-
+exit;
         while(1){
 
             $where = [
