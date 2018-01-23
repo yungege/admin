@@ -1,23 +1,37 @@
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2018-01-15 16:15:31
+         compiled from "/var/www/admin/admin/application/views/template/teacher/add.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:14422251195a5c632322bf50-02397536%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
 <?php /* Smarty version Smarty-3.1.13, created on 2018-01-18 13:11:06
          compiled from "/var/www/admin/admin/application/views/template/teacher/add.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6017818805a602c6a79a876-51168253%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> d02b77a8e014027e4be64bb56f88cb52d87d4001
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0c26285ebce1f4024b5a42acac12e43e2dad98db' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/teacher/add.tpl',
+<<<<<<< HEAD
+      1 => 1514444556,
+=======
       1 => 1516251790,
+>>>>>>> d02b77a8e014027e4be64bb56f88cb52d87d4001
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1512353715,
+      1 => 1510105563,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
+  'nocache_hash' => '14422251195a5c632322bf50-02397536',
+=======
   'nocache_hash' => '6017818805a602c6a79a876-51168253',
+>>>>>>> d02b77a8e014027e4be64bb56f88cb52d87d4001
   'function' => 
   array (
   ),
@@ -35,9 +49,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
+  'unifunc' => 'content_5a5c6323363e97_79276585',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a5c6323363e97_79276585')) {function content_5a5c6323363e97_79276585($_smarty_tpl) {?><!DOCTYPE html>
+=======
   'unifunc' => 'content_5a602c6a804c53_38145233',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a602c6a804c53_38145233')) {function content_5a602c6a804c53_38145233($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> d02b77a8e014027e4be64bb56f88cb52d87d4001
 <html lang="en">
 
 <head>

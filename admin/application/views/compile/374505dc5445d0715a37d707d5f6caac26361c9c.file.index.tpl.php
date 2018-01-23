@@ -1,23 +1,33 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2018-01-23 14:58:57
          compiled from "/var/www/admin/admin/application/views/template/upload/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:542837035a66dd31bb97f4-09317696%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2018-01-15 10:16:35
+         compiled from "/var/www/admin/admin/application/views/template/upload/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:211241745a5c0f031b7430-78881534%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 12035367515ac73ee48f40852536349d35b96e53
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '374505dc5445d0715a37d707d5f6caac26361c9c' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/upload/index.tpl',
-      1 => 1512353715,
+      1 => 1509502905,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1512353715,
+      1 => 1510105563,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '542837035a66dd31bb97f4-09317696',
+=======
+  'nocache_hash' => '211241745a5c0f031b7430-78881534',
+>>>>>>> 12035367515ac73ee48f40852536349d35b96e53
   'function' => 
   array (
   ),
@@ -35,9 +45,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a66dd31c2db92_20517233',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a66dd31c2db92_20517233')) {function content_5a66dd31c2db92_20517233($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a5c0f032e5794_78451211',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a5c0f032e5794_78451211')) {function content_5a5c0f032e5794_78451211($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 12035367515ac73ee48f40852536349d35b96e53
 <html lang="en">
 
 <head>
