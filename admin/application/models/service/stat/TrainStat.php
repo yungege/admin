@@ -23,8 +23,8 @@ class Service_Stat_TrainStatModel extends BasePageService {
         $this->classModel = Dao_ClassinfoModel::getInstance();
         $this->trainOutsideModel = Dao_TrainingDoneOutsideModel::getInstance();
         $this->punchModel = Dao_PunchModel::getInstance();
-        $this->startTime = 0;
-        $this->endTime = 15159455990;
+        $this->startTime = 1515945600;
+        $this->endTime = 1516550399;
     }
 
     protected function __declare() {
@@ -63,7 +63,7 @@ class Service_Stat_TrainStatModel extends BasePageService {
                         ->setCellValue('C1', '学生名单')
                         ->setCellValue('D1', '完成人数');
 
-        $this->schoolId = "5a27403ac9609c19834ad0d9";
+        $this->schoolId = "5a2e185dc9609c0e1e5ed7b9";
         $schoolFields = ['name'];
         $schoolInfo = $this->schoolModel->getSchoolById($this->schoolId,$schoolFields);
 
