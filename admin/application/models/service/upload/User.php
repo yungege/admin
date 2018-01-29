@@ -92,7 +92,6 @@ class Service_Upload_UserModel extends BasePageService {
 
         foreach($datas as $data){
 
-
             $this->userInfo['username'] = trim($data[0]);
             $this->userInfo['nickname'] = trim($data[0]);
             $this->userInfo['classinfo']['classname'] = trim($data[3]);
@@ -102,6 +101,12 @@ class Service_Upload_UserModel extends BasePageService {
             $this->userInfo['classinfo']['classid'] = $this->classInfos[$this->userInfo['classinfo']['classname']]['classid'];
             $this->userInfo['grade'] = $this->classInfos[$this->userInfo['classinfo']['classname']]['grade'];
             $this->userInfo['birthday'] = strtotime(trim($data[1]));
+            // $this->userInfo['birthday'] =  intval(((int)$data[1]-25569)*3600*24);
+
+// var_dump($this->userInfo['birthday']);
+// exit;
+
+
             $this->userInfo['create_time'] = time();
 
 
@@ -114,7 +119,6 @@ class Service_Upload_UserModel extends BasePageService {
                 $this->userInfo['sex'] = 1;
             }
             $this->userModel->insert($this->userInfo);
-            // break;
 
         }
        

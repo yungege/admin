@@ -1,23 +1,33 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2018-01-16 10:57:47
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2018-01-24 18:04:07
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9385165055a5d6a2bd62f83-10818029%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:618566565a685a17207fb3-79432778%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2018-01-19 15:18:00
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1966605925a619ba86d3e99-26384769%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> f44f3cfba89dfd1400acc05376cce0663fa0536c
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1512033859,
+      1 => 1516782053,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+      1 => 1512353715,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9385165055a5d6a2bd62f83-10818029',
+<<<<<<< HEAD
+  'nocache_hash' => '618566565a685a17207fb3-79432778',
+=======
+  'nocache_hash' => '1966605925a619ba86d3e99-26384769',
+>>>>>>> f44f3cfba89dfd1400acc05376cce0663fa0536c
   'function' => 
   array (
   ),
@@ -35,9 +45,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a5d6a2bec2500_02394785',
+<<<<<<< HEAD
+  'unifunc' => 'content_5a685a172d5455_39768613',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a5d6a2bec2500_02394785')) {function content_5a5d6a2bec2500_02394785($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a685a172d5455_39768613')) {function content_5a685a172d5455_39768613($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a619ba88225e5_12472772',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a619ba88225e5_12472772')) {function content_5a619ba88225e5_12472772($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> f44f3cfba89dfd1400acc05376cce0663fa0536c
 <html lang="en">
 
 <head>
@@ -456,8 +472,9 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
             </li>
             
             <li style="overflow:hidden;">
-                <button type="button" class="btn btn-primary" id="subbtn" style="width:80px;">查询</button>
-                <button type="button" class="btn btn-info" id="export" style="width:80px;margin-left:20px;" >导出</button>
+                <button type="button" class="btn btn-primary" id="subbtn" style="width:100px;">查询</button>
+                <button type="button" class="btn btn-info" id="export" style="width:100px;margin-left:20px;" >导出</button>
+                <button type="button" class="btn btn-info" id="export-word" style="width:100px;margin-left:20px;" >导出Word</button>
             </li>
         </ul>
 

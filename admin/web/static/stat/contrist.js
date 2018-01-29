@@ -12,6 +12,7 @@ $(function(){
             this.initDate();
             this.postData();
             this.download();
+            this.downloadWord();
         },
 
         getDom: function(){
@@ -26,6 +27,7 @@ $(function(){
 
             this.subBtn         = $('#subbtn');
             this.downBtn        = $('#export');
+            this.downWord       = $('#export-word');
             this.form           = $('form[name=form]');
 
             this.charts         = $('#charts');
@@ -403,6 +405,29 @@ $(function(){
                 file = file.join('-');
                 window.location = '/stat/contrist?down='+encodeURI(file)+'&'+me.form.serialize();
             })
+        },
+
+        downloadWord: function(){
+            var me = this;
+
+            me.downWord.unbind().bind('click',function(){
+
+                city = $('#city').find('option:selected').text(),
+                district = $('#district').find('option:selected').text(),
+                school = $('#school').find('option:selected').val();
+                grade = $('#grade').find('option:selected').val(),
+                className = $('#class').find('option:selected').val(),
+                startTime = me.startBtn.val(),
+                endTime = me.endBtn.val();
+
+                if(school == "" || school == "undefined"){
+                    alert("请选择学校");
+                    return false;
+                }
+
+                var url = '?city=' + city + '&district=' + district +'&school=' + school +'&grade=' + grade + '&class=' + className + '&startTime=' + startTime + '&endTime=' + endTime; 
+                window.location = '/stat/uploadword' + url;
+            });
         },
 
         makeMixCharts: function(data){
