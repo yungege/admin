@@ -102,8 +102,9 @@
             </li>
             
             <li style="overflow:hidden;">
-                <button type="button" class="btn btn-primary" id="subbtn" style="width:80px;">查询</button>
-                <button type="button" class="btn btn-info" id="export" style="width:80px;margin-left:20px;" >导出</button>
+                <button type="button" class="btn btn-primary" id="subbtn" style="width:100px;">查询</button>
+                <button type="button" class="btn btn-info" id="export" style="width:100px;margin-left:20px;" >导出</button>
+                <button type="button" class="btn btn-info" id="export-word" style="width:100px;margin-left:20px;" >导出Word</button>
             </li>
         </ul>
 
