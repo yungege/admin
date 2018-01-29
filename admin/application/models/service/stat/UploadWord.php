@@ -37,7 +37,7 @@ class Service_Stat_UploadWordModel extends BasePageService {
         $req = $req['get'];
 
         $this->startTime = strtotime($req['startTime']);;
-        $this->endTime = strtotime($req['endTime']);
+        $this->endTime = strtotime($req['endTime']) + 86399;
         $this->schoolId = $req['school'];
        
         $content = "<tr >  
@@ -96,7 +96,7 @@ class Service_Stat_UploadWordModel extends BasePageService {
             $option['projection'] = ['username' => 1,'ssoid' => 1,'mobileno' => 1,'_id' => 1, 'schoolinfo' => 1,'grade' => 1,'classinfo'=>1];
             $userInfos = $this->userModel->query($userWhere,$option);
             if(empty($userInfos)){
-                break;
+                continue;
             }
 
             $className = $userInfos[0]['classinfo']['classname'];
@@ -156,6 +156,17 @@ class Service_Stat_UploadWordModel extends BasePageService {
                     }
                 }
             }
+
+            unset($where['starttime']);
+            $where['ctime'] = [
+                '$gte' => $this->startTime,
+                '$lte' => $this->endTime,
+            ];
+            $aggregate = [
+                ['$match' => $where],
+                $fields,
+                $group
+            ];
 
             $list3 = $this->punchModel->aggregate($aggregate);
             if(!empty($list3)){
