@@ -403,7 +403,19 @@ $(function(){
                 file.push(startTime, endTime);
                 file.push(source);
                 file = file.join('-');
-                window.location = '/stat/contrist?down='+encodeURI(file)+'&'+me.form.serialize();
+
+                if(source == "总体数据"){
+
+                    school = $('#school').find('option:selected').val();
+                    grade = $('#grade').find('option:selected').val(),
+                    className = $('#class').find('option:selected').val();
+                    var url = '?school=' + school +'&grade=' + grade + '&class=' + className + '&startTime=' + startTime + '&endTime=' + endTime;
+                    window.location = '/stat/total' + url;
+
+                }else{
+                    window.location = '/stat/contrist?down='+encodeURI(file)+'&'+me.form.serialize();
+                }
+                
             })
         },
 
