@@ -5,5 +5,6 @@ class StatController extends Yaf_Controller_Abstract{
         'trainstat'     => 'actions/stat/TrainStat.php',
         'contrist'      => 'actions/stat/Contrist.php',
         'uploadword'    => 'actions/stat/UploadWord.php',
+        'total'         => 'actions/stat/Total.php',
     );
 }
