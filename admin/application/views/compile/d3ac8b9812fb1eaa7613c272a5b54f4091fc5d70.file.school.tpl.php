@@ -1,23 +1,33 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2018-01-30 12:01:23
          compiled from "/var/www/admin/admin/application/views/template/user/school.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16313682025a6fee131b3dd7-41161513%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2018-01-29 17:24:58
+         compiled from "/var/www/admin/admin/application/views/template/user/school.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:11465201405a6ee86add8247-83697854%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> e4f93a7d307f2777db20036c01dc13b3c43e0361
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd3ac8b9812fb1eaa7613c272a5b54f4091fc5d70' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/school.tpl',
-      1 => 1509502905,
+      1 => 1512353715,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+      1 => 1512353715,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '16313682025a6fee131b3dd7-41161513',
+=======
+  'nocache_hash' => '11465201405a6ee86add8247-83697854',
+>>>>>>> e4f93a7d307f2777db20036c01dc13b3c43e0361
   'function' => 
   array (
   ),
@@ -35,9 +45,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a6fee133038f8_20764736',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a6fee133038f8_20764736')) {function content_5a6fee133038f8_20764736($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a6ee86b0670e5_86828019',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a6ee86b0670e5_86828019')) {function content_5a6ee86b0670e5_86828019($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> e4f93a7d307f2777db20036c01dc13b3c43e0361
 <html lang="en">
 
 <head>
