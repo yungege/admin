@@ -432,7 +432,7 @@ $(function(){
                 startTime = me.startBtn.val(),
                 endTime = me.endBtn.val();
 
-                if(school == "" || school == "undefined"){
+                if(school == "" || school == undefined){
                     alert("请选择学校");
                     return false;
                 }

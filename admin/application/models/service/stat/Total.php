@@ -169,7 +169,7 @@ class Service_Stat_TotalModel extends BasePageService {
             $index ++;
         }
 
-        xlsHeader(self::$excelHeader, '学校锻炼统计数据.xls');
+        xlsHeader(self::$excelHeader, '学校锻炼统计.xls');
         xlsOutput(array_keys(self::$excelHeader), $schoolClassLists);
         exit;
     }
