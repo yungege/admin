@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2018-02-02 10:02:33
+<?php /* Smarty version Smarty-3.1.13, created on 2018-02-05 10:12:53
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8716087445a73c6b93bf607-30805362%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:7911228775a77bda5c92539-86350804%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-      1 => 1515380743,
+      1 => 1517796445,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+      1 => 1512353715,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '8716087445a73c6b93bf607-30805362',
+  'nocache_hash' => '7911228775a77bda5c92539-86350804',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a73c6b956b445_22132559',
+  'unifunc' => 'content_5a77bda5de39e0_58287530',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a73c6b956b445_22132559')) {function content_5a73c6b956b445_22132559($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a77bda5de39e0_58287530')) {function content_5a77bda5de39e0_58287530($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -515,6 +515,7 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                         <th>注册日期</th>
                         <th>上次登录</th>
                         <th>上次锻炼</th>
+                        <th>锻炼次数</th>
                         <!-- <th>关联账号</th> -->
                         <th>操作</th>
                     </tr>
@@ -574,6 +575,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                                 <span class="label label-warning">无记录</span>
                             <?php }?>
                         </td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['doneCount'];?>
+</td>
                         <!-- <td></td> -->
                         <td>
                             <a href="/sport/ugc?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>

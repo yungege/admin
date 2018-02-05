@@ -4,6 +4,9 @@ class Service_User_StudentModel extends BasePageService {
     const PAGESIZE = 15;
 
     protected $userModel;
+    protected $trainModel;
+    protected $trainOutsideModel;
+    protected $punchModel;
 
     protected $reqData;
     protected $resData = [
@@ -15,6 +18,9 @@ class Service_User_StudentModel extends BasePageService {
 
     public function __construct() {
         $this->userModel = Dao_UserModel::getInstance();
+        $this->trainModel = Dao_TrainingdoneModel::getInstance();
+        $this->trainOutsideModel = Dao_TrainingDoneOutsideModel::getInstance();
+        $this->punchModel = Dao_PunchModel::getInstance();
     }
 
     protected function __declare() {
@@ -105,10 +111,19 @@ class Service_User_StudentModel extends BasePageService {
             $match['classinfo.classid'] = ['$in' => $classIds];
         }
         $list = $this->userModel->getListByPage($match, $fields, $options);
-
-        if(empty($list))
+        $list = array_column($list,null,'_id');
+        $userIds = array_column($list,'_id');
+       
+        if(empty($list)){
             return $this->resData;
+        }
 
+        $doneCount = $this->doneCoune($userIds);
+        foreach($doneCount as $k => $v){
+
+            $list[$k]['doneCount'] = $v;
+        }   
+        
         foreach ($list as &$row) {
             $mobileArr = [];
             $mobileno = (array)$row['mobileno'];
@@ -134,6 +149,9 @@ class Service_User_StudentModel extends BasePageService {
                 $lastlogin = '<span class="label label-warning">无记录</span>';
             }
             $row['lastlogin'] = $lastlogin;
+            if(empty($row['doneCount'])){
+                $row['doneCount'] = 0;
+            }
             
         }
 
@@ -141,5 +159,81 @@ class Service_User_StudentModel extends BasePageService {
         return $this->resData;
     }
 
-    
+    protected function doneCoune($userIds){
+
+        $where = [
+            'htype' => [
+                '$in' => [1,2,3,4,5,6,7],
+            ],
+            'userid' => [
+                '$in' => $userIds,
+            ],
+        ];
+
+        $fields = [
+            '$project' => [
+                'userid' => 1,
+                'htype' => 1,
+            ]
+        ];
+
+        $group = [
+            '$group' => [
+                '_id' => '$userid',
+                'count' => ['$sum' => 1],
+                'htype' => ['$push' => '$htype'],
+            ]
+        ];
+        $aggregate = [
+            ['$match' => $where],
+            $fields,
+            $group
+        ];
+
+        $list = $this->trainModel->aggregate($aggregate);
+
+        if(!empty($list)){
+            $list = array_column($list,'count','_id');
+        }else{
+            $list = [];
+        }
+
+        $list2 = $this->trainOutsideModel->aggregate($aggregate);
+        if(!empty($list2)){
+            $list2 = array_column($list2,'count','_id');
+            foreach($list2 as $key => $value){
+                if(empty($list[$key])){
+                    $list[$key] = $value;
+                }else{
+                    $list[$key] += $value;
+                }
+            }
+        }
+
+        unset($where['starttime']);
+       
+        $aggregate = [
+            ['$match' => $where],
+            $fields,
+            $group
+        ];
+
+        $list3 = $this->punchModel->aggregate($aggregate);
+        if(!empty($list3)){
+            $list3 = array_column($list3,'count','_id');
+            foreach($list3 as $key => $value){
+                if(empty($list[$key])){
+                    $list[$key] = $value;
+                }else{
+                    $list[$key] += $value;
+                }
+            }
+        }
+        if(empty($list)){
+            return [];
+        }else{
+            return $list;
+        }
+    }
+
 }

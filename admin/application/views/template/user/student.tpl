@@ -163,6 +163,7 @@
                         <th>注册日期</th>
                         <th>上次登录</th>
                         <th>上次锻炼</th>
+                        <th>锻炼次数</th>
                         <!-- <th>关联账号</th> -->
                         <th>操作</th>
                     </tr>
@@ -197,6 +198,7 @@
                                 <span class="label label-warning">无记录</span>
                             {%/if%}
                         </td>
+                        <td>{%$row.doneCount%}</td>
                         <!-- <td></td> -->
                         <td>
                             <a href="/sport/ugc?uid={%$row._id%}" class="btn btn-default btn-xs">UGC</a>
