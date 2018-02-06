@@ -110,7 +110,7 @@ class Service_Stat_UploadExcelModel extends BasePageService {
             $classIds = array_column($classInfos,'_id');
 
             $userList = $userModel->query(
-                ['schoolinfo.schoolid' => $schoolId,'classinfo.classid' => ['$in' => $classIds],'type' => 1],
+                ['schoolinfo.schoolid' => $schoolId,'classinfo.classid' => ['$in' => $classIds],'type' => 1,'$or' => [['schoolinfo.schoolid' =>['$ne' => '587f31732a46800e0a8b4567']],['grade' => ['$nin' => [21,22,23,31,31,33]]]]],
                 ['projection' => ['_id' => 1, 'username' => 1]]
             );
 
@@ -160,7 +160,7 @@ class Service_Stat_UploadExcelModel extends BasePageService {
             $index++;
         }
 
-        xlsHeader(self::$excelHeader[1], '学校锻炼统计.xls');
+        xlsHeader(self::$excelHeader[1], '锻炼完成情况数据统计');
         xlsOutput(array_keys((self::$excelHeader)[1]), $schoolLists);
         exit;
 
@@ -202,7 +202,7 @@ class Service_Stat_UploadExcelModel extends BasePageService {
 
             $schoolId = $schoolInfo['_id'];
             $teacherList = $userModel->query(
-                ['schoolinfo.schoolid' => $schoolId,'teacher_type' => 3,'type' => 2],
+                ['schoolinfo.schoolid' => $schoolId,'teacher_type' => 3,'type' => 2,'$or' => [['schoolinfo.schoolid' =>['$ne' => '587f31732a46800e0a8b4567']],['grade' => ['$nin' => [21,22,23,31,31,33]]]]],
                 ['limit' => 0,'projection' => ['username' => 1,'mobileno'=>1,'grade'=>1,'manageclassinfo' => 1]]
             );
 
@@ -270,7 +270,7 @@ class Service_Stat_UploadExcelModel extends BasePageService {
             $index ++;
         }
 
-        xlsHeader(self::$excelHeader[2], '学校锻炼统计.xls');
+        xlsHeader(self::$excelHeader[2], '完成锻炼数据统计');
         xlsOutput(array_keys((self::$excelHeader)[2]), $schoolTeacherLists);
         exit;
     }
@@ -311,7 +311,7 @@ class Service_Stat_UploadExcelModel extends BasePageService {
 
             $schoolId = $schoolInfo['_id'];
             $classList = $classModel->query(
-                ['schoolid' => $schoolId,'is_test' => 0],
+                ['schoolid' => $schoolId,'is_test' => 0,'$or' => [['schoolid' =>['$ne' => '587f31732a46800e0a8b4567']],['grade' => ['$nin' => [21,22,23,31,31,33]]]]],
                 ['limit' => 0,'projection' => ['name' => 1,'schoolname'=>1,'grade'=>1,'classno' => 1]]
             );
             if(empty($classList)){
@@ -416,7 +416,7 @@ class Service_Stat_UploadExcelModel extends BasePageService {
             $index ++;
         }
 
-        xlsHeader(self::$excelHeader[3], '学校锻炼统计.xls');
+        xlsHeader(self::$excelHeader[3], '各班级数据统计 ');
         xlsOutput(array_keys(self::$excelHeader[3]), $schoolClassLists);
         exit;
     }
