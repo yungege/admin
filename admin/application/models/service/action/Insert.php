@@ -43,7 +43,7 @@ class Service_Action_InsertModel extends BasePageService {
         $urlPreg = "/(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/";
         
         if(
-            (empty($req['name']) || mb_strlen($req['name']) > 12) ||
+            (empty($req['name']) || mb_strlen($req['name']) > 20) ||
             (!isset(Dao_ExerciseactionModel::$type[$req['typeno']])) ||
             (!isset(Dao_ExerciseactionModel::$sex[$req['sex']])) ||
             (!is_numeric($req['actiongroupno']) || $req['actiongroupno'] < 0) ||
