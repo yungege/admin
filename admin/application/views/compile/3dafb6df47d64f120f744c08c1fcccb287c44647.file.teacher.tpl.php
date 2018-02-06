@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2018-01-11 14:15:18
+<?php /* Smarty version Smarty-3.1.13, created on 2018-02-05 15:24:53
          compiled from "/var/www/admin/admin/application/views/template/user/teacher.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12868101605a5700f691f409-94637532%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2018-01-11 11:02:27
-         compiled from "/var/www/admin/admin/application/views/template/user/teacher.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15351183345a56d3c31a2298-22049038%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> c0ce3bd7fa512076bb39b9202f6a1ef5d14fb8e5
+<?php /*%%SmartyHeaderCode:6621723095a7806c599ca95-26377030%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3dafb6df47d64f120f744c08c1fcccb287c44647' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/teacher.tpl',
-<<<<<<< HEAD
-      1 => 1515380743,
-=======
-      1 => 1515380779,
->>>>>>> c0ce3bd7fa512076bb39b9202f6a1ef5d14fb8e5
+      1 => 1515740823,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
       1 => 1510105563,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12868101605a5700f691f409-94637532',
-=======
-      1 => 1510105524,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '15351183345a56d3c31a2298-22049038',
->>>>>>> c0ce3bd7fa512076bb39b9202f6a1ef5d14fb8e5
+  'nocache_hash' => '6621723095a7806c599ca95-26377030',
   'function' => 
   array (
   ),
@@ -53,15 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a5700f6a9a359_51220173',
+  'unifunc' => 'content_5a7806c5b27d86_25352153',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a5700f6a9a359_51220173')) {function content_5a5700f6a9a359_51220173($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-  'unifunc' => 'content_5a56d3c3214405_70148098',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a56d3c3214405_70148098')) {function content_5a56d3c3214405_70148098($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> c0ce3bd7fa512076bb39b9202f6a1ef5d14fb8e5
+<?php if ($_valid && !is_callable('content_5a7806c5b27d86_25352153')) {function content_5a7806c5b27d86_25352153($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -206,6 +182,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         margin-left: 0;
         margin-right: 10px;
     }
+    .class-del{
+        float:right;
+    }
+
+
 </style>
 
 </head>
@@ -552,9 +533,11 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['teacher']->key => $_smarty_tpl->tpl_vars['teacher']->value){
 $_smarty_tpl->tpl_vars['teacher']->_loop = true;
 ?>
-                            <a href="/user/class?classid=<?php echo $_smarty_tpl->tpl_vars['teacher']->value['classid'];?>
+                            <p><a href="/user/class?classid=<?php echo $_smarty_tpl->tpl_vars['teacher']->value['classid'];?>
 "><?php echo $_smarty_tpl->tpl_vars['teacher']->value['classname'];?>
-</a><br/>
+</a> <a class="class-del btn btn-xs btn-danger" data-classid="<?php echo $_smarty_tpl->tpl_vars['teacher']->value['classid'];?>
+" data-uid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+"> X </a> </p>
                             <?php } ?>
                             <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " class="btn btn-xs btn-primary add-class" href="javascript:void(0)">添加班级？</a>
@@ -677,6 +660,7 @@ $_smarty_tpl->tpl_vars['teacher']->_loop = true;
             this.postRelationData();
             this.addClass();
             this.postClassData();
+            this.delClass();
         },
 
         initDate: function(){
@@ -718,6 +702,7 @@ $_smarty_tpl->tpl_vars['teacher']->_loop = true;
             this.reSel = $('#re-sel');
             this.reForm = $('form[name=relation]');
             this.reFormClass = $('form[name=class]');
+            this.delClassBtn = $('.class-del');
         },
 
         // 清楚查询条件
@@ -757,13 +742,45 @@ $_smarty_tpl->tpl_vars['teacher']->_loop = true;
             });
         },
 
+        delClass: function(){
+            var me = this;
+            me.delClassBtn.unbind().bind('click', function(){
+                
+                var classid = $.trim($(this).data('classid'));
+                var uid = $.trim($(this).data('uid'));
+                var postData = "";
+                var parent = $(this).parent();
+                $(this).attr("disabled","disabled");
+                postData += "classid=" + classid + "&uid=" + uid;
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: '/user/delclass', 
+                    data: postData,
+                    success: function(json){
+
+                        if(json.errCode == 0){
+                            parent.remove();
+                        }
+                        else{
+
+                            alert(json.errMessage);
+                            return false;
+                        }
+                    },
+                });
+
+            });
+        },
+
         postClassData: function(){
             var me = this;
             me.reSubBtnClass.unbind().bind('click',function(){
 
                 var data = me.reFormClass.serialize();
 
-                 $.ajax({
+                $.ajax({
                     type: 'POST',
                     dataType: 'json',
                     url: '/user/addclass', data,

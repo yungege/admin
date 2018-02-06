@@ -101,9 +101,24 @@
                 </label>
             </li>
             
+            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
+                <label class="control-label" style="width:80px;">统计分项：</label>
+                
+                <label class="radio-inline" style="width:95px;">
+                    <input type="radio" value="1" name="stat_type" checked="true"/>锻炼完成情况数据统计
+                </label>
+                <label class="radio-inline" style="width:95px;">
+                    <input type="radio" value="2" name="stat_type"/>完成锻炼数据统计
+                </label>
+                <label class="radio-inline" style="width:95px;">
+                    <input type="radio" value="3" name="stat_type"/>各班级数据统计
+                </label>
+            </li>
+
             <li style="overflow:hidden;">
-                <button type="button" class="btn btn-primary" id="subbtn" style="width:80px;">查询</button>
-                <button type="button" class="btn btn-info" id="export" style="width:80px;margin-left:20px;" >导出</button>
+                <button type="button" class="btn btn-primary" id="subbtn" style="width:100px;">查询</button>
+                <button type="button" class="btn btn-info" id="export" style="width:100px;margin-left:20px;" >导出</button>
+                <button type="button" class="btn btn-info" id="export-word" style="width:100px;margin-left:20px;" >导出Word</button>
             </li>
         </ul>
 

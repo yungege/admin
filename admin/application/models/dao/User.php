@@ -119,6 +119,7 @@ class Dao_UserModel extends Db_Mongodb{
         'upgrade_year' => 0, // 升级年级信息(升级年-月) 脚本专用
         'create_time' => 0 , //创建时间
         'my_teacher' => '',
+        'teacher_type' => 0, //老师类型 1-系主任 2-班主任 3-体育老师 4-体验老师
     ];
     
     protected function __construct(){

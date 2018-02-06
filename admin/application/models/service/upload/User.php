@@ -11,13 +11,16 @@ class Service_Upload_UserModel extends BasePageService {
     protected $classInfo = [];
     protected $userInfo = [];
 
-    protected $grades = [
+    protected static $grades = [
         '1年级' => 11,
         '2年级' => 12,
         '3年级' => 13,
         '4年级' => 14,
         '5年级' => 15,
         '6年级' => 16,
+        '7年级' => 21,
+        '8年级' => 22,
+        '9年级' => 23,
     ];
     protected $classModel;
     protected $schoolModel;
@@ -54,8 +57,8 @@ class Service_Upload_UserModel extends BasePageService {
         $this->schoolInfo = $this->schoolModel->getSchoolById($this->schoolId,$schoolFields);
         $datas = $this->importExcel($_FILES['tmp_name'],$ext);
 
-        var_dump($datas);
-        exit;
+        // var_dump($datas);
+        // exit;
 
         $this->userBaseData($datas);
 
@@ -69,8 +72,6 @@ class Service_Upload_UserModel extends BasePageService {
     }
 
     protected function userBaseData($datas) {
-
-        exit;
 
         $class = [];
         unset($datas[1]);
@@ -90,17 +91,29 @@ class Service_Upload_UserModel extends BasePageService {
         $this->userInfo['schoolinfo']['schoolname'] = $this->schoolInfo['name'];
 
         foreach($datas as $data){
+
             $this->userInfo['username'] = trim($data[0]);
             $this->userInfo['nickname'] = trim($data[0]);
-            $this->userInfo['classinfo']['classname'] = trim($data[4]) . trim($data[5]);
+            $this->userInfo['classinfo']['classname'] = trim($data[3]);
             if(empty($this->classInfos[$this->userInfo['classinfo']['classname']])){
-                $this->addClass($this->userInfo['classinfo']['classname']]);
+                $this->addClass($this->userInfo['classinfo']['classname']);
             }
-            $this->userInfo['classinfo']['classid'] = $this->classInfos[$this->userInfo['classinfo']['classname']]['_id'];
+            $this->userInfo['classinfo']['classid'] = $this->classInfos[$this->userInfo['classinfo']['classname']]['classid'];
             $this->userInfo['grade'] = $this->classInfos[$this->userInfo['classinfo']['classname']]['grade'];
-            $this->userInfo['birthday'] = strtotime(trim($data[6]));
+            $this->userInfo['birthday'] = strtotime(trim($data[1]));
+            // $this->userInfo['birthday'] =  intval(((int)$data[1]-25569)*3600*24);
+
+// var_dump($this->userInfo['birthday']);
+// exit;
+
+
             $this->userInfo['create_time'] = time();
-            if($data[1] == '男'){
+
+
+            // var_dump($this->userInfo);
+            // exit;
+
+            if(trim($data[2]) == '男'){
                 $this->userInfo['sex'] = 0;
             }else{
                 $this->userInfo['sex'] = 1;
@@ -123,7 +136,7 @@ class Service_Upload_UserModel extends BasePageService {
         $this->classInfo['schoolname'] = $this->schoolInfo['name'];
         $this->classInfo['schoolid'] = $this->schoolInfo['_id'];
         $this->classInfo['createtime'] = time();
-        $this->classInfo['grade'] = (self::$grades)[$gradeNo];
+        $this->classInfo['grade'] = (self::$grades)[$gradeNo[1][0]];
         $this->classInfo['classno'] = $classData[2][0];
         $this->classInfo['createtime'] = time();
         $classId = $this->classModel->insert($this->classInfo);

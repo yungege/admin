@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2018-01-11 14:12:27
+<?php /* Smarty version Smarty-3.1.13, created on 2018-01-26 18:07:06
          compiled from "/var/www/admin/admin/application/views/template/teacher/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:4736622945a57004be52465-54296719%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3119758855a6afdca57f883-37145339%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0c26285ebce1f4024b5a42acac12e43e2dad98db' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/teacher/add.tpl',
-      1 => 1514444556,
+      1 => 1516252405,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '4736622945a57004be52465-54296719',
+  'nocache_hash' => '3119758855a6afdca57f883-37145339',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a57004c08fbf4_97880390',
+  'unifunc' => 'content_5a6afdca6c7ff5_88432361',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a57004c08fbf4_97880390')) {function content_5a57004c08fbf4_97880390($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a6afdca6c7ff5_88432361')) {function content_5a6afdca6c7ff5_88432361($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -461,7 +461,15 @@ $_smarty_tpl->tpl_vars['gradeName']->_loop = true;
                     <label for="username">姓名</label>
                     <input type="text" class="form-control" id="username" placeholder="Username" name="username">
                 </div>
-                            
+                     
+                <div class="form-group">
+                    <label for="isTest">是否是体验老师</label>
+                    <select id="isTest" class="form-control" name="isTest">
+                        <option value="0" selected>不是</option>
+                        <option value="1" >是</option>
+                    </select>  
+                </div>       
+                 
                 <button id="sub" type="button" class="btn btn-primary">确认提交</button>
                <!--  <button id="button" type="button" class="btn btn-danger" >取&emsp;消</button> -->
             </form>

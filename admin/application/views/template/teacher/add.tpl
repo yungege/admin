@@ -108,7 +108,15 @@
                     <label for="username">姓名</label>
                     <input type="text" class="form-control" id="username" placeholder="Username" name="username">
                 </div>
-                            
+                     
+                <div class="form-group">
+                    <label for="isTest">是否是体验老师</label>
+                    <select id="isTest" class="form-control" name="isTest">
+                        <option value="0" selected>不是</option>
+                        <option value="1" >是</option>
+                    </select>  
+                </div>       
+                 
                 <button id="sub" type="button" class="btn btn-primary">确认提交</button>
                <!--  <button id="button" type="button" class="btn btn-danger" >取&emsp;消</button> -->
             </form>

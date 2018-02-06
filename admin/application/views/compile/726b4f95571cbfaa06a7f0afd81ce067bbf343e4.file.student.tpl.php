@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2018-01-11 11:01:19
+<?php /* Smarty version Smarty-3.1.13, created on 2018-02-06 10:23:22
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10533974585a56d37f1b59c0-71779414%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2018-01-11 11:03:16
-         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:837390875a56d3f4154c28-90928709%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> c0ce3bd7fa512076bb39b9202f6a1ef5d14fb8e5
+<?php /*%%SmartyHeaderCode:13512916345a79119a50b055-50978467%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
-<<<<<<< HEAD
-      1 => 1515380743,
-=======
-      1 => 1515380779,
->>>>>>> c0ce3bd7fa512076bb39b9202f6a1ef5d14fb8e5
+      1 => 1517796445,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-<<<<<<< HEAD
-      1 => 1510105563,
+      1 => 1512353715,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10533974585a56d37f1b59c0-71779414',
-=======
-      1 => 1510105524,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '837390875a56d3f4154c28-90928709',
->>>>>>> c0ce3bd7fa512076bb39b9202f6a1ef5d14fb8e5
+  'nocache_hash' => '13512916345a79119a50b055-50978467',
   'function' => 
   array (
   ),
@@ -53,15 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a56d37f3893f0_23318254',
+  'unifunc' => 'content_5a79119a61a9e2_62649898',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a56d37f3893f0_23318254')) {function content_5a56d37f3893f0_23318254($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
-=======
-  'unifunc' => 'content_5a56d3f41ced24_57943533',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a56d3f41ced24_57943533')) {function content_5a56d3f41ced24_57943533($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
->>>>>>> c0ce3bd7fa512076bb39b9202f6a1ef5d14fb8e5
+<?php if ($_valid && !is_callable('content_5a79119a61a9e2_62649898')) {function content_5a79119a61a9e2_62649898($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -539,6 +515,7 @@ $_smarty_tpl->tpl_vars['val']->_loop = true;
                         <th>注册日期</th>
                         <th>上次登录</th>
                         <th>上次锻炼</th>
+                        <th>锻炼次数</th>
                         <!-- <th>关联账号</th> -->
                         <th>操作</th>
                     </tr>
@@ -598,6 +575,8 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                                 <span class="label label-warning">无记录</span>
                             <?php }?>
                         </td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['doneCount'];?>
+</td>
                         <!-- <td></td> -->
                         <td>
                             <a href="/sport/ugc?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>

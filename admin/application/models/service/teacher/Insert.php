@@ -70,6 +70,11 @@ class Service_Teacher_InsertModel extends BasePageService {
             return false;
 		}
 
+		if($req['isTest'] == 1){
+			$this->userInfo['is_test'] = 1;
+		}else{
+			$this->userInfo['is_test'] = 0;
+		}
 		$this->userInfo['type'] = 2;
 		$this->userInfo['username'] = trim($req['username']);
 		$this->userInfo['nickname'] = $this->userInfo['username'];

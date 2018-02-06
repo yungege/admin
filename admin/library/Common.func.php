@@ -46,4 +46,53 @@ class CommonFuc
         $key = 'ttxs_redis_' . $type . '_' . $uniqueFlag;
         return $key;
     }
+
+    public static function arraySort($array, $key){ 
+        if(is_array($array)){ 
+            $key_array = null; 
+            $new_array = null; 
+            for( $i = 0; $i < count( $array ); $i++ ){ 
+                $key_array[$array[$i][$key]] = $i; 
+            } 
+            ksort($key_array); 
+            $j = 0; 
+            foreach($key_array as $k => $v){ 
+                $new_array[$j] = $array[$v]; 
+                $j++; 
+            } 
+            unset($key_array); 
+            return $new_array; 
+        }else{ 
+            return []; 
+        } 
+    } 
+
+        // excel 头
+    public static function xlsWriteHeader($outputFileName, $head, $separator = "\t")
+    {
+        if (file_exists($outputFileName)) {
+            unlink($outputFileName);
+        }
+        // 输出表头
+        $headStr = '';
+        foreach ($head as $hh) {
+            $headStr .= $hh . $separator;
+        }
+        $headStr = rtrim($headStr, $separator) . "\n";
+        $headStr = mb_convert_encoding($headStr, "GBK", "UTF-8");
+        file_put_contents($outputFileName, $headStr, FILE_APPEND);
+    }
+
+    // excel 内容
+    public static function xlsWriteContent($outputFileName, $headKeys, $data, $separator = "\t")
+    {
+        foreach ($data as $row) {
+            $str = '';
+            for ($i = 0; $i < count($headKeys); $i++) {
+                $column = mb_convert_encoding($row[$headKeys[$i]], 'GBK', 'UTF-8');
+                $str .= $column . $separator;
+            }
+            file_put_contents($outputFileName, rtrim($str, $separator) . "\n", FILE_APPEND);
+        }
+    }
 }

@@ -1,19 +1,18 @@
 <?php
-class Service_Stat_TrainStatModel extends BasePageService {
+class Service_Stat_UploadWordModel extends BasePageService {
 
-    protected $schoolId;
-    protected $schoolModel;
+    protected $province;
+    protected $city;
+    protected $district;
+    protected $school;
+    protected $class;
     protected $userModel;
-    protected $trainModel;
-    protected $statData = [];
-    protected $gradeNo = [11,12,13,14,15,16];
-    protected $classModel;
-    protected $trainOutsideModel;
-    protected $punchModel;
 
-    protected $startTime;
-    protected $endTime;
-    protected $userIds;
+    protected $trainModel;
+
+    protected $resData = [
+        
+    ];
 
     public function __construct() {
         ob_start(); //打开缓冲区
@@ -21,10 +20,12 @@ class Service_Stat_TrainStatModel extends BasePageService {
         $this->userModel = Dao_UserModel::getInstance();
         $this->trainModel = Dao_TrainingdoneModel::getInstance();
         $this->classModel = Dao_ClassinfoModel::getInstance();
+        $this->schoolModel = Dao_SchoolinfoModel::getInstance();
         $this->trainOutsideModel = Dao_TrainingDoneOutsideModel::getInstance();
         $this->punchModel = Dao_PunchModel::getInstance();
-        $this->startTime = 1515945600;
-        $this->endTime = 1516550399;
+        $this->startTime;
+        $this->endTime;
+        
     }
 
     protected function __declare() {
@@ -32,28 +33,46 @@ class Service_Stat_TrainStatModel extends BasePageService {
     }
 
     protected function __execute($req) {
+        
+        $req = $req['get'];
 
+        $this->startTime = strtotime($req['startTime']);;
+        $this->endTime = strtotime($req['endTime']) + 86399;
+        $this->schoolId = $req['school'];
+       
         $content = "<tr >  
         <td width='70' height='80' valign='center' align='center' style='font-weight:bold;font-size:15px;background:#DDDDDD'>班级名</td>  
         <td width='60' height='80' valign='center' align='center' style='font-weight:bold;font-size:15px;background:#DDDDDD'>锻炼次数</td>  
         <td width='425' height='80' valign='center' align='center' style='font-weight:bold;font-size:15px;background:#DDDDDD'>学生名单</td>  
         </tr>";
 
-        $this->schoolId = "587f31732a46800e0a8b4567";
-        $schoolFields = ['name'];
+        $schoolFields = ['name','_id'];
         $schoolInfo = $this->schoolModel->getSchoolById($this->schoolId,$schoolFields);
+
+        // var_dump($req);
+        // exit;
 
         $classWhere = [
             'schoolid' => $this->schoolId,
             'is_test' => ['$ne' => 1],
-            'grade' => ['$in' => $this->gradeNo],
+            // 'grade' => ['$in' => $this->gradeNo],
             'branch_school' => null,
         ];
-       
+
+        if(!empty($req['grade']) && $req['grade'] != -1 && $req['grade'] != "undefined"){
+            $classWhere['grade'] = (int)$req['grade'];
+        }
+        if(!empty($req['class']) && $req['class'] != "undefined"  && $req['class'] != -1){
+            $classWhere['_id'] = $req['class'];
+        }
+
         $classOptions = [
             'projection' => ['name' => 1 ,'_id' => 1,'grade' => 1,'classno' => 1],
             'sort' => ['grade' => 1,'classno' => 1]
         ];
+
+        // var_export($classWhere);
+        // exit;
 
         $classInfos = $this->classModel->query($classWhere,$classOptions);
         $arr1 = [];
@@ -73,11 +92,12 @@ class Service_Stat_TrainStatModel extends BasePageService {
             $userWhere = [
                 'classinfo.classid' => $classInfo['_id'],
                 'type' => 1,
+                '$or' => [['schoolinfo.schoolid' =>['$ne' => '587f31732a46800e0a8b4567']],['grade' => ['$nin' => [21,22,23,31,31,33]]]],
             ];
             $option['projection'] = ['username' => 1,'ssoid' => 1,'mobileno' => 1,'_id' => 1, 'schoolinfo' => 1,'grade' => 1,'classinfo'=>1];
             $userInfos = $this->userModel->query($userWhere,$option);
             if(empty($userInfos)){
-                break;
+                continue;
             }
 
             $className = $userInfos[0]['classinfo']['classname'];
@@ -137,6 +157,17 @@ class Service_Stat_TrainStatModel extends BasePageService {
                     }
                 }
             }
+
+            unset($where['starttime']);
+            $where['ctime'] = [
+                '$gte' => $this->startTime,
+                '$lte' => $this->endTime,
+            ];
+            $aggregate = [
+                ['$match' => $where],
+                $fields,
+                $group
+            ];
 
             $list3 = $this->punchModel->aggregate($aggregate);
             if(!empty($list3)){
@@ -200,7 +231,6 @@ class Service_Stat_TrainStatModel extends BasePageService {
         
         $this->uploadWord($content,$schoolInfo[name]);
     }
-
 
     protected function uploadWord($content,$school){
 
