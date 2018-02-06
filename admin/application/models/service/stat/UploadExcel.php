@@ -315,7 +315,6 @@ class Service_Stat_UploadExcelModel extends BasePageService {
                 ['limit' => 0,'projection' => ['name' => 1,'schoolname'=>1,'grade'=>1,'classno' => 1]]
             );
 
-
             $arr1 = [];
             $arr2 = [];
             foreach($classList as $v){  
