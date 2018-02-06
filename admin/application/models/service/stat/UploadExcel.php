@@ -314,6 +314,17 @@ class Service_Stat_UploadExcelModel extends BasePageService {
                 ['schoolid' => $schoolId,'is_test' => 0,'$or' => [['schoolid' =>['$ne' => '587f31732a46800e0a8b4567']],['grade' => ['$nin' => [21,22,23,31,31,33]]]]],
                 ['limit' => 0,'projection' => ['name' => 1,'schoolname'=>1,'grade'=>1,'classno' => 1]]
             );
+
+
+            $arr1 = [];
+            $arr2 = [];
+            foreach($classList as $v){  
+                
+                $arr1[] = $v['grade'];  
+                $arr2[] = (int)$v['classno'];
+            }  
+            array_multisort($arr1, SORT_ASC,$arr2, SORT_ASC ,$classList);
+
             if(empty($classList)){
                 $index ++;
                 continue;
