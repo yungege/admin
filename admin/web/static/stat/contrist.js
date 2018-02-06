@@ -34,6 +34,7 @@ $(function(){
             this.table          = $('#charts-table');
 
             this.source         = $('input[name=source]');
+            this.statType       = $('input[name=stat_type]');
 
             // chartsDom声明
             this.trainCount     = $('#trainCount');
@@ -365,59 +366,82 @@ $(function(){
         },
 
         download: function(){
-            var me = this,
-                sourceName = [
-                    '总体数据',
-                    '分项数据',
-                    '体测与锻炼数据',
-                ];
-                    
+            var me = this;
+
             me.downBtn.unbind().bind('click', function(){
-                var file = [],
-                    plat = me.provinceSel.val(),
-                    city = $('#city').find('option:selected').text(),
-                    district = $('#district').find('option:selected').text(),
-                    school = $('#school').find('option:selected').text(),
-                    grade = $('#grade').find('option:selected').text(),
-                    className = $('#class').find('option:selected').text(),
-                    user = $('#user').find('option:selected').text(),
-                    startTime = me.startBtn.val(),
-                    endTime = me.endBtn.val(),
-                    source = $('input[type=\'radio\']:checked').val() - 1;
-                source = sourceName[source];
 
-                if(plat == -1){
-                    file.push('全平台');
-                }
-                else{
-                    file.push(me.provinceSel.find('option:selected').text());
-                }
-                
-                file.push(city,district,school,grade,className,user);
-                file = file.filter(function(v){
-                    return (v != '' && v != '全部');
-                });
+                var statType = $('input[name=\'stat_type\']:checked').val();
 
-                startTime = startTime.replace(/(-)/g, '/');
-                endTime = endTime.replace(/(-)/g, '/');
-                file.push(startTime, endTime);
-                file.push(source);
-                file = file.join('-');
+                city = $('#city').find('option:selected').text(),
+                district = $('#district').find('option:selected').text(),
+                school = $('#school').find('option:selected').val();
+                grade = $('#grade').find('option:selected').val(),
+                className = $('#class').find('option:selected').val(),
+                startTime = me.startBtn.val(),
+                endTime = me.endBtn.val();
 
-                if(source == "总体数据"){
+                var url = '?city=' + city + '&district=' + district +'&school=' + school +'&grade=' + grade + '&class=' + className + '&startTime=' + startTime + '&endTime=' + endTime + '&statType=' + statType; 
+                window.location = '/stat/uploadexcel' + url;
 
-                    school = $('#school').find('option:selected').val();
-                    grade = $('#grade').find('option:selected').val(),
-                    className = $('#class').find('option:selected').val();
-                    var url = '?school=' + school +'&grade=' + grade + '&class=' + className + '&startTime=' + startTime + '&endTime=' + endTime;
-                    window.location = '/stat/total' + url;
-
-                }else{
-                    window.location = '/stat/contrist?down='+encodeURI(file)+'&'+me.form.serialize();
-                }
-                
-            })
+                alert(statType);
+                return false;
+            });
         },
+
+        // download: function(){
+        //     var me = this,
+        //         sourceName = [
+        //             '总体数据',
+        //             '分项数据',
+        //             '体测与锻炼数据',
+        //         ];
+                    
+        //     me.downBtn.unbind().bind('click', function(){
+        //         var file = [],
+        //             plat = me.provinceSel.val(),
+        //             city = $('#city').find('option:selected').text(),
+        //             district = $('#district').find('option:selected').text(),
+        //             school = $('#school').find('option:selected').text(),
+        //             grade = $('#grade').find('option:selected').text(),
+        //             className = $('#class').find('option:selected').text(),
+        //             user = $('#user').find('option:selected').text(),
+        //             startTime = me.startBtn.val(),
+        //             endTime = me.endBtn.val(),
+        //             source = $('input[type=\'radio\']:checked').val() - 1;
+        //         source = sourceName[source];
+
+        //         if(plat == -1){
+        //             file.push('全平台');
+        //         }
+        //         else{
+        //             file.push(me.provinceSel.find('option:selected').text());
+        //         }
+                
+        //         file.push(city,district,school,grade,className,user);
+        //         file = file.filter(function(v){
+        //             return (v != '' && v != '全部');
+        //         });
+
+        //         startTime = startTime.replace(/(-)/g, '/');
+        //         endTime = endTime.replace(/(-)/g, '/');
+        //         file.push(startTime, endTime);
+        //         file.push(source);
+        //         file = file.join('-');
+
+        //         if(source == "总体数据"){
+
+        //             school = $('#school').find('option:selected').val();
+        //             grade = $('#grade').find('option:selected').val(),
+        //             className = $('#class').find('option:selected').val();
+        //             var url = '?school=' + school +'&grade=' + grade + '&class=' + className + '&startTime=' + startTime + '&endTime=' + endTime;
+        //             window.location = '/stat/total' + url;
+
+        //         }else{
+        //             window.location = '/stat/contrist?down='+encodeURI(file)+'&'+me.form.serialize();
+        //         }
+                
+        //     })
+        // },
 
         downloadWord: function(){
             var me = this;
