@@ -3,6 +3,7 @@ class Service_Stat_TotalModel extends BasePageService {
 
     protected $startTime;
     protected $endTime;
+
     public static $excelHeader = [
         'school'    => '学校',
         'class'     => '班级',
@@ -168,7 +169,7 @@ class Service_Stat_TotalModel extends BasePageService {
             $index ++;
         }
 
-        xlsHeader(self::$excelHeader, '测试.xls');
+        xlsHeader(self::$excelHeader, '学校锻炼统计.xls');
         xlsOutput(array_keys(self::$excelHeader), $schoolClassLists);
         exit;
     }

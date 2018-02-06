@@ -1,33 +1,23 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2018-01-30 01:15:22
+<?php /* Smarty version Smarty-3.1.13, created on 2018-02-06 10:28:09
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11328354925a6f56aadcd9a9-70723072%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.13, created on 2018-01-31 12:49:09
-         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3469641435a714ac5846432-63953042%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> e4f93a7d307f2777db20036c01dc13b3c43e0361
+<?php /*%%SmartyHeaderCode:5589982095a7912b95211d4-81431259%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1516782053,
+      1 => 1517883138,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1512353715,
+      1 => 1510105563,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '11328354925a6f56aadcd9a9-70723072',
-=======
-  'nocache_hash' => '3469641435a714ac5846432-63953042',
->>>>>>> e4f93a7d307f2777db20036c01dc13b3c43e0361
+  'nocache_hash' => '5589982095a7912b95211d4-81431259',
   'function' => 
   array (
   ),
@@ -45,15 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-<<<<<<< HEAD
-  'unifunc' => 'content_5a6f56aaf2af42_29570554',
+  'unifunc' => 'content_5a7912b9670768_91193711',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a6f56aaf2af42_29570554')) {function content_5a6f56aaf2af42_29570554($_smarty_tpl) {?><!DOCTYPE html>
-=======
-  'unifunc' => 'content_5a714ac58d7bd1_23465111',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a714ac58d7bd1_23465111')) {function content_5a714ac58d7bd1_23465111($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> e4f93a7d307f2777db20036c01dc13b3c43e0361
+<?php if ($_valid && !is_callable('content_5a7912b9670768_91193711')) {function content_5a7912b9670768_91193711($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -471,6 +455,20 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 </label>
             </li>
             
+            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
+                <label class="control-label" style="width:80px;">统计分项：</label>
+                
+                <label class="radio-inline" style="width:95px;">
+                    <input type="radio" value="1" name="stat_type" checked="true"/>锻炼完成情况数据统计
+                </label>
+                <label class="radio-inline" style="width:95px;">
+                    <input type="radio" value="2" name="stat_type"/>完成锻炼数据统计
+                </label>
+                <label class="radio-inline" style="width:95px;">
+                    <input type="radio" value="3" name="stat_type"/>各班级数据统计
+                </label>
+            </li>
+
             <li style="overflow:hidden;">
                 <button type="button" class="btn btn-primary" id="subbtn" style="width:100px;">查询</button>
                 <button type="button" class="btn btn-info" id="export" style="width:100px;margin-left:20px;" >导出</button>

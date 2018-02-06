@@ -1,12 +1,11 @@
 <?php
-class AddskuAction extends BaseAction {
+class UploadExcelAction extends BaseAction {
 
     protected function __declare(){
         $this->declareParams = true;
-        $this->declarePageService = 'Service_Project_AddSkuModel';
+        $this->declarePageService = 'Service_Stat_UploadExcelModel';
         $this->declareRender = [
             'interface' => [
-                
             ],
         ];
     }

@@ -92,6 +92,7 @@ class Service_Stat_UploadWordModel extends BasePageService {
             $userWhere = [
                 'classinfo.classid' => $classInfo['_id'],
                 'type' => 1,
+                '$or' => [['schoolinfo.schoolid' =>['$ne' => '587f31732a46800e0a8b4567']],['grade' => ['$nin' => [21,22,23,31,31,33]]]],
             ];
             $option['projection'] = ['username' => 1,'ssoid' => 1,'mobileno' => 1,'_id' => 1, 'schoolinfo' => 1,'grade' => 1,'classinfo'=>1];
             $userInfos = $this->userModel->query($userWhere,$option);
