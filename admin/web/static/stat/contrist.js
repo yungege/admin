@@ -383,8 +383,8 @@ $(function(){
                 var url = '?city=' + city + '&district=' + district +'&school=' + school +'&grade=' + grade + '&class=' + className + '&startTime=' + startTime + '&endTime=' + endTime + '&statType=' + statType; 
                 window.location = '/stat/uploadexcel' + url;
 
-                alert(statType);
-                return false;
+                // alert(statType);
+                // return false;
             });
         },
 
