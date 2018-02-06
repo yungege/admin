@@ -13,6 +13,9 @@ $(function(){
             this.postData();
             this.download();
             this.downloadWord();
+
+            this.time();
+
         },
 
         getDom: function(){
@@ -36,12 +39,44 @@ $(function(){
             this.source         = $('input[name=source]');
             this.statType       = $('input[name=stat_type]');
 
+            this.halfQuarter    = $('#half_quarter_time');
+            this.quarter    = $('#quarter_time');
+
             // chartsDom声明
             this.trainCount     = $('#trainCount');
             this.trainTime      = $('#trainTime');
             this.trainCal       = $('#trainCal');
             this.doneRate       = $('#doneRate');
             this.chartsDoms     = ['charts'];
+
+        },
+
+        time: function(){
+            var me = this;
+
+            me.halfQuarter.unbind().bind('click',function(){
+                var strTime = me.startBtn.val();
+                var startTime = new Date(Date.parse(strTime.replace(/-/g,  "/")));
+                var endTime =  new Date(startTime.getTime() + 45 * 24 * 60 * 60 * 1000);
+                var year = endTime.getFullYear();  
+                var month =(endTime.getMonth() + 1).toString();  
+                var day = (endTime.getDate()).toString();
+                var str = year + '-' + month + '-' + day;
+
+                me.endBtn.val(str);
+            });
+
+            me.quarter.unbind().bind('click',function(){
+                var strTime = me.startBtn.val();
+                var startTime = new Date(Date.parse(strTime.replace(/-/g,  "/")));
+                var endTime =  new Date(startTime.getTime() + 90 * 24 * 60 * 60 * 1000);
+                var year = endTime.getFullYear();  
+                var month =(endTime.getMonth() + 1).toString();  
+                var day = (endTime.getDate()).toString();
+                var str = year + '-' + month + '-' + day;
+
+                me.endBtn.val(str);
+            });
 
         },
 

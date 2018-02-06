@@ -1,23 +1,33 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2018-02-06 11:00:46
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14449037035a791a5e279925-37579022%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2018-02-06 13:51:15
+         compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:10948889685a794253d03342-84387293%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 5dedd1eab17f0feb9c4f6ad33613871f09cca091
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1517883138,
+      1 => 1517893372,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+      1 => 1512353715,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '14449037035a791a5e279925-37579022',
+=======
+  'nocache_hash' => '10948889685a794253d03342-84387293',
+>>>>>>> 5dedd1eab17f0feb9c4f6ad33613871f09cca091
   'function' => 
   array (
   ),
@@ -35,9 +45,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a791a5e3cce12_09432787',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a791a5e3cce12_09432787')) {function content_5a791a5e3cce12_09432787($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a794253e03338_30799422',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a794253e03338_30799422')) {function content_5a794253e03338_30799422($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 5dedd1eab17f0feb9c4f6ad33613871f09cca091
 <html lang="en">
 
 <head>
@@ -387,7 +403,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     </div>
                     <div class="col-md-4">
                         <div class="form-group" style="border-bottom:1px ;overflow:hidden;margin-bottom:10px;">
-                            <p><strong>时间维度：</strong></p>
+                            <p><strong>时间维度：</strong>  <a class="btn btn-primary btn-sm" style="margin-left: 10px;" id="half_quarter_time">半个季度</a> <a  class="btn btn-primary btn-sm" style="margin-left: 10px;" id="quarter_time">一个季度</a>  </p>
                             <div class="input-group">
                                 <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['initStart'];?>
 " data-type="time" id="date_start" name="start" type="text" class="form-control date_start date" data-date-format="yyyy-mm-dd"/>
