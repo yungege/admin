@@ -416,7 +416,7 @@ class Service_Stat_UploadExcelModel extends BasePageService {
             $index ++;
         }
 
-        xlsHeader(self::$excelHeader[3], '各班级数据统计.xls');
+        xlsHeader(self::$excelHeader[3], '各班级数据统计');
         xlsOutput(array_keys(self::$excelHeader[3]), $schoolClassLists);
         exit;
     }
