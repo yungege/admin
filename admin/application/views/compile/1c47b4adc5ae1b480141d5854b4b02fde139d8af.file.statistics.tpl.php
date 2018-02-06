@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2018-02-02 10:31:19
+<?php /* Smarty version Smarty-3.1.13, created on 2018-02-06 10:11:20
          compiled from "/var/www/admin/admin/application/views/template/stat/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8965299285a73cd777d5779-35914327%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:17920966765a790ec81bb600-22592816%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1c47b4adc5ae1b480141d5854b4b02fde139d8af' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/stat/statistics.tpl',
-      1 => 1517192195,
+      1 => 1517883051,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+      1 => 1512353715,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '8965299285a73cd777d5779-35914327',
+  'nocache_hash' => '17920966765a790ec81bb600-22592816',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a73cd77927cf3_92414427',
+  'unifunc' => 'content_5a790ec8229eb0_90720417',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a73cd77927cf3_92414427')) {function content_5a73cd77927cf3_92414427($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a790ec8229eb0_90720417')) {function content_5a790ec8229eb0_90720417($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -455,6 +455,20 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                 </label>
             </li>
             
+            <li style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:15px;padding-bottom:5px;">
+                <label class="control-label" style="width:80px;">统计分项：</label>
+                
+                <label class="radio-inline" style="width:95px;">
+                    <input type="radio" value="1" name="stat_type" checked="true"/>锻炼完成情况数据统计
+                </label>
+                <label class="radio-inline" style="width:95px;">
+                    <input type="radio" value="2" name="stat_type"/>完成锻炼数据统计
+                </label>
+                <label class="radio-inline" style="width:95px;">
+                    <input type="radio" value="3" name="stat_type"/>各班级数据统计
+                </label>
+            </li>
+
             <li style="overflow:hidden;">
                 <button type="button" class="btn btn-primary" id="subbtn" style="width:100px;">查询</button>
                 <button type="button" class="btn btn-info" id="export" style="width:100px;margin-left:20px;" >导出</button>
