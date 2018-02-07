@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2018-02-06 18:12:45
+<?php /* Smarty version Smarty-3.1.13, created on 2018-02-07 11:14:28
          compiled from "/var/www/admin/admin/application/views/template/log/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:21351718025a797f9dee68d7-57220046%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2300204275a7a6f146c1805-36655686%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e03a642fb3752bf3c27b1c4e70f63f4d0da52068' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/log/index.tpl',
-      1 => 1517911461,
+      1 => 1517972782,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '21351718025a797f9dee68d7-57220046',
+  'nocache_hash' => '2300204275a7a6f146c1805-36655686',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a797f9e0255d7_63410838',
+  'unifunc' => 'content_5a7a6f14750022_75791201',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a797f9e0255d7_63410838')) {function content_5a797f9e0255d7_63410838($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a7a6f14750022_75791201')) {function content_5a7a6f14750022_75791201($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -453,13 +453,13 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                         
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id='log-list'>
                     <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['content']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                    <tr>
+                    <tr >
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value;?>
 </td>
                     </tr>

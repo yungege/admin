@@ -115,9 +115,9 @@
                         
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id='log-list'>
                     {%foreach from=$content item=row%}
-                    <tr>
+                    <tr >
                         <td>{%$row%}</td>
                     </tr>
                     {%/foreach%}
