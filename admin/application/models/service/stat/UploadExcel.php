@@ -256,7 +256,7 @@ class Service_Stat_UploadExcelModel extends BasePageService {
                 $item = [
                     'school' => $schoolInfo['name'],
                     'tyName' => $crow['username'],
-                    'tyMobile' => implode(',',$crow['mobileno']),
+                    'tyMobile' => is_array($crow['mobileno']) ? implode(',',$crow['mobileno']) : $crow['mobileno'],
                     'teacherType' => '体育老师',
                     'classNo' => count($crow['manageclassinfo']),
                     'userCount' => $userCount,
@@ -383,7 +383,7 @@ class Service_Stat_UploadExcelModel extends BasePageService {
                                     if(empty($t1)){
                                         $t1 = [
                                             'name' => $trow['username'],
-                                            'mobile' => $trow['mobileno'][0],
+                                            'mobile' => is_array($trow['mobileno']) ? implode(',',$trow['mobileno']) : $trow['mobileno'],
                                         ];
                                     }
                                 }
@@ -392,7 +392,7 @@ class Service_Stat_UploadExcelModel extends BasePageService {
                                     if(empty($t2)){
                                         $t2 = [
                                             'name' => $trow['username'],
-                                            'mobile' => $trow['mobileno'][0],
+                                            'mobile' => is_array($trow['mobileno']) ? implode(',',$trow['mobileno']) : $trow['mobileno'],
                                         ];
                                     }
                                 }
