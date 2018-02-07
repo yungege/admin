@@ -70,7 +70,7 @@ class Log {
 	 * @return bool|string
 	 */
 	public static function readLog($strFileName) {
-		$logfile = trim(self::$logpath, '/') . '/' . $strFileName . '.log';
+		$logfile = rtrim(self::$logpath, '/') . '/' . $strFileName . '.log';
 		if (file_exists($logfile) && is_readable($logfile))
 		{
 			$strContent = '';
