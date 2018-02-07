@@ -14,16 +14,12 @@ class Service_Log_ReadModel extends BasePageService {
 
     protected function __execute($req) {
 
-       
-        $date = date('Y-m-d',time());
-        $content = Log::readLog($date);
-        $content = explode("\r\n",$content);
-        $this->resData['content'] = $content;
-        
+        $req = $req['post'];
+        $content = Log::readLog($req['startTime']);
+        $this->resData['content'] = $content ? explode("\r\n",$content) : [] ;
 
         // var_dump($this->resData);
         // exit;
-
 
         return $this->resData;
     }

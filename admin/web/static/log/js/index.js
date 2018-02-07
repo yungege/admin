@@ -11,8 +11,9 @@ $(function(){
         getDom: function(){
 
             this.startBtn = $('.date_start');
-            this.endBtn = $('.date_end');
             this.submitBtn = $('#submit');
+            this.startTime = $('#start');
+            this.logList = $('#log-list');
             
         },
 
@@ -28,16 +29,6 @@ $(function(){
                 forceParse: 0,
                 pickerPosition: "bottom-left",
             });
-
-            me.endBtn.datetimepicker({
-                language: 'zh-CN',
-                todayBtn:  1,
-                autoclose: 1,
-                todayHighlight: 1,
-                minView: 2,
-                forceParse: 0,
-                pickerPosition: "bottom-left",
-            });
         },
 
         postData: function(){
@@ -45,26 +36,29 @@ $(function(){
 
             me.submitBtn.unbind().bind('click',function(){
 
-                // alert(1234);
-                var startTime = me.startBtn.val();
+                var start = me.startTime.val();
+                var data = 'startTime=' + start;
 
-                // var data = 'start=' + me.startBtn.val();
+                $.post('/log/read', data, function(json){
 
-alert(startTime);
-return false;
+                    if(json.errCode != 0){
+                        alert(123);
+                        alert(json.errMessage ? json.errMessage : '获取失败！');
+                        return false;
+                    }else{
 
+                        me.logList.children().remove();
+                        var logDiv = "";
+                        $.each(json.data.content,function(index,value){
 
-//                 $.post('/ugc/mark', data, function(json){
+                            logDiv = logDiv + "<tr><td>" + value + "</td></tr>";
 
-//                     if(json.errCode != 0){
-//                         alert(json.errMessage ? json.errMessage : '点评失败！');
-//                         return false;
-//                     }else{
-//                         alert('点评成功.');
-//                         window.location = '/sport/ugc';
+                        });
+
+                        me.logList.append(logDiv);
                         
-//                     }
-//                 })
+                    }
+                })
             });
         }
         
