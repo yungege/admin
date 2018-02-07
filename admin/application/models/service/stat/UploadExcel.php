@@ -256,7 +256,7 @@ class Service_Stat_UploadExcelModel extends BasePageService {
                 $item = [
                     'school' => $schoolInfo['name'],
                     'tyName' => $crow['username'],
-                    'tyMobile' => implode(',',$crow['mobileno']),
+                    'tyMobile' => is_array($crow['mobileno']) ? implode(',',$crow['mobileno']) : $crow['mobileno'],
                     'teacherType' => '体育老师',
                     'classNo' => count($crow['manageclassinfo']),
                     'userCount' => $userCount,
@@ -314,6 +314,16 @@ class Service_Stat_UploadExcelModel extends BasePageService {
                 ['schoolid' => $schoolId,'is_test' => 0,'$or' => [['schoolid' =>['$ne' => '587f31732a46800e0a8b4567']],['grade' => ['$nin' => [21,22,23,31,31,33]]]]],
                 ['limit' => 0,'projection' => ['name' => 1,'schoolname'=>1,'grade'=>1,'classno' => 1]]
             );
+
+            $arr1 = [];
+            $arr2 = [];
+            foreach($classList as $v){  
+                
+                $arr1[] = $v['grade'];  
+                $arr2[] = (int)$v['classno'];
+            }  
+            array_multisort($arr1, SORT_ASC,$arr2, SORT_ASC ,$classList);
+
             if(empty($classList)){
                 $index ++;
                 continue;
@@ -373,7 +383,7 @@ class Service_Stat_UploadExcelModel extends BasePageService {
                                     if(empty($t1)){
                                         $t1 = [
                                             'name' => $trow['username'],
-                                            'mobile' => $trow['mobileno'][0],
+                                            'mobile' => is_array($trow['mobileno']) ? implode(',',$trow['mobileno']) : $trow['mobileno'],
                                         ];
                                     }
                                 }
@@ -382,7 +392,7 @@ class Service_Stat_UploadExcelModel extends BasePageService {
                                     if(empty($t2)){
                                         $t2 = [
                                             'name' => $trow['username'],
-                                            'mobile' => $trow['mobileno'][0],
+                                            'mobile' => is_array($trow['mobileno']) ? implode(',',$trow['mobileno']) : $trow['mobileno'],
                                         ];
                                     }
                                 }

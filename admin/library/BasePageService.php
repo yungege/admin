@@ -292,13 +292,14 @@ class BasePageService {
             $cookie .= $key.':'.$value.';';
         }
         Log::writeLog($file, "ourl",$ourl);
-
         Log::writeLog($file, 'request_method',$_SERVER['REQUEST_METHOD']);
         Log::writeLog($file, 'cookie',$cookie);
         Log::writeLog($file, 'client_ip', Ip::getClientIp());
         //处理过程的返回状态
         Log::writeLog($file, "error_no", $this->res["errCode"]);
         Log::writeLog($file, "error_msg", $this->res['errMessage'] ? : '');
+        Log::writeLog($file, "url", $_SERVER['REQUEST_URI'] ? : '');
+        Log::writeLog($file, "request_content", json_encode($this->req) ? : '');    
     }
 
 

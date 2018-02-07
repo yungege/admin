@@ -207,7 +207,7 @@ class Service_User_AddUgcModel extends BasePageService {
                 $cacheData = [
                     "trainId" => $trainId,
                     "pName" => $data['htype'] == 1 ? '翻转课堂' : '身体素质作业',
-                    "pInterval" => $data['projecttime'],
+                    "pInterval" => $data['endtime'] - $data['starttime'] ,
                     "pId" => $data['trainingid'],
                     "trainingImg" => array_shift($data['exciseimg']),
                     "calorie" => $data['burncalories'],

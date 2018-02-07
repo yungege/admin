@@ -1,12 +1,18 @@
 <<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.13, created on 2018-02-05 11:28:19
+<?php /* Smarty version Smarty-3.1.13, created on 2018-02-07 09:21:44
          compiled from "/var/www/admin/admin/application/views/template/user/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20142504785a77cf53290e32-03421010%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11511210135a7a54a8213a28-43498990%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 =======
-<?php /* Smarty version Smarty-3.1.13, created on 2018-02-06 10:23:23
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.13, created on 2018-02-06 14:52:32
          compiled from "/var/www/admin/admin/application/views/template/user/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19986024915a79119bac9bc2-67572045%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 5501ded8535bd573757298bfc5ca7b2884dc7d74
+<?php /*%%SmartyHeaderCode:15667958625a7950b0e6ca89-94550125%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2018-02-06 16:15:48
+         compiled from "/var/www/admin/admin/application/views/template/user/class.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:11073263685a796434ebfb03-28603102%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 542975e6d193ba60cdf649770f26b7dd22c65030
+>>>>>>> 4477ebf32fd559cecb5ae3909e31321eff07dd52
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -14,28 +20,32 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     array (
       0 => '/var/www/admin/admin/application/views/template/user/class.tpl',
 <<<<<<< HEAD
-      1 => 1503370676,
+      1 => 1509502905,
 =======
-      1 => 1512353715,
->>>>>>> 5501ded8535bd573757298bfc5ca7b2884dc7d74
+      1 => 1517904451,
+>>>>>>> 542975e6d193ba60cdf649770f26b7dd22c65030
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
 <<<<<<< HEAD
-      1 => 1510105524,
+      1 => 1510105563,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '20142504785a77cf53290e32-03421010',
+  'nocache_hash' => '15667958625a7950b0e6ca89-94550125',
 =======
-      1 => 1512353715,
+      1 => 1517904451,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19986024915a79119bac9bc2-67572045',
->>>>>>> 5501ded8535bd573757298bfc5ca7b2884dc7d74
+<<<<<<< HEAD
+  'nocache_hash' => '11511210135a7a54a8213a28-43498990',
+=======
+  'nocache_hash' => '11073263685a796434ebfb03-28603102',
+>>>>>>> 542975e6d193ba60cdf649770f26b7dd22c65030
+>>>>>>> 4477ebf32fd559cecb5ae3909e31321eff07dd52
   'function' => 
   array (
   ),
@@ -54,14 +64,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
-  'unifunc' => 'content_5a77cf532fa6e9_04263035',
+  'unifunc' => 'content_5a7a54a8292491_93444889',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a77cf532fa6e9_04263035')) {function content_5a77cf532fa6e9_04263035($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a7a54a8292491_93444889')) {function content_5a7a54a8292491_93444889($_smarty_tpl) {?><!DOCTYPE html>
 =======
-  'unifunc' => 'content_5a79119bb4ad93_43773230',
+<<<<<<< HEAD
+  'unifunc' => 'content_5a7950b1086476_28562033',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a79119bb4ad93_43773230')) {function content_5a79119bb4ad93_43773230($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> 5501ded8535bd573757298bfc5ca7b2884dc7d74
+<?php if ($_valid && !is_callable('content_5a7950b1086476_28562033')) {function content_5a7950b1086476_28562033($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5a79643501b7b0_32381429',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a79643501b7b0_32381429')) {function content_5a79643501b7b0_32381429($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> 542975e6d193ba60cdf649770f26b7dd22c65030
+>>>>>>> 4477ebf32fd559cecb5ae3909e31321eff07dd52
 <html lang="en">
 
 <head>

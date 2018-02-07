@@ -17,6 +17,7 @@ class Dao_TrainingdoneModel extends Db_Mongodb {
         'createtime'        => 0,    // 创建时间
         'actioncount'       => 0,    // 本次锻炼的动作数量
         'burncalories'      => 0.00, // 本次锻炼消耗卡路里
+        'projecttime'       => 0,
         'commenttext'       => '',   // 锻炼感想/评论文本内容
         'commentaudio'      => [],   // 锻炼感想/评论音频内容
         'commentvideo'      => [],   // 锻炼感想/评论视频内容
