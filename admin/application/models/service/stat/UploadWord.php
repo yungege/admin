@@ -248,14 +248,8 @@ class Service_Stat_UploadWordModel extends BasePageService {
 
         header("Cache-Control: public");  
         Header("Content-type: application/octet-stream");  
+        header("Content-Disposition: attachment; filename=$school" . "_锻炼统计.docx");
         Header("Accept-Ranges: bytes");  
-        if (strpos($_SERVER["HTTP_USER_AGENT"],'MSIE')) {  
-        header("Content-Disposition: attachment; filename=$school" . "_锻炼统计.doc");  
-        }else if (strpos($_SERVER["HTTP_USER_AGENT"],'Firefox')) {  
-        Header("Content-Disposition: attachment; filename=$school" . "_锻炼统计.doc");  
-        } else {  
-        header("Content-Disposition: attachment; filename=$school" . "_锻炼统计.doc");  
-        }  
         header("Pragma:no-cache");  
         header("Expires:0");  
         ob_end_flush();//输出全部内容到浏览器 

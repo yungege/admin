@@ -60,6 +60,11 @@
         margin-left: 0;
         margin-right: 10px;
     }
+    .action-td a{
+        display: block;
+        width: 70px;
+        margin-bottom: 5px;
+    }
 </style>
 {%/block%}
 {%block name="bread"%}用户管理 / 学生管理<a href="/student/add" class="btn btn-primary btn-sm" style="margin-left: 10px;">添加学生</a>{%/block%}
@@ -200,9 +205,10 @@
                         </td>
                         <td>{%$row.doneCount%}</td>
                         <!-- <td></td> -->
-                        <td>
-                            <a href="/sport/ugc?uid={%$row._id%}" class="btn btn-default btn-xs">UGC</a>
-                            <a data-uname="{%$row.username%}" data-uid="{%$row._id%}" data-cid="{%$row.classinfo.classid%}" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补作业及打卡</a>
+                        <td class="action-td">
+                            <a href="/sport/ugc?uid={%$row._id%}" class="btn btn-success btn-xs">UGC数据</a>
+                            <a href="/log/studentlogin?uid={%$row._id%}" class="btn btn-success btn-xs">登录日志</a>
+                            <a data-uname="{%$row.username%}" data-uid="{%$row._id%}" data-cid="{%$row.classinfo.classid%}" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补交作业</a>
                         </td>
                     </tr>
                     {%/foreach%}
