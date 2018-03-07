@@ -31,7 +31,7 @@ class Service_User_StudentModel extends BasePageService {
         $this->checkXss($req);
 
         $this->resData['today'] = date('Y-m-d');
-        $match = [];
+        $match = ['type' => 1];
         $req = $req['get'];
         $this->resData['grade'] = Dao_UserModel::$grade;
 
