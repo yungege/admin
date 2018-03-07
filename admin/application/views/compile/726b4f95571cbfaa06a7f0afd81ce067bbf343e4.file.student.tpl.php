@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2018-03-07 09:53:58
          compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7649187365a9f46363505b7-67997331%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2018-03-07 11:18:49
+         compiled from "/var/www/admin/admin/application/views/template/user/student.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:17802304385a9f5a195add03-17126686%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 01ff622b839e8d1878379be7b0117d44c90efc02
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '726b4f95571cbfaa06a7f0afd81ce067bbf343e4' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/user/student.tpl',
+<<<<<<< HEAD
       1 => 1517884731,
+=======
+      1 => 1520391749,
+>>>>>>> 01ff622b839e8d1878379be7b0117d44c90efc02
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
       1 => 1510105563,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '7649187365a9f46363505b7-67997331',
+=======
+      1 => 1510105483,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '17802304385a9f5a195add03-17126686',
+>>>>>>> 01ff622b839e8d1878379be7b0117d44c90efc02
   'function' => 
   array (
   ),
@@ -35,9 +53,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5a9f463651bba6_98864024',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a9f463651bba6_98864024')) {function content_5a9f463651bba6_98864024($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_5a9f5a1961b417_89497295',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a9f5a1961b417_89497295')) {function content_5a9f5a1961b417_89497295($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> 01ff622b839e8d1878379be7b0117d44c90efc02
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -177,6 +201,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     .checkbox-inline+.checkbox-inline, .radio-inline+.radio-inline,.radio-inline{
         margin-left: 0;
         margin-right: 10px;
+    }
+    .action-td a{
+        display: block;
+        width: 70px;
+        margin-bottom: 5px;
     }
 </style>
 
@@ -578,13 +607,15 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
                         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['doneCount'];?>
 </td>
                         <!-- <td></td> -->
-                        <td>
+                        <td class="action-td">
                             <a href="/sport/ugc?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" class="btn btn-default btn-xs">UGC</a>
+" class="btn btn-success btn-xs">UGC数据</a>
+                            <a href="/log/studentlogin?uid=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+" class="btn btn-success btn-xs">登录日志</a>
                             <a data-uname="<?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
 " data-uid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
 " data-cid="<?php echo $_smarty_tpl->tpl_vars['row']->value['classinfo']['classid'];?>
-" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补作业及打卡</a>
+" href="javascript:void(0)" class="btn btn-danger btn-xs addUgc">补交作业</a>
                         </td>
                     </tr>
                     <?php } ?>

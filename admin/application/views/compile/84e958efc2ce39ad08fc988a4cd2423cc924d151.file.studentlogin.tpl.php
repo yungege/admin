@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2018-03-07 11:08:49
-         compiled from "/var/www/admin/admin/application/views/template/meau/role.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2116303155a9f57c15fe6a9-66843220%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2018-03-07 11:43:00
+         compiled from "/var/www/admin/admin/application/views/template/log/studentlogin.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2729367005a9f5fc439bec3-84720860%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '0f0d3ccae7febb55dd56d8fb73598ea615fcaceb' => 
+    '84e958efc2ce39ad08fc988a4cd2423cc924d151' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/meau/role.tpl',
-      1 => 1512033833,
+      0 => '/var/www/admin/admin/application/views/template/log/studentlogin.tpl',
+      1 => 1520394179,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2116303155a9f57c15fe6a9-66843220',
+  'nocache_hash' => '2729367005a9f5fc439bec3-84720860',
   'function' => 
   array (
   ),
@@ -35,9 +35,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a9f57c169df42_02077153',
+  'unifunc' => 'content_5a9f5fc43f3885_85257758',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a9f57c169df42_02077153')) {function content_5a9f57c169df42_02077153($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a9f5fc43f3885_85257758')) {function content_5a9f5fc43f3885_85257758($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -48,7 +49,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>天天向尚管理后台</title>
+    <title>学生登陆日志信息</title>
 
     <!-- ico -->
     <link rel="icon" href="/static/imgs/favicon.ico" type="image/x-icon"/>
@@ -119,27 +120,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
     
 <style type="text/css">
-    .add-role-fix,.edit-role-fix{
-        width: 100%;
-        height: 100%;
-        overflow-y: scroll;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: rgba(0,0,0,.3);
-        z-index: 9999;
-        display: none;
-    }
-    .inner-box{
-        background-color: white;
-        width: 500px;
-        /*height: 200px;*/
-        border: 1px solid #999;
-        border-radius: 3px;
-        margin: 10% auto 0;
-        box-shadow: 0 0 15px rgba(0,0,0,0.5);
-        padding: 15px;
-    }
+
 </style>
 
 </head>
@@ -356,7 +337,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 菜单及权限管理 / 角色管理 <a class="btn btn-xs btn-primary" href="javascript:void(0)" id="add-role">新建角色</a>
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运营管理 / LOG
                             </li>
                         </ol>
                     </div>
@@ -364,89 +345,96 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
 
                 <!-- 用户数据 -->
                 
+<!-- <div class="row">
+    <div class="col-lg-12">
+        <form method="get" >
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="form-horizontal row">
+
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label class="col-md-3 paddZero control-label">查询时间：</label>
+                                <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-sm-5 input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
+                                            <input readonly type="text" class="form-control" id="start" name="start" value="<?php echo $_GET['start'];?>
+" >
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                        </div>
+                                        <div class="col-sm-1"></div>
+
+                                        <a class="btn btn-info btn-sm" id="submit">查&emsp;询</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><br/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div> -->
 
 <div class="row">
     <div class="col-lg-12">
-        <table class="table table-striped table-bordered" style="color: #7a7676;">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>角色名称</th>
-                    <th>描述</th>
-                    <th>操作</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>用户名</th>
+                        <th>平台</th>
+                        <th>版本号</th>
+                        <th>登录方式</th>
+                        <th>手机号</th>
+                        <th>登陆时间</th>
+                    </tr>
+                </thead>
+                <tbody id='log-list'>
+                    <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
 $_smarty_tpl->tpl_vars['row']->_loop = true;
 ?>
-                <tr data-seria="<?php echo serialize($_smarty_tpl->tpl_vars['row']->value);?>
-">
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+                    <tr >
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['username'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['platform'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['version'];?>
 </td>
-                    <td>
-                        <a data-pid="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" data-pname="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" class="add-s-cate cate-add btn btn-xs btn-success" href="/meau/assgin?rid=<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-"><span class='fa fa-user'></span> 分配权限</a>&nbsp;
-                        <a data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
-" data-name="<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
-" data-desc="<?php echo $_smarty_tpl->tpl_vars['row']->value['desc'];?>
-" class="btn btn-xs btn-primary edit-role" href="javascript:void(0)"><span class='fa fa-edit'></span> 编辑</a>&nbsp;
-                    </td>
-                </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+                        <td>
+                            <?php if ($_smarty_tpl->tpl_vars['row']->value['type']==1){?>
+                                手机号登陆
+                            <?php }elseif($_smarty_tpl->tpl_vars['row']->value['type']==2){?>
+                                微信登陆
+                            <?php }elseif($_smarty_tpl->tpl_vars['row']->value['type']==3){?>
+                                QQ登陆
+                            <?php }else{ ?>
+                                账号切换
+                            <?php }?>
+                        </td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['mobile'];?>
+</td>
+                        <td>
+                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['ctime'],"%Y-%m-%d");?>
+<br/>
+                            <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['ctime'],"%H:%M:%S");?>
+<br/>
+                        </td>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center tt-page">
+            <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+
+        </div>
     </div>
 </div>
 
-<!-- 新增角色 -->
-<div class="add-role-fix">
-    <div class="inner-box">
-        <h4>新增角色</h4>
-        <hr>
-        <form name="add-role" class="form">
-            <div class="form-group">
-                <label>角色名称</label>
-                <input type="text" class="form-control" name="name">
-            </div>
-            <div class="form-group">
-                <label>描述</label>
-                <textarea class="form-control" name="desc" style="max-width: 100%;"></textarea>
-            </div>
-            <a class="btn btn-primary sub-r" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger can-r" href="javascript:void(0)">取&emsp;消</a>
-        </form>
-    </div>
-</div>
-
-<!-- 编辑 -->
-<div class="edit-role-fix">
-    <div class="inner-box">
-        <h4>编辑角色</h4>
-        <hr>
-        <form name="edit-role" class="form">
-            <div class="form-group">
-                <label>角色名称</label>
-                <input type="text" class="form-control" name="name" id="uname">
-            </div>
-            <div class="form-group">
-                <label>描述</label>
-                <textarea class="form-control" id="udesc" name="desc" style="max-width: 100%;"></textarea>
-            </div>
-            <input type="hidden" name="_id" id="rid">
-            <a class="btn btn-primary sub-e" href="javascript:void(0)">提&emsp;交</a>
-            <a class="btn btn-danger can-e" href="javascript:void(0)">取&emsp;消</a>
-        </form>
-    </div>
-</div>
 
 
 
@@ -478,91 +466,7 @@ $_smarty_tpl->tpl_vars['row']->_loop = true;
     </script>
 
     
-<script>
-$(function(){
-    var role = {
-        init: function(){
-            this.getDom();
-            this.showRoleAddBox();
-            this.hideRoleAddBox();
-            this.postRole();
-        },
-        getDom: function(){
-            // 新增
-            this.addFixBox = $('.add-role-fix');
-            this.addForm = $('form[name=add-role]');
-            this.showAddBtn = $('#add-role');
-            this.hideAddBtn = $('.can-r');
-            this.subAddBtn = $('.sub-r');
 
-            // 编辑
-            this.editFixBox = $('.edit-role-fix');
-            this.editForm = $('form[name=edit-role]');
-            this.showEditBtn = $('.edit-role');
-            this.hideEditBtn = $('.can-e');
-            this.subEditBtn = $('.sub-e');
-            this.idInt = $('#rid');
-            this.nameInt = $('#uname');
-            this.descInt = $('#udesc');
-        },
-        showRoleAddBox: function(){
-            var me = this;
-            me.showAddBtn.unbind().bind('click', function(){
-                me.addFixBox.fadeIn(200);
-            });
-
-            me.showEditBtn.unbind().bind('click', function(){
-                var data = $(this).data();
-                me.idInt.val(data.id);
-                me.nameInt.val(data.name);
-                me.descInt.val(data.desc);
-                me.editFixBox.fadeIn(200);
-            });
-        },
-        hideRoleAddBox: function(){
-            var me = this;
-            me.hideAddBtn.unbind().bind('click', function(){
-                me.addFixBox.fadeOut(200);
-                me.addForm[0].reset();
-            });
-
-            me.hideEditBtn.unbind().bind('click', function(){
-                me.editFixBox.fadeOut(200);
-                me.editForm[0].reset();
-            });
-        },
-        postRole: function(){
-            var me = this;
-            me.subAddBtn.unbind().bind('click', function(){
-                var data = me.addForm.serialize();
-                $.post('/meau/addrole', data, function(json){
-                    if(json.errCode == 0){
-                        window.location.reload();
-                    }
-                    else{
-                        alert(json.errMessage);
-                        return false;
-                    }
-                });
-            });
-
-            me.subEditBtn.unbind().bind('click', function(){
-                var data = me.editForm.serialize();
-                $.post('/meau/addrole?type=2', data, function(json){
-                    if(json.errCode == 0){
-                        window.location.reload();
-                    }
-                    else{
-                        alert(json.errMessage);
-                        return false;
-                    }
-                });
-            });
-        },
-    }
-    role.init();
-})
-</script>
 
 </body>
 </html><?php }} ?>
