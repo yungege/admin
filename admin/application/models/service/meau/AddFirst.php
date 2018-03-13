@@ -125,7 +125,7 @@ class Service_Meau_AddFirstModel extends BasePageService {
             }
 
             if($type == 2){
-                $hasExists = $this->urlModel->checkUrlExists($updateData['url']);
+                $hasExists = $this->urlModel->checkUrlExists($insertData['url']);
                 if(false === $hasExists){
                     $this->urlModel->insert([
                         'url' => $insertData['url'],

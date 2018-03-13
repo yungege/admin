@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2018-03-13 09:52:49
-         compiled from "/var/www/admin/admin/application/views/template/student/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15616702935aa72ef15f8881-80000115%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2018-03-13 19:03:12
+         compiled from "/var/www/admin/admin/application/views/template/stat/classdonecount.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:12747528565aa7aff0eff448-41741201%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '41b3e8cc63602603705c3e0cb4b05619206b1a14' => 
+    '1ae44b5e287c1a73b921e7ab5ffd539ed12be48d' => 
     array (
-      0 => '/var/www/admin/admin/application/views/template/student/add.tpl',
-      1 => 1514861948,
+      0 => '/var/www/admin/admin/application/views/template/stat/classdonecount.tpl',
+      1 => 1520938964,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '15616702935aa72ef15f8881-80000115',
+  'nocache_hash' => '12747528565aa7aff0eff448-41741201',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5aa72ef16545a8_98226707',
+  'unifunc' => 'content_5aa7aff100c4f8_36356066',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5aa72ef16545a8_98226707')) {function content_5aa72ef16545a8_98226707($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5aa7aff100c4f8_36356066')) {function content_5aa7aff100c4f8_36356066($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -118,36 +118,36 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         }
     </style>
     
+<link href="/static/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <style type="text/css">
-    .fix-per{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        background: rgba(0,0,0,0.4);
-        z-index: 9999;
-        display: none;
-    }
-    .fix-per .fix-cont{
-        width: 400px;
-        height: 200px;
-        line-height: 200px;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -200px;
-        margin-top: -100px;
-        font-size: 100px;
-        color: orange;
-    }
-    .form-wrap{
-        border: 1px solid #ccc;
-        padding: 8px 15px 15px 15px;
-        border-radius: 5px;
-    }
+.datetimepicker{
+    margin-top: 50px;
+}
+.today{
+    border: 1px solid #d9edf7!important;
+}
+.user-a{
+    display: block;
+    float: left;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+#ty + div{
+    margin:0px;
+    border:0px;
+    padding:0px;
+}
+.img-c{
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 50%;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.img-c>img{
+    width: 100%;
+}
 </style>
 
 </head>
@@ -364,7 +364,7 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                     <div class="col-lg-12">
                         <ol class="breadcrumb" style="background-color: #d9edf7;margin-top: 15px;">
                             <li class="active">
-                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 学校信息管理 / 添加学生
+                                <i class="fa fa-dashboard" style="margin-right: 10px;"></i> 运营管理 / 各班锻炼次数学生信息 
                             </li>
                         </ol>
                     </div>
@@ -373,123 +373,61 @@ $_smarty_tpl->tpl_vars['childItem']->_loop = true;
                 <!-- 用户数据 -->
                 
 <div class="row">
-    <div class="col-lg-8">
-        <div class="form-wrap">
-            
-            <form name="school">
+     <div class="col-md-12">
+        <form name ="form">
+        <ul class="list-unstyled" style="border:1px solid #ddd;overflow:hidden;padding:20px;border-radius: 5px;">
 
-                <div class="form-group">
-                    <label for="province">所属省份</label>
-                    <select id="province" class="form-control" name="province">
-                        <option value="-1" selected>请选择学校所在省份</option>
-                        <?php  $_smarty_tpl->tpl_vars['provinceName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['provinceName']->_loop = false;
- $_smarty_tpl->tpl_vars['provinceId'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['provinceList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['provinceName']->key => $_smarty_tpl->tpl_vars['provinceName']->value){
-$_smarty_tpl->tpl_vars['provinceName']->_loop = true;
- $_smarty_tpl->tpl_vars['provinceId']->value = $_smarty_tpl->tpl_vars['provinceName']->key;
-?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['provinceId']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['provinceName']->value;?>
-</option>
-                        <?php } ?>          
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="city">所在城市</label>
-                    <select id="city" class="form-control" name="city">
-                        <option value="-1" selected>请选择学校所在城市</option>
-                       
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="district">所在区</label>
-                    <select id="district" class="form-control" name="district">
-                        <option value="-1" selected>请选择学校所在区</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="school">所在学校</label>
-                    <select id="school" class="form-control" name="school">
-                        <option value="-1" selected>请选择学生所在学校</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="grade">所在年级</label>
-                    <select id="grade" class="form-control" name="grade">
-                        <option value="-1" selected>请选择学生所在年级</option>
-                        <?php  $_smarty_tpl->tpl_vars['gradeName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['gradeName']->_loop = false;
- $_smarty_tpl->tpl_vars['gradeNo'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['gradeList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['gradeName']->key => $_smarty_tpl->tpl_vars['gradeName']->value){
-$_smarty_tpl->tpl_vars['gradeName']->_loop = true;
- $_smarty_tpl->tpl_vars['gradeNo']->value = $_smarty_tpl->tpl_vars['gradeName']->key;
-?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['gradeNo']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['gradeName']->value;?>
-</option>
-                        <?php } ?>  
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="class">所在班级</label>
-                    <select id="class" class="form-control" name="class">
-                        <option value="-1" selected>请选择学生所在班级</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="username">姓名</label>
-                    <input type="text" class="form-control" id="username" placeholder="Username" name="username">
-                </div>
-
-                <div class="form-group">
-                    <label for="sex">性别</label>
-                    <select id="sex" class="form-control" name="sex">
-                        <option value="-1" selected>请选择学生性别</option>
-                        <?php  $_smarty_tpl->tpl_vars['sexName'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['sexName']->_loop = false;
- $_smarty_tpl->tpl_vars['sexNo'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['sex']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['sexName']->key => $_smarty_tpl->tpl_vars['sexName']->value){
-$_smarty_tpl->tpl_vars['sexName']->_loop = true;
- $_smarty_tpl->tpl_vars['sexNo']->value = $_smarty_tpl->tpl_vars['sexName']->key;
-?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['sexNo']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['sexName']->value;?>
-</option>
-                        <?php } ?>  
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="birthday">生日</label></label>
-                    <div class="col-sm-5 input-group date date_start" data-date="" data-date-format="yyyy-mm-dd">
-                        <input readonly type="text" class="form-control" id="birthday" name="birthday" value="<?php echo $_GET['start'];?>
-" >
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            <li id="ty" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group" style="border-bottom:1px ;overflow:hidden;margin-bottom:10px;">
+                            <p><strong>请选择日期：</strong> </p>
+                            <div class="input-group">
+                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['initStart']->value;?>
+" data-type="time" id="date_start" name="start" type="text" class="form-control date_start date" data-date-format="yyyy-mm-dd"/>
+                                <div class="input-group-addon" style="border-left: 0;border-right: 0;"> 至 </div>
+                                <input readonly="true" value="<?php echo $_smarty_tpl->tpl_vars['initEnd']->value;?>
+" data-type="time" id="date_end" name="end" type="text" class="form-control date_end date" data-date-format="yyyy-mm-dd"/>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                            
-                <button id="sub" type="button" class="btn btn-primary">确认提交</button>
-               <!--  <button id="button" type="button" class="btn btn-danger" >取&emsp;消</button> -->
-            </form>
+            </li>
+
+            <li id="kj" style="border-bottom:1px dashed #ddd;overflow:hidden;margin-bottom:10px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p><strong>请选择学校：</strong></p>
+                        <select class="form-control" id="school" name="school" style="margin-bottom:15px;float: left;">
+                            <option value="-1">请选择学校</option>
+                            <?php  $_smarty_tpl->tpl_vars['row'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['row']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['schoolList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->key => $_smarty_tpl->tpl_vars['row']->value){
+$_smarty_tpl->tpl_vars['row']->_loop = true;
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['row']->value['_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+</option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
+
+            </li>
+
+            <li style="overflow:hidden;">
+                <a id="sub" href="javascript:void(0)" class="btn btn-primary" style="width:100px;" >导出Excel</a>
+            </li>
+        </ul>
+
+        </form>
+
+        <h3>Excel表格模板如下：</h3>
+        <div class="img-c">
+            <img src="https://oi7ro6pyq.qnssl.com/o_1c8ffuajpr40edlopn1pj315l2d.jpg">
         </div>
     </div>
 </div>
-
-<!-- modal-add -->
-<div class="fix-per">
-    <div class="fix-cont">
-        <!-- 100% -->
-    </div>
-    
-</div>
-
 
 
                 <!-- footer -->
@@ -520,11 +458,39 @@ $_smarty_tpl->tpl_vars['sexName']->_loop = true;
     </script>
 
     
+<script src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<!-- <script src="/static/widget/echarts/echarts.min.js"></script> -->
+<script type="text/javascript">
+;(function($){
+    var btn = $('#sub');
+    var form = $('form[name=form]');
+    $('#date_start').datetimepicker({
+        language: 'zh-CN',
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        minView: 2,
+        endDate: new Date(),
+    });
 
-<script type="text/javascript" src="/static/student/js/add.js"></script>
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-<!-- <script type="text/javascript" src="/static/ugc/index.js"></script> -->
+    $('#date_end').datetimepicker({
+        language: 'zh-CN',
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        minView: 2,
+    });
 
+    btn.on('click', function(e){
+        if($('#school').val() == -1){
+            alert('请选择学校');
+            return false;
+        }
+        var data = form.serialize();
+        window.location = '?' + data + '&export=1';
+    })
+})(jQuery)
+</script>
 
 </body>
 </html><?php }} ?>
