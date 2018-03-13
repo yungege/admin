@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2018-03-12 14:18:10
          compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16662765635aa61ba2dc9383-78380097%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2018-03-08 15:10:41
+         compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:14405713125aa0e1f10435d7-36364981%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> b35883a0fbd35c1b6002cbc63bdc9ab3e77207ba
 =======
 <?php /* Smarty version Smarty-3.1.13, created on 2018-03-13 18:24:53
          compiled from "/var/www/admin/admin/application/views/template/index/index.tpl" */ ?>
@@ -13,12 +19,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '40aa92acd3ad6c442774640e7d702a6b3a0a6d84' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/index/index.tpl',
+<<<<<<< HEAD
+      1 => 1501062598,
+=======
       1 => 1509080121,
+>>>>>>> a477b9a23757b443cd9a8a6751cfa17b7ad141ed
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
+<<<<<<< HEAD
+      1 => 1510105524,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '14405713125aa0e1f10435d7-36364981',
+=======
       1 => 1510105483,
       2 => 'file',
     ),
@@ -46,9 +63,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
+<<<<<<< HEAD
   'unifunc' => 'content_5aa61ba2eed8e1_51901655',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5aa61ba2eed8e1_51901655')) {function content_5aa61ba2eed8e1_51901655($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5aa0e1f109df44_65887088',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5aa0e1f109df44_65887088')) {function content_5aa0e1f109df44_65887088($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> b35883a0fbd35c1b6002cbc63bdc9ab3e77207ba
 =======
   'unifunc' => 'content_5aa7a6f5d5d773_14415405',
 ),false); /*/%%SmartyHeaderCode%%*/?>

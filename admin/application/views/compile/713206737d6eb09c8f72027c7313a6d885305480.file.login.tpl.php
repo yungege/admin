@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2018-03-13 10:15:53
          compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7673396825aa734597c99f5-20507175%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2018-03-12 16:30:10
+         compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:10356193955aa63a92199111-49409312%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> b35883a0fbd35c1b6002cbc63bdc9ab3e77207ba
 =======
 <?php /* Smarty version Smarty-3.1.13, created on 2018-03-13 16:55:33
          compiled from "/var/www/admin/admin/application/views/template/user/login.tpl" */ ?>
@@ -14,11 +20,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     array (
       0 => '/var/www/admin/admin/application/views/template/user/login.tpl',
 <<<<<<< HEAD
+<<<<<<< HEAD
       1 => 1509502905,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '7673396825aa734597c99f5-20507175',
+=======
+      1 => 1504857674,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '10356193955aa63a92199111-49409312',
+>>>>>>> b35883a0fbd35c1b6002cbc63bdc9ab3e77207ba
 =======
       1 => 1509080121,
       2 => 'file',
@@ -32,9 +46,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
 <<<<<<< HEAD
+<<<<<<< HEAD
   'unifunc' => 'content_5aa734597cb539_68912142',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5aa734597cb539_68912142')) {function content_5aa734597cb539_68912142($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5aa63a921ad817_05124922',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5aa63a921ad817_05124922')) {function content_5aa63a921ad817_05124922($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> b35883a0fbd35c1b6002cbc63bdc9ab3e77207ba
 =======
   'unifunc' => 'content_5aa79205e349e8_73276763',
 ),false); /*/%%SmartyHeaderCode%%*/?>
