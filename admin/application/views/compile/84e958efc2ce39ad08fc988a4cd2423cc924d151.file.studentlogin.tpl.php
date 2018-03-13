@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2018-03-07 18:33:13
+<?php /* Smarty version Smarty-3.1.13, created on 2018-03-10 10:40:03
          compiled from "/var/www/admin/admin/application/views/template/log/studentlogin.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17421682525a9fbfe9a57b01-91093056%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1714111625aa34583624284-86902668%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '84e958efc2ce39ad08fc988a4cd2423cc924d151' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/log/studentlogin.tpl',
-      1 => 1520394179,
+      1 => 1520394273,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105483,
+      1 => 1510105563,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17421682525a9fbfe9a57b01-91093056',
+  'nocache_hash' => '1714111625aa34583624284-86902668',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5a9fbfe9aac0d4_40183809',
+  'unifunc' => 'content_5aa3458378ae45_21929350',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a9fbfe9aac0d4_40183809')) {function content_5a9fbfe9aac0d4_40183809($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5aa3458378ae45_21929350')) {function content_5aa3458378ae45_21929350($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang="en">
 
