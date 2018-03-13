@@ -120,6 +120,7 @@ class Dao_UserModel extends Db_Mongodb{
         'create_time' => 0 , //创建时间
         'my_teacher' => '',
         'teacher_type' => 0, //老师类型 1-系主任 2-班主任 3-体育老师 4-体验老师
+        'status' => 1,
     ];
     
     protected function __construct(){
@@ -230,6 +231,22 @@ class Dao_UserModel extends Db_Mongodb{
         if(!empty($fields)){
             $options['projection'] = $fields;
         }
+        return $this->query($where, $options);
+    }
+
+    public function getUserInfoByClassId(string $classId, array $fields = [], array $options = ['limit' => 0]){
+        $where = [
+            'classinfo.classid' => $classId,
+            'type' => 1,
+            'status' => 1,
+        ];
+
+        $fields = $this->filterFields($fields);
+
+        if(!empty($fields)){
+            $options['projection'] = $fields;
+        }
+
         return $this->query($where, $options);
     }
 
