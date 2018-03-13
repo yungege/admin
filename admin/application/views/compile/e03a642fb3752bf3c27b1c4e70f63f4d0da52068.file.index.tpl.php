@@ -1,23 +1,33 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2018-03-08 11:54:35
          compiled from "/var/www/admin/admin/application/views/template/log/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:798284765aa0b3fb0ada46-36104761%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2018-03-12 10:35:09
+         compiled from "/var/www/admin/admin/application/views/template/log/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2612868015aa5e75d25ddc7-15246635%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> a477b9a23757b443cd9a8a6751cfa17b7ad141ed
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e03a642fb3752bf3c27b1c4e70f63f4d0da52068' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/log/index.tpl',
-      1 => 1520394273,
+      1 => 1518002143,
       2 => 'file',
     ),
     '1af1c7811d93168106c85becc3c13354fe96fe45' => 
     array (
       0 => '/var/www/admin/admin/application/views/template/common/page/layout.tpl',
-      1 => 1510105563,
+      1 => 1510105483,
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '798284765aa0b3fb0ada46-36104761',
+=======
+  'nocache_hash' => '2612868015aa5e75d25ddc7-15246635',
+>>>>>>> a477b9a23757b443cd9a8a6751cfa17b7ad141ed
   'function' => 
   array (
   ),
@@ -35,9 +45,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5aa0b3fb1ebab6_48407089',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5aa0b3fb1ebab6_48407089')) {function content_5aa0b3fb1ebab6_48407089($_smarty_tpl) {?><!DOCTYPE html>
+=======
+  'unifunc' => 'content_5aa5e75d2b20b7_39582191',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5aa5e75d2b20b7_39582191')) {function content_5aa5e75d2b20b7_39582191($_smarty_tpl) {?><!DOCTYPE html>
+>>>>>>> a477b9a23757b443cd9a8a6751cfa17b7ad141ed
 <html lang="en">
 
 <head>

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.13, created on 2018-03-10 10:40:03
          compiled from "/var/www/admin/admin/application/views/template/log/studentlogin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1714111625aa34583624284-86902668%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.13, created on 2018-03-12 10:35:28
+         compiled from "/var/www/admin/admin/application/views/template/log/studentlogin.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:19165731415aa5e7702d2168-50849306%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> a477b9a23757b443cd9a8a6751cfa17b7ad141ed
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -17,7 +23,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
+<<<<<<< HEAD
   'nocache_hash' => '1714111625aa34583624284-86902668',
+=======
+  'nocache_hash' => '19165731415aa5e7702d2168-50849306',
+>>>>>>> a477b9a23757b443cd9a8a6751cfa17b7ad141ed
   'function' => 
   array (
   ),
@@ -35,9 +45,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
+<<<<<<< HEAD
   'unifunc' => 'content_5aa3458378ae45_21929350',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5aa3458378ae45_21929350')) {function content_5aa3458378ae45_21929350($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+=======
+  'unifunc' => 'content_5aa5e7703284d8_23488157',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5aa5e7703284d8_23488157')) {function content_5aa5e7703284d8_23488157($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/var/www/admin/admin/library/smarty/plugins/modifier.date_format.php';
+>>>>>>> a477b9a23757b443cd9a8a6751cfa17b7ad141ed
 ?><!DOCTYPE html>
 <html lang="en">
 
